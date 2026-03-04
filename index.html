@@ -824,10 +824,14 @@ const locations = [
     ]
   },
 ];
-// ===== TIMELINE DATA =====
-const timelineStart = new Date("2026-02-28T22:00Z").getTime();
-const timelineEnd = new Date("2026-03-03T10:00Z").getTime();
-const timelineRange = timelineEnd - timelineStart;
+// ===== TIMELINE DATA (dynamic from articles) =====
+let allTimes = [];
+locations.forEach(loc => loc.articles.forEach(a => {
+  if (a.time) allTimes.push(new Date(a.time).getTime());
+}));
+const timelineStart = allTimes.length ? Math.min(...allTimes) : Date.now() - 48*3600*1000;
+const timelineEnd = allTimes.length ? Math.max(...allTimes) : Date.now();
+const timelineRange = timelineEnd - timelineStart || 1;
 
 // ===== TIMELINE STATE =====
 let timelineMin = timelineStart;
@@ -1208,7 +1212,8 @@ function scrollToLocation(locName) {
 }
 
 // ===== INIT =====
-setPreset('48h');
+updateTimeDisplay();
+setPreset('all');
 renderFilterBars();
 renderSidebar();
 renderMarkers();
