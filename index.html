@@ -1153,17 +1153,6 @@ function filterCountry(country) {
   applyFilters();
   autoExpandArticles();
 
-  if (country) {
-    const filtered = locations.filter(l => l.country === country);
-    if (filtered.length === 1) {
-      map.flyTo([filtered[0].lat, filtered[0].lng], 8, { duration: 0.6 });
-    } else if (filtered.length > 1) {
-      const bounds = L.latLngBounds(filtered.map(l => [l.lat, l.lng]));
-      map.flyToBounds(bounds.pad(0.3), { duration: 0.6 });
-    }
-  } else {
-    map.flyTo([29.5, 47], 5, { duration: 0.6 });
-  }
 }
 
 function filterSource(source) {
@@ -1185,6 +1174,23 @@ function applyFilters() {
   renderFilterBars();
   renderSidebar();
   renderMarkers();
+  fitMapToMarkers();
+}
+
+function fitMapToMarkers() {
+  if (!activeCountry && !activeSource) {
+    map.flyTo([29.5, 47], 5, { duration: 0.6 });
+    return;
+  }
+  const layers = [];
+  markerLayer.eachLayer(l => layers.push(l));
+  if (layers.length === 0) return;
+  if (layers.length === 1) {
+    map.flyTo(layers[0].getLatLng(), 8, { duration: 0.6 });
+  } else {
+    const bounds = L.latLngBounds(layers.map(l => l.getLatLng()));
+    map.flyToBounds(bounds.pad(0.3), { duration: 0.6 });
+  }
 }
 
 function toggleLocation(header, locName) {
