@@ -190,8 +190,12 @@ def fetch_feeds(hours_back=48):
 
                 time_str = pub_time.strftime("%Y-%m-%dT%H:%M:%SZ") if pub_time else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+                # Clean title: remove quotes that would break JS, strip HTML
+                clean_title = re.sub(r'<[^>]+>', '', title)
+                clean_title = clean_title.replace('"', "'").replace("\\", "")
+
                 articles.append({
-                    "title": title.replace('"', '\\"').replace("'", "\\'"),
+                    "title": clean_title,
                     "source": feed_info["source"],
                     "url": url,
                     "time": time_str,
@@ -241,7 +245,7 @@ def generate_js_data(locations):
         lines.append(f'    category: "{loc["category"]}",')
         lines.append("    articles: [")
         for a in sorted(loc["articles"], key=lambda x: x["time"], reverse=True):
-            title = a["title"].replace('"', '\\"')
+            title = a["title"].replace("\\", "").replace('"', "'")
             lines.append(f'      {{ title: "{title}", source: "{a["source"]}", url: "{a["url"]}", time: "{a["time"]}" }},')
         lines.append("    ]")
         lines.append("  },")
