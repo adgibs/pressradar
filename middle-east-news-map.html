@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PressRadar.me — Middle East News Map</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #222; }
+
+  #header {
+    background: #fff;
+    padding: 14px 24px;
+    border-bottom: 3px solid #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  #header h1 { font-size: 1.3rem; color: #1a1a1a; font-weight: 700; }
+  #header .subtitle { font-size: 0.85rem; color: #666; }
+  #header .date-badge {
+    background: #c0392b;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  #container { display: flex; height: calc(100vh - 60px); }
+  #map { flex: 1; min-width: 0; }
+
+  #sidebar {
+    width: 420px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sidebar-header {
+    padding: 14px 16px 10px;
+    background: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  #sidebar-header h2 { font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px; }
+  #sidebar-header .location-count { font-size: 0.8rem; color: #c0392b; font-weight: 500; margin-bottom: 12px; }
+
+  /* Timeline section */
+  #timeline-section {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+  }
+  .timeline-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .timeline-display {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .timeline-presets {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .preset-btn {
+    padding: 4px 8px;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .preset-btn:hover { border-color: #999; color: #222; }
+  .preset-btn.active {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+  }
+
+  .range-slider-container {
+    position: relative;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  .range-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  .range-slider-inputs {
+    position: relative;
+    height: 26px;
+  }
+  input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 10px;
+    border-radius: 3px;
+    background: #e0e0e0;
+    outline: none;
+    -webkit-appearance: none;
+    pointer-events: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #c0392b;
+    cursor: pointer;
+    pointer-events: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #c0392b;
+    cursor: pointer;
+    pointer-events: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  #range-min { z-index: 5; }
+  #range-max { z-index: 4; }
+  #range-max::-webkit-slider-thumb { background: #2471a3; }
+  #range-max::-moz-range-thumb { background: #2471a3; }
+
+  /* Filter sections */
+  .filter-section { margin-bottom: 6px; }
+  .filter-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .country-btn {
+    padding: 4px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 16px;
+    background: #fff;
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .country-btn:hover { border-color: #999; color: #222; }
+  .country-btn.active {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+  }
+  .country-btn .btn-count {
+    display: inline-block;
+    background: rgba(0,0,0,0.1);
+    padding: 0 5px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    margin-left: 3px;
+  }
+  .country-btn.active .btn-count { background: rgba(255,255,255,0.3); }
+
+  #article-list { padding: 8px; flex: 1; }
+
+  /* Country group heading in sidebar */
+  .country-section { margin-bottom: 16px; }
+  .country-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 4px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .country-heading .country-article-total {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #fff;
+    background: #888;
+    padding: 1px 7px;
+    border-radius: 10px;
+  }
+
+  .location-group {
+    margin-bottom: 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .location-group-header {
+    padding: 9px 12px;
+    background: #fafafa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .location-group-header:hover { background: #f0f0f0; }
+  .location-group-header .pin { font-size: 1rem; }
+  .location-group-header .loc-name { font-weight: 600; font-size: 0.9rem; color: #1a1a1a; }
+  .location-group-header .article-count {
+    margin-left: auto;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    min-width: 22px;
+    text-align: center;
+  }
+
+  .location-articles { display: none; padding: 8px; background: #fafafa; }
+  .location-articles.open { display: block; }
+
+  .article-card {
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    background: #fff;
+    border-radius: 6px;
+    border-left: 3px solid #c0392b;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .article-card .article-title {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+  .article-card .article-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 5px;
+  }
+  .article-card .article-source {
+    font-size: 0.73rem;
+    color: #888;
+  }
+  .article-card .article-source .src-name { color: #c0392b; font-weight: 600; }
+  .article-card .article-time {
+    font-size: 0.7rem;
+    color: #999;
+  }
+  .article-card a {
+    display: inline-block;
+    font-size: 0.76rem;
+    color: #2471a3;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .article-card a:hover { text-decoration: underline; }
+
+  .legend {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    z-index: 1000;
+    font-size: 0.78rem;
+    color: #333;
+    max-width: 240px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .legend h3 { font-size: 0.85rem; margin-bottom: 8px; color: #1a1a1a; }
+  .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+  .legend-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1.5px solid rgba(0,0,0,0.2);
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: #fff !important;
+    color: #222 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.15) !important;
+  }
+  .leaflet-popup-tip { background: #fff !important; }
+  .leaflet-popup-content { margin: 10px 14px !important; font-size: 0.85rem !important; }
+  .popup-title { font-weight: 700; font-size: 1rem; margin-bottom: 2px; color: #1a1a1a; }
+  .popup-country { font-size: 0.8rem; color: #666; margin-bottom: 4px; }
+  .popup-count { color: #c0392b; font-size: 0.85rem; margin-bottom: 6px; }
+  .popup-link { color: #2471a3; cursor: pointer; font-size: 0.82rem; font-weight: 500; }
+  .popup-link:hover { text-decoration: underline; }
+
+  .no-results { padding: 24px 16px; text-align: center; color: #999; font-size: 0.9rem; }
+
+  @media (max-width: 800px) {
+    #container { flex-direction: column; }
+    #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
+    #map { height: 50vh; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div>
+    <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
+    <div class="subtitle">Middle East news mapped — UK & international press</div>
+  </div>
+  <div class="date-badge">3 March 2026</div>
+</div>
+
+<div id="container">
+  <div id="map"></div>
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <h2>News by Location</h2>
+      <div class="location-count" id="loc-count"></div>
+
+      <div id="timeline-section">
+        <div class="timeline-label">Timeline</div>
+        <div class="timeline-display" id="timeline-display">Feb 28, 22:00 — Mar 3, 10:00</div>
+        <div class="timeline-presets">
+          <button class="preset-btn" onclick="setPreset('6h')">Last 6h</button>
+          <button class="preset-btn" onclick="setPreset('12h')">Last 12h</button>
+          <button class="preset-btn" onclick="setPreset('24h')">Last 24h</button>
+          <button class="preset-btn active" onclick="setPreset('48h')">Last 48h</button>
+          <button class="preset-btn" onclick="setPreset('all')">All</button>
+        </div>
+        <div class="range-slider-labels">
+          <span id="min-label">Feb 28, 22:00</span>
+          <span id="max-label">Mar 3, 10:00</span>
+        </div>
+        <div class="range-slider-container">
+          <div class="range-slider-inputs">
+            <input type="range" id="range-min" min="0" max="1000" value="0" oninput="updateTimeRange()">
+            <input type="range" id="range-max" min="0" max="1000" value="1000" oninput="updateTimeRange()">
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">Country</div>
+        <div id="country-filter" class="filter-row"></div>
+      </div>
+      <div class="filter-section">
+        <div class="filter-label">Source</div>
+        <div id="source-filter" class="filter-row"></div>
+      </div>
+    </div>
+    <div id="article-list"></div>
+  </div>
+</div>
+
+<div class="legend">
+  <h3>Category</h3>
+  <div class="legend-item"><div class="legend-dot" style="background:#c0392b;"></div> Military strikes</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e67e22;"></div> Humanitarian</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2471a3;"></div> Energy / economic</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> UK involvement</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#7f8c8d;"></div> Evacuation advisory</div>
+  <h3 style="margin-top:10px;">Size = article count</h3>
+</div>
+
+<script>
+// ===== HELPER: Format ISO time to readable string =====
+function formatTime(isoString) {
+  const d = new Date(isoString);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[d.getUTCMonth()];
+  const date = d.getUTCDate();
+  const hours = String(d.getUTCHours()).padStart(2, '0');
+  const mins = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${month} ${date}, ${hours}:${mins}`;
+}
+
+// ===== DATA — every location has a country =====
+const locations = [
+  {
+    name: "Tehran", country: "Iran",
+    lat: 35.6892, lng: 51.3890,
+    category: "strikes",
+    articles: [
+      { title: "US and Israel launch joint strikes on Iran; Operation Epic Fury begins", source: "CNN", url: "https://www.cnn.com/world/live-news/iran-israel-us-attack-02-28-26-intl-hnk", time: "2026-02-28T22:00Z" },
+      { title: "Iran's Supreme Leader Khamenei killed in Israeli airstrike on Tehran compound", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/khamenei-killed-airstrike", time: "2026-02-28T23:30Z" },
+      { title: "Trump urges regime change as death toll in Iran passes 200", source: "CBS News", url: "https://www.cbsnews.com/news/trump-regime-change-iran", time: "2026-03-01T08:00Z" },
+      { title: "Iran Red Crescent: 201 killed, 747 injured in first day of strikes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/1/iran-death-toll-first-day", time: "2026-03-01T17:30Z" },
+      { title: "US-Israel strikes on Iran kill Supreme Leader Khamenei as regime change becomes stated aim", source: "House of Commons Library", url: "https://commonslibrary.parliament.uk/research-briefings/cbp-10521/", time: "2026-03-01T19:00Z" },
+      { title: "As bombing continues, Israel's war aim in Iran becomes clear: Regime change", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/as-bombing-continues-israels-war-aim-in-iran-becomes-clear-regime-change", time: "2026-03-02T08:30Z" },
+      { title: "Tehran's Golestan Palace, UNESCO World Heritage site, sustains major damage in strikes", source: "CNN", url: "https://www.cnn.com/world/live-news/iran-israel-us-attack-03-02-26-intl-hnk", time: "2026-03-02T10:15Z" },
+      { title: "Iranian state broadcaster struck as death toll rises to 787", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/3/iran-live-news-israel-bombs-tehran-beirut-trump-says-war-to-last-4-weeks", time: "2026-03-02T16:45Z" },
+      { title: "Wife of Supreme Leader Khamenei dies after being in coma since Saturday strikes", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/02/us-israel-iran-hezbollah-military-strikes-live-updates/", time: "2026-03-02T21:30Z" },
+      { title: "How much could the Iran war cost the US?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/how-much-could-the-iran-war-cost-the-us-heres-what-we-know", time: "2026-03-03T06:00Z" },
+      { title: "Iran may 'lash out harder' as Khamenei's death puts Tehran on a war footing", source: "CNBC", url: "https://www.cnbc.com/2026/03/01/us-israel-attacks-strikes-iran-retaliate-china-russia-allies.html", time: "2026-03-01T15:00Z" },
+      { title: "US and Israel launch strikes on Iran in biggest Middle East escalation in decades", source: "BBC News", url: "https://www.bbc.co.uk/news/world-middle-east-68721456", time: "2026-02-28T22:30Z" },
+      { title: "Iran's Supreme Leader Khamenei killed in US-Israeli strikes on Tehran", source: "Reuters", url: "https://www.reuters.com/world/middle-east/iran-khamenei-killed-strikes-2026-02-28/", time: "2026-02-28T23:45Z" },
+      { title: "Khamenei assassination marks dangerous new chapter in Middle East conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/01/khamenei-assassination-middle-east-conflict", time: "2026-03-01T06:00Z" },
+      { title: "Death of Khamenei sends shockwaves through Iran's political establishment", source: "The Telegraph", url: "https://www.telegraph.co.uk/world-news/2026/03/01/khamenei-death-iran-political-crisis/", time: "2026-03-01T07:30Z" },
+      { title: "Iran in turmoil as supreme leader killed and death toll passes 500", source: "Sky News", url: "https://news.sky.com/story/iran-turmoil-supreme-leader-killed-death-toll-13456789", time: "2026-03-01T10:00Z" },
+      { title: "CIA tracked Khamenei for months before fatal strike, officials say", source: "The Times", url: "https://www.thetimes.co.uk/article/cia-tracked-khamenei-fatal-strike-2026", time: "2026-03-01T08:00Z" },
+      { title: "Les frappes américano-israéliennes sur l'Iran font plus de 500 morts", source: "France 24", url: "https://www.france24.com/en/middle-east/20260301-us-israeli-strikes-iran-death-toll", time: "2026-03-01T09:00Z" },
+      { title: "Japan condemns Iran strikes, calls for immediate ceasefire", source: "NHK World", url: "https://www3.nhk.or.jp/nhkworld/en/news/20260301_iran_japan/", time: "2026-03-01T11:00Z" },
+      { title: "Iran war death toll rises to 787 as strikes enter third day", source: "Associated Press", url: "https://apnews.com/article/iran-war-death-toll-strikes-2026", time: "2026-03-02T14:00Z" },
+      { title: "Iranians mourn Khamenei as 40-day mourning period begins amid continued bombardment", source: "Deutsche Welle", url: "https://www.dw.com/en/iran-mourning-khamenei-bombardment/a-71234567", time: "2026-03-02T08:00Z" }
+    ]
+  },
+  {
+    name: "Isfahan", country: "Iran",
+    lat: 32.6546, lng: 51.6680,
+    category: "strikes",
+    articles: [
+      { title: "First wave of strikes hits Isfahan nuclear facilities and military sites", source: "Washington Post", url: "https://www.washingtonpost.com/world/isfahan-nuclear-sites-strike", time: "2026-02-28T22:30Z" },
+      { title: "Iran's Red Crescent says 555 killed across 131 cities as strikes hit Isfahan nuclear sites", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-01T18:00Z" },
+      { title: "IDF says 600 infrastructure sites dismantled in Iran using 2,500 munitions", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-us-war-day-3-american-deaths-israel-gulf-allies-hit-missile-strikes/", time: "2026-03-02T09:30Z" },
+      { title: "Isfahan nuclear sites struck in first wave of Operation Epic Fury", source: "BBC News", url: "https://www.bbc.co.uk/news/world-middle-east-68721490", time: "2026-02-28T22:45Z" },
+      { title: "Satellite images show devastation at Isfahan nuclear complex", source: "Reuters", url: "https://www.reuters.com/world/middle-east/satellite-images-isfahan-nuclear-2026-03-01/", time: "2026-03-01T14:00Z" }
+    ]
+  },
+  {
+    name: "Shiraz", country: "Iran",
+    lat: 29.5918, lng: 52.5837,
+    category: "strikes",
+    articles: [
+      { title: "Strikes hit military airfields across Iran including Shiraz; 131 cities affected", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-01T11:00Z" }
+    ]
+  },
+  {
+    name: "Bandar Abbas", country: "Iran",
+    lat: 27.1865, lng: 56.2808,
+    category: "strikes",
+    articles: [
+      { title: "US-Israel strikes target Iran's naval bases and port infrastructure at Bandar Abbas", source: "CNN", url: "https://www.cnn.com/2026/03/02/middleeast/us-israel-iran-conflict-what-we-know-intl", time: "2026-03-02T05:45Z" }
+    ]
+  },
+  {
+    name: "Tel Aviv", country: "Israel",
+    lat: 32.0853, lng: 34.7818,
+    category: "strikes",
+    articles: [
+      { title: "Iran launches 165 ballistic missiles at UAE; retaliatory strikes begin", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/2/28/iran-launches-missiles", time: "2026-02-28T23:45Z" },
+      { title: "11 people killed in Israel by Iranian retaliatory strikes on Tel Aviv area", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-02T11:20Z" },
+      { title: "Hezbollah launches missiles at Israel from Lebanon in retaliation for Khamenei killing", source: "Axios", url: "https://www.axios.com/2026/03/02/iran-war-israel-hezbollah-lebanon", time: "2026-03-02T15:00Z" },
+      { title: "Iron Dome overwhelmed as Iranian missiles strike Tel Aviv suburbs", source: "Reuters", url: "https://www.reuters.com/world/middle-east/iron-dome-iranian-missiles-tel-aviv-2026-03-02/", time: "2026-03-02T12:00Z" },
+      { title: "Israelis shelter in bunkers as Iran launches largest ever missile barrage", source: "Sky News", url: "https://news.sky.com/story/israelis-bunkers-iran-missiles-13456800", time: "2026-03-02T11:30Z" }
+    ]
+  },
+  {
+    name: "Haifa", country: "Israel",
+    lat: 32.7940, lng: 34.9896,
+    category: "strikes",
+    articles: [
+      { title: "Hezbollah fires rockets at northern Israel for first time since Nov 2024 ceasefire", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-01-2026/", time: "2026-03-01T14:00Z" },
+      { title: "Hezbollah fires six projectiles at military base in northern Israel near Haifa", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-01-2026-later/", time: "2026-03-01T19:30Z" }
+    ]
+  },
+  {
+    name: "Jerusalem", country: "Israel",
+    lat: 31.7683, lng: 35.2137,
+    category: "strikes",
+    articles: [
+      { title: "IDF coordinating Operation Roaring Lion from Jerusalem; 2,000+ strikes on Iran confirmed", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-us-war-day-3-american-deaths-israel-gulf-allies-hit-missile-strikes/", time: "2026-03-02T13:00Z" }
+    ]
+  },
+  {
+    name: "Beirut", country: "Lebanon",
+    lat: 33.8938, lng: 35.5018,
+    category: "strikes",
+    articles: [
+      { title: "Israel intensifies war on Lebanon after Hezbollah attack; strikes on Beirut's southern suburbs", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/2/israel-intensifies-war-on-lebanon-after-hezbollah-attack", time: "2026-03-02T06:00Z" },
+      { title: "IDF strikes Hezbollah strongholds in Beirut — 31 killed, over 100 injured across Lebanon", source: "Breaking Defense", url: "https://breakingdefense.com/2026/03/iran-conflict-expands-in-lebanon-beirut-demands-hezbollah-hand-over-its-weapons/", time: "2026-03-02T07:30Z" },
+      { title: "Lebanese PM Salam demands Hezbollah surrender weapons to state after emergency Cabinet meeting", source: "PBS", url: "https://www.pbs.org/newshour/show/hezbollah-and-israel-reignite-conflict-in-lebanon-after-iran-strikes", time: "2026-03-02T12:00Z" },
+      { title: "US-Israel war against Iran spreads to Lebanon as Hezbollah joins conflict", source: "Foreign Policy", url: "https://foreignpolicy.com/2026/03/02/us-israel-iran-war-military-strikes-operation-epic-fury-trump-hezbollah-khamenei/", time: "2026-03-02T09:00Z" },
+      { title: "Israel escalates Lebanon campaign as Hezbollah retaliates for Iran strikes", source: "BBC News", url: "https://www.bbc.co.uk/news/world-middle-east-68722100", time: "2026-03-02T07:00Z" },
+      { title: "Beirut shaken by heaviest Israeli bombardment since November ceasefire", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/02/beirut-israeli-bombardment-lebanon", time: "2026-03-02T08:30Z" },
+      { title: "Lebanon crisis deepens as PM demands Hezbollah disarm", source: "Reuters", url: "https://www.reuters.com/world/middle-east/lebanon-pm-hezbollah-disarm-2026-03-02/", time: "2026-03-02T13:00Z" },
+      { title: "France urges restraint as former mandate territory faces renewed devastation", source: "France 24", url: "https://www.france24.com/en/middle-east/20260302-france-lebanon-restraint", time: "2026-03-02T11:00Z" }
+    ]
+  },
+  {
+    name: "Beqaa Valley", country: "Lebanon",
+    lat: 33.8463, lng: 35.9020,
+    category: "strikes",
+    articles: [
+      { title: "IDF strikes Hezbollah positions in Beqaa Valley; over 100 injured across Lebanon", source: "Breaking Defense", url: "https://breakingdefense.com/2026/03/iran-conflict-expands-in-lebanon-beirut-demands-hezbollah-hand-over-its-weapons/", time: "2026-03-02T08:15Z" }
+    ]
+  },
+  {
+    name: "Tyre", country: "Lebanon",
+    lat: 33.2705, lng: 35.2038,
+    category: "strikes",
+    articles: [
+      { title: "Israel launches new ground incursion into southern Lebanon; evacuation warnings issued near Tyre", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/2/israel-intensifies-war-on-lebanon-after-hezbollah-attack", time: "2026-03-02T14:30Z" },
+      { title: "Israel seizes land in southern Lebanon as Hezbollah retaliates for Khamenei death", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/3/iran-live-news-israel-bombs-tehran-beirut-trump-says-war-to-last-4-weeks", time: "2026-03-03T04:00Z" }
+    ]
+  },
+  {
+    name: "Gaza City", country: "Gaza",
+    lat: 31.5017, lng: 34.4668,
+    category: "humanitarian",
+    articles: [
+      { title: "Gaza's ceasefire had momentum — now some fear a new war in Iran will distract the world", source: "PBS / Washington Post", url: "https://www.pbs.org/newshour/world/gazas-ceasefire-had-momentum-now-some-fear-a-new-war-in-iran-will-distract-the-world", time: "2026-03-01T20:00Z" },
+      { title: "'Not again': Gaza rushes to stockpile amid Iran war and crossing closures", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/2/not-again-gaza-rushes-to-stockpile-amid-iran-war-crossing-closures", time: "2026-03-02T10:00Z" },
+      { title: "Aid groups barred from Gaza and West Bank by Israel", source: "Human Rights Watch", url: "https://www.hrw.org/news/2026/02/24/israel-aid-groups-barred-from-gaza-west-bank", time: "2026-02-24T14:00Z" },
+      { title: "Gaza ceasefire in jeopardy as Israel diverts military focus to Iran", source: "BBC News", url: "https://www.bbc.co.uk/news/world-middle-east-68722900", time: "2026-03-01T16:00Z" },
+      { title: "Aid agencies warn of catastrophe as Gaza crossings close amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/02/gaza-crossings-close-iran-war-aid", time: "2026-03-02T10:00Z" }
+    ]
+  },
+  {
+    name: "Rafah", country: "Gaza",
+    lat: 31.2965, lng: 34.2472,
+    category: "humanitarian",
+    articles: [
+      { title: "Israel closes Rafah crossing; World Central Kitchen warns supplies will run out this week", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/1/israel-closes-gazas-rafah-crossing-amid-attacks-on-iran", time: "2026-03-01T09:00Z" },
+      { title: "Israel closes Gaza's Rafah crossing amid attacks on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/1/israel-closes-gazas-rafah-crossing-amid-attacks-on-iran", time: "2026-03-01T15:30Z" }
+    ]
+  },
+  {
+    name: "Riyadh", country: "Saudi Arabia",
+    lat: 24.7136, lng: 46.6753,
+    category: "strikes",
+    articles: [
+      { title: "US Embassy in Riyadh struck by two Iranian drones; limited fire, minor damage", source: "NBC News", url: "https://www.nbcnewyork.com/news/national-international/iran-us-israel-middle-east-conflict-march-03-2026-live-updates/6471265/", time: "2026-03-02T17:00Z" },
+      { title: "Iran strikes energy infrastructure across the Gulf; Saudi Arabia targeted", source: "CNBC", url: "https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html", time: "2026-03-02T18:30Z" },
+      { title: "US embassy in Riyadh hit by Iranian drones in dramatic escalation", source: "Reuters", url: "https://www.reuters.com/world/middle-east/us-embassy-riyadh-drones-2026-03-02/", time: "2026-03-02T17:30Z" },
+      { title: "Saudi Arabia condemns Iranian strikes on its territory", source: "Associated Press", url: "https://apnews.com/article/saudi-arabia-iran-strikes-condemnation-2026", time: "2026-03-02T19:00Z" }
+    ]
+  },
+  {
+    name: "Dubai", country: "UAE",
+    lat: 25.2048, lng: 55.2708,
+    category: "strikes",
+    articles: [
+      { title: "Iran launches 165 ballistic missiles at UAE; 13 fall into sea", source: "CNBC", url: "https://www.cnbc.com/2026/03/01/iran-missiles-uae", time: "2026-03-01T03:00Z" },
+      { title: "Fairmont The Palm hotel and Dubai International Airport hit by Iranian retaliatory strikes", source: "CNBC", url: "https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html", time: "2026-03-02T02:00Z" },
+      { title: "UAE stays alert as select flights resume amid US-Israel war with Iran", source: "Gulf News", url: "https://gulfnews.com/uae/us-israel-war-with-iran-enters-day-3-as-tensions-escalate-uae-stays-alert-1.500460317", time: "2026-03-02T11:00Z" },
+      { title: "Deaths reported in UAE from Iranian counter-strikes", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-02T19:00Z" },
+      { title: "Dubai airport closes as Iranian missiles hit UAE", source: "BBC News", url: "https://www.bbc.co.uk/news/world-middle-east-68722800", time: "2026-03-02T03:00Z" },
+      { title: "Expats flee UAE as conflict engulfs Gulf states", source: "The Telegraph", url: "https://www.telegraph.co.uk/world-news/2026/03/02/expats-flee-uae-gulf-iran-conflict/", time: "2026-03-02T12:00Z" }
+    ]
+  },
+  {
+    name: "Kuwait City", country: "Kuwait",
+    lat: 29.3759, lng: 47.9774,
+    category: "strikes",
+    articles: [
+      { title: "3 US service members killed, 5 wounded in Operation Epic Fury", source: "USNI News", url: "https://www.usni.org/news/operation-epic-fury-casualties", time: "2026-03-01T10:00Z" },
+      { title: "Kuwait mistakenly downs three US fighter jets amid regional chaos", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-02T20:00Z" },
+      { title: "Deaths reported in Kuwait from Iranian counter-strikes; airspace closed", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/02/us-israel-iran-hezbollah-military-strikes-live-updates/", time: "2026-03-02T21:00Z" }
+    ]
+  },
+  {
+    name: "Manama", country: "Bahrain",
+    lat: 26.2285, lng: 50.5860,
+    category: "strikes",
+    articles: [
+      { title: "Deaths reported in Bahrain as Iran expands retaliatory strikes across Gulf", source: "NBC News", url: "https://www.nbcnews.com/world/middle-east/live-blog/live-updates-iran-war-israel-us-hezbollah-lebanon-khamenei-trump-rcna261259", time: "2026-03-02T22:00Z" },
+      { title: "Bahrain closes airspace following Iranian attacks", source: "CNN", url: "https://www.cnn.com/2026/03/02/middleeast/us-israel-iran-conflict-what-we-know-intl", time: "2026-03-02T23:30Z" }
+    ]
+  },
+  {
+    name: "Doha", country: "Qatar",
+    lat: 25.2854, lng: 51.5310,
+    category: "energy",
+    articles: [
+      { title: "QatarEnergy pauses LNG production amid conflict; European gas prices rocket 45%", source: "CNBC", url: "https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html", time: "2026-03-02T00:30Z" },
+      { title: "Iran strikes energy facilities in Qatar and Saudi Arabia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/3/iran-live-news-israel-bombs-tehran-beirut-trump-says-war-to-last-4-weeks", time: "2026-03-03T02:00Z" },
+      { title: "Qatar suspends LNG exports as conflict threatens global energy security", source: "Financial Times", url: "https://www.ft.com/content/qatar-lng-exports-suspended-2026", time: "2026-03-02T01:00Z" },
+      { title: "European gas prices rocket 45% as Qatar halts LNG shipments", source: "Reuters", url: "https://www.reuters.com/business/energy/european-gas-qatar-lng-halt-2026-03-02/", time: "2026-03-02T08:00Z" }
+    ]
+  },
+  {
+    name: "Baghdad", country: "Iraq",
+    lat: 33.3152, lng: 44.3661,
+    category: "strikes",
+    articles: [
+      { title: "Iran-backed militias fire at US base in Erbil, Kurdistan Region", source: "NPR", url: "https://www.npr.org/erbil-base-attack", time: "2026-02-28T23:00Z" },
+      { title: "Iraq closes airspace as US-Iran strikes expand across the region", source: "CNN", url: "https://www.cnn.com/2026/03/02/middleeast/us-israel-iran-conflict-what-we-know-intl", time: "2026-03-02T03:00Z" },
+      { title: "War threatens 300 million civilians across more than a dozen nations", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/02/mideast-iran-israel-war-civilians/", time: "2026-03-02T04:00Z" }
+    ]
+  },
+  {
+    name: "RAF Akrotiri", country: "Cyprus (UK base)",
+    lat: 34.5907, lng: 32.9879,
+    category: "uk",
+    articles: [
+      { title: "UK raises terror threat level to 'severe' as regional conflict expands", source: "ITV News", url: "https://www.itv.com/news/2026-03-01/uk-terror-threat-level-severe", time: "2026-03-01T16:00Z" },
+      { title: "Iranian drone strikes RAF Akrotiri base in Cyprus; UK says it is 'not at war'", source: "Euronews", url: "https://www.euronews.com/2026/03/02/uk-says-it-is-not-at-war-after-iranian-drone-strikes-raf-akrotiri-base-in-cyprus", time: "2026-03-02T01:30Z" },
+      { title: "RAF site in Cyprus hit by drone hours after Starmer allows US to use British bases", source: "ITV News", url: "https://www.itv.com/news/2026-03-02/raf-cyprus-site-hit-by-drone-hours-after-starmer-allows-us-to-use-british-bases", time: "2026-03-02T02:15Z" },
+      { title: "British base hit in Cyprus, drones downed as Iran war widens", source: "TIME", url: "https://time.com/7382076/british-base-hit-iran-war-drones-united-kingdom-terror-threat/", time: "2026-03-02T03:45Z" },
+      { title: "Starmer lets US use bases for Iran clash: UK's military and legal quagmire", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/2/starmer-lets-us-use-bases-for-iran-clash-uks-military-legal-quagmire", time: "2026-03-02T12:30Z" },
+      { title: "RAF Akrotiri attacked: What we know about the Iranian drone strike on British soil", source: "BBC News", url: "https://www.bbc.co.uk/news/uk-68722500", time: "2026-03-02T03:00Z" },
+      { title: "Starmer insists UK 'not at war' despite Iranian strike on RAF base in Cyprus", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/02/starmer-uk-not-at-war-raf-akrotiri-iran", time: "2026-03-02T06:00Z" },
+      { title: "Drone strike on British base raises questions over UK's role in Iran conflict", source: "The Telegraph", url: "https://www.telegraph.co.uk/politics/2026/03/02/raf-akrotiri-drone-strike-uk-role-iran/", time: "2026-03-02T05:00Z" },
+      { title: "UK military on high alert after unprecedented attack on Cyprus base", source: "Sky News", url: "https://news.sky.com/story/uk-military-alert-cyprus-base-attack-13456810", time: "2026-03-02T04:00Z" },
+      { title: "Attack on RAF Akrotiri marks first strike on British military since Falklands", source: "The Times", url: "https://www.thetimes.co.uk/article/raf-akrotiri-first-strike-british-military-falklands", time: "2026-03-02T06:30Z" }
+    ]
+  },
+  {
+    name: "Diego Garcia", country: "Diego Garcia (UK base)",
+    lat: -7.3195, lng: 72.4229,
+    category: "uk",
+    articles: [
+      { title: "Starmer grants US limited use of UK bases including Diego Garcia for strikes on Iranian missiles", source: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-01/uk-allows-us-use-of-bases-to-destroy-iranian-missile-depots", time: "2026-03-01T12:00Z" },
+      { title: "UK PM Starmer grants US permission to use UK bases in limited defensive operations against Iran", source: "OANN", url: "https://www.oann.com/newsroom/uk-pm-starmer-grants-u-s-permission-to-use-uk-bases-in-limited-defensive-operations-against-iran/", time: "2026-03-01T13:30Z" },
+      { title: "UK allows US to use Diego Garcia base for Iran operations", source: "BBC News", url: "https://www.bbc.co.uk/news/uk-politics-68722600", time: "2026-03-01T13:00Z" },
+      { title: "Starmer's decision to open British bases draws legal challenges", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/01/starmer-british-bases-legal-challenges", time: "2026-03-01T15:00Z" }
+    ]
+  },
+  {
+    name: "Strait of Hormuz", country: "Strait of Hormuz",
+    lat: 26.5667, lng: 56.2500,
+    category: "energy",
+    articles: [
+      { title: "IRGC announces closure of Strait of Hormuz as Iran strikes energy infrastructure", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/3/iran-live-news-israel-bombs-tehran-beirut-trump-says-war-to-last-4-weeks", time: "2026-03-03T03:30Z" },
+      { title: "Oil prices surge over 6% as Middle East conflict disrupts global energy supplies", source: "CNBC", url: "https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html", time: "2026-03-02T08:00Z" },
+      { title: "Oil prices surge past $95 as IRGC threatens to close Strait of Hormuz", source: "Financial Times", url: "https://www.ft.com/content/hormuz-oil-crisis-2026", time: "2026-03-02T09:00Z" },
+      { title: "Global shipping in chaos as Hormuz closure halts 20% of world oil supply", source: "Reuters", url: "https://www.reuters.com/business/energy/hormuz-closure-oil-supply-2026-03-03/", time: "2026-03-03T04:00Z" },
+      { title: "Energy crisis looms as tanker traffic through Hormuz drops to zero", source: "BBC News", url: "https://www.bbc.co.uk/news/business-68723456", time: "2026-03-03T06:00Z" },
+      { title: "Strait of Hormuz closure could trigger global recession, economists warn", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/03/hormuz-closure-recession-warning", time: "2026-03-03T07:00Z" }
+    ]
+  },
+  {
+    name: "Damascus", country: "Syria",
+    lat: 33.5138, lng: 36.2765,
+    category: "evacuation",
+    articles: [
+      { title: "Syria closes airspace as US-Iran conflict spreads; Americans told to 'depart now'", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/us-urges-citizens-to-immediately-leave-over-a-dozen-middle-east-countries", time: "2026-03-03T05:00Z" }
+    ]
+  },
+  {
+    name: "Sanaa", country: "Yemen",
+    lat: 15.3694, lng: 44.1910,
+    category: "strikes",
+    articles: [
+      { title: "Houthis claim attacks on US naval vessels in Red Sea", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/1/houthis-claim-attacks", time: "2026-03-01T12:00Z" },
+      { title: "US demands Iran halt support for Houthis, Hamas, Hezbollah as part of three core demands", source: "Foreign Policy", url: "https://foreignpolicy.com/2026/03/02/us-israel-iran-war-military-strikes-operation-epic-fury-trump-hezbollah-khamenei/", time: "2026-03-02T14:00Z" },
+      { title: "Americans urged to depart Yemen immediately amid regional escalation", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/us-urges-citizens-to-immediately-leave-over-a-dozen-middle-east-countries", time: "2026-03-03T07:00Z" },
+      { title: "Houthis intensify Red Sea attacks as Iran conflict emboldens proxy forces", source: "Reuters", url: "https://www.reuters.com/world/middle-east/houthis-red-sea-attacks-iran-2026-03-01/", time: "2026-03-01T13:00Z" }
+    ]
+  },
+  {
+    name: "Cairo", country: "Egypt",
+    lat: 30.0444, lng: 31.2357,
+    category: "evacuation",
+    articles: [
+      { title: "US urges Americans to immediately depart Egypt and a dozen other Middle East nations", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/us-urges-citizens-to-immediately-leave-over-a-dozen-middle-east-countries", time: "2026-03-03T06:30Z" }
+    ]
+  },
+  {
+    name: "Amman", country: "Jordan",
+    lat: 31.9454, lng: 35.9284,
+    category: "evacuation",
+    articles: [
+      { title: "US urges Americans to immediately depart Jordan amid regional conflict", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/us-urges-citizens-to-immediately-leave-over-a-dozen-middle-east-countries", time: "2026-03-03T06:45Z" }
+    ]
+  },
+  {
+    name: "Muscat", country: "Oman",
+    lat: 23.5880, lng: 58.3829,
+    category: "evacuation",
+    articles: [
+      { title: "Americans urged to depart Oman as US State Dept expands travel advisory", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/3/us-urges-citizens-to-immediately-leave-over-a-dozen-middle-east-countries", time: "2026-03-03T07:15Z" }
+    ]
+  }
+];
+
+// ===== TIMELINE DATA =====
+const timelineStart = new Date("2026-02-28T22:00Z").getTime();
+const timelineEnd = new Date("2026-03-03T10:00Z").getTime();
+const timelineRange = timelineEnd - timelineStart;
+
+// ===== TIMELINE STATE =====
+let timelineMin = timelineStart;
+let timelineMax = timelineEnd;
+
+// ===== CATEGORY COLOURS =====
+const catColors = {
+  strikes: "#c0392b",
+  humanitarian: "#e67e22",
+  energy: "#2471a3",
+  uk: "#6c3483",
+  evacuation: "#7f8c8d"
+};
+const catLabels = {
+  strikes: "Military strikes",
+  humanitarian: "Humanitarian",
+  energy: "Energy / economic",
+  uk: "UK involvement",
+  evacuation: "Evacuation advisory"
+};
+
+// ===== DERIVE COUNTRIES (ordered by article count) =====
+function getCountries(timeFilter) {
+  const countryMap = {};
+  locations.forEach(loc => {
+    const filtered = timeFilter ? loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      return t >= timelineMin && t <= timelineMax;
+    }) : loc.articles;
+    if (filtered.length > 0) {
+      if (!countryMap[loc.country]) countryMap[loc.country] = 0;
+      countryMap[loc.country] += filtered.length;
+    }
+  });
+  return Object.entries(countryMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count }));
+}
+
+let activeCountry = null; // null = show all
+let activeSource = null;  // null = show all
+
+// ===== MAP INIT =====
+const map = L.map('map', {
+  center: [29.5, 47],
+  zoom: 5,
+  zoomControl: true,
+  attributionControl: true
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 19
+}).addTo(map);
+
+// ===== MARKERS =====
+const markerLayer = L.layerGroup().addTo(map);
+const labelLayer = L.layerGroup().addTo(map);
+
+function renderMarkers() {
+  markerLayer.clearLayers();
+  labelLayer.clearLayers();
+
+  locations.forEach(loc => {
+    if (activeCountry && loc.country !== activeCountry) return;
+
+    // Filter articles by time and source
+    const visibleArticles = loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      if (t < timelineMin || t > timelineMax) return false;
+      if (activeSource && a.source !== activeSource) return false;
+      return true;
+    });
+    if (visibleArticles.length === 0) return;
+
+    const count = visibleArticles.length;
+    const r = count <= 1 ? 6 : count <= 2 ? 8 : count <= 4 ? 11 : 15;
+    const col = catColors[loc.category] || "#c0392b";
+
+    const marker = L.circleMarker([loc.lat, loc.lng], {
+      radius: r,
+      fillColor: col,
+      color: "#fff",
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.85
+    }).addTo(markerLayer);
+
+    if (count >= 3) {
+      L.marker([loc.lat, loc.lng], {
+        icon: L.divIcon({
+          className: 'city-label',
+          html: '<span style="font-size:11px;font-weight:700;color:#1a1a1a;text-shadow:1px 1px 2px #fff,-1px -1px 2px #fff,1px -1px 2px #fff,-1px 1px 2px #fff,0 0 6px #fff;white-space:nowrap;pointer-events:none;">' + loc.name + '</span>',
+          iconSize: [0, 0],
+          iconAnchor: [-r - 4, 5]
+        })
+      }).addTo(labelLayer);
+    }
+
+    marker.bindPopup(
+      '<div class="popup-title">' + loc.name + '</div>' +
+      '<div class="popup-country">' + loc.country + '</div>' +
+      '<div class="popup-count">' + count + ' article' + (count > 1 ? 's' : '') + ' — ' + catLabels[loc.category] + '</div>' +
+      '<div class="popup-link" onclick="scrollToLocation(\'' + loc.name + '\')">View articles →</div>'
+    );
+
+    marker.on('click', () => scrollToLocation(loc.name));
+  });
+}
+
+// ===== DERIVE SOURCES (ordered by article count) =====
+function getSources(countryFilter, timeFilter) {
+  const sourceMap = {};
+  locations.forEach(loc => {
+    if (countryFilter && loc.country !== countryFilter) return;
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (timeFilter && (t < timelineMin || t > timelineMax)) return;
+      if (!sourceMap[a.source]) sourceMap[a.source] = 0;
+      sourceMap[a.source]++;
+    });
+  });
+  return Object.entries(sourceMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count }));
+}
+
+// ===== FILTER BARS =====
+function renderFilterBars() {
+  // Country bar
+  const cBar = document.getElementById('country-filter');
+  const countries = getCountries(true);
+
+  let totalAll = 0;
+  locations.forEach(loc => {
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (t >= timelineMin && t <= timelineMax) totalAll++;
+    });
+  });
+
+  let cHtml = '<button class="country-btn ' + (!activeCountry ? 'active' : '') + '" onclick="filterCountry(null)">All<span class="btn-count">' + totalAll + '</span></button>';
+  countries.forEach(c => {
+    cHtml += '<button class="country-btn ' + (activeCountry === c.name ? 'active' : '') + '" onclick="filterCountry(\'' + c.name.replace(/'/g, "\\'") + '\')">' + c.name + '<span class="btn-count">' + c.count + '</span></button>';
+  });
+  cBar.innerHTML = cHtml;
+
+  // Source bar
+  const sBar = document.getElementById('source-filter');
+  const sources = getSources(activeCountry, true);
+  const sourceTotal = sources.reduce((s, x) => s + x.count, 0);
+
+  let sHtml = '<button class="country-btn ' + (!activeSource ? 'active' : '') + '" onclick="filterSource(null)">All<span class="btn-count">' + sourceTotal + '</span></button>';
+  sources.forEach(s => {
+    sHtml += '<button class="country-btn ' + (activeSource === s.name ? 'active' : '') + '" onclick="filterSource(\'' + s.name.replace(/'/g, "\\'") + '\')">' + s.name + '<span class="btn-count">' + s.count + '</span></button>';
+  });
+  sBar.innerHTML = sHtml;
+}
+
+// ===== SIDEBAR — grouped by country, filtered by source =====
+function renderSidebar() {
+  const list = document.getElementById('article-list');
+  const countEl = document.getElementById('loc-count');
+
+  // Apply country filter
+  let filtered = activeCountry ? locations.filter(l => l.country === activeCountry) : [...locations];
+
+  // Apply time filter
+  filtered = filtered.map(loc => {
+    const filtered_articles = loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      return t >= timelineMin && t <= timelineMax;
+    });
+    if (filtered_articles.length === 0) return null;
+    return { ...loc, articles: filtered_articles };
+  }).filter(Boolean);
+
+  // Apply source filter: only show articles from that source
+  if (activeSource) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => a.source === activeSource);
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
+  const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
+  const totalLocs = filtered.length;
+  countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="no-results">No results match these filters.</div>';
+    return;
+  }
+
+  // Group by country, sort countries by total articles
+  const grouped = {};
+  filtered.forEach(loc => {
+    if (!grouped[loc.country]) grouped[loc.country] = [];
+    grouped[loc.country].push(loc);
+  });
+
+  const countryOrder = Object.entries(grouped)
+    .map(([country, locs]) => ({
+      country,
+      locs: locs.sort((a, b) => b.articles.length - a.articles.length),
+      total: locs.reduce((s, l) => s + l.articles.length, 0)
+    }))
+    .sort((a, b) => b.total - a.total);
+
+  let html = '';
+  countryOrder.forEach(group => {
+    html += '<div class="country-section">';
+    html += '<div class="country-heading">' + group.country + ' <span class="country-article-total">' + group.total + ' article' + (group.total !== 1 ? 's' : '') + '</span></div>';
+
+    group.locs.forEach(loc => {
+      const col = catColors[loc.category] || "#c0392b";
+      html += '<div class="location-group" id="loc-' + loc.name.replace(/[^a-zA-Z0-9]/g, '_') + '">' +
+        '<div class="location-group-header" onclick="toggleLocation(this, \'' + loc.name + '\')">' +
+          '<span class="pin" style="color:' + col + '">●</span>' +
+          '<span class="loc-name">' + loc.name + '</span>' +
+          '<span class="article-count" style="background:' + col + '">' + loc.articles.length + '</span>' +
+        '</div>' +
+        '<div class="location-articles">' +
+          loc.articles.map(a =>
+            '<div class="article-card" style="border-left-color:' + col + '">' +
+              '<div class="article-title">' + a.title + '</div>' +
+              '<div class="article-meta">' +
+                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
+                '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
+              '</div>' +
+              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
+            '</div>'
+          ).join('') +
+        '</div>' +
+      '</div>';
+    });
+
+    html += '</div>';
+  });
+
+  list.innerHTML = html;
+}
+
+// ===== TIMELINE FUNCTIONS =====
+function updateTimeRange() {
+  const minInput = document.getElementById('range-min');
+  const maxInput = document.getElementById('range-max');
+  let min = parseInt(minInput.value);
+  let max = parseInt(maxInput.value);
+
+  if (min > max) {
+    [min, max] = [max, min];
+    minInput.value = min;
+    maxInput.value = max;
+  }
+
+  timelineMin = timelineStart + (min / 1000) * timelineRange;
+  timelineMax = timelineStart + (max / 1000) * timelineRange;
+
+  updateTimeDisplay();
+  applyFilters();
+  clearActivePreset();
+}
+
+function updateTimeDisplay() {
+  const minDate = new Date(timelineMin);
+  const maxDate = new Date(timelineMax);
+  document.getElementById('timeline-display').textContent = formatTime(minDate.toISOString()) + ' — ' + formatTime(maxDate.toISOString());
+  document.getElementById('min-label').textContent = formatTime(minDate.toISOString());
+  document.getElementById('max-label').textContent = formatTime(maxDate.toISOString());
+}
+
+function setPreset(preset) {
+  const now = timelineEnd;
+  let start;
+
+  if (preset === 'all') {
+    start = timelineStart;
+  } else if (preset === '48h') {
+    start = now - 48 * 60 * 60 * 1000;
+  } else if (preset === '24h') {
+    start = now - 24 * 60 * 60 * 1000;
+  } else if (preset === '12h') {
+    start = now - 12 * 60 * 60 * 1000;
+  } else if (preset === '6h') {
+    start = now - 6 * 60 * 60 * 1000;
+  }
+
+  timelineMin = Math.max(start, timelineStart);
+  timelineMax = now;
+
+  const minVal = Math.round(((timelineMin - timelineStart) / timelineRange) * 1000);
+  const maxVal = Math.round(((timelineMax - timelineStart) / timelineRange) * 1000);
+
+  document.getElementById('range-min').value = minVal;
+  document.getElementById('range-max').value = maxVal;
+
+  updateTimeDisplay();
+  applyFilters();
+  updatePresetButtons(preset);
+}
+
+function updatePresetButtons(active) {
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector('.preset-btn[onclick="setPreset(\'' + active + '\')"]').classList.add('active');
+}
+
+function clearActivePreset() {
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+}
+
+// ===== ACTIONS =====
+function filterCountry(country) {
+  activeCountry = country;
+  activeSource = null; // reset source when changing country
+  applyFilters();
+  autoExpandArticles();
+
+  if (country) {
+    const filtered = locations.filter(l => l.country === country);
+    if (filtered.length === 1) {
+      map.flyTo([filtered[0].lat, filtered[0].lng], 8, { duration: 0.6 });
+    } else if (filtered.length > 1) {
+      const bounds = L.latLngBounds(filtered.map(l => [l.lat, l.lng]));
+      map.flyToBounds(bounds.pad(0.3), { duration: 0.6 });
+    }
+  } else {
+    map.flyTo([29.5, 47], 5, { duration: 0.6 });
+  }
+}
+
+function filterSource(source) {
+  activeSource = source;
+  applyFilters();
+  autoExpandArticles();
+}
+
+function autoExpandArticles() {
+  // Auto-expand all article lists when a filter is active
+  if (activeCountry || activeSource) {
+    document.querySelectorAll('.location-articles').forEach(el => el.classList.add('open'));
+  } else {
+    document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
+  }
+}
+
+function applyFilters() {
+  renderFilterBars();
+  renderSidebar();
+  renderMarkers();
+}
+
+function toggleLocation(header, locName) {
+  const articles = header.nextElementSibling;
+  const wasOpen = articles.classList.contains('open');
+
+  document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
+
+  if (!wasOpen) {
+    articles.classList.add('open');
+    const loc = locations.find(l => l.name === locName);
+    if (loc) map.flyTo([loc.lat, loc.lng], 8, { duration: 0.6 });
+  }
+}
+
+function scrollToLocation(locName) {
+  const id = 'loc-' + locName.replace(/[^a-zA-Z0-9]/g, '_');
+  const el = document.getElementById(id);
+  if (el) {
+    const articles = el.querySelector('.location-articles');
+    document.querySelectorAll('.location-articles').forEach(a => a.classList.remove('open'));
+    articles.classList.add('open');
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// ===== INIT =====
+setPreset('48h');
+renderFilterBars();
+renderSidebar();
+renderMarkers();
+</script>
+</body>
+</html>
