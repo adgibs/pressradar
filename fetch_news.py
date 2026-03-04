@@ -314,9 +314,9 @@ def merge_locations(existing, new_locations):
     return merged
 
 
-def update_html(js_data):
-    """Update the index.html file with new location data."""
-    html_path = Path(__file__).parent / "index.html"
+def update_html(js_data, html_file="index.html"):
+    """Update an HTML file with new location data."""
+    html_path = Path(__file__).parent / html_file
     html = html_path.read_text()
 
     # Replace the locations array
@@ -345,40 +345,278 @@ def update_html(js_data):
         )
 
     html_path.write_text(new_html)
-    print(f"  Updated index.html ({len(new_html)} bytes)")
+    print(f"  Updated {html_file} ({len(new_html)} bytes)")
+
+
+# ── Ukraine Region Configuration ─────────────────────────────────
+UKRAINE_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/ukraine/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/europe/rss", "source": "France 24"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
+    {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
+]
+
+UKRAINE_KEYWORDS = [
+    "ukraine", "kyiv", "kiev", "kharkiv", "zaporizhzhia", "odesa", "odessa",
+    "kherson", "donetsk", "luhansk", "mariupol", "crimea", "dnipro", "sumy",
+    "kursk", "moscow", "russia", "russian", "zelensky", "putin", "kremlin",
+    "donbas", "bakhmut", "avdiivka", "nato", "wagner",
+]
+
+UKRAINE_LOCATION_MAP = {
+    "kyiv": {"name": "Kyiv", "country": "Ukraine", "lat": 50.4501, "lng": 30.5234, "category": "conflict"},
+    "kiev": {"name": "Kyiv", "country": "Ukraine", "lat": 50.4501, "lng": 30.5234, "category": "conflict"},
+    "kharkiv": {"name": "Kharkiv", "country": "Ukraine", "lat": 49.9935, "lng": 36.2304, "category": "conflict"},
+    "zaporizhzhia": {"name": "Zaporizhzhia", "country": "Ukraine", "lat": 47.8388, "lng": 35.1396, "category": "humanitarian"},
+    "odesa": {"name": "Odesa", "country": "Ukraine", "lat": 46.4825, "lng": 30.7233, "category": "conflict"},
+    "odessa": {"name": "Odesa", "country": "Ukraine", "lat": 46.4825, "lng": 30.7233, "category": "conflict"},
+    "kherson": {"name": "Kherson", "country": "Ukraine", "lat": 46.6354, "lng": 32.6169, "category": "humanitarian"},
+    "donetsk": {"name": "Donetsk", "country": "Ukraine", "lat": 48.0159, "lng": 37.8029, "category": "conflict"},
+    "donbas": {"name": "Donetsk", "country": "Ukraine", "lat": 48.0159, "lng": 37.8029, "category": "conflict"},
+    "luhansk": {"name": "Donetsk", "country": "Ukraine", "lat": 48.0159, "lng": 37.8029, "category": "conflict"},
+    "mariupol": {"name": "Mariupol", "country": "Ukraine", "lat": 47.0958, "lng": 37.5494, "category": "humanitarian"},
+    "crimea": {"name": "Crimea", "country": "Ukraine", "lat": 44.9521, "lng": 34.1024, "category": "conflict"},
+    "dnipro": {"name": "Dnipro", "country": "Ukraine", "lat": 48.4647, "lng": 35.0462, "category": "conflict"},
+    "sumy": {"name": "Sumy", "country": "Ukraine", "lat": 50.9077, "lng": 34.7981, "category": "conflict"},
+    "kursk": {"name": "Kursk", "country": "Russia", "lat": 51.7304, "lng": 36.1926, "category": "conflict"},
+    "moscow": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "diplomacy"},
+    "kremlin": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "diplomacy"},
+    "putin": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "diplomacy"},
+    "bakhmut": {"name": "Donetsk", "country": "Ukraine", "lat": 48.0159, "lng": 37.8029, "category": "conflict"},
+    "avdiivka": {"name": "Donetsk", "country": "Ukraine", "lat": 48.0159, "lng": 37.8029, "category": "conflict"},
+    "zelensky": {"name": "Kyiv", "country": "Ukraine", "lat": 50.4501, "lng": 30.5234, "category": "diplomacy"},
+    "ukraine": {"name": "Kyiv", "country": "Ukraine", "lat": 50.4501, "lng": 30.5234, "category": "conflict"},
+    "russia": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "conflict"},
+    "russian": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "conflict"},
+    "nato": {"name": "Kyiv", "country": "Ukraine", "lat": 50.4501, "lng": 30.5234, "category": "nato"},
+    "wagner": {"name": "Moscow", "country": "Russia", "lat": 55.7558, "lng": 37.6173, "category": "conflict"},
+}
+
+UKRAINE_LOCATION_PRIORITY = [
+    "bakhmut", "avdiivka", "kharkiv", "zaporizhzhia", "odesa", "odessa",
+    "kherson", "donetsk", "donbas", "luhansk", "mariupol", "crimea",
+    "dnipro", "sumy", "kursk", "kyiv", "kiev",
+    "kremlin", "moscow", "putin",
+    "zelensky", "nato", "wagner",
+    "ukraine", "russia", "russian",
+]
+
+
+# ── East Asia Region Configuration ───────────────────────────────
+EAST_ASIA_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/asia-pacific/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/asia-pacific/rss", "source": "France 24"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
+    {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
+    {"url": "https://www3.nhk.or.jp/nhkworld/en/news/rss/index.xml", "source": "NHK World"},
+]
+
+EAST_ASIA_KEYWORDS = [
+    "taiwan", "taipei", "china", "chinese", "beijing", "shanghai",
+    "south korea", "korea", "seoul", "north korea", "pyongyang", "kim jong",
+    "japan", "tokyo", "okinawa", "philippines", "manila", "south china sea",
+    "hong kong", "vietnam", "hanoi", "singapore", "xi jinping",
+    "indo-pacific", "indopacific", "aukus", "quad",
+]
+
+EAST_ASIA_LOCATION_MAP = {
+    "taipei": {"name": "Taipei", "country": "Taiwan", "lat": 25.0330, "lng": 121.5654, "category": "territorial"},
+    "taiwan": {"name": "Taipei", "country": "Taiwan", "lat": 25.0330, "lng": 121.5654, "category": "territorial"},
+    "beijing": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "military"},
+    "xi jinping": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "diplomacy"},
+    "shanghai": {"name": "Shanghai", "country": "China", "lat": 31.2304, "lng": 121.4737, "category": "trade"},
+    "hong kong": {"name": "Hong Kong", "country": "China", "lat": 22.3193, "lng": 114.1694, "category": "trade"},
+    "seoul": {"name": "Seoul", "country": "South Korea", "lat": 37.5665, "lng": 126.9780, "category": "diplomacy"},
+    "south korea": {"name": "Seoul", "country": "South Korea", "lat": 37.5665, "lng": 126.9780, "category": "diplomacy"},
+    "pyongyang": {"name": "Pyongyang", "country": "North Korea", "lat": 39.0392, "lng": 125.7625, "category": "military"},
+    "north korea": {"name": "Pyongyang", "country": "North Korea", "lat": 39.0392, "lng": 125.7625, "category": "military"},
+    "kim jong": {"name": "Pyongyang", "country": "North Korea", "lat": 39.0392, "lng": 125.7625, "category": "military"},
+    "tokyo": {"name": "Tokyo", "country": "Japan", "lat": 35.6762, "lng": 139.6503, "category": "diplomacy"},
+    "japan": {"name": "Tokyo", "country": "Japan", "lat": 35.6762, "lng": 139.6503, "category": "diplomacy"},
+    "okinawa": {"name": "Okinawa", "country": "Japan", "lat": 26.3344, "lng": 127.8056, "category": "military"},
+    "manila": {"name": "Manila", "country": "Philippines", "lat": 14.5995, "lng": 120.9842, "category": "territorial"},
+    "philippines": {"name": "Manila", "country": "Philippines", "lat": 14.5995, "lng": 120.9842, "category": "territorial"},
+    "south china sea": {"name": "South China Sea", "country": "International", "lat": 15.0, "lng": 115.0, "category": "territorial"},
+    "hanoi": {"name": "Hanoi", "country": "Vietnam", "lat": 21.0285, "lng": 105.8542, "category": "diplomacy"},
+    "vietnam": {"name": "Hanoi", "country": "Vietnam", "lat": 21.0285, "lng": 105.8542, "category": "diplomacy"},
+    "singapore": {"name": "Singapore", "country": "Singapore", "lat": 1.3521, "lng": 103.8198, "category": "trade"},
+    "china": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "military"},
+    "chinese": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "military"},
+    "korea": {"name": "Seoul", "country": "South Korea", "lat": 37.5665, "lng": 126.9780, "category": "diplomacy"},
+    "indo-pacific": {"name": "South China Sea", "country": "International", "lat": 15.0, "lng": 115.0, "category": "military"},
+    "indopacific": {"name": "South China Sea", "country": "International", "lat": 15.0, "lng": 115.0, "category": "military"},
+    "aukus": {"name": "Tokyo", "country": "Japan", "lat": 35.6762, "lng": 139.6503, "category": "military"},
+    "quad": {"name": "Tokyo", "country": "Japan", "lat": 35.6762, "lng": 139.6503, "category": "diplomacy"},
+}
+
+EAST_ASIA_LOCATION_PRIORITY = [
+    "taipei", "south china sea", "hong kong", "okinawa", "shanghai",
+    "pyongyang", "north korea", "kim jong",
+    "xi jinping", "beijing", "manila", "seoul", "south korea",
+    "tokyo", "hanoi", "singapore",
+    "taiwan", "philippines", "japan", "vietnam",
+    "indo-pacific", "indopacific", "aukus", "quad",
+    "china", "chinese", "korea",
+]
+
+
+def fetch_region(feeds, keywords, location_map, location_priority, region_name, hours_back=48):
+    """Fetch articles for a specific region."""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours_back)
+    articles = []
+    seen_titles = set()
+
+    def is_relevant(title, summary=""):
+        text = (title + " " + summary).lower()
+        return any(kw in text for kw in keywords)
+
+    def get_loc(title, summary=""):
+        text = (title + " " + summary).lower()
+        for kw in location_priority:
+            if kw in text:
+                return location_map[kw]
+        return None
+
+    for feed_info in feeds:
+        try:
+            feed = feedparser.parse(feed_info["url"])
+            for entry in feed.entries:
+                title = entry.get("title", "").strip()
+                if not title or title in seen_titles:
+                    continue
+
+                pub_time = None
+                if hasattr(entry, "published_parsed") and entry.published_parsed:
+                    pub_time = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+                elif hasattr(entry, "updated_parsed") and entry.updated_parsed:
+                    pub_time = datetime(*entry.updated_parsed[:6], tzinfo=timezone.utc)
+
+                if pub_time and pub_time < cutoff:
+                    continue
+
+                summary = entry.get("summary", "")
+                if not is_relevant(title, summary):
+                    continue
+
+                location = get_loc(title, summary)
+                if not location:
+                    continue
+
+                url = entry.get("link", "")
+                if not url:
+                    continue
+
+                time_str = pub_time.strftime("%Y-%m-%dT%H:%M:%SZ") if pub_time else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+                clean_title = re.sub(r'<[^>]+>', '', title)
+                clean_title = clean_title.replace('"', "'").replace("\\", "")
+
+                articles.append({
+                    "title": clean_title,
+                    "source": feed_info["source"],
+                    "url": url,
+                    "time": time_str,
+                    "location": location,
+                })
+                seen_titles.add(title)
+
+        except Exception as e:
+            print(f"  Warning: Failed to fetch {feed_info['source']}: {e}")
+
+    print(f"  Found {len(articles)} {region_name} articles from {len(feeds)} feeds")
+    return articles
+
+
+def update_region(html_file, feeds, keywords, location_map, location_priority, region_name):
+    """Fetch and update a specific region's HTML file."""
+    html_path = Path(__file__).parent / html_file
+    if not html_path.exists():
+        print(f"  Skipping {html_file} — file not found")
+        return
+
+    html = html_path.read_text()
+    existing = parse_existing_articles(html)
+    existing_count = sum(len(loc["articles"]) for loc in existing.values())
+    print(f"  [{region_name}] Existing: {existing_count} articles across {len(existing)} locations")
+
+    articles = fetch_region(feeds, keywords, location_map, location_priority, region_name, hours_back=48)
+
+    if not articles and existing_count > 0:
+        print(f"  [{region_name}] No new articles found. Keeping existing data.")
+        return
+
+    new_locations = group_by_location(articles)
+    print(f"  [{region_name}] New: {len(articles)} articles across {len(new_locations)} locations")
+
+    merged = merge_locations(existing, new_locations) if existing else new_locations
+    total = sum(len(loc["articles"]) for loc in merged.values())
+    print(f"  [{region_name}] Merged: {total} articles across {len(merged)} locations")
+
+    js_data = generate_js_data(merged)
+    update_html(js_data, html_file)
 
 
 def main():
     print("PressRadar.me — Fetching news...")
 
-    # Parse existing articles from HTML
+    # ── Middle East (index.html) ──
+    print("\n=== Middle East ===")
     html_path = Path(__file__).parent / "index.html"
     html = html_path.read_text()
     existing = parse_existing_articles(html)
     existing_count = sum(len(loc["articles"]) for loc in existing.values())
     print(f"  Existing: {existing_count} articles across {len(existing)} locations")
 
-    # Fetch new articles from RSS feeds (last 48 hours)
     articles = fetch_feeds(hours_back=48)
 
-    if not articles:
+    if articles or existing_count == 0:
+        new_locations = group_by_location(articles)
+        print(f"  New: {len(articles)} articles across {len(new_locations)} locations")
+
+        merged = merge_locations(existing, new_locations)
+        total = sum(len(loc["articles"]) for loc in merged.values())
+        print(f"  Merged: {total} articles across {len(merged)} locations")
+
+        js_data = generate_js_data(merged)
+        update_html(js_data, "index.html")
+    else:
         print("  No new articles found. Keeping existing data.")
-        return
 
-    # Group new articles by location
-    new_locations = group_by_location(articles)
-    print(f"  New: {len(articles)} articles across {len(new_locations)} locations")
+    # ── Ukraine (ukraine.html) ──
+    print("\n=== Ukraine ===")
+    update_region(
+        "ukraine.html",
+        UKRAINE_FEEDS,
+        UKRAINE_KEYWORDS,
+        UKRAINE_LOCATION_MAP,
+        UKRAINE_LOCATION_PRIORITY,
+        "Ukraine",
+    )
 
-    # Merge new with existing (preserves old articles, adds new ones)
-    merged = merge_locations(existing, new_locations)
-    total = sum(len(loc["articles"]) for loc in merged.values())
-    print(f"  Merged: {total} articles across {len(merged)} locations")
+    # ── East Asia (east-asia.html) ──
+    print("\n=== East Asia ===")
+    update_region(
+        "east-asia.html",
+        EAST_ASIA_FEEDS,
+        EAST_ASIA_KEYWORDS,
+        EAST_ASIA_LOCATION_MAP,
+        EAST_ASIA_LOCATION_PRIORITY,
+        "East Asia",
+    )
 
-    # Generate JS and update HTML
-    js_data = generate_js_data(merged)
-    update_html(js_data)
-
-    print("  Done!")
+    print("\nDone!")
 
 
 if __name__ == "__main__":

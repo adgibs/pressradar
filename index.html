@@ -6,6 +6,7 @@
 <title>PressRadar.me — Middle East News Map</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #222; }
@@ -31,6 +32,11 @@
     font-size: 0.8rem;
     font-weight: 600;
   }
+
+  #region-nav { display: flex; gap: 0; background: #fff; border-bottom: 2px solid #e0e0e0; padding: 0 24px; }
+  .region-tab { padding: 10px 20px; font-size: 13px; font-weight: 600; color: #888; cursor: pointer; border: none; background: none; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .region-tab:hover { color: #444; }
+  .region-tab.active { color: #e74c3c; border-bottom-color: #e74c3c; }
 
   #container { display: flex; height: calc(100vh - 60px); }
   #map { flex: 1; min-width: 0; }
@@ -314,6 +320,14 @@
   .trending-tag { font-size: 11px; padding: 2px 8px; background: #fee; color: #c0392b; border-radius: 10px; cursor: pointer; border: 1px solid #fcc; }
   .trending-tag:hover { background: #c0392b; color: #fff; }
 
+  /* Sentiment indicators */
+  .sentiment-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+  .sentiment-escalation { background: #e74c3c; }
+  .sentiment-diplomacy { background: #27ae60; }
+  .sentiment-humanitarian { background: #e67e22; }
+  .sentiment-economic { background: #3498db; }
+  .sentiment-label { font-size: 10px; color: #888; margin-left: 4px; }
+
   @media (max-width: 800px) {
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
@@ -329,6 +343,12 @@
     <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
   </div>
   <div class="date-badge">4 March 2026</div>
+</div>
+
+<div id="region-nav">
+  <button class="region-tab active" onclick="window.location.href='index.html'">Middle East</button>
+  <button class="region-tab" onclick="window.location.href='ukraine.html'">Ukraine</button>
+  <button class="region-tab" onclick="window.location.href='east-asia.html'">East Asia</button>
 </div>
 
 <div id="container">
@@ -388,6 +408,11 @@
   <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> UK involvement</div>
   <div class="legend-item"><div class="legend-dot" style="background:#7f8c8d;"></div> Evacuation advisory</div>
   <h3 style="margin-top:10px;">Size = article count</h3>
+</div>
+
+<div id="view-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
+  <button class="view-btn active" id="btn-pins" onclick="setView('pins')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:#e74c3c;color:#fff;">Pins</button>
+  <button class="view-btn" id="btn-heat" onclick="setView('heat')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Heatmap</button>
 </div>
 
 <script>
@@ -909,8 +934,43 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 // ===== MARKERS =====
 const markerLayer = L.layerGroup().addTo(map);
 const labelLayer = L.layerGroup().addTo(map);
+let heatLayer = null;
+let currentView = 'pins';
+
+// ===== SENTIMENT ANALYSIS =====
+function getSentiment(title) {
+  const t = title.toLowerCase();
+  const escalation = ['strike', 'attack', 'bomb', 'kill', 'dead', 'death', 'missile', 'war', 'destroy', 'assault', 'offensive', 'blast', 'explod', 'casualt', 'wound', 'military', 'combat', 'drone', 'troops', 'invasion', 'retaliat', 'threat', 'launch', 'target', 'fire'];
+  const diplomacy = ['ceasefire', 'peace', 'negotiat', 'talks', 'diplomat', 'UN', 'urge', 'restrain', 'de-escalat', 'agreement', 'summit', 'condemn', 'call for', 'resolution'];
+  const humanitarian = ['humanitarian', 'aid', 'refugee', 'civilian', 'evacuat', 'flee', 'shelter', 'food', 'hospital', 'school', 'children', 'crisis', 'stranded', 'rescue'];
+  const economic = ['oil', 'price', 'energy', 'gas', 'trade', 'market', 'economy', 'shipping', 'tanker', 'LNG', 'supply', 'recession', 'surge', 'export', 'import', 'insurance'];
+
+  let scores = {escalation: 0, diplomacy: 0, humanitarian: 0, economic: 0};
+  escalation.forEach(w => { if (t.includes(w)) scores.escalation++; });
+  diplomacy.forEach(w => { if (t.includes(w)) scores.diplomacy++; });
+  humanitarian.forEach(w => { if (t.includes(w)) scores.humanitarian++; });
+  economic.forEach(w => { if (t.includes(w)) scores.economic++; });
+
+  const max = Math.max(scores.escalation, scores.diplomacy, scores.humanitarian, scores.economic);
+  if (max === 0) return {type: 'escalation', label: ''};
+  if (scores.escalation === max) return {type: 'escalation', label: 'Conflict'};
+  if (scores.diplomacy === max) return {type: 'diplomacy', label: 'Diplomacy'};
+  if (scores.humanitarian === max) return {type: 'humanitarian', label: 'Humanitarian'};
+  return {type: 'economic', label: 'Economic'};
+}
+
+// ===== VIEW MODE TOGGLE =====
+function setView(mode) {
+  currentView = mode;
+  document.getElementById('btn-pins').style.background = mode === 'pins' ? '#e74c3c' : 'transparent';
+  document.getElementById('btn-pins').style.color = mode === 'pins' ? '#fff' : '#666';
+  document.getElementById('btn-heat').style.background = mode === 'heat' ? '#e74c3c' : 'transparent';
+  document.getElementById('btn-heat').style.color = mode === 'heat' ? '#fff' : '#666';
+  renderMarkers();
+}
 
 function renderMarkers() {
+  if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
   markerLayer.clearLayers();
   labelLayer.clearLayers();
 
@@ -963,6 +1023,36 @@ function renderMarkers() {
 
     marker.on('click', () => scrollToLocation(loc.name));
   });
+
+  // Heatmap rendering
+  if (currentView === 'heat') {
+    markerLayer.clearLayers();
+    labelLayer.clearLayers();
+    const heatPoints = [];
+    locations.forEach(loc => {
+      if (activeCountry && loc.country !== activeCountry) return;
+      const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+      const visibleArticles = loc.articles.filter(a => {
+        const t = new Date(a.time).getTime();
+        if (t < timelineMin || t > timelineMax) return false;
+        if (activeSource && a.source !== activeSource) return false;
+        if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+        return true;
+      });
+      if (visibleArticles.length > 0) {
+        heatPoints.push([loc.lat, loc.lng, visibleArticles.length * 0.5]);
+      }
+    });
+    if (heatPoints.length > 0) {
+      heatLayer = L.heatLayer(heatPoints, {
+        radius: 35,
+        blur: 25,
+        maxZoom: 10,
+        max: 20,
+        gradient: {0.2: '#fee', 0.4: '#fc8', 0.6: '#f86', 0.8: '#e44', 1.0: '#a00'}
+      }).addTo(map);
+    }
+  }
 }
 
 // ===== DERIVE SOURCES (ordered by article count) =====
@@ -1091,8 +1181,9 @@ function renderSidebar() {
           loc.articles.map(a => {
             const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
             const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
+            const sentiment = getSentiment(a.title);
             return '<div class="article-card" style="border-left-color:' + col + '">' +
-              '<div class="article-title">' + a.title + newBadge + '</div>' +
+              '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +

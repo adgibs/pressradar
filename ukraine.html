@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PressRadar.me — Ukraine News Map</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #222; }
+
+  #header {
+    background: #fff;
+    padding: 14px 24px;
+    border-bottom: 3px solid #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  #header h1 { font-size: 1.3rem; color: #1a1a1a; font-weight: 700; }
+  #header .subtitle { font-size: 0.85rem; color: #666; }
+  #header .date-badge {
+    background: #c0392b;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  #region-nav { display: flex; gap: 0; background: #fff; border-bottom: 2px solid #e0e0e0; padding: 0 24px; }
+  .region-tab { padding: 10px 20px; font-size: 13px; font-weight: 600; color: #888; cursor: pointer; border: none; background: none; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .region-tab:hover { color: #444; }
+  .region-tab.active { color: #e74c3c; border-bottom-color: #e74c3c; }
+
+  #container { display: flex; height: calc(100vh - 60px); }
+  #map { flex: 1; min-width: 0; }
+
+  #sidebar {
+    width: 420px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sidebar-header {
+    padding: 14px 16px 10px;
+    background: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  #sidebar-header h2 { font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px; }
+  #sidebar-header .location-count { font-size: 0.8rem; color: #c0392b; font-weight: 500; margin-bottom: 12px; }
+
+  /* Timeline section */
+  #timeline-section {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+  }
+  .timeline-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .timeline-display {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .timeline-presets {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .preset-btn {
+    padding: 4px 8px;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .preset-btn:hover { border-color: #999; color: #222; }
+  .preset-btn.active {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+  }
+
+  .range-slider-container {
+    position: relative;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  .range-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  .range-slider-inputs {
+    position: relative;
+    height: 26px;
+  }
+  input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 10px;
+    border-radius: 3px;
+    background: #e0e0e0;
+    outline: none;
+    -webkit-appearance: none;
+    pointer-events: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #c0392b;
+    cursor: pointer;
+    pointer-events: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #c0392b;
+    cursor: pointer;
+    pointer-events: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  #range-min { z-index: 5; }
+  #range-max { z-index: 4; }
+  #range-max::-webkit-slider-thumb { background: #2471a3; }
+  #range-max::-moz-range-thumb { background: #2471a3; }
+
+  #filter-bar { padding: 10px 16px; background: #fff; border-bottom: 1px solid #e0e0e0; }
+  .filter-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .filter-row label { font-size: 13px; font-weight: 600; color: #555; white-space: nowrap; }
+  .filter-row select { padding: 6px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; background: #fff; color: #222; min-width: 160px; cursor: pointer; }
+  .filter-row select:focus { outline: none; border-color: #e74c3c; }
+
+  #article-list { padding: 8px; flex: 1; }
+
+  /* Country group heading in sidebar */
+  .country-section { margin-bottom: 16px; }
+  .country-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 4px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .country-heading .country-article-total {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #fff;
+    background: #888;
+    padding: 1px 7px;
+    border-radius: 10px;
+  }
+
+  .location-group {
+    margin-bottom: 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .location-group-header {
+    padding: 9px 12px;
+    background: #fafafa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .location-group-header:hover { background: #f0f0f0; }
+  .location-group-header .pin { font-size: 1rem; }
+  .location-group-header .loc-name { font-weight: 600; font-size: 0.9rem; color: #1a1a1a; }
+  .location-group-header .article-count {
+    margin-left: auto;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    min-width: 22px;
+    text-align: center;
+  }
+
+  .location-articles { display: none; padding: 8px; background: #fafafa; }
+  .location-articles.open { display: block; }
+
+  .article-card {
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    background: #fff;
+    border-radius: 6px;
+    border-left: 3px solid #c0392b;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .article-card .article-title {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+  .article-card .article-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 5px;
+  }
+  .article-card .article-source {
+    font-size: 0.73rem;
+    color: #888;
+  }
+  .article-card .article-source .src-name { color: #c0392b; font-weight: 600; }
+  .article-card .article-time {
+    font-size: 0.7rem;
+    color: #999;
+  }
+  .article-card a {
+    display: inline-block;
+    font-size: 0.76rem;
+    color: #2471a3;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .article-card a:hover { text-decoration: underline; }
+
+  .legend {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    z-index: 1000;
+    font-size: 0.78rem;
+    color: #333;
+    max-width: 240px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .legend h3 { font-size: 0.85rem; margin-bottom: 8px; color: #1a1a1a; }
+  .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+  .legend-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1.5px solid rgba(0,0,0,0.2);
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: #fff !important;
+    color: #222 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.15) !important;
+  }
+  .leaflet-popup-tip { background: #fff !important; }
+  .leaflet-popup-content { margin: 10px 14px !important; font-size: 0.85rem !important; }
+  .popup-title { font-weight: 700; font-size: 1rem; margin-bottom: 2px; color: #1a1a1a; }
+  .popup-country { font-size: 0.8rem; color: #666; margin-bottom: 4px; }
+  .popup-count { color: #c0392b; font-size: 0.85rem; margin-bottom: 6px; }
+  .popup-link { color: #2471a3; cursor: pointer; font-size: 0.82rem; font-weight: 500; }
+  .popup-link:hover { text-decoration: underline; }
+
+  .no-results { padding: 24px 16px; text-align: center; color: #999; font-size: 0.9rem; }
+
+  /* Search box styles */
+  #search-box { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; margin-top: 8px; }
+  #search-box:focus { outline: none; border-color: #e74c3c; }
+
+  /* NEW badge styles */
+  .new-badge { display: inline-block; background: #e74c3c; color: #fff; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.5px; }
+
+  /* Trending bar styles */
+  #trending-bar { padding: 8px 16px; background: #fff; border-bottom: 1px solid #e0e0e0; }
+  #trending-bar:empty { display: none; }
+  .trending-label { font-size: 11px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .trending-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .trending-tag { font-size: 11px; padding: 2px 8px; background: #fee; color: #c0392b; border-radius: 10px; cursor: pointer; border: 1px solid #fcc; }
+  .trending-tag:hover { background: #c0392b; color: #fff; }
+
+  /* Sentiment indicators */
+  .sentiment-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+  .sentiment-escalation { background: #e74c3c; }
+  .sentiment-diplomacy { background: #27ae60; }
+  .sentiment-humanitarian { background: #e67e22; }
+  .sentiment-economic { background: #3498db; }
+  .sentiment-label { font-size: 10px; color: #888; margin-left: 4px; }
+
+  @media (max-width: 800px) {
+    #container { flex-direction: column; }
+    #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
+    #map { height: 50vh; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div>
+    <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
+  </div>
+  <div class="date-badge">4 March 2026</div>
+</div>
+
+<div id="region-nav">
+  <button class="region-tab" onclick="window.location.href='index.html'">Middle East</button>
+  <button class="region-tab active" onclick="window.location.href='ukraine.html'">Ukraine</button>
+  <button class="region-tab" onclick="window.location.href='east-asia.html'">East Asia</button>
+</div>
+
+<div id="container">
+  <div id="map"></div>
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <h2>News by Location</h2>
+      <div class="location-count" id="loc-count"></div>
+      <input type="text" id="search-box" placeholder="Search articles..." oninput="applyFilters()">
+
+      <div id="timeline-section">
+        <div class="timeline-label">Timeline</div>
+        <div class="timeline-display" id="timeline-display">Feb 28, 22:00 — Mar 3, 10:00</div>
+        <div class="timeline-presets">
+          <button class="preset-btn" onclick="setPreset('6h')">Last 6h</button>
+          <button class="preset-btn" onclick="setPreset('12h')">Last 12h</button>
+          <button class="preset-btn" onclick="setPreset('24h')">Last 24h</button>
+          <button class="preset-btn active" onclick="setPreset('48h')">Last 48h</button>
+          <button class="preset-btn" onclick="setPreset('all')">All</button>
+        </div>
+        <div class="range-slider-labels">
+          <span id="min-label">Feb 28, 22:00</span>
+          <span id="max-label">Mar 3, 10:00</span>
+        </div>
+        <div class="range-slider-container">
+          <div class="range-slider-inputs">
+            <input type="range" id="range-min" min="0" max="1000" value="0" oninput="updateTimeRange()">
+            <input type="range" id="range-max" min="0" max="1000" value="1000" oninput="updateTimeRange()">
+          </div>
+        </div>
+      </div>
+
+      <div id="filter-bar">
+        <div class="filter-row">
+          <label for="country-select">Country:</label>
+          <select id="country-select" onchange="filterCountry(this.value || null)">
+            <option value="">All countries</option>
+          </select>
+          <label for="source-select">Source:</label>
+          <select id="source-select" onchange="filterSource(this.value || null)">
+            <option value="">All sources</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="trending-bar"></div>
+    </div>
+    <div id="article-list"></div>
+  </div>
+</div>
+
+<div class="legend">
+  <h3>Category</h3>
+  <div class="legend-item"><div class="legend-dot" style="background:#c0392b;"></div> Conflict zone</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#27ae60;"></div> Diplomacy</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e67e22;"></div> Humanitarian</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2471a3;"></div> Energy / economic</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> NATO involvement</div>
+  <h3 style="margin-top:10px;">Size = article count</h3>
+</div>
+
+<div id="view-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
+  <button class="view-btn active" id="btn-pins" onclick="setView('pins')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:#e74c3c;color:#fff;">Pins</button>
+  <button class="view-btn" id="btn-heat" onclick="setView('heat')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Heatmap</button>
+</div>
+
+<script>
+// ===== HELPER: Format ISO time to readable string =====
+function formatTime(isoString) {
+  const d = new Date(isoString);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[d.getUTCMonth()];
+  const date = d.getUTCDate();
+  const hours = String(d.getUTCHours()).padStart(2, '0');
+  const mins = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${month} ${date}, ${hours}:${mins}`;
+}
+
+// ===== DATA — every location has a country =====
+const locations = [
+  { name: "Kyiv", country: "Ukraine", lat: 50.4501, lng: 30.5234, category: "conflict", articles: [] },
+  { name: "Kharkiv", country: "Ukraine", lat: 49.9935, lng: 36.2304, category: "conflict", articles: [] },
+  { name: "Zaporizhzhia", country: "Ukraine", lat: 47.8388, lng: 35.1396, category: "humanitarian", articles: [] },
+  { name: "Odesa", country: "Ukraine", lat: 46.4825, lng: 30.7233, category: "conflict", articles: [] },
+  { name: "Kherson", country: "Ukraine", lat: 46.6354, lng: 32.6169, category: "humanitarian", articles: [] },
+  { name: "Donetsk", country: "Ukraine", lat: 48.0159, lng: 37.8029, category: "conflict", articles: [] },
+  { name: "Mariupol", country: "Ukraine", lat: 47.0958, lng: 37.5494, category: "humanitarian", articles: [] },
+  { name: "Crimea", country: "Ukraine", lat: 44.9521, lng: 34.1024, category: "conflict", articles: [] },
+  { name: "Moscow", country: "Russia", lat: 55.7558, lng: 37.6173, category: "diplomacy", articles: [] },
+  { name: "Dnipro", country: "Ukraine", lat: 48.4647, lng: 35.0462, category: "conflict", articles: [] },
+  { name: "Sumy", country: "Ukraine", lat: 50.9077, lng: 34.7981, category: "conflict", articles: [] },
+  { name: "Kursk", country: "Russia", lat: 51.7304, lng: 36.1926, category: "conflict", articles: [] },
+];
+
+// ===== TIMELINE DATA (dynamic from articles) =====
+let allTimes = [];
+locations.forEach(loc => loc.articles.forEach(a => {
+  if (a.time) allTimes.push(new Date(a.time).getTime());
+}));
+const timelineStart = allTimes.length ? Math.min(...allTimes) : Date.now() - 48*3600*1000;
+const timelineEnd = allTimes.length ? Math.max(...allTimes) : Date.now();
+const timelineRange = timelineEnd - timelineStart || 1;
+
+// ===== TIMELINE STATE =====
+let timelineMin = timelineStart;
+let timelineMax = timelineEnd;
+
+// ===== CATEGORY COLOURS =====
+const catColors = {
+  conflict: "#c0392b",
+  diplomacy: "#27ae60",
+  humanitarian: "#e67e22",
+  energy: "#2471a3",
+  nato: "#6c3483"
+};
+const catLabels = {
+  conflict: "Conflict zone",
+  diplomacy: "Diplomacy",
+  humanitarian: "Humanitarian",
+  energy: "Energy / economic",
+  nato: "NATO involvement"
+};
+
+// ===== DERIVE COUNTRIES (ordered by article count) =====
+function getCountries(timeFilter) {
+  const countryMap = {};
+  locations.forEach(loc => {
+    const filtered = timeFilter ? loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      return t >= timelineMin && t <= timelineMax;
+    }) : loc.articles;
+    if (filtered.length > 0) {
+      if (!countryMap[loc.country]) countryMap[loc.country] = 0;
+      countryMap[loc.country] += filtered.length;
+    }
+  });
+  return Object.entries(countryMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count }));
+}
+
+let activeCountry = null; // null = show all
+let activeSource = null;  // null = show all
+
+// ===== MAP INIT =====
+const map = L.map('map', {
+  center: [49.0, 32.0],
+  zoom: 6,
+  zoomControl: true,
+  attributionControl: true
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 19
+}).addTo(map);
+
+// ===== MARKERS =====
+const markerLayer = L.layerGroup().addTo(map);
+const labelLayer = L.layerGroup().addTo(map);
+let heatLayer = null;
+let currentView = 'pins';
+
+// ===== SENTIMENT ANALYSIS =====
+function getSentiment(title) {
+  const t = title.toLowerCase();
+  const escalation = ['strike', 'attack', 'bomb', 'kill', 'dead', 'death', 'missile', 'war', 'destroy', 'assault', 'offensive', 'blast', 'explod', 'casualt', 'wound', 'military', 'combat', 'drone', 'troops', 'invasion', 'retaliat', 'threat', 'launch', 'target', 'fire'];
+  const diplomacy = ['ceasefire', 'peace', 'negotiat', 'talks', 'diplomat', 'UN', 'urge', 'restrain', 'de-escalat', 'agreement', 'summit', 'condemn', 'call for', 'resolution'];
+  const humanitarian = ['humanitarian', 'aid', 'refugee', 'civilian', 'evacuat', 'flee', 'shelter', 'food', 'hospital', 'school', 'children', 'crisis', 'stranded', 'rescue'];
+  const economic = ['oil', 'price', 'energy', 'gas', 'trade', 'market', 'economy', 'shipping', 'tanker', 'LNG', 'supply', 'recession', 'surge', 'export', 'import', 'insurance'];
+
+  let scores = {escalation: 0, diplomacy: 0, humanitarian: 0, economic: 0};
+  escalation.forEach(w => { if (t.includes(w)) scores.escalation++; });
+  diplomacy.forEach(w => { if (t.includes(w)) scores.diplomacy++; });
+  humanitarian.forEach(w => { if (t.includes(w)) scores.humanitarian++; });
+  economic.forEach(w => { if (t.includes(w)) scores.economic++; });
+
+  const max = Math.max(scores.escalation, scores.diplomacy, scores.humanitarian, scores.economic);
+  if (max === 0) return {type: 'escalation', label: ''};
+  if (scores.escalation === max) return {type: 'escalation', label: 'Conflict'};
+  if (scores.diplomacy === max) return {type: 'diplomacy', label: 'Diplomacy'};
+  if (scores.humanitarian === max) return {type: 'humanitarian', label: 'Humanitarian'};
+  return {type: 'economic', label: 'Economic'};
+}
+
+// ===== VIEW MODE TOGGLE =====
+function setView(mode) {
+  currentView = mode;
+  document.getElementById('btn-pins').style.background = mode === 'pins' ? '#e74c3c' : 'transparent';
+  document.getElementById('btn-pins').style.color = mode === 'pins' ? '#fff' : '#666';
+  document.getElementById('btn-heat').style.background = mode === 'heat' ? '#e74c3c' : 'transparent';
+  document.getElementById('btn-heat').style.color = mode === 'heat' ? '#fff' : '#666';
+  renderMarkers();
+}
+
+function renderMarkers() {
+  if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+  markerLayer.clearLayers();
+  labelLayer.clearLayers();
+
+  // Get search text for filtering
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
+  locations.forEach(loc => {
+    if (activeCountry && loc.country !== activeCountry) return;
+
+    // Filter articles by time, source, and search text
+    const visibleArticles = loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      if (t < timelineMin || t > timelineMax) return false;
+      if (activeSource && a.source !== activeSource) return false;
+      if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+      return true;
+    });
+    if (visibleArticles.length === 0) return;
+
+    const count = visibleArticles.length;
+    const r = count <= 1 ? 6 : count <= 2 ? 8 : count <= 4 ? 11 : 15;
+    const col = catColors[loc.category] || "#c0392b";
+
+    const marker = L.circleMarker([loc.lat, loc.lng], {
+      radius: r,
+      fillColor: col,
+      color: "#fff",
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.85
+    }).addTo(markerLayer);
+
+    if (count >= 3) {
+      L.marker([loc.lat, loc.lng], {
+        icon: L.divIcon({
+          className: 'city-label',
+          html: '<span style="font-size:11px;font-weight:700;color:#1a1a1a;text-shadow:1px 1px 2px #fff,-1px -1px 2px #fff,1px -1px 2px #fff,-1px 1px 2px #fff,0 0 6px #fff;white-space:nowrap;pointer-events:none;">' + loc.name + '</span>',
+          iconSize: [0, 0],
+          iconAnchor: [-r - 4, 5]
+        })
+      }).addTo(labelLayer);
+    }
+
+    marker.bindPopup(
+      '<div class="popup-title">' + loc.name + '</div>' +
+      '<div class="popup-country">' + loc.country + '</div>' +
+      '<div class="popup-count">' + count + ' article' + (count > 1 ? 's' : '') + ' — ' + catLabels[loc.category] + '</div>' +
+      '<div class="popup-link" onclick="scrollToLocation(\'' + loc.name + '\')">View articles →</div>'
+    );
+
+    marker.on('click', () => scrollToLocation(loc.name));
+  });
+
+  // Heatmap rendering
+  if (currentView === 'heat') {
+    markerLayer.clearLayers();
+    labelLayer.clearLayers();
+    const heatPoints = [];
+    locations.forEach(loc => {
+      if (activeCountry && loc.country !== activeCountry) return;
+      const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+      const visibleArticles = loc.articles.filter(a => {
+        const t = new Date(a.time).getTime();
+        if (t < timelineMin || t > timelineMax) return false;
+        if (activeSource && a.source !== activeSource) return false;
+        if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+        return true;
+      });
+      if (visibleArticles.length > 0) {
+        heatPoints.push([loc.lat, loc.lng, visibleArticles.length * 0.5]);
+      }
+    });
+    if (heatPoints.length > 0) {
+      heatLayer = L.heatLayer(heatPoints, {
+        radius: 35,
+        blur: 25,
+        maxZoom: 10,
+        max: 20,
+        gradient: {0.2: '#fee', 0.4: '#fc8', 0.6: '#f86', 0.8: '#e44', 1.0: '#a00'}
+      }).addTo(map);
+    }
+  }
+}
+
+// ===== DERIVE SOURCES (ordered by article count) =====
+function getSources(countryFilter, timeFilter) {
+  const sourceMap = {};
+  locations.forEach(loc => {
+    if (countryFilter && loc.country !== countryFilter) return;
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (timeFilter && (t < timelineMin || t > timelineMax)) return;
+      if (!sourceMap[a.source]) sourceMap[a.source] = 0;
+      sourceMap[a.source]++;
+    });
+  });
+  return Object.entries(sourceMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count }));
+}
+
+// ===== FILTER BARS =====
+function renderFilterBars() {
+  const cSelect = document.getElementById('country-select');
+  const sSelect = document.getElementById('source-select');
+
+  const countries = getCountries(true);
+  let totalAll = 0;
+  locations.forEach(loc => {
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (t >= timelineMin && t <= timelineMax) totalAll++;
+    });
+  });
+
+  let cHtml = '<option value="">All countries (' + totalAll + ')</option>';
+  countries.forEach(c => {
+    cHtml += '<option value="' + c.name + '"' + (activeCountry === c.name ? ' selected' : '') + '>' + c.name + ' (' + c.count + ')</option>';
+  });
+  cSelect.innerHTML = cHtml;
+
+  const sources = getSources(activeCountry, true);
+  const sourceTotal = sources.reduce((s, x) => s + x.count, 0);
+  let sHtml = '<option value="">All sources (' + sourceTotal + ')</option>';
+  sources.forEach(s => {
+    sHtml += '<option value="' + s.name + '"' + (activeSource === s.name ? ' selected' : '') + '>' + s.name + ' (' + s.count + ')</option>';
+  });
+  sSelect.innerHTML = sHtml;
+}
+
+// ===== SIDEBAR — grouped by country, filtered by source =====
+function renderSidebar() {
+  const list = document.getElementById('article-list');
+  const countEl = document.getElementById('loc-count');
+
+  // Get search text for filtering
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
+  // Apply country filter
+  let filtered = activeCountry ? locations.filter(l => l.country === activeCountry) : [...locations];
+
+  // Apply time filter
+  filtered = filtered.map(loc => {
+    const filtered_articles = loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      return t >= timelineMin && t <= timelineMax;
+    });
+    if (filtered_articles.length === 0) return null;
+    return { ...loc, articles: filtered_articles };
+  }).filter(Boolean);
+
+  // Apply source filter: only show articles from that source
+  if (activeSource) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => a.source === activeSource);
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
+  // Apply search filter: filter articles by title keyword
+  if (searchText) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => a.title.toLowerCase().includes(searchText));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
+  const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
+  const totalLocs = filtered.length;
+  countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="no-results">No results match these filters.</div>';
+    return;
+  }
+
+  // Group by country, sort countries by total articles
+  const grouped = {};
+  filtered.forEach(loc => {
+    if (!grouped[loc.country]) grouped[loc.country] = [];
+    grouped[loc.country].push(loc);
+  });
+
+  const countryOrder = Object.entries(grouped)
+    .map(([country, locs]) => ({
+      country,
+      locs: locs.sort((a, b) => b.articles.length - a.articles.length),
+      total: locs.reduce((s, l) => s + l.articles.length, 0)
+    }))
+    .sort((a, b) => b.total - a.total);
+
+  let html = '';
+  countryOrder.forEach(group => {
+    html += '<div class="country-section">';
+    html += '<div class="country-heading">' + group.country + ' <span class="country-article-total">' + group.total + ' article' + (group.total !== 1 ? 's' : '') + '</span></div>';
+
+    group.locs.forEach(loc => {
+      const col = catColors[loc.category] || "#c0392b";
+      html += '<div class="location-group" id="loc-' + loc.name.replace(/[^a-zA-Z0-9]/g, '_') + '">' +
+        '<div class="location-group-header" onclick="toggleLocation(this, \'' + loc.name + '\')">' +
+          '<span class="pin" style="color:' + col + '">●</span>' +
+          '<span class="loc-name">' + loc.name + '</span>' +
+          '<span class="article-count" style="background:' + col + '">' + loc.articles.length + '</span>' +
+        '</div>' +
+        '<div class="location-articles">' +
+          loc.articles.map(a => {
+            const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
+            const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
+            const sentiment = getSentiment(a.title);
+            return '<div class="article-card" style="border-left-color:' + col + '">' +
+              '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
+              '<div class="article-meta">' +
+                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
+                '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
+              '</div>' +
+              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
+            '</div>';
+          }).join('') +
+        '</div>' +
+      '</div>';
+    });
+
+    html += '</div>';
+  });
+
+  list.innerHTML = html;
+}
+
+// ===== TIMELINE FUNCTIONS =====
+function updateTimeRange() {
+  const minInput = document.getElementById('range-min');
+  const maxInput = document.getElementById('range-max');
+  let min = parseInt(minInput.value);
+  let max = parseInt(maxInput.value);
+
+  if (min > max) {
+    [min, max] = [max, min];
+    minInput.value = min;
+    maxInput.value = max;
+  }
+
+  timelineMin = timelineStart + (min / 1000) * timelineRange;
+  timelineMax = timelineStart + (max / 1000) * timelineRange;
+
+  updateTimeDisplay();
+  applyFilters();
+  clearActivePreset();
+}
+
+function updateTimeDisplay() {
+  const minDate = new Date(timelineMin);
+  const maxDate = new Date(timelineMax);
+  document.getElementById('timeline-display').textContent = formatTime(minDate.toISOString()) + ' — ' + formatTime(maxDate.toISOString());
+  document.getElementById('min-label').textContent = formatTime(minDate.toISOString());
+  document.getElementById('max-label').textContent = formatTime(maxDate.toISOString());
+}
+
+function setPreset(preset) {
+  const now = timelineEnd;
+  let start;
+
+  if (preset === 'all') {
+    start = timelineStart;
+  } else if (preset === '48h') {
+    start = now - 48 * 60 * 60 * 1000;
+  } else if (preset === '24h') {
+    start = now - 24 * 60 * 60 * 1000;
+  } else if (preset === '12h') {
+    start = now - 12 * 60 * 60 * 1000;
+  } else if (preset === '6h') {
+    start = now - 6 * 60 * 60 * 1000;
+  }
+
+  timelineMin = Math.max(start, timelineStart);
+  timelineMax = now;
+
+  const minVal = Math.round(((timelineMin - timelineStart) / timelineRange) * 1000);
+  const maxVal = Math.round(((timelineMax - timelineStart) / timelineRange) * 1000);
+
+  document.getElementById('range-min').value = minVal;
+  document.getElementById('range-max').value = maxVal;
+
+  updateTimeDisplay();
+  applyFilters();
+  updatePresetButtons(preset);
+}
+
+function updatePresetButtons(active) {
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector('.preset-btn[onclick="setPreset(\'' + active + '\')"]').classList.add('active');
+}
+
+function clearActivePreset() {
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+}
+
+// ===== TRENDING =====
+function renderTrending() {
+  const bar = document.getElementById('trending-bar');
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
+  // Get visible articles
+  let visibleArticles = [];
+  locations.forEach(loc => {
+    if (activeCountry && loc.country !== activeCountry) return;
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (t < timelineMin || t > timelineMax) return;
+      if (activeSource && a.source !== activeSource) return;
+      visibleArticles.push(a);
+    });
+  });
+
+  // Count words
+  const stopWords = new Set(['the','a','in','of','to','and','as','for','on','is','it','at','by','from','with','that','has','are','was','its','an','be','or','but','not','this','have','will','can','says','said','after','over','into','us','uk','new','how','why','what','who','where','when','could','would','may','more','than','about','been','day','amid','live','news','updates','update','latest']);
+  const wordCount = {};
+  visibleArticles.forEach(a => {
+    const words = a.title.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/);
+    const seen = new Set();
+    words.forEach(w => {
+      if (w.length > 2 && !stopWords.has(w) && !seen.has(w)) {
+        wordCount[w] = (wordCount[w] || 0) + 1;
+        seen.add(w);
+      }
+    });
+  });
+
+  const top = Object.entries(wordCount)
+    .filter(([w, c]) => c >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8);
+
+  if (top.length === 0) { bar.innerHTML = ''; return; }
+
+  bar.innerHTML = '<div class="trending-label">Trending</div><div class="trending-tags">' +
+    top.map(([word, count]) =>
+      '<span class="trending-tag" onclick="searchFor(\'' + word + '\')">' + word + ' <small>' + count + '</small></span>'
+    ).join('') + '</div>';
+}
+
+function searchFor(word) {
+  document.getElementById('search-box').value = word;
+  applyFilters();
+}
+
+// ===== ACTIONS =====
+function filterCountry(country) {
+  activeCountry = country;
+  activeSource = null; // reset source when changing country
+  applyFilters();
+  autoExpandArticles();
+
+}
+
+function filterSource(source) {
+  activeSource = source;
+  applyFilters();
+  autoExpandArticles();
+}
+
+function autoExpandArticles() {
+  // Auto-expand all article lists when a filter is active
+  if (activeCountry || activeSource) {
+    document.querySelectorAll('.location-articles').forEach(el => el.classList.add('open'));
+  } else {
+    document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
+  }
+}
+
+function applyFilters() {
+  renderFilterBars();
+  renderSidebar();
+  renderMarkers();
+  renderTrending();
+  fitMapToMarkers();
+}
+
+function fitMapToMarkers() {
+  if (!activeCountry && !activeSource) {
+    map.flyTo([49.0, 32.0], 6, { duration: 0.6 });
+    return;
+  }
+  const layers = [];
+  markerLayer.eachLayer(l => layers.push(l));
+  if (layers.length === 0) return;
+  if (layers.length === 1) {
+    map.flyTo(layers[0].getLatLng(), 8, { duration: 0.6 });
+  } else {
+    const bounds = L.latLngBounds(layers.map(l => l.getLatLng()));
+    map.flyToBounds(bounds.pad(0.3), { duration: 0.6 });
+  }
+}
+
+function toggleLocation(header, locName) {
+  const articles = header.nextElementSibling;
+  const wasOpen = articles.classList.contains('open');
+
+  document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
+
+  if (!wasOpen) {
+    articles.classList.add('open');
+    const loc = locations.find(l => l.name === locName);
+    if (loc) map.flyTo([loc.lat, loc.lng], 8, { duration: 0.6 });
+  }
+}
+
+function scrollToLocation(locName) {
+  const id = 'loc-' + locName.replace(/[^a-zA-Z0-9]/g, '_');
+  const el = document.getElementById(id);
+  if (el) {
+    const articles = el.querySelector('.location-articles');
+    document.querySelectorAll('.location-articles').forEach(a => a.classList.remove('open'));
+    articles.classList.add('open');
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// ===== INIT =====
+updateTimeDisplay();
+setPreset('all');
+renderFilterBars();
+renderSidebar();
+renderMarkers();
+renderTrending();
+
+// Set article count
+document.getElementById('total-count').textContent = allTimes.length;
+
+// Set last-updated from newest article
+if (allTimes.length) {
+  const newest = new Date(Math.max(...allTimes));
+  document.getElementById('last-updated').textContent = formatTime(newest.toISOString()) + ' UTC';
+}
+</script>
+</body>
+</html>

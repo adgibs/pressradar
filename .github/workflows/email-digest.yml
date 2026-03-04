@@ -1,0 +1,38 @@
+name: Daily Email Digest
+
+on:
+  schedule:
+    # Run daily at 7am UTC (7am GMT / 8am BST)
+    - cron: '0 7 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: read
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate digest
+        run: python generate_digest.py > digest.html
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "PressRadar Daily Digest — $(date -u +'%d %B %Y')"
+          to: ${{ secrets.EMAIL_TO }}
+          from: PressRadar <${{ secrets.EMAIL_USERNAME }}>
+          html_body: file://digest.html
