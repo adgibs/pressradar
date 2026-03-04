@@ -299,6 +299,21 @@
 
   .no-results { padding: 24px 16px; text-align: center; color: #999; font-size: 0.9rem; }
 
+  /* Search box styles */
+  #search-box { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; margin-top: 8px; }
+  #search-box:focus { outline: none; border-color: #e74c3c; }
+
+  /* NEW badge styles */
+  .new-badge { display: inline-block; background: #e74c3c; color: #fff; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.5px; }
+
+  /* Trending bar styles */
+  #trending-bar { padding: 8px 16px; background: #fff; border-bottom: 1px solid #e0e0e0; }
+  #trending-bar:empty { display: none; }
+  .trending-label { font-size: 11px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .trending-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .trending-tag { font-size: 11px; padding: 2px 8px; background: #fee; color: #c0392b; border-radius: 10px; cursor: pointer; border: 1px solid #fcc; }
+  .trending-tag:hover { background: #c0392b; color: #fff; }
+
   @media (max-width: 800px) {
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
@@ -311,7 +326,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — UK & international press</div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
   </div>
   <div class="date-badge">4 March 2026</div>
 </div>
@@ -322,6 +337,7 @@
     <div id="sidebar-header">
       <h2>News by Location</h2>
       <div class="location-count" id="loc-count"></div>
+      <input type="text" id="search-box" placeholder="Search articles..." oninput="applyFilters()">
 
       <div id="timeline-section">
         <div class="timeline-label">Timeline</div>
@@ -357,6 +373,8 @@
           </select>
         </div>
       </div>
+
+      <div id="trending-bar"></div>
     </div>
     <div id="article-list"></div>
   </div>
@@ -896,14 +914,18 @@ function renderMarkers() {
   markerLayer.clearLayers();
   labelLayer.clearLayers();
 
+  // Get search text for filtering
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
   locations.forEach(loc => {
     if (activeCountry && loc.country !== activeCountry) return;
 
-    // Filter articles by time and source
+    // Filter articles by time, source, and search text
     const visibleArticles = loc.articles.filter(a => {
       const t = new Date(a.time).getTime();
       if (t < timelineMin || t > timelineMax) return false;
       if (activeSource && a.source !== activeSource) return false;
+      if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
       return true;
     });
     if (visibleArticles.length === 0) return;
@@ -994,6 +1016,9 @@ function renderSidebar() {
   const list = document.getElementById('article-list');
   const countEl = document.getElementById('loc-count');
 
+  // Get search text for filtering
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
   // Apply country filter
   let filtered = activeCountry ? locations.filter(l => l.country === activeCountry) : [...locations];
 
@@ -1011,6 +1036,15 @@ function renderSidebar() {
   if (activeSource) {
     filtered = filtered.map(loc => {
       const matchingArticles = loc.articles.filter(a => a.source === activeSource);
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
+  // Apply search filter: filter articles by title keyword
+  if (searchText) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => a.title.toLowerCase().includes(searchText));
       if (matchingArticles.length === 0) return null;
       return { ...loc, articles: matchingArticles };
     }).filter(Boolean);
@@ -1054,16 +1088,18 @@ function renderSidebar() {
           '<span class="article-count" style="background:' + col + '">' + loc.articles.length + '</span>' +
         '</div>' +
         '<div class="location-articles">' +
-          loc.articles.map(a =>
-            '<div class="article-card" style="border-left-color:' + col + '">' +
-              '<div class="article-title">' + a.title + '</div>' +
+          loc.articles.map(a => {
+            const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
+            const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
+            return '<div class="article-card" style="border-left-color:' + col + '">' +
+              '<div class="article-title">' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
               '</div>' +
               '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
-            '</div>'
-          ).join('') +
+            '</div>';
+          }).join('') +
         '</div>' +
       '</div>';
     });
@@ -1146,6 +1182,55 @@ function clearActivePreset() {
   });
 }
 
+// ===== TRENDING =====
+function renderTrending() {
+  const bar = document.getElementById('trending-bar');
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+
+  // Get visible articles
+  let visibleArticles = [];
+  locations.forEach(loc => {
+    if (activeCountry && loc.country !== activeCountry) return;
+    loc.articles.forEach(a => {
+      const t = new Date(a.time).getTime();
+      if (t < timelineMin || t > timelineMax) return;
+      if (activeSource && a.source !== activeSource) return;
+      visibleArticles.push(a);
+    });
+  });
+
+  // Count words
+  const stopWords = new Set(['the','a','in','of','to','and','as','for','on','is','it','at','by','from','with','that','has','are','was','its','an','be','or','but','not','this','have','will','can','says','said','after','over','into','us','uk','new','how','why','what','who','where','when','could','would','may','more','than','about','been','day','amid','live','news','updates','update','latest']);
+  const wordCount = {};
+  visibleArticles.forEach(a => {
+    const words = a.title.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/);
+    const seen = new Set();
+    words.forEach(w => {
+      if (w.length > 2 && !stopWords.has(w) && !seen.has(w)) {
+        wordCount[w] = (wordCount[w] || 0) + 1;
+        seen.add(w);
+      }
+    });
+  });
+
+  const top = Object.entries(wordCount)
+    .filter(([w, c]) => c >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8);
+
+  if (top.length === 0) { bar.innerHTML = ''; return; }
+
+  bar.innerHTML = '<div class="trending-label">Trending</div><div class="trending-tags">' +
+    top.map(([word, count]) =>
+      '<span class="trending-tag" onclick="searchFor(\'' + word + '\')">' + word + ' <small>' + count + '</small></span>'
+    ).join('') + '</div>';
+}
+
+function searchFor(word) {
+  document.getElementById('search-box').value = word;
+  applyFilters();
+}
+
 // ===== ACTIONS =====
 function filterCountry(country) {
   activeCountry = country;
@@ -1174,6 +1259,7 @@ function applyFilters() {
   renderFilterBars();
   renderSidebar();
   renderMarkers();
+  renderTrending();
   fitMapToMarkers();
 }
 
@@ -1223,6 +1309,16 @@ setPreset('all');
 renderFilterBars();
 renderSidebar();
 renderMarkers();
+renderTrending();
+
+// Set article count
+document.getElementById('total-count').textContent = allTimes.length;
+
+// Set last-updated from newest article
+if (allTimes.length) {
+  const newest = new Date(Math.max(...allTimes));
+  document.getElementById('last-updated').textContent = formatTime(newest.toISOString()) + ' UTC';
+}
 </script>
 </body>
 </html>
