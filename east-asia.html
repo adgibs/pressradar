@@ -340,9 +340,9 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">06:58 UTC, 5 Mar 2026</span></div>
   </div>
-  <div class="date-badge">4 March 2026</div>
+  <div class="date-badge">5 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -429,20 +429,81 @@ function formatTime(isoString) {
 
 // ===== DATA — every location has a country =====
 const locations = [
-  { name: "Taipei", country: "Taiwan", lat: 25.0330, lng: 121.5654, category: "territorial", articles: [] },
-  { name: "Beijing", country: "China", lat: 39.9042, lng: 116.4074, category: "military", articles: [] },
-  { name: "Seoul", country: "South Korea", lat: 37.5665, lng: 126.9780, category: "diplomacy", articles: [] },
-  { name: "Pyongyang", country: "North Korea", lat: 39.0392, lng: 125.7625, category: "military", articles: [] },
-  { name: "Tokyo", country: "Japan", lat: 35.6762, lng: 139.6503, category: "diplomacy", articles: [] },
-  { name: "Manila", country: "Philippines", lat: 14.5995, lng: 120.9842, category: "territorial", articles: [] },
-  { name: "South China Sea", country: "International", lat: 15.0, lng: 115.0, category: "territorial", articles: [] },
-  { name: "Hong Kong", country: "China", lat: 22.3193, lng: 114.1694, category: "trade", articles: [] },
-  { name: "Shanghai", country: "China", lat: 31.2304, lng: 121.4737, category: "trade", articles: [] },
-  { name: "Hanoi", country: "Vietnam", lat: 21.0285, lng: 105.8542, category: "diplomacy", articles: [] },
-  { name: "Singapore", country: "Singapore", lat: 1.3521, lng: 103.8198, category: "trade", articles: [] },
-  { name: "Okinawa", country: "Japan", lat: 26.3344, lng: 127.8056, category: "military", articles: [] },
+  {
+    name: "Beijing", country: "China",
+    lat: 39.9042, lng: 116.4074,
+    category: "military",
+    articles: [
+      { title: "China economic growth target set below 5% for the first time at key meeting", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/china-economic-growth-target-set-below-5-for-the-first-time-at-key-meeting?traffic_source=rss", time: "2026-03-05T06:49:56Z" },
+      { title: "In a Riskier Era, China Bets on Technology to Resist U.S. Pressure", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/asia/china-us-technology-trade-military.html", time: "2026-03-05T06:40:00Z" },
+      { title: "China sets lowest GDP growth target for decades as it braces for economic slowdown", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/china-gdp-growth-target-economic-slowdown", time: "2026-03-05T05:47:08Z" },
+      { title: "China sets lowest growth target since 1991 as economy struggles to keep momentum", source: "NBC News", url: "https://www.nbcnews.com/world/asia/china-sets-lowest-growth-target-1991-economy-struggles-keep-momentum-rcna261864", time: "2026-03-05T05:27:08Z" },
+      { title: "China Sets Economy’s Growth Target Below 5% for First Time in Decades", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/business/china-gdp-target-2025.html", time: "2026-03-05T05:05:12Z" },
+      { title: "China sets lowest economic growth target since 1991", source: "BBC News", url: "https://www.bbc.com/news/articles/cqxddwl93qjo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T03:10:52Z" },
+      { title: "Why does Yao Ming, the 7ft 6in ex-basketballer, attend China’s Two Sessions meetings?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/yao-ming-former-basketballer-china-two-sessions-meetings", time: "2026-03-05T01:56:19Z" },
+      { title: "Partner of UK MP arrested on suspicion of spying for China, BBC told", source: "BBC News", url: "https://www.bbc.com/news/articles/c7955ewj7gwo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:39:13Z" },
+      { title: "Gen Z flocks to Chinese medicine as trust in US health system plummets: ‘It’s so personalized to being human’", source: "The Guardian", url: "https://www.theguardian.com/lifeandstyle/2026/mar/04/chinamaxxing-influencers-chinese-traditional-medicine", time: "2026-03-04T15:00:36Z" },
+      { title: "A global superpower with a quiet voice: China 'not as loud or influential' beyond the Global South", source: "France 24", url: "https://www.france24.com/en/a-global-superpower-with-a-quiet-voice-china-not-as-loud-or-influential-beyond-the-global-south", time: "2026-03-04T14:08:54Z" },
+      { title: "What to know about the 'two sessions',  China's biggest political meeting", source: "BBC News", url: "https://www.bbc.com/news/articles/c2lrxyke7kro?at_medium=RSS&at_campaign=rss", time: "2026-03-04T10:47:18Z" },
+      { title: "China to unveil five-year roadmap at 'Two Sessions' annual political conclave", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260304-china-unveil-priorities-coming-5-years-major-annual-political-conclave", time: "2026-03-04T09:55:43Z" },
+      { title: "Where Are China’s A.I. Doomers?", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/asia/china-ai-enthusiasm.html", time: "2026-03-04T08:53:17Z" },
+      { title: "Ford and G.M. Face a Dilemma as China Excels in Electric Vehicles", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/business/ford-gm-ev-self-driving-cars-china.html", time: "2026-03-03T23:38:36Z" },
+      { title: "U.S. Attacks on Iran Test Fragile Truce With China", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/world/asia/us-iran-china-trump-xi.html", time: "2026-03-03T18:58:54Z" },
+      { title: "China calls for vessels in strait of Hormuz to be protected amid soaring shipping costs", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/03/china-calls-protection-vessels-strait-hormuz-amid-soaring-shipping-costs", time: "2026-03-03T17:19:35Z" },
+      { title: "‘Imperialist undertones’: global south condemns US-Israeli war with Iran", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran", time: "2026-03-03T13:11:17Z" },
+      { title: "More generals purged as delegates gather for China’s Two Sessions event", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology", time: "2026-03-03T11:06:59Z" },
+      { title: "China removes three retired generals from national advisory body", source: "BBC News", url: "https://www.bbc.com/news/articles/cddngg31n0mo?at_medium=RSS&at_campaign=rss", time: "2026-03-03T07:35:52Z" },
+    ]
+  },
+  {
+    name: "Tokyo", country: "Japan",
+    lat: 35.6762, lng: 139.6503,
+    category: "diplomacy",
+    articles: [
+      { title: "Social climber: Punch the monkey starts to outgrow his Ikea plushie", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/punch-the-monkey-outgrowing-ikea-plushie-djungelskog", time: "2026-03-05T06:05:00Z" },
+      { title: "Japanese court upholds order to dissolve Unification Church", source: "BBC News", url: "https://www.bbc.com/news/articles/crrxx5x7wyko?at_medium=RSS&at_campaign=rss", time: "2026-03-04T05:27:04Z" },
+      { title: "Beyond a Trade War, China, Japan and Others in Asia Face a New Energy Threat", source: "New York Times", url: "https://www.nytimes.com/2026/03/02/business/us-iran-china-japan-energy.html", time: "2026-03-04T03:44:09Z" },
+      { title: "Australian girl, 8, killed in snowmobile accident in Japan", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yk5yw49nqo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T00:53:03Z" },
+      { title: "An Epstein Associate Steps Down From Japanese Government Tech Project", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/business/epstein-japan-ito-resigns.html", time: "2026-03-03T16:55:13Z" },
+      { title: "In Japan, support for the death penalty remains high", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260303-in-japan-support-for-the-death-penalty-remains-high", time: "2026-03-03T13:22:04Z" },
+    ]
+  },
+  {
+    name: "Seoul", country: "South Korea",
+    lat: 37.5665, lng: 126.978,
+    category: "diplomacy",
+    articles: [
+      { title: "What the Extraordinary Market Volatility in Asia Says About Energy and A.I.", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/business/stocks-asia-iran-energy.html", time: "2026-03-05T06:35:40Z" },
+      { title: "South Korean stock market plunges over potential Iran-related energy crisis", source: "France 24", url: "https://www.france24.com/en/south-korean-stock-market-plunges-over-potential-iran-related-energy-crisis", time: "2026-03-04T15:29:24Z" },
+      { title: "South Korea woman and doctors guilty of murder of newborn baby", source: "BBC News", url: "https://www.bbc.com/news/articles/c2k88j5x9wdo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T05:43:03Z" },
+    ]
+  },
+  {
+    name: "Pyongyang", country: "North Korea",
+    lat: 39.0392, lng: 125.7625,
+    category: "military",
+    articles: [
+      { title: "North Korea’s Kim oversees cruise missile tests from new naval destroyer", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/north-koreas-kim-oversees-cruise-missile-tests-from-new-naval-destroyer?traffic_source=rss", time: "2026-03-05T04:26:41Z" },
+      { title: "Kim Jong Un inspects new destroyer and pledges naval nuclear expansion", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260305-kim-jong-un-inspects-new-destroyer-and-pledges-naval-nuclear-expansion", time: "2026-03-05T00:14:19Z" },
+    ]
+  },
+  {
+    name: "Manila", country: "Philippines",
+    lat: 14.5995, lng: 120.9842,
+    category: "territorial",
+    articles: [
+      { title: "Jordanian arrested for visa offences after alleged Bondi attackers visited his coffee shop during Philippines stay", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/04/jordanian-national-arrested-philippines-suspected-akrams-alleged-bondi-shooting-attackers-ntwnfb", time: "2026-03-04T06:18:21Z" },
+    ]
+  },
+  {
+    name: "Hong Kong", country: "China",
+    lat: 22.3193, lng: 114.1694,
+    category: "trade",
+    articles: [
+      { title: "China’s Two Sessions: what are the meetings and why do they matter?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer", time: "2026-03-03T23:50:15Z" },
+    ]
+  },
 ];
-
 // ===== CATEGORY COLORS & LABELS =====
 const catColors = {
   military: "#c0392b",
