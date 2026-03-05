@@ -340,7 +340,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:09 UTC, 5 Mar 2026</span></div>
   </div>
   <div class="date-badge">5 March 2026</div>
 </div>
@@ -433,22 +433,88 @@ function formatTime(isoString) {
 
 // ===== DATA — every location has a country =====
 const locations = [
-  { name: "Washington DC", country: "United States", lat: 38.9072, lng: -77.0369, category: "political", articles: [] },
-  { name: "Mexico City", country: "Mexico", lat: 19.4326, lng: -99.1332, category: "political", articles: [] },
-  { name: "Bogota", country: "Colombia", lat: 4.7110, lng: -74.0721, category: "security", articles: [] },
-  { name: "Caracas", country: "Venezuela", lat: 10.4806, lng: -66.9036, category: "political", articles: [] },
-  { name: "Buenos Aires", country: "Argentina", lat: -34.6037, lng: -58.3816, category: "economic", articles: [] },
-  { name: "Brasilia", country: "Brazil", lat: -15.7975, lng: -47.8919, category: "political", articles: [] },
-  { name: "Sao Paulo", country: "Brazil", lat: -23.5558, lng: -46.6396, category: "economic", articles: [] },
-  { name: "Havana", country: "Cuba", lat: 23.1136, lng: -82.3666, category: "political", articles: [] },
-  { name: "Lima", country: "Peru", lat: -12.0464, lng: -77.0428, category: "economic", articles: [] },
-  { name: "Santiago", country: "Chile", lat: -33.4489, lng: -70.6693, category: "economic", articles: [] },
-  { name: "Port-au-Prince", country: "Haiti", lat: 18.5944, lng: -72.3074, category: "security", articles: [] },
-  { name: "Guatemala City", country: "Guatemala", lat: 14.6349, lng: -90.5069, category: "migration", articles: [] },
-  { name: "Panama City", country: "Panama", lat: 8.9824, lng: -79.5199, category: "migration", articles: [] },
-  { name: "Ottawa", country: "Canada", lat: 45.4215, lng: -75.6972, category: "political", articles: [] },
+  {
+    name: "Havana", country: "Cuba",
+    lat: 23.1136, lng: -82.3666,
+    category: "political",
+    articles: [
+      { title: "Trump says regime change in Cuba is ‘question of time’ after Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-says-regime-change-in-cuba-is-question-of-time-after-iran?traffic_source=rss", time: "2026-03-05T22:37:41Z" },
+      { title: "Cuba’s economy on edge: Fuel shortages and rising hardship", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/5/cubas-economy-on-edge-fuel-shortages-and-rising-hardship?traffic_source=rss", time: "2026-03-05T17:16:43Z" },
+      { title: "Millions in Cuba hit by blackout as Trump embargo bites", source: "Sky News", url: "https://news.sky.com/story/millions-in-cuba-hit-by-blackout-as-trump-embargo-bites-13515578", time: "2026-03-05T11:23:00Z" },
+      { title: "Millions left without power after major blackout hits Cuba", source: "France 24", url: "https://www.france24.com/en/video/20260305-millions-left-without-power-after-major-blackout-hits-cuba", time: "2026-03-05T11:00:52Z" },
+      { title: "Cuba hit by massive blackout, leaving millions without power in Havana and western provinces", source: "France 24", url: "https://www.france24.com/en/americas/20260305-cuba-hit-by-massive-blackout-leaving-millions-without-power-in-havana-and-western-provinces", time: "2026-03-05T10:05:29Z" },
+      { title: "Blackout in Cuba leaves millions without power amid US oil chokehold", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/blackout-cuba-us-oil", time: "2026-03-04T19:42:57Z" },
+      { title: "With Fuel Running Out and Canadian Flights Suspended, Cuba’s Tourism Is Collapsing", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/americas/cuba-tourism-travel-canada-trump.html", time: "2026-03-04T14:31:08Z" },
+      { title: "Cuba charges six exiles with terrorism in wake of deadly speedboat attack", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/cuba-charges-six-exiles-terrorism-speedboat-attack", time: "2026-03-04T07:01:11Z" },
+    ]
+  },
+  {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "Dismay as Hegseth urges Latin American allies to join ‘offense’ against cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/hegseth-latin-america-drug-cartels", time: "2026-03-05T19:50:26Z" },
+      { title: "James Luckey-Lange Recounts Being Detained, Starved and Beaten in Venezuela", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/james-luckey-lange-venezuela-detention.html", time: "2026-03-05T10:00:10Z" },
+      { title: "Venezuela and US to work together on mining developments, Rodríguez says", source: "BBC News", url: "https://www.bbc.com/news/articles/cj322v8pjp5o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:46:47Z" },
+      { title: "Dirty laundry and chocolate bars: How Venezuelan prisoners smuggled messages out of jail", source: "BBC News", url: "https://www.bbc.com/news/articles/c620n3degv2o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:04:34Z" },
+      { title: "Millions of Cubans plunged into darkness as fuel crisis deepens", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2ggpq1742o?at_medium=RSS&at_campaign=rss", time: "2026-03-04T22:46:53Z" },
+    ]
+  },
+  {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
+      { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
+      { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
+    ]
+  },
+  {
+    name: "Ottawa", country: "Canada",
+    lat: 45.4215, lng: -75.6972,
+    category: "political",
+    articles: [
+      { title: "Carney Says Canada and Australia Can ‘Set the Agenda’ as World Faces ‘Crises’", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/canada/carney-australia.html", time: "2026-03-05T08:17:59Z" },
+      { title: "Carney says he backs strikes on Iran 'with some regret' as world order frays", source: "NPR", url: "https://www.npr.org/2026/03/04/g-s1-112556/carney-says-he-backs-strikes-on-iran-with-some-regret-as-world-order-frays", time: "2026-03-04T22:48:03Z" },
+      { title: "Carney Says That Canada’s Support for Iran Airstrikes Came ‘With Regret’", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/world/middleeast/iran-attacks-carney-canada.html", time: "2026-03-04T02:31:47Z" },
+    ]
+  },
+  {
+    name: "Brasilia", country: "Brazil",
+    lat: -15.7975, lng: -47.8919,
+    category: "political",
+    articles: [
+      { title: "‘It creates a sense of belonging’: Brazil bets on hiking trails for conservation", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/05/brazil-hiking-trails-conservation", time: "2026-03-05T14:01:39Z" },
+      { title: "Why Ecuador Invited the U.S. Military to Help With Its Drug Gangs", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/americas/ecuador-trump-drug-gangs-us-military.html", time: "2026-03-04T23:58:05Z" },
+    ]
+  },
+  {
+    name: "Lima", country: "Peru",
+    lat: -12.0464, lng: -77.0428,
+    category: "economic",
+    articles: [
+      { title: "Breaking Social review – Rutger Bregman leads an irresistible rallying cry for global activism", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/breaking-social-review-global-activism-fredrik-gertten-rutger-bregman", time: "2026-03-05T07:00:53Z" },
+      { title: "Women behind the lens: ‘The women watched the fuel tanker advance with uncertainty and fear’", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/04/women-behind-the-lens-women-watched-tanker-advance-with-uncertainty-and-fear-ecuador", time: "2026-03-04T07:00:42Z" },
+    ]
+  },
+  {
+    name: "Guatemala City", country: "Guatemala",
+    lat: 14.6349, lng: -90.5069,
+    category: "migration",
+    articles: [
+      { title: "US military launches operation in Ecuador to combat drug trafficking", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/04/us-military-action-operation-ecuador", time: "2026-03-04T04:06:48Z" },
+    ]
+  },
+  {
+    name: "Buenos Aires", country: "Argentina",
+    lat: -34.6037, lng: -58.3816,
+    category: "economic",
+    articles: [
+      { title: "Brazil's Senate ratifies Mercosur free trade deal with European Union", source: "France 24", url: "https://www.france24.com/en/americas/20260304-brazil-senate-ratifies-mercosur-free-trade-deal-with-european-union", time: "2026-03-04T23:22:08Z" },
+    ]
+  },
 ];
-
 // ===== CATEGORY COLORS & LABELS =====
 const catColors = {
   political: "#6c3483",

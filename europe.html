@@ -340,7 +340,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:09 UTC, 5 Mar 2026</span></div>
   </div>
   <div class="date-badge">5 March 2026</div>
 </div>
@@ -433,23 +433,108 @@ function formatTime(isoString) {
 
 // ===== DATA — every location has a country =====
 const locations = [
-  { name: "London", country: "United Kingdom", lat: 51.5074, lng: -0.1278, category: "political", articles: [] },
-  { name: "Brussels", country: "Belgium", lat: 50.8503, lng: 4.3517, category: "political", articles: [] },
-  { name: "Paris", country: "France", lat: 48.8566, lng: 2.3522, category: "political", articles: [] },
-  { name: "Berlin", country: "Germany", lat: 52.5200, lng: 13.4050, category: "economic", articles: [] },
-  { name: "Rome", country: "Italy", lat: 41.9028, lng: 12.4964, category: "political", articles: [] },
-  { name: "Madrid", country: "Spain", lat: 40.4168, lng: -3.7038, category: "economic", articles: [] },
-  { name: "Warsaw", country: "Poland", lat: 52.2297, lng: 21.0122, category: "security", articles: [] },
-  { name: "Ankara", country: "Turkey", lat: 39.9334, lng: 32.8597, category: "security", articles: [] },
-  { name: "Istanbul", country: "Turkey", lat: 41.0082, lng: 28.9784, category: "economic", articles: [] },
-  { name: "Athens", country: "Greece", lat: 37.9838, lng: 23.7275, category: "social", articles: [] },
-  { name: "Stockholm", country: "Sweden", lat: 59.3293, lng: 18.0686, category: "security", articles: [] },
-  { name: "Bucharest", country: "Romania", lat: 44.4268, lng: 26.1025, category: "security", articles: [] },
-  { name: "Geneva", country: "Switzerland", lat: 46.2044, lng: 6.1432, category: "political", articles: [] },
-  { name: "The Hague", country: "Netherlands", lat: 52.0705, lng: 4.3007, category: "political", articles: [] },
-  { name: "Dublin", country: "Ireland", lat: 53.3498, lng: -6.2603, category: "economic", articles: [] },
+  {
+    name: "London", country: "United Kingdom",
+    lat: 51.5074, lng: -0.1278,
+    category: "political",
+    articles: [
+      { title: "A beer at sunrise then back on duty – the British pilot who made RAF history shooting down Iranian drones", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/mar/05/british-pilot-iranian-shahed-drones-raf-akrotiri-cyprus", time: "2026-03-05T20:00:01Z" },
+      { title: "Iceland Defeats Iceland: A U.K. Supermarket Ends a Trademark Dispute", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/iceland-supermarket-trademark.html", time: "2026-03-05T19:03:01Z" },
+      { title: "Defence secretary twice declines to rule out Britain joining strikes on Iran", source: "Sky News", url: "https://news.sky.com/story/defence-secretary-twice-declines-to-rule-out-britain-joining-strikes-on-iran-13515754", time: "2026-03-05T18:00:00Z" },
+      { title: "Chadwick Boseman’s Hip-Hop Play, in Shakespeare’s House", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/theater/chadwick-boseman-deep-azure.html", time: "2026-03-05T15:12:24Z" },
+      { title: "Olivier Awards: ‘Paddington’ and ‘Into the Woods’ Lead Nominations", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/theater/olivier-award-nominations.html", time: "2026-03-05T14:56:40Z" },
+      { title: "European countries to deploy military assets to Cyprus after drone attack on UK base", source: "France 24", url: "https://www.france24.com/en/europe/20260305-european-countries-deploy-military-assets-cyprus-after-iranian-attack-uk-base", time: "2026-03-05T11:21:41Z" },
+      { title: "Britain Arrests a Lawmaker’s Husband on Suspicion of Spying for China", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/europe/uk-spying-china-arrests.html", time: "2026-03-04T20:20:35Z" },
+      { title: "U.S. troops had little protection from drone strike that killed 6, imagery shows", source: "Washington Post", url: "https://www.washingtonpost.com/investigations/2026/03/04/troops-killed-kuwait-base-iran-attack/", time: "2026-03-04T16:35:51Z" },
+      { title: "Yes, Keir Starmer must do better and go faster in bringing Britain closer to Europe. Here’s how to reset his reset | Naomi Smith", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/04/keir-starmer-britain-europe-reset-four-ways", time: "2026-03-04T14:25:23Z" },
+      { title: "MPs say Starmer’s UK-EU reset lacks ‘direction, definition and drive’", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/04/mps-say-starmers-uk-eu-reset-lacks-direction-definition-and-drive", time: "2026-03-04T00:00:34Z" },
+      { title: "Britain halts student visas for Afghanistan, Cameroon, Myanmar and Sudan", source: "France 24", url: "https://www.france24.com/en/europe/20260303-britain-student-visas-afghanistan-cameroon-myanmar-sudan", time: "2026-03-03T23:39:41Z" },
+      { title: "UK to send Royal Navy warship HMS Dragon to Cyprus", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g40yp2p13o?at_medium=RSS&at_campaign=rss", time: "2026-03-03T23:10:24Z" },
+    ]
+  },
+  {
+    name: "Paris", country: "France",
+    lat: 48.8566, lng: 2.3522,
+    category: "political",
+    articles: [
+      { title: "France to broker ceasefire in Lebanon, Macron says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-05T21:50:02Z" },
+      { title: "US and Middle East countries seek Ukraine's support in drone protection", source: "France 24", url: "https://www.france24.com/en/us-and-middle-east-countries-seek-ukraine-s-support-in-drone-protection", time: "2026-03-05T20:49:34Z" },
+      { title: "The Royal Navy's destroyer will arrive too late for Cyprus - the French are already here", source: "Sky News", url: "https://news.sky.com/story/the-royal-navys-destroyer-will-arrive-too-late-for-cyprus-the-french-are-already-here-13515854", time: "2026-03-05T19:55:00Z" },
+      { title: "Welcome to Maastricht, Where All Things French Flourish", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/maastricht-french-influences.html", time: "2026-03-05T19:29:12Z" },
+      { title: "German foreign minister says ‘we will not allow ourselves to be divided’ after Trump-Spain spat – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/05/spain-us-israel-war-iran-white-house-trade-evacuations-latest-news", time: "2026-03-05T15:50:43Z" },
+      { title: "Stella McCartney Paris show is a whistle-stop tour of her life", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/05/stella-mccartney-paris-fashion-week-show", time: "2026-03-05T13:57:08Z" },
+      { title: "Worried about the demise of reading? Come to France, where we’re up to our eyes in print | Alexander Hurst", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/04/death-print-demise-reading-france-books-sales-publishing", time: "2026-03-04T12:00:19Z" },
+    ]
+  },
+  {
+    name: "Madrid", country: "Spain",
+    lat: 40.4168, lng: -3.7038,
+    category: "economic",
+    articles: [
+      { title: "A rift between Spain and Trump widens over Spanish opposition to the Iran war", source: "NPR", url: "https://www.npr.org/2026/03/05/nx-s1-5737285/iran-war-spain-trump", time: "2026-03-05T15:52:08Z" },
+      { title: "Spanish prime minister rebukes Trump’s war in Iran, escalating feud", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/04/pedro-sanchez-trump-war-feud-spain/", time: "2026-03-04T21:16:50Z" },
+      { title: "Spain's Pedro Sánchez hits back at Trump threat to sever trade saying 'no to war'", source: "BBC News", url: "https://www.bbc.com/news/articles/c93wwq1n542o?at_medium=RSS&at_campaign=rss", time: "2026-03-04T20:42:35Z" },
+      { title: "Spain's Sanchez defies Trump trade threat, compares Iran war to ‘Russian roulette’", source: "France 24", url: "https://www.france24.com/en/europe/20260304-spain-sanchez-defies-trump-trade-threat-compares-iran-war-to-russian-roulette", time: "2026-03-04T15:32:36Z" },
+      { title: "Spain’s Leader, Rejecting Iran War, Escalates Long Feud With Trump", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/europe/trump-spain-iran-sanchez.html", time: "2026-03-04T14:06:31Z" },
+      { title: "Leader of Spain slams Trump’s war on Iran as ‘bad for the world’", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T11:04:04Z" },
+    ]
+  },
+  {
+    name: "Berlin", country: "Germany",
+    lat: 52.52, lng: 13.405,
+    category: "economic",
+    articles: [
+      { title: "French Officer Accused of Shooting Teen to Be Charged Only With Manslaughter", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/france-shooting-teen-car-manslaughter-trial.html", time: "2026-03-05T20:15:02Z" },
+      { title: "Germany moves to legalise wolf hunting in response to livestock ‘bloodlust’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/germany-moves-to-legalise-wolf-hunting-in-response-to-livestock-bloodlust", time: "2026-03-05T18:56:07Z" },
+      { title: "Refugee Sentenced to 13 Years for Stabbing at Berlin Holocaust Memorial", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/berlin-holocaust-memorial-stabbing-syrian-refugee.html", time: "2026-03-05T18:54:16Z" },
+      { title: "A Europe of clean, green cities and resurgent industry is a fantasy – unless we get really creative | Hans Larsson", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/05/europe-clean-green-cities-resurgent-industry-fantasy-creative", time: "2026-03-05T05:00:52Z" },
+    ]
+  },
+  {
+    name: "Rome", country: "Italy",
+    lat: 41.9028, lng: 12.4964,
+    category: "political",
+    articles: [
+      { title: "Watch: Moment wolf rescued from canal in northern Italy", source: "BBC News", url: "https://www.bbc.com/news/videos/cy7jjnekeepo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T23:01:10Z" },
+      { title: "Crowds at Milan Fashion Week Featured Spring Dressing, Italian Style", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/style/spring-fashion-italy-milan-fashion-week.html", time: "2026-03-04T16:55:29Z" },
+      { title: "Tree Rings Reveal Origins of Some of the World’s Best Violins", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/science/stradaviri-violin-forest-tree-rings.html", time: "2026-03-04T15:05:55Z" },
+    ]
+  },
+  {
+    name: "Ankara", country: "Turkey",
+    lat: 39.9334, lng: 32.8597,
+    category: "security",
+    articles: [
+      { title: "Iran denies targeting Turkey with missile", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-05T13:17:44Z" },
+      { title: "NATO shoots down Iranian missile en route towards Turkish airspace", source: "France 24", url: "https://www.france24.com/en/europe/20260304-nato-shoots-down-iranian-missile-en-route-towards-turkish-airspace", time: "2026-03-04T17:33:38Z" },
+      { title: "NATO air defenses shot down Iranian missile, Turkey says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T13:50:57Z" },
+    ]
+  },
+  {
+    name: "Athens", country: "Greece",
+    lat: 37.9838, lng: 23.7275,
+    category: "social",
+    articles: [
+      { title: "Greek court upholds criminal organisation verdict on neo-Nazi Golden Dawn", source: "BBC News", url: "https://www.bbc.com/news/articles/c89kkykg39yo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T13:13:08Z" },
+    ]
+  },
+  {
+    name: "Brussels", country: "Belgium",
+    lat: 50.8503, lng: 4.3517,
+    category: "political",
+    articles: [
+      { title: "This Small Statue in Brussels Has a Large Bladder and Lots of Outfits", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/manneken-pis-costumes-brussels.html", time: "2026-03-05T19:34:43Z" },
+    ]
+  },
+  {
+    name: "The Hague", country: "Netherlands",
+    lat: 52.0705, lng: 4.3007,
+    category: "political",
+    articles: [
+      { title: "TEFAF Maastricht, Known for Old Art, Faces the Future", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/tefaf-maastricht-european-union-rules.html", time: "2026-03-05T19:22:54Z" },
+    ]
+  },
 ];
-
 // ===== CATEGORY COLORS & LABELS =====
 const catColors = {
   political: "#6c3483",

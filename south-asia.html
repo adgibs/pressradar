@@ -340,7 +340,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:09 UTC, 5 Mar 2026</span></div>
   </div>
   <div class="date-badge">5 March 2026</div>
 </div>
@@ -433,20 +433,52 @@ function formatTime(isoString) {
 
 // ===== DATA — every location has a country =====
 const locations = [
-  { name: "New Delhi", country: "India", lat: 28.6139, lng: 77.2090, category: "political", articles: [] },
-  { name: "Mumbai", country: "India", lat: 19.0760, lng: 72.8777, category: "economic", articles: [] },
-  { name: "Islamabad", country: "Pakistan", lat: 33.6844, lng: 73.0479, category: "political", articles: [] },
-  { name: "Karachi", country: "Pakistan", lat: 24.8607, lng: 67.0011, category: "security", articles: [] },
-  { name: "Dhaka", country: "Bangladesh", lat: 23.8103, lng: 90.4125, category: "climate", articles: [] },
-  { name: "Colombo", country: "Sri Lanka", lat: 6.9271, lng: 79.8612, category: "economic", articles: [] },
-  { name: "Kathmandu", country: "Nepal", lat: 27.7172, lng: 85.3240, category: "political", articles: [] },
-  { name: "Kabul", country: "Afghanistan", lat: 34.5553, lng: 69.2075, category: "humanitarian", articles: [] },
-  { name: "Kashmir", country: "India/Pakistan", lat: 34.0837, lng: 74.7973, category: "security", articles: [] },
-  { name: "Chennai", country: "India", lat: 13.0827, lng: 80.2707, category: "climate", articles: [] },
-  { name: "Yangon", country: "Myanmar", lat: 16.8661, lng: 96.1951, category: "humanitarian", articles: [] },
-  { name: "Male", country: "Maldives", lat: 4.1755, lng: 73.5093, category: "climate", articles: [] },
+  {
+    name: "Kathmandu", country: "Nepal",
+    lat: 27.7172, lng: 85.324,
+    category: "political",
+    articles: [
+      { title: "Nepalese vote in general election months after Gen Z uprising", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/nepalese-vote-in-general-election-months-after-gen-z-uprising?traffic_source=rss", time: "2026-03-05T17:10:10Z" },
+      { title: "Nepal: voting closes in election pitting old guard against powerful youth movement", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/nepal-election-2026-voting-balen-shah-sharma-oli", time: "2026-03-05T15:25:05Z" },
+      { title: "After Gen-Z Revolution, Nepal Votes for a Fresh Slate of Leaders", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/asia/gen-z-nepal-election.html", time: "2026-03-05T14:12:14Z" },
+      { title: "Six months after Nepal's revolution, Generation Z hopes for change in elections", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260305-six-months-after-nepal-s-revolution-generation-z-hopes-for-change-in-elections", time: "2026-03-05T12:42:09Z" },
+      { title: "What to Know About Nepal's Gen Z Election", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/asia/nepal-election-gen-z-wtk.html", time: "2026-03-05T11:57:22Z" },
+      { title: "Polls open in Nepal's key post-uprising vote", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260304-nepal-votes-in-key-post-uprising-polls", time: "2026-03-04T21:13:20Z" },
+      { title: "Redlight to Limelight review – the powerful tale of 500 sex workers who formed a film collective", source: "The Guardian", url: "https://www.theguardian.com/tv-and-radio/2026/mar/04/redlight-to-limelight-review-kolkata-sex-workers-bipuljit-basu-bbc-iplayer", time: "2026-03-04T00:00:34Z" },
+    ]
+  },
+  {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "India beat England to reach T20 World Cup final as Sanju stars again", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/5/india-beat-england-to-reach-t20-world-cup-final-as-sanju-stars-again?traffic_source=rss", time: "2026-03-05T17:47:31Z" },
+      { title: "Tehran says U.S. will regret attack on its warship in Indian Ocean", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-05T12:02:03Z" },
+      { title: "US submarine sinks Iranian warship as conflict spreads beyond Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/us-submarine-torpedo-iran-warship-sri-lanka-coast-pete-hegseth", time: "2026-03-04T19:50:34Z" },
+      { title: "A U.S. submarine sank  an Iranian warship in the Indian Ocean on Tuesday, Defense Secretary...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T13:18:02Z" },
+      { title: "9 Million Indians Live in the Persian Gulf. The Money They Send Home Is a Lifeline.", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/business/india-workers-iran-persian-gulf.html", time: "2026-03-04T10:35:59Z" },
+    ]
+  },
+  {
+    name: "Colombo", country: "Sri Lanka",
+    lat: 6.9271, lng: 79.8612,
+    category: "economic",
+    articles: [
+      { title: "Sri Lanka evacuates crew of second Iranian vessel after US sunk IRIS Dena", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/sri-lanka-evacuates-crew-of-second-iranian-vessel-after-us-sunk-iris-dena?traffic_source=rss", time: "2026-03-05T19:49:29Z" },
+      { title: "Sri Lanka Is Caught in the Middle as Second Iranian Vessel Seeks Safe Haven", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/asia/sri-lanka-iran-navy-war.html", time: "2026-03-05T19:37:21Z" },
+      { title: "Sri Lanka evacuates crew from Iranian navy vessel days after warship was destroyed by US", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/iran-ship-sri-lanka-port-after-us-sinking-of-frigate", time: "2026-03-05T19:08:02Z" },
+      { title: "At least 80 dead after U.S. sinks Iranian warship, Sri Lanka says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T15:55:15Z" },
+    ]
+  },
+  {
+    name: "Kashmir", country: "India/Pakistan",
+    lat: 34.0837, lng: 74.7973,
+    category: "security",
+    articles: [
+      { title: "The girls of my Himalayan valley are not victims – education is the only bridge they need out of their isolation | Amreen Qadir", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/04/kashmir-tulail-dard-shin-girls-education-equality-children-isolation", time: "2026-03-04T06:00:40Z" },
+    ]
+  },
 ];
-
 // ===== CATEGORY COLORS & LABELS =====
 const catColors = {
   political: "#6c3483",
