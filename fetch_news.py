@@ -472,6 +472,291 @@ EAST_ASIA_LOCATION_PRIORITY = [
 ]
 
 
+# ── Africa Region Configuration ───────────────────────────────────
+AFRICA_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/africa/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/africa/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Africa.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/africa/rss", "source": "France 24"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+]
+
+AFRICA_KEYWORDS = [
+    "sudan", "khartoum", "nigeria", "lagos", "abuja", "kenya", "nairobi",
+    "ethiopia", "addis ababa", "congo", "kinshasa", "goma", "somalia",
+    "mogadishu", "south africa", "johannesburg", "cape town", "egypt",
+    "cairo", "libya", "tripoli", "mali", "bamako", "sahel", "niger",
+    "burkina faso", "chad", "cameroon", "ghana", "accra", "senegal",
+    "mozambique", "tanzania", "uganda", "rwanda", "african union",
+]
+
+AFRICA_LOCATION_MAP = {
+    "khartoum": {"name": "Khartoum", "country": "Sudan", "lat": 15.5007, "lng": 32.5599, "category": "conflict"},
+    "sudan": {"name": "Khartoum", "country": "Sudan", "lat": 15.5007, "lng": 32.5599, "category": "conflict"},
+    "lagos": {"name": "Lagos", "country": "Nigeria", "lat": 6.5244, "lng": 3.3792, "category": "economic"},
+    "abuja": {"name": "Abuja", "country": "Nigeria", "lat": 9.0579, "lng": 7.4951, "category": "political"},
+    "nigeria": {"name": "Lagos", "country": "Nigeria", "lat": 6.5244, "lng": 3.3792, "category": "economic"},
+    "nairobi": {"name": "Nairobi", "country": "Kenya", "lat": -1.2921, "lng": 36.8219, "category": "political"},
+    "kenya": {"name": "Nairobi", "country": "Kenya", "lat": -1.2921, "lng": 36.8219, "category": "political"},
+    "addis ababa": {"name": "Addis Ababa", "country": "Ethiopia", "lat": 9.0250, "lng": 38.7469, "category": "conflict"},
+    "ethiopia": {"name": "Addis Ababa", "country": "Ethiopia", "lat": 9.0250, "lng": 38.7469, "category": "conflict"},
+    "kinshasa": {"name": "Kinshasa", "country": "DR Congo", "lat": -4.4419, "lng": 15.2663, "category": "conflict"},
+    "congo": {"name": "Kinshasa", "country": "DR Congo", "lat": -4.4419, "lng": 15.2663, "category": "conflict"},
+    "goma": {"name": "Goma", "country": "DR Congo", "lat": -1.6585, "lng": 29.2206, "category": "humanitarian"},
+    "mogadishu": {"name": "Mogadishu", "country": "Somalia", "lat": 2.0469, "lng": 45.3182, "category": "conflict"},
+    "somalia": {"name": "Mogadishu", "country": "Somalia", "lat": 2.0469, "lng": 45.3182, "category": "conflict"},
+    "johannesburg": {"name": "Johannesburg", "country": "South Africa", "lat": -26.2041, "lng": 28.0473, "category": "economic"},
+    "south africa": {"name": "Johannesburg", "country": "South Africa", "lat": -26.2041, "lng": 28.0473, "category": "economic"},
+    "cape town": {"name": "Cape Town", "country": "South Africa", "lat": -33.9249, "lng": 18.4241, "category": "political"},
+    "cairo": {"name": "Cairo", "country": "Egypt", "lat": 30.0444, "lng": 31.2357, "category": "political"},
+    "egypt": {"name": "Cairo", "country": "Egypt", "lat": 30.0444, "lng": 31.2357, "category": "political"},
+    "tripoli": {"name": "Tripoli", "country": "Libya", "lat": 32.8872, "lng": 13.1913, "category": "conflict"},
+    "libya": {"name": "Tripoli", "country": "Libya", "lat": 32.8872, "lng": 13.1913, "category": "conflict"},
+    "bamako": {"name": "Bamako", "country": "Mali", "lat": 12.6392, "lng": -8.0029, "category": "conflict"},
+    "mali": {"name": "Bamako", "country": "Mali", "lat": 12.6392, "lng": -8.0029, "category": "conflict"},
+    "sahel": {"name": "Sahel Region", "country": "West Africa", "lat": 15.0, "lng": 0.0, "category": "conflict"},
+    "niger": {"name": "Sahel Region", "country": "West Africa", "lat": 15.0, "lng": 0.0, "category": "conflict"},
+    "burkina faso": {"name": "Sahel Region", "country": "West Africa", "lat": 15.0, "lng": 0.0, "category": "conflict"},
+    "chad": {"name": "Sahel Region", "country": "West Africa", "lat": 15.0, "lng": 0.0, "category": "conflict"},
+    "accra": {"name": "Accra", "country": "Ghana", "lat": 5.6037, "lng": -0.1870, "category": "economic"},
+    "ghana": {"name": "Accra", "country": "Ghana", "lat": 5.6037, "lng": -0.1870, "category": "economic"},
+    "african union": {"name": "Addis Ababa", "country": "Ethiopia", "lat": 9.0250, "lng": 38.7469, "category": "political"},
+}
+
+AFRICA_LOCATION_PRIORITY = [
+    "khartoum", "goma", "mogadishu", "bamako", "addis ababa",
+    "cape town", "johannesburg", "tripoli", "kinshasa",
+    "lagos", "abuja", "nairobi", "cairo", "accra",
+    "sahel", "burkina faso", "niger", "chad",
+    "sudan", "nigeria", "kenya", "ethiopia", "congo", "somalia",
+    "south africa", "egypt", "libya", "mali", "ghana",
+    "african union",
+]
+
+
+# ── Europe Region Configuration ──────────────────────────────────
+EUROPE_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/europe-news/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/europe/rss", "source": "France 24"},
+    {"url": "https://www.dw.com/rss/en/eu/s-31459", "source": "Deutsche Welle"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+]
+
+EUROPE_KEYWORDS = [
+    "london", "britain", "british", "uk ", "brexit", "starmer",
+    "brussels", "eu ", "european union", "european commission",
+    "paris", "france", "french", "macron",
+    "berlin", "germany", "german", "merz", "scholz",
+    "rome", "italy", "italian", "meloni",
+    "madrid", "spain", "spanish", "sanchez",
+    "warsaw", "poland", "polish",
+    "ankara", "turkey", "turkish", "erdogan", "istanbul",
+    "athens", "greece", "greek",
+    "stockholm", "sweden", "swedish", "nato",
+    "bucharest", "romania", "romanian",
+    "geneva", "switzerland",
+    "the hague", "netherlands", "dutch",
+    "dublin", "ireland", "irish",
+]
+
+EUROPE_LOCATION_MAP = {
+    "london": {"name": "London", "country": "United Kingdom", "lat": 51.5074, "lng": -0.1278, "category": "political"},
+    "britain": {"name": "London", "country": "United Kingdom", "lat": 51.5074, "lng": -0.1278, "category": "political"},
+    "british": {"name": "London", "country": "United Kingdom", "lat": 51.5074, "lng": -0.1278, "category": "political"},
+    "starmer": {"name": "London", "country": "United Kingdom", "lat": 51.5074, "lng": -0.1278, "category": "political"},
+    "brussels": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "political"},
+    "european union": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "political"},
+    "european commission": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "political"},
+    "paris": {"name": "Paris", "country": "France", "lat": 48.8566, "lng": 2.3522, "category": "political"},
+    "france": {"name": "Paris", "country": "France", "lat": 48.8566, "lng": 2.3522, "category": "political"},
+    "french": {"name": "Paris", "country": "France", "lat": 48.8566, "lng": 2.3522, "category": "political"},
+    "macron": {"name": "Paris", "country": "France", "lat": 48.8566, "lng": 2.3522, "category": "political"},
+    "berlin": {"name": "Berlin", "country": "Germany", "lat": 52.5200, "lng": 13.4050, "category": "economic"},
+    "germany": {"name": "Berlin", "country": "Germany", "lat": 52.5200, "lng": 13.4050, "category": "economic"},
+    "german": {"name": "Berlin", "country": "Germany", "lat": 52.5200, "lng": 13.4050, "category": "economic"},
+    "merz": {"name": "Berlin", "country": "Germany", "lat": 52.5200, "lng": 13.4050, "category": "political"},
+    "scholz": {"name": "Berlin", "country": "Germany", "lat": 52.5200, "lng": 13.4050, "category": "political"},
+    "rome": {"name": "Rome", "country": "Italy", "lat": 41.9028, "lng": 12.4964, "category": "political"},
+    "italy": {"name": "Rome", "country": "Italy", "lat": 41.9028, "lng": 12.4964, "category": "political"},
+    "italian": {"name": "Rome", "country": "Italy", "lat": 41.9028, "lng": 12.4964, "category": "political"},
+    "meloni": {"name": "Rome", "country": "Italy", "lat": 41.9028, "lng": 12.4964, "category": "political"},
+    "madrid": {"name": "Madrid", "country": "Spain", "lat": 40.4168, "lng": -3.7038, "category": "economic"},
+    "spain": {"name": "Madrid", "country": "Spain", "lat": 40.4168, "lng": -3.7038, "category": "economic"},
+    "spanish": {"name": "Madrid", "country": "Spain", "lat": 40.4168, "lng": -3.7038, "category": "economic"},
+    "sanchez": {"name": "Madrid", "country": "Spain", "lat": 40.4168, "lng": -3.7038, "category": "political"},
+    "warsaw": {"name": "Warsaw", "country": "Poland", "lat": 52.2297, "lng": 21.0122, "category": "security"},
+    "poland": {"name": "Warsaw", "country": "Poland", "lat": 52.2297, "lng": 21.0122, "category": "security"},
+    "polish": {"name": "Warsaw", "country": "Poland", "lat": 52.2297, "lng": 21.0122, "category": "security"},
+    "ankara": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "security"},
+    "turkey": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "security"},
+    "turkish": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "security"},
+    "erdogan": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "political"},
+    "istanbul": {"name": "Istanbul", "country": "Turkey", "lat": 41.0082, "lng": 28.9784, "category": "economic"},
+    "athens": {"name": "Athens", "country": "Greece", "lat": 37.9838, "lng": 23.7275, "category": "social"},
+    "greece": {"name": "Athens", "country": "Greece", "lat": 37.9838, "lng": 23.7275, "category": "social"},
+    "greek": {"name": "Athens", "country": "Greece", "lat": 37.9838, "lng": 23.7275, "category": "social"},
+    "stockholm": {"name": "Stockholm", "country": "Sweden", "lat": 59.3293, "lng": 18.0686, "category": "security"},
+    "sweden": {"name": "Stockholm", "country": "Sweden", "lat": 59.3293, "lng": 18.0686, "category": "security"},
+    "swedish": {"name": "Stockholm", "country": "Sweden", "lat": 59.3293, "lng": 18.0686, "category": "security"},
+    "bucharest": {"name": "Bucharest", "country": "Romania", "lat": 44.4268, "lng": 26.1025, "category": "security"},
+    "romania": {"name": "Bucharest", "country": "Romania", "lat": 44.4268, "lng": 26.1025, "category": "security"},
+    "geneva": {"name": "Geneva", "country": "Switzerland", "lat": 46.2044, "lng": 6.1432, "category": "political"},
+    "switzerland": {"name": "Geneva", "country": "Switzerland", "lat": 46.2044, "lng": 6.1432, "category": "political"},
+    "the hague": {"name": "The Hague", "country": "Netherlands", "lat": 52.0705, "lng": 4.3007, "category": "political"},
+    "netherlands": {"name": "The Hague", "country": "Netherlands", "lat": 52.0705, "lng": 4.3007, "category": "political"},
+    "dutch": {"name": "The Hague", "country": "Netherlands", "lat": 52.0705, "lng": 4.3007, "category": "political"},
+    "dublin": {"name": "Dublin", "country": "Ireland", "lat": 53.3498, "lng": -6.2603, "category": "economic"},
+    "ireland": {"name": "Dublin", "country": "Ireland", "lat": 53.3498, "lng": -6.2603, "category": "economic"},
+    "irish": {"name": "Dublin", "country": "Ireland", "lat": 53.3498, "lng": -6.2603, "category": "economic"},
+}
+
+EUROPE_LOCATION_PRIORITY = [
+    "european commission", "european union", "the hague",
+    "istanbul", "ankara", "erdogan",
+    "london", "starmer", "brussels", "paris", "macron",
+    "berlin", "merz", "scholz", "rome", "meloni",
+    "madrid", "sanchez", "warsaw", "athens",
+    "stockholm", "bucharest", "geneva", "dublin",
+    "britain", "british", "france", "french", "germany", "german",
+    "italy", "italian", "spain", "spanish", "poland", "polish",
+    "turkey", "turkish", "greece", "greek", "sweden", "swedish",
+    "romania", "switzerland", "netherlands", "dutch", "ireland", "irish",
+    "nato",
+]
+
+
+# ── South Asia Region Configuration ──────────────────────────────
+SOUTH_ASIA_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/south_asia/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/south-and-central-asia/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/asia-pacific/rss", "source": "France 24"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+]
+
+SOUTH_ASIA_KEYWORDS = [
+    "india", "indian", "modi", "new delhi", "mumbai", "chennai",
+    "pakistan", "pakistani", "islamabad", "karachi", "kashmir",
+    "bangladesh", "dhaka", "sri lanka", "colombo",
+    "nepal", "kathmandu", "afghanistan", "kabul", "taliban",
+    "myanmar", "yangon", "rohingya", "maldives",
+]
+
+SOUTH_ASIA_LOCATION_MAP = {
+    "new delhi": {"name": "New Delhi", "country": "India", "lat": 28.6139, "lng": 77.2090, "category": "political"},
+    "mumbai": {"name": "Mumbai", "country": "India", "lat": 19.0760, "lng": 72.8777, "category": "economic"},
+    "chennai": {"name": "Chennai", "country": "India", "lat": 13.0827, "lng": 80.2707, "category": "climate"},
+    "modi": {"name": "New Delhi", "country": "India", "lat": 28.6139, "lng": 77.2090, "category": "political"},
+    "india": {"name": "New Delhi", "country": "India", "lat": 28.6139, "lng": 77.2090, "category": "political"},
+    "indian": {"name": "New Delhi", "country": "India", "lat": 28.6139, "lng": 77.2090, "category": "political"},
+    "islamabad": {"name": "Islamabad", "country": "Pakistan", "lat": 33.6844, "lng": 73.0479, "category": "political"},
+    "karachi": {"name": "Karachi", "country": "Pakistan", "lat": 24.8607, "lng": 67.0011, "category": "security"},
+    "pakistan": {"name": "Islamabad", "country": "Pakistan", "lat": 33.6844, "lng": 73.0479, "category": "political"},
+    "pakistani": {"name": "Islamabad", "country": "Pakistan", "lat": 33.6844, "lng": 73.0479, "category": "political"},
+    "kashmir": {"name": "Kashmir", "country": "India/Pakistan", "lat": 34.0837, "lng": 74.7973, "category": "security"},
+    "dhaka": {"name": "Dhaka", "country": "Bangladesh", "lat": 23.8103, "lng": 90.4125, "category": "climate"},
+    "bangladesh": {"name": "Dhaka", "country": "Bangladesh", "lat": 23.8103, "lng": 90.4125, "category": "climate"},
+    "colombo": {"name": "Colombo", "country": "Sri Lanka", "lat": 6.9271, "lng": 79.8612, "category": "economic"},
+    "sri lanka": {"name": "Colombo", "country": "Sri Lanka", "lat": 6.9271, "lng": 79.8612, "category": "economic"},
+    "kathmandu": {"name": "Kathmandu", "country": "Nepal", "lat": 27.7172, "lng": 85.3240, "category": "political"},
+    "nepal": {"name": "Kathmandu", "country": "Nepal", "lat": 27.7172, "lng": 85.3240, "category": "political"},
+    "kabul": {"name": "Kabul", "country": "Afghanistan", "lat": 34.5553, "lng": 69.2075, "category": "humanitarian"},
+    "afghanistan": {"name": "Kabul", "country": "Afghanistan", "lat": 34.5553, "lng": 69.2075, "category": "humanitarian"},
+    "taliban": {"name": "Kabul", "country": "Afghanistan", "lat": 34.5553, "lng": 69.2075, "category": "humanitarian"},
+    "yangon": {"name": "Yangon", "country": "Myanmar", "lat": 16.8661, "lng": 96.1951, "category": "humanitarian"},
+    "myanmar": {"name": "Yangon", "country": "Myanmar", "lat": 16.8661, "lng": 96.1951, "category": "humanitarian"},
+    "rohingya": {"name": "Yangon", "country": "Myanmar", "lat": 16.8661, "lng": 96.1951, "category": "humanitarian"},
+    "maldives": {"name": "Male", "country": "Maldives", "lat": 4.1755, "lng": 73.5093, "category": "climate"},
+}
+
+SOUTH_ASIA_LOCATION_PRIORITY = [
+    "new delhi", "mumbai", "chennai", "kashmir",
+    "islamabad", "karachi",
+    "dhaka", "colombo", "kathmandu", "kabul", "yangon",
+    "modi", "taliban", "rohingya",
+    "india", "indian", "pakistan", "pakistani",
+    "bangladesh", "sri lanka", "nepal", "afghanistan", "myanmar", "maldives",
+]
+
+
+# ── Americas Region Configuration ────────────────────────────────
+AMERICAS_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml", "source": "BBC News"},
+    {"url": "https://www.theguardian.com/world/americas/rss", "source": "The Guardian"},
+    {"url": "https://feeds.skynews.com/feeds/rss/world.xml", "source": "Sky News"},
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Americas.xml", "source": "New York Times"},
+    {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
+    {"url": "https://www.france24.com/en/americas/rss", "source": "France 24"},
+    {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
+    {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
+]
+
+AMERICAS_KEYWORDS = [
+    "mexico", "mexico city", "colombia", "bogota", "venezuela", "caracas",
+    "maduro", "argentina", "buenos aires", "milei", "brazil", "brasilia",
+    "lula", "sao paulo", "cuba", "havana", "peru", "lima", "chile",
+    "santiago", "haiti", "port-au-prince", "guatemala", "panama",
+    "canada", "ottawa", "trudeau", "carney",
+    "latin america", "central america", "south america",
+]
+
+AMERICAS_LOCATION_MAP = {
+    "mexico city": {"name": "Mexico City", "country": "Mexico", "lat": 19.4326, "lng": -99.1332, "category": "political"},
+    "mexico": {"name": "Mexico City", "country": "Mexico", "lat": 19.4326, "lng": -99.1332, "category": "political"},
+    "bogota": {"name": "Bogota", "country": "Colombia", "lat": 4.7110, "lng": -74.0721, "category": "security"},
+    "colombia": {"name": "Bogota", "country": "Colombia", "lat": 4.7110, "lng": -74.0721, "category": "security"},
+    "caracas": {"name": "Caracas", "country": "Venezuela", "lat": 10.4806, "lng": -66.9036, "category": "political"},
+    "venezuela": {"name": "Caracas", "country": "Venezuela", "lat": 10.4806, "lng": -66.9036, "category": "political"},
+    "maduro": {"name": "Caracas", "country": "Venezuela", "lat": 10.4806, "lng": -66.9036, "category": "political"},
+    "buenos aires": {"name": "Buenos Aires", "country": "Argentina", "lat": -34.6037, "lng": -58.3816, "category": "economic"},
+    "argentina": {"name": "Buenos Aires", "country": "Argentina", "lat": -34.6037, "lng": -58.3816, "category": "economic"},
+    "milei": {"name": "Buenos Aires", "country": "Argentina", "lat": -34.6037, "lng": -58.3816, "category": "political"},
+    "brasilia": {"name": "Brasilia", "country": "Brazil", "lat": -15.7975, "lng": -47.8919, "category": "political"},
+    "brazil": {"name": "Brasilia", "country": "Brazil", "lat": -15.7975, "lng": -47.8919, "category": "political"},
+    "lula": {"name": "Brasilia", "country": "Brazil", "lat": -15.7975, "lng": -47.8919, "category": "political"},
+    "sao paulo": {"name": "Sao Paulo", "country": "Brazil", "lat": -23.5558, "lng": -46.6396, "category": "economic"},
+    "havana": {"name": "Havana", "country": "Cuba", "lat": 23.1136, "lng": -82.3666, "category": "political"},
+    "cuba": {"name": "Havana", "country": "Cuba", "lat": 23.1136, "lng": -82.3666, "category": "political"},
+    "lima": {"name": "Lima", "country": "Peru", "lat": -12.0464, "lng": -77.0428, "category": "economic"},
+    "peru": {"name": "Lima", "country": "Peru", "lat": -12.0464, "lng": -77.0428, "category": "economic"},
+    "santiago": {"name": "Santiago", "country": "Chile", "lat": -33.4489, "lng": -70.6693, "category": "economic"},
+    "chile": {"name": "Santiago", "country": "Chile", "lat": -33.4489, "lng": -70.6693, "category": "economic"},
+    "port-au-prince": {"name": "Port-au-Prince", "country": "Haiti", "lat": 18.5944, "lng": -72.3074, "category": "security"},
+    "haiti": {"name": "Port-au-Prince", "country": "Haiti", "lat": 18.5944, "lng": -72.3074, "category": "security"},
+    "guatemala": {"name": "Guatemala City", "country": "Guatemala", "lat": 14.6349, "lng": -90.5069, "category": "migration"},
+    "panama": {"name": "Panama City", "country": "Panama", "lat": 8.9824, "lng": -79.5199, "category": "migration"},
+    "ottawa": {"name": "Ottawa", "country": "Canada", "lat": 45.4215, "lng": -75.6972, "category": "political"},
+    "canada": {"name": "Ottawa", "country": "Canada", "lat": 45.4215, "lng": -75.6972, "category": "political"},
+    "trudeau": {"name": "Ottawa", "country": "Canada", "lat": 45.4215, "lng": -75.6972, "category": "political"},
+    "carney": {"name": "Ottawa", "country": "Canada", "lat": 45.4215, "lng": -75.6972, "category": "political"},
+    "latin america": {"name": "Mexico City", "country": "Mexico", "lat": 19.4326, "lng": -99.1332, "category": "political"},
+    "central america": {"name": "Guatemala City", "country": "Guatemala", "lat": 14.6349, "lng": -90.5069, "category": "migration"},
+    "south america": {"name": "Brasilia", "country": "Brazil", "lat": -15.7975, "lng": -47.8919, "category": "political"},
+}
+
+AMERICAS_LOCATION_PRIORITY = [
+    "mexico city", "buenos aires", "sao paulo", "port-au-prince",
+    "bogota", "caracas", "maduro", "brasilia", "lula", "milei",
+    "havana", "lima", "santiago", "ottawa", "trudeau", "carney",
+    "guatemala", "panama",
+    "mexico", "colombia", "venezuela", "argentina", "brazil",
+    "cuba", "peru", "chile", "haiti", "canada",
+    "latin america", "central america", "south america",
+]
+
+
 def fetch_region(feeds, keywords, location_map, location_priority, region_name, hours_back=48):
     """Fetch articles for a specific region."""
     cutoff = datetime.now(timezone.utc) - timedelta(hours=hours_back)
@@ -614,6 +899,50 @@ def main():
         EAST_ASIA_LOCATION_MAP,
         EAST_ASIA_LOCATION_PRIORITY,
         "East Asia",
+    )
+
+    # ── Africa (africa.html) ──
+    print("\n=== Africa ===")
+    update_region(
+        "africa.html",
+        AFRICA_FEEDS,
+        AFRICA_KEYWORDS,
+        AFRICA_LOCATION_MAP,
+        AFRICA_LOCATION_PRIORITY,
+        "Africa",
+    )
+
+    # ── Europe (europe.html) ──
+    print("\n=== Europe ===")
+    update_region(
+        "europe.html",
+        EUROPE_FEEDS,
+        EUROPE_KEYWORDS,
+        EUROPE_LOCATION_MAP,
+        EUROPE_LOCATION_PRIORITY,
+        "Europe",
+    )
+
+    # ── South Asia (south-asia.html) ──
+    print("\n=== South Asia ===")
+    update_region(
+        "south-asia.html",
+        SOUTH_ASIA_FEEDS,
+        SOUTH_ASIA_KEYWORDS,
+        SOUTH_ASIA_LOCATION_MAP,
+        SOUTH_ASIA_LOCATION_PRIORITY,
+        "South Asia",
+    )
+
+    # ── Americas (americas.html) ──
+    print("\n=== Americas ===")
+    update_region(
+        "americas.html",
+        AMERICAS_FEEDS,
+        AMERICAS_KEYWORDS,
+        AMERICAS_LOCATION_MAP,
+        AMERICAS_LOCATION_PRIORITY,
+        "Americas",
     )
 
     print("\nDone!")

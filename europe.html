@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PressRadar.me — Ukraine News Map</title>
+<title>PressRadar.me — Europe News Map</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
@@ -340,17 +340,17 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:36 UTC, 5 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated"></span></div>
   </div>
   <div class="date-badge">5 March 2026</div>
 </div>
 
 <div id="region-nav">
   <button class="region-tab" onclick="window.location.href='index.html'">Middle East</button>
-  <button class="region-tab active" onclick="window.location.href='ukraine.html'">Ukraine</button>
+  <button class="region-tab" onclick="window.location.href='ukraine.html'">Ukraine</button>
   <button class="region-tab" onclick="window.location.href='east-asia.html'">East Asia</button>
   <button class="region-tab" onclick="window.location.href='africa.html'">Africa</button>
-  <button class="region-tab" onclick="window.location.href='europe.html'">Europe</button>
+  <button class="region-tab active" onclick="window.location.href='europe.html'">Europe</button>
   <button class="region-tab" onclick="window.location.href='south-asia.html'">South Asia</button>
   <button class="region-tab" onclick="window.location.href='americas.html'">Americas</button>
 </div>
@@ -406,11 +406,11 @@
 
 <div class="legend">
   <h3>Category</h3>
-  <div class="legend-item"><div class="legend-dot" style="background:#c0392b;"></div> Conflict zone</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#27ae60;"></div> Diplomacy</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#e67e22;"></div> Humanitarian</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#2471a3;"></div> Energy / economic</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> NATO involvement</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> Politics / governance</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2471a3;"></div> Economic / trade</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c0392b;"></div> Security / defence</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#27ae60;"></div> Climate / energy</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e67e22;"></div> Social / migration</div>
   <h3 style="margin-top:10px;">Size = article count</h3>
 </div>
 
@@ -433,120 +433,71 @@ function formatTime(isoString) {
 
 // ===== DATA — every location has a country =====
 const locations = [
-  {
-    name: "Kyiv", country: "Ukraine",
-    lat: 50.4501, lng: 30.5234,
-    category: "diplomacy",
-    articles: [
-      { title: "US and Middle East countries seek Ukraine's support in drone protection", source: "France 24", url: "https://www.france24.com/en/us-and-middle-east-countries-seek-ukraine-s-support-in-drone-protection", time: "2026-03-05T20:49:34Z" },
-      { title: "Ukraine, Russia free 200 POWs each in latest swap amid stalled peace talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/ukraine-russia-free-200-pows-each-in-latest-swap-amid-stalled-peace-talks?traffic_source=rss", time: "2026-03-05T19:41:59Z" },
-      { title: "Senators propose ban on US gov’t officials doing prediction market trading", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/5/senators-propose-ban-on-us-govt-officials-doing-prediction-market-trading?traffic_source=rss", time: "2026-03-05T19:12:07Z" },
-      { title: "‘Our children were sold off’: The South Africans sent to fight Russia’s war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/5/our-children-were-sold-off-the-south-africans-sent-to-fight-russias-war?traffic_source=rss", time: "2026-03-05T15:13:59Z" },
-      { title: "Fallout From Mideast Swirls Over the War in Ukraine", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/ukraine-zelensky-iran-middle-east.html", time: "2026-03-05T14:21:57Z" },
-      { title: "Ukraine peace talks could be postponed for 'a while' due to Iran war", source: "Sky News", url: "https://news.sky.com/story/ukraine-peace-talks-could-be-postponed-for-a-while-due-to-iran-war-13515533", time: "2026-03-05T10:06:00Z" },
-      { title: "Ukraine offers drone expertise to Gulf amid Iran strikes", source: "NPR", url: "https://www.npr.org/2026/03/05/nx-s1-5735544/ukraine-offers-drone-expertise-to-gulf-amid-iran-strikes", time: "2026-03-05T09:48:25Z" },
-      { title: "Iran denies firing missile towards Turkiye after NATO interception", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/iran-denies-firing-missile-towards-turkiye-after-nato-interception?traffic_source=rss", time: "2026-03-05T06:24:58Z" },
-      { title: "US Senator helps police drag anti-war protester from meeting", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/5/us-senator-helps-police-drag-anti-war-protester-from-meeting?traffic_source=rss", time: "2026-03-05T01:59:21Z" },
-      { title: "NATO shoots down Iranian missile en route towards Turkish airspace", source: "France 24", url: "https://www.france24.com/en/europe/20260304-nato-shoots-down-iranian-missile-en-route-towards-turkish-airspace", time: "2026-03-04T17:33:38Z" },
-      { title: "NATO air defenses shot down Iranian missile, Turkey says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T13:50:57Z" },
-      { title: "Ukraine war briefing: Merz tells Trump Ukraine must not give up more territory", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/ukraine-war-briefing-merz-tells-trump-ukraine-must-not-give-up-more-territory", time: "2026-03-04T01:05:07Z" },
-      { title: "Ukraine Unbroken review – five searing dramas about the history and horror of Russia’s invasion", source: "The Guardian", url: "https://www.theguardian.com/stage/2026/mar/03/ukraine-unbroken-review-arcola-theatre-london", time: "2026-03-03T16:37:34Z" },
-      { title: "Ukrainian President Volodymyr Zelensky said he had discussed “how we can help in this situation” with...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T14:18:03Z" },
-      { title: "Zelensky fears Trump's Iran war could hurt Ukraine", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv10dre79o?at_medium=RSS&at_campaign=rss", time: "2026-03-03T13:41:43Z" },
-    ]
-  },
-  {
-    name: "Moscow", country: "Russia",
-    lat: 55.7558, lng: 37.6173,
-    category: "conflict",
-    articles: [
-      { title: "Trump says Zelensky ‘has to get on the ball’ to reach Russia deal", source: "France 24", url: "https://www.france24.com/en/europe/20260305-trump-zelensky-deal-putin-russia", time: "2026-03-05T22:30:06Z" },
-      { title: "Russia Returns to Venice Biennale, in Latest Sign of a Cultural Comeback", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/russia-ukraine-venice-biennale.html", time: "2026-03-05T14:30:36Z" },
-      { title: "Attack on Iran shows Russia losing sway in the Middle East and globally", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/05/attack-iran-highlights-russias-fall-middle-east-beyond/", time: "2026-03-05T10:00:40Z" },
-      { title: "Where are Iran’s allies? Why Moscow, Beijing are keeping their distance", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/5/where-are-irans-allies-why-moscow-beijing-are-keeping-their-distance?traffic_source=rss", time: "2026-03-05T08:58:02Z" },
-      { title: "Ukraine war briefing: Russia claims LNG tanker in Mediterranean hit by drones", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/ukraine-war-briefing-putin-blames-ukraine-for-sinking-of-tanker-off-coast-of-libya", time: "2026-03-05T02:46:31Z" },
-      { title: "Putin accuses Ukraine of attacking gas tanker that exploded and sank off Libya", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/putin-accuses-ukraine-of-attacking-gas-tanker-that-exploded-and-sank-off-libya", time: "2026-03-04T19:51:28Z" },
-      { title: "Russia blames Ukrainian naval drones as tanker sinks in Mediterranean", source: "BBC News", url: "https://www.bbc.com/news/articles/cr5ll27z52do?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:14:04Z" },
-      { title: "Watershed moment as Russia's sporting exile ends", source: "BBC News", url: "https://www.bbc.com/sport/articles/ckgzzepvgx2o?at_medium=RSS&at_campaign=rss", time: "2026-03-04T17:57:28Z" },
-      { title: "Spain's Sanchez defies Trump trade threat, compares Iran war to ‘Russian roulette’", source: "France 24", url: "https://www.france24.com/en/europe/20260304-spain-sanchez-defies-trump-trade-threat-compares-iran-war-to-russian-roulette", time: "2026-03-04T15:32:36Z" },
-      { title: "The Israel Defense Forces said one of its F-35 fighter jets shot down a Russian-made Iranian...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T10:02:13Z" },
-      { title: "Middle East conflict offers economic lifeline to Russia’s flagging war machine", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/middle-east-conflict-offers-economic-lifeline-to-russias-flagging-war-machine", time: "2026-03-04T06:00:42Z" },
-    ]
-  },
-  {
-    name: "Donetsk", country: "Ukraine",
-    lat: 48.0159, lng: 37.8029,
-    category: "conflict",
-    articles: [
-      { title: "‘In the face of death, we are all equal’: Ukraine’s Roma fight for recognition for those serving in war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/roma-families-ukraine-war-families-military-compensation", time: "2026-03-05T08:00:54Z" },
-    ]
-  },
+  { name: "London", country: "United Kingdom", lat: 51.5074, lng: -0.1278, category: "political", articles: [] },
+  { name: "Brussels", country: "Belgium", lat: 50.8503, lng: 4.3517, category: "political", articles: [] },
+  { name: "Paris", country: "France", lat: 48.8566, lng: 2.3522, category: "political", articles: [] },
+  { name: "Berlin", country: "Germany", lat: 52.5200, lng: 13.4050, category: "economic", articles: [] },
+  { name: "Rome", country: "Italy", lat: 41.9028, lng: 12.4964, category: "political", articles: [] },
+  { name: "Madrid", country: "Spain", lat: 40.4168, lng: -3.7038, category: "economic", articles: [] },
+  { name: "Warsaw", country: "Poland", lat: 52.2297, lng: 21.0122, category: "security", articles: [] },
+  { name: "Ankara", country: "Turkey", lat: 39.9334, lng: 32.8597, category: "security", articles: [] },
+  { name: "Istanbul", country: "Turkey", lat: 41.0082, lng: 28.9784, category: "economic", articles: [] },
+  { name: "Athens", country: "Greece", lat: 37.9838, lng: 23.7275, category: "social", articles: [] },
+  { name: "Stockholm", country: "Sweden", lat: 59.3293, lng: 18.0686, category: "security", articles: [] },
+  { name: "Bucharest", country: "Romania", lat: 44.4268, lng: 26.1025, category: "security", articles: [] },
+  { name: "Geneva", country: "Switzerland", lat: 46.2044, lng: 6.1432, category: "political", articles: [] },
+  { name: "The Hague", country: "Netherlands", lat: 52.0705, lng: 4.3007, category: "political", articles: [] },
+  { name: "Dublin", country: "Ireland", lat: 53.3498, lng: -6.2603, category: "economic", articles: [] },
 ];
-// ===== TIMELINE DATA (dynamic from articles) =====
-let allTimes = [];
-locations.forEach(loc => loc.articles.forEach(a => {
-  if (a.time) allTimes.push(new Date(a.time).getTime());
-}));
-const timelineStart = allTimes.length ? Math.min(...allTimes) : Date.now() - 48*3600*1000;
-const timelineEnd = allTimes.length ? Math.max(...allTimes) : Date.now();
-const timelineRange = timelineEnd - timelineStart || 1;
 
-// ===== TIMELINE STATE =====
-let timelineMin = timelineStart;
-let timelineMax = timelineEnd;
-
-// ===== CATEGORY COLOURS =====
+// ===== CATEGORY COLORS & LABELS =====
 const catColors = {
-  conflict: "#c0392b",
-  diplomacy: "#27ae60",
-  humanitarian: "#e67e22",
-  energy: "#2471a3",
-  nato: "#6c3483"
+  political: "#6c3483",
+  economic: "#2471a3",
+  security: "#c0392b",
+  climate: "#27ae60",
+  social: "#e67e22"
 };
 const catLabels = {
-  conflict: "Conflict zone",
-  diplomacy: "Diplomacy",
-  humanitarian: "Humanitarian",
-  energy: "Energy / economic",
-  nato: "NATO involvement"
+  political: "Politics / governance",
+  economic: "Economic / trade",
+  security: "Security / defence",
+  climate: "Climate / energy",
+  social: "Social / migration"
 };
 
-// ===== DERIVE COUNTRIES (ordered by article count) =====
-function getCountries(timeFilter) {
-  const countryMap = {};
-  locations.forEach(loc => {
-    const filtered = timeFilter ? loc.articles.filter(a => {
-      const t = new Date(a.time).getTime();
-      return t >= timelineMin && t <= timelineMax;
-    }) : loc.articles;
-    if (filtered.length > 0) {
-      if (!countryMap[loc.country]) countryMap[loc.country] = 0;
-      countryMap[loc.country] += filtered.length;
-    }
-  });
-  return Object.entries(countryMap)
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, count]) => ({ name, count }));
-}
+// ===== TIMELINE STATE =====
+let timelineStart, timelineEnd, timelineRange;
+let timelineMin, timelineMax;
 
-let activeCountry = null; // null = show all
-let activeSource = null;  // null = show all
-
-// ===== MAP INIT =====
-const map = L.map('map', {
-  center: [49.0, 32.0],
-  zoom: 6,
-  zoomControl: true,
-  attributionControl: true
+const allTimes = [];
+locations.forEach(loc => {
+  loc.articles.forEach(a => allTimes.push(a.time));
 });
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-  subdomains: 'abcd',
+if (allTimes.length > 0) {
+  timelineStart = Math.min(...allTimes.map(t => new Date(t).getTime()));
+  timelineEnd = Math.max(...allTimes.map(t => new Date(t).getTime()));
+} else {
+  timelineEnd = Date.now();
+  timelineStart = timelineEnd - 48 * 60 * 60 * 1000;
+}
+
+timelineRange = timelineEnd - timelineStart;
+timelineMin = timelineStart;
+timelineMax = timelineEnd;
+
+// ===== ACTIVE FILTERS =====
+let activeCountry = null;
+let activeSource = null;
+
+// ===== MAP SETUP =====
+const map = L.map('map').setView([50.0, 10.0], 4);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors',
   maxZoom: 19
 }).addTo(map);
 
-// ===== MARKERS =====
 const markerLayer = L.layerGroup().addTo(map);
 const labelLayer = L.layerGroup().addTo(map);
 let heatLayer = null;
@@ -560,15 +511,16 @@ function getSentiment(title) {
   const humanitarian = ['humanitarian', 'aid', 'refugee', 'civilian', 'evacuat', 'flee', 'shelter', 'food', 'hospital', 'school', 'children', 'crisis', 'stranded', 'rescue'];
   const economic = ['oil', 'price', 'energy', 'gas', 'trade', 'market', 'economy', 'shipping', 'tanker', 'LNG', 'supply', 'recession', 'surge', 'export', 'import', 'insurance'];
 
-  let scores = {escalation: 0, diplomacy: 0, humanitarian: 0, economic: 0};
-  escalation.forEach(w => { if (t.includes(w)) scores.escalation++; });
-  diplomacy.forEach(w => { if (t.includes(w)) scores.diplomacy++; });
-  humanitarian.forEach(w => { if (t.includes(w)) scores.humanitarian++; });
-  economic.forEach(w => { if (t.includes(w)) scores.economic++; });
+  const scores = {
+    escalation: escalation.filter(w => t.includes(w)).length,
+    diplomacy: diplomacy.filter(w => t.includes(w)).length,
+    humanitarian: humanitarian.filter(w => t.includes(w)).length,
+    economic: economic.filter(w => t.includes(w)).length
+  };
 
-  const max = Math.max(scores.escalation, scores.diplomacy, scores.humanitarian, scores.economic);
-  if (max === 0) return {type: 'escalation', label: ''};
-  if (scores.escalation === max) return {type: 'escalation', label: 'Conflict'};
+  const max = Math.max(...Object.values(scores));
+  if (max === 0) return {type: 'escalation', label: 'Military'};
+  if (scores.escalation === max) return {type: 'escalation', label: 'Military'};
   if (scores.diplomacy === max) return {type: 'diplomacy', label: 'Diplomacy'};
   if (scores.humanitarian === max) return {type: 'humanitarian', label: 'Humanitarian'};
   return {type: 'economic', label: 'Economic'};
@@ -592,82 +544,85 @@ function renderMarkers() {
   // Get search text for filtering
   const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
 
-  locations.forEach(loc => {
-    if (activeCountry && loc.country !== activeCountry) return;
-
-    // Filter articles by time, source, and search text
-    const visibleArticles = loc.articles.filter(a => {
-      const t = new Date(a.time).getTime();
-      if (t < timelineMin || t > timelineMax) return false;
-      if (activeSource && a.source !== activeSource) return false;
-      if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
-      return true;
-    });
-    if (visibleArticles.length === 0) return;
-
-    const count = visibleArticles.length;
-    const r = count <= 1 ? 6 : count <= 2 ? 8 : count <= 4 ? 11 : 15;
-    const col = catColors[loc.category] || "#c0392b";
-
-    const marker = L.circleMarker([loc.lat, loc.lng], {
-      radius: r,
-      fillColor: col,
-      color: "#fff",
-      weight: 2,
-      opacity: 1,
-      fillOpacity: 0.85
-    }).addTo(markerLayer);
-
-    if (count >= 3) {
-      L.marker([loc.lat, loc.lng], {
-        icon: L.divIcon({
-          className: 'city-label',
-          html: '<span style="font-size:11px;font-weight:700;color:#1a1a1a;text-shadow:1px 1px 2px #fff,-1px -1px 2px #fff,1px -1px 2px #fff,-1px 1px 2px #fff,0 0 6px #fff;white-space:nowrap;pointer-events:none;">' + loc.name + '</span>',
-          iconSize: [0, 0],
-          iconAnchor: [-r - 4, 5]
-        })
-      }).addTo(labelLayer);
-    }
-
-    marker.bindPopup(
-      '<div class="popup-title">' + loc.name + '</div>' +
-      '<div class="popup-country">' + loc.country + '</div>' +
-      '<div class="popup-count">' + count + ' article' + (count > 1 ? 's' : '') + ' — ' + catLabels[loc.category] + '</div>' +
-      '<div class="popup-link" onclick="scrollToLocation(\'' + loc.name + '\')">View articles →</div>'
-    );
-
-    marker.on('click', () => scrollToLocation(loc.name));
-  });
-
-  // Heatmap rendering
-  if (currentView === 'heat') {
-    markerLayer.clearLayers();
-    labelLayer.clearLayers();
-    const heatPoints = [];
+  if (currentView === 'pins') {
     locations.forEach(loc => {
+      // Apply filters
+      let filtered = loc.articles;
       if (activeCountry && loc.country !== activeCountry) return;
-      const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
-      const visibleArticles = loc.articles.filter(a => {
+      if (activeSource) filtered = filtered.filter(a => a.source === activeSource);
+      if (searchText) filtered = filtered.filter(a => a.title.toLowerCase().includes(searchText));
+      filtered = filtered.filter(a => {
         const t = new Date(a.time).getTime();
-        if (t < timelineMin || t > timelineMax) return false;
-        if (activeSource && a.source !== activeSource) return false;
-        if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
-        return true;
+        return t >= timelineMin && t <= timelineMax;
       });
-      if (visibleArticles.length > 0) {
-        heatPoints.push([loc.lat, loc.lng, visibleArticles.length * 0.5]);
+
+      if (filtered.length === 0) return;
+
+      const col = catColors[loc.category] || "#c0392b";
+      const size = 8 + Math.min(filtered.length, 20) * 1.5;
+
+      const circle = L.circleMarker([loc.lat, loc.lng], {
+        radius: size,
+        fillColor: col,
+        color: col,
+        weight: 0,
+        opacity: 0.8,
+        fillOpacity: 0.7
+      }).addTo(markerLayer);
+
+      const popupHtml = '<div class="popup-title">' + loc.name + '</div>' +
+        '<div class="popup-country">' + loc.country + '</div>' +
+        '<div class="popup-count">' + filtered.length + ' article' + (filtered.length !== 1 ? 's' : '') + '</div>' +
+        '<span class="popup-link" onclick="scrollToLocation(\'' + loc.name + '\')">View articles →</span>';
+
+      circle.bindPopup(popupHtml, {maxWidth: 280});
+    });
+  } else if (currentView === 'heat') {
+    const heatData = [];
+    locations.forEach(loc => {
+      let filtered = loc.articles;
+      if (activeCountry && loc.country !== activeCountry) return;
+      if (activeSource) filtered = filtered.filter(a => a.source === activeSource);
+      if (searchText) filtered = filtered.filter(a => a.title.toLowerCase().includes(searchText));
+      filtered = filtered.filter(a => {
+        const t = new Date(a.time).getTime();
+        return t >= timelineMin && t <= timelineMax;
+      });
+
+      if (filtered.length === 0) return;
+      for (let i = 0; i < filtered.length; i++) {
+        heatData.push([loc.lat, loc.lng, 0.5]);
       }
     });
-    if (heatPoints.length > 0) {
-      heatLayer = L.heatLayer(heatPoints, {
-        radius: 35,
-        blur: 25,
-        maxZoom: 10,
-        max: 20,
-        gradient: {0.2: '#fee', 0.4: '#fc8', 0.6: '#f86', 0.8: '#e44', 1.0: '#a00'}
+
+    if (heatData.length > 0) {
+      heatLayer = L.heatLayer(heatData, {
+        radius: 50,
+        blur: 15,
+        maxZoom: 1,
+        gradient: {0.4: '#27ae60', 0.65: '#f39c12', 1: '#e74c3c'}
       }).addTo(map);
     }
   }
+}
+
+// ===== DERIVE COUNTRIES (ordered by article count) =====
+function getCountries(timeFilter) {
+  const countryMap = {};
+  locations.forEach(loc => {
+    const filtered = timeFilter ? loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      return t >= timelineMin && t <= timelineMax;
+    }) : loc.articles;
+
+    if (filtered.length === 0) return;
+    if (!countryMap[loc.country]) countryMap[loc.country] = 0;
+    countryMap[loc.country] += filtered.length;
+  });
+
+  return Object.entries(countryMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, count]) => ({ name, count }));
 }
 
 // ===== DERIVE SOURCES (ordered by article count) =====
@@ -678,10 +633,10 @@ function getSources(countryFilter, timeFilter) {
     loc.articles.forEach(a => {
       const t = new Date(a.time).getTime();
       if (timeFilter && (t < timelineMin || t > timelineMax)) return;
-      if (!sourceMap[a.source]) sourceMap[a.source] = 0;
-      sourceMap[a.source]++;
+      sourceMap[a.source] = (sourceMap[a.source] || 0) + 1;
     });
   });
+
   return Object.entries(sourceMap)
     .sort((a, b) => b[1] - a[1])
     .map(([name, count]) => ({ name, count }));
@@ -694,26 +649,21 @@ function renderFilterBars() {
 
   const countries = getCountries(true);
   let totalAll = 0;
-  locations.forEach(loc => {
-    loc.articles.forEach(a => {
-      const t = new Date(a.time).getTime();
-      if (t >= timelineMin && t <= timelineMax) totalAll++;
-    });
-  });
-
-  let cHtml = '<option value="">All countries (' + totalAll + ')</option>';
+  let cHtml = '<option value="">All countries</option>';
   countries.forEach(c => {
-    cHtml += '<option value="' + c.name + '"' + (activeCountry === c.name ? ' selected' : '') + '>' + c.name + ' (' + c.count + ')</option>';
+    cHtml += '<option value="' + c.name + '">' + c.name + ' (' + c.count + ')</option>';
+    totalAll += c.count;
   });
   cSelect.innerHTML = cHtml;
+  if (activeCountry) cSelect.value = activeCountry;
 
   const sources = getSources(activeCountry, true);
-  const sourceTotal = sources.reduce((s, x) => s + x.count, 0);
-  let sHtml = '<option value="">All sources (' + sourceTotal + ')</option>';
+  let sHtml = '<option value="">All sources</option>';
   sources.forEach(s => {
-    sHtml += '<option value="' + s.name + '"' + (activeSource === s.name ? ' selected' : '') + '>' + s.name + ' (' + s.count + ')</option>';
+    sHtml += '<option value="' + s.name + '">' + s.name + ' (' + s.count + ')</option>';
   });
   sSelect.innerHTML = sHtml;
+  if (activeSource) sSelect.value = activeSource;
 }
 
 // ===== SIDEBAR — grouped by country, filtered by source =====
@@ -724,18 +674,22 @@ function renderSidebar() {
   // Get search text for filtering
   const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
 
-  // Apply country filter
-  let filtered = activeCountry ? locations.filter(l => l.country === activeCountry) : [...locations];
+  // Build filtered location list
+  let filtered = locations
+    .map(loc => {
+      const filtered_articles = loc.articles.filter(a => {
+        const t = new Date(a.time).getTime();
+        return t >= timelineMin && t <= timelineMax;
+      });
+      if (filtered_articles.length === 0) return null;
+      return { ...loc, articles: filtered_articles };
+    })
+    .filter(Boolean);
 
-  // Apply time filter
-  filtered = filtered.map(loc => {
-    const filtered_articles = loc.articles.filter(a => {
-      const t = new Date(a.time).getTime();
-      return t >= timelineMin && t <= timelineMax;
-    });
-    if (filtered_articles.length === 0) return null;
-    return { ...loc, articles: filtered_articles };
-  }).filter(Boolean);
+  // Apply country filter: only show articles from that country
+  if (activeCountry) {
+    filtered = filtered.filter(loc => loc.country === activeCountry);
+  }
 
   // Apply source filter: only show articles from that source
   if (activeSource) {
@@ -971,7 +925,7 @@ function applyFilters() {
 
 function fitMapToMarkers() {
   if (!activeCountry && !activeSource) {
-    map.flyTo([49.0, 32.0], 6, { duration: 0.6 });
+    map.flyTo([50.0, 10.0], 4, { duration: 0.6 });
     return;
   }
   const layers = [];
