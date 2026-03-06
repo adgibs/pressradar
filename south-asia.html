@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="refresh" content="900">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PressRadar.me — South Asia News Map</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js">
+// Count articles and show badge on active tab
+(function() {
+  let total = 0;
+  locations.forEach(loc => { total += loc.articles.length; });
+  const activeTab = document.querySelector('.region-tab.active');
+  if (activeTab) {
+    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
+  }
+  // Update subtitle count
+  const countEl = document.getElementById('total-count');
+  if (countEl) countEl.textContent = total;
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js">
+// Count articles and show badge on active tab
+(function() {
+  let total = 0;
+  locations.forEach(loc => { total += loc.articles.length; });
+  const activeTab = document.querySelector('.region-tab.active');
+  if (activeTab) {
+    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
+  }
+  // Update subtitle count
+  const countEl = document.getElementById('total-count');
+  if (countEl) countEl.textContent = total;
+})();
+</script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #222; }
@@ -337,6 +364,60 @@
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
     #map { height: 50vh; }
+  }
+
+  /* Breaking news - articles < 1 hour old */
+  .breaking-card {
+    background: #fff8f0 !important;
+    border-left-width: 4px !important;
+    animation: breakingPulse 3s ease-in-out infinite;
+  }
+  @keyframes breakingPulse {
+    0%, 100% { background: #fff8f0; }
+    50% { background: #fff3e6; }
+  }
+  .breaking-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #e74c3c;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+    animation: dotPulse 1.5s ease-in-out infinite;
+  }
+  @keyframes dotPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .breaking-label {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .tab-badge {
+    display: inline-block;
+    background: #e0e0e0;
+    color: #555;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 8px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .region-tab.active .tab-badge {
+    background: rgba(255,255,255,0.3);
+    color: #fff;
   }
 </style>
 </head>
@@ -844,13 +925,15 @@ function renderSidebar() {
         '</div>' +
         '<div class="location-articles">' +
           loc.articles.map(a => {
-            const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
-            const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
+            const articleAge = Date.now() - new Date(a.time).getTime();
+            const isBreaking = articleAge < 1 * 60 * 60 * 1000;
+            const isNew = articleAge < 2 * 60 * 60 * 1000;
+            const newBadge = isBreaking ? '<span class="breaking-label">BREAKING</span>' : (isNew ? '<span class="new-badge">NEW</span>' : '');
             const sentiment = getSentiment(a.title);
             const pw = isPaywall(a.source);
             const pwBadge = pw ? '<span class="paywall-badge" title="Paywall">💰</span>' : '';
-            return '<div class="article-card" style="border-left-color:' + col + '">' +
-              '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
+            return '<div class="article-card' + (isBreaking ? ' breaking-card' : '') + '" style="border-left-color:' + col + '">' +
+              '<div class="article-title">' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
@@ -1079,6 +1162,19 @@ if (allTimes.length) {
   const newest = new Date(Math.max(...allTimes));
   document.getElementById('last-updated').textContent = formatTime(newest.toISOString()) + ' UTC';
 }
+
+// Count articles and show badge on active tab
+(function() {
+  let total = 0;
+  locations.forEach(loc => { total += loc.articles.length; });
+  const activeTab = document.querySelector('.region-tab.active');
+  if (activeTab) {
+    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
+  }
+  // Update subtitle count
+  const countEl = document.getElementById('total-count');
+  if (countEl) countEl.textContent = total;
+})();
 </script>
 </body>
 </html>
