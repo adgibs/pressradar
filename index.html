@@ -328,6 +328,11 @@
   .sentiment-economic { background: #3498db; }
   .sentiment-label { font-size: 10px; color: #888; margin-left: 4px; }
 
+  /* Paywall indicator */
+  .paywall-badge { display: inline-block; font-size: 10px; color: #e67e22; margin-left: 4px; vertical-align: middle; title: "Paywall"; }
+  .paywall-filter { display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 12px; color: #666; cursor: pointer; white-space: nowrap; }
+  .paywall-filter input { cursor: pointer; accent-color: #e74c3c; }
+
   @media (max-width: 800px) {
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
@@ -340,9 +345,9 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:49 UTC, 6 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:08 UTC, 5 Mar 2026</span></div>
   </div>
-  <div class="date-badge">6 March 2026</div>
+  <div class="date-badge">5 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -395,6 +400,7 @@
           <select id="source-select" onchange="filterSource(this.value || null)">
             <option value="">All sources</option>
           </select>
+          <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
         </div>
       </div>
 
@@ -420,6 +426,14 @@
 </div>
 
 <script>
+// ===== PAYWALL SOURCES =====
+const PAYWALL_SOURCES = new Set([
+  "New York Times", "Washington Post", "The Times", "The Telegraph",
+  "Financial Times", "Wall Street Journal", "The Economist",
+  "Haaretz", "The Athletic", "Barron's", "Bloomberg"
+]);
+function isPaywall(source) { return PAYWALL_SOURCES.has(source); }
+
 // ===== HELPER: Format ISO time to readable string =====
 function formatTime(isoString) {
   const d = new Date(isoString);
@@ -440,11 +454,6 @@ const locations = [
     articles: [
       { title: "Iranian missile shrapnel starts fire in central Israel, no injuries reported", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889036", time: "2026-03-05T23:54:25Z" },
       { title: "Trump: Iranian diplomats should seek asylum", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889035", time: "2026-03-05T23:47:42Z" },
-      { title: "Tucker Carlson’s latest baseless conspiracy blames Iran war on Chabad movement", source: "Times of Israel", url: "https://www.timesofisrael.com/tucker-carlsons-latest-baseless-conspiracy-blames-iran-war-on-chabad-movement/", time: "2026-03-05T23:29:58Z" },
-      { title: "Suspected Iranian missile debris ignites fires in central Israel", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/5/suspected-iranian-missile-debris-ignites-fires-in-central-israel?traffic_source=rss", time: "2026-03-05T23:17:34Z" },
-      { title: "Canada's Mark Carney under fire as ‘all over the place’ on Iran, risking wider US rift", source: "Fox News", url: "https://www.foxnews.com/world/canadas-mark-carney-under-fire-all-over-place-iran-risking-wider-us-rift", time: "2026-03-05T23:16:49Z" },
-      { title: "Iran's foreign minister denies seeking war with its neighbors", source: "NBC News", url: "https://www.nbcnews.com/world/iran/irans-foreign-minister-denies-seeking-war-neighbors-rcna261954", time: "2026-03-05T23:06:50Z" },
-      { title: "Trump offers immunity to IRGC, Iranian police who ‘lay down their arms’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/5/trump-offers-immunity-to-irgc-iranian-police-who-lay-down-their?traffic_source=rss", time: "2026-03-05T23:06:36Z" },
       { title: "Iran delays naming a new leader out of security concerns, officials say.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/05/world/iran-war-israel-trump/iran-delays-naming-a-new-leader-out-of-security-concerns-officials-say", time: "2026-03-05T23:04:15Z" },
       { title: "'We have only just begun to fight,' says Hegseth on Iran war", source: "NBC News", url: "https://www.nbcnews.com/video/-we-have-only-just-begun-to-fight-says-hegseth-on-iran-war-258787397678", time: "2026-03-05T22:54:19Z" },
       { title: "Israel Begins Assault in Southern Beirut, Raising Fears of Wider Incursion", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/middleeast/israel-evacuation-lebanon-iran-trump.html", time: "2026-03-05T22:51:11Z" },
@@ -945,14 +954,6 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
-      { title: "Netanyahu deserves credit for Israel’s success against Iran, but accountability remains - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889039", time: "2026-03-06T06:00:00Z" },
-      { title: "GOP senator helps forcibly remove protester shouting ‘no one wants to fight for Israel’", source: "Times of Israel", url: "https://www.timesofisrael.com/gop-senator-helps-forcibly-remove-protester-shouting-no-one-wants-to-fight-for-israel/", time: "2026-03-06T04:44:44Z" },
-      { title: "Thousands flee Beirut after Israeli evacuation order", source: "NBC News", url: "https://www.nbcnews.com/video/thousands-flee-beirut-after-israeli-evacuation-order-258800709548", time: "2026-03-06T02:46:23Z" },
-      { title: "In shadow of war, Israel’s Winter Paralympian is ready to ski – but not on Shabbat", source: "Times of Israel", url: "https://www.timesofisrael.com/in-shadow-of-war-israels-winter-paralympian-is-ready-to-ski-but-not-on-shabbat/", time: "2026-03-06T02:07:58Z" },
-      { title: "Novelty no more, Team Israel goes to bat for local game with return to World Baseball Classic", source: "Times of Israel", url: "https://www.timesofisrael.com/novelty-no-more-team-israel-goes-to-bat-for-local-game-with-return-to-world-baseball-classic/", time: "2026-03-06T01:22:35Z" },
-      { title: "Despite war, Israel releases ‘Michelle,’ its 2026 Eurovision song", source: "Times of Israel", url: "https://www.timesofisrael.com/despite-war-israel-releases-michelle-its-2026-eurovision-song/", time: "2026-03-06T00:42:00Z" },
-      { title: "Anti-Zionist activists stage blood libel display near White House", source: "Times of Israel", url: "https://www.timesofisrael.com/anti-zionist-activists-stage-blood-libel-display-near-white-house/", time: "2026-03-06T00:19:52Z" },
-      { title: "Trump fires homeland security chief Kristi Noem, taps Oklahoma senator for job", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-fires-homeland-security-chief-kristi-noem-taps-oklahoma-senator-for-job/", time: "2026-03-05T23:53:04Z" },
       { title: "IDF begins strikes on Hezbollah infrastructure in Beirut", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889034", time: "2026-03-05T23:19:56Z" },
       { title: "WATCH: IDF eliminates 'several operatives' as IAF strikes 200 targets across Iran", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889029", time: "2026-03-05T22:31:27Z" },
       { title: "How Israel's cyber chief is navigating through the dystopian cyber-AI period - exclusive", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-889015", time: "2026-03-05T21:23:51Z" },
@@ -1025,9 +1026,6 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "strikes",
     articles: [
-      { title: "Israel Pounds Southern Beirut, a Hezbollah Stronghold", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/middleeast/israel-bombs-beirut.html", time: "2026-03-06T02:13:46Z" },
-      { title: "Officer seriously wounded in Lebanon as strikes pound Hezbollah bastion near Beirut", source: "Times of Israel", url: "https://www.timesofisrael.com/officer-seriously-wounded-in-lebanon-as-strikes-pound-hezbollah-bastion-near-beirut/", time: "2026-03-05T23:52:48Z" },
-      { title: "'You brought hell on yourselves': Panic and fear as Israeli rhetoric raises spectre of all-out war", source: "Sky News", url: "https://news.sky.com/story/panic-on-the-streets-of-beirut-as-israeli-rhetoric-sparks-fears-of-all-out-war-13515928", time: "2026-03-05T23:18:00Z" },
       { title: "Israel strikes Beirut’s southern suburbs after issuing a blanket evacuation order", source: "France 24", url: "https://www.france24.com/en/israel-strikes-beirut-s-southern-suburbs-after-issuing-a-blanket-evacuation-order", time: "2026-03-05T22:20:11Z" },
       { title: "Why has Hezbollah joined Middle East war?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/3/5/why-has-hezbollah-joined-middle-east-war?traffic_source=rss", time: "2026-03-05T21:28:15Z" },
       { title: "Israel Pushes Farther Into Lebanon, and Readies for More", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/middleeast/israel-lebanon-hezbollah.html", time: "2026-03-05T19:46:50Z" },
@@ -1120,7 +1118,6 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
-      { title: "In safety precaution, Israel to bar Friday Ramadan prayers at Temple Mount amid Iran war", source: "Times of Israel", url: "https://www.timesofisrael.com/in-safety-precaution-israel-to-bar-friday-ramadan-prayers-at-temple-mount-amid-iran-war/", time: "2026-03-06T01:37:15Z" },
       { title: "WATCH: 'Michelle,' Israel’s Eurovision song, revealed in a performance by Noam Bettan", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-889033", time: "2026-03-05T22:58:17Z" },
       { title: "Israeli army announces start of airstrikes on southern Beirut suburb", source: "France 24", url: "https://www.france24.com/en/israeli-army-announces-start-of-airstrikes-on-southern-beirut-suburb", time: "2026-03-05T21:30:31Z" },
       { title: "Israel can topple Iranian regime, war may last a few weeks, Energy Minister Eli Cohen tells 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889016", time: "2026-03-05T21:24:50Z" },
@@ -1144,7 +1141,6 @@ const locations = [
     lat: 25.2048, lng: 55.2708,
     category: "strikes",
     articles: [
-      { title: "Editor's Notes: Iran handed its neighbors a lesson they didn’t ask for and cannot unlearn", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889031", time: "2026-03-06T06:00:00Z" },
       { title: "Desperate travelers wait as Dubai resumes a few flights.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/05/world/iran-war-israel-trump/desperate-travelers-wait-as-dubai-resumes-a-few-flights", time: "2026-03-05T20:33:49Z" },
       { title: "Qatar says 14 ballistic missiles and 4 drones intercepted", source: "France 24", url: "https://www.france24.com/en/qatar-says-14-ballistic-missiles-and-4-drones-intercepted", time: "2026-03-05T19:34:49Z" },
       { title: "UAE air defense actively intercepting Iranian missiles and drones", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-888919", time: "2026-03-05T11:52:20Z" },
@@ -1238,7 +1234,6 @@ const locations = [
     lat: 29.3759, lng: 47.9774,
     category: "strikes",
     articles: [
-      { title: "Video shows projectile exploding near Ali al-Salem Air Base in Kuwait", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/6/video-shows-projectile-exploding-near-ali-al-salem-air-base-in-kuwait?traffic_source=rss", time: "2026-03-06T01:32:29Z" },
       { title: "The Pentagon has now ID'd all 6 U.S. soldiers who died in a Kuwait attack", source: "NPR", url: "https://www.npr.org/2026/03/04/g-s1-112474/soldiers-killed-iran-war-kuwait-army-reserve-iowa-amor-coady-khork-tietjens", time: "2026-03-04T15:13:39Z" },
       { title: "Army reservists killed in Kuwait remembered as loving parents, dedicated students", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T09:00:54Z" },
       { title: "Videos appear to show the U.S. fighter jets being shot down over Kuwait", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T02:22:56Z" },
@@ -1285,7 +1280,6 @@ const locations = [
     lat: 23.588, lng: 58.3829,
     category: "evacuation",
     articles: [
-      { title: "Private flights account for 30% of departures from Oman airport as wealthy evacuate Middle East", source: "Fox News", url: "https://www.foxnews.com/world/private-flights-account-departures-oman-airport-wealthy-evacuate-middle-east", time: "2026-03-06T02:14:58Z" },
       { title: "The Omani navy said Wednesday that it had rescued the 24-person crew of a Malta-flagged cargo...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T17:03:32Z" },
     ]
   },
@@ -1419,12 +1413,14 @@ function renderMarkers() {
   locations.forEach(loc => {
     if (activeCountry && loc.country !== activeCountry) return;
 
-    // Filter articles by time, source, and search text
+    // Filter articles by time, source, search text, and paywall
+    const hidePaywall = document.getElementById('hide-paywall')?.checked;
     const visibleArticles = loc.articles.filter(a => {
       const t = new Date(a.time).getTime();
       if (t < timelineMin || t > timelineMax) return false;
       if (activeSource && a.source !== activeSource) return false;
       if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+      if (hidePaywall && isPaywall(a.source)) return false;
       return true;
     });
     if (visibleArticles.length === 0) return;
@@ -1471,11 +1467,13 @@ function renderMarkers() {
     locations.forEach(loc => {
       if (activeCountry && loc.country !== activeCountry) return;
       const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+      const hidePaywall = document.getElementById('hide-paywall')?.checked;
       const visibleArticles = loc.articles.filter(a => {
         const t = new Date(a.time).getTime();
         if (t < timelineMin || t > timelineMax) return false;
         if (activeSource && a.source !== activeSource) return false;
         if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+        if (hidePaywall && isPaywall(a.source)) return false;
         return true;
       });
       if (visibleArticles.length > 0) {
@@ -1579,6 +1577,16 @@ function renderSidebar() {
     }).filter(Boolean);
   }
 
+  // Apply paywall filter
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
+  if (hidePaywall) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => !isPaywall(a.source));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
   const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
   const totalLocs = filtered.length;
   countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
@@ -1621,13 +1629,15 @@ function renderSidebar() {
             const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
             const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
             const sentiment = getSentiment(a.title);
+            const pw = isPaywall(a.source);
+            const pwBadge = pw ? '<span class="paywall-badge" title="Paywall">💰</span>' : '';
             return '<div class="article-card" style="border-left-color:' + col + '">' +
               '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
-                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
+                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
               '</div>' +
-              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
+              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →' + (pw ? ' 💰' : '') + '</a>' +
             '</div>';
           }).join('') +
         '</div>' +

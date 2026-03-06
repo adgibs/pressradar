@@ -328,6 +328,11 @@
   .sentiment-economic { background: #3498db; }
   .sentiment-label { font-size: 10px; color: #888; margin-left: 4px; }
 
+  /* Paywall indicator */
+  .paywall-badge { display: inline-block; font-size: 10px; color: #e67e22; margin-left: 4px; vertical-align: middle; title: "Paywall"; }
+  .paywall-filter { display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 12px; color: #666; cursor: pointer; white-space: nowrap; }
+  .paywall-filter input { cursor: pointer; accent-color: #e74c3c; }
+
   @media (max-width: 800px) {
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
@@ -340,9 +345,9 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:49 UTC, 6 Mar 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:08 UTC, 5 Mar 2026</span></div>
   </div>
-  <div class="date-badge">6 March 2026</div>
+  <div class="date-badge">5 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -395,6 +400,7 @@
           <select id="source-select" onchange="filterSource(this.value || null)">
             <option value="">All sources</option>
           </select>
+          <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
         </div>
       </div>
 
@@ -420,6 +426,14 @@
 </div>
 
 <script>
+// ===== PAYWALL SOURCES =====
+const PAYWALL_SOURCES = new Set([
+  "New York Times", "Washington Post", "The Times", "The Telegraph",
+  "Financial Times", "Wall Street Journal", "The Economist",
+  "Haaretz", "The Athletic", "Barron's", "Bloomberg"
+]);
+function isPaywall(source) { return PAYWALL_SOURCES.has(source); }
+
 // ===== HELPER: Format ISO time to readable string =====
 function formatTime(isoString) {
   const d = new Date(isoString);
@@ -438,9 +452,6 @@ const locations = [
     lat: 39.9042, lng: 116.4074,
     category: "military",
     articles: [
-      { title: "The Good Times Are Over in China’s Liquor Capital", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/maotai-china-liquor-capital.html", time: "2026-03-06T05:00:14Z" },
-      { title: "China lowers growth forecast, boosts military, citing ‘grave’ environment", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/05/china-xi-economy-military-planning/", time: "2026-03-06T00:38:52Z" },
-      { title: "'What is the game plan?': The Iran war is unsettling China and its ambitions", source: "BBC News", url: "https://www.bbc.com/news/articles/c2044vzrdpzo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T23:13:57Z" },
       { title: "Is China training an army of robots? Nope, it’s an AI-generated video", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260305-china-army-robots-video-artificial-intelligence", time: "2026-03-05T18:46:16Z" },
       { title: "As Trump unleashes chaos, China has a message it wants the world to hear", source: "Sky News", url: "https://news.sky.com/story/as-trump-unleashes-chaos-china-has-a-message-it-wants-to-the-world-to-hear-13515607", time: "2026-03-05T12:21:00Z" },
       { title: "Trump's China summit with Xi Jinping just got a lot more complicated", source: "NBC News", url: "https://www.nbcnews.com/world/asia/trumps-china-summit-xi-jinping-just-got-lot-complicated-rcna261453", time: "2026-03-05T10:00:42Z" },
@@ -495,22 +506,21 @@ const locations = [
     ]
   },
   {
-    name: "Hong Kong", country: "China",
-    lat: 22.3193, lng: 114.1694,
-    category: "trade",
-    articles: [
-      { title: "Jimmy Lai will not appeal conviction, paving way for political negotiations over release", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/jimmy-lai-will-not-appeal-conviction-paving-way-for-political-neogtiations-over-release", time: "2026-03-06T04:09:47Z" },
-      { title: "Jimmy Lai and the rule of law in Hong Kong | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/jimmy-lai-and-the-rule-of-law-in-hong-kong", time: "2026-03-05T17:08:47Z" },
-      { title: "China’s Two Sessions: what are the meetings and why do they matter?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer", time: "2026-03-03T23:50:15Z" },
-    ]
-  },
-  {
     name: "Pyongyang", country: "North Korea",
     lat: 39.0392, lng: 125.7625,
     category: "military",
     articles: [
       { title: "North Korea’s Kim oversees cruise missile tests from new naval destroyer", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/north-koreas-kim-oversees-cruise-missile-tests-from-new-naval-destroyer?traffic_source=rss", time: "2026-03-05T04:26:41Z" },
       { title: "Kim Jong Un inspects new destroyer and pledges naval nuclear expansion", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260305-kim-jong-un-inspects-new-destroyer-and-pledges-naval-nuclear-expansion", time: "2026-03-05T00:14:19Z" },
+    ]
+  },
+  {
+    name: "Hong Kong", country: "China",
+    lat: 22.3193, lng: 114.1694,
+    category: "trade",
+    articles: [
+      { title: "Jimmy Lai and the rule of law in Hong Kong | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/jimmy-lai-and-the-rule-of-law-in-hong-kong", time: "2026-03-05T17:08:47Z" },
+      { title: "China’s Two Sessions: what are the meetings and why do they matter?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer", time: "2026-03-03T23:50:15Z" },
     ]
   },
   {
@@ -615,6 +625,7 @@ function renderMarkers() {
 
   // Get search text for filtering
   const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
 
   if (currentView === 'pins') {
     locations.forEach(loc => {
@@ -623,6 +634,7 @@ function renderMarkers() {
       if (activeCountry && loc.country !== activeCountry) return;
       if (activeSource) filtered = filtered.filter(a => a.source === activeSource);
       if (searchText) filtered = filtered.filter(a => a.title.toLowerCase().includes(searchText));
+      if (hidePaywall) filtered = filtered.filter(a => !isPaywall(a.source));
       filtered = filtered.filter(a => {
         const t = new Date(a.time).getTime();
         return t >= timelineMin && t <= timelineMax;
@@ -656,6 +668,7 @@ function renderMarkers() {
       if (activeCountry && loc.country !== activeCountry) return;
       if (activeSource) filtered = filtered.filter(a => a.source === activeSource);
       if (searchText) filtered = filtered.filter(a => a.title.toLowerCase().includes(searchText));
+      if (hidePaywall) filtered = filtered.filter(a => !isPaywall(a.source));
       filtered = filtered.filter(a => {
         const t = new Date(a.time).getTime();
         return t >= timelineMin && t <= timelineMax;
@@ -781,6 +794,16 @@ function renderSidebar() {
     }).filter(Boolean);
   }
 
+  // Apply paywall filter
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
+  if (hidePaywall) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => !isPaywall(a.source));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
   const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
   const totalLocs = filtered.length;
   countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
@@ -823,13 +846,15 @@ function renderSidebar() {
             const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
             const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
             const sentiment = getSentiment(a.title);
+            const pw = isPaywall(a.source);
+            const pwBadge = pw ? '<span class="paywall-badge" title="Paywall">💰</span>' : '';
             return '<div class="article-card" style="border-left-color:' + col + '">' +
               '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
-                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
+                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
               '</div>' +
-              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
+              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →' + (pw ? ' 💰' : '') + '</a>' +
             '</div>';
           }).join('') +
         '</div>' +

@@ -51,6 +51,19 @@ ME_KEYWORDS = [
     "akrotiri", "cyprus", "diego garcia", "epic fury", "roaring lion",
     "oil price", "opec", "persian gulf", "gulf state",
     "starmer", "raf base", "british base",
+    "mashhad", "tabriz", "bushehr", "natanz", "ahvaz", "kish island",
+    "mehrabad", "abadan", "kharg island", "parchin", "fordow",
+    "aleppo", "homs", "latakia", "idlib", "deir ez-zor",
+    "mosul", "baghdad", "basra", "kirkuk", "tikrit",
+    "aden", "hodeidah", "marib",
+    "ramallah", "nablus", "jenin", "khan younis", "jabalia",
+    "dahiyeh", "sidon", "tripoli",
+    "jeddah", "neom", "dammam", "dhahran",
+    "al udeid", "camp arifjan", "incirlik",
+    "suez canal", "bab el-mandeb", "indian ocean", "mediterranean",
+    "pentagon", "hegseth", "rubio", "vance", "congress",
+    "turkey", "ankara", "nato",
+    "pakistan", "sri lanka",
 ]
 
 # Map keywords to locations
@@ -116,22 +129,111 @@ LOCATION_MAP = {
     "mideast": {"name": "Tehran", "country": "Iran", "lat": 35.6892, "lng": 51.389, "category": "strikes"},
     "epic fury": {"name": "Tehran", "country": "Iran", "lat": 35.6892, "lng": 51.389, "category": "strikes"},
     "roaring lion": {"name": "Tel Aviv", "country": "Israel", "lat": 32.0853, "lng": 34.7818, "category": "strikes"},
+    # Iranian cities
+    "mashhad": {"name": "Mashhad", "country": "Iran", "lat": 36.2605, "lng": 59.6168, "category": "strikes"},
+    "tabriz": {"name": "Tabriz", "country": "Iran", "lat": 38.0800, "lng": 46.2919, "category": "strikes"},
+    "bushehr": {"name": "Bushehr", "country": "Iran", "lat": 28.9234, "lng": 50.8203, "category": "energy"},
+    "natanz": {"name": "Natanz", "country": "Iran", "lat": 33.5131, "lng": 51.9164, "category": "strikes"},
+    "ahvaz": {"name": "Ahvaz", "country": "Iran", "lat": 31.3183, "lng": 48.6706, "category": "strikes"},
+    "kish island": {"name": "Kish Island", "country": "Iran", "lat": 26.5579, "lng": 53.9804, "category": "energy"},
+    "mehrabad": {"name": "Tehran", "country": "Iran", "lat": 35.6892, "lng": 51.389, "category": "strikes"},
+    "abadan": {"name": "Abadan", "country": "Iran", "lat": 30.3392, "lng": 48.3043, "category": "energy"},
+    "kharg island": {"name": "Kharg Island", "country": "Iran", "lat": 29.2333, "lng": 50.3167, "category": "energy"},
+    "parchin": {"name": "Tehran", "country": "Iran", "lat": 35.6892, "lng": 51.389, "category": "strikes"},
+    "fordow": {"name": "Qom", "country": "Iran", "lat": 34.6401, "lng": 50.8764, "category": "strikes"},
+    # Syrian cities
+    "aleppo": {"name": "Aleppo", "country": "Syria", "lat": 36.2021, "lng": 37.1343, "category": "strikes"},
+    "homs": {"name": "Homs", "country": "Syria", "lat": 34.7324, "lng": 36.7137, "category": "strikes"},
+    "latakia": {"name": "Latakia", "country": "Syria", "lat": 35.5317, "lng": 35.7918, "category": "strikes"},
+    "idlib": {"name": "Idlib", "country": "Syria", "lat": 35.9306, "lng": 36.6339, "category": "humanitarian"},
+    "deir ez-zor": {"name": "Deir ez-Zor", "country": "Syria", "lat": 35.3359, "lng": 40.1408, "category": "strikes"},
+    # Iraqi cities
+    "baghdad": {"name": "Baghdad", "country": "Iraq", "lat": 33.3152, "lng": 44.3661, "category": "strikes"},
+    "mosul": {"name": "Mosul", "country": "Iraq", "lat": 36.3350, "lng": 43.1189, "category": "strikes"},
+    "basra": {"name": "Basra", "country": "Iraq", "lat": 30.5085, "lng": 47.7804, "category": "energy"},
+    "kirkuk": {"name": "Kirkuk", "country": "Iraq", "lat": 35.4681, "lng": 44.3922, "category": "energy"},
+    "tikrit": {"name": "Tikrit", "country": "Iraq", "lat": 34.6137, "lng": 43.6792, "category": "strikes"},
+    # Yemeni cities
+    "aden": {"name": "Aden", "country": "Yemen", "lat": 12.7855, "lng": 45.0187, "category": "strikes"},
+    "hodeidah": {"name": "Hodeidah", "country": "Yemen", "lat": 14.7980, "lng": 42.9536, "category": "humanitarian"},
+    "marib": {"name": "Marib", "country": "Yemen", "lat": 15.4542, "lng": 45.3264, "category": "strikes"},
+    # Palestinian areas
+    "ramallah": {"name": "Ramallah", "country": "Palestine", "lat": 31.9038, "lng": 35.2034, "category": "humanitarian"},
+    "nablus": {"name": "Nablus", "country": "Palestine", "lat": 32.2211, "lng": 35.2544, "category": "humanitarian"},
+    "jenin": {"name": "Jenin", "country": "Palestine", "lat": 32.4609, "lng": 35.2999, "category": "humanitarian"},
+    "khan younis": {"name": "Khan Younis", "country": "Palestine", "lat": 31.3462, "lng": 34.3061, "category": "humanitarian"},
+    "jabalia": {"name": "Jabalia", "country": "Palestine", "lat": 31.5281, "lng": 34.4831, "category": "humanitarian"},
+    "hamas": {"name": "Gaza City", "country": "Palestine", "lat": 31.5017, "lng": 34.4668, "category": "strikes"},
+    # Lebanese cities
+    "dahiyeh": {"name": "Beirut (Dahiyeh)", "country": "Lebanon", "lat": 33.8547, "lng": 35.5022, "category": "strikes"},
+    "sidon": {"name": "Sidon", "country": "Lebanon", "lat": 33.5633, "lng": 35.3697, "category": "strikes"},
+    "tripoli": {"name": "Tripoli", "country": "Lebanon", "lat": 34.4367, "lng": 35.8497, "category": "humanitarian"},
+    # Saudi cities
+    "jeddah": {"name": "Jeddah", "country": "Saudi Arabia", "lat": 21.5433, "lng": 39.1728, "category": "energy"},
+    "neom": {"name": "NEOM", "country": "Saudi Arabia", "lat": 27.9500, "lng": 35.3000, "category": "energy"},
+    "dammam": {"name": "Dammam", "country": "Saudi Arabia", "lat": 26.3927, "lng": 49.9777, "category": "energy"},
+    "dhahran": {"name": "Dhahran", "country": "Saudi Arabia", "lat": 26.2361, "lng": 50.0393, "category": "energy"},
+    # Military bases
+    "al udeid": {"name": "Al Udeid Air Base", "country": "Qatar", "lat": 25.1173, "lng": 51.3150, "category": "strikes"},
+    "camp arifjan": {"name": "Camp Arifjan", "country": "Kuwait", "lat": 29.1228, "lng": 48.0766, "category": "strikes"},
+    "incirlik": {"name": "Incirlik Air Base", "country": "Turkey", "lat": 37.0020, "lng": 35.4259, "category": "strikes"},
+    # Geographic features
+    "suez canal": {"name": "Suez Canal", "country": "Egypt", "lat": 30.4550, "lng": 32.3500, "category": "energy"},
+    "bab el-mandeb": {"name": "Bab el-Mandeb", "country": "Yemen", "lat": 12.5833, "lng": 43.3333, "category": "energy"},
+    "indian ocean": {"name": "Indian Ocean", "country": "International", "lat": 0.0, "lng": 65.0, "category": "strikes"},
+    "mediterranean": {"name": "Eastern Mediterranean", "country": "International", "lat": 34.0, "lng": 33.0, "category": "strikes"},
+    # US/Western political figures → Washington DC
+    "pentagon": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    "hegseth": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    "rubio": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    "vance": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    "congress": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    "trump": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "strikes"},
+    # Other countries mentioned in ME context
+    "turkey": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "strikes"},
+    "ankara": {"name": "Ankara", "country": "Turkey", "lat": 39.9334, "lng": 32.8597, "category": "strikes"},
+    "nato": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "strikes"},
+    "pakistan": {"name": "Islamabad", "country": "Pakistan", "lat": 33.6844, "lng": 73.0479, "category": "evacuation"},
+    "sri lanka": {"name": "Colombo", "country": "Sri Lanka", "lat": 6.9271, "lng": 79.8612, "category": "strikes"},
 }
 
 # Priority order for location matching (more specific first)
 LOCATION_PRIORITY = [
-    "bandar abbas", "beqaa", "tyre", "akrotiri", "diego garcia",
-    "raf base", "british base", "strait of hormuz", "hormuz",
-    "west bank", "red sea", "oil price", "opec",
-    "isfahan", "shiraz", "qom", "tehran", "khamenei", "irgc",
+    # Most specific first
+    "al udeid", "camp arifjan", "incirlik", "diego garcia",
+    "bab el-mandeb", "suez canal", "strait of hormuz", "kharg island", "kish island",
+    "dahiyeh", "mehrabad", "parchin", "fordow", "natanz",
+    "khan younis", "jabalia", "deir ez-zor",
+    "bandar abbas", "beqaa", "tyre", "akrotiri",
+    "raf base", "british base",
+    "west bank", "red sea", "oil price", "opec", "indian ocean", "mediterranean",
+    # Iranian cities
+    "mashhad", "tabriz", "bushehr", "ahvaz", "abadan", "isfahan", "shiraz", "qom",
+    "tehran", "khamenei", "irgc",
+    # Israeli cities
     "tel aviv", "haifa", "jerusalem", "netanyahu", "idf",
-    "beirut", "hezbollah",
-    "gaza", "rafah",
-    "erbil", "riyadh", "dubai", "abu dhabi",
-    "doha", "sanaa", "houthi", "damascus", "cairo", "amman",
+    # Lebanese cities
+    "sidon", "tripoli", "beirut", "hezbollah",
+    # Palestinian areas
+    "ramallah", "nablus", "jenin", "gaza", "rafah", "hamas",
+    # Syrian cities
+    "aleppo", "homs", "latakia", "idlib", "damascus",
+    # Iraqi cities
+    "baghdad", "mosul", "basra", "kirkuk", "tikrit", "erbil",
+    # Saudi cities
+    "jeddah", "neom", "dammam", "dhahran", "riyadh",
+    # Gulf/other ME
+    "dubai", "abu dhabi", "doha",
+    "aden", "hodeidah", "marib", "sanaa", "houthi",
+    "cairo", "amman",
+    # US political
+    "pentagon", "hegseth", "rubio", "vance", "congress",
+    # Countries
     "iran", "israel", "lebanon", "saudi", "uae", "qatar",
     "bahrain", "kuwait", "iraq", "syria", "yemen",
-    "egypt", "jordan", "oman", "cyprus", "starmer",
+    "egypt", "jordan", "oman", "turkey", "ankara",
+    "pakistan", "sri lanka", "cyprus", "starmer",
+    "nato", "trump",
     "persian gulf", "gulf state", "middle east", "mideast",
     "epic fury", "roaring lion",
 ]

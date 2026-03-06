@@ -328,6 +328,11 @@
   .sentiment-economic { background: #3498db; }
   .sentiment-label { font-size: 10px; color: #888; margin-left: 4px; }
 
+  /* Paywall indicator */
+  .paywall-badge { display: inline-block; font-size: 10px; color: #e67e22; margin-left: 4px; vertical-align: middle; title: "Paywall"; }
+  .paywall-filter { display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 12px; color: #666; cursor: pointer; white-space: nowrap; }
+  .paywall-filter input { cursor: pointer; accent-color: #e74c3c; }
+
   @media (max-width: 800px) {
     #container { flex-direction: column; }
     #sidebar { width: 100%; height: 50vh; border-left: none; border-top: 1px solid #ddd; }
@@ -340,9 +345,9 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:49 UTC, 6 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:08 UTC, 5 Mar 2026</span></div>
   </div>
-  <div class="date-badge">6 March 2026</div>
+  <div class="date-badge">5 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -395,6 +400,7 @@
           <select id="source-select" onchange="filterSource(this.value || null)">
             <option value="">All sources</option>
           </select>
+          <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
         </div>
       </div>
 
@@ -420,6 +426,14 @@
 </div>
 
 <script>
+// ===== PAYWALL SOURCES =====
+const PAYWALL_SOURCES = new Set([
+  "New York Times", "Washington Post", "The Times", "The Telegraph",
+  "Financial Times", "Wall Street Journal", "The Economist",
+  "Haaretz", "The Athletic", "Barron's", "Bloomberg"
+]);
+function isPaywall(source) { return PAYWALL_SOURCES.has(source); }
+
 // ===== HELPER: Format ISO time to readable string =====
 function formatTime(isoString) {
   const d = new Date(isoString);
@@ -438,7 +452,6 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "diplomacy",
     articles: [
-      { title: "Ukraine to help US and its allies counter Iranian drones in Middle East, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/ukraine-zelenskyy-iran-war-help-us-israel-fight-drones", time: "2026-03-06T01:36:33Z" },
       { title: "US and Middle East countries seek Ukraine's support in drone protection", source: "France 24", url: "https://www.france24.com/en/us-and-middle-east-countries-seek-ukraine-s-support-in-drone-protection", time: "2026-03-05T20:49:34Z" },
       { title: "Ukraine, Russia free 200 POWs each in latest swap amid stalled peace talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/ukraine-russia-free-200-pows-each-in-latest-swap-amid-stalled-peace-talks?traffic_source=rss", time: "2026-03-05T19:41:59Z" },
       { title: "Senators propose ban on US gov’t officials doing prediction market trading", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/5/senators-propose-ban-on-us-govt-officials-doing-prediction-market-trading?traffic_source=rss", time: "2026-03-05T19:12:07Z" },
@@ -461,7 +474,6 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
-      { title: "As Trump Out-Putins Putin, Russia’s Global Influence Erodes", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/europe/russia-iran-putin.html", time: "2026-03-06T05:01:10Z" },
       { title: "Trump says Zelensky ‘has to get on the ball’ to reach Russia deal", source: "France 24", url: "https://www.france24.com/en/europe/20260305-trump-zelensky-deal-putin-russia", time: "2026-03-05T22:30:06Z" },
       { title: "Russia Returns to Venice Biennale, in Latest Sign of a Cultural Comeback", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/russia-ukraine-venice-biennale.html", time: "2026-03-05T14:30:36Z" },
       { title: "Attack on Iran shows Russia losing sway in the Middle East and globally", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/05/attack-iran-highlights-russias-fall-middle-east-beyond/", time: "2026-03-05T10:00:40Z" },
@@ -481,14 +493,6 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "‘In the face of death, we are all equal’: Ukraine’s Roma fight for recognition for those serving in war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/roma-families-ukraine-war-families-military-compensation", time: "2026-03-05T08:00:54Z" },
-    ]
-  },
-  {
-    name: "Zaporizhzhia", country: "Ukraine",
-    lat: 47.8388, lng: 35.1396,
-    category: "humanitarian",
-    articles: [
-      { title: "Ukraine war briefing: Trump urges Zelenskyy to ‘get a deal done’ with Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/ukraine-war-briefing-trump-urges-zelenskyy-to-get-a-deal-done-with-russia", time: "2026-03-06T02:14:30Z" },
     ]
   },
 ];
@@ -601,6 +605,7 @@ function renderMarkers() {
 
   // Get search text for filtering
   const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
 
   locations.forEach(loc => {
     if (activeCountry && loc.country !== activeCountry) return;
@@ -611,6 +616,7 @@ function renderMarkers() {
       if (t < timelineMin || t > timelineMax) return false;
       if (activeSource && a.source !== activeSource) return false;
       if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+      if (hidePaywall && isPaywall(a.source)) return false;
       return true;
     });
     if (visibleArticles.length === 0) return;
@@ -657,11 +663,13 @@ function renderMarkers() {
     locations.forEach(loc => {
       if (activeCountry && loc.country !== activeCountry) return;
       const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+      const hidePaywall = document.getElementById('hide-paywall')?.checked;
       const visibleArticles = loc.articles.filter(a => {
         const t = new Date(a.time).getTime();
         if (t < timelineMin || t > timelineMax) return false;
         if (activeSource && a.source !== activeSource) return false;
         if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+        if (hidePaywall && isPaywall(a.source)) return false;
         return true;
       });
       if (visibleArticles.length > 0) {
@@ -765,6 +773,16 @@ function renderSidebar() {
     }).filter(Boolean);
   }
 
+  // Apply paywall filter
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
+  if (hidePaywall) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => !isPaywall(a.source));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
   const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
   const totalLocs = filtered.length;
   countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
@@ -807,13 +825,15 @@ function renderSidebar() {
             const isNew = (Date.now() - new Date(a.time).getTime()) < 2 * 60 * 60 * 1000;
             const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
             const sentiment = getSentiment(a.title);
+            const pw = isPaywall(a.source);
+            const pwBadge = pw ? '<span class="paywall-badge" title="Paywall">💰</span>' : '';
             return '<div class="article-card" style="border-left-color:' + col + '">' +
               '<div class="article-title"><span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span>' + a.title + newBadge + '</div>' +
               '<div class="article-meta">' +
-                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span></div>' +
+                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
               '</div>' +
-              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →</a>' +
+              '<a href="' + a.url + '" target="_blank" rel="noopener">Read original article →' + (pw ? ' 💰' : '') + '</a>' +
             '</div>';
           }).join('') +
         '</div>' +
