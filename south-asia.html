@@ -372,6 +372,7 @@
         <div class="timeline-label">Timeline</div>
         <div class="timeline-display" id="timeline-display">Feb 28, 22:00 — Mar 3, 10:00</div>
         <div class="timeline-presets">
+          <button class="preset-btn" onclick="setPreset('1h')">Last 1h</button>
           <button class="preset-btn" onclick="setPreset('6h')">Last 6h</button>
           <button class="preset-btn" onclick="setPreset('12h')">Last 12h</button>
           <button class="preset-btn" onclick="setPreset('24h')">Last 24h</button>
@@ -896,6 +897,8 @@ function setPreset(preset) {
     start = now - 12 * 60 * 60 * 1000;
   } else if (preset === '6h') {
     start = now - 6 * 60 * 60 * 1000;
+  } else if (preset === '1h') {
+    start = now - 1 * 60 * 60 * 1000;
   }
 
   timelineMin = Math.max(start, timelineStart);
