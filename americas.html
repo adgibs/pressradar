@@ -345,9 +345,9 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:09 UTC, 5 Mar 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:05 UTC, 6 Mar 2026</span></div>
   </div>
-  <div class="date-badge">5 March 2026</div>
+  <div class="date-badge">6 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -448,10 +448,49 @@ function formatTime(isoString) {
 // ===== DATA — every location has a country =====
 const locations = [
   {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "Morning news brief", source: "NPR", url: "https://www.npr.org/2026/03/06/nx-s1-5732278/morning-news-brief", time: "2026-03-06T09:41:07Z" },
+      { title: "As the US and Venezuela mend relations, Trump touts it as a model for regime change", source: "NPR", url: "https://www.npr.org/2026/03/06/nx-s1-5737387/as-the-us-and-venezuela-mend-relations-trump-touts-it-as-a-model-for-regime-change", time: "2026-03-06T09:39:49Z" },
+      { title: "U.S. Restarts Diplomatic Relations With Venezuela", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/us-venezuela-diplomatic-relations.html", time: "2026-03-06T07:15:45Z" },
+      { title: "US and Venezuela move to restore diplomatic ties two months after Maduro’s capture", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/06/us-venezuela-diplomatic-ties-relations-delcy-rodriguez", time: "2026-03-06T06:59:29Z" },
+      { title: "US, Venezuela restore diplomatic relations as Washington pushes for access to minerals", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-venezuela-restore-diplomatic-ties-after-2019-break", time: "2026-03-06T02:00:45Z" },
+      { title: "Not Just Oil: In Venezuela, U.S. Interior Secretary Pushes for Mining Access", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/venezuela-mining-access-burgum.html", time: "2026-03-06T01:55:49Z" },
+      { title: "U.S., Venezuela to establish diplomatic relations for first time since 2019", source: "CBS News", url: "https://www.cbsnews.com/news/us-venezuela-establish-diplomatic-relations-first-time-since-2019/", time: "2026-03-06T01:50:00Z" },
+      { title: "Dismay as Hegseth urges Latin American allies to join ‘offense’ against cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/hegseth-latin-america-drug-cartels", time: "2026-03-05T19:50:26Z" },
+      { title: "James Luckey-Lange Recounts Being Detained, Starved and Beaten in Venezuela", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/james-luckey-lange-venezuela-detention.html", time: "2026-03-05T10:00:10Z" },
+      { title: "Venezuela and US to work together on mining developments, Rodríguez says", source: "BBC News", url: "https://www.bbc.com/news/articles/cj322v8pjp5o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:46:47Z" },
+      { title: "Dirty laundry and chocolate bars: How Venezuelan prisoners smuggled messages out of jail", source: "BBC News", url: "https://www.bbc.com/news/articles/c620n3degv2o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:04:34Z" },
+      { title: "Millions of Cubans plunged into darkness as fuel crisis deepens", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2ggpq1742o?at_medium=RSS&at_campaign=rss", time: "2026-03-04T22:46:53Z" },
+    ]
+  },
+  {
+    name: "Washington DC", country: "USA",
+    lat: 38.9072, lng: -77.0369,
+    category: "political",
+    articles: [
+      { title: "Messi censured for meeting and applauding Trump amid US attacks on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/6/messi-censured-for-meeting-and-applauding-trump-amid-us-attacks-on-iran?traffic_source=rss", time: "2026-03-06T12:40:09Z" },
+      { title: "Sri Lankan navy video shows Iranian sailors rescued after a U.S. torpedo strike", source: "NBC News", url: "https://www.nbcnews.com/video/sri-lankan-navy-rescues-iranian-sailors-after-u-s-torpedo-strike-258817093643", time: "2026-03-06T11:04:46Z" },
+      { title: "U.S. seeking to 'raze or level' Iran's ballistic missile industry, Adm. Cooper says", source: "CBS News", url: "https://www.cbsnews.com/news/pete-hegseth-brad-cooper-iran-news-conference-03-05-2026/", time: "2026-03-05T23:12:41Z" },
+      { title: "From Sri Lanka to Europe, the war spreads far beyond Iran", source: "NBC News", url: "https://www.nbcnews.com/world/iran/sri-lanka-europe-war-spreads-far-iran-rcna261881", time: "2026-03-05T21:00:42Z" },
+      { title: "Dismay as Hegseth urges Latin American allies to join ‘offense’ against cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/hegseth-latin-america-drug-cartels", time: "2026-03-05T19:50:26Z" },
+      { title: "Pentagon identifies 5th U.S. soldier killed in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/04/us-iran-israel-strikes-trump-live-updates/", time: "2026-03-05T15:55:41Z" },
+      { title: "Sea levels higher than thought due to 'methodological blind spot,' study says", source: "CBS News", url: "https://www.cbsnews.com/news/sea-levels-higher-methodological-blind-spot-study/", time: "2026-03-05T13:37:00Z" },
+      { title: "Hegseth says U.S. 'just getting started' as Iran war spreads", source: "CBS News", url: "https://www.cbsnews.com/live-updates/us-iran-war-israel-strikes-tehran-lebanon-day-5-al-udeid-targeted/", time: "2026-03-05T10:28:00Z" },
+      { title: "Hegseth says U.S. torpedo sank an Iranian warship as military campaign ramps up", source: "CBS News", url: "https://www.cbsnews.com/news/hegseth-caine-iran-war-operations-briefing-2026-03-04/", time: "2026-03-05T01:56:54Z" },
+      { title: "US sank Iranian warship, Pentagon announces in press briefing", source: "France 24", url: "https://www.france24.com/en/video/20260304-us-sunk-iranian-warship-pentagon-announces-in-press-briefing-1", time: "2026-03-04T14:26:37Z" },
+      { title: "Replay: US Pentagon gives briefing on Iran as US and Israel continue to strike", source: "France 24", url: "https://www.france24.com/en/replay-us-pentagon-gives-briefing-on-iran-as-us-and-israel-continue-to-strike", time: "2026-03-04T14:13:22Z" },
+      { title: "The briefing with Defense Secretary Hegseth and Gen. Dan Caine, the Joint Chiefs of Staff chairman,...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T14:09:46Z" },
+    ]
+  },
+  {
     name: "Havana", country: "Cuba",
     lat: 23.1136, lng: -82.3666,
     category: "political",
     articles: [
+      { title: "I’m Cuban American. For the sake of both countries, Trump’s siege must end | Danny Valdes", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/06/trump-ice-cuban-american", time: "2026-03-06T13:00:23Z" },
       { title: "Trump says regime change in Cuba is ‘question of time’ after Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-says-regime-change-in-cuba-is-question-of-time-after-iran?traffic_source=rss", time: "2026-03-05T22:37:41Z" },
       { title: "Cuba’s economy on edge: Fuel shortages and rising hardship", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/5/cubas-economy-on-edge-fuel-shortages-and-rising-hardship?traffic_source=rss", time: "2026-03-05T17:16:43Z" },
       { title: "Millions in Cuba hit by blackout as Trump embargo bites", source: "Sky News", url: "https://news.sky.com/story/millions-in-cuba-hit-by-blackout-as-trump-embargo-bites-13515578", time: "2026-03-05T11:23:00Z" },
@@ -464,23 +503,27 @@ const locations = [
     ]
   },
   {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "James Luckey-Lange Recounts Being Detained, Starved and Beaten in Venezuela", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/james-luckey-lange-venezuela-detention.html", time: "2026-03-05T10:00:10Z" },
-      { title: "Venezuela and US to work together on mining developments, Rodríguez says", source: "BBC News", url: "https://www.bbc.com/news/articles/cj322v8pjp5o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:46:47Z" },
-      { title: "Dirty laundry and chocolate bars: How Venezuelan prisoners smuggled messages out of jail", source: "BBC News", url: "https://www.bbc.com/news/articles/c620n3degv2o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:04:34Z" },
-    ]
-  },
-  {
     name: "Mexico City", country: "Mexico",
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "US, Mexico to hold talks ahead of USMCA trade pact review as Trump tariffs loom", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-mexico-talks-north-america-trade-pact-review-trump-tariffs", time: "2026-03-06T01:57:02Z" },
       { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
       { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
+      { title: "Ecuadorean troops find 35m-long 'narco-sub' hidden in nature reserve", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6zz65vg0qo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T17:34:04Z" },
+      { title: "Ecuador sinks 'narco sub' as nation works with U.S. to fight organized crime", source: "CBS News", url: "https://www.cbsnews.com/news/narco-sub-sunk-ecuador-us-operations-organized-crime/", time: "2026-03-05T15:37:28Z" },
       { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
+    ]
+  },
+  {
+    name: "Quito", country: "Ecuador",
+    lat: -0.1807, lng: -78.4678,
+    category: "security",
+    articles: [
+      { title: "Why Ecuador Invited the U.S. Military to Help With Its Drug Gangs", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/americas/ecuador-trump-drug-gangs-us-military.html", time: "2026-03-04T23:58:05Z" },
+      { title: "US and Ecuador forces launch operation to fight drug trafficking", source: "BBC News", url: "https://www.bbc.com/news/articles/cgjzz4gn64zo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T16:45:24Z" },
+      { title: "U.S. Takes Military Action in Ecuador Against ‘Terrorist Organizations’", source: "New York Times", url: "https://www.nytimes.com/2026/03/03/us/politics/us-ecuador-trump-military-operations.html", time: "2026-03-04T14:28:58Z" },
+      { title: "US military launches operation in Ecuador to combat drug trafficking", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/04/us-military-action-operation-ecuador", time: "2026-03-04T04:06:48Z" },
     ]
   },
   {
@@ -503,20 +546,19 @@ const locations = [
     ]
   },
   {
-    name: "Quito", country: "Ecuador",
-    lat: -0.1807, lng: -78.4678,
-    category: "security",
+    name: "Lima", country: "Peru",
+    lat: -12.0464, lng: -77.0428,
+    category: "economic",
     articles: [
-      { title: "Why Ecuador Invited the U.S. Military to Help With Its Drug Gangs", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/americas/ecuador-trump-drug-gangs-us-military.html", time: "2026-03-04T23:58:05Z" },
-      { title: "US military launches operation in Ecuador to combat drug trafficking", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/04/us-military-action-operation-ecuador", time: "2026-03-04T04:06:48Z" },
+      { title: "Breaking Social review – Rutger Bregman leads an irresistible rallying cry for global activism", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/breaking-social-review-global-activism-fredrik-gertten-rutger-bregman", time: "2026-03-05T07:00:53Z" },
     ]
   },
   {
-    name: "Washington DC", country: "USA",
-    lat: 38.9072, lng: -77.0369,
+    name: "Kingston", country: "Jamaica",
+    lat: 18.0179, lng: -76.8099,
     category: "political",
     articles: [
-      { title: "Dismay as Hegseth urges Latin American allies to join ‘offense’ against cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/hegseth-latin-america-drug-cartels", time: "2026-03-05T19:50:26Z" },
+      { title: "What a viral speech in Ireland reveals about colonial history and Caribbean English", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/04/viral-speech-ireland-thomas-gould-colonial-history-caribbean-english", time: "2026-03-04T14:00:32Z" },
     ]
   },
 ];
