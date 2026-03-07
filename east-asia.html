@@ -610,7 +610,11 @@
 </div>
 
 <div id="container">
-  <div id="map"></div>
+  <div id="map" style="position:relative;"><div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
+    <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
+    <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
+    <button class="style-btn" id="btn-terrain" onclick="setMapStyle('terrain')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Terrain</button>
+  </div></div>
   <div id="sidebar">
     <div id="sidebar-header">
       <h2>News by Location</h2>
@@ -662,15 +666,6 @@
   <div class="legend-item"><div class="legend-dot" style="background:#2471a3;"></div> Trade / economic</div>
   <div class="legend-item"><div class="legend-dot" style="background:#6c3483;"></div> Territorial dispute</div>
   <h3 style="margin-top:10px;">Size = article count</h3>
-</div>
-
-<div id="view-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
-  <button class="view-btn active" id="btn-pins" onclick="setView('pins')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:#e74c3c;color:#fff;">Pins</button>
-  <button class="view-btn" id="btn-heat" onclick="setView('heat')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Heatmap</button>
-<div id="map-style-toggle" style="position:absolute;top:50px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
-  <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
-  <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
-  <button class="style-btn" id="btn-terrain" onclick="setMapStyle('terrain')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Terrain</button>
 </div>
 
 <script>
@@ -908,7 +903,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 const markerLayer = L.layerGroup().addTo(map);
 const labelLayer = L.layerGroup().addTo(map);
 let heatLayer = null;
-let currentView = 'pins';
 
 // ===== SENTIMENT ANALYSIS =====
 function getSentiment(title) {
@@ -934,15 +928,6 @@ function getSentiment(title) {
 }
 
 // ===== VIEW MODE TOGGLE =====
-function setView(mode) {
-  currentView = mode;
-  document.getElementById('btn-pins').style.background = mode === 'pins' ? '#e74c3c' : 'transparent';
-  document.getElementById('btn-pins').style.color = mode === 'pins' ? '#fff' : '#666';
-  document.getElementById('btn-heat').style.background = mode === 'heat' ? '#e74c3c' : 'transparent';
-  document.getElementById('btn-heat').style.color = mode === 'heat' ? '#fff' : '#666';
-  renderMarkers();
-}
-
 function renderMarkers() {
   if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
   markerLayer.clearLayers();
