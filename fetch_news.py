@@ -1576,7 +1576,7 @@ Recent headlines:
 {headline_text}"""
 
     # Try multiple models in order of preference
-    models = ["gemini-2.0-flash", "gemini-1.5-flash"]
+    models = ["gemini-2.0-flash", "gemini-2.0-flash-lite"]
 
     for model in models:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
