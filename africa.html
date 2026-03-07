@@ -271,9 +271,11 @@
   }
   .article-card .article-meta {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin-bottom: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 3px;
   }
   .article-card .article-source {
     font-size: 0.73rem;
@@ -281,8 +283,9 @@
   }
   .article-card .article-source .src-name { color: #c0392b; font-weight: 600; }
   .article-card .article-time {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: #999;
+    white-space: nowrap;
   }
   .article-card .article-title a {
     color: inherit;
@@ -1211,7 +1214,7 @@ function renderSidebar() {
               '<div class="article-title">' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span><a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a>' + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source">' + srcFavicon(a.source) + '<span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
-                '<div class="article-time" title="' + formatTime(a.time) + ' UTC">' + relativeTime(a.time) + '</div>' +
+                '<div class="article-time">' + relativeTime(a.time) + ' · ' + formatTime(a.time) + '</div>' +
               '</div>' +
             '</div>';
           }).join('') +
