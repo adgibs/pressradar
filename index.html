@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:25 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:27 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:26 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Iran&#x27;s president apologises to Gulf nations amid escalating US-Israel military campaign demanding unconditional surrender.<br>• Israeli troops advance into Lebanon, striking Hezbollah positions as civilians evacuate south Beirut amid bombardment.<br>• Trump threatens further strikes on Iran while pursuing regime change, bypassing Congressional approval.<br>• Regional conflict destabilises China&#x27;s interests as eight days of strikes spread across Middle East.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:29 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Iran&#x27;s president apologises to Gulf nations as Trump demands unconditional surrender, rejecting the offer.<br>• Israeli troops intensify operations in Lebanon against Hezbollah while conducting failed raid for pilot remains.<br>• Massive civilian displacement occurs in south Beirut following Israeli strikes and evacuation warnings.<br>• Regional conflict raises concerns among China and international observers about escalation and duration.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -622,6 +622,7 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Despite Saturday spike in missile sirens, IDF affirms 75% of Iranian missile launchers destroyed", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889169", time: "2026-03-07T22:46:27Z" },
       { title: "IDF kills thousands of Iranian regime forces with 6,500 bombs dropped in one week", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889167", time: "2026-03-07T22:29:25Z" },
       { title: "Prime Minister Netanyahu: We have nearly achieved total control of Iranian airspace", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-889163", time: "2026-03-07T21:27:20Z" },
       { title: "No coffee, no Ritalin: The secret that keeps fighter pilots at peak alertness", source: "Jerusalem Post", url: "https://www.jpost.com/omg/article-889162", time: "2026-03-07T21:14:23Z" },
@@ -996,6 +997,7 @@ const locations = [
     lat: 25.2048, lng: 55.2708,
     category: "strikes",
     articles: [
+      { title: "Debris from interception of suspected Iranian drone kills Pakistani man in Dubai", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-889170", time: "2026-03-07T23:20:58Z" },
       { title: "Smoke rises from a Dubai tower after attack", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/smoke-rises-from-a-dubai-tower-after?traffic_source=rss", time: "2026-03-07T19:49:46Z" },
       { title: "Gulf leaders are about to pass up the Iran moment - comment", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889142", time: "2026-03-07T17:59:04Z" },
       { title: "Iran keeps targeting Gulf States despite president's apology", source: "France 24", url: "https://www.france24.com/en/iran-keeps-targeting-gulf-states-despite-president-s-apology", time: "2026-03-07T17:24:01Z" },
@@ -1153,21 +1155,22 @@ const locations = [
     ]
   },
   {
+    name: "Riyadh", country: "Saudi Arabia",
+    lat: 24.7136, lng: 46.6753,
+    category: "energy",
+    articles: [
+      { title: "Saudi shoots down drone east of Riyadh, warns Iran of possible retaliation to attacks", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889171", time: "2026-03-07T23:38:58Z" },
+      { title: "UK PM speaks with Saudi Crown Prince, leaders of France, Germany, Italy about Middle East", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889117", time: "2026-03-07T00:42:40Z" },
+      { title: "CIA station in Saudi capital hit in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T10:16:14Z" },
+    ]
+  },
+  {
     name: "Eastern Mediterranean", country: "International",
     lat: 34.0, lng: 33.0,
     category: "strikes",
     articles: [
       { title: "NATO defences destroy missile fired from Iran over Mediterranean: Turkiye", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/4/nato-defences-destroy-missile-fired-from-iran-over-mediterranean-turkiye?traffic_source=rss", time: "2026-03-04T12:12:21Z" },
       { title: "France deploys military assets to Mediterranean amid war in the Mideast", source: "France 24", url: "https://www.france24.com/en/middle-east/20260304-france-deploys-military-assets-charles-de-gaulle-nuclear-carrier-mediterranean-amid-war-mideast", time: "2026-03-04T10:33:12Z" },
-    ]
-  },
-  {
-    name: "Riyadh", country: "Saudi Arabia",
-    lat: 24.7136, lng: 46.6753,
-    category: "energy",
-    articles: [
-      { title: "UK PM speaks with Saudi Crown Prince, leaders of France, Germany, Italy about Middle East", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889117", time: "2026-03-07T00:42:40Z" },
-      { title: "CIA station in Saudi capital hit in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T10:16:14Z" },
     ]
   },
   {
