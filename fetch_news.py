@@ -1550,11 +1550,10 @@ def get_recent_headlines(html_file, max_articles=20):
 
 
 def generate_ai_summary(region_name, headlines):
-    """Generate a natural-language summary of recent headlines using Google Gemini API (free tier)."""
-    import time
-    api_key = os.environ.get("GEMINI_API_KEY")
+    """Generate a natural-language summary of recent headlines using Anthropic Claude API."""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("  No GEMINI_API_KEY set — skipping AI summary")
+        print("  No ANTHROPIC_API_KEY set — skipping AI summary")
         return None
 
     import urllib.request
@@ -1575,55 +1574,37 @@ Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 Recent headlines:
 {headline_text}"""
 
-    # Try multiple models in order of preference
-    models = ["gemini-2.0-flash", "gemini-2.0-flash-lite"]
+    url = "https://api.anthropic.com/v1/messages"
+    payload = json.dumps({
+        "model": "claude-haiku-4-5-20251001",
+        "max_tokens": 400,
+        "messages": [{"role": "user", "content": prompt}]
+    }).encode("utf-8")
 
-    for model in models:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-        payload = json.dumps({
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"maxOutputTokens": 400, "temperature": 0.3}
-        }).encode("utf-8")
-
-        # Retry with exponential backoff for rate limiting (429 errors)
-        max_retries = 4
-        for attempt in range(max_retries):
-            try:
-                req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-                with urllib.request.urlopen(req, timeout=30) as resp:
-                    result = json.loads(resp.read().decode("utf-8"))
-                summary = result["candidates"][0]["content"]["parts"][0]["text"].strip()
-                print(f"  AI summary for {region_name} ({model}): {summary[:80]}...")
-                return summary
-            except urllib.error.HTTPError as e:
-                # Read error body for more detail
-                error_body = ""
-                try:
-                    error_body = e.read().decode("utf-8", errors="replace")[:500]
-                except Exception:
-                    pass
-                if e.code == 429 and attempt < max_retries - 1:
-                    wait = (attempt + 1) * 15  # 15s, 30s, 45s, 60s
-                    print(f"  Rate limited for {region_name} ({model}) — waiting {wait}s (attempt {attempt + 1}/{max_retries})")
-                    if error_body:
-                        print(f"    Error detail: {error_body[:200]}")
-                    time.sleep(wait)
-                elif e.code == 429:
-                    print(f"  All retries exhausted for {region_name} ({model}): {e}")
-                    if error_body:
-                        print(f"    Error detail: {error_body[:200]}")
-                    break  # Try next model
-                else:
-                    print(f"  AI summary failed for {region_name} ({model}): HTTP {e.code}")
-                    if error_body:
-                        print(f"    Error detail: {error_body[:200]}")
-                    break  # Try next model
-            except Exception as e:
-                print(f"  AI summary failed for {region_name} ({model}): {e}")
-                break  # Try next model
-
-    print(f"  AI summary failed for {region_name}: all models exhausted")
-    return None
+    try:
+        req = urllib.request.Request(url, data=payload, headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        })
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+        summary = result["content"][0]["text"].strip()
+        print(f"  AI summary for {region_name}: {summary[:80]}...")
+        return summary
+    except urllib.error.HTTPError as e:
+        error_body = ""
+        try:
+            error_body = e.read().decode("utf-8", errors="replace")[:500]
+        except Exception:
+            pass
+        print(f"  AI summary failed for {region_name}: HTTP {e.code}")
+        if error_body:
+            print(f"    Error detail: {error_body[:200]}")
+        return None
+    except Exception as e:
+        print(f"  AI summary failed for {region_name}: {e}")
+        return None
 
 
 def inject_summary_into_html(html_file, summary):
@@ -1748,7 +1729,6 @@ def main():
     )
 
     # ── AI Summaries ──
-    import time
     print("\n=== Generating AI Summaries ===")
     regions = [
         ("Middle East", "index.html"),
@@ -1759,9 +1739,7 @@ def main():
         ("South Asia", "south-asia.html"),
         ("Americas", "americas.html"),
     ]
-    for i, (region_name, html_file) in enumerate(regions):
-        if i > 0:
-            time.sleep(10)  # 10s delay between API calls to avoid rate limiting
+    for region_name, html_file in regions:
         headlines = get_recent_headlines(html_file, max_articles=20)
         if not headlines:
             print(f"  No headlines for {region_name} — skipping")
