@@ -1497,11 +1497,11 @@ def fetch_region(feeds, keywords, location_map, location_priority, region_name, 
 
 
 def update_region(html_file, feeds, keywords, location_map, location_priority, region_name):
-    """Fetch and update a specific region's HTML file."""
+    """Fetch and update a specific region's HTML file. Returns list of newly fetched articles."""
     html_path = Path(__file__).parent / html_file
     if not html_path.exists():
         print(f"  Skipping {html_file} — file not found")
-        return
+        return []
 
     html = html_path.read_text()
     existing = parse_existing_articles(html)
@@ -1512,7 +1512,7 @@ def update_region(html_file, feeds, keywords, location_map, location_priority, r
 
     if not articles and existing_count > 0:
         print(f"  [{region_name}] No new articles found. Keeping existing data.")
-        return
+        return []
 
     new_locations = group_by_location(articles)
     print(f"  [{region_name}] New: {len(articles)} articles across {len(new_locations)} locations")
@@ -1523,6 +1523,9 @@ def update_region(html_file, feeds, keywords, location_map, location_priority, r
 
     js_data = generate_js_data(merged)
     update_html(js_data, html_file)
+
+    # Return new articles for AI summary
+    return articles
 
 
 # ── AI Summary Generation ────────────────────────────────────────
@@ -1567,7 +1570,7 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Summarise the most important developments in the {region_name} region based on these recent headlines. Write 3-5 bullet points, each 1-2 sentences. Use a bullet character (•) at the start of each point. Be factual and neutral. Focus on the biggest stories. Do not include a title or heading. Do not use markdown formatting. Write in present tense. Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 100 and 180 words total.
+Summarise the most important developments in the {region_name} region based on these recent headlines. Write 3-4 short bullet points. Each bullet must be one short sentence only (max 15 words). Use a bullet character (•) at the start of each point. Be factual and neutral. Focus on the biggest stories. Do not include a title or heading. Do not use markdown formatting. Write in present tense. Keep it under 80 words total.
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
@@ -1577,7 +1580,7 @@ Recent headlines:
     url = "https://api.anthropic.com/v1/messages"
     payload = json.dumps({
         "model": "claude-haiku-4-5-20251001",
-        "max_tokens": 400,
+        "max_tokens": 200,
         "messages": [{"role": "user", "content": prompt}]
     }).encode("utf-8")
 
@@ -1639,6 +1642,9 @@ def inject_summary_into_html(html_file, summary):
 def main():
     print("PressRadar.me — Fetching news...")
 
+    # Collect new articles per region for AI summaries
+    new_articles = {}
+
     # ── Middle East (index.html) ──
     print("\n=== Middle East ===")
     html_path = Path(__file__).parent / "index.html"
@@ -1647,11 +1653,11 @@ def main():
     existing_count = sum(len(loc["articles"]) for loc in existing.values())
     print(f"  Existing: {existing_count} articles across {len(existing)} locations")
 
-    articles = fetch_feeds(hours_back=48)
+    me_articles = fetch_feeds(hours_back=48)
 
-    if articles or existing_count == 0:
-        new_locations = group_by_location(articles)
-        print(f"  New: {len(articles)} articles across {len(new_locations)} locations")
+    if me_articles or existing_count == 0:
+        new_locations = group_by_location(me_articles)
+        print(f"  New: {len(me_articles)} articles across {len(new_locations)} locations")
 
         merged = merge_locations(existing, new_locations)
         total = sum(len(loc["articles"]) for loc in merged.values())
@@ -1659,12 +1665,13 @@ def main():
 
         js_data = generate_js_data(merged)
         update_html(js_data, "index.html")
+        new_articles["Middle East"] = ("index.html", me_articles)
     else:
         print("  No new articles found. Keeping existing data.")
 
     # ── Ukraine (ukraine.html) ──
     print("\n=== Ukraine ===")
-    update_region(
+    ua_articles = update_region(
         "ukraine.html",
         UKRAINE_FEEDS,
         UKRAINE_KEYWORDS,
@@ -1672,10 +1679,12 @@ def main():
         UKRAINE_LOCATION_PRIORITY,
         "Ukraine",
     )
+    if ua_articles:
+        new_articles["Ukraine"] = ("ukraine.html", ua_articles)
 
     # ── East Asia (east-asia.html) ──
     print("\n=== East Asia ===")
-    update_region(
+    ea_articles = update_region(
         "east-asia.html",
         EAST_ASIA_FEEDS,
         EAST_ASIA_KEYWORDS,
@@ -1683,10 +1692,12 @@ def main():
         EAST_ASIA_LOCATION_PRIORITY,
         "East Asia",
     )
+    if ea_articles:
+        new_articles["East Asia"] = ("east-asia.html", ea_articles)
 
     # ── Africa (africa.html) ──
     print("\n=== Africa ===")
-    update_region(
+    af_articles = update_region(
         "africa.html",
         AFRICA_FEEDS,
         AFRICA_KEYWORDS,
@@ -1694,10 +1705,12 @@ def main():
         AFRICA_LOCATION_PRIORITY,
         "Africa",
     )
+    if af_articles:
+        new_articles["Africa"] = ("africa.html", af_articles)
 
     # ── Europe (europe.html) ──
     print("\n=== Europe ===")
-    update_region(
+    eu_articles = update_region(
         "europe.html",
         EUROPE_FEEDS,
         EUROPE_KEYWORDS,
@@ -1705,10 +1718,12 @@ def main():
         EUROPE_LOCATION_PRIORITY,
         "Europe",
     )
+    if eu_articles:
+        new_articles["Europe"] = ("europe.html", eu_articles)
 
     # ── South Asia (south-asia.html) ──
     print("\n=== South Asia ===")
-    update_region(
+    sa_articles = update_region(
         "south-asia.html",
         SOUTH_ASIA_FEEDS,
         SOUTH_ASIA_KEYWORDS,
@@ -1716,10 +1731,12 @@ def main():
         SOUTH_ASIA_LOCATION_PRIORITY,
         "South Asia",
     )
+    if sa_articles:
+        new_articles["South Asia"] = ("south-asia.html", sa_articles)
 
     # ── Americas (americas.html) ──
     print("\n=== Americas ===")
-    update_region(
+    am_articles = update_region(
         "americas.html",
         AMERICAS_FEEDS,
         AMERICAS_KEYWORDS,
@@ -1727,23 +1744,26 @@ def main():
         AMERICAS_LOCATION_PRIORITY,
         "Americas",
     )
+    if am_articles:
+        new_articles["Americas"] = ("americas.html", am_articles)
 
-    # ── AI Summaries ──
+    # ── AI Summaries (only for regions with new articles) ──
     print("\n=== Generating AI Summaries ===")
-    regions = [
-        ("Middle East", "index.html"),
-        ("Ukraine", "ukraine.html"),
-        ("East Asia", "east-asia.html"),
-        ("Africa", "africa.html"),
-        ("Europe", "europe.html"),
-        ("South Asia", "south-asia.html"),
-        ("Americas", "americas.html"),
-    ]
-    for region_name, html_file in regions:
-        headlines = get_recent_headlines(html_file, max_articles=20)
+    for region_name, (html_file, articles) in new_articles.items():
+        # Build headlines from newly fetched articles only
+        headlines = [
+            {
+                "title": a["title"],
+                "source": a["source"],
+                "location": a["location"]["name"] if isinstance(a["location"], dict) else a["location"],
+                "country": a["location"]["country"] if isinstance(a["location"], dict) else "",
+            }
+            for a in articles[:20]
+        ]
         if not headlines:
-            print(f"  No headlines for {region_name} — skipping")
+            print(f"  No new headlines for {region_name} — skipping")
             continue
+        print(f"  {region_name}: {len(headlines)} new articles to summarise")
         summary = generate_ai_summary(region_name, headlines)
         if summary:
             inject_summary_into_html(html_file, summary)
