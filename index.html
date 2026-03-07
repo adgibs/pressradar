@@ -620,7 +620,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:32 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:25 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -643,15 +643,15 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:33 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Israel launches strikes across Iran and continues military operations in Lebanon, with dozens killed in a failed raid to recover a pilot&#x27;s remains, according to The Guardian. Northern Israeli residents are ordered to evacuate as fighting intensifies.
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:26 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Israel conducts airborne raids in Lebanon and strikes on Iranian cities including Tehran and Isfahan, according to France 24, while dozens are killed in Israeli strikes after a failed operation to recover a pilot&#x27;s remains, The Guardian reports.
 
-• Iran&#x27;s Islamic Revolutionary Guard Corps claims to have struck an oil tanker in the Strait of Hormuz, prompting a UKMTO warning, while the New York Times reports Iran&#x27;s Navy faces weakening capacity despite ongoing challenges to regional shipping.
+• Iran&#x27;s Revolutionary Guard claims to have struck an oil tanker in the Strait of Hormuz despite the president&#x27;s apology, and continues targeting Gulf states, France 24 reports, as the UKMTO issues warnings in the strategic waterway.
 
-• Hundreds of thousands flee conflict zones, with France 24 reporting 500,000 residents told to evacuate Beirut&#x27;s Dahiyeh district and residents in Tyre ordered to leave as Israeli operations expand in Lebanon.
+• Hundreds of thousands face displacement across the region, with France 24 reporting 500,000 residents told to flee the Dahiyeh district in Beirut and Israeli evacuation orders issued in northern areas including Tyre.
 
-• Israel pauses UAE repatriation efforts after a drone attack hits Dubai airport, Reuters reports, signaling broader regional tensions beyond active conflict zones.
+• The Rafah crossing into Gaza remains closed, disrupting aid access, while Al Jazeera reports continued Israeli strikes killing civilians in Gaza amid the wider conflict.
 
-• Gulf leaders face pressure to respond to escalating tensions, with Jerusalem Post commentary suggesting they may miss diplomatic opportunities regarding Iran as the conflict widens.</div></div>
+• Israel pauses UAE repatriation efforts after a drone attack hits Dubai airport, Reuters reports, highlighting escalating tensions across the Gulf region.</div></div>
     <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
@@ -1580,6 +1580,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "What people in Gaza are saying about the closure of the Rafah crossing", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/what-people-in-gaza-are-saying-about-the-closure-of-the-rafah-crossing?traffic_source=rss", time: "2026-03-07T16:56:01Z" },
       { title: "Israel kills father, daughter in Gaza as genocide continues amid wider war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/israel-kills-father-daughter-in-gaza-as-genocide-continues-amid-wider-war?traffic_source=rss", time: "2026-03-07T14:00:42Z" },
       { title: "From fortified ORs to popup clinics, Israel’s medical centers streamline wartime operations", source: "Times of Israel", url: "https://www.timesofisrael.com/from-fortified-ors-to-popup-clinics-israels-medical-centers-streamline-wartime-operations/", time: "2026-03-07T05:24:57Z" },
       { title: "Mamdani’s wife liked posts celebrating Oct. 7", source: "Times of Israel", url: "https://www.timesofisrael.com/mamdanis-wife-liked-posts-celebrating-oct-7/", time: "2026-03-07T03:54:09Z" },
@@ -1618,6 +1619,25 @@ const locations = [
     ]
   },
   {
+    name: "Dubai", country: "UAE",
+    lat: 25.2048, lng: 55.2708,
+    category: "strikes",
+    articles: [
+      { title: "Gulf leaders are about to pass up the Iran moment - comment", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889142", time: "2026-03-07T17:59:04Z" },
+      { title: "Iran keeps targeting Gulf States despite president's apology", source: "France 24", url: "https://www.france24.com/en/iran-keeps-targeting-gulf-states-despite-president-s-apology", time: "2026-03-07T17:24:01Z" },
+      { title: "Israel said to pause UAE repatriation efforts as Dubai airport hit by drone attack", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-said-to-pause-uae-repatriation-efforts-as-dubai-airport-hit-by-drone-attack/", time: "2026-03-07T16:11:22Z" },
+      { title: "Moment drone strikes Dubai International Airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/moment-drone-strikes-dubai-international-airport?traffic_source=rss", time: "2026-03-07T08:33:40Z" },
+      { title: "MSC Steps Up to Return Cruise Passengers Stranded in Dubai", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/travel/stranded-cruise-passengers-gulf-war.html", time: "2026-03-06T20:10:21Z" },
+      { title: "'We've taught toddlers to take cover': Living in Dubai as Iran attacks", source: "Sky News", url: "https://news.sky.com/story/weve-taught-toddlers-to-take-cover-living-in-dubai-as-iran-attacks-13516244", time: "2026-03-06T19:01:00Z" },
+      { title: "Influencers sold the world a fantasy Dubai – and now it’s gone in a puff of missile smoke | Gaby Hinsliff", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/06/influencers-sold-fantasy-dubai-missile-economic-migrants", time: "2026-03-06T08:00:17Z" },
+      { title: "Desperate travelers wait as Dubai resumes a few flights.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/05/world/iran-war-israel-trump/desperate-travelers-wait-as-dubai-resumes-a-few-flights", time: "2026-03-05T20:33:49Z" },
+      { title: "UAE oil depot fire still raging day after drone sparks blaze", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/4/uae-oil-depot-fire-still-raging-day-after-drone-sparks-blaze?traffic_source=rss", time: "2026-03-04T23:49:52Z" },
+      { title: "Dubai influencers 'interrupted' by Iran strikes wake up from a 'senseless dream'", source: "France 24", url: "https://www.france24.com/en/tv-shows/press-review/20260304-dubai-influencers-interrupted-by-iran-strikes-wake-up-from-a-senseless-dream", time: "2026-03-04T11:24:06Z" },
+      { title: "U.S. consulate grounds in Dubai set ablaze by suspected Iranian drone strike", source: "CBS News", url: "https://www.cbsnews.com/video/us-consulate-grounds-in-dubai-set-ablaze-by-suspected-iranian-drone-strike/", time: "2026-03-04T00:24:00Z" },
+      { title: "U.S. Consulate in Dubai struck by suspected drone, State Dept. cable says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T21:03:40Z" },
+    ]
+  },
+  {
     name: "Akrotiri, Cyprus", country: "Cyprus",
     lat: 34.5839, lng: 32.988,
     category: "uk",
@@ -1633,24 +1653,6 @@ const locations = [
       { title: "‘We never imagined this’: the Cypriot village on edge after RAF Akrotiri drone strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/cypriot-village-on-edge-after-raf-akrotiri-drone-strike", time: "2026-03-04T09:00:44Z" },
       { title: "UK deploying warship, helicopters to Cyprus after drone strike", source: "Fox News", url: "https://www.foxnews.com/world/uk-deploying-warship-helicopters-cyprus-after-drone-strike", time: "2026-03-03T19:47:16Z" },
       { title: "UK to deploy warship to Cyprus", source: "Sky News", url: "https://news.sky.com/story/uk-will-deploy-hms-dragon-in-cyprus-sir-keir-starmer-confirms-13514741", time: "2026-03-03T16:49:00Z" },
-    ]
-  },
-  {
-    name: "Dubai", country: "UAE",
-    lat: 25.2048, lng: 55.2708,
-    category: "strikes",
-    articles: [
-      { title: "Gulf leaders are about to pass up the Iran moment - comment", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889142", time: "2026-03-07T17:59:04Z" },
-      { title: "Israel said to pause UAE repatriation efforts as Dubai airport hit by drone attack", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-said-to-pause-uae-repatriation-efforts-as-dubai-airport-hit-by-drone-attack/", time: "2026-03-07T16:11:22Z" },
-      { title: "Moment drone strikes Dubai International Airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/moment-drone-strikes-dubai-international-airport?traffic_source=rss", time: "2026-03-07T08:33:40Z" },
-      { title: "MSC Steps Up to Return Cruise Passengers Stranded in Dubai", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/travel/stranded-cruise-passengers-gulf-war.html", time: "2026-03-06T20:10:21Z" },
-      { title: "'We've taught toddlers to take cover': Living in Dubai as Iran attacks", source: "Sky News", url: "https://news.sky.com/story/weve-taught-toddlers-to-take-cover-living-in-dubai-as-iran-attacks-13516244", time: "2026-03-06T19:01:00Z" },
-      { title: "Influencers sold the world a fantasy Dubai – and now it’s gone in a puff of missile smoke | Gaby Hinsliff", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/06/influencers-sold-fantasy-dubai-missile-economic-migrants", time: "2026-03-06T08:00:17Z" },
-      { title: "Desperate travelers wait as Dubai resumes a few flights.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/05/world/iran-war-israel-trump/desperate-travelers-wait-as-dubai-resumes-a-few-flights", time: "2026-03-05T20:33:49Z" },
-      { title: "UAE oil depot fire still raging day after drone sparks blaze", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/4/uae-oil-depot-fire-still-raging-day-after-drone-sparks-blaze?traffic_source=rss", time: "2026-03-04T23:49:52Z" },
-      { title: "Dubai influencers 'interrupted' by Iran strikes wake up from a 'senseless dream'", source: "France 24", url: "https://www.france24.com/en/tv-shows/press-review/20260304-dubai-influencers-interrupted-by-iran-strikes-wake-up-from-a-senseless-dream", time: "2026-03-04T11:24:06Z" },
-      { title: "U.S. consulate grounds in Dubai set ablaze by suspected Iranian drone strike", source: "CBS News", url: "https://www.cbsnews.com/video/us-consulate-grounds-in-dubai-set-ablaze-by-suspected-iranian-drone-strike/", time: "2026-03-04T00:24:00Z" },
-      { title: "U.S. Consulate in Dubai struck by suspected drone, State Dept. cable says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T21:03:40Z" },
     ]
   },
   {
