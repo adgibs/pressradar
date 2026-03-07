@@ -1616,6 +1616,9 @@ def inject_summary_into_html(html_file, summary):
     html = html_path.read_text()
 
     safe_summary = html_module.escape(summary)
+    # Convert newlines to <br> for bullet separation (no pre-line needed)
+    safe_summary = re.sub(r'\n{2,}', '<br>', safe_summary)
+    safe_summary = safe_summary.replace('\n', '<br>')
     now = datetime.now(timezone.utc)
     title_str = now.strftime("AI Briefing · %H:%M UTC, %-d %b %Y")
 

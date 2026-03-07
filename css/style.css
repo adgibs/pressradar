@@ -566,6 +566,32 @@
   body.dark .fav-btn:hover { color: #f39c12; }
   body.dark .fav-btn.favorited { color: #f39c12; }
 
+  #map-style-toggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 2px;
+  }
+  .style-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: #666;
+  }
+  .style-btn.active {
+    background: #2471a3;
+    color: #fff;
+  }
   body.dark #map-style-toggle { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
   body.dark .style-btn { color: #aaa !important; }
   body.dark .style-btn.active { background: #2471a3 !important; color: #fff !important; }
@@ -580,7 +606,8 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px 14px;
-    max-width: calc(100% - 80px);
+    width: calc(100% - 80px);
+    box-sizing: border-box;
     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
     backdrop-filter: blur(8px);
   }
@@ -591,22 +618,18 @@
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
-  }
-  #ai-summary-text {
-    white-space: pre-line;
-    font-size: 0.82rem;
-    color: #222;
-    line-height: 1.35;  /* was 1.5, reduce for tighter bullets */
-  }
-  body.dark #ai-summary-box { background: rgba(22,33,62,0.95); border-color: #333; }
-  body.dark #ai-summary-title { color: #e74c3c; }
-  body.dark #ai-summary-text {
-    white-space: pre-line; color: #ddd; }
-
-  #ai-summary-title {
     cursor: pointer;
     user-select: none;
   }
+  #ai-summary-text {
+    font-size: 0.82rem;
+    color: #222;
+    line-height: 1.25;
+  }
+  body.dark #ai-summary-box { background: rgba(22,33,62,0.95); border-color: #333; }
+  body.dark #ai-summary-title { color: #e74c3c; }
+  body.dark #ai-summary-text { color: #ddd; }
+
   #ai-summary-title::after {
     content: ' ▾';
     font-size: 0.65rem;
