@@ -618,7 +618,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:24 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:41 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -641,7 +641,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-text">Loading briefing...</div><div id="ai-summary-time">AI briefing</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-text">Heavy flooding devastates Kenya&#x27;s capital, killing at least 23 people and disrupting Nairobi airport operations. Guinea&#x27;s military junta orders dissolution of 40 political parties including major opposition groups, while violence escalates across West Africa with hundreds abducted by militants in Nigeria and the Sahel region. A mine collapse in eastern DR Congo kills approximately 200 people amid disputed casualty figures.</div><div id="ai-summary-time">AI briefing · 12:41 UTC</div></div>
     <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
@@ -800,6 +800,16 @@ const locations = [
     ]
   },
   {
+    name: "Nairobi", country: "Kenya",
+    lat: -1.2921, lng: 36.8219,
+    category: "political",
+    articles: [
+      { title: "Heavy rains and flooding kills at least 23 in Nairobi", source: "BBC News", url: "https://www.bbc.com/news/articles/cn87pl8e2l5o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T12:21:40Z" },
+      { title: "Nairobi flash floods kill more than 20 people and cause widespread airport disruption", source: "Sky News", url: "https://news.sky.com/story/nairobi-flash-floods-kill-more-than-20-people-and-cause-widespread-airport-disruption-13516437", time: "2026-03-07T11:24:00Z" },
+      { title: "From 2011: Wangari Maathai, Nobel Peace Prize Laureate, Dies at 71", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/africa/wangari-maathai-dead.html", time: "2026-03-06T17:07:46Z" },
+    ]
+  },
+  {
     name: "Goma", country: "DR Congo",
     lat: -1.6585, lng: 29.2206,
     category: "conflict",
@@ -898,14 +908,6 @@ const locations = [
     ]
   },
   {
-    name: "Nairobi", country: "Kenya",
-    lat: -1.2921, lng: 36.8219,
-    category: "political",
-    articles: [
-      { title: "From 2011: Wangari Maathai, Nobel Peace Prize Laureate, Dies at 71", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/africa/wangari-maathai-dead.html", time: "2026-03-06T17:07:46Z" },
-    ]
-  },
-  {
     name: "Abuja", country: "Nigeria",
     lat: 9.0579, lng: 7.4951,
     category: "conflict",
@@ -919,6 +921,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "Lewis Hamilton sets sights on racing in an African grand prix before retiring", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/05/lewis-hamilton-race-africa-grand-prix-retiring-formula-one-colonial", time: "2026-03-05T13:37:15Z" },
+    ]
+  },
+  {
+    name: "Conakry", country: "Guinea",
+    lat: 9.6412, lng: -13.5784,
+    category: "political",
+    articles: [
+      { title: "Guinea orders dissolution of 40 political parties, including three main opposition groups", source: "France 24", url: "https://www.france24.com/en/africa/20260307-guinea-orders-dissolution-40-political-parties-including-three-main-opposition-goups", time: "2026-03-07T12:18:42Z" },
     ]
   },
 ];
