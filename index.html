@@ -6,34 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PressRadar.me — Middle East News Map</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js">
-// Count articles and show badge on active tab
-(function() {
-  let total = 0;
-  locations.forEach(loc => { total += loc.articles.length; });
-  const activeTab = document.querySelector('.region-tab.active');
-  if (activeTab) {
-    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
-  }
-  // Update subtitle count
-  const countEl = document.getElementById('total-count');
-  if (countEl) countEl.textContent = total;
-})();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js">
-// Count articles and show badge on active tab
-(function() {
-  let total = 0;
-  locations.forEach(loc => { total += loc.articles.length; });
-  const activeTab = document.querySelector('.region-tab.active');
-  if (activeTab) {
-    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
-  }
-  // Update subtitle count
-  const countEl = document.getElementById('total-count');
-  if (countEl) countEl.textContent = total;
-})();
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #222; }
@@ -2410,19 +2384,6 @@ if (allTimes.length) {
   document.getElementById('last-updated').textContent = formatTime(newest.toISOString()) + ' UTC';
 }
 
-// Count articles and show badge on active tab
-(function() {
-  let total = 0;
-  locations.forEach(loc => { total += loc.articles.length; });
-  const activeTab = document.querySelector('.region-tab.active');
-  if (activeTab) {
-    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
-  }
-  // Update subtitle count
-  const countEl = document.getElementById('total-count');
-  if (countEl) countEl.textContent = total;
-})();
-
 function toggleFilters(el) {
   const body = document.getElementById('filters-body');
   const arrow = el.querySelector('.toggle-arrow');
@@ -2468,6 +2429,19 @@ function toggleDarkMode() {
       }
     }, 500);
   }
+})();
+
+// Count articles and show badge on active tab
+(function() {
+  let total = 0;
+  locations.forEach(loc => { total += loc.articles.length; });
+  const activeTab = document.querySelector('.region-tab.active');
+  if (activeTab) {
+    activeTab.innerHTML += ' <span class="tab-badge">' + total + '</span>';
+  }
+  // Update subtitle count
+  const countEl = document.getElementById('total-count');
+  if (countEl) countEl.textContent = total;
 })();
 </script>
 </body>
