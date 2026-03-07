@@ -1550,17 +1550,14 @@ def get_recent_headlines(html_file, max_articles=20):
 
 
 def generate_ai_summary(region_name, headlines):
-    """Generate a natural-language summary of recent headlines using Anthropic API."""
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    """Generate a natural-language summary of recent headlines using Google Gemini API (free tier)."""
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("  No ANTHROPIC_API_KEY set — skipping AI summary")
+        print("  No GEMINI_API_KEY set — skipping AI summary")
         return None
 
-    try:
-        import anthropic
-    except ImportError:
-        print("  anthropic package not installed — skipping AI summary")
-        return None
+    import urllib.request
+    import urllib.error
 
     # Build the headlines list for the prompt
     headline_text = "\n".join(
@@ -1577,14 +1574,17 @@ Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 Recent headlines:
 {headline_text}"""
 
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    payload = json.dumps({
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"maxOutputTokens": 150, "temperature": 0.3}
+    }).encode("utf-8")
+
     try:
-        client = anthropic.Anthropic(api_key=api_key)
-        message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=150,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        summary = message.content[0].text.strip()
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+        summary = result["candidates"][0]["content"]["parts"][0]["text"].strip()
         print(f"  AI summary for {region_name}: {summary[:80]}...")
         return summary
     except Exception as e:
