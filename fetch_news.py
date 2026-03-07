@@ -1567,7 +1567,7 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Write a 2-3 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Keep it under 60 words.
+Write a 3-4 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it under 100 words.
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
@@ -1577,7 +1577,7 @@ Recent headlines:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 150, "temperature": 0.3}
+        "generationConfig": {"maxOutputTokens": 250, "temperature": 0.3}
     }).encode("utf-8")
 
     try:
