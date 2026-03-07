@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:26 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:26 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:27 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Trump convenes regional summit with Latin American rightwing leaders to counter Chinese influence.<br>• US and Venezuela restore diplomatic ties following Maduro&#x27;s capture and regime change.<br>• Peru suffers bombing at nightclub injuring 33 and severe flooding in south.<br>• Mexico deploys 100,000 security personnel ahead of World Cup hosting.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:27 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Trump convenes regional summit with Latin American rightwing leaders, focusing on Cuba and cartels.<br>• US and Venezuela restore diplomatic ties following Maduro&#x27;s capture two months ago.<br>• Peru nightclub bombing injures 33 people; security concerns persist across region.<br>• Mexico deploys 100,000 security personnel ahead of World Cup event.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 23.1136, lng: -82.3666,
     category: "political",
     articles: [
+      { title: "Cuba says electricity plant successfully repaired after large blackout", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/cuba-says-electricity-plant-successfully-repaired-after-large-blackout?traffic_source=rss", time: "2026-03-07T20:34:18Z" },
       { title: "Protests in Cuba after thousands without power following blackout", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/protests-in-cuba-after-thousands-without-power-following-blackout?traffic_source=rss", time: "2026-03-07T10:18:45Z" },
       { title: "Cuba announces fifth death after shootout with Florida-tagged speedboat", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/cuba-announces-fifth-death-after-shootout-with-florida-tagged-speedboat?traffic_source=rss", time: "2026-03-07T00:09:00Z" },
       { title: "As Trump Focuses on Cuba, DOJ Seeks Charges Against Its Leaders", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/us/politics/justice-dept-orders-cuba-investigation.html", time: "2026-03-06T23:23:34Z" },
@@ -234,6 +235,7 @@ const locations = [
     lat: -12.0464, lng: -77.0428,
     category: "economic",
     articles: [
+      { title: "More than 30 injured in nightclub bombing in northern Peru", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/more-than-30-injured-in-nightclub-bombing-in-northern-peru?traffic_source=rss", time: "2026-03-07T19:26:21Z" },
       { title: "Bombing at nightclub in Peru injures 33, including minors, authorities say", source: "CBS News", url: "https://www.cbsnews.com/news/peru-trujillo-dali-nightclub-bombing/", time: "2026-03-07T17:16:37Z" },
       { title: "Southern Peru flooded after torrential rain", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/southern-peru-flooded-after-torrential-rain?traffic_source=rss", time: "2026-03-07T10:08:25Z" },
       { title: "Human rights court orders reparations for forced sterilisation case in Peru", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/human-rights-court-orders-reparations-for-forced-sterilisation-case-in-peru?traffic_source=rss", time: "2026-03-06T20:31:37Z" },
@@ -291,7 +293,6 @@ const locations = [
     ]
   },
 ];
-
 // Timeline computation
 let allTimes = [];
 locations.forEach(loc => loc.articles.forEach(a => {

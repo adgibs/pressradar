@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:25 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:26 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:26 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Armed robots deploy on Ukraine battlefield as fighting intensifies across multiple fronts.<br>• Russian strikes kill dozens in Kharkiv and other Ukrainian cities during nationwide air alerts.<br>• Hungary seizes Ukrainian military convoy carrying millions in gold and cash, escalating tensions.<br>• Trump urges Zelenskyy to negotiate deal with Russia as sanctions debate continues.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:26 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Armed robots now deployed on Ukrainian battlefields as conflict intensifies significantly.<br>• Russian missiles strike Kharkiv killing at least ten civilians including children.<br>• Hungary seizes Ukrainian military convoy assets worth millions amid diplomatic tensions.<br>• Trump urges Ukraine peace deal while Western allies strengthen support for Kyiv.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Russia kills 10 in Ukraine strike including children with new missile", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-kharkiv-strike-including-children-using-new-missile?traffic_source=rss", time: "2026-03-07T20:13:31Z" },
       { title: "Russian strike on apartment building kills at least 8 in Ukraine", source: "CBS News", url: "https://www.cbsnews.com/news/russia-ukraine-war-missile-strike-kharkiv/", time: "2026-03-07T11:56:22Z" },
       { title: "Seven killed in Russian missile strikes in Ukraine's second largest city", source: "Sky News", url: "https://news.sky.com/story/two-children-among-seven-dead-in-russian-missile-strikes-in-ukraine-13516381", time: "2026-03-07T07:10:00Z" },
       { title: "Armed robots take to the battlefield in Ukraine war", source: "BBC News", url: "https://www.bbc.com/news/articles/c62662gzlp8o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T00:36:19Z" },
@@ -282,8 +283,15 @@ const locations = [
       { title: "Ukraine war briefing: Trump urges Zelenskyy to ‘get a deal done’ with Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/ukraine-war-briefing-trump-urges-zelenskyy-to-get-a-deal-done-with-russia", time: "2026-03-06T02:14:30Z" },
     ]
   },
+  {
+    name: "Zaporizhzhia", country: "Ukraine",
+    lat: 47.8388, lng: 35.1396,
+    category: "humanitarian",
+    articles: [
+      { title: "Ukrainian forces halt advance in Zaporizhzhia, Kyiv officials say", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/07/ukraine-russia-conflict-zaporizhzhia/", time: "2026-03-07T19:27:05Z" },
+    ]
+  },
 ];
-
 // Timeline computation
 let allTimes = [];
 locations.forEach(loc => loc.articles.forEach(a => {

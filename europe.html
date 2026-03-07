@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:26 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:26 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:26 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Russia allegedly orchestrated parcel fires across UK and Europe, investigators report.<br>• Finland plans to lift decades-long nuclear weapons hosting ban amid tensions.<br>• Hungary seizes Ukrainian cash and gold, sparking hostage situation accusations from Kyiv.<br>• France faces potential far-right presidency as Europe prepares contingency measures.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:27 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Russia allegedly orchestrated parcel fires across UK and Europe, investigators report.<br>• Finland plans lifting nuclear weapons ban after decades of non-alignment policy.<br>• Hungary seizes Ukrainian gold and cash, sparking detention and hostage accusations.<br>• France faces potential far-right presidency as Europe prepares limiting response measures.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -161,6 +161,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "Ukrainian forces halt advance in Zaporizhzhia, Kyiv officials say", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/07/ukraine-russia-conflict-zaporizhzhia/", time: "2026-03-07T19:27:05Z" },
       { title: "Russia Attacks Kharkiv and Kyiv in Ukraine", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/europe/russia-ukraine-kharkiv-zelensky-airstrike.html", time: "2026-03-07T11:42:55Z" },
       { title: "Zelensky visits eastern front as Ukraine and Russia complete POW swap", source: "France 24", url: "https://www.france24.com/en/europe/20260306-zelensky-visits-eastern-front-as-ukraine-and-russia-complete-pow-swap", time: "2026-03-06T22:37:17Z" },
       { title: "Hungary ‘demands answers’ over seized Ukrainian gold and cash as Kyiv accuses Budapest of ‘hostage’ situation – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/06/ukraine-russia-hungary-orban-zelenskyy-putin-middle-east-iran-cyprus-europe-latest-news-updates", time: "2026-03-06T16:29:26Z" },
@@ -346,7 +347,6 @@ const locations = [
     ]
   },
 ];
-
 // Timeline computation
 let allTimes = [];
 locations.forEach(loc => loc.articles.forEach(a => {
