@@ -1567,7 +1567,7 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Write a 3-4 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it under 100 words.
+Write a 4-5 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 80 and 120 words.
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
@@ -1599,14 +1599,14 @@ def inject_summary_into_html(html_file, summary):
 
     safe_summary = html_module.escape(summary)
     now = datetime.now(timezone.utc)
-    time_str = now.strftime("%H:%M UTC")
+    title_str = now.strftime("AI Briefing · %H:%M UTC, %-d %b %Y")
 
-    summary_html = f'<div id="ai-summary-text">{safe_summary}</div><div id="ai-summary-time">AI briefing · {time_str}</div>'
+    summary_html = f'<div id="ai-summary-title">{title_str}</div><div id="ai-summary-text">{safe_summary}</div><div id="ai-summary-time"></div>'
 
     # Check if summary box already exists — update content
     if 'id="ai-summary-text"' in html:
         html = re.sub(
-            r'<div id="ai-summary-text">.*?</div><div id="ai-summary-time">.*?</div>',
+            r'<div id="ai-summary-title">.*?</div><div id="ai-summary-text">.*?</div><div id="ai-summary-time">.*?</div>',
             summary_html,
             html,
             flags=re.DOTALL,

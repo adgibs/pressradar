@@ -584,29 +584,35 @@
   /* AI Summary Box */
   #ai-summary-box {
     position: absolute;
-    top: 10px;
+    top: 80px;
     left: 10px;
     z-index: 999;
-    background: rgba(255,255,255,0.93);
+    background: rgba(255,255,255,0.95);
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px 14px;
-    max-width: 420px;
+    max-width: 440px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
     backdrop-filter: blur(8px);
+  }
+  #ai-summary-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #c0392b;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
   #ai-summary-text {
     font-size: 0.82rem;
     color: #222;
-    line-height: 1.45;
+    line-height: 1.5;
   }
   #ai-summary-time {
-    font-size: 0.65rem;
-    color: #999;
-    margin-top: 4px;
-    text-align: right;
+    display: none;
   }
-  body.dark #ai-summary-box { background: rgba(22,33,62,0.92); border-color: #333; }
+  body.dark #ai-summary-box { background: rgba(22,33,62,0.95); border-color: #333; }
+  body.dark #ai-summary-title { color: #e74c3c; }
   body.dark #ai-summary-text { color: #ddd; }
   body.dark #ai-summary-time { color: #777; }
 </style>
@@ -639,7 +645,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-text"># Middle East Briefing – 07 March 2026
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing</div><div id="ai-summary-text"># Middle East Briefing – 07 March 2026
 
 Escalating conflict between Israel and Iran-backed forces dominates the region as Israeli military operations intensify across Lebanon and Iran responds with missile strikes toward Israeli territory. Hezbollah clashes with Israeli troops in southern Lebanon have displaced approximately 300,000 civilians and devastated Beirut&#x27;s suburbs, while air raid sirens sound across Israeli cities. Kurdish Iraq warns against using its territory for attacks on Iran, signaling broader regional tensions affecting millions of workers.</div><div id="ai-summary-time">AI briefing · 12:41 UTC</div></div>
     <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
