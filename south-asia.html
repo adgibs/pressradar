@@ -580,6 +580,37 @@
   body.dark #map-style-toggle { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
   body.dark .style-btn { color: #aaa !important; }
   body.dark .style-btn.active { background: #2471a3 !important; color: #fff !important; }
+
+  /* AI Summary Box */
+  #ai-summary-box {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 16px;
+    max-width: 560px;
+    width: 90%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    backdrop-filter: blur(8px);
+  }
+  #ai-summary-text {
+    font-size: 0.82rem;
+    color: #222;
+    line-height: 1.45;
+  }
+  #ai-summary-time {
+    font-size: 0.65rem;
+    color: #999;
+    margin-top: 4px;
+    text-align: right;
+  }
+  body.dark #ai-summary-box { background: rgba(22,33,62,0.92); border-color: #333; }
+  body.dark #ai-summary-text { color: #ddd; }
+  body.dark #ai-summary-time { color: #777; }
 </style>
 </head>
 <body>
@@ -610,7 +641,8 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-text">Loading briefing...</div><div id="ai-summary-time">AI briefing</div></div>
+    <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
     <button class="style-btn" id="btn-terrain" onclick="setMapStyle('terrain')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Terrain</button>

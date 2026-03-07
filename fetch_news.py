@@ -11,6 +11,7 @@ import re
 import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+import html as html_module
 
 # ── RSS Feed Sources ──────────────────────────────────────────────
 FEEDS = [
@@ -1524,6 +1525,103 @@ def update_region(html_file, feeds, keywords, location_map, location_priority, r
     update_html(js_data, html_file)
 
 
+# ── AI Summary Generation ────────────────────────────────────────
+
+def get_recent_headlines(html_file, max_articles=20):
+    """Extract the most recent article titles from an HTML page."""
+    html_path = Path(__file__).parent / html_file
+    if not html_path.exists():
+        return []
+    html = html_path.read_text()
+    existing = parse_existing_articles(html)
+    all_articles = []
+    for loc in existing.values():
+        for a in loc["articles"]:
+            all_articles.append({
+                "title": a["title"],
+                "source": a["source"],
+                "location": loc["name"],
+                "country": loc["country"],
+                "time": a["time"],
+            })
+    # Sort by time descending, take most recent
+    all_articles.sort(key=lambda x: x["time"], reverse=True)
+    return all_articles[:max_articles]
+
+
+def generate_ai_summary(region_name, headlines):
+    """Generate a natural-language summary of recent headlines using Anthropic API."""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        print("  No ANTHROPIC_API_KEY set — skipping AI summary")
+        return None
+
+    try:
+        import anthropic
+    except ImportError:
+        print("  anthropic package not installed — skipping AI summary")
+        return None
+
+    # Build the headlines list for the prompt
+    headline_text = "\n".join(
+        f"- {h['title']} ({h['source']}, {h['location']}, {h['country']})"
+        for h in headlines
+    )
+
+    now = datetime.now(timezone.utc)
+    prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
+Write a 2-3 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Keep it under 60 words.
+
+Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
+
+Recent headlines:
+{headline_text}"""
+
+    try:
+        client = anthropic.Anthropic(api_key=api_key)
+        message = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=150,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        summary = message.content[0].text.strip()
+        print(f"  AI summary for {region_name}: {summary[:80]}...")
+        return summary
+    except Exception as e:
+        print(f"  AI summary failed for {region_name}: {e}")
+        return None
+
+
+def inject_summary_into_html(html_file, summary):
+    """Inject or update the AI summary box in an HTML file."""
+    html_path = Path(__file__).parent / html_file
+    html = html_path.read_text()
+
+    safe_summary = html_module.escape(summary)
+    now = datetime.now(timezone.utc)
+    time_str = now.strftime("%H:%M UTC")
+
+    summary_html = f'<div id="ai-summary-text">{safe_summary}</div><div id="ai-summary-time">AI briefing · {time_str}</div>'
+
+    # Check if summary box already exists — update content
+    if 'id="ai-summary-text"' in html:
+        html = re.sub(
+            r'<div id="ai-summary-text">.*?</div><div id="ai-summary-time">.*?</div>',
+            summary_html,
+            html,
+            flags=re.DOTALL,
+        )
+    else:
+        # Need to add the summary container to the HTML
+        # Insert it inside the map div, after the map-style-toggle
+        html = html.replace(
+            '<div id="map-style-toggle"',
+            '<div id="ai-summary-box">' + summary_html + '</div>\n    <div id="map-style-toggle"',
+        )
+
+    html_path.write_text(html)
+
+
 def main():
     print("PressRadar.me — Fetching news...")
 
@@ -1615,6 +1713,27 @@ def main():
         AMERICAS_LOCATION_PRIORITY,
         "Americas",
     )
+
+    # ── AI Summaries ──
+    print("\n=== Generating AI Summaries ===")
+    regions = [
+        ("Middle East", "index.html"),
+        ("Ukraine", "ukraine.html"),
+        ("East Asia", "east-asia.html"),
+        ("Africa", "africa.html"),
+        ("Europe", "europe.html"),
+        ("South Asia", "south-asia.html"),
+        ("Americas", "americas.html"),
+    ]
+    for region_name, html_file in regions:
+        headlines = get_recent_headlines(html_file, max_articles=20)
+        if not headlines:
+            print(f"  No headlines for {region_name} — skipping")
+            continue
+        summary = generate_ai_summary(region_name, headlines)
+        if summary:
+            inject_summary_into_html(html_file, summary)
+            print(f"  Injected summary into {html_file}")
 
     print("\nDone!")
 
