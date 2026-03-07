@@ -34,7 +34,7 @@
     font-weight: 600;
   }
 
-  #region-nav { display: flex; gap: 0; background: #fff; border-bottom: 2px solid #e0e0e0; padding: 0 24px; }
+  #region-nav { display: flex; gap: 0; background: #fff; border-bottom: 2px solid #e0e0e0; padding: 0 24px; align-items: center; }
   .region-tab { padding: 10px 20px; font-size: 13px; font-weight: 600; color: #888; cursor: pointer; border: none; background: none; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
   .region-tab:hover { color: #444; }
   .region-tab.active { color: #e74c3c; border-bottom-color: #e74c3c; }
@@ -532,6 +532,28 @@
     margin-right: 3px;
     border-radius: 2px;
   }
+
+  .nav-filters {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .nav-filters select {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 12px;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    max-width: 150px;
+  }
+  .nav-filters select:focus { outline: none; border-color: #e74c3c; }
+  .nav-filters .paywall-filter { font-size: 11px; color: #666; white-space: nowrap; }
+  body.dark .nav-filters select { background: #0f3460; border-color: #333; color: #e0e0e0; }
+  body.dark .nav-filters .paywall-filter { color: #aaa; }
 </style>
 </head>
 <body>
@@ -553,6 +575,11 @@
   <button class="region-tab" onclick="window.location.href='europe.html'">Europe</button>
   <button class="region-tab active" onclick="window.location.href='south-asia.html'">South Asia</button>
   <button class="region-tab" onclick="window.location.href='americas.html'">Americas</button>
+  <div class="nav-filters">
+    <select id="country-select" onchange="filterCountry(this.value || null)"><option value="">All countries</option></select>
+    <select id="source-select" onchange="filterSource(this.value || null)"><option value="">All sources</option></select>
+    <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
+  </div>
 </div>
 
 <div id="container">
@@ -591,23 +618,10 @@
         </div>
       </div>
 
-      <div id="filter-bar">
-        <div class="filter-row">
-          <label for="country-select">Country:</label>
-          <select id="country-select" onchange="filterCountry(this.value || null)">
-            <option value="">All countries</option>
-          </select>
-          <label for="source-select">Source:</label>
-          <select id="source-select" onchange="filterSource(this.value || null)">
-            <option value="">All sources</option>
-          </select>
-          <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
-        </div>
-      </div>
 
-      </div><!-- end filters-body -->
 
       <div id="trending-bar"></div>
+      </div><!-- end filters-body -->
     </div>
     <div id="article-list"></div>
   </div>
