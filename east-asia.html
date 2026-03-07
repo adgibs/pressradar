@@ -554,6 +554,28 @@
   .nav-filters .paywall-filter { font-size: 11px; color: #666; white-space: nowrap; }
   body.dark .nav-filters select { background: #0f3460; border-color: #333; color: #e0e0e0; }
   body.dark .nav-filters .paywall-filter { color: #aaa; }
+
+  /* Favorites */
+  .fav-btn {
+    background: none; border: none; cursor: pointer; font-size: 14px;
+    padding: 0 2px; color: #ccc; transition: color 0.15s; line-height: 1;
+    vertical-align: middle;
+  }
+  .fav-btn:hover { color: #f39c12; }
+  .fav-btn.favorited { color: #f39c12; }
+  .fav-toggle {
+    padding: 5px 12px; border: 1px solid #d0d0d0; border-radius: 14px;
+    background: #fff; font-size: 11px; font-weight: 600; color: #666;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap; margin-left: 6px;
+  }
+  .fav-toggle:hover { border-color: #f39c12; color: #f39c12; }
+  .fav-toggle.active { background: #f39c12; color: #fff; border-color: #f39c12; }
+  body.dark .fav-toggle { background: #0f3460; border-color: #333; color: #aaa; }
+  body.dark .fav-toggle:hover { border-color: #f39c12; color: #f39c12; }
+  body.dark .fav-toggle.active { background: #f39c12; color: #fff; border-color: #f39c12; }
+  body.dark .fav-btn { color: #555; }
+  body.dark .fav-btn:hover { color: #f39c12; }
+  body.dark .fav-btn.favorited { color: #f39c12; }
 </style>
 </head>
 <body>
@@ -578,6 +600,7 @@
   <div class="nav-filters">
     <select id="country-select" onchange="filterCountry(this.value || null)"><option value="">All countries</option></select>
     <select id="source-select" onchange="filterSource(this.value || null)"><option value="">All sources</option></select>
+    <button id="fav-toggle-btn" class="fav-toggle" onclick="toggleFavoritesView()">★ Favorites</button>
     <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
   </div>
 </div>
@@ -1101,6 +1124,16 @@ function renderSidebar() {
     }).filter(Boolean);
   }
 
+  // Apply favorites filter
+  if (showFavoritesOnly) {
+    const favs = getFavorites();
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => favs.includes(a.url));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
   const totalArticles = filtered.reduce((s, l) => s + l.articles.length, 0);
   const totalLocs = filtered.length;
   countEl.textContent = totalLocs + ' location' + (totalLocs !== 1 ? 's' : '') + ' · ' + totalArticles + ' article' + (totalArticles !== 1 ? 's' : '');
@@ -1436,6 +1469,48 @@ function toggleDarkMode() {
   const countEl = document.getElementById('total-count');
   if (countEl) countEl.textContent = total;
 })();
+
+// ===== FAVORITES =====
+let showFavoritesOnly = false;
+
+function getFavorites() {
+  try { return JSON.parse(localStorage.getItem('pressradar_favorites') || '[]'); } catch(e) { return []; }
+}
+
+function saveFavorites(favs) {
+  localStorage.setItem('pressradar_favorites', JSON.stringify(favs));
+}
+
+function toggleFavorite(url, btn) {
+  let favs = getFavorites();
+  const idx = favs.indexOf(url);
+  if (idx > -1) { favs.splice(idx, 1); btn.classList.remove('favorited'); btn.textContent = '☆'; }
+  else { favs.push(url); btn.classList.add('favorited'); btn.textContent = '★'; }
+  saveFavorites(favs);
+  updateFavCount();
+  if (showFavoritesOnly) { renderSidebar(); renderMarkers(); }
+}
+
+function isFavorited(url) {
+  return getFavorites().includes(url);
+}
+
+function toggleFavoritesView() {
+  showFavoritesOnly = !showFavoritesOnly;
+  const btn = document.getElementById('fav-toggle-btn');
+  if (btn) btn.classList.toggle('active', showFavoritesOnly);
+  renderSidebar();
+  renderMarkers();
+}
+
+function updateFavCount() {
+  const btn = document.getElementById('fav-toggle-btn');
+  if (!btn) return;
+  const count = getFavorites().length;
+  btn.textContent = '★ Favorites' + (count > 0 ? ' (' + count + ')' : '');
+}
+
+updateFavCount();
 </script>
 </body>
 </html>
