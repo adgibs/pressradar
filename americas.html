@@ -417,6 +417,48 @@
     background: rgba(255,255,255,0.3);
     color: #fff;
   }
+
+  .circle-count {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  .filters-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 6px 0;
+    user-select: none;
+  }
+  .filters-toggle .toggle-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+  }
+  .filters-toggle .toggle-arrow {
+    font-size: 10px;
+    color: #999;
+    transition: transform 0.2s;
+  }
+  .filters-toggle .toggle-arrow.open {
+    transform: rotate(180deg);
+  }
+  .filters-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+  .filters-body.open {
+    max-height: 500px;
+  }
 </style>
 </head>
 <body>
@@ -447,6 +489,11 @@
       <div class="location-count" id="loc-count"></div>
       <input type="text" id="search-box" placeholder="Search articles..." oninput="applyFilters()">
 
+      <div class="filters-toggle" onclick="toggleFilters(this)">
+        <span class="toggle-label">Filters & Timeline</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="filters-body" id="filters-body">
       <div id="timeline-section">
         <div class="timeline-label">Timeline</div>
         <div class="timeline-display" id="timeline-display">Feb 28, 22:00 — Mar 3, 10:00</div>
@@ -483,6 +530,8 @@
           <label class="paywall-filter"><input type="checkbox" id="hide-paywall" onchange="applyFilters()"> Hide paywall</label>
         </div>
       </div>
+
+      </div><!-- end filters-body -->
 
       <div id="trending-bar"></div>
     </div>
@@ -525,6 +574,20 @@ function formatTime(isoString) {
   return `${month} ${date}, ${hours}:${mins}`;
 }
 
+
+function relativeTime(isoString) {
+  const now = Date.now();
+  const t = new Date(isoString).getTime();
+  const diff = now - t;
+  const mins = Math.floor(diff / 60000);
+  const hrs = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return mins + 'm ago';
+  if (hrs < 24) return hrs + 'h ago';
+  if (days === 1) return 'yesterday';
+  return days + 'd ago';
+}
 // ===== DATA — every location has a country =====
 const locations = [
   {
@@ -1015,7 +1078,7 @@ function renderSidebar() {
               '<div class="article-title">' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span><a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a>' + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
-                '<div class="article-time">' + formatTime(a.time) + ' UTC</div>' +
+                '<div class="article-time" title="' + formatTime(a.time) + ' UTC">' + relativeTime(a.time) + '</div>' +
               '</div>' +
             '</div>';
           }).join('') +
@@ -1253,6 +1316,20 @@ if (allTimes.length) {
   const countEl = document.getElementById('total-count');
   if (countEl) countEl.textContent = total;
 })();
+
+function toggleFilters(el) {
+  const body = document.getElementById('filters-body');
+  const arrow = el.querySelector('.toggle-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+// Start with filters open
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.getElementById('filters-body');
+  const arrow = document.querySelector('.filters-toggle .toggle-arrow');
+  if (body) body.classList.add('open');
+  if (arrow) arrow.classList.add('open');
+});
 </script>
 </body>
 </html>
