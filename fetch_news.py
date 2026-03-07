@@ -1567,7 +1567,7 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Write a 4-5 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 80 and 120 words.
+Write a 5-7 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points or markdown. Do not include a title or heading. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 120 and 200 words.
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
@@ -1577,7 +1577,7 @@ Recent headlines:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 250, "temperature": 0.3}
+        "generationConfig": {"maxOutputTokens": 400, "temperature": 0.3}
     }).encode("utf-8")
 
     try:
@@ -1601,22 +1601,21 @@ def inject_summary_into_html(html_file, summary):
     now = datetime.now(timezone.utc)
     title_str = now.strftime("AI Briefing · %H:%M UTC, %-d %b %Y")
 
-    summary_html = f'<div id="ai-summary-title">{title_str}</div><div id="ai-summary-text">{safe_summary}</div><div id="ai-summary-time"></div>'
+    inner_html = f'<div id="ai-summary-title">{title_str}</div><div id="ai-summary-text">{safe_summary}</div>'
 
-    # Check if summary box already exists — update content
-    if 'id="ai-summary-text"' in html:
+    # Replace everything inside the ai-summary-box div
+    if 'id="ai-summary-box"' in html:
         html = re.sub(
-            r'<div id="ai-summary-title">.*?</div><div id="ai-summary-text">.*?</div><div id="ai-summary-time">.*?</div>',
-            summary_html,
+            r'(<div id="ai-summary-box">).*?(</div>\s*<div id="map-style-toggle")',
+            r'\1' + inner_html + r'\2',
             html,
             flags=re.DOTALL,
         )
     else:
         # Need to add the summary container to the HTML
-        # Insert it inside the map div, after the map-style-toggle
         html = html.replace(
             '<div id="map-style-toggle"',
-            '<div id="ai-summary-box">' + summary_html + '</div>\n    <div id="map-style-toggle"',
+            '<div id="ai-summary-box">' + inner_html + '</div>\n    <div id="map-style-toggle"',
         )
 
     html_path.write_text(html)
