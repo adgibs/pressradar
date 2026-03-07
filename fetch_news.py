@@ -1567,7 +1567,7 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Write a 5-7 sentence summary of the most important developments in the {region_name} region based on these recent headlines. Be factual and neutral. Focus on the 2-3 biggest stories. Do not use bullet points or markdown. Do not include a title or heading. Write in present tense as a news briefing. Do not start with "The" or "In the". Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 120 and 200 words.
+Summarise the most important developments in the {region_name} region based on these recent headlines. Write 3-5 bullet points, each 1-2 sentences. Use a bullet character (•) at the start of each point. Be factual and neutral. Focus on the biggest stories. Do not include a title or heading. Do not use markdown formatting. Write in present tense. Reference the news source for key claims (e.g. "according to BBC News" or "Reuters reports"). Keep it between 100 and 180 words total.
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
