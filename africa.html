@@ -576,6 +576,10 @@
   body.dark .fav-btn { color: #555; }
   body.dark .fav-btn:hover { color: #f39c12; }
   body.dark .fav-btn.favorited { color: #f39c12; }
+
+  body.dark #map-style-toggle { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  body.dark .style-btn { color: #aaa !important; }
+  body.dark .style-btn.active { background: #2471a3 !important; color: #fff !important; }
 </style>
 </head>
 <body>
@@ -663,9 +667,20 @@
 <div id="view-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
   <button class="view-btn active" id="btn-pins" onclick="setView('pins')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:#e74c3c;color:#fff;">Pins</button>
   <button class="view-btn" id="btn-heat" onclick="setView('heat')" style="padding:6px 12px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Heatmap</button>
+<div id="map-style-toggle" style="position:absolute;top:50px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
+  <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
+  <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
+  <button class="style-btn" id="btn-terrain" onclick="setMapStyle('terrain')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Terrain</button>
 </div>
 
 <script>
+
+// ===== FAVORITES (early declarations) =====
+let showFavoritesOnly = false;
+function getFavorites() {
+  try { return JSON.parse(localStorage.getItem('pressradar_favorites') || '[]'); } catch(e) { return []; }
+}
+
 // ===== PAYWALL SOURCES =====
 const PAYWALL_SOURCES = new Set([
   "New York Times", "Washington Post", "The Times", "The Telegraph",
@@ -923,8 +938,9 @@ let activeSource = null;
 
 // ===== MAP SETUP =====
 const map = L.map('map').setView([5.0, 20.0], 3);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors',
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
 
@@ -1231,7 +1247,7 @@ function renderSidebar() {
             const pw = isPaywall(a.source);
             const pwBadge = pw ? '<span class="paywall-badge" title="Paywall">💰</span>' : '';
             return '<div class="article-card' + (isBreaking ? ' breaking-card' : '') + '" style="border-left-color:' + col + '">' +
-              '<div class="article-title">' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span><a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a>' + newBadge + '</div>' +
+              '<div class="article-title"><button class="fav-btn' + (isFavorited(a.url) ? ' favorited' : '') + '" onclick="event.stopPropagation();toggleFavorite(\'' + a.url.replace(/'/g, "\\\'") + '\', this)">' + (isFavorited(a.url) ? '\u2605' : '\u2606') + '</button> ' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span><a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a>' + newBadge + '</div>' +
               '<div class="article-meta">' +
                 '<div class="article-source">' + srcFavicon(a.source) + '<span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time">' + relativeTime(a.time) + ' · ' + formatTime(a.time) + '</div>' +
@@ -1480,13 +1496,8 @@ function toggleDarkMode() {
   localStorage.setItem('pressradar-dark', isDark ? '1' : '0');
   document.querySelector('.dark-toggle').textContent = isDark ? '☀️' : '🌙';
   // Update Leaflet tile layer for dark mode
-  if (typeof map !== 'undefined') {
-    map.eachLayer(l => { if (l._url && l._url.includes('carto')) map.removeLayer(l); });
-    L.tileLayer(isDark
-      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-      : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-      { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19 }
-    ).addTo(map);
+  if (typeof map !== 'undefined' && typeof applyMapTiles === 'function') {
+    applyMapTiles();
   }
 }
 // Restore dark mode preference
@@ -1495,13 +1506,10 @@ function toggleDarkMode() {
     document.body.classList.add('dark');
     const btn = document.querySelector('.dark-toggle');
     if (btn) btn.textContent = '☀️';
-    // Swap tile layer after map loads
+    // Swap tile layer after map loads (handled by applyMapTiles)
     setTimeout(() => {
-      if (typeof map !== 'undefined') {
-        map.eachLayer(l => { if (l._url && l._url.includes('carto')) map.removeLayer(l); });
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-          { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19 }
-        ).addTo(map);
+      if (typeof map !== 'undefined' && typeof applyMapTiles === 'function') {
+        applyMapTiles();
       }
     }, 500);
   }
@@ -1521,11 +1529,6 @@ function toggleDarkMode() {
 })();
 
 // ===== FAVORITES =====
-let showFavoritesOnly = false;
-
-function getFavorites() {
-  try { return JSON.parse(localStorage.getItem('pressradar_favorites') || '[]'); } catch(e) { return []; }
-}
 
 function saveFavorites(favs) {
   localStorage.setItem('pressradar_favorites', JSON.stringify(favs));
@@ -1561,6 +1564,58 @@ function updateFavCount() {
 }
 
 updateFavCount();
+
+// ===== MAP STYLE SWITCHER =====
+let currentMapStyle = localStorage.getItem('pressradar-mapstyle') || 'street';
+
+const MAP_TILES = {
+  street: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+  street_dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  terrain: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
+};
+
+const MAP_ATTR = {
+  street: '&copy; OpenStreetMap &copy; CARTO',
+  satellite: '&copy; Esri &copy; Maxar',
+  terrain: '&copy; OpenTopoMap &copy; OpenStreetMap'
+};
+
+function setMapStyle(style) {
+  currentMapStyle = style;
+  localStorage.setItem('pressradar-mapstyle', style);
+  applyMapTiles();
+  // Update button states
+  document.querySelectorAll('.style-btn').forEach(b => {
+    b.style.background = 'transparent';
+    b.style.color = '#666';
+    b.classList.remove('active');
+  });
+  const btn = document.getElementById('btn-' + style);
+  if (btn) { btn.style.background = '#2471a3'; btn.style.color = '#fff'; btn.classList.add('active'); }
+}
+
+function applyMapTiles() {
+  const isDark = document.body.classList.contains('dark');
+  map.eachLayer(l => { if (l._url && (l._url.includes('carto') || l._url.includes('arcgisonline') || l._url.includes('opentopomap'))) map.removeLayer(l); });
+  let url;
+  if (currentMapStyle === 'street') {
+    url = isDark ? MAP_TILES.street_dark : MAP_TILES.street;
+  } else {
+    url = MAP_TILES[currentMapStyle];
+  }
+  L.tileLayer(url, { attribution: MAP_ATTR[currentMapStyle] || '', maxZoom: 19, subdomains: currentMapStyle === 'terrain' ? 'abc' : 'abcd' }).addTo(map);
+}
+
+// Restore saved map style
+(function() {
+  if (currentMapStyle !== 'street') {
+    setTimeout(function() {
+      setMapStyle(currentMapStyle);
+    }, 600);
+  }
+})();
+
 </script>
 </body>
 </html>
