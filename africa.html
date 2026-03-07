@@ -459,6 +459,102 @@
   .filters-body.open {
     max-height: 500px;
   }
+
+  /* Dark mode */
+  body.dark {
+    background: #1a1a2e;
+    color: #e0e0e0;
+  }
+  body.dark #header {
+    background: #16213e;
+    border-bottom-color: #e74c3c;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  body.dark #header h1 { color: #f0f0f0; }
+  body.dark #header .subtitle { color: #aaa; }
+  body.dark #header .date-badge { background: #e74c3c; }
+  body.dark #region-nav { background: #16213e; border-bottom-color: #333; }
+  body.dark .region-tab { color: #888; }
+  body.dark .region-tab:hover { color: #ccc; }
+  body.dark .region-tab.active { color: #e74c3c; border-bottom-color: #e74c3c; }
+  body.dark #sidebar { background: #1a1a2e; border-left-color: #333; }
+  body.dark #sidebar-header { background: #16213e; border-bottom-color: #333; }
+  body.dark #sidebar-header h2 { color: #f0f0f0; }
+  body.dark #search-box { background: #0f3460; border-color: #333; color: #e0e0e0; }
+  body.dark #search-box::placeholder { color: #777; }
+  body.dark #timeline-section { background: #1a1a2e; border-bottom-color: #333; }
+  body.dark .timeline-label { color: #777; }
+  body.dark .timeline-display { color: #aaa; }
+  body.dark .preset-btn { background: #0f3460; border-color: #333; color: #aaa; }
+  body.dark .preset-btn.active { background: #e74c3c; color: #fff; border-color: #e74c3c; }
+  body.dark .preset-btn:hover { background: #1a4a7a; }
+  body.dark #filter-bar { background: #1a1a2e; border-bottom-color: #333; }
+  body.dark .filter-row label { color: #aaa; }
+  body.dark .filter-row select { background: #0f3460; border-color: #333; color: #e0e0e0; }
+  body.dark #article-list { background: #1a1a2e; }
+  body.dark .country-heading { color: #ccc; border-bottom-color: #333; }
+  body.dark .location-group { border-color: #333; background: #16213e; }
+  body.dark .location-group-header { background: #16213e; }
+  body.dark .location-group-header:hover { background: #1a2a4e; }
+  body.dark .location-group-header .loc-name { color: #f0f0f0; }
+  body.dark .location-articles { background: #1a1a2e; }
+  body.dark .article-card { background: #16213e; border-left-color: #e74c3c; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+  body.dark .article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  body.dark .article-card .article-title a { color: #e0e0e0; }
+  body.dark .article-card .article-title a:visited { color: #999; }
+  body.dark .article-card .article-time { color: #888; }
+  body.dark .breaking-card { background: #2a1a0a !important; }
+  @keyframes breakingPulseDark {
+    0%, 100% { background: #2a1a0a; }
+    50% { background: #3a2010; }
+  }
+  body.dark .breaking-card { animation-name: breakingPulseDark; }
+  body.dark .filters-toggle .toggle-label { color: #777; }
+  body.dark .filters-toggle .toggle-arrow { color: #777; }
+  body.dark .range-slider-labels { color: #777; }
+  body.dark input[type="range"] { background: #333; }
+  body.dark .legend { background: rgba(22,33,62,0.95); border-color: #333; }
+  body.dark .legend h4 { color: #f0f0f0; }
+  body.dark .legend div { color: #ccc; }
+  body.dark .trending-word { background: #0f3460; border-color: #333; color: #aaa; }
+  body.dark .no-results { color: #888; }
+  body.dark .paywall-filter { color: #aaa; }
+
+  /* Dark mode toggle button */
+  .dark-toggle {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .dark-toggle:hover { background: #f0f0f0; border-color: #bbb; }
+  body.dark .dark-toggle { border-color: #555; color: #aaa; }
+  body.dark .dark-toggle:hover { background: #0f3460; }
+
+  /* Sticky location headers */
+  .location-group-header.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  body.dark .location-group-header.sticky {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Source favicons */
+  .src-favicon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 3px;
+    border-radius: 2px;
+  }
 </style>
 </head>
 <body>
@@ -468,6 +564,7 @@
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
     <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:29 UTC, 7 Mar 2026</span></div>
   </div>
+  <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
 </div>
 
@@ -990,6 +1087,28 @@ function renderFilterBars() {
 }
 
 // ===== SIDEBAR — grouped by country, filtered by source =====
+
+const SOURCE_FAVICONS = {
+  'BBC News': 'https://www.bbc.co.uk/favicon.ico',
+  'The Guardian': 'https://www.theguardian.com/favicon.ico',
+  'Al Jazeera': 'https://www.aljazeera.com/favicon.ico',
+  'Sky News': 'https://news.sky.com/favicon.ico',
+  'France 24': 'https://www.france24.com/favicon.ico',
+  'New York Times': 'https://www.nytimes.com/favicon.ico',
+  'Washington Post': 'https://www.washingtonpost.com/favicon.ico',
+  'NPR': 'https://www.npr.org/favicon.ico',
+  'NBC News': 'https://www.nbcnews.com/favicon.ico',
+  'CBS News': 'https://www.cbsnews.com/favicon.ico',
+  'Reuters': 'https://www.reuters.com/favicon.ico',
+  'Times of Israel': 'https://www.timesofisrael.com/favicon.ico',
+  'Jerusalem Post': 'https://www.jpost.com/favicon.ico',
+  'Deutsche Welle': 'https://www.dw.com/favicon.ico',
+  'NHK World': 'https://www3.nhk.or.jp/favicon.ico',
+};
+function srcFavicon(source) {
+  const url = SOURCE_FAVICONS[source];
+  return url ? '<img class="src-favicon" src="' + url + '" alt="" onerror="this.style.display=\'none\'">' : '';
+}
 function renderSidebar() {
   const list = document.getElementById('article-list');
   const countEl = document.getElementById('loc-count');
@@ -1091,7 +1210,7 @@ function renderSidebar() {
             return '<div class="article-card' + (isBreaking ? ' breaking-card' : '') + '" style="border-left-color:' + col + '">' +
               '<div class="article-title">' + (isBreaking ? '<span class="breaking-dot"></span>' : '') + '<span class="sentiment-dot sentiment-' + sentiment.type + '" title="' + sentiment.label + '"></span><a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a>' + newBadge + '</div>' +
               '<div class="article-meta">' +
-                '<div class="article-source"><span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
+                '<div class="article-source">' + srcFavicon(a.source) + '<span class="src-name" style="color:' + col + '">' + a.source + '</span>' + pwBadge + '</div>' +
                 '<div class="article-time" title="' + formatTime(a.time) + ' UTC">' + relativeTime(a.time) + '</div>' +
               '</div>' +
             '</div>';
@@ -1279,14 +1398,16 @@ function fitMapToMarkers() {
 
 function toggleLocation(header, locName) {
   const articles = header.nextElementSibling;
-  const wasOpen = articles.classList.contains('open');
-
-  document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
-
-  if (!wasOpen) {
+  const isOpen = articles.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.location-articles').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.location-group-header').forEach(h => h.classList.remove('sticky'));
+  if (!isOpen) {
     articles.classList.add('open');
-    const loc = locations.find(l => l.name === locName);
-    if (loc) map.flyTo([loc.lat, loc.lng], 8, { duration: 0.6 });
+    header.classList.add('sticky');
+    header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
   }
 }
 
@@ -1344,6 +1465,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (body) body.classList.add('open');
   if (arrow) arrow.classList.add('open');
 });
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('pressradar-dark', isDark ? '1' : '0');
+  document.querySelector('.dark-toggle').textContent = isDark ? '☀️' : '🌙';
+  // Update Leaflet tile layer for dark mode
+  if (typeof map !== 'undefined') {
+    map.eachLayer(l => { if (l._url && l._url.includes('carto')) map.removeLayer(l); });
+    L.tileLayer(isDark
+      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+      : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+      { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19 }
+    ).addTo(map);
+  }
+}
+// Restore dark mode preference
+(function() {
+  if (localStorage.getItem('pressradar-dark') === '1') {
+    document.body.classList.add('dark');
+    const btn = document.querySelector('.dark-toggle');
+    if (btn) btn.textContent = '☀️';
+    // Swap tile layer after map loads
+    setTimeout(() => {
+      if (typeof map !== 'undefined') {
+        map.eachLayer(l => { if (l._url && l._url.includes('carto')) map.removeLayer(l); });
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+          { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19 }
+        ).addTo(map);
+      }
+    }, 500);
+  }
+})();
 </script>
 </body>
 </html>
