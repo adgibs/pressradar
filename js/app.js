@@ -566,7 +566,7 @@ function applyFilters() {
 
 function fitMapToMarkers() {
   if (!activeCountry && !activeSource) {
-    map.flyTo([29.5, 47], 5, { duration: 0.6 });
+    map.flyTo(window.pageConfig.mapCenter, window.pageConfig.mapZoom, { duration: 0.6 });
     return;
   }
   const layers = [];
