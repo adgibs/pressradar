@@ -620,7 +620,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:28 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:33 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -643,15 +643,15 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:29 UTC, 7 Mar 2026</div><div id="ai-summary-text">• President Trump convenes a summit in Miami with Latin American leaders, reportedly focusing on countering Iranian influence in the Western Hemisphere while courting right-wing governments including Bolivia, according to The Guardian and NPR. The gathering reflects Trump&#x27;s strategic pivot toward the region amid competition with Chinese economic influence.
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:34 UTC, 7 Mar 2026</div><div id="ai-summary-text">• Trump convenes the &quot;Shield of the Americas&quot; summit in Miami with regional leaders focused on combating crime and immigration, according to France 24. The gathering notably features right-wing leaders from Latin America, according to The Guardian, as the U.S. seeks to counter China&#x27;s growing influence in the Western Hemisphere.
 
-• Cuba faces multiple crises including mass power outages sparking protests, a fatal shootout involving a Florida-tagged speedboat that killed five, and diplomatic tensions as it closes its Quito embassy following Ecuador&#x27;s expulsion of Cuban diplomats, Al Jazeera reports.
+• Bolivia makes a political shift toward the United States at the summit, the New York Times reports, signaling changing regional alignments under Trump&#x27;s administration.
 
-• Peru confronts severe flooding in its southern regions from torrential rainfall, while a human rights court orders reparations for a forced sterilisation case, according to Al Jazeera.
+• Cuba faces multiple crises including widespread power outages affecting thousands, Al Jazeera reports, while also announcing a fifth death following a shootout with a Florida-tagged speedboat. Additionally, Cuba closes its Quito embassy after Ecuador expels its diplomats.
 
-• The US issues a limited licence for Venezuelan gold exports following high-level discussions, Reuters reports, as the Trump administration pursues engagement with Caracas despite ongoing sanctions.
+• Peru experiences severe flooding after torrential rains in the southern region, Al Jazeera reports, creating humanitarian challenges across the area.
 
-• Mexico prepares enhanced security measures for hosting the World Cup, with President Sheinbaum pledging robust protection, according to Al Jazeera and the New York Times.</div></div>
+• Mexico prepares heightened security measures for the upcoming World Cup, with President Sheinbaum pledging robust protections during her visit to Jalisco, according to Al Jazeera and the New York Times.</div></div>
     <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
@@ -780,6 +780,29 @@ const locations = [
     ]
   },
   {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "Trump convenes regional leaders to curb crime, immigration", source: "France 24", url: "https://www.france24.com/en/trump-convenes-regional-leaders-to-curb-crime-immigration", time: "2026-03-07T15:56:55Z" },
+      { title: "REPLAY: US hosts 'Shield of the Americas summit'", source: "France 24", url: "https://www.france24.com/en/replay-us-hosts-shield-of-the-americas-summit", time: "2026-03-07T15:37:48Z" },
+      { title: "Trump meets with Latin American leaders in Miami amid war on Iran", source: "CBS News", url: "https://www.cbsnews.com/news/trump-shield-of-the-americas-summit/", time: "2026-03-07T14:59:53Z" },
+      { title: "‘An ideological guest list’: Trump invites Latin America’s rightwing leaders to Florida summit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/an-ideological-guest-list-trump-invites-latin-americas-rightwing-leaders-to-florida-summit", time: "2026-03-07T08:00:45Z" },
+      { title: "Trump looks to turn attention to Western Hemisphere at Americas summit", source: "NPR", url: "https://www.npr.org/2026/03/07/g-s1-112852/trump-americas-summit", time: "2026-03-07T05:42:59Z" },
+      { title: "China spent years building ties in Latin America. Can Trump make room for the US?", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvw0zwpd5o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T01:56:20Z" },
+      { title: "Here Is Mexico’s Plan to Keep the Country Safe During the World Cup", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/americas/world-cup-mexico-security-plan.html", time: "2026-03-06T22:28:37Z" },
+      { title: "Mexico’s Sheinbaum pledges robust World Cup security in visit to Jalisco", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/mexicos-sheinbaum-pledges-robust-world-cup-security-in-visit-to-jalisco?traffic_source=rss", time: "2026-03-06T22:13:06Z" },
+      { title: "Mexico to deploy 100,000 security personnel for World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce8wjwyjndyo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T19:24:59Z" },
+      { title: "In a bid to counter China, Trump hosts a summit for Latin America leaders", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/in-a-bid-to-counter-china-trump-hosts-a-summit-for-latin-america-leaders?traffic_source=rss", time: "2026-03-06T15:55:29Z" },
+      { title: "US, Mexico to hold talks ahead of USMCA trade pact review as Trump tariffs loom", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-mexico-talks-north-america-trade-pact-review-trump-tariffs", time: "2026-03-06T01:57:02Z" },
+      { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
+      { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
+      { title: "Ecuadorean troops find 35m-long 'narco-sub' hidden in nature reserve", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6zz65vg0qo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T17:34:04Z" },
+      { title: "Ecuador sinks 'narco sub' as nation works with U.S. to fight organized crime", source: "CBS News", url: "https://www.cbsnews.com/news/narco-sub-sunk-ecuador-us-operations-organized-crime/", time: "2026-03-05T15:37:28Z" },
+      { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
+    ]
+  },
+  {
     name: "Caracas", country: "Venezuela",
     lat: 10.4806, lng: -66.9036,
     category: "political",
@@ -799,27 +822,6 @@ const locations = [
       { title: "James Luckey-Lange Recounts Being Detained, Starved and Beaten in Venezuela", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/americas/james-luckey-lange-venezuela-detention.html", time: "2026-03-05T10:00:10Z" },
       { title: "Venezuela and US to work together on mining developments, Rodríguez says", source: "BBC News", url: "https://www.bbc.com/news/articles/cj322v8pjp5o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:46:47Z" },
       { title: "Dirty laundry and chocolate bars: How Venezuelan prisoners smuggled messages out of jail", source: "BBC News", url: "https://www.bbc.com/news/articles/c620n3degv2o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T00:04:34Z" },
-    ]
-  },
-  {
-    name: "Mexico City", country: "Mexico",
-    lat: 19.4326, lng: -99.1332,
-    category: "political",
-    articles: [
-      { title: "Trump meets with Latin American leaders in Miami amid war on Iran", source: "CBS News", url: "https://www.cbsnews.com/news/trump-shield-of-the-americas-summit/", time: "2026-03-07T14:59:53Z" },
-      { title: "‘An ideological guest list’: Trump invites Latin America’s rightwing leaders to Florida summit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/an-ideological-guest-list-trump-invites-latin-americas-rightwing-leaders-to-florida-summit", time: "2026-03-07T08:00:45Z" },
-      { title: "Trump looks to turn attention to Western Hemisphere at Americas summit", source: "NPR", url: "https://www.npr.org/2026/03/07/g-s1-112852/trump-americas-summit", time: "2026-03-07T05:42:59Z" },
-      { title: "China spent years building ties in Latin America. Can Trump make room for the US?", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvw0zwpd5o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T01:56:20Z" },
-      { title: "Here Is Mexico’s Plan to Keep the Country Safe During the World Cup", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/americas/world-cup-mexico-security-plan.html", time: "2026-03-06T22:28:37Z" },
-      { title: "Mexico’s Sheinbaum pledges robust World Cup security in visit to Jalisco", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/mexicos-sheinbaum-pledges-robust-world-cup-security-in-visit-to-jalisco?traffic_source=rss", time: "2026-03-06T22:13:06Z" },
-      { title: "Mexico to deploy 100,000 security personnel for World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce8wjwyjndyo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T19:24:59Z" },
-      { title: "In a bid to counter China, Trump hosts a summit for Latin America leaders", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/in-a-bid-to-counter-china-trump-hosts-a-summit-for-latin-america-leaders?traffic_source=rss", time: "2026-03-06T15:55:29Z" },
-      { title: "US, Mexico to hold talks ahead of USMCA trade pact review as Trump tariffs loom", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-mexico-talks-north-america-trade-pact-review-trump-tariffs", time: "2026-03-06T01:57:02Z" },
-      { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
-      { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
-      { title: "Ecuadorean troops find 35m-long 'narco-sub' hidden in nature reserve", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6zz65vg0qo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T17:34:04Z" },
-      { title: "Ecuador sinks 'narco sub' as nation works with U.S. to fight organized crime", source: "CBS News", url: "https://www.cbsnews.com/news/narco-sub-sunk-ecuador-us-operations-organized-crime/", time: "2026-03-05T15:37:28Z" },
-      { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
     ]
   },
   {

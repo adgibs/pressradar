@@ -620,7 +620,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:28 UTC, 7 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:33 UTC, 7 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 March 2026</div>
@@ -643,15 +643,15 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:29 UTC, 7 Mar 2026</div><div id="ai-summary-text">• India and New Zealand prepare for the T20 World Cup final in Ahmedabad, with both teams seeking redemption and glory in the tournament&#x27;s showpiece match, according to Al Jazeera.
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:34 UTC, 7 Mar 2026</div><div id="ai-summary-text">• India hosts New Zealand in the T20 World Cup final in Ahmedabad, according to Al Jazeera, with both teams expressing confidence ahead of the match. Hosts India seek redemption while New Zealand aims to upset expectations in the high-stakes encounter.
 
-• Pakistan faces mounting pressure as fuel station panic spreads over escalating Iran-US tensions, while the country struggles to maintain neutrality between regional powers, Al Jazeera reports.
+• Pakistan faces fuel shortages and public panic as regional tensions escalate amid the Iran-US conflict, Al Jazeera reports. The country struggles to maintain neutrality between Iran and Saudi Arabia while managing domestic supply concerns.
 
-• A former rapper defeats a former prime minister in Nepal&#x27;s parliamentary elections, signaling shifts in the nation&#x27;s political landscape, France 24 reports.
+• A UN report indicates the Pakistan-Afghanistan conflict has displaced over 100,000 people, Sky News notes, highlighting the humanitarian impact of cross-border tensions in the region.
 
-• Pakistan-Afghanistan conflict displaces over 100,000 people, according to the UN, while regional tensions over Iran&#x27;s leadership intensify grievances among South Asia&#x27;s Shiite Muslim communities, Sky News and New York Times report.
+• Sri Lanka takes custody of an Iranian vessel after US military action, NPR reports, as the broader Iran war draws Asia into geopolitical complications. The Guardian reports India has received a US waiver to purchase Russian oil amid regional tensions.
 
-• Sri Lanka takes custody of Iranian vessels amid US military action, as India secures a US waiver to continue purchasing Russian oil despite ongoing regional conflict, NPR and The Guardian report.</div></div>
+• Nepal&#x27;s parliamentary elections see a former rapper defeat a former prime minister, France 24 reports, signalling shifting political dynamics in the country.</div></div>
     <div id="map-style-toggle" style="position:absolute;top:10px;right:10px;z-index:1000;background:#fff;border-radius:8px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;gap:2px;">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:#2471a3;color:#fff;">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')" style="padding:5px 10px;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:#666;">Satellite</button>
@@ -754,6 +754,22 @@ function relativeTime(isoString) {
 // ===== DATA — every location has a country =====
 const locations = [
   {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "India vs New Zealand: T20 World Cup final – ‘No pressure, no fun’ for hosts", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-no-pressure-no-fun-for-hosts?traffic_source=rss", time: "2026-03-07T15:30:46Z" },
+      { title: "India vs New Zealand: T20 World Cup final – Kiwis ready to ‘break hearts’", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-kiwis-ready-to-break-hearts?traffic_source=rss", time: "2026-03-07T11:08:18Z" },
+      { title: "India vs New Zealand: T20 World Cup final – Predicted XI, time, stream", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/6/india-vs-new-zealand-t20-world-cup-final-predicted-xi-time-stream?traffic_source=rss", time: "2026-03-06T19:33:30Z" },
+      { title: "From 1984: Indira Gandhi, Born to Politics, Left Her Own Imprint on India", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/indira-gandhi-dead.html", time: "2026-03-06T17:02:07Z" },
+      { title: "US grants waiver to allow India to buy Russian oil amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/us-waiver-india-russian-oil", time: "2026-03-06T09:28:32Z" },
+      { title: "Khamenei’s Killing Sparks Anger and Grief in South Asia’s Shiite Muslims", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-khamenei-shiite-india-pakistan.html", time: "2026-03-06T09:20:31Z" },
+      { title: "Is BRICS bloc divided over US-Israel attacks on Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/is-brics-bloc-divided-over-us-israel-attacks-on-iran?traffic_source=rss", time: "2026-03-06T09:16:36Z" },
+      { title: "India Is Turning Back to Russian Oil", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/business/india-russian-oil.html", time: "2026-03-06T05:36:36Z" },
+      { title: "India beat England to reach T20 World Cup final as Sanju stars again", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/5/india-beat-england-to-reach-t20-world-cup-final-as-sanju-stars-again?traffic_source=rss", time: "2026-03-05T17:47:31Z" },
+    ]
+  },
+  {
     name: "Kathmandu", country: "Nepal",
     lat: 27.7172, lng: 85.324,
     category: "political",
@@ -766,21 +782,6 @@ const locations = [
       { title: "What to Know About Nepal's Gen Z Election", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/asia/nepal-election-gen-z-wtk.html", time: "2026-03-05T11:57:22Z" },
       { title: "Polls open in Nepal's key post-uprising vote", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260304-nepal-votes-in-key-post-uprising-polls", time: "2026-03-04T21:13:20Z" },
       { title: "The girls of my Himalayan valley are not victims – education is the only bridge they need out of their isolation | Amreen Qadir", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/04/kashmir-tulail-dard-shin-girls-education-equality-children-isolation", time: "2026-03-04T06:00:40Z" },
-    ]
-  },
-  {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "India vs New Zealand: T20 World Cup final – Kiwis ready to ‘break hearts’", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-kiwis-ready-to-break-hearts?traffic_source=rss", time: "2026-03-07T11:08:18Z" },
-      { title: "India vs New Zealand: T20 World Cup final – Predicted XI, time, stream", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/6/india-vs-new-zealand-t20-world-cup-final-predicted-xi-time-stream?traffic_source=rss", time: "2026-03-06T19:33:30Z" },
-      { title: "From 1984: Indira Gandhi, Born to Politics, Left Her Own Imprint on India", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/indira-gandhi-dead.html", time: "2026-03-06T17:02:07Z" },
-      { title: "US grants waiver to allow India to buy Russian oil amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/us-waiver-india-russian-oil", time: "2026-03-06T09:28:32Z" },
-      { title: "Khamenei’s Killing Sparks Anger and Grief in South Asia’s Shiite Muslims", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-khamenei-shiite-india-pakistan.html", time: "2026-03-06T09:20:31Z" },
-      { title: "Is BRICS bloc divided over US-Israel attacks on Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/is-brics-bloc-divided-over-us-israel-attacks-on-iran?traffic_source=rss", time: "2026-03-06T09:16:36Z" },
-      { title: "India Is Turning Back to Russian Oil", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/business/india-russian-oil.html", time: "2026-03-06T05:36:36Z" },
-      { title: "India beat England to reach T20 World Cup final as Sanju stars again", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/5/india-beat-england-to-reach-t20-world-cup-final-as-sanju-stars-again?traffic_source=rss", time: "2026-03-05T17:47:31Z" },
     ]
   },
   {
