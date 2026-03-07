@@ -613,6 +613,24 @@
   body.dark #ai-summary-title { color: #e74c3c; }
   body.dark #ai-summary-text {
     white-space: pre-line; color: #ddd; }
+
+  #ai-summary-title {
+    cursor: pointer;
+    user-select: none;
+  }
+  #ai-summary-title::after {
+    content: ' ▾';
+    font-size: 0.65rem;
+  }
+  #ai-summary-box.collapsed #ai-summary-title::after {
+    content: ' ▸';
+  }
+  #ai-summary-box.collapsed #ai-summary-text {
+    display: none;
+  }
+  #ai-summary-box.collapsed {
+    padding: 6px 14px;
+  }
 </style>
 </head>
 <body>
@@ -1577,6 +1595,17 @@ function toggleDarkMode() {
   const countEl = document.getElementById('total-count');
   if (countEl) countEl.textContent = total;
 })();
+
+
+// AI Briefing collapse toggle
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.id === 'ai-summary-title') {
+    e.target.parentElement.classList.toggle('collapsed');
+    try { localStorage.setItem('pressradar_briefing_collapsed', e.target.parentElement.classList.contains('collapsed')); } catch(ex) {}
+  }
+});
+// Restore collapsed state
+try { if (localStorage.getItem('pressradar_briefing_collapsed') === 'true') { document.getElementById('ai-summary-box')?.classList.add('collapsed'); } } catch(ex) {}
 
 // ===== FAVORITES =====
 
