@@ -1551,6 +1551,7 @@ def get_recent_headlines(html_file, max_articles=20):
 
 def generate_ai_summary(region_name, headlines):
     """Generate a natural-language summary of recent headlines using Google Gemini API (free tier)."""
+    import time
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("  No GEMINI_API_KEY set — skipping AI summary")
@@ -1580,16 +1581,27 @@ Recent headlines:
         "generationConfig": {"maxOutputTokens": 400, "temperature": 0.3}
     }).encode("utf-8")
 
-    try:
-        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-        summary = result["candidates"][0]["content"]["parts"][0]["text"].strip()
-        print(f"  AI summary for {region_name}: {summary[:80]}...")
-        return summary
-    except Exception as e:
-        print(f"  AI summary failed for {region_name}: {e}")
-        return None
+    # Retry with exponential backoff for rate limiting (429 errors)
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            summary = result["candidates"][0]["content"]["parts"][0]["text"].strip()
+            print(f"  AI summary for {region_name}: {summary[:80]}...")
+            return summary
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < max_retries - 1:
+                wait = (attempt + 1) * 10  # 10s, 20s, 30s
+                print(f"  Rate limited for {region_name} — waiting {wait}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait)
+            else:
+                print(f"  AI summary failed for {region_name}: {e}")
+                return None
+        except Exception as e:
+            print(f"  AI summary failed for {region_name}: {e}")
+            return None
 
 
 def inject_summary_into_html(html_file, summary):
@@ -1714,6 +1726,7 @@ def main():
     )
 
     # ── AI Summaries ──
+    import time
     print("\n=== Generating AI Summaries ===")
     regions = [
         ("Middle East", "index.html"),
@@ -1724,7 +1737,9 @@ def main():
         ("South Asia", "south-asia.html"),
         ("Americas", "americas.html"),
     ]
-    for region_name, html_file in regions:
+    for i, (region_name, html_file) in enumerate(regions):
+        if i > 0:
+            time.sleep(5)  # 5s delay between API calls to avoid rate limiting
         headlines = get_recent_headlines(html_file, max_articles=20)
         if not headlines:
             print(f"  No headlines for {region_name} — skipping")
