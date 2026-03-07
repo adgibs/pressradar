@@ -195,6 +195,7 @@ LOCATION_MAP = {
     "nato": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "strikes"},
     "pakistan": {"name": "Islamabad", "country": "Pakistan", "lat": 33.6844, "lng": 73.0479, "category": "evacuation"},
     "sri lanka": {"name": "Colombo", "country": "Sri Lanka", "lat": 6.9271, "lng": 79.8612, "category": "strikes"},
+    "lebanese": {"name": "Beirut", "country": "Lebanon", "lat": 33.8938, "lng": 35.5018, "category": "conflict"},
 }
 
 # Priority order for location matching (more specific first)
@@ -229,7 +230,7 @@ LOCATION_PRIORITY = [
     # US political
     "pentagon", "hegseth", "rubio", "vance", "congress",
     # Countries
-    "iran", "israel", "lebanon", "saudi", "uae", "qatar",
+    "iran", "israel", "lebanese", "lebanon", "saudi", "uae", "qatar",
     "bahrain", "kuwait", "iraq", "syria", "yemen",
     "egypt", "jordan", "oman", "turkey", "ankara",
     "pakistan", "sri lanka", "cyprus", "starmer",
@@ -557,6 +558,11 @@ UKRAINE_LOCATION_MAP = {
     # Support locations
     "ramstein": {"name": "Ramstein", "country": "Germany", "lat": 49.4369, "lng": 7.6003, "category": "nato"},
     "pentagon": {"name": "Washington DC", "country": "United States", "lat": 38.8719, "lng": -77.0563, "category": "diplomacy"},
+    "hungary": {"name": "Budapest", "country": "Hungary", "lat": 47.4979, "lng": 19.0402, "category": "diplomacy"},
+    "finland": {"name": "Helsinki", "country": "Finland", "lat": 60.1699, "lng": 24.9384, "category": "diplomacy"},
+    "iceland": {"name": "Reykjavik", "country": "Iceland", "lat": 64.1466, "lng": -21.9426, "category": "diplomacy"},
+    "mediterranean": {"name": "Mediterranean Sea", "country": "International Waters", "lat": 35.0, "lng": 18.0, "category": "conflict"},
+    "paralympic": {"name": "Milan", "country": "Italy", "lat": 45.4642, "lng": 9.1900, "category": "diplomacy"},
 }
 
 UKRAINE_LOCATION_PRIORITY = [
@@ -574,7 +580,8 @@ UKRAINE_LOCATION_PRIORITY = [
     "kursk", "kyiv", "kiev",
     "minsk", "lukashenko", "belarus",
     "kremlin", "moscow", "putin",
-    "ramstein", "pentagon",
+    "ramstein", "pentagon", "hungary", "finland", "iceland",
+    "mediterranean", "paralympic",
     "zelensky", "nato", "wagner",
     "shahed", "himars", "patriot",
     "black sea", "sea of azov", "azov",
@@ -724,6 +731,10 @@ EAST_ASIA_LOCATION_MAP = {
     "asean": {"name": "Jakarta", "country": "Indonesia", "lat": -6.2088, "lng": 106.8456, "category": "diplomacy"},
     "pacific island": {"name": "South China Sea", "country": "International", "lat": 15.0, "lng": 115.0, "category": "territorial"},
     "pacific fleet": {"name": "Yokosuka", "country": "Japan", "lat": 35.2814, "lng": 139.6722, "category": "military"},
+    "vanuatu": {"name": "Port Vila", "country": "Vanuatu", "lat": -17.7334, "lng": 168.3273, "category": "diplomacy"},
+    "jimmy lai": {"name": "Hong Kong", "country": "China", "lat": 22.3193, "lng": 114.1694, "category": "political"},
+    "jiang qing": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "political"},
+    "mao": {"name": "Beijing", "country": "China", "lat": 39.9042, "lng": 116.4074, "category": "political"},
 }
 
 EAST_ASIA_LOCATION_PRIORITY = [
@@ -747,7 +758,8 @@ EAST_ASIA_LOCATION_PRIORITY = [
     "malaysia", "malaysian", "indonesia", "indonesian", "thailand", "thai",
     "mongolia", "brunei", "timor-leste", "east timor",
     "indo-pacific", "indopacific", "aukus", "quad", "asean",
-    "pacific island", "pacific fleet",
+    "pacific island", "pacific fleet", "vanuatu",
+    "jimmy lai", "jiang qing", "mao",
     "china", "chinese", "korea",
 ]
 
@@ -885,6 +897,9 @@ AFRICA_LOCATION_MAP = {
     "sahara": {"name": "Sahel Region", "country": "West Africa", "lat": 15.0, "lng": 0.0, "category": "conflict"},
     "togo": {"name": "Lome", "country": "Togo", "lat": 6.1256, "lng": 1.2254, "category": "political"},
     "benin": {"name": "Porto-Novo", "country": "Benin", "lat": 6.4969, "lng": 2.6289, "category": "political"},
+    "wafcon": {"name": "Cairo", "country": "Egypt", "lat": 30.0444, "lng": 31.2357, "category": "political"},
+    "african grand prix": {"name": "Johannesburg", "country": "South Africa", "lat": -26.2041, "lng": 28.0473, "category": "political"},
+    "wangari maathai": {"name": "Nairobi", "country": "Kenya", "lat": -1.2921, "lng": 36.8219, "category": "political"},
 }
 
 AFRICA_LOCATION_PRIORITY = [
@@ -911,7 +926,7 @@ AFRICA_LOCATION_PRIORITY = [
     "angola", "eswatini", "swaziland", "zimbabwe", "zambia", "malawi",
     "botswana", "namibia", "tunisia", "morocco", "algeria",
     "ivory coast", "cote d'ivoire", "sierra leone", "liberia", "guinea",
-    "sahara", "african union",
+    "sahara", "african union", "wafcon", "african grand prix", "wangari maathai",
 ]
 
 
@@ -1087,6 +1102,10 @@ EUROPE_LOCATION_MAP = {
     "brexit": {"name": "London", "country": "United Kingdom", "lat": 51.5074, "lng": -0.1278, "category": "political"},
     "eu ": {"name": "Brussels", "country": "Belgium", "lat": 50.8503, "lng": 4.3517, "category": "political"},
     "romanian": {"name": "Bucharest", "country": "Romania", "lat": 44.4268, "lng": 26.1025, "category": "security"},
+    "munich": {"name": "Munich", "country": "Germany", "lat": 48.1351, "lng": 11.5820, "category": "political"},
+    "mediterranean": {"name": "Mediterranean Sea", "country": "International Waters", "lat": 35.0, "lng": 18.0, "category": "conflict"},
+    "paralympic": {"name": "Milan", "country": "Italy", "lat": 45.4642, "lng": 9.1900, "category": "political"},
+    "olivier": {"name": "London", "country": "UK", "lat": 51.5074, "lng": -0.1278, "category": "political"},
 }
 
 EUROPE_LOCATION_PRIORITY = [
@@ -1117,6 +1136,7 @@ EUROPE_LOCATION_PRIORITY = [
     "moldova", "malta", "kyiv",
     "netherlands", "dutch", "ireland", "irish",
     "nato", "uk ", "eu ", "brexit",
+    "munich", "mediterranean", "paralympic", "olivier",
 ]
 
 
@@ -1224,6 +1244,8 @@ SOUTH_ASIA_LOCATION_MAP = {
     "karakoram": {"name": "Kashmir", "country": "India/Pakistan", "lat": 34.0837, "lng": 74.7973, "category": "security"},
     "gen z": {"name": "Kathmandu", "country": "Nepal", "lat": 27.7172, "lng": 85.3240, "category": "political"},
     "gen-z": {"name": "Kathmandu", "country": "Nepal", "lat": 27.7172, "lng": 85.3240, "category": "political"},
+    "shiite": {"name": "Lucknow", "country": "India", "lat": 26.8467, "lng": 80.9462, "category": "political"},
+    "brics": {"name": "New Delhi", "country": "India", "lat": 28.6139, "lng": 77.2090, "category": "diplomacy"},
 }
 
 SOUTH_ASIA_LOCATION_PRIORITY = [
@@ -1249,6 +1271,7 @@ SOUTH_ASIA_LOCATION_PRIORITY = [
     "india", "indian", "pakistan", "pakistani",
     "bangladesh", "sri lanka", "nepal", "afghanistan", "myanmar",
     "maldives", "bhutan",
+    "shiite", "brics",
 ]
 
 
@@ -1368,6 +1391,13 @@ AMERICAS_LOCATION_MAP = {
     "hegseth": {"name": "Washington DC", "country": "USA", "lat": 38.9072, "lng": -77.0369, "category": "political"},
     "cuban": {"name": "Havana", "country": "Cuba", "lat": 23.1136, "lng": -82.3666, "category": "political"},
     "gringo": {"name": "Mexico City", "country": "Mexico", "lat": 19.4326, "lng": -99.1332, "category": "political"},
+    "caribbean": {"name": "Kingston", "country": "Jamaica", "lat": 18.0179, "lng": -76.8099, "category": "political"},
+    "gabriela mistral": {"name": "Santiago", "country": "Chile", "lat": -33.4489, "lng": -70.6693, "category": "political"},
+    "raúl castro": {"name": "Havana", "country": "Cuba", "lat": 23.1136, "lng": -82.3666, "category": "political"},
+    "vilma espín": {"name": "Havana", "country": "Cuba", "lat": 23.1136, "lng": -82.3666, "category": "political"},
+    "americas summit": {"name": "Washington DC", "country": "USA", "lat": 38.9072, "lng": -77.0369, "category": "diplomacy"},
+    "pentagon": {"name": "Washington DC", "country": "USA", "lat": 38.9072, "lng": -77.0369, "category": "military"},
+    "western hemisphere": {"name": "Washington DC", "country": "USA", "lat": 38.9072, "lng": -77.0369, "category": "diplomacy"},
 }
 
 AMERICAS_LOCATION_PRIORITY = [
@@ -1393,6 +1423,8 @@ AMERICAS_LOCATION_PRIORITY = [
     "nicaragua", "costa rica", "jamaica", "trinidad", "barbados",
     "guyana", "suriname", "alberta",
     "latin america", "central america", "south america",
+    "caribbean", "gabriela mistral", "raúl castro", "vilma espín",
+    "americas summit", "pentagon", "western hemisphere",
 ]
 
 
