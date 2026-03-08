@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:46 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">06:50 UTC, 8 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:47 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Iran&#x27;s president apologizes amid escalating US-Israel military strikes across the region.<br>• Trump demands Iran&#x27;s unconditional surrender while Israeli forces intensify operations against Hezbollah in Lebanon.<br>• Civilians flee south Beirut as airstrikes intensify; Iran rejects Trump&#x27;s surrender demand as unrealistic.<br>• Widespread concern emerges over weapon stockpiles and potential regime change as conflict continues.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 06:51 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Trump demands Iran&#x27;s unconditional surrender as US and Israeli strikes intensify across the region.<br>• Israeli troops push into Lebanon targeting Hezbollah while airstrikes kill dozens and displace residents.<br>• Iran&#x27;s president offers not to attack neighbours but faces internal backlash for diplomatic overture.<br>• Widespread strikes hit Gulf states as regional conflict expands with uncertain duration and outcome.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -622,6 +622,7 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Israeli defense tech company SmartShooter begins trading on TASE", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-889188", time: "2026-03-08T08:03:44Z" },
       { title: "Trump's support for Israel matters, but he should not meddle in its politics - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-889173", time: "2026-03-08T05:55:41Z" },
       { title: "US embassy in Oslo hit with explosion, no injuries reported", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-889184", time: "2026-03-08T05:12:37Z" },
       { title: "Grapevine March 8, 2026: Strutting with new confidence", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-889159", time: "2026-03-08T04:52:20Z" },
@@ -956,6 +957,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Palestinians risk life and limb to fish in Gaza’s Israeli-controlled sea", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/8/palestinians-risk-life-and-limb-to-fish-in-gazas-israeli-controlled-sea?traffic_source=rss", time: "2026-03-08T06:13:06Z" },
       { title: "IDF says it hit key commanders of IRGC’s Quds Force in Beirut", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-08-2026/", time: "2026-03-08T03:26:56Z" },
       { title: "Israeli reservist suspected of killing Palestinian near Hebron, under investigation", source: "Jerusalem Post", url: "https://www.jpost.com/arab-israeli-conflict/article-889165", time: "2026-03-07T21:47:58Z" },
       { title: "Doctors try to save girl as father was killed in Gaza Israeli attack", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/7/doctors-try-to-save-girl-as-father-was-killed-in-gaza-israeli-attack?traffic_source=rss", time: "2026-03-07T20:56:45Z" },
@@ -1094,6 +1096,17 @@ const locations = [
     ]
   },
   {
+    name: "Isfahan", country: "Iran",
+    lat: 32.6546, lng: 51.668,
+    category: "strikes",
+    articles: [
+      { title: "IDF says it hit key commanders of Iran’s Revolutionary Guard’s Quds Force in Beirut", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-08-2026/", time: "2026-03-08T03:26:56Z" },
+      { title: "Israel says began new strikes on Iran's Tehran, Isfahan", source: "France 24", url: "https://www.france24.com/en/israel-says-began-new-strikes-on-iran-s-tehran-isfahan", time: "2026-03-07T13:59:43Z" },
+      { title: "IDF launches 15th wave of strikes on Iranian regime, targets infrastructure in Tehran and Isfahan", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889093", time: "2026-03-06T15:19:57Z" },
+      { title: "IDF destroys Ghadr missiles at Isfahan, pushing toward hunting down 400 ballistic missile launchers", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-888783", time: "2026-03-04T12:06:17Z" },
+    ]
+  },
+  {
     name: "Muscat", country: "Oman",
     lat: 23.588, lng: 58.3829,
     category: "evacuation",
@@ -1151,16 +1164,6 @@ const locations = [
       { title: "Displaced in Lebanon: 500,000 told to flee Dahiyeh in Beirut", source: "France 24", url: "https://www.france24.com/en/displaced-in-lebanon-500-000-told-to-flee-dahiyeh-in-beirut", time: "2026-03-07T13:57:53Z" },
       { title: "IDF strikes IRGC, Hezbollah command centers in Beirut’s Dahiyeh district", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-889109", time: "2026-03-06T20:59:16Z" },
       { title: "Smoke engulfs buildings after Israeli forces strike Beirut suburbs – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/06/smoke-engulfs-buildings-israeli-forces-strike-beirut-suburbs-lebanon-video", time: "2026-03-06T16:42:02Z" },
-    ]
-  },
-  {
-    name: "Isfahan", country: "Iran",
-    lat: 32.6546, lng: 51.668,
-    category: "strikes",
-    articles: [
-      { title: "Israel says began new strikes on Iran's Tehran, Isfahan", source: "France 24", url: "https://www.france24.com/en/israel-says-began-new-strikes-on-iran-s-tehran-isfahan", time: "2026-03-07T13:59:43Z" },
-      { title: "IDF launches 15th wave of strikes on Iranian regime, targets infrastructure in Tehran and Isfahan", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889093", time: "2026-03-06T15:19:57Z" },
-      { title: "IDF destroys Ghadr missiles at Isfahan, pushing toward hunting down 400 ballistic missile launchers", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-888783", time: "2026-03-04T12:06:17Z" },
     ]
   },
   {
