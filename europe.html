@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:57 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:44 UTC, 8 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 12:58 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Explosion at US embassy in Oslo investigated as possible terrorism by Norwegian police.<br>• Russia blamed for parcel fires across UK and Europe by international investigators.<br>• Cyprus questions future of British military bases following drone strike incident.<br>• Ukrainian bank workers detained in Hungary released after diplomatic intervention.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:45 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Explosion at US embassy in Oslo investigated as possible terrorism by Norwegian police.<br>• Russia accused of orchestrating parcel fires across UK and Europe, investigators confirm.<br>• German state election tests Chancellor Friedrich Merz&#x27;s political standing and coalition stability.<br>• Ukraine war continues with Russian attacks on Kharkiv and Kyiv; UK aids weapons repair.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -183,6 +183,7 @@ const locations = [
     lat: 52.52, lng: 13.405,
     category: "economic",
     articles: [
+      { title: "German state election a test for chancellor Friedrich Merz", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/germany-state-election-test-chancellor-friedrich-merz", time: "2026-03-08T12:52:32Z" },
       { title: "Menopause at work: Germany starts breaking the taboo", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260308-menopause-at-work-germany-starts-breaking-the-taboo", time: "2026-03-08T09:00:09Z" },
       { title: "How European leaders are reacting to the developing war in the Middle East", source: "NPR", url: "https://www.npr.org/2026/03/07/nx-s1-5737624/how-european-leaders-are-reacting-to-the-developing-war-in-the-middle-east", time: "2026-03-07T12:44:36Z" },
       { title: "Surfers in Munich (Yes, Munich) Just Want Their Wave Back", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/europe/munich-surfing-wave.html", time: "2026-03-07T05:01:09Z" },
@@ -214,6 +215,7 @@ const locations = [
     lat: 35.1856, lng: 33.3823,
     category: "security",
     articles: [
+      { title: "‘People are thinking twice’: Cyprus feels the effect of the Iran war on tourism", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/people-are-thinking-twice-cyprus-feels-the-effect-of-the-iran-war-on-tourism", time: "2026-03-08T13:00:21Z" },
       { title: "Cyprus raises doubts about future of British bases on island after drone strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/cyprus-raises-doubts-about-future-of-british-bases-on-island-after-drone-strike", time: "2026-03-06T20:01:11Z" },
       { title: "Cyprus foreign minister says British bases the target of military action, not his country", source: "Sky News", url: "https://news.sky.com/story/cyprus-foreign-minister-says-british-bases-the-target-of-military-action-not-his-country-13516126", time: "2026-03-06T12:24:00Z" },
       { title: "Healey visits Cyprus after criticism of UK response to drone attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/c0e55y0pzgwo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T14:55:33Z" },
@@ -230,6 +232,17 @@ const locations = [
       { title: "Italy wins claim over name of Spanish restaurant chain The Mafia Sits at the Table", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/italy-wins-claim-name-spanish-restaurant-chain-the-mafia-sits-at-the-table", time: "2026-03-06T12:33:12Z" },
       { title: "Italian activists and journalist targeted by spyware in 2024, prosecutors confirm", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/italy-activists-and-journalist-targeted-by-spyware-in-2024-prosecutors-confirm", time: "2026-03-06T12:10:32Z" },
       { title: "Watch: Moment wolf rescued from canal in northern Italy", source: "BBC News", url: "https://www.bbc.com/news/videos/cy7jjnekeepo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T23:01:10Z" },
+    ]
+  },
+  {
+    name: "Oslo", country: "Norway",
+    lat: 59.9139, lng: 10.7522,
+    category: "economic",
+    articles: [
+      { title: "Oslo Police Investigate Explosion Outside U.S. Embassy", source: "New York Times", url: "https://www.nytimes.com/2026/03/08/world/europe/explosion-us-embassy-oslo.html", time: "2026-03-08T13:32:57Z" },
+      { title: "Police investigate an explosion outside the U.S. Embassy in Oslo", source: "NPR", url: "https://www.npr.org/2026/03/08/nx-s1-5741670/explosion-outside-us-embassy-in-oslo-norway", time: "2026-03-08T13:27:13Z" },
+      { title: "Explosion reported outside US embassy in Oslo, police say", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yjegg892lo?at_medium=RSS&at_campaign=rss", time: "2026-03-08T05:18:15Z" },
+      { title: "Loud explosion rocks US embassy in Oslo, police search for perpetrators", source: "France 24", url: "https://www.france24.com/en/europe/20260308-loud-explosion-rocks-us-embassy-in-oslo-police-search-for-perpetrators", time: "2026-03-08T03:23:12Z" },
     ]
   },
   {
@@ -286,15 +299,6 @@ const locations = [
     articles: [
       { title: "UK faces growing calls from locals to remove Cyprus military bases", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/uk-faces-growing-calls-from-locals-to-remove-cyprus-military-bases", time: "2026-03-07T23:20:33Z" },
       { title: "Cyprus raises doubts about future of British bases on island after drone strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/cyprus-raises-doubts-about-future-of-british-bases-on-island-after-drone-strike", time: "2026-03-06T20:01:11Z" },
-    ]
-  },
-  {
-    name: "Oslo", country: "Norway",
-    lat: 59.9139, lng: 10.7522,
-    category: "economic",
-    articles: [
-      { title: "Explosion reported outside US embassy in Oslo, police say", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yjegg892lo?at_medium=RSS&at_campaign=rss", time: "2026-03-08T05:18:15Z" },
-      { title: "Loud explosion rocks US embassy in Oslo, police search for perpetrators", source: "France 24", url: "https://www.france24.com/en/europe/20260308-loud-explosion-rocks-us-embassy-in-oslo-police-search-for-perpetrators", time: "2026-03-08T03:23:12Z" },
     ]
   },
   {
