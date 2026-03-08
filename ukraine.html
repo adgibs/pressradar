@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:27 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:31 UTC, 8 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:28 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Armed robots deploy on Ukrainian battlefield as war intensifies military technology use.<br>• Russian strikes kill at least sixteen across Kharkiv, Dnipro amid nationwide air alerts.<br>• Ukraine shifts focus as US attention moves toward Iran, concerns mount.<br>• Russia shares intelligence with Iran while facing Western sanctions on energy sector.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:32 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Armed robots deployed on Ukraine battlefield as warfare evolves technologically.<br>• Russian strikes kill civilians in Kharkiv; nationwide air alerts issued.<br>• US shifts focus toward Iran; Ukraine seeks continued Western support.<br>• Ukrainian forces halt Zaporizhzhia advance as conflict dynamics shift.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -190,6 +190,20 @@ const locations = [
     ]
   },
   {
+    name: "Washington DC", country: "United States",
+    lat: 38.8719, lng: -77.0563,
+    category: "diplomacy",
+    articles: [
+      { title: "Trump vows control over Iran leaders as US troop death toll rises to seven", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/trump-vows-control-over-iran-leaders-as-officials-seek-to-calm-oil-concerns?traffic_source=rss", time: "2026-03-08T18:56:10Z" },
+      { title: "US downplays reports Russia gave Iran intel to help Tehran strike US assets", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/us-downplays-reports-russia-gave-iran-intel-to-help-tehran-strike-us-assets?traffic_source=rss", time: "2026-03-07T09:09:15Z" },
+      { title: "What we know about U.S. service members killed in Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/us-service-members-killed-iran-war-what-we-know/", time: "2026-03-07T02:44:08Z" },
+      { title: "Iran says a girls' school was hit by a deadly air strike. Here's what we know.", source: "CBS News", url: "https://www.cbsnews.com/news/iran-girls-school-alleged-strike/", time: "2026-03-06T23:54:00Z" },
+      { title: "U.S. turns to Ukraine for drone defense expertise, but solutions may take time", source: "CBS News", url: "https://www.cbsnews.com/news/us-ukraine-drone-defense-expertise-iran-war/", time: "2026-03-06T20:21:00Z" },
+      { title: "Pentagon identifies 5th U.S. soldier killed in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/04/us-iran-israel-strikes-trump-live-updates/", time: "2026-03-05T15:55:41Z" },
+      { title: "Pentagon releases names of U.S. service members killed in Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/names-us-service-members-killed-iran-war-kuwait/", time: "2026-03-05T04:16:00Z" },
+    ]
+  },
+  {
     name: "Brussels", country: "Belgium",
     lat: 50.8503, lng: 4.3517,
     category: "nato",
@@ -200,19 +214,6 @@ const locations = [
       { title: "US Senator helps police drag anti-war protester from meeting", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/5/us-senator-helps-police-drag-anti-war-protester-from-meeting?traffic_source=rss", time: "2026-03-05T01:59:21Z" },
       { title: "NATO shoots down Iranian missile en route towards Turkish airspace", source: "France 24", url: "https://www.france24.com/en/europe/20260304-nato-shoots-down-iranian-missile-en-route-towards-turkish-airspace", time: "2026-03-04T17:33:38Z" },
       { title: "NATO air defenses shot down Iranian missile, Turkey says", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T13:50:57Z" },
-    ]
-  },
-  {
-    name: "Washington DC", country: "United States",
-    lat: 38.8719, lng: -77.0563,
-    category: "diplomacy",
-    articles: [
-      { title: "US downplays reports Russia gave Iran intel to help Tehran strike US assets", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/us-downplays-reports-russia-gave-iran-intel-to-help-tehran-strike-us-assets?traffic_source=rss", time: "2026-03-07T09:09:15Z" },
-      { title: "What we know about U.S. service members killed in Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/us-service-members-killed-iran-war-what-we-know/", time: "2026-03-07T02:44:08Z" },
-      { title: "Iran says a girls' school was hit by a deadly air strike. Here's what we know.", source: "CBS News", url: "https://www.cbsnews.com/news/iran-girls-school-alleged-strike/", time: "2026-03-06T23:54:00Z" },
-      { title: "U.S. turns to Ukraine for drone defense expertise, but solutions may take time", source: "CBS News", url: "https://www.cbsnews.com/news/us-ukraine-drone-defense-expertise-iran-war/", time: "2026-03-06T20:21:00Z" },
-      { title: "Pentagon identifies 5th U.S. soldier killed in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/04/us-iran-israel-strikes-trump-live-updates/", time: "2026-03-05T15:55:41Z" },
-      { title: "Pentagon releases names of U.S. service members killed in Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/names-us-service-members-killed-iran-war-kuwait/", time: "2026-03-05T04:16:00Z" },
     ]
   },
   {
