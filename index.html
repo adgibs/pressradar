@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:39 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:27 UTC, 8 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 18:40 UTC, 8 Mar 2026</div><div id="ai-summary-text">• US and Israel strike Iran&#x27;s military and oil infrastructure; Tehran retaliates with drone attacks across region.<br>• Trump demands Iran&#x27;s unconditional surrender while Putin engages with Iranian leadership amid escalating conflict.<br>• Oil prices surge toward $100 barrel as strikes disrupt Iranian supply and threaten Gulf facilities.<br>• UN warns of humanitarian crisis as nine days of strikes continue across Middle East region.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:28 UTC, 8 Mar 2026</div><div id="ai-summary-text">• US and Israel conduct extensive strikes on Iran, causing fires at Tehran oil depots and infrastructure damage.<br>• Trump demands Iran&#x27;s unconditional surrender and wants influence over selecting Iran&#x27;s next leader.<br>• Iran threatens retaliatory attacks on Gulf oil facilities in response to ongoing strikes.<br>• UN warns of grave humanitarian crisis as nine days of Middle East strikes continue.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -623,10 +623,12 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "Netanyahu’s prediction fulfilled as Israel reshapes Middle East - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-889276", time: "2026-03-08T19:24:20Z" },
+      { title: "Ella Baron on Trump and Netanyahu’s war on Iran – cartoon", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/picture/2026/mar/08/ella-baron-presidents-new-clothes-donald-trump-us-israel-war-on-iran-cartoon", time: "2026-03-08T18:47:02Z" },
       { title: "Half of US citizens seeking help leaving Middle East turn down available gov't recommended options", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-889270", time: "2026-03-08T18:13:51Z" },
       { title: "Transcript: Michael Leiter, Israel's ambassador to the U.S., on 'Face the Nation with Margaret Brennan,' March 8, 2026", source: "CBS News", url: "https://www.cbsnews.com/news/michael-leiter-israel-ambassador-us-face-the-nation-transcript-03-08-2026/", time: "2026-03-08T16:52:35Z" },
       { title: "The skirt, the snow, and the spirit: Sheina Vaspi’s uphill race to Paralympics", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/sports/article-889264", time: "2026-03-08T16:44:45Z" },
       { title: "Israeli pilots admit using stimulant pills on long Iran missions, doctors warn public against use", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/article-889253", time: "2026-03-08T16:38:30Z" },
+      { title: "More than 500,000 displaced in Lebanon as Israel escalates attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/israel-escalates-attacks-across-lebanon-as-two-soldiers-killed?traffic_source=rss", time: "2026-03-08T16:31:19Z" },
       { title: "Yemeni national arrested for throwing stones at Israeli Consulate in Munich, trying to break in", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-889260", time: "2026-03-08T16:17:02Z" },
       { title: "Universities say they may start upcoming semester with online classes", source: "Times of Israel", url: "https://www.timesofisrael.com/universities-say-they-may-start-upcoming-semester-with-online-classes/", time: "2026-03-08T15:27:47Z" },
       { title: "Two IDF soldiers killed by Hezbollah ambush in southern Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889199", time: "2026-03-08T14:52:10Z" },
@@ -1158,6 +1160,18 @@ const locations = [
     ]
   },
   {
+    name: "Riyadh", country: "Saudi Arabia",
+    lat: 24.7136, lng: 46.6753,
+    category: "energy",
+    articles: [
+      { title: "4 killed in Saudi Arabia, Kuwait as Iran keeps up relentless attacks on Gulf states", source: "Times of Israel", url: "https://www.timesofisrael.com/4-killed-in-saudi-arabia-kuwait-as-iran-keeps-up-relentless-attacks-on-gulf-states/", time: "2026-03-08T18:50:02Z" },
+      { title: "Iran’s drone war on Gulf will test whether Arab nations strike back - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889239", time: "2026-03-08T13:31:46Z" },
+      { title: "Saudi shoots down drone east of Riyadh, warns Iran of possible retaliation to attacks", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889171", time: "2026-03-07T23:38:58Z" },
+      { title: "UK PM speaks with Saudi Crown Prince, leaders of France, Germany, Italy about Middle East", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889117", time: "2026-03-07T00:42:40Z" },
+      { title: "CIA station in Saudi capital hit in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T10:16:14Z" },
+    ]
+  },
+  {
     name: "Brussels", country: "Belgium",
     lat: 50.8503, lng: 4.3517,
     category: "strikes",
@@ -1177,17 +1191,6 @@ const locations = [
       { title: "Israel issues an evacuation warning in the Qom region, near an Iranian nuclear site.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/06/world/iran-war-trump-israel-lebanon/israel-issues-an-evacuation-warning-in-the-qom-region-near-an-iranian-nuclear-site", time: "2026-03-06T15:18:40Z" },
       { title: "Iran's senior clerics ‘exposed’ after building strike in Qom, succession choice looms", source: "Fox News", url: "https://www.foxnews.com/world/iranian-senior-clerics-exposed-after-strike-qom-khamenai-succession-choice-looms", time: "2026-03-04T02:54:37Z" },
       { title: "U.S. and Israeli airstrikes targeted the office of the Assembly of Experts in Qom, south of...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T14:54:44Z" },
-    ]
-  },
-  {
-    name: "Riyadh", country: "Saudi Arabia",
-    lat: 24.7136, lng: 46.6753,
-    category: "energy",
-    articles: [
-      { title: "Iran’s drone war on Gulf will test whether Arab nations strike back - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889239", time: "2026-03-08T13:31:46Z" },
-      { title: "Saudi shoots down drone east of Riyadh, warns Iran of possible retaliation to attacks", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889171", time: "2026-03-07T23:38:58Z" },
-      { title: "UK PM speaks with Saudi Crown Prince, leaders of France, Germany, Italy about Middle East", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889117", time: "2026-03-07T00:42:40Z" },
-      { title: "CIA station in Saudi capital hit in drone attack", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T10:16:14Z" },
     ]
   },
   {
