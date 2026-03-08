@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:37 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:34 UTC, 8 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 08:37 UTC, 8 Mar 2026</div><div id="ai-summary-text">• US embassy in Oslo hit by explosion; Norwegian police investigate the incident.<br>• Investigators confirm Russia orchestrated parcel fires across UK and European locations.<br>• Cyprus questions future of British military bases following recent drone strike.<br>• Ukrainian bank workers released after detention in Hungary amid regional tensions.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:35 UTC, 8 Mar 2026</div><div id="ai-summary-text">• US embassy in Oslo hit by explosion; Norwegian police investigate the incident.<br>• Russia allegedly behind parcel fires across UK and Europe, investigators conclude.<br>• Cyprus questions future of British military bases following recent drone strike.<br>• Ukrainian bank workers released after detention in Hungary amid ongoing tensions.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -178,6 +178,22 @@ const locations = [
     ]
   },
   {
+    name: "Berlin", country: "Germany",
+    lat: 52.52, lng: 13.405,
+    category: "economic",
+    articles: [
+      { title: "Menopause at work: Germany starts breaking the taboo", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260308-menopause-at-work-germany-starts-breaking-the-taboo", time: "2026-03-08T09:00:09Z" },
+      { title: "How European leaders are reacting to the developing war in the Middle East", source: "NPR", url: "https://www.npr.org/2026/03/07/nx-s1-5737624/how-european-leaders-are-reacting-to-the-developing-war-in-the-middle-east", time: "2026-03-07T12:44:36Z" },
+      { title: "Surfers in Munich (Yes, Munich) Just Want Their Wave Back", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/europe/munich-surfing-wave.html", time: "2026-03-07T05:01:09Z" },
+      { title: "From 2001: Beate Uhse, 81, Entrepreneur in the Business of Erotic Goods", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/europe/beate-uhse-dead.html", time: "2026-03-06T17:45:36Z" },
+      { title: "Russia was behind parcel fires in UK and Europe, investigators say", source: "BBC News", url: "https://www.bbc.com/news/articles/c0rjx947zqzo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T17:06:10Z" },
+      { title: "German twist in the Telegraph tale shatters Lord Rothermere’s dreams", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/06/german-twist-in-the-telegraph-tale-shatters-lord-rothermeres-dreams", time: "2026-03-06T16:50:07Z" },
+      { title: "Germany moves to legalise wolf hunting in response to livestock ‘bloodlust’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/germany-moves-to-legalise-wolf-hunting-in-response-to-livestock-bloodlust", time: "2026-03-05T18:56:07Z" },
+      { title: "Refugee Sentenced to 13 Years for Stabbing at Berlin Holocaust Memorial", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/berlin-holocaust-memorial-stabbing-syrian-refugee.html", time: "2026-03-05T18:54:16Z" },
+      { title: "German foreign minister says ‘we will not allow ourselves to be divided’ after Trump-Spain spat – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/05/spain-us-israel-war-iran-white-house-trade-evacuations-latest-news", time: "2026-03-05T15:50:43Z" },
+    ]
+  },
+  {
     name: "Madrid", country: "Spain",
     lat: 40.4168, lng: -3.7038,
     category: "political",
@@ -190,21 +206,6 @@ const locations = [
       { title: "Spain's Sanchez defies Trump trade threat, compares Iran war to ‘Russian roulette’", source: "France 24", url: "https://www.france24.com/en/europe/20260304-spain-sanchez-defies-trump-trade-threat-compares-iran-war-to-russian-roulette", time: "2026-03-04T15:32:36Z" },
       { title: "Spain’s Leader, Rejecting Iran War, Escalates Long Feud With Trump", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/europe/trump-spain-iran-sanchez.html", time: "2026-03-04T14:06:31Z" },
       { title: "Leader of Spain slams Trump’s war on Iran as ‘bad for the world’", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T11:04:04Z" },
-    ]
-  },
-  {
-    name: "Berlin", country: "Germany",
-    lat: 52.52, lng: 13.405,
-    category: "economic",
-    articles: [
-      { title: "How European leaders are reacting to the developing war in the Middle East", source: "NPR", url: "https://www.npr.org/2026/03/07/nx-s1-5737624/how-european-leaders-are-reacting-to-the-developing-war-in-the-middle-east", time: "2026-03-07T12:44:36Z" },
-      { title: "Surfers in Munich (Yes, Munich) Just Want Their Wave Back", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/europe/munich-surfing-wave.html", time: "2026-03-07T05:01:09Z" },
-      { title: "From 2001: Beate Uhse, 81, Entrepreneur in the Business of Erotic Goods", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/europe/beate-uhse-dead.html", time: "2026-03-06T17:45:36Z" },
-      { title: "Russia was behind parcel fires in UK and Europe, investigators say", source: "BBC News", url: "https://www.bbc.com/news/articles/c0rjx947zqzo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T17:06:10Z" },
-      { title: "German twist in the Telegraph tale shatters Lord Rothermere’s dreams", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/06/german-twist-in-the-telegraph-tale-shatters-lord-rothermeres-dreams", time: "2026-03-06T16:50:07Z" },
-      { title: "Germany moves to legalise wolf hunting in response to livestock ‘bloodlust’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/germany-moves-to-legalise-wolf-hunting-in-response-to-livestock-bloodlust", time: "2026-03-05T18:56:07Z" },
-      { title: "Refugee Sentenced to 13 Years for Stabbing at Berlin Holocaust Memorial", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/europe/berlin-holocaust-memorial-stabbing-syrian-refugee.html", time: "2026-03-05T18:54:16Z" },
-      { title: "German foreign minister says ‘we will not allow ourselves to be divided’ after Trump-Spain spat – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/05/spain-us-israel-war-iran-white-house-trade-evacuations-latest-news", time: "2026-03-05T15:50:43Z" },
     ]
   },
   {
