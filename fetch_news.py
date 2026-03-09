@@ -1570,7 +1570,17 @@ def generate_ai_summary(region_name, headlines):
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
-Summarise the most important developments in the {region_name} region based on these recent headlines. Write 3-4 short bullet points. Each bullet must be one short sentence only (max 15 words). Use a bullet character (•) at the start of each point. Be factual and neutral. Focus on the biggest stories. Do not include a title or heading. Do not use markdown formatting. Write in present tense. Keep it under 80 words total.
+
+Analyse these recent headlines from the {region_name} region. Group them by story/theme and identify the 6 biggest developments, ranked by how many headlines relate to each.
+
+For each development, write one short factual sentence (max 15 words). Prefix each line with the count of related headlines in parentheses, like: (5) Sentence here.
+
+Rules:
+- Exactly 6 lines, ranked from most headlines to fewest
+- Format: (N) Sentence
+- No bullet characters, no markdown, no title/heading
+- Be factual, neutral, present tense
+- Each count must be a real number based on the headlines provided
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
@@ -1580,7 +1590,7 @@ Recent headlines:
     url = "https://api.anthropic.com/v1/messages"
     payload = json.dumps({
         "model": "claude-haiku-4-5-20251001",
-        "max_tokens": 200,
+        "max_tokens": 300,
         "messages": [{"role": "user", "content": prompt}]
     }).encode("utf-8")
 
@@ -1615,14 +1625,41 @@ def inject_summary_into_html(html_file, summary):
     html_path = Path(__file__).parent / html_file
     html = html_path.read_text()
 
-    safe_summary = html_module.escape(summary)
-    # Convert newlines to <br> for bullet separation (no pre-line needed)
-    safe_summary = re.sub(r'\n{2,}', '<br>', safe_summary)
-    safe_summary = safe_summary.replace('\n', '<br>')
     now = datetime.now(timezone.utc)
     title_str = now.strftime("AI Briefing · %H:%M UTC, %-d %b %Y")
 
-    inner_html = f'<div id="ai-summary-title">{title_str}</div><div id="ai-summary-text">{safe_summary}</div>'
+    # Parse lines with format: (N) Sentence text
+    lines = [l.strip() for l in summary.strip().split('\n') if l.strip()]
+    bullets = []
+    for line in lines:
+        m = re.match(r'\((\d+)\)\s*(.*)', line)
+        if m:
+            count = int(m.group(1))
+            text = html_module.escape(m.group(2))
+            bullets.append((count, text))
+        else:
+            # Fallback: no count, treat as plain bullet
+            text = html_module.escape(re.sub(r'^[•\-]\s*', '', line))
+            if text:
+                bullets.append((1, text))
+
+    if not bullets:
+        return
+
+    max_count = max(b[0] for b in bullets)
+    bullet_html_parts = []
+    for count, text in bullets[:6]:
+        pct = int((count / max_count) * 100) if max_count > 0 else 0
+        bullet_html_parts.append(
+            f'<div class="ai-bullet">'
+            f'<div class="ai-bar-wrap"><div class="ai-bar" style="width:{pct}%"></div></div>'
+            f'<span class="ai-bullet-text">{text}</span>'
+            f'<span class="ai-bullet-count">{count}</span>'
+            f'</div>'
+        )
+    bullets_html = ''.join(bullet_html_parts)
+
+    inner_html = f'<div id="ai-summary-title">{title_str}</div><div id="ai-summary-text">{bullets_html}</div>'
 
     # Replace everything inside the ai-summary-box div
     if 'id="ai-summary-box"' in html:
