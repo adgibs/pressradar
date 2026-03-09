@@ -1814,23 +1814,41 @@ def main():
     if am_articles:
         new_articles["Americas"] = ("americas.html", am_articles)
 
-    # ── AI Summaries (only for regions with new articles) ──
+    # ── AI Summaries (from all articles in the last 24 hours) ──
     print("\n=== Generating AI Summaries ===")
-    for region_name, (html_file, articles) in new_articles.items():
-        # Build headlines from newly fetched articles only
-        headlines = [
-            {
-                "title": a["title"],
-                "source": a["source"],
-                "location": a["location"]["name"] if isinstance(a["location"], dict) else a["location"],
-                "country": a["location"]["country"] if isinstance(a["location"], dict) else "",
-            }
-            for a in articles[:20]
-        ]
+    cutoff_24h = (datetime.now(timezone.utc) - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    region_pages = [
+        ("Middle East", "index.html"),
+        ("Ukraine", "ukraine.html"),
+        ("East Asia", "east-asia.html"),
+        ("Africa", "africa.html"),
+        ("Europe", "europe.html"),
+        ("South Asia", "south-asia.html"),
+        ("Americas", "americas.html"),
+    ]
+    for region_name, html_file in region_pages:
+        # Read all articles from the page and filter to last 24 hours
+        html_path = Path(__file__).parent / html_file
+        page_html = html_path.read_text()
+        all_locations = parse_existing_articles(page_html)
+        recent_articles = []
+        for loc_name, loc_data in all_locations.items():
+            for a in loc_data["articles"]:
+                if a["time"] and a["time"] >= cutoff_24h:
+                    recent_articles.append({
+                        "title": a["title"],
+                        "source": a["source"],
+                        "location": loc_name,
+                        "country": loc_data["country"],
+                        "time": a["time"],
+                    })
+        # Sort by time descending (newest first) and take top 20
+        recent_articles.sort(key=lambda a: a["time"], reverse=True)
+        headlines = recent_articles[:20]
         if not headlines:
-            print(f"  No new headlines for {region_name} — skipping")
+            print(f"  No recent headlines for {region_name} — skipping")
             continue
-        print(f"  {region_name}: {len(headlines)} new articles to summarise")
+        print(f"  {region_name}: {len(headlines)} articles from last 24h")
         summary = generate_ai_summary(region_name, headlines)
         if summary:
             inject_summary_into_html(html_file, summary, headlines)
