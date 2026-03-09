@@ -631,7 +631,15 @@
     align-items: center;
     gap: 6px;
     margin-bottom: 3px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background 0.15s;
   }
+  .ai-bullet:hover { background: rgba(0,0,0,0.05); }
+  .ai-bullet.active { background: rgba(231,76,60,0.12); }
+  .ai-bullet.active .ai-bullet-text { font-weight: 600; }
+  .ai-bullet.active .ai-bullet-count { color: #c0392b; }
   .ai-bullet:last-child { margin-bottom: 0; }
   .ai-bar-wrap {
     width: 36px;
@@ -667,6 +675,9 @@
   body.dark .ai-bar-wrap { background: #2a2a4a; }
   body.dark .ai-bar { background: linear-gradient(90deg, #e74c3c, #ff6b6b); }
   body.dark .ai-bullet-count { color: #777; }
+  body.dark .ai-bullet:hover { background: rgba(255,255,255,0.05); }
+  body.dark .ai-bullet.active { background: rgba(231,76,60,0.2); }
+  body.dark .ai-bullet.active .ai-bullet-count { color: #e74c3c; }
 
   #ai-summary-title::after {
     content: ' ▾';

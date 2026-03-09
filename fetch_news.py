@@ -1562,29 +1562,33 @@ def generate_ai_summary(region_name, headlines):
     import urllib.request
     import urllib.error
 
-    # Build the headlines list for the prompt
+    # Build the numbered headlines list for the prompt
     headline_text = "\n".join(
-        f"- {h['title']} ({h['source']}, {h['location']}, {h['country']})"
-        for h in headlines
+        f"{i+1}. {h['title']} ({h['source']}, {h['location']}, {h['country']})"
+        for i, h in enumerate(headlines)
     )
 
     now = datetime.now(timezone.utc)
     prompt = f"""You are a concise news briefing writer for PressRadar.me, a global news map.
 
-Analyse these recent headlines from the {region_name} region. Group them by story/theme and identify the 6 biggest developments, ranked by how many headlines relate to each.
+Analyse these numbered headlines from the {region_name} region. Group them by story/theme and identify the 6 biggest developments, ranked by how many headlines relate to each.
 
-For each development, write one short factual sentence (max 15 words). Prefix each line with the count of related headlines in parentheses, like: (5) Sentence here.
+For each development, write one short factual sentence (max 15 words). Use this exact format per line:
+(N) [comma-separated headline numbers] Sentence here
+
+Example: (5) [1,3,7,12,15] Iran strikes escalate as international pressure mounts
 
 Rules:
 - Exactly 6 lines, ranked from most headlines to fewest
-- Format: (N) Sentence
+- Format must be: (N) [indices] Sentence
+- The indices must be the actual headline numbers from the list below
+- N must equal the number of indices listed
 - No bullet characters, no markdown, no title/heading
 - Be factual, neutral, present tense
-- Each count must be a real number based on the headlines provided
 
 Current time: {now.strftime('%H:%M UTC, %d %B %Y')}
 
-Recent headlines:
+Numbered headlines:
 {headline_text}"""
 
     url = "https://api.anthropic.com/v1/messages"
@@ -1620,7 +1624,7 @@ Recent headlines:
         return None
 
 
-def inject_summary_into_html(html_file, summary):
+def inject_summary_into_html(html_file, summary, headlines=None):
     """Inject or update the AI summary box in an HTML file."""
     html_path = Path(__file__).parent / html_file
     html = html_path.read_text()
@@ -1628,30 +1632,53 @@ def inject_summary_into_html(html_file, summary):
     now = datetime.now(timezone.utc)
     title_str = now.strftime("AI Briefing · %H:%M UTC, %-d %b %Y")
 
-    # Parse lines with format: (N) Sentence text
+    # Parse lines with format: (N) [indices] Sentence text
     lines = [l.strip() for l in summary.strip().split('\n') if l.strip()]
     bullets = []
     for line in lines:
-        m = re.match(r'\((\d+)\)\s*(.*)', line)
+        # Try full format: (N) [1,3,5] Sentence
+        m = re.match(r'\((\d+)\)\s*\[([^\]]*)\]\s*(.*)', line)
         if m:
             count = int(m.group(1))
-            text = html_module.escape(m.group(2))
-            bullets.append((count, text))
+            indices_str = m.group(2)
+            text = html_module.escape(m.group(3))
+            # Parse comma-separated indices (1-based)
+            indices = []
+            for idx_s in indices_str.split(','):
+                idx_s = idx_s.strip()
+                if idx_s.isdigit():
+                    indices.append(int(idx_s))
+            bullets.append((count, text, indices))
         else:
-            # Fallback: no count, treat as plain bullet
-            text = html_module.escape(re.sub(r'^[•\-]\s*', '', line))
-            if text:
-                bullets.append((1, text))
+            # Fallback: (N) Sentence (no indices)
+            m2 = re.match(r'\((\d+)\)\s*(.*)', line)
+            if m2:
+                count = int(m2.group(1))
+                text = html_module.escape(m2.group(2))
+                bullets.append((count, text, []))
+            else:
+                text = html_module.escape(re.sub(r'^[•\-]\s*', '', line))
+                if text:
+                    bullets.append((1, text, []))
 
     if not bullets:
         return
 
+    # Build a lookup of headline titles by 1-based index
+    title_lookup = {}
+    if headlines:
+        for i, h in enumerate(headlines):
+            title_lookup[i + 1] = h['title']
+
     max_count = max(b[0] for b in bullets)
     bullet_html_parts = []
-    for count, text in bullets[:6]:
+    for count, text, indices in bullets[:6]:
         pct = int((count / max_count) * 100) if max_count > 0 else 0
+        # Build data-titles attribute: JSON array of matching article titles
+        matched_titles = [title_lookup[i] for i in indices if i in title_lookup]
+        titles_json = html_module.escape(json.dumps(matched_titles))
         bullet_html_parts.append(
-            f'<div class="ai-bullet">'
+            f'<div class="ai-bullet" data-titles="{titles_json}">'
             f'<div class="ai-bar-wrap"><div class="ai-bar" style="width:{pct}%"></div></div>'
             f'<span class="ai-bullet-text">{text}</span>'
             f'<span class="ai-bullet-count">{count}</span>'
@@ -1806,7 +1833,7 @@ def main():
         print(f"  {region_name}: {len(headlines)} new articles to summarise")
         summary = generate_ai_summary(region_name, headlines)
         if summary:
-            inject_summary_into_html(html_file, summary)
+            inject_summary_into_html(html_file, summary, headlines)
             print(f"  Injected summary into {html_file}")
 
     print("\nDone!")

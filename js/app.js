@@ -68,6 +68,7 @@ function getCountries(timeFilter) {
 
 let activeCountry = null; // null = show all
 let activeSource = null;  // null = show all
+let activeBriefingTitles = null; // null = show all, Set = filter to these titles
 
 // ===== MAP INIT =====
 const map = L.map('map', {
@@ -132,6 +133,7 @@ function renderMarkers() {
       if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
       if (hidePaywall && isPaywall(a.source)) return false;
       if (showFavoritesOnly && !getFavorites().includes(a.url)) return false;
+      if (activeBriefingTitles && !activeBriefingTitles.has(a.title)) return false;
       return true;
     });
     if (visibleArticles.length === 0) return;
@@ -200,6 +202,7 @@ function renderMarkers() {
         if (activeSource && a.source !== activeSource) return false;
         if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
         if (hidePaywall && isPaywall(a.source)) return false;
+        if (activeBriefingTitles && !activeBriefingTitles.has(a.title)) return false;
         return true;
       });
       if (visibleArticles.length > 0) {
@@ -340,6 +343,15 @@ function renderSidebar() {
     const favs = getFavorites();
     filtered = filtered.map(loc => {
       const matchingArticles = loc.articles.filter(a => favs.includes(a.url));
+      if (matchingArticles.length === 0) return null;
+      return { ...loc, articles: matchingArticles };
+    }).filter(Boolean);
+  }
+
+  // Apply AI briefing filter
+  if (activeBriefingTitles) {
+    filtered = filtered.map(loc => {
+      const matchingArticles = loc.articles.filter(a => activeBriefingTitles.has(a.title));
       if (matchingArticles.length === 0) return null;
       return { ...loc, articles: matchingArticles };
     }).filter(Boolean);
@@ -533,23 +545,29 @@ function searchFor(word) {
 }
 
 // ===== ACTIONS =====
+function clearBriefingFilter() {
+  activeBriefingTitles = null;
+  document.querySelectorAll('.ai-bullet').forEach(b => b.classList.remove('active'));
+}
+
 function filterCountry(country) {
   activeCountry = country;
-  activeSource = null; // reset source when changing country
+  activeSource = null;
+  clearBriefingFilter();
   applyFilters();
   autoExpandArticles();
-
 }
 
 function filterSource(source) {
   activeSource = source;
+  clearBriefingFilter();
   applyFilters();
   autoExpandArticles();
 }
 
 function autoExpandArticles() {
   // Auto-expand all article lists when a filter is active
-  if (activeCountry || activeSource) {
+  if (activeCountry || activeSource || activeBriefingTitles) {
     document.querySelectorAll('.location-articles').forEach(el => el.classList.add('open'));
   } else {
     document.querySelectorAll('.location-articles').forEach(el => el.classList.remove('open'));
@@ -565,7 +583,7 @@ function applyFilters() {
 }
 
 function fitMapToMarkers() {
-  if (!activeCountry && !activeSource) {
+  if (!activeCountry && !activeSource && !activeBriefingTitles) {
     map.flyTo(window.pageConfig.mapCenter, window.pageConfig.mapZoom, { duration: 0.6 });
     return;
   }
@@ -683,6 +701,35 @@ document.addEventListener('click', function(e) {
 });
 // Restore collapsed state
 try { if (localStorage.getItem('pressradar_briefing_collapsed') === 'true') { document.getElementById('ai-summary-box')?.classList.add('collapsed'); } } catch(ex) {}
+
+// AI Briefing bullet click → filter sidebar to related articles
+document.addEventListener('click', function(e) {
+  const bullet = e.target.closest('.ai-bullet');
+  if (!bullet) return;
+  // Don't trigger when clicking the title (collapse)
+  if (e.target.id === 'ai-summary-title') return;
+
+  const titlesAttr = bullet.getAttribute('data-titles');
+  if (!titlesAttr) return;
+
+  try {
+    const titles = JSON.parse(titlesAttr);
+    if (!titles || titles.length === 0) return;
+
+    // If clicking the already-active bullet, clear the filter
+    if (bullet.classList.contains('active')) {
+      bullet.classList.remove('active');
+      activeBriefingTitles = null;
+    } else {
+      // Remove active from all bullets, set on this one
+      document.querySelectorAll('.ai-bullet').forEach(b => b.classList.remove('active'));
+      bullet.classList.add('active');
+      activeBriefingTitles = new Set(titles);
+    }
+    applyFilters();
+    autoExpandArticles();
+  } catch(ex) {}
+});
 
 // ===== FAVORITES =====
 
