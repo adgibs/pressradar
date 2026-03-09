@@ -14,10 +14,10 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:29 UTC, 8 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:32 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
-  <div class="date-badge">8 March 2026</div>
+  <div class="date-badge">9 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:29 UTC, 8 Mar 2026</div><div id="ai-summary-text">• Norway police investigate potential terrorism after explosion at US embassy in Oslo.<br>• Iran war disrupts European energy supplies and tourism, threatening UK gas reserves and Cyprus economy.<br>• Ukraine war recedes from focus as US prioritizes Iran conflict, complicating European geopolitical dynamics.<br>• German state election tests Chancellor Merz&#x27;s political standing amid regional governance challenges.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:33 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Spain grants amnesty to migrants as policy aims to regularize undocumented workers nationwide.<br>• Explosion at US embassy in Oslo may be terrorism, Norwegian police investigating actively.<br>• Iran conflict disrupts energy supplies; Britain holds only two days of gas storage.<br>• Ukraine&#x27;s Zelenskyy seeks international drone expertise support amid shifting US strategic focus.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -186,6 +186,7 @@ const locations = [
     lat: 52.52, lng: 13.405,
     category: "economic",
     articles: [
+      { title: "Masked fan unplugs VAR monitor in German match", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c0rj2kq978qo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T00:13:32Z" },
       { title: "German state election a test for chancellor Friedrich Merz", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/germany-state-election-test-chancellor-friedrich-merz", time: "2026-03-08T12:52:32Z" },
       { title: "Menopause at work: Germany starts breaking the taboo", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260308-menopause-at-work-germany-starts-breaking-the-taboo", time: "2026-03-08T09:00:09Z" },
       { title: "How European leaders are reacting to the developing war in the Middle East", source: "NPR", url: "https://www.npr.org/2026/03/07/nx-s1-5737624/how-european-leaders-are-reacting-to-the-developing-war-in-the-middle-east", time: "2026-03-07T12:44:36Z" },
@@ -203,6 +204,7 @@ const locations = [
     lat: 40.4168, lng: -3.7038,
     category: "political",
     articles: [
+      { title: "Spain's migrants welcome amnesty: 'It will help us in every way'", source: "BBC News", url: "https://www.bbc.com/news/articles/crk8rdz5131o?at_medium=RSS&at_campaign=rss", time: "2026-03-09T00:17:54Z" },
       { title: "Pedro Sánchez’s lone stance against Trump may look risky, but it is cannily pragmatic | Eoghan Gilmartin", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/07/pedro-sanchez-stance-donald-trump-pragmatic", time: "2026-03-07T05:00:41Z" },
       { title: "A lone battle: Why is Pedro Sánchez the only European leader to take on Trump?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/pedro-sanchez-spain-european-leader-take-on-trump", time: "2026-03-06T05:00:12Z" },
       { title: "A rift between Spain and Trump widens over Spanish opposition to the Iran war", source: "NPR", url: "https://www.npr.org/2026/03/05/nx-s1-5737285/iran-war-spain-trump", time: "2026-03-05T15:52:08Z" },
@@ -316,6 +318,15 @@ const locations = [
     ]
   },
   {
+    name: "Stockholm", country: "Sweden",
+    lat: 59.3293, lng: 18.0686,
+    category: "security",
+    articles: [
+      { title: "Ukraine war briefing: drone experts will be in Middle East in coming days, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/ukraine-war-briefing-drone-experts-will-be-in-middle-east-in-coming-days-says-zelenskyy", time: "2026-03-09T00:45:28Z" },
+      { title: "Ukraine war briefing: Zelenskyy offers help to Saudi Crown prince on combatting Iranian drones", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/ukraine-war-briefing-zelenskyy-offers-help-to-saudi-crown-prince-on-combatting-iranian-drones", time: "2026-03-08T02:57:36Z" },
+    ]
+  },
+  {
     name: "Munich", country: "Germany",
     lat: 48.1351, lng: 11.582,
     category: "political",
@@ -369,14 +380,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "The myth of Baba Vanga: how a mystic’s ‘prophecies’ fuel online propaganda", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/baba-vanga-mystic-prophecies-fuel-online-propaganda-conspiracy-theories", time: "2026-03-07T12:01:49Z" },
-    ]
-  },
-  {
-    name: "Stockholm", country: "Sweden",
-    lat: 59.3293, lng: 18.0686,
-    category: "security",
-    articles: [
-      { title: "Ukraine war briefing: Zelenskyy offers help to Saudi Crown prince on combatting Iranian drones", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/ukraine-war-briefing-zelenskyy-offers-help-to-saudi-crown-prince-on-combatting-iranian-drones", time: "2026-03-08T02:57:36Z" },
     ]
   },
   {
