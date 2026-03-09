@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:32 UTC, 9 Mar 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">04:56 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:33 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Peru nightclub bombing injures 33 people including minors in Lima attack.<br>• Trump hosts &quot;Shield of Americas&quot; summit with 12 Latin American rightwing leaders.<br>• Colombia experiences campaign trail violence ahead of congressional elections and presidential voting.<br>• Haiti migration crisis deepens as Haitians struggle in Mexican communities seeking asylum.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 04:56 UTC, 9 Mar 2026</div><div id="ai-summary-text">• US military strikes alleged drug boat in Pacific, killing six people in operation.<br>• Trump convenes &quot;Shield of Americas&quot; summit with twelve Latin American leaders in Florida.<br>• Bombing at Peru nightclub injures thirty-three people, including minors, in violent attack.<br>• Colombia holds congressional elections amid campaign violence and rising US tensions.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,6 +111,34 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "US military kills six in strike on alleged drug boat in Pacific", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/09/us-military-drug-boat-strike-pacific", time: "2026-03-09T03:09:50Z" },
+      { title: "Trump Assembles a New Coalition to ‘Eradicate’ Cartels", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/americas/trump-latin-american-coalition-cartels.html", time: "2026-03-07T23:08:21Z" },
+      { title: "‘They’re cancer’: Trump threatens cartels, Cuba at Latin American summit", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/theyre-a-cancer-trump-threatens-cartels-cuba-at-latin-american-summit?traffic_source=rss", time: "2026-03-07T18:56:30Z" },
+      { title: "Trump convenes ‘Shield of Americas’ summit with 12 Latin American leaders", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit", time: "2026-03-07T18:01:23Z" },
+      { title: "Trump hosts Latin America allies to form coalition against drug cartels", source: "France 24", url: "https://www.france24.com/en/americas/20260307-trump-hosts-latin-america-allies-form-coalition-against-drug-cartels-shield", time: "2026-03-07T17:21:06Z" },
+      { title: "Trump convenes regional leaders to curb crime, immigration", source: "France 24", url: "https://www.france24.com/en/trump-convenes-regional-leaders-to-curb-crime-immigration", time: "2026-03-07T15:56:55Z" },
+      { title: "REPLAY: US hosts 'Shield of the Americas summit'", source: "France 24", url: "https://www.france24.com/en/replay-us-hosts-shield-of-the-americas-summit", time: "2026-03-07T15:37:48Z" },
+      { title: "Trump meets with Latin American leaders in Miami amid war on Iran", source: "CBS News", url: "https://www.cbsnews.com/news/trump-shield-of-the-americas-summit/", time: "2026-03-07T14:59:53Z" },
+      { title: "‘An ideological guest list’: Trump invites Latin America’s rightwing leaders to Florida summit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/an-ideological-guest-list-trump-invites-latin-americas-rightwing-leaders-to-florida-summit", time: "2026-03-07T08:00:45Z" },
+      { title: "Trump looks to turn attention to Western Hemisphere at Americas summit", source: "NPR", url: "https://www.npr.org/2026/03/07/g-s1-112852/trump-americas-summit", time: "2026-03-07T05:42:59Z" },
+      { title: "China spent years building ties in Latin America. Can Trump make room for the US?", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvw0zwpd5o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T01:56:20Z" },
+      { title: "Here Is Mexico’s Plan to Keep the Country Safe During the World Cup", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/americas/world-cup-mexico-security-plan.html", time: "2026-03-06T22:28:37Z" },
+      { title: "Mexico’s Sheinbaum pledges robust World Cup security in visit to Jalisco", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/mexicos-sheinbaum-pledges-robust-world-cup-security-in-visit-to-jalisco?traffic_source=rss", time: "2026-03-06T22:13:06Z" },
+      { title: "Mexico to deploy 100,000 security personnel for World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce8wjwyjndyo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T19:24:59Z" },
+      { title: "In a bid to counter China, Trump hosts a summit for Latin America leaders", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/in-a-bid-to-counter-china-trump-hosts-a-summit-for-latin-america-leaders?traffic_source=rss", time: "2026-03-06T15:55:29Z" },
+      { title: "US, Mexico to hold talks ahead of USMCA trade pact review as Trump tariffs loom", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-mexico-talks-north-america-trade-pact-review-trump-tariffs", time: "2026-03-06T01:57:02Z" },
+      { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
+      { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
+      { title: "Ecuadorean troops find 35m-long 'narco-sub' hidden in nature reserve", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6zz65vg0qo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T17:34:04Z" },
+      { title: "Ecuador sinks 'narco sub' as nation works with U.S. to fight organized crime", source: "CBS News", url: "https://www.cbsnews.com/news/narco-sub-sunk-ecuador-us-operations-organized-crime/", time: "2026-03-05T15:37:28Z" },
+      { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
+    ]
+  },
+  {
     name: "Havana", country: "Cuba",
     lat: 23.1136, lng: -82.3666,
     category: "political",
@@ -135,33 +163,6 @@ const locations = [
       { title: "Blackout in Cuba leaves millions without power amid US oil chokehold", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/blackout-cuba-us-oil", time: "2026-03-04T19:42:57Z" },
       { title: "With Fuel Running Out and Canadian Flights Suspended, Cuba’s Tourism Is Collapsing", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/americas/cuba-tourism-travel-canada-trump.html", time: "2026-03-04T14:31:08Z" },
       { title: "Cuba charges six exiles with terrorism in wake of deadly speedboat attack", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/04/cuba-charges-six-exiles-terrorism-speedboat-attack", time: "2026-03-04T07:01:11Z" },
-    ]
-  },
-  {
-    name: "Mexico City", country: "Mexico",
-    lat: 19.4326, lng: -99.1332,
-    category: "political",
-    articles: [
-      { title: "Trump Assembles a New Coalition to ‘Eradicate’ Cartels", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/americas/trump-latin-american-coalition-cartels.html", time: "2026-03-07T23:08:21Z" },
-      { title: "‘They’re cancer’: Trump threatens cartels, Cuba at Latin American summit", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/7/theyre-a-cancer-trump-threatens-cartels-cuba-at-latin-american-summit?traffic_source=rss", time: "2026-03-07T18:56:30Z" },
-      { title: "Trump convenes ‘Shield of Americas’ summit with 12 Latin American leaders", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit", time: "2026-03-07T18:01:23Z" },
-      { title: "Trump hosts Latin America allies to form coalition against drug cartels", source: "France 24", url: "https://www.france24.com/en/americas/20260307-trump-hosts-latin-america-allies-form-coalition-against-drug-cartels-shield", time: "2026-03-07T17:21:06Z" },
-      { title: "Trump convenes regional leaders to curb crime, immigration", source: "France 24", url: "https://www.france24.com/en/trump-convenes-regional-leaders-to-curb-crime-immigration", time: "2026-03-07T15:56:55Z" },
-      { title: "REPLAY: US hosts 'Shield of the Americas summit'", source: "France 24", url: "https://www.france24.com/en/replay-us-hosts-shield-of-the-americas-summit", time: "2026-03-07T15:37:48Z" },
-      { title: "Trump meets with Latin American leaders in Miami amid war on Iran", source: "CBS News", url: "https://www.cbsnews.com/news/trump-shield-of-the-americas-summit/", time: "2026-03-07T14:59:53Z" },
-      { title: "‘An ideological guest list’: Trump invites Latin America’s rightwing leaders to Florida summit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/an-ideological-guest-list-trump-invites-latin-americas-rightwing-leaders-to-florida-summit", time: "2026-03-07T08:00:45Z" },
-      { title: "Trump looks to turn attention to Western Hemisphere at Americas summit", source: "NPR", url: "https://www.npr.org/2026/03/07/g-s1-112852/trump-americas-summit", time: "2026-03-07T05:42:59Z" },
-      { title: "China spent years building ties in Latin America. Can Trump make room for the US?", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvw0zwpd5o?at_medium=RSS&at_campaign=rss", time: "2026-03-07T01:56:20Z" },
-      { title: "Here Is Mexico’s Plan to Keep the Country Safe During the World Cup", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/americas/world-cup-mexico-security-plan.html", time: "2026-03-06T22:28:37Z" },
-      { title: "Mexico’s Sheinbaum pledges robust World Cup security in visit to Jalisco", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/mexicos-sheinbaum-pledges-robust-world-cup-security-in-visit-to-jalisco?traffic_source=rss", time: "2026-03-06T22:13:06Z" },
-      { title: "Mexico to deploy 100,000 security personnel for World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce8wjwyjndyo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T19:24:59Z" },
-      { title: "In a bid to counter China, Trump hosts a summit for Latin America leaders", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/in-a-bid-to-counter-china-trump-hosts-a-summit-for-latin-america-leaders?traffic_source=rss", time: "2026-03-06T15:55:29Z" },
-      { title: "US, Mexico to hold talks ahead of USMCA trade pact review as Trump tariffs loom", source: "France 24", url: "https://www.france24.com/en/americas/20260306-us-mexico-talks-north-america-trade-pact-review-trump-tariffs", time: "2026-03-06T01:57:02Z" },
-      { title: "Trump administration doubles down on military action in Latin America", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/5/trump-administration-doubles-down-on-military-action-in-latin-america?traffic_source=rss", time: "2026-03-05T19:21:39Z" },
-      { title: "A Mexico City Design Gallery Hits the World Stage", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/arts/design/mexico-city-gallery-ago-projects.html", time: "2026-03-05T18:56:26Z" },
-      { title: "Ecuadorean troops find 35m-long 'narco-sub' hidden in nature reserve", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6zz65vg0qo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T17:34:04Z" },
-      { title: "Ecuador sinks 'narco sub' as nation works with U.S. to fight organized crime", source: "CBS News", url: "https://www.cbsnews.com/news/narco-sub-sunk-ecuador-us-operations-organized-crime/", time: "2026-03-05T15:37:28Z" },
-      { title: "'Gringo go home': Mexico’s growing tourism backlash – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/05/gringo-go-home-mexicos-growing-tourism-backlash-video", time: "2026-03-05T09:43:42Z" },
     ]
   },
   {
@@ -270,6 +271,15 @@ const locations = [
     ]
   },
   {
+    name: "Toronto", country: "Canada",
+    lat: 43.6532, lng: -79.3832,
+    category: "economic",
+    articles: [
+      { title: "The Suburb That Won’t Sleep", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/canada/mississauga-toronto-ridgeway-immigration.html", time: "2026-03-09T04:01:11Z" },
+      { title: "Two Toronto-Area Synagogues Are Struck by Gunfire", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/canada/toronto-synagogue-shootings-canada.html", time: "2026-03-07T19:20:02Z" },
+    ]
+  },
+  {
     name: "Kingston", country: "Jamaica",
     lat: 18.0179, lng: -76.8099,
     category: "political",
@@ -291,14 +301,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "At Trump’s Summit in Miami, Bolivia Makes a Political U-turn Toward the U.S.", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/americas/bolivia-us-relations-trump-paz.html", time: "2026-03-07T10:01:16Z" },
-    ]
-  },
-  {
-    name: "Toronto", country: "Canada",
-    lat: 43.6532, lng: -79.3832,
-    category: "economic",
-    articles: [
-      { title: "Two Toronto-Area Synagogues Are Struck by Gunfire", source: "New York Times", url: "https://www.nytimes.com/2026/03/07/world/canada/toronto-synagogue-shootings-canada.html", time: "2026-03-07T19:20:02Z" },
     ]
   },
   {
