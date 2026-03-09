@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:37 UTC, 9 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:12 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:38 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Spain grants amnesty to migrants as immigration policy shifts significantly.<br>• Norway police investigate potential terrorism after explosion near US embassy in Oslo.<br>• Ukraine sends drone experts to Middle East as US strategic focus shifts toward Iran.<br>• Energy crisis deepens across Europe amid Iran conflict threatening gas supplies.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:13 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Spain grants amnesty to migrants as policy aims to help undocumented workers integrate.<br>• Oslo police investigate explosion outside US embassy; suspect images released for identification.<br>• UK faces energy crisis with only two days of gas storage remaining.<br>• Iran conflict threatens European gas supplies and dampens Cyprus tourism significantly.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -147,6 +147,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Europe rallies around Cyprus after Iranian strikes", source: "France 24", url: "https://www.france24.com/en/europe-rallies-around-cyprus-after-iranian-strikes", time: "2026-03-09T12:31:06Z" },
       { title: "The Great Arch review – a visionary architect crushed by the politics of prestige", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/09/great-arch-review-claes-bang-stephane-demoustier", time: "2026-03-09T11:00:47Z" },
       { title: "Pelicot joins Paris march as rallies across world mark International Women's Day", source: "France 24", url: "https://www.france24.com/en/europe/20260308-in-pictures-international-women-s-day-rallies-around-the-world", time: "2026-03-08T15:46:55Z" },
       { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/mar/06/the-week-around-the-world-in-20-pictures", time: "2026-03-06T19:08:23Z" },
@@ -233,6 +234,18 @@ const locations = [
     ]
   },
   {
+    name: "Oslo", country: "Norway",
+    lat: 59.9139, lng: 10.7522,
+    category: "economic",
+    articles: [
+      { title: "Police release images of Oslo US embassy explosion suspect", source: "BBC News", url: "https://www.bbc.com/news/articles/ce8wk563473o?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:45:09Z" },
+      { title: "Oslo Police Investigate Explosion Outside U.S. Embassy", source: "New York Times", url: "https://www.nytimes.com/2026/03/08/world/europe/explosion-us-embassy-oslo.html", time: "2026-03-08T13:32:57Z" },
+      { title: "Police investigate an explosion outside the U.S. Embassy in Oslo", source: "NPR", url: "https://www.npr.org/2026/03/08/nx-s1-5741670/explosion-outside-us-embassy-in-oslo-norway", time: "2026-03-08T13:27:13Z" },
+      { title: "Explosion reported outside US embassy in Oslo, police say", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yjegg892lo?at_medium=RSS&at_campaign=rss", time: "2026-03-08T05:18:15Z" },
+      { title: "Loud explosion rocks US embassy in Oslo, police search for perpetrators", source: "France 24", url: "https://www.france24.com/en/europe/20260308-loud-explosion-rocks-us-embassy-in-oslo-police-search-for-perpetrators", time: "2026-03-08T03:23:12Z" },
+    ]
+  },
+  {
     name: "Rome", country: "Italy",
     lat: 41.9028, lng: 12.4964,
     category: "political",
@@ -241,17 +254,6 @@ const locations = [
       { title: "Italy wins claim over name of Spanish restaurant chain The Mafia Sits at the Table", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/italy-wins-claim-name-spanish-restaurant-chain-the-mafia-sits-at-the-table", time: "2026-03-06T12:33:12Z" },
       { title: "Italian activists and journalist targeted by spyware in 2024, prosecutors confirm", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/06/italy-activists-and-journalist-targeted-by-spyware-in-2024-prosecutors-confirm", time: "2026-03-06T12:10:32Z" },
       { title: "Watch: Moment wolf rescued from canal in northern Italy", source: "BBC News", url: "https://www.bbc.com/news/videos/cy7jjnekeepo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T23:01:10Z" },
-    ]
-  },
-  {
-    name: "Oslo", country: "Norway",
-    lat: 59.9139, lng: 10.7522,
-    category: "economic",
-    articles: [
-      { title: "Oslo Police Investigate Explosion Outside U.S. Embassy", source: "New York Times", url: "https://www.nytimes.com/2026/03/08/world/europe/explosion-us-embassy-oslo.html", time: "2026-03-08T13:32:57Z" },
-      { title: "Police investigate an explosion outside the U.S. Embassy in Oslo", source: "NPR", url: "https://www.npr.org/2026/03/08/nx-s1-5741670/explosion-outside-us-embassy-in-oslo-norway", time: "2026-03-08T13:27:13Z" },
-      { title: "Explosion reported outside US embassy in Oslo, police say", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yjegg892lo?at_medium=RSS&at_campaign=rss", time: "2026-03-08T05:18:15Z" },
-      { title: "Loud explosion rocks US embassy in Oslo, police search for perpetrators", source: "France 24", url: "https://www.france24.com/en/europe/20260308-loud-explosion-rocks-us-embassy-in-oslo-police-search-for-perpetrators", time: "2026-03-08T03:23:12Z" },
     ]
   },
   {

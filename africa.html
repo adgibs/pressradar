@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:37 UTC, 9 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:12 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:38 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Cocoa farmers across West Africa face economic hardship as global chocolate market experiences significant downturn.<br>• Kenya faces devastating flooding crisis with at least 42 deaths reported across the country recently.<br>• Guinea&#x27;s government dissolves 40 political parties including main opposition groups, consolidating state control.<br>• Sudan&#x27;s conflict continues with drone attacks killing dozens at markets; volunteers rebuild destroyed psychiatric hospital.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:13 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Ghana requests Commonwealth condemnation of peacekeepers attacked in Lebanon conflict.<br>• Guinea opposition leader calls for direct resistance after 40 parties dissolved.<br>• Cocoa farmers struggle as global chocolate market experiences significant downturn.<br>• Kenya floods kill at least 42 people across the country.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -204,6 +204,16 @@ const locations = [
     ]
   },
   {
+    name: "Conakry", country: "Guinea",
+    lat: 9.6412, lng: -13.5784,
+    category: "political",
+    articles: [
+      { title: "Guinea opposition leader urges 'direct resistance' after 40 parties dissolved", source: "BBC News", url: "https://www.bbc.com/news/articles/cjrqg80y57po?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:30:19Z" },
+      { title: "One ‘party state’: Guinea dissolves main opposition parties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/one-party-state-guinea-dissolves-main-opposition-parties?traffic_source=rss", time: "2026-03-08T21:45:02Z" },
+      { title: "Guinea orders dissolution of 40 political parties, including three main opposition groups", source: "France 24", url: "https://www.france24.com/en/africa/20260307-guinea-orders-dissolution-40-political-parties-including-three-main-opposition-goups", time: "2026-03-07T12:18:42Z" },
+    ]
+  },
+  {
     name: "Goma", country: "DR Congo",
     lat: -1.6585, lng: 29.2206,
     category: "conflict",
@@ -222,12 +232,12 @@ const locations = [
     ]
   },
   {
-    name: "Conakry", country: "Guinea",
-    lat: 9.6412, lng: -13.5784,
-    category: "political",
+    name: "Accra", country: "Ghana",
+    lat: 5.6037, lng: -0.187,
+    category: "economic",
     articles: [
-      { title: "One ‘party state’: Guinea dissolves main opposition parties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/one-party-state-guinea-dissolves-main-opposition-parties?traffic_source=rss", time: "2026-03-08T21:45:02Z" },
-      { title: "Guinea orders dissolution of 40 political parties, including three main opposition groups", source: "France 24", url: "https://www.france24.com/en/africa/20260307-guinea-orders-dissolution-40-political-parties-including-three-main-opposition-goups", time: "2026-03-07T12:18:42Z" },
+      { title: "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:13:42Z" },
+      { title: "Soul to Soul review – joyous 1971 concert film captures Black American stars’ emotional return to Ghana", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/soul-to-soul-review-film-denis-sanders-ghana-tina-turner", time: "2026-03-05T11:00:02Z" },
     ]
   },
   {
@@ -276,14 +286,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Nigerian doctors suspended over death of Adichie's son", source: "BBC News", url: "https://www.bbc.com/news/articles/cp8rrk5ngngo?at_medium=RSS&at_campaign=rss", time: "2026-03-04T14:17:14Z" },
-    ]
-  },
-  {
-    name: "Accra", country: "Ghana",
-    lat: 5.6037, lng: -0.187,
-    category: "economic",
-    articles: [
-      { title: "Soul to Soul review – joyous 1971 concert film captures Black American stars’ emotional return to Ghana", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/soul-to-soul-review-film-denis-sanders-ghana-tina-turner", time: "2026-03-05T11:00:02Z" },
     ]
   },
   {
