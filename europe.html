@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">14:56 UTC, 9 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:03 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 14:56 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Croatia reinstates conscription as hundreds of teenagers report for military duty.<br>• Spain grants amnesty to migrants, offering legal status and protection.<br>• Police investigate explosion suspect at Oslo US embassy in Norway.<br>• Cyprus debates UK military bases&#x27; role amid ongoing regional conflict.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:03 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Croatia reinstates military conscription as hundreds of teenagers report for duty.<br>• Spain grants amnesty to migrants in new immigration policy shift.<br>• Police seek suspect in Oslo US embassy explosion investigation.<br>• German political setback as Greens gain ground in car industry region.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "Roman Abramovich ready to fight UK government over proceeds from £2.5bn Chelsea sale", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/roman-abramovich-ready-to-fight-uk-government-over-proceeds-from-chelsea-sale", time: "2026-03-09T15:23:14Z" },
       { title: "Ed Davey Wants King Charles to Cancel his U.S. State Visit Over Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/europe/king-charles-iran-war-uk-us-trump.html", time: "2026-03-09T14:10:07Z" },
       { title: "Great Britain has only two days of gas stored as Iran war disrupts supplies", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/08/great-britain-has-only-two-days-of-gas-stored-as-iran-war-disrupts-supplies", time: "2026-03-08T18:13:26Z" },
       { title: "Russian ambassador claims there are 'six places' in London where frog poison that killed Navalny can be bought", source: "Sky News", url: "https://news.sky.com/story/russias-uk-ambassador-denies-kremlin-used-frog-poison-to-kill-alexei-navalny-13516883", time: "2026-03-08T10:08:00Z" },
@@ -303,6 +304,16 @@ const locations = [
     ]
   },
   {
+    name: "Istanbul", country: "Turkey",
+    lat: 41.0082, lng: 28.9784,
+    category: "economic",
+    articles: [
+      { title: "Jailed Istanbul mayor goes on trial in corruption case slammed as political", source: "France 24", url: "https://www.france24.com/en/jailed-istanbul-mayor-goes-on-trial-in-corruption-case-slammed-as-political", time: "2026-03-09T15:36:05Z" },
+      { title: "Hair apparent: inside the transplant capital of the world – photo essay", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/09/inside-the-hair-transplant-capital-of-the-world-istanbul", time: "2026-03-09T07:00:44Z" },
+      { title: "Is the Trial of Erdogan’s Top Rival More About Corruption or Politics?", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/middleeast/turkey-erdogan-mayor-ekrem-imamoglu.html", time: "2026-03-09T04:01:15Z" },
+    ]
+  },
+  {
     name: "Reykjavik", country: "Iceland",
     lat: 64.1466, lng: -21.9426,
     category: "political",
@@ -336,15 +347,6 @@ const locations = [
     articles: [
       { title: "Finnish duo win wacky wife-carrying race", source: "BBC News", url: "https://www.bbc.com/news/articles/c15x2ygk993o?at_medium=RSS&at_campaign=rss", time: "2026-03-08T20:38:47Z" },
       { title: "Finland plans to lift decades-old ban on hosting nuclear weapons", source: "BBC News", url: "https://www.bbc.com/news/articles/c14m5llnrlpo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T23:12:16Z" },
-    ]
-  },
-  {
-    name: "Istanbul", country: "Turkey",
-    lat: 41.0082, lng: 28.9784,
-    category: "economic",
-    articles: [
-      { title: "Hair apparent: inside the transplant capital of the world – photo essay", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/09/inside-the-hair-transplant-capital-of-the-world-istanbul", time: "2026-03-09T07:00:44Z" },
-      { title: "Is the Trial of Erdogan’s Top Rival More About Corruption or Politics?", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/middleeast/turkey-erdogan-mayor-ekrem-imamoglu.html", time: "2026-03-09T04:01:15Z" },
     ]
   },
   {
@@ -442,6 +444,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "Hundreds of teenagers report for duty as Croatia reinstates conscription", source: "BBC News", url: "https://www.bbc.com/news/articles/c93j2l32lzgo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T14:49:34Z" },
+    ]
+  },
+  {
+    name: "Riga", country: "Latvia",
+    lat: 56.9496, lng: 24.1052,
+    category: "security",
+    articles: [
+      { title: "The U.S. names its 7th dead soldier and oil prices spike on Day 10 of the Iran war", source: "NPR", url: "https://www.npr.org/2026/03/09/nx-s1-5742327/us-israel-iran-war-new-supreme-leader", time: "2026-03-09T09:59:31Z" },
     ]
   },
 ];
