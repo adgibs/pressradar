@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">06:00 UTC, 9 Mar 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:51 UTC, 9 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 06:01 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Mojtaba Khamenei appointed Iran&#x27;s new supreme leader following recent developments.<br>• Intensive airstrikes target Iranian oil infrastructure; oil prices surge above $100.<br>• Israeli special forces raid Lebanese village; US orders Saudi Arabia evacuation.<br>• UN warns of grave humanitarian peril as Middle East conflict intensifies.</div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 07:52 UTC, 9 Mar 2026</div><div id="ai-summary-text">• Mojtaba Khamenei appointed Iran&#x27;s new supreme leader following escalating regional conflict.<br>• US and Israeli strikes on Iranian oil depots drive crude prices above $100 barrel.<br>• Israeli forces raid Lebanese village; Iranian drones strike Kuwait and near Dubai Airport.<br>• UN warns of grave humanitarian crisis as nine-day Middle East air campaign continues.</div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -622,6 +622,10 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Hezbollah instructed to attack Lebanese army if it intervenes in conflict, source tells 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-889303", time: "2026-03-09T08:09:07Z" },
+      { title: "Israel unlawfully used white phosphorus in Lebanon: HRW", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/israel-unlawfully-used-white-phosphorus-in-lebanon-hrw?traffic_source=rss", time: "2026-03-09T06:54:25Z" },
+      { title: "Macron heads to Cyprus as Europe rallies around island after drone attack", source: "Times of Israel", url: "https://www.timesofisrael.com/macron-heads-to-cyprus-as-europe-rallies-around-island-after-drone-attack/", time: "2026-03-09T06:41:10Z" },
+      { title: "The war on Iran is already upending the Middle East. Look to the Gulf states to see how | Nesrine Malik", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/09/us-israel-war-iran-gulf-monarchies", time: "2026-03-09T06:00:42Z" },
       { title: "‘Country’ Joe McDonald, ’60s US rock star, proud protest counterculture icon, dies at 84", source: "Times of Israel", url: "https://www.timesofisrael.com/country-joe-mcdonald-60s-us-rock-star-proud-protest-counterculture-icon-dies-at-84/", time: "2026-03-09T04:56:17Z" },
       { title: "IDF launches wave of airstrikes on Islamic Regime in Iran, Hezbollah in Beirut", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889298", time: "2026-03-09T04:14:20Z" },
       { title: "Woman injured from flying debris in central Israel as Iran keeps up missile fire", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-9-2026/", time: "2026-03-09T01:54:31Z" },
@@ -647,6 +651,7 @@ const locations = [
       { title: "Oil built the Persian Gulf. Desalinated water keeps it alive. War threatens both", source: "Times of Israel", url: "https://www.timesofisrael.com/oil-built-the-persian-gulf-desalinated-water-keeps-it-alive-war-threatens-both/", time: "2026-03-08T14:48:42Z" },
       { title: "Iran targets Tel Aviv, Bersheeva", source: "France 24", url: "https://www.france24.com/en/iran-targets-tel-aviv-bersheeva", time: "2026-03-08T13:55:54Z" },
       { title: "Two Israeli soldiers killed as attacks in Lebanon leave nearly 400 dead", source: "Sky News", url: "https://news.sky.com/story/two-israeli-soldiers-killed-as-latest-attacks-in-lebanon-leave-nearly-400-dead-13516918", time: "2026-03-08T13:50:00Z" },
+      { title: "Nearly 400 killed in Lebanon conflict as first Israeli casualties announced", source: "Sky News", url: "https://news.sky.com/story/nearly-400-killed-in-lebanon-conflict-as-first-israeli-casualties-announced-13516918", time: "2026-03-08T13:50:00Z" },
       { title: "The Case for War - Sponsored Content", source: "Times of Israel", url: "https://www.timesofisrael.com/spotlight/the-case-for-war/", time: "2026-03-08T13:48:19Z" },
       { title: "Purim and Diaspora Power- with Barbara Spectre - Sponsored Content", source: "Times of Israel", url: "https://www.timesofisrael.com/spotlight/purim-and-diaspora-power-with-barbara-spectre/", time: "2026-03-08T13:45:58Z" },
       { title: "War, Washington, and the Jewish Vote - Sponsored Content", source: "Times of Israel", url: "https://toi.li/JNARXo", time: "2026-03-08T13:36:16Z" },
@@ -982,6 +987,47 @@ const locations = [
     ]
   },
   {
+    name: "Strait of Hormuz", country: "Iran",
+    lat: 26.5667, lng: 56.25,
+    category: "energy",
+    articles: [
+      { title: "Monday briefing: ​How are Iranians abroad grappling with loss and uncertainty from afar?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/monday-briefing-how-are-iranians-abroad-grappling-with-loss-and-uncertainty-from-afar", time: "2026-03-09T06:50:41Z" },
+      { title: "Why has the Iran war sparked fears of stagflation for the global economy?", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/09/iran-war-oil-prices-stagflation-global-economy", time: "2026-03-09T06:36:15Z" },
+      { title: "War in Middle East live: Asian stocks tumble, oil prices soar as war threatens shipping", source: "France 24", url: "https://www.france24.com/en/middle-east/20260309-war-in-middle-east-live-asian-stocks-tumble-oil-prices-soar-as-war-threatens-shipping", time: "2026-03-09T03:38:06Z" },
+      { title: "Oil prices surge above $100 and shares slide over Iran war", source: "BBC News", url: "https://www.bbc.com/news/articles/c79542n0grwo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T02:19:19Z" },
+      { title: "Middle East crisis live: Mojtaba Khamenei chosen as Iran’s new supreme leader; oil prices soar past $100 a barrel", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/09/iran-war-live-updates-new-supreme-leader-mojtaba-khamenei-oil-prices-soar", time: "2026-03-09T02:18:45Z" },
+      { title: "Oil soars past $100 a barrel amid Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/9/oil-soars-past-100-a-barrel-amid-iran-war?traffic_source=rss", time: "2026-03-09T00:52:24Z" },
+      { title: "Iran war drives oil price above $100 a barrel for first time since 2022", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/09/iran-war-drives-oil-price-above-100-a-barrel-for-first-time-since-2022", time: "2026-03-08T22:19:33Z" },
+      { title: "Iran war threatens prolonged impact on energy markets as oil prices rise", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/iran-war-threatens-prolonged-impact-on-energy-markets-as-oil-prices-rise?traffic_source=rss", time: "2026-03-08T12:55:57Z" },
+      { title: "US offers $20b. reinsurance plan to spur Gulf oil flow amid Operation Epic Fury, Iranian attacks", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/energy-and-infrastructure/article-889219", time: "2026-03-08T11:25:44Z" },
+      { title: "Oil prices ‘could breach $100 a barrel within days’ amid supply disruption from Iran war", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/08/oil-prices-supply-disruption-iran-war-goldman-sachs", time: "2026-03-08T10:55:24Z" },
+      { title: "Traffic stalls in Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/traffic-stalls-in-strait-of-hormuz", time: "2026-03-08T10:29:09Z" },
+      { title: "UAE tugboat hit by explosion, sinks in Strait of Hormuz; 3 Indonesian crew missing", source: "Times of Israel", url: "https://www.timesofisrael.com/uae-tugboat-hit-by-explosion-sinks-in-strait-of-hormuz-3-indonesian-crew-missing/", time: "2026-03-08T10:24:10Z" },
+      { title: "Traders warn $100-a-barrel oil is imminent if Iran war keeps raging", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/energy-and-infrastructure/article-889152", time: "2026-03-07T18:51:37Z" },
+      { title: "IRGC claims to have struck oil tanker in Strait of Hormuz, UKMTO issues warning in area", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889141", time: "2026-03-07T16:02:45Z" },
+      { title: "Iran’s Navy Is Weakened but U.S. Still Faces Challenges in Strait of Hormuz", source: "New York Times", url: "https://www.nytimes.com/live/2026/world/us-israel-iran-attack-maps/map-shows-the-continuing-challenges-for-us-forces-and-international-energy-supplies", time: "2026-03-07T15:50:38Z" },
+      { title: "Iran’s Navy Is Weakened but U.S. Still Faces Challenges in Strait of Hormuz", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-navy-strait-of-hormuz-satellite-images.html", time: "2026-03-07T03:43:43Z" },
+      { title: "US considers lifting more sanctions on Russian oil as Iran conflict sees global prices surge", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/07/us-considers-lifting-more-sanctions-on-russian-oil-as-iran-conflict-sees-global-prices-surge", time: "2026-03-07T03:13:41Z" },
+      { title: "How the War in Iran Is Disrupting the World’s Oil", source: "New York Times", url: "https://www.nytimes.com/video/world/middleeast/100000010750140/how-the-war-in-iran-is-disrupting-the-worlds-oil.html", time: "2026-03-06T23:45:53Z" },
+      { title: "Iran war pushes oil price above $90 threatening rise in global inflation", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/06/iran-war-pushes-oil-price-above-90-dollars-a-barrel", time: "2026-03-06T17:04:22Z" },
+      { title: "Surge in GPS interference around Strait of Hormuz increases shipping risks", source: "France 24", url: "https://www.france24.com/en/middle-east/20260306-surge-gps-interference-strait-hormuz-increases-shipping-risks", time: "2026-03-06T14:45:23Z" },
+      { title: "U.S. crude oil sees largest weekly price jump on record", source: "NBC News", url: "https://www.nbcnews.com/business/markets/oil-gas-prices-stock-drop-iran-war-rcna262079", time: "2026-03-06T14:36:43Z" },
+      { title: "Are oil prices likely to rise even more amid the Iran war?", source: "CBS News", url: "https://www.cbsnews.com/video/are-oil-prices-likely-to-rise-even-more-amid-the-iran-war/", time: "2026-03-06T14:15:00Z" },
+      { title: "Russia watches Iran under fire as the Kremlin eyes oil price windfall", source: "NPR", url: "https://www.npr.org/2026/03/06/nx-s1-5737425/russia-watches-iran-under-fire-as-the-kremlin-eyes-oil-price-windfall", time: "2026-03-06T09:39:44Z" },
+      { title: "War in Middle East live: Oil prices surge to highest level in nearly two years as conflict escalates", source: "France 24", url: "https://www.france24.com/en/middle-east/20260306-us-warns-bombardment-surge-as-israel-strikes-iran-lebanon", time: "2026-03-06T03:35:39Z" },
+      { title: "Stocks slide and oil prices climb as Iran says it could counter ground invasion", source: "NBC News", url: "https://www.nbcnews.com/business/markets/stocks-slide-oil-prices-climb-iran-says-counter-ground-invasion-rcna261952", time: "2026-03-05T18:23:00Z" },
+      { title: "Timelapse shows change in the flow of ships in the Strait of Hormuz", source: "BBC News", url: "https://www.bbc.com/news/videos/cze004wywz3o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:38:53Z" },
+      { title: "Oil price continues to rise amid Middle East crisis but stock markets rebound across Asia", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/05/oil-price-continues-to-rise-amid-middle-east-crisis-but-stock-markets-rebound-across-asia", time: "2026-03-05T10:01:13Z" },
+      { title: "Shipping slows through Strait of Hormuz, threatening to snarl global trade", source: "NBC News", url: "https://www.nbcnews.com/business/economy/shipping-slows-crawl-strait-hormuz-threatening-snarl-international-tra-rcna261797", time: "2026-03-04T22:21:10Z" },
+      { title: "WATCH: How traffic dried up in the Strait of Hormuz since the Iran war began", source: "NPR", url: "https://www.npr.org/2026/03/04/nx-s1-5736104/iran-war-oil-trump-israel-strait-hormuz-closed-energy-crisis", time: "2026-03-04T21:36:36Z" },
+      { title: "Countries work to secure safe passage in the Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/countries-work-to-secure-safe-passage-in-the-strait-of-hormuz", time: "2026-03-04T15:32:33Z" },
+      { title: "Energy prices start climbing after war closes Strait of Hormuz down", source: "France 24", url: "https://www.france24.com/en/energy-prices-start-climbing-after-war-closes-strait-of-hormuz-down", time: "2026-03-04T11:20:49Z" },
+      { title: "President Donald Trump acknowledged oil prices had risen amid worries of prolonged war in Iran but...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T17:20:56Z" },
+      { title: "Strait of Hormuz: What happens if Iran shuts global oil corridor?", source: "BBC News", url: "https://www.bbc.com/news/articles/c78n6p09pzno?at_medium=RSS&at_campaign=rss", time: "2026-03-03T04:02:59Z" },
+      { title: "Fires rage at Iran's Bandar Abbas naval headquarters, Strait of Hormuz traffic stalled", source: "Fox News", url: "https://www.foxnews.com/world/fires-rage-irans-bandar-abbas-naval-headquarters-strait-hormuz-traffic-stalled", time: "2026-03-02T21:13:54Z" },
+    ]
+  },
+  {
     name: "Gaza City", country: "Palestine",
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
@@ -1018,45 +1064,6 @@ const locations = [
       { title: "From Hamas attack to U.S. war with Iran, violence forges a new Middle East", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-04T18:33:19Z" },
       { title: "From Hamas attack to U.S. war on Iran, violence forges new Middle East", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/04/iran-israel-middle-east-future/", time: "2026-03-04T17:18:41Z" },
       { title: "An outlier for condemning Israel’s Gaza genocide, Spain says no to Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/4/spain-no-to-israel-us-war-iran?traffic_source=rss", time: "2026-03-04T12:22:45Z" },
-    ]
-  },
-  {
-    name: "Strait of Hormuz", country: "Iran",
-    lat: 26.5667, lng: 56.25,
-    category: "energy",
-    articles: [
-      { title: "War in Middle East live: Asian stocks tumble, oil prices soar as war threatens shipping", source: "France 24", url: "https://www.france24.com/en/middle-east/20260309-war-in-middle-east-live-asian-stocks-tumble-oil-prices-soar-as-war-threatens-shipping", time: "2026-03-09T03:38:06Z" },
-      { title: "Oil prices surge above $100 and shares slide over Iran war", source: "BBC News", url: "https://www.bbc.com/news/articles/c79542n0grwo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T02:19:19Z" },
-      { title: "Middle East crisis live: Mojtaba Khamenei chosen as Iran’s new supreme leader; oil prices soar past $100 a barrel", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/09/iran-war-live-updates-new-supreme-leader-mojtaba-khamenei-oil-prices-soar", time: "2026-03-09T02:18:45Z" },
-      { title: "Oil soars past $100 a barrel amid Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/9/oil-soars-past-100-a-barrel-amid-iran-war?traffic_source=rss", time: "2026-03-09T00:52:24Z" },
-      { title: "Iran war drives oil price above $100 a barrel for first time since 2022", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/09/iran-war-drives-oil-price-above-100-a-barrel-for-first-time-since-2022", time: "2026-03-08T22:19:33Z" },
-      { title: "Iran war threatens prolonged impact on energy markets as oil prices rise", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/iran-war-threatens-prolonged-impact-on-energy-markets-as-oil-prices-rise?traffic_source=rss", time: "2026-03-08T12:55:57Z" },
-      { title: "US offers $20b. reinsurance plan to spur Gulf oil flow amid Operation Epic Fury, Iranian attacks", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/energy-and-infrastructure/article-889219", time: "2026-03-08T11:25:44Z" },
-      { title: "Oil prices ‘could breach $100 a barrel within days’ amid supply disruption from Iran war", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/08/oil-prices-supply-disruption-iran-war-goldman-sachs", time: "2026-03-08T10:55:24Z" },
-      { title: "Traffic stalls in Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/traffic-stalls-in-strait-of-hormuz", time: "2026-03-08T10:29:09Z" },
-      { title: "UAE tugboat hit by explosion, sinks in Strait of Hormuz; 3 Indonesian crew missing", source: "Times of Israel", url: "https://www.timesofisrael.com/uae-tugboat-hit-by-explosion-sinks-in-strait-of-hormuz-3-indonesian-crew-missing/", time: "2026-03-08T10:24:10Z" },
-      { title: "Traders warn $100-a-barrel oil is imminent if Iran war keeps raging", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/energy-and-infrastructure/article-889152", time: "2026-03-07T18:51:37Z" },
-      { title: "IRGC claims to have struck oil tanker in Strait of Hormuz, UKMTO issues warning in area", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-889141", time: "2026-03-07T16:02:45Z" },
-      { title: "Iran’s Navy Is Weakened but U.S. Still Faces Challenges in Strait of Hormuz", source: "New York Times", url: "https://www.nytimes.com/live/2026/world/us-israel-iran-attack-maps/map-shows-the-continuing-challenges-for-us-forces-and-international-energy-supplies", time: "2026-03-07T15:50:38Z" },
-      { title: "Iran’s Navy Is Weakened but U.S. Still Faces Challenges in Strait of Hormuz", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-navy-strait-of-hormuz-satellite-images.html", time: "2026-03-07T03:43:43Z" },
-      { title: "US considers lifting more sanctions on Russian oil as Iran conflict sees global prices surge", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/07/us-considers-lifting-more-sanctions-on-russian-oil-as-iran-conflict-sees-global-prices-surge", time: "2026-03-07T03:13:41Z" },
-      { title: "How the War in Iran Is Disrupting the World’s Oil", source: "New York Times", url: "https://www.nytimes.com/video/world/middleeast/100000010750140/how-the-war-in-iran-is-disrupting-the-worlds-oil.html", time: "2026-03-06T23:45:53Z" },
-      { title: "Iran war pushes oil price above $90 threatening rise in global inflation", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/06/iran-war-pushes-oil-price-above-90-dollars-a-barrel", time: "2026-03-06T17:04:22Z" },
-      { title: "Surge in GPS interference around Strait of Hormuz increases shipping risks", source: "France 24", url: "https://www.france24.com/en/middle-east/20260306-surge-gps-interference-strait-hormuz-increases-shipping-risks", time: "2026-03-06T14:45:23Z" },
-      { title: "U.S. crude oil sees largest weekly price jump on record", source: "NBC News", url: "https://www.nbcnews.com/business/markets/oil-gas-prices-stock-drop-iran-war-rcna262079", time: "2026-03-06T14:36:43Z" },
-      { title: "Are oil prices likely to rise even more amid the Iran war?", source: "CBS News", url: "https://www.cbsnews.com/video/are-oil-prices-likely-to-rise-even-more-amid-the-iran-war/", time: "2026-03-06T14:15:00Z" },
-      { title: "Russia watches Iran under fire as the Kremlin eyes oil price windfall", source: "NPR", url: "https://www.npr.org/2026/03/06/nx-s1-5737425/russia-watches-iran-under-fire-as-the-kremlin-eyes-oil-price-windfall", time: "2026-03-06T09:39:44Z" },
-      { title: "War in Middle East live: Oil prices surge to highest level in nearly two years as conflict escalates", source: "France 24", url: "https://www.france24.com/en/middle-east/20260306-us-warns-bombardment-surge-as-israel-strikes-iran-lebanon", time: "2026-03-06T03:35:39Z" },
-      { title: "Stocks slide and oil prices climb as Iran says it could counter ground invasion", source: "NBC News", url: "https://www.nbcnews.com/business/markets/stocks-slide-oil-prices-climb-iran-says-counter-ground-invasion-rcna261952", time: "2026-03-05T18:23:00Z" },
-      { title: "Timelapse shows change in the flow of ships in the Strait of Hormuz", source: "BBC News", url: "https://www.bbc.com/news/videos/cze004wywz3o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:38:53Z" },
-      { title: "Oil price continues to rise amid Middle East crisis but stock markets rebound across Asia", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/05/oil-price-continues-to-rise-amid-middle-east-crisis-but-stock-markets-rebound-across-asia", time: "2026-03-05T10:01:13Z" },
-      { title: "Shipping slows through Strait of Hormuz, threatening to snarl global trade", source: "NBC News", url: "https://www.nbcnews.com/business/economy/shipping-slows-crawl-strait-hormuz-threatening-snarl-international-tra-rcna261797", time: "2026-03-04T22:21:10Z" },
-      { title: "WATCH: How traffic dried up in the Strait of Hormuz since the Iran war began", source: "NPR", url: "https://www.npr.org/2026/03/04/nx-s1-5736104/iran-war-oil-trump-israel-strait-hormuz-closed-energy-crisis", time: "2026-03-04T21:36:36Z" },
-      { title: "Countries work to secure safe passage in the Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/countries-work-to-secure-safe-passage-in-the-strait-of-hormuz", time: "2026-03-04T15:32:33Z" },
-      { title: "Energy prices start climbing after war closes Strait of Hormuz down", source: "France 24", url: "https://www.france24.com/en/energy-prices-start-climbing-after-war-closes-strait-of-hormuz-down", time: "2026-03-04T11:20:49Z" },
-      { title: "President Donald Trump acknowledged oil prices had risen amid worries of prolonged war in Iran but...", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-03T17:20:56Z" },
-      { title: "Strait of Hormuz: What happens if Iran shuts global oil corridor?", source: "BBC News", url: "https://www.bbc.com/news/articles/c78n6p09pzno?at_medium=RSS&at_campaign=rss", time: "2026-03-03T04:02:59Z" },
-      { title: "Fires rage at Iran's Bandar Abbas naval headquarters, Strait of Hormuz traffic stalled", source: "Fox News", url: "https://www.foxnews.com/world/fires-rage-irans-bandar-abbas-naval-headquarters-strait-hormuz-traffic-stalled", time: "2026-03-02T21:13:54Z" },
     ]
   },
   {
@@ -1167,6 +1174,7 @@ const locations = [
     lat: 32.6546, lng: 51.668,
     category: "strikes",
     articles: [
+      { title: "Iranian missiles target northern Israel, drones strike Bahrain’s only oil refinery", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-9-2026/", time: "2026-03-09T01:54:31Z" },
       { title: "IDF attacks Iran aerospace headquarters, sets back dual nuke use space launching tech", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-889267", time: "2026-03-08T17:07:21Z" },
       { title: "IDF strikes Iranian F-14 fighter jets, air defense systems in second week of Operation Roaring Lion", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-889203", time: "2026-03-08T10:09:33Z" },
       { title: "Iran may still have access to enriched uranium at site bombed by US last year – report", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-may-still-have-access-to-enriched-uranium-at-site-bombed-by-us-last-year-report/", time: "2026-03-08T07:36:35Z" },
