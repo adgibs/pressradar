@@ -1676,9 +1676,12 @@ def inject_summary_into_html(html_file, summary, headlines=None):
         pct = int((count / max_count) * 100) if max_count > 0 else 0
         # Build data-titles attribute: JSON array of matching article titles
         matched_titles = [title_lookup[i] for i in indices if i in title_lookup]
-        titles_json = html_module.escape(json.dumps(matched_titles))
+        # Use single-quoted HTML attribute; JSON uses double quotes inside.
+        # Escape single quotes and ampersands for safe HTML embedding.
+        titles_json = json.dumps(matched_titles, ensure_ascii=False)
+        titles_json = titles_json.replace("&", "&amp;").replace("'", "&#39;").replace("<", "&lt;")
         bullet_html_parts.append(
-            f'<div class="ai-bullet" data-titles="{titles_json}">'
+            f"<div class=\"ai-bullet\" data-titles='{titles_json}'>"
             f'<div class="ai-bar-wrap"><div class="ai-bar" style="width:{pct}%"></div></div>'
             f'<span class="ai-bullet-text">{text}</span>'
             f'<span class="ai-bullet-count">{count}</span>'
