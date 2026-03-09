@@ -480,6 +480,7 @@ function setPreset(preset) {
   updateTimeDisplay();
   applyFilters();
   updatePresetButtons(preset);
+  saveFiltersToSession();
 }
 
 function updatePresetButtons(active) {
@@ -550,12 +551,25 @@ function clearBriefingFilter() {
   document.querySelectorAll('.ai-bullet').forEach(b => b.classList.remove('active'));
 }
 
+function saveFiltersToSession() {
+  try {
+    sessionStorage.setItem('pressradar_filters', JSON.stringify({
+      country: activeCountry,
+      source: activeSource,
+      preset: document.querySelector('.preset-btn.active')?.getAttribute('onclick')?.match(/setPreset\('(.+?)'\)/)?.[1] || null,
+      search: document.getElementById('search-box')?.value || '',
+      hidePaywall: document.getElementById('hide-paywall')?.checked || false
+    }));
+  } catch(ex) {}
+}
+
 function filterCountry(country) {
   activeCountry = country;
   activeSource = null;
   clearBriefingFilter();
   applyFilters();
   autoExpandArticles();
+  saveFiltersToSession();
 }
 
 function filterSource(source) {
@@ -563,6 +577,7 @@ function filterSource(source) {
   clearBriefingFilter();
   applyFilters();
   autoExpandArticles();
+  saveFiltersToSession();
 }
 
 function autoExpandArticles() {
@@ -580,6 +595,7 @@ function applyFilters() {
   renderMarkers();
   renderTrending();
   fitMapToMarkers();
+  saveFiltersToSession();
 }
 
 function fitMapToMarkers() {
@@ -623,12 +639,34 @@ function scrollToLocation(locName) {
 }
 
 // ===== INIT =====
-updateTimeDisplay();
-setPreset('all');
-renderFilterBars();
-renderSidebar();
-renderMarkers();
-renderTrending();
+// Restore saved filters from session, or default to 48h
+(function restoreFilters() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem('pressradar_filters') || 'null');
+    if (saved) {
+      activeCountry = saved.country || null;
+      activeSource = saved.source || null;
+      if (saved.search) document.getElementById('search-box').value = saved.search;
+      if (saved.hidePaywall) document.getElementById('hide-paywall').checked = true;
+      // setPreset triggers applyFilters which renders everything
+      setPreset(saved.preset || '48h');
+    } else {
+      setPreset('48h');
+    }
+  } catch(ex) {
+    setPreset('48h');
+  }
+  // Restore dropdown selections after renderFilterBars has populated them
+  if (activeCountry) {
+    const cSel = document.getElementById('country-select');
+    if (cSel) cSel.value = activeCountry;
+  }
+  if (activeSource) {
+    const sSel = document.getElementById('source-select');
+    if (sSel) sSel.value = activeSource;
+  }
+  autoExpandArticles();
+})();
 
 // Set article count
 document.getElementById('total-count').textContent = allTimes.length;
