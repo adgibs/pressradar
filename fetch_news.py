@@ -1692,7 +1692,7 @@ def inject_summary_into_html(html_file, summary, headlines=None):
     if 'id="ai-summary-box"' in html:
         html = re.sub(
             r'(<div id="ai-summary-box">).*?(</div>\s*<div id="map-style-toggle")',
-            r'\1' + inner_html + r'\2',
+            lambda m: m.group(1) + inner_html + m.group(2),
             html,
             flags=re.DOTALL,
         )
