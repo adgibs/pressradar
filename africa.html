@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:39 UTC, 10 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:33 UTC, 10 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">10 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:40 UTC, 10 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘Extraordinary cruelty’: images show longterm ‘starvation strategy’ in Sudan", "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", "Air strike kills four Iran-linked fighters in Iraq"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Sudan faces humanitarian crisis amid conflict and international sanctions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Villagers on Principe, the ‘African Galapagos’, to be paid for protecting the ecosystem", "How the US far right bought into the myth of white South Africa’s persecution"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">African conservation and historical narratives attract international media attention</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US designates Sudanese Muslim Brotherhood organization as terrorist entity</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:34 UTC, 10 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["New evidence of starvation crimes in Darfur", "‘Extraordinary cruelty’: images show longterm ‘starvation strategy’ in Sudan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">New evidence documents starvation crimes and systematic strategy in Darfur</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Air strike kills four Iran-linked fighters in Iraq", "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US and airstrikes target Iran-linked forces and Sudanese militant groups</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Villagers on Principe, the ‘African Galapagos’, to be paid for protecting the ecosystem"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">West African island communities receive payment for ecosystem conservation efforts</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["How the US far right bought into the myth of white South Africa’s persecution"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US far-right movements embrace narratives of white South African persecution</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -255,6 +255,15 @@ const locations = [
     ]
   },
   {
+    name: "Darfur", country: "Sudan",
+    lat: 13.5, lng: 25.0,
+    category: "conflict",
+    articles: [
+      { title: "New evidence of starvation crimes in Darfur", source: "France 24", url: "https://www.france24.com/en/new-evidence-of-starvation-crimes-in-darfur", time: "2026-03-10T21:20:12Z" },
+      { title: "‘Extraordinary cruelty’: images show longterm ‘starvation strategy’ in Sudan", source: "The Guardian", url: "https://www.theguardian.com/global-development/ng-interactive/2026/mar/10/extraordinary-cruelty-images-show-longterm-starvation-strategy-in-sudan", time: "2026-03-10T07:00:12Z" },
+    ]
+  },
+  {
     name: "Cape Town", country: "South Africa",
     lat: -33.9249, lng: 18.4241,
     category: "political",
@@ -348,14 +357,6 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Thousands flee Akobo after South Sudan army issues forced evacuation order", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/thousands-flee-akobo-after-south-sudan-army-issues-forced-evacuation-order?traffic_source=rss", time: "2026-03-08T20:17:38Z" },
-    ]
-  },
-  {
-    name: "Darfur", country: "Sudan",
-    lat: 13.5, lng: 25.0,
-    category: "conflict",
-    articles: [
-      { title: "‘Extraordinary cruelty’: images show longterm ‘starvation strategy’ in Sudan", source: "The Guardian", url: "https://www.theguardian.com/global-development/ng-interactive/2026/mar/10/extraordinary-cruelty-images-show-longterm-starvation-strategy-in-sudan", time: "2026-03-10T07:00:12Z" },
     ]
   },
 ];
