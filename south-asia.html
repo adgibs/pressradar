@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:53 UTC, 11 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:00 UTC, 11 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">11 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:53 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan orders sweeping austerity measures as Iran war triggers oil crisis", "Pakistan Sends Navy Escort for Its Ships in the Middle East", "Dubai, oasis for business and partying, confronts war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran war disrupts Middle East shipping and regional economies</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Democrats say White House offers no clarity on Iran war goals after 11 days", "Energy secretary deletes claim US military escorted tanker through Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">US military involvement in Iran conflict lacks clear strategy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Indian traveller stranded in Qatar takes long road to Riyadh", "Afghanistan vs Sri Lanka cricket series called off due to Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Travel and sports disrupted across South Asia by regional conflict</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Indian cricket team to pocket $14m for record T20 World Cup win"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian cricket team wins record $14 million T20 World Cup prize</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 07:01 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan orders sweeping austerity measures as Iran war triggers oil crisis", "Pakistan Sends Navy Escort for Its Ships in the Middle East"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan deploys naval escorts amid Middle East tensions and energy crisis</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["‘The other side’ of IITs: Student suicides haunt India’s top tech schools", "Indian traveller stranded in Qatar takes long road to Riyadh"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Indian travellers face challenges from suicides at top schools to stranded abroad</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Democrats say White House offers no clarity on Iran war goals after 11 days", "Energy secretary deletes claim US military escorted tanker through Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">US military transparency questioned over Iran war involvement and tanker escort claims</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Indian cricket team to pocket $14m for record T20 World Cup win"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian cricket team earns record $14 million T20 World Cup prize money</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Dubai, oasis for business and partying, confronts war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Dubai businesses confront disruptions from escalating regional war conditions</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Indian traveller stranded in Qatar takes long road to Riyadh"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian traveller stranded in Qatar seeks overland route to Saudi Arabia</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,6 +111,27 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "‘The other side’ of IITs: Student suicides haunt India’s top tech schools", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/the-other-side-of-iits-student-suicides-haunt-indias-top-tech-schools?traffic_source=rss", time: "2026-03-11T05:33:14Z" },
+      { title: "Indian cricket team to pocket $14m for record T20 World Cup win", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/10/indian-cricket-team-to-pocket-14-million-for-historic-t20-world-cup-win?traffic_source=rss", time: "2026-03-10T08:40:47Z" },
+      { title: "T20 World Cup final: India defeat New Zealand by 96 runs for third title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/8/t20-world-cup-final-india-defeat-new-zealand-by-96-runs-for-third-title?traffic_source=rss", time: "2026-03-08T17:42:30Z" },
+      { title: "T20 World Cup: The Final", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/8/aje-onl-t20_wc_final_v3-080326?traffic_source=rss", time: "2026-03-08T10:07:43Z" },
+      { title: "LIVE: India vs New Zealand – T20 World Cup final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/8/live-india-vs-new-zealand-t20-world-cup-final?traffic_source=rss", time: "2026-03-08T08:30:00Z" },
+      { title: "India vs New Zealand: T20 World Cup final – ‘No pressure, no fun’ for hosts", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-no-pressure-no-fun-for-hosts?traffic_source=rss", time: "2026-03-07T15:30:46Z" },
+      { title: "India vs New Zealand: T20 World Cup final – Kiwis ready to ‘break hearts’", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-kiwis-ready-to-break-hearts?traffic_source=rss", time: "2026-03-07T11:08:18Z" },
+      { title: "India vs New Zealand: T20 World Cup final – Predicted XI, time, stream", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/6/india-vs-new-zealand-t20-world-cup-final-predicted-xi-time-stream?traffic_source=rss", time: "2026-03-06T19:33:30Z" },
+      { title: "From 1984: Indira Gandhi, Born to Politics, Left Her Own Imprint on India", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/indira-gandhi-dead.html", time: "2026-03-06T17:02:07Z" },
+      { title: "US grants waiver to allow India to buy Russian oil amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/us-waiver-india-russian-oil", time: "2026-03-06T09:28:32Z" },
+      { title: "Khamenei’s Killing Sparks Anger and Grief in South Asia’s Shiite Muslims", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-khamenei-shiite-india-pakistan.html", time: "2026-03-06T09:20:31Z" },
+      { title: "Is BRICS bloc divided over US-Israel attacks on Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/is-brics-bloc-divided-over-us-israel-attacks-on-iran?traffic_source=rss", time: "2026-03-06T09:16:36Z" },
+      { title: "India Is Turning Back to Russian Oil", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/business/india-russian-oil.html", time: "2026-03-06T05:36:36Z" },
+      { title: "India beat England to reach T20 World Cup final as Sanju stars again", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/5/india-beat-england-to-reach-t20-world-cup-final-as-sanju-stars-again?traffic_source=rss", time: "2026-03-05T17:47:31Z" },
+    ]
+  },
+  {
     name: "Kathmandu", country: "Nepal",
     lat: 27.7172, lng: 85.324,
     category: "political",
@@ -128,27 +149,6 @@ const locations = [
       { title: "Six months after Nepal's revolution, Generation Z hopes for change in elections", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260305-six-months-after-nepal-s-revolution-generation-z-hopes-for-change-in-elections", time: "2026-03-05T12:42:09Z" },
       { title: "What to Know About Nepal's Gen Z Election", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/asia/nepal-election-gen-z-wtk.html", time: "2026-03-05T11:57:22Z" },
       { title: "Polls open in Nepal's key post-uprising vote", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260304-nepal-votes-in-key-post-uprising-polls", time: "2026-03-04T21:13:20Z" },
-      { title: "The girls of my Himalayan valley are not victims – education is the only bridge they need out of their isolation | Amreen Qadir", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/04/kashmir-tulail-dard-shin-girls-education-equality-children-isolation", time: "2026-03-04T06:00:40Z" },
-    ]
-  },
-  {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "Indian cricket team to pocket $14m for record T20 World Cup win", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/10/indian-cricket-team-to-pocket-14-million-for-historic-t20-world-cup-win?traffic_source=rss", time: "2026-03-10T08:40:47Z" },
-      { title: "T20 World Cup final: India defeat New Zealand by 96 runs for third title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/8/t20-world-cup-final-india-defeat-new-zealand-by-96-runs-for-third-title?traffic_source=rss", time: "2026-03-08T17:42:30Z" },
-      { title: "T20 World Cup: The Final", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/8/aje-onl-t20_wc_final_v3-080326?traffic_source=rss", time: "2026-03-08T10:07:43Z" },
-      { title: "LIVE: India vs New Zealand – T20 World Cup final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/8/live-india-vs-new-zealand-t20-world-cup-final?traffic_source=rss", time: "2026-03-08T08:30:00Z" },
-      { title: "India vs New Zealand: T20 World Cup final – ‘No pressure, no fun’ for hosts", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-no-pressure-no-fun-for-hosts?traffic_source=rss", time: "2026-03-07T15:30:46Z" },
-      { title: "India vs New Zealand: T20 World Cup final – Kiwis ready to ‘break hearts’", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-t20-world-cup-final-kiwis-ready-to-break-hearts?traffic_source=rss", time: "2026-03-07T11:08:18Z" },
-      { title: "India vs New Zealand: T20 World Cup final – Predicted XI, time, stream", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/6/india-vs-new-zealand-t20-world-cup-final-predicted-xi-time-stream?traffic_source=rss", time: "2026-03-06T19:33:30Z" },
-      { title: "From 1984: Indira Gandhi, Born to Politics, Left Her Own Imprint on India", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/indira-gandhi-dead.html", time: "2026-03-06T17:02:07Z" },
-      { title: "US grants waiver to allow India to buy Russian oil amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/05/us-waiver-india-russian-oil", time: "2026-03-06T09:28:32Z" },
-      { title: "Khamenei’s Killing Sparks Anger and Grief in South Asia’s Shiite Muslims", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/middleeast/iran-khamenei-shiite-india-pakistan.html", time: "2026-03-06T09:20:31Z" },
-      { title: "Is BRICS bloc divided over US-Israel attacks on Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/6/is-brics-bloc-divided-over-us-israel-attacks-on-iran?traffic_source=rss", time: "2026-03-06T09:16:36Z" },
-      { title: "India Is Turning Back to Russian Oil", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/business/india-russian-oil.html", time: "2026-03-06T05:36:36Z" },
-      { title: "India beat England to reach T20 World Cup final as Sanju stars again", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/5/india-beat-england-to-reach-t20-world-cup-final-as-sanju-stars-again?traffic_source=rss", time: "2026-03-05T17:47:31Z" },
     ]
   },
   {
