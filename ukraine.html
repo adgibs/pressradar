@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:36 UTC, 11 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:09 UTC, 11 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">11 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:37 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine Says It Hit Key Russian Electronics Plant; Russia Reports Deaths", "Kyiv says it hit &#39;key&#39; Russian military factory in Bryansk strike, Russia says six dead"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukraine claims successful strike on Russian electronics plant in Bryansk region</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Russians say Iran attack shows U.S. can’t be trusted in Ukraine talks", "Why Russia is assisting Iran&#39;s military", "Steve Rosenberg: Russia seeks diplomatic and economic gains from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Russia leverages Iran conflict for diplomatic and economic strategic advantages</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Around 140 US service members wounded in Iran war, Pentagon says", "Pentagon says about 140 troops wounded, 8 severely, in war with Iran", "Pentagon says about 140 U.S. service members wounded since Iran war began"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Pentagon reports 140 U.S. service members wounded in Iran war</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Russia kills two in Ukraine’s Kharkiv; war grinds on, focus on Middle East", "Russian attack kills four in Ukraine’s Sloviansk as both sides claim gains"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Russian attacks kill civilians in Ukrainian cities of Kharkiv and Sloviansk</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Ukraine sends drone experts to Gulf, viewing an ‘opportunity’", "Ukraine Can Now Manufacture ‘China-Free’ Drones"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Ukraine develops domestic drone manufacturing capacity independent of foreign components</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ukraine war briefing: Zelenskyy accuses Hungary of ‘banditry’ over seized gold and cash", "Ukraine war briefing: Zelenskyy accuses Hungary of ‘banditry’ over $82m of seized gold"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zelenskyy accuses Hungary of seizing Ukrainian gold and cash reserves</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:10 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine Says It Hit Key Russian Electronics Plant; Russia Reports Deaths", "Ukraine says it has hit Russian &#39;missile component&#39; plant"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukraine strikes Russian electronics and missile component manufacturing plants.</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Zelensky sends drone teams to Middle East, touting Ukraine&#39;s expertise", "Ukraine sends drone experts to Gulf, viewing an ‘opportunity’", "Ukraine Can Now Manufacture ‘China-Free’ Drones"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Ukraine exports drone expertise and manufacturing capabilities to Middle East.</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Russians say Iran attack shows U.S. can’t be trusted in Ukraine talks", "Why Russia is assisting Iran&#39;s military", "Steve Rosenberg: Russia seeks diplomatic and economic gains from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Russia pursues diplomatic and economic gains through Iran war involvement.</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Ukraine records first territorial gains since 2023 amid Russian army woes", "Russia kills two in Ukraine’s Kharkiv; war grinds on, focus on Middle East"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Ukraine records territorial gains as Russian army suffers continued losses.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Around 140 US service members wounded in Iran war, Pentagon says", "Pentagon says about 140 troops wounded, 8 severely, in war with Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Pentagon reports approximately 140 US service members wounded in Iran conflict.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ukraine war briefing: Zelenskyy accuses Hungary of ‘banditry’ over seized gold and cash", "Ukraine war briefing: Zelenskyy accuses Hungary of ‘banditry’ over $82m of seized gold"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zelenskyy accuses Hungary of unlawfully seizing Ukrainian gold and cash reserves.</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,7 +115,9 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Zelensky sends drone teams to Middle East, touting Ukraine's expertise", source: "BBC News", url: "https://www.bbc.com/news/articles/cgl5jeg5r15o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:27:27Z" },
       { title: "Ukraine Says It Hit Key Russian Electronics Plant; Russia Reports Deaths", source: "New York Times", url: "https://www.nytimes.com/2026/03/11/world/europe/ukraine-russia-electronics-plant-missiles.html", time: "2026-03-11T11:17:49Z" },
+      { title: "Ukraine says it has hit Russian 'missile component' plant", source: "BBC News", url: "https://www.bbc.com/news/articles/ckg1eqw30l9o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T11:16:02Z" },
       { title: "Ukraine sends drone experts to Gulf, viewing an ‘opportunity’", source: "France 24", url: "https://www.france24.com/en/ukraine-sends-drone-experts-to-gulf-viewing-an-opportunity", time: "2026-03-11T08:05:50Z" },
       { title: "Modern wars grow interconnected as Ukraine and Russia seek strategic foothold in Iran war", source: "France 24", url: "https://www.france24.com/en/modern-wars-grow-interconnected-as-ukraine-and-russia-seek-strategic-foothold-in-iran-war", time: "2026-03-11T05:11:52Z" },
       { title: "Modern wars grow interconnected as Ukraine and Russia seek strategic foothold in Iran war", source: "France 24", url: "https://www.france24.com/en/video/20260311-modern-wars-grow-interconnected-as-ukraine-and-russia-seek-strategic-foothold-in-iran-war-1", time: "2026-03-11T05:11:52Z" },
@@ -174,6 +176,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Return to Russian fuels would be ‘strategic blunder’ says top EU official", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/11/return-to-russian-fuels-would-be-strategic-blunder-says-top-eu-official?traffic_source=rss", time: "2026-03-11T12:52:48Z" },
       { title: "Russians say Iran attack shows U.S. can’t be trusted in Ukraine talks", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/11/russia-ukraine-iran-trump-negotiations-trust/", time: "2026-03-11T10:00:22Z" },
       { title: "'I am no spy': Courier in Russian exploding parcels plot against UK talks to BBC", source: "BBC News", url: "https://www.bbc.com/news/articles/cpd83zwqlvno?at_medium=RSS&at_campaign=rss", time: "2026-03-11T06:00:08Z" },
       { title: "Why Russia is assisting Iran's military", source: "NPR", url: "https://www.npr.org/2026/03/10/nx-s1-5739339/why-russia-is-assisting-irans-military", time: "2026-03-10T21:24:51Z" },
@@ -374,6 +377,14 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Kyiv says it hit 'key' Russian military factory in Bryansk strike, Russia says six dead", source: "France 24", url: "https://www.france24.com/en/europe/20260310-kyiv-says-it-hit-key-russian-military-factory-in-missile-strike", time: "2026-03-10T19:35:13Z" },
+    ]
+  },
+  {
+    name: "Dnipro", country: "Ukraine",
+    lat: 48.4647, lng: 35.0462,
+    category: "conflict",
+    articles: [
+      { title: "Ukraine records first territorial gains since 2023 amid Russian army woes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/ukraine-records-first-territorial-gains-since-2023-amid-russian-army-woes?traffic_source=rss", time: "2026-03-11T12:00:34Z" },
     ]
   },
 ];

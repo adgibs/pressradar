@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:37 UTC, 11 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:09 UTC, 11 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">11 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:37 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["French aid worker for UNICEF killed in DR Congo&#39;s Goma, Macron says", "Three killed in drone attack on Goma in eastern DRC, M23 rebels say"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Armed conflict in eastern DRC kills civilians and aid workers</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["DRC youth disillusioned by politics ahead of presidential elections", "Arrests, accusations and arguments - the Mugabe family after losing power"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Political upheaval and disillusionment in DRC and Zimbabwe</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Experts fear ‘unethical’ vaccine trial in Africa is ‘prototype’ for US studies under RFK Jr", "New evidence of starvation crimes in Darfur"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Allegations of unethical practices in medical trials and war crimes</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["ICC rejects bias claims from stranded South Africa, West Indies cricketers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">ICC dismisses bias accusations from stranded cricketers in South Africa</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Prison sentences for pair who attacked gay men hailed as sign of hope for Kenya’s LGBTQ+ community"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Kenya convicts attackers of gay men, marking LGBTQ+ progress</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Villagers on Principe, the ‘African Galapagos’, to be paid for protecting the ecosystem"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Principe islanders compensated for ecosystem conservation efforts in West Africa</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:10 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["French aid worker killed in drone strikes in rebel-held DR Congo city", "French aid worker for UNICEF killed in DR Congo&#39;s Goma, Macron says", "UN aid worker killed in DR Congo’s rebel-held Goma", "Three killed in drone attack on Goma in eastern DRC, M23 rebels say"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">French aid worker killed in drone strikes in rebel-held DR Congo</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["South African soldiers deploy in Johannesburg to tackle crime and gangs", "Mugabe&#39;s son drops bail request - what has happened to the family after losing power", "Arrests, accusations and arguments - the Mugabe family after losing power"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Southern African political figures face legal troubles after losing power</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Floods and landslides kill 30 in southern Ethiopia", "New evidence of starvation crimes in Darfur"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Natural disasters and conflict cause mass casualties across Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Healthcare on a lifeline: Egypt’s hospitals rely on Ramadan donations to survive", "Experts fear ‘unethical’ vaccine trial in Africa is ‘prototype’ for US studies under RFK Jr"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Healthcare and medical ethics crises emerge across the continent</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["DRC youth disillusioned by politics ahead of presidential elections", "ICC rejects bias claims from stranded South Africa, West Indies cricketers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Election concerns and sporting disputes affect African nations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Prison sentences for pair who attacked gay men hailed as sign of hope for Kenya’s LGBTQ+ community"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Kenya prosecutes attackers of LGBTQ+ individuals in landmark ruling</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -145,6 +145,20 @@ const locations = [
     ]
   },
   {
+    name: "Johannesburg", country: "South Africa",
+    lat: -26.2041, lng: 28.0473,
+    category: "economic",
+    articles: [
+      { title: "South African soldiers deploy in Johannesburg to tackle crime and gangs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/south-african-soldiers-deploy-in-johannesburg-to-tackle-crime-and-gangs?traffic_source=rss", time: "2026-03-11T12:46:04Z" },
+      { title: "Mugabe's son drops bail request - what has happened to the family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T10:31:57Z" },
+      { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
+      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
+      { title: "South African President on Trump’s Oval Office ‘Ambush’ and ‘Racist’ Policies", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/africa/south-africa-ramaphosa-trump-meeting-racist.html", time: "2026-03-05T17:54:46Z" },
+      { title: "Lewis Hamilton sets sights on racing in an African grand prix before retiring", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/05/lewis-hamilton-race-africa-grand-prix-retiring-formula-one-colonial", time: "2026-03-05T13:37:15Z" },
+      { title: "Allen century powers New Zealand to victory over South Africa in T20 World Cup semi-final", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cz9qqyg515do?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:27:59Z" },
+    ]
+  },
+  {
     name: "Khartoum", country: "Sudan",
     lat: 15.5007, lng: 32.5599,
     category: "conflict",
@@ -157,22 +171,11 @@ const locations = [
     ]
   },
   {
-    name: "Johannesburg", country: "South Africa",
-    lat: -26.2041, lng: 28.0473,
-    category: "economic",
-    articles: [
-      { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
-      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
-      { title: "South African President on Trump’s Oval Office ‘Ambush’ and ‘Racist’ Policies", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/africa/south-africa-ramaphosa-trump-meeting-racist.html", time: "2026-03-05T17:54:46Z" },
-      { title: "Lewis Hamilton sets sights on racing in an African grand prix before retiring", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/05/lewis-hamilton-race-africa-grand-prix-retiring-formula-one-colonial", time: "2026-03-05T13:37:15Z" },
-      { title: "Allen century powers New Zealand to victory over South Africa in T20 World Cup semi-final", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cz9qqyg515do?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:27:59Z" },
-    ]
-  },
-  {
     name: "Addis Ababa", country: "Ethiopia",
     lat: 9.025, lng: 38.7469,
     category: "conflict",
     articles: [
+      { title: "Floods and landslides kill 30 in southern Ethiopia", source: "BBC News", url: "https://www.bbc.com/news/articles/ce947x4m0e1o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:33:22Z" },
       { title: "The young women who fought in Ethiopia's last civil war and don't want to see another one", source: "BBC News", url: "https://www.bbc.com/news/articles/cyv959eyjgjo?at_medium=RSS&at_campaign=rss", time: "2026-03-06T00:05:46Z" },
       { title: "Ethiopia experiments with 'smart' police stations that have no officers", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd9jgnrdpko?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:34:22Z" },
       { title: "Inside Ethiopia's 'smart' police station", source: "BBC News", url: "https://www.bbc.com/news/videos/cz9qqzqkk82o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:29:16Z" },
@@ -184,9 +187,22 @@ const locations = [
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
     articles: [
+      { title: "French aid worker killed in drone strikes in rebel-held DR Congo city", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgj8veg0gno?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:58:03Z" },
       { title: "DRC youth disillusioned by politics ahead of presidential elections", source: "France 24", url: "https://www.france24.com/en/drc-youth-disillusioned-by-politics-ahead-of-presidential-elections", time: "2026-03-11T11:08:46Z" },
       { title: "Mine collapses in eastern Congo, with official death toll disputed by M23 rebels", source: "France 24", url: "https://www.france24.com/en/mine-collapses-in-eastern-congo-with-official-death-toll-disputed-by-m23-rebels", time: "2026-03-06T11:55:07Z" },
       { title: "Mine collapse in eastern DR Congo leaves 200 dead", source: "France 24", url: "https://www.france24.com/en/mine-collapse-in-eastern-congo-leaves-200-dead", time: "2026-03-05T21:26:17Z" },
+      { title: "DR Congo government says 200 killed after landslide at rebel-held mine", source: "BBC News", url: "https://www.bbc.com/news/articles/c7955g70jgjo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:03:29Z" },
+    ]
+  },
+  {
+    name: "Goma", country: "DR Congo",
+    lat: -1.6585, lng: 29.2206,
+    category: "conflict",
+    articles: [
+      { title: "French aid worker for UNICEF killed in DR Congo's Goma, Macron says", source: "France 24", url: "https://www.france24.com/en/africa/20260311-french-aid-worker-for-unicef-killed-in-dr-congo-s-goma-macron-says", time: "2026-03-11T11:22:17Z" },
+      { title: "UN aid worker killed in DR Congo’s rebel-held Goma", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/un-aid-worker-killed-in-dr-congos-rebel-held-goma?traffic_source=rss", time: "2026-03-11T11:15:45Z" },
+      { title: "Three killed in drone attack on Goma in eastern DRC, M23 rebels say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/drone-attack-goma-eastern-democratic-republic-of-the-congo-m23-rebels", time: "2026-03-11T09:41:04Z" },
+      { title: "Mine collapses in eastern Congo, with official death toll disputed by M23 rebels", source: "France 24", url: "https://www.france24.com/en/mine-collapses-in-eastern-congo-with-official-death-toll-disputed-by-m23-rebels", time: "2026-03-06T11:55:07Z" },
       { title: "DR Congo government says 200 killed after landslide at rebel-held mine", source: "BBC News", url: "https://www.bbc.com/news/articles/c7955g70jgjo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:03:29Z" },
     ]
   },
@@ -199,17 +215,6 @@ const locations = [
       { title: "Guinea opposition leader urges 'direct resistance' after 40 parties dissolved", source: "BBC News", url: "https://www.bbc.com/news/articles/cjrqg80y57po?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:30:19Z" },
       { title: "One ‘party state’: Guinea dissolves main opposition parties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/8/one-party-state-guinea-dissolves-main-opposition-parties?traffic_source=rss", time: "2026-03-08T21:45:02Z" },
       { title: "Guinea orders dissolution of 40 political parties, including three main opposition groups", source: "France 24", url: "https://www.france24.com/en/africa/20260307-guinea-orders-dissolution-40-political-parties-including-three-main-opposition-goups", time: "2026-03-07T12:18:42Z" },
-    ]
-  },
-  {
-    name: "Goma", country: "DR Congo",
-    lat: -1.6585, lng: 29.2206,
-    category: "conflict",
-    articles: [
-      { title: "French aid worker for UNICEF killed in DR Congo's Goma, Macron says", source: "France 24", url: "https://www.france24.com/en/africa/20260311-french-aid-worker-for-unicef-killed-in-dr-congo-s-goma-macron-says", time: "2026-03-11T11:22:17Z" },
-      { title: "Three killed in drone attack on Goma in eastern DRC, M23 rebels say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/drone-attack-goma-eastern-democratic-republic-of-the-congo-m23-rebels", time: "2026-03-11T09:41:04Z" },
-      { title: "Mine collapses in eastern Congo, with official death toll disputed by M23 rebels", source: "France 24", url: "https://www.france24.com/en/mine-collapses-in-eastern-congo-with-official-death-toll-disputed-by-m23-rebels", time: "2026-03-06T11:55:07Z" },
-      { title: "DR Congo government says 200 killed after landslide at rebel-held mine", source: "BBC News", url: "https://www.bbc.com/news/articles/c7955g70jgjo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:03:29Z" },
     ]
   },
   {
@@ -233,21 +238,22 @@ const locations = [
     ]
   },
   {
+    name: "Accra", country: "Ghana",
+    lat: 5.6037, lng: -0.187,
+    category: "economic",
+    articles: [
+      { title: "‘Imagine, if everyone had a sex auntie’: Nana Darkoa Sekyiamah on tradition as a basis for pleasure", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/11/nana-darkoa-sekyiamah-seeking-sexual-freedom-sex-aunties", time: "2026-03-11T12:58:59Z" },
+      { title: "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:13:42Z" },
+      { title: "Soul to Soul review – joyous 1971 concert film captures Black American stars’ emotional return to Ghana", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/soul-to-soul-review-film-denis-sanders-ghana-tina-turner", time: "2026-03-05T11:00:02Z" },
+    ]
+  },
+  {
     name: "Rabat", country: "Morocco",
     lat: 34.0209, lng: -6.8416,
     category: "political",
     articles: [
       { title: "Regragui departs as Morocco appoint Ouahbi as new coach", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c62dnepz5g7o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T23:01:26Z" },
       { title: "Caf postpones Wafcon 2026 just 12 days before kick-off", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c24dg1m1v27o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T18:02:40Z" },
-    ]
-  },
-  {
-    name: "Accra", country: "Ghana",
-    lat: 5.6037, lng: -0.187,
-    category: "economic",
-    articles: [
-      { title: "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:13:42Z" },
-      { title: "Soul to Soul review – joyous 1971 concert film captures Black American stars’ emotional return to Ghana", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/05/soul-to-soul-review-film-denis-sanders-ghana-tina-turner", time: "2026-03-05T11:00:02Z" },
     ]
   },
   {
@@ -278,18 +284,11 @@ const locations = [
     ]
   },
   {
-    name: "Cape Town", country: "South Africa",
-    lat: -33.9249, lng: 18.4241,
-    category: "political",
-    articles: [
-      { title: "South Africa's long-serving former defence minister and former Robben Island prisoner dies", source: "BBC News", url: "https://www.bbc.com/news/articles/clyzzdgv2k0o?at_medium=RSS&at_campaign=rss", time: "2026-03-04T12:45:24Z" },
-    ]
-  },
-  {
     name: "Cairo", country: "Egypt",
     lat: 30.0444, lng: 31.2357,
     category: "political",
     articles: [
+      { title: "Healthcare on a lifeline: Egypt’s hospitals rely on Ramadan donations to survive", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260311-healthcare-on-a-lifeline-egypt-s-hospitals-rely-on-ramadan-donations-to-survive", time: "2026-03-11T12:03:04Z" },
       { title: "Caf postpones Wafcon 2026 just 12 days before kick-off", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c24dg1m1v27o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T18:02:40Z" },
     ]
   },
