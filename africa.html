@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:50 UTC, 11 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:49 UTC, 11 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">11 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 08:50 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Prison sentences for pair who attacked gay men hailed as sign of hope for Kenya’s LGBTQ+ community", "Villagers on Principe, the ‘African Galapagos’, to be paid for protecting the ecosystem"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya prosecutes anti-gay violence; West Africa compensates ecosystem protectors</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Arrests, accusations and arguments - the Mugabe family after losing power"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zimbabwe&#x27;s Mugabe family faces arrests and internal conflict post-power</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["New evidence of starvation crimes in Darfur"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Darfur starvation crimes evidence emerges from ongoing investigation</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Air strike kills four Iran-linked fighters in Iraq"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Air strike kills four Iran-linked fighters in Iraq region</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:50 UTC, 11 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Three killed in drone attack on Goma in eastern DRC, M23 rebels say", "Air strike kills four Iran-linked fighters in Iraq"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Armed conflict escalates in eastern DRC and Sudan regions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Arrests, accusations and arguments - the Mugabe family after losing power", "New evidence of starvation crimes in Darfur"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Judicial accountability pursued for past atrocities in Zimbabwe and Darfur</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Prison sentences for pair who attacked gay men hailed as sign of hope for Kenya’s LGBTQ+ community"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Kenya prosecutes attackers of gay men in landmark case</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["ICC rejects bias claims from stranded South Africa, West Indies cricketers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">ICC dismisses South African cricket team bias allegations</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Villagers on Principe, the ‘African Galapagos’, to be paid for protecting the ecosystem"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">West African island compensates residents for environmental conservation efforts</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -157,6 +157,18 @@ const locations = [
     ]
   },
   {
+    name: "Johannesburg", country: "South Africa",
+    lat: -26.2041, lng: 28.0473,
+    category: "economic",
+    articles: [
+      { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
+      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
+      { title: "South African President on Trump’s Oval Office ‘Ambush’ and ‘Racist’ Policies", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/africa/south-africa-ramaphosa-trump-meeting-racist.html", time: "2026-03-05T17:54:46Z" },
+      { title: "Lewis Hamilton sets sights on racing in an African grand prix before retiring", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/05/lewis-hamilton-race-africa-grand-prix-retiring-formula-one-colonial", time: "2026-03-05T13:37:15Z" },
+      { title: "Allen century powers New Zealand to victory over South Africa in T20 World Cup semi-final", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cz9qqyg515do?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:27:59Z" },
+    ]
+  },
+  {
     name: "Addis Ababa", country: "Ethiopia",
     lat: 9.025, lng: 38.7469,
     category: "conflict",
@@ -165,17 +177,6 @@ const locations = [
       { title: "Ethiopia experiments with 'smart' police stations that have no officers", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd9jgnrdpko?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:34:22Z" },
       { title: "Inside Ethiopia's 'smart' police station", source: "BBC News", url: "https://www.bbc.com/news/videos/cz9qqzqkk82o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:29:16Z" },
       { title: "Ethiopia’s Demand for a Port Drives Fear of New War With Eritrea", source: "New York Times", url: "https://www.nytimes.com/2026/03/04/world/africa/ethiopia-eritrea-war-tensions.html", time: "2026-03-04T23:27:20Z" },
-    ]
-  },
-  {
-    name: "Johannesburg", country: "South Africa",
-    lat: -26.2041, lng: 28.0473,
-    category: "economic",
-    articles: [
-      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
-      { title: "South African President on Trump’s Oval Office ‘Ambush’ and ‘Racist’ Policies", source: "New York Times", url: "https://www.nytimes.com/2026/03/05/world/africa/south-africa-ramaphosa-trump-meeting-racist.html", time: "2026-03-05T17:54:46Z" },
-      { title: "Lewis Hamilton sets sights on racing in an African grand prix before retiring", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/05/lewis-hamilton-race-africa-grand-prix-retiring-formula-one-colonial", time: "2026-03-05T13:37:15Z" },
-      { title: "Allen century powers New Zealand to victory over South Africa in T20 World Cup semi-final", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cz9qqyg515do?at_medium=RSS&at_campaign=rss", time: "2026-03-04T18:27:59Z" },
     ]
   },
   {
@@ -223,6 +224,7 @@ const locations = [
     lat: -1.6585, lng: 29.2206,
     category: "conflict",
     articles: [
+      { title: "Three killed in drone attack on Goma in eastern DRC, M23 rebels say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/drone-attack-goma-eastern-democratic-republic-of-the-congo-m23-rebels", time: "2026-03-11T09:41:04Z" },
       { title: "Mine collapses in eastern Congo, with official death toll disputed by M23 rebels", source: "France 24", url: "https://www.france24.com/en/mine-collapses-in-eastern-congo-with-official-death-toll-disputed-by-m23-rebels", time: "2026-03-06T11:55:07Z" },
       { title: "DR Congo government says 200 killed after landslide at rebel-held mine", source: "BBC News", url: "https://www.bbc.com/news/articles/c7955g70jgjo?at_medium=RSS&at_campaign=rss", time: "2026-03-05T12:03:29Z" },
     ]
@@ -286,14 +288,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "Caf postpones Wafcon 2026 just 12 days before kick-off", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c24dg1m1v27o?at_medium=RSS&at_campaign=rss", time: "2026-03-05T18:02:40Z" },
-    ]
-  },
-  {
-    name: "Luanda", country: "Angola",
-    lat: -8.839, lng: 13.2894,
-    category: "economic",
-    articles: [
-      { title: "Outgunned review – action-thriller in Angola sees sadistic child-hunting gang out for revenge", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/04/outgunned-review-action-thriller-angola", time: "2026-03-04T09:00:45Z" },
     ]
   },
   {
