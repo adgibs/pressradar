@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:51 UTC, 12 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:44 UTC, 12 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">12 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:51 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Bangladesh parliament meets after uprising, elections ushered in new gov’t"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Bangladesh parliament convenes following recent uprising and new government formation.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Bangladesh demolish Pakistan who suffer record low score in contest"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Bangladesh defeats Pakistan in cricket match with record-low Pakistani score.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India’s Supreme Court allows first-ever passive euthanasia death"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">India&#x27;s Supreme Court permits first passive euthanasia case in nation&#x27;s history.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Cargo ships hit in Persian Gulf shipping lane crucial to oil market"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Cargo ships targeted in Persian Gulf shipping lane affecting global oil markets.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Russians say Iran attack shows U.S. can’t be trusted in Ukraine talks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Russia claims Iran attack undermines U.S. credibility in Ukraine negotiations.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Two killed as tornadoes sweep across US Midwest in latest extreme weather"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Tornadoes kill two people across United States Midwest region.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:44 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Oil price surges as Iran steps up attacks on ships in the Persian Gulf", "Cargo ships hit in Persian Gulf shipping lane crucial to oil market"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran attacks on Gulf shipping disrupt global oil markets and trade routes</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘A few beatings won’t kill you’: judge rejects divorce request of woman abused by husband in Afghanistan", "Bangladesh parliament meets after uprising, elections ushered in new gov’t"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Bangladesh experiences political upheaval with new government and abuse case spotlight</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Bangladesh demolish Pakistan who suffer record low score in contest"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Bangladesh defeats Pakistan in cricket match with record low score</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Two killed as tornadoes sweep across US Midwest in latest extreme weather"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Tornadoes strike US Midwest causing deaths and property damage</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -200,6 +200,7 @@ const locations = [
     lat: 26.0, lng: 52.0,
     category: "economic",
     articles: [
+      { title: "Oil price surges as Iran steps up attacks on ships in the Persian Gulf", source: "NPR", url: "https://www.npr.org/2026/03/12/nx-s1-5745689/oil-price-surges-as-iran-steps-up-attacks-on-ships-in-the-persian-gulf", time: "2026-03-12T10:07:42Z" },
       { title: "Cargo ships hit in Persian Gulf shipping lane crucial to oil market", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/11/strait-hormuz-cargo-ships-iran/", time: "2026-03-11T11:53:46Z" },
       { title: "Dubai, oasis for business and partying, confronts war", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/10/dubai-gulf-iran-war-strikes/", time: "2026-03-10T08:30:14Z" },
       { title: "Iran renews heavy missile, drone attacks on Persian Gulf", source: "Washington Post", url: "https://www.washingtonpost.com", time: "2026-03-05T17:57:45Z" },
@@ -213,6 +214,15 @@ const locations = [
       { title: "Bangladesh parliament meets after uprising, elections ushered in new gov’t", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/bangladesh-parliament-meets-for-first-time-after-uprising-elections?traffic_source=rss", time: "2026-03-12T09:34:06Z" },
       { title: "Bangladesh closes universities due to Iran war energy crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/9/bangladesh-closes-universities-due-to-iran-war-energy-crisis?traffic_source=rss", time: "2026-03-09T12:55:17Z" },
       { title: "Bangladesh shuts universities, limits fuel sale as Iran war causes shortage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/bangladesh-shuts-universities-limits-fuel-sale-as-iran-war-causes-shortage?traffic_source=rss", time: "2026-03-09T07:09:52Z" },
+    ]
+  },
+  {
+    name: "Kabul", country: "Afghanistan",
+    lat: 34.5553, lng: 69.2075,
+    category: "humanitarian",
+    articles: [
+      { title: "‘A few beatings won’t kill you’: judge rejects divorce request of woman abused by husband in Afghanistan", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/12/a-few-beatings-wont-kill-you-judge-rejects-divorce-request-of-woman-abused-by-husband-in-afghanistan", time: "2026-03-12T10:00:11Z" },
+      { title: "'My hands were shaking': Afghan women and girls 'forgotten' under Taliban rule", source: "Sky News", url: "https://news.sky.com/story/my-hands-were-shaking-my-body-cold-afghan-women-and-girls-forgotten-under-taliban-rule-13516823", time: "2026-03-08T09:50:00Z" },
     ]
   },
   {
@@ -237,14 +247,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "India vs New Zealand: Fans hope for World Cup final redemption in Ahmedabad", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/7/india-vs-new-zealand-fans-hope-for-world-cup-final-redemption-in-ahmedabad?traffic_source=rss", time: "2026-03-07T13:04:52Z" },
-    ]
-  },
-  {
-    name: "Kabul", country: "Afghanistan",
-    lat: 34.5553, lng: 69.2075,
-    category: "humanitarian",
-    articles: [
-      { title: "'My hands were shaking': Afghan women and girls 'forgotten' under Taliban rule", source: "Sky News", url: "https://news.sky.com/story/my-hands-were-shaking-my-body-cold-afghan-women-and-girls-forgotten-under-taliban-rule-13516823", time: "2026-03-08T09:50:00Z" },
     ]
   },
   {
