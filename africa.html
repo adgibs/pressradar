@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:54 UTC, 12 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:01 UTC, 12 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">12 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:55 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["South Africa summons new US ambassador over ‘undiplomatic remarks’", "New US ambassador to South Africa summoned over &#39;undiplomatic remarks&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">South Africa summons US ambassador over alleged undiplomatic remarks</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Drone strike hits Goma killing aid worker and civilians", "Aid worker killed in drone strike on building used by Congo relief staff", "French aid worker among three killed in drone strikes in rebel-held DR Congo city"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Drone strikes kill aid worker and civilians in DR Congo&#x27;s Goma</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["At least 17 killed after drone strikes school in Sudan", "The nature of war is changing - and it&#39;s a death trap for civilians", "Sudan’s devastating war rages on as regional rivalries deepen"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Sudan&#x27;s ongoing conflict escalates with deadly drone strikes on civilians</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Senegal passes law doubling penalty for same-sex relations to 10 years in prison"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Senegal doubles prison penalty for same-sex relations to ten years</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Libyan Ramadan celebrations tempered by rising inflation", "At least 65 Nigerian soldiers killed in jihadist raids in country’s north-east"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Nigeria and Libya face security and economic pressures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["South African soldiers deploy in Johannesburg to tackle crime and gangs", "Floods and landslides kill 30 in southern Ethiopia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South African military deploys against crime while Ethiopia battles natural disasters</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 07:02 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Students among 17 dead in RSF drone attack in Sudan’s White Nile State", "At least 17 killed after drone strikes school in Sudan", "Sudan’s devastating war rages on as regional rivalries deepen"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Sudan&#x27;s war intensifies with drone strikes killing civilians including students</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Drone strike hits Goma killing aid worker and civilians", "Aid worker killed in drone strike on building used by Congo relief staff", "French aid worker among three killed in drone strikes in rebel-held DR Congo city"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Drone strike kills aid workers and civilians in DR Congo&#x27;s Goma</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["South Africa summons new US ambassador over ‘undiplomatic remarks’", "New US ambassador to South Africa summoned over &#39;undiplomatic remarks&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">US ambassador to South Africa summoned over diplomatic remarks</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["At least 65 Nigerian soldiers killed in jihadist raids in country’s north-east", "Floods and landslides kill 30 in southern Ethiopia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Armed conflict and natural disasters claim dozens across West and East Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Why Namibia&#39;s green energy dream could be a red flag for penguins", "Senegal passes law doubling penalty for same-sex relations to 10 years in prison"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Environmental and legislative developments reshape policy landscape in southern and West Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["In Sierra Leone, a New Maternal Hospital Aims to be the Blueprint"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Sierra Leone opens new maternal hospital to improve healthcare infrastructure</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -130,6 +130,22 @@ const locations = [
     ]
   },
   {
+    name: "Khartoum", country: "Sudan",
+    lat: 15.5007, lng: 32.5599,
+    category: "conflict",
+    articles: [
+      { title: "Students among 17 dead in RSF drone attack in Sudan’s White Nile State", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/students-among-17-dead-in-rsf-drone-attack-in-sudans-white-nile-state?traffic_source=rss", time: "2026-03-12T06:04:11Z" },
+      { title: "At least 17 killed after drone strikes school in Sudan", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/at-least-17-killed-after-drone-strikes-school-in-sudan", time: "2026-03-11T19:08:31Z" },
+      { title: "The nature of war is changing - and it's a death trap for civilians", source: "Sky News", url: "https://news.sky.com/story/sudan-shows-how-the-nature-of-war-is-changing-and-its-a-death-trap-for-civilians-13518316", time: "2026-03-11T17:35:00Z" },
+      { title: "Sudan’s devastating war rages on as regional rivalries deepen", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/11/sudans-devastating-war-rages-on-as-regional-rivalries-deepen?traffic_source=rss", time: "2026-03-11T14:36:01Z" },
+      { title: "Air strike kills four Iran-linked fighters in Iraq", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/air-strike-kills-four-iran-linked-fighters-in-iraq?traffic_source=rss", time: "2026-03-10T10:00:16Z" },
+      { title: "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/us-blacklists-sudanese-muslim-brotherhood-as-terrorist-group?traffic_source=rss", time: "2026-03-09T21:51:11Z" },
+      { title: "Volunteers rebuild Sudan’s oldest psychiatric hospital destroyed by war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/9/volunteers-rebuild-sudans-oldest-psychiatric-hospital-destroyed-by-war?traffic_source=rss", time: "2026-03-09T09:17:34Z" },
+      { title: "Drone attacks on Sudan markets kill at least 33", source: "France 24", url: "https://www.france24.com/en/africa/20260308-at-least-33-people-killed-separate-drone-strikes-on-sudan-markets", time: "2026-03-08T08:47:08Z" },
+      { title: "51 people have been killed in the last 24 hours in Sudan's Kordofan region", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260306-51-people-have-been-killed-in-the-last-24-hours-in-sudan-s-kordofan-region", time: "2026-03-06T21:36:34Z" },
+    ]
+  },
+  {
     name: "Nairobi", country: "Kenya",
     lat: -1.2921, lng: 36.8219,
     category: "political",
@@ -160,25 +176,11 @@ const locations = [
     ]
   },
   {
-    name: "Khartoum", country: "Sudan",
-    lat: 15.5007, lng: 32.5599,
-    category: "conflict",
-    articles: [
-      { title: "At least 17 killed after drone strikes school in Sudan", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/at-least-17-killed-after-drone-strikes-school-in-sudan", time: "2026-03-11T19:08:31Z" },
-      { title: "The nature of war is changing - and it's a death trap for civilians", source: "Sky News", url: "https://news.sky.com/story/sudan-shows-how-the-nature-of-war-is-changing-and-its-a-death-trap-for-civilians-13518316", time: "2026-03-11T17:35:00Z" },
-      { title: "Sudan’s devastating war rages on as regional rivalries deepen", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/11/sudans-devastating-war-rages-on-as-regional-rivalries-deepen?traffic_source=rss", time: "2026-03-11T14:36:01Z" },
-      { title: "Air strike kills four Iran-linked fighters in Iraq", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/air-strike-kills-four-iran-linked-fighters-in-iraq?traffic_source=rss", time: "2026-03-10T10:00:16Z" },
-      { title: "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/us-blacklists-sudanese-muslim-brotherhood-as-terrorist-group?traffic_source=rss", time: "2026-03-09T21:51:11Z" },
-      { title: "Volunteers rebuild Sudan’s oldest psychiatric hospital destroyed by war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/9/volunteers-rebuild-sudans-oldest-psychiatric-hospital-destroyed-by-war?traffic_source=rss", time: "2026-03-09T09:17:34Z" },
-      { title: "Drone attacks on Sudan markets kill at least 33", source: "France 24", url: "https://www.france24.com/en/africa/20260308-at-least-33-people-killed-separate-drone-strikes-on-sudan-markets", time: "2026-03-08T08:47:08Z" },
-      { title: "51 people have been killed in the last 24 hours in Sudan's Kordofan region", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260306-51-people-have-been-killed-in-the-last-24-hours-in-sudan-s-kordofan-region", time: "2026-03-06T21:36:34Z" },
-    ]
-  },
-  {
     name: "Johannesburg", country: "South Africa",
     lat: -26.2041, lng: 28.0473,
     category: "economic",
     articles: [
+      { title: "Zulu Dawn review – fine ensemble cast show arrogance that led to British imperial disaster", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/12/zulu-dawn-review-peter-o-toole-burt-lancaster", time: "2026-03-12T07:00:13Z" },
       { title: "New US ambassador to South Africa summoned over 'undiplomatic remarks'", source: "BBC News", url: "https://www.bbc.com/news/articles/c14m1vzmxz3o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T21:30:16Z" },
       { title: "South African soldiers deploy in Johannesburg to tackle crime and gangs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/south-african-soldiers-deploy-in-johannesburg-to-tackle-crime-and-gangs?traffic_source=rss", time: "2026-03-11T12:46:04Z" },
       { title: "Mugabe's son drops bail request - what has happened to the family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T10:31:57Z" },
