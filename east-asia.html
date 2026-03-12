@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:43 UTC, 12 Mar 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:34 UTC, 12 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">12 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:44 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China Wants Its Ethnic Minorities to Blend In. Now It’s the Law.", "China approves &#39;ethnic unity&#39; law requiring minorities to learn Mandarin", "China&#39;s new &#39;ethnic unity&#39; law could target minorities, say rights groups", "China’s rubber-stamp parliament set to approve ‘ethnic unity’ law"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China enacts ethnic unity law requiring minorities to learn Mandarin</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["China’s key NPC meeting comes to a close as lower growth target set", "China&#39;s biggest political meeting is ending - what have we learned?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:80%"></div></div><span class="ai-bullet-text">China&#x27;s parliament closes annual meeting with lower economic growth targets set</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Southeast Asia shuts offices, limits travel as oil crisis deepens"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Southeast Asia shuts offices and limits travel amid deepening oil crisis</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Indonesia, Australia to expand security cooperation with Japan, PNG"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Indonesia and Australia expand security cooperation with Japan and Papua New Guinea</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Bodies of two Chinese backpackers found in Australian floodwaters"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Two Chinese backpackers found dead in Australian floodwaters</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Meta disables over 150,000 accounts in crackdown on south-east Asian scam networks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Meta disables over 150,000 accounts in southeast Asian scam network crackdown</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:35 UTC, 12 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China Wants Its Ethnic Minorities to Blend In. Now It’s the Law.", "China approves &#39;ethnic unity&#39; law requiring minorities to learn Mandarin", "China&#39;s new &#39;ethnic unity&#39; law could target minorities, say rights groups", "China’s rubber-stamp parliament set to approve ‘ethnic unity’ law"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China enacts ethnic unity law requiring minorities to learn Mandarin</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Train connecting China and North Korea arrives in Pyongyang after 6-year hiatus", "North Korea says no more protests after China stir in Women’s Asian Cup", "Kim Jong Un and teenage daughter fire guns as North Korea debuts new weapon"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">North Korea resumes China rail link and debuts new weapons</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["China’s key NPC meeting comes to a close as lower growth target set", "China&#39;s biggest political meeting is ending - what have we learned?", "At China’s Big Political Meeting, a Rare Debate About Inequality"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China&#x27;s parliament concludes session with lower growth target announced</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Southeast Asia shuts offices, limits travel as oil crisis deepens", "Indonesia, Australia to expand security cooperation with Japan, PNG"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Southeast Asia addresses oil crisis while expanding security cooperation</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Bodies of two Chinese backpackers found in Australian floodwaters", "Three merchant ships struck as tensions rise in Hormuz strait amid Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Geopolitical tensions affect regional security in Australia and Middle East</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘The last frontier’: how red globules of nickel ore are suffocating an island’s precious wilderness", "Meta disables over 150,000 accounts in crackdown on south-east Asian scam networks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Environmental and criminal crises threaten stability across Southeast Asia</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -160,6 +160,25 @@ const locations = [
     ]
   },
   {
+    name: "Pyongyang", country: "North Korea",
+    lat: 39.0392, lng: 125.7625,
+    category: "military",
+    articles: [
+      { title: "Train connecting China and North Korea arrives in Pyongyang after 6-year hiatus", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260312-train-connecting-china-and-north-korea-arrives-in-pyongyang-after-6-year-hiatus", time: "2026-03-12T10:19:13Z" },
+      { title: "North Korea says no more protests after China stir in Women’s Asian Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/12/north-korea-vows-no-more-protests-after-china-stir-in-womens-asian-cup?traffic_source=rss", time: "2026-03-12T10:16:01Z" },
+      { title: "Kim Jong Un and teenage daughter fire guns as North Korea debuts new weapon", source: "Sky News", url: "https://news.sky.com/story/kim-jong-un-and-teenage-daughter-fire-guns-as-north-korea-debuts-new-weapon-13518573", time: "2026-03-12T10:15:00Z" },
+      { title: "Kim Jong Un watches missile tests with daughter touted as heir", source: "Sky News", url: "https://news.sky.com/story/kim-jong-un-watches-missile-tests-with-his-daughter-touted-as-next-leader-13518167", time: "2026-03-11T11:29:00Z" },
+      { title: "Video: North Korea conducts cruise missile test for destroyer", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/11/video-north-korea-conducts-cruise-missile-test-for-destroyer?traffic_source=rss", time: "2026-03-11T08:48:25Z" },
+      { title: "Hasty redeployment of US missiles from South Korea to Middle East leaves Seoul rattled", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/redeployment-us-missiles-thaad-south-korea-middle-east-seoul-iran", time: "2026-03-11T05:27:21Z" },
+      { title: "N Korea ‘respects’ Iran’s selection of Mojtaba Khamenei as supreme leader", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/n-korea-respects-irans-selection-of-mojtaba-khamenei-as-supreme-leader?traffic_source=rss", time: "2026-03-11T03:07:15Z" },
+      { title: "China and North Korea to resume passenger train service after six-year halt", source: "BBC News", url: "https://www.bbc.com/news/articles/cdxz8v58xvyo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T02:11:05Z" },
+      { title: "China-North Korea trains to resume after six-year halt following Covid outbreak", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/10/china-north-korea-trains-to-resume-after-six-year-halt-following-covid-outbreak", time: "2026-03-10T10:13:40Z" },
+      { title: "North Korea denounces ‘muscle-flexing’ US-South Korean military exercises", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/north-korea-denounces-muscle-flexing-us-south-korean-military-exercises?traffic_source=rss", time: "2026-03-10T05:01:11Z" },
+      { title: "Trump’s Iran war will reinforce North Korea’s view that nuclear weapons are the only path to security", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/10/north-korea-nuclear-weapons-trump-iran-war", time: "2026-03-10T02:09:40Z" },
+      { title: "North Korea portrays Kim Jong Un as warrior and puppy-loving family man", source: "CBS News", url: "https://www.cbsnews.com/news/north-korea-kim-jong-un-photos-video-daughter-ju-ae-with-puppies/", time: "2026-03-06T17:15:59Z" },
+    ]
+  },
+  {
     name: "Tokyo", country: "Japan",
     lat: 35.6762, lng: 139.6503,
     category: "diplomacy",
@@ -175,23 +194,6 @@ const locations = [
       { title: "World shares tumble as Iran war pushes crude prices over $110 a barrel", source: "NPR", url: "https://www.npr.org/2026/03/09/nx-s1-5742307/world-shares-tumble-iran-war", time: "2026-03-09T09:44:22Z" },
       { title: "Emperor Naruhito watches Ohtani and Japan survive scare against Australia at World Baseball Classic", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/mar/08/emperor-naruhito-watches-ohtani-and-japan-survive-scare-against-australia-at-world-baseball-classic", time: "2026-03-08T16:00:39Z" },
       { title: "Defense Without U.S. Help Is a Live Topic for Canada, Japan and Australia", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/canada/carney-takaichi-japan-trump.html", time: "2026-03-06T16:40:27Z" },
-    ]
-  },
-  {
-    name: "Pyongyang", country: "North Korea",
-    lat: 39.0392, lng: 125.7625,
-    category: "military",
-    articles: [
-      { title: "North Korea says no more protests after China stir in Women’s Asian Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/12/north-korea-vows-no-more-protests-after-china-stir-in-womens-asian-cup?traffic_source=rss", time: "2026-03-12T10:16:01Z" },
-      { title: "Kim Jong Un watches missile tests with daughter touted as heir", source: "Sky News", url: "https://news.sky.com/story/kim-jong-un-watches-missile-tests-with-his-daughter-touted-as-next-leader-13518167", time: "2026-03-11T11:29:00Z" },
-      { title: "Video: North Korea conducts cruise missile test for destroyer", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/11/video-north-korea-conducts-cruise-missile-test-for-destroyer?traffic_source=rss", time: "2026-03-11T08:48:25Z" },
-      { title: "Hasty redeployment of US missiles from South Korea to Middle East leaves Seoul rattled", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/redeployment-us-missiles-thaad-south-korea-middle-east-seoul-iran", time: "2026-03-11T05:27:21Z" },
-      { title: "N Korea ‘respects’ Iran’s selection of Mojtaba Khamenei as supreme leader", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/n-korea-respects-irans-selection-of-mojtaba-khamenei-as-supreme-leader?traffic_source=rss", time: "2026-03-11T03:07:15Z" },
-      { title: "China and North Korea to resume passenger train service after six-year halt", source: "BBC News", url: "https://www.bbc.com/news/articles/cdxz8v58xvyo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T02:11:05Z" },
-      { title: "China-North Korea trains to resume after six-year halt following Covid outbreak", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/10/china-north-korea-trains-to-resume-after-six-year-halt-following-covid-outbreak", time: "2026-03-10T10:13:40Z" },
-      { title: "North Korea denounces ‘muscle-flexing’ US-South Korean military exercises", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/north-korea-denounces-muscle-flexing-us-south-korean-military-exercises?traffic_source=rss", time: "2026-03-10T05:01:11Z" },
-      { title: "Trump’s Iran war will reinforce North Korea’s view that nuclear weapons are the only path to security", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/10/north-korea-nuclear-weapons-trump-iran-war", time: "2026-03-10T02:09:40Z" },
-      { title: "North Korea portrays Kim Jong Un as warrior and puppy-loving family man", source: "CBS News", url: "https://www.cbsnews.com/news/north-korea-kim-jong-un-photos-video-daughter-ju-ae-with-puppies/", time: "2026-03-06T17:15:59Z" },
     ]
   },
   {
@@ -276,14 +278,6 @@ const locations = [
     articles: [
       { title: "Southeast Asia shuts offices, limits travel as oil crisis deepens", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/southeast-asia-shuts-offices-limits-travel-as-oil-crisis-deepens?traffic_source=rss", time: "2026-03-12T08:21:38Z" },
       { title: "From 2011: Madame Nhu, Vietnam War Lightning Rod, Dies", source: "New York Times", url: "https://www.nytimes.com/2026/03/06/world/asia/madame-nhu-dead.html", time: "2026-03-06T16:52:53Z" },
-    ]
-  },
-  {
-    name: "Port Vila", country: "Vanuatu",
-    lat: -17.7334, lng: 168.3273,
-    category: "diplomacy",
-    articles: [
-      { title: "Vanuatu moves forward with UN climate resolution despite Trump opposition", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/05/vanuatu-un-climate-crisis-trump", time: "2026-03-05T11:00:02Z" },
     ]
   },
   {
