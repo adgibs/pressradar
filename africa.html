@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:07 UTC, 13 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">14:46 UTC, 13 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">13 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:08 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Drone Strike in Congo Kills 3, Including U.N. Worker", "Somalia warns against any Israeli base plans on Somaliland", "‘Villages are burned, animals slaughtered. We have to let the world know what’s happening’: Tinariwen and Imarhan fight for Tuareg music"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Regional security concerns dominate African geopolitical landscape</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Poor in an oil-rich country: Republic of Congo’s youth hope for change", "Eswatini says it received more ‘third country’ deportees as part of deal with Trump administration"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Economic hardship and migration pressures affect African nations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mining’s toxic timebomb: dams full of poisonous waste are dotted around the world. What happens when they burst?", "30% of Europe’s cocaine routed through West Africa region"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Environmental and criminal threats intensify across continent</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Globetrotting Constantine back in charge of Rwanda"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Rwanda leadership transition underway under Constantine administration</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">France repatriates looted Ivorian cultural artifact after century</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Cartoonist freed after 15 years in prison without charge in Eritrea"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Eritrea releases cartoonist detained without charges for fifteen years</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 14:46 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France returns sacred talking drum looted from Ivory Coast during colonial period</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["‘Villages are burned, animals slaughtered. We have to let the world know what’s happening’: Tinariwen and Imarhan fight for Tuareg music", "30% of Europe’s cocaine routed through West Africa region"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sahel region faces violence and drug trafficking amid humanitarian crisis</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Drone Strike in Congo Kills 3, Including U.N. Worker", "Eswatini says it received more ‘third country’ deportees as part of deal with Trump administration"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Congo and Sudan experience geopolitical tensions involving foreign military involvement</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Poor in an oil-rich country: Republic of Congo’s youth hope for change", "Globetrotting Constantine back in charge of Rwanda"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Leadership changes signal potential shifts in Congo and Rwanda governance</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US’s new scramble for Africa is biomedical imperialism"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US biomedical initiatives in Africa raise concerns about modern imperialism</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Former Arsenal player Partey to plead not guilty to 2 new rape charges"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Former Arsenal player Partey pleads not guilty to additional rape charges</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -222,21 +222,32 @@ const locations = [
     ]
   },
   {
+    name: "Accra", country: "Ghana",
+    lat: 5.6037, lng: -0.187,
+    category: "economic",
+    articles: [
+      { title: "Former Arsenal player Partey to plead not guilty to 2 new rape charges", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/13/former-arsenal-player-partey-to-plead-not-guilty-to-2-new-charges-of-rape?traffic_source=rss", time: "2026-03-13T14:26:53Z" },
+      { title: "‘Imagine, if everyone had a sex auntie’: Nana Darkoa Sekyiamah on tradition as a basis for pleasure", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/11/nana-darkoa-sekyiamah-seeking-sexual-freedom-sex-aunties", time: "2026-03-11T12:58:59Z" },
+      { title: "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:13:42Z" },
+    ]
+  },
+  {
+    name: "Harare", country: "Zimbabwe",
+    lat: -17.8252, lng: 31.0335,
+    category: "political",
+    articles: [
+      { title: "US’s new scramble for Africa is biomedical imperialism", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/13/uss-new-scramble-for-africa-is-biomedical-imperialism?traffic_source=rss", time: "2026-03-13T14:16:01Z" },
+      { title: "Arrests, accusations and arguments - the Mugabe family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T05:54:23Z" },
+      { title: "Descendants of Zimbabwe resistance heroes urge UK to locate looted skulls", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/descendants-of-zimbabwe-resistance-heroes-urge-uk-to-locate-looted-skulls", time: "2026-03-07T17:00:56Z" },
+    ]
+  },
+  {
     name: "Addis Ababa", country: "Ethiopia",
     lat: 9.025, lng: 38.7469,
     category: "conflict",
     articles: [
       { title: "At least 64 killed, dozens reported missing in Ethiopia landslides, floods", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/at-least-52-killed-dozens-reported-missing-after-landslides-in-ethiopia?traffic_source=rss", time: "2026-03-12T12:15:51Z" },
       { title: "Floods and landslides kill 30 in southern Ethiopia", source: "BBC News", url: "https://www.bbc.com/news/articles/ce947x4m0e1o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:33:22Z" },
-    ]
-  },
-  {
-    name: "Accra", country: "Ghana",
-    lat: 5.6037, lng: -0.187,
-    category: "economic",
-    articles: [
-      { title: "‘Imagine, if everyone had a sex auntie’: Nana Darkoa Sekyiamah on tradition as a basis for pleasure", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/11/nana-darkoa-sekyiamah-seeking-sexual-freedom-sex-aunties", time: "2026-03-11T12:58:59Z" },
-      { title: "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss", time: "2026-03-09T12:13:42Z" },
     ]
   },
   {
@@ -258,15 +269,6 @@ const locations = [
     ]
   },
   {
-    name: "Harare", country: "Zimbabwe",
-    lat: -17.8252, lng: 31.0335,
-    category: "political",
-    articles: [
-      { title: "Arrests, accusations and arguments - the Mugabe family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T05:54:23Z" },
-      { title: "Descendants of Zimbabwe resistance heroes urge UK to locate looted skulls", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/descendants-of-zimbabwe-resistance-heroes-urge-uk-to-locate-looted-skulls", time: "2026-03-07T17:00:56Z" },
-    ]
-  },
-  {
     name: "Dakar", country: "Senegal",
     lat: 14.7167, lng: -17.4677,
     category: "political",
@@ -282,6 +284,15 @@ const locations = [
     articles: [
       { title: "Globetrotting Constantine back in charge of Rwanda", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cj0d6j6m2rno?at_medium=RSS&at_campaign=rss", time: "2026-03-12T19:06:52Z" },
       { title: "Trump said he ended a war in Africa. U.S. sanctions say otherwise.", source: "Washington Post", url: "https://www.washingtonpost.com/politics/2026/03/08/trump-war-rwanda-congo-sanctions/", time: "2026-03-08T09:00:10Z" },
+    ]
+  },
+  {
+    name: "Abidjan", country: "Ivory Coast",
+    lat: 5.36, lng: -4.0083,
+    category: "economic",
+    articles: [
+      { title: "France returns sacred 'talking drum' looted during colonial rule to Ivory Coast", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg3yv2e9p1o?at_medium=RSS&at_campaign=rss", time: "2026-03-13T14:24:41Z" },
+      { title: "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/13/france-returns-sacred-djidji-ayokwe-talking-drum-looted-from-cote-divoire", time: "2026-03-13T13:06:53Z" },
     ]
   },
   {
@@ -370,14 +381,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Mining’s toxic timebomb: dams full of poisonous waste are dotted around the world. What happens when they burst?", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/13/minings-toxic-timebomb-dams-full-of-poisonous-waste-are-dotted-around-the-world-what-happens-when-they-burst-aoe", time: "2026-03-13T05:00:41Z" },
-    ]
-  },
-  {
-    name: "Abidjan", country: "Ivory Coast",
-    lat: 5.36, lng: -4.0083,
-    category: "economic",
-    articles: [
-      { title: "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/13/france-returns-sacred-djidji-ayokwe-talking-drum-looted-from-cote-divoire", time: "2026-03-13T13:06:53Z" },
     ]
   },
 ];
