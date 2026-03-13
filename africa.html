@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:37 UTC, 13 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:32 UTC, 13 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">13 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:38 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France returns sacred talking drum looted from Ivory Coast during colonial era</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["At least 80 killed and many more missing after landslides in Ethiopia", "‘Villages are burned, animals slaughtered. We have to let the world know what’s happening’: Tinariwen and Imarhan fight for Tuareg music"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Humanitarian crisis deepens across Ethiopia and Sahel region from natural disasters and conflict</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Drone attack on market in Sudan kills 11, as air war civilian toll mounts", "Poor in an oil-rich country: Republic of Congo’s youth hope for change"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sudan air war civilian casualties mount amid broader Central African instability</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Former Arsenal player Partey to plead not guilty to 2 new rape charges", "Ghana star to deny rape charges, UK court hears"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Arsenal player Thomas Partey faces additional rape charges in Ghana legal proceedings</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US’s new scramble for Africa is biomedical imperialism"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US biomedical initiatives in Africa raise neocolonialism concerns among regional observers</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Mining’s toxic timebomb: dams full of poisonous waste are dotted around the world. What happens when they burst?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Mining waste dam risks pose environmental threats across southern African nations</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:33 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France returns sacred talking drum looted from Ivory Coast during colonialism</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Drone attack on market in Sudan kills 11, as air war civilian toll mounts", "At least 80 killed and many more missing after landslides in Ethiopia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sudan drone attack kills eleven; Ethiopia landslides kill eighty with missing persons</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Former Arsenal player Partey to plead not guilty to 2 new rape charges", "Ghana star to deny rape charges, UK court hears"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Former Arsenal player Partey faces new rape charges in Ghana court</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘Villages are burned, animals slaughtered. We have to let the world know what’s happening’: Tinariwen and Imarhan fight for Tuareg music", "Mining’s toxic timebomb: dams full of poisonous waste are dotted around the world. What happens when they burst?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Tuareg musicians document Sahel conflict; mining waste dams pose environmental risks</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["An Ethiopian national linked to armed militia FANO deported by ICE"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Ethiopian FANO militia member deported by French immigration authorities</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["US’s new scramble for Africa is biomedical imperialism"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US biomedical activities in Africa criticized as neocolonial imperialism</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -220,6 +220,17 @@ const locations = [
     ]
   },
   {
+    name: "Addis Ababa", country: "Ethiopia",
+    lat: 9.025, lng: 38.7469,
+    category: "conflict",
+    articles: [
+      { title: "An Ethiopian national linked to armed militia FANO deported by ICE", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260313-an-ethiopian-national-linked-to-armed-militia-fano-deported-by-ice", time: "2026-03-13T21:49:40Z" },
+      { title: "At least 80 killed and many more missing after landslides in Ethiopia", source: "Sky News", url: "https://news.sky.com/story/at-least-80-killed-and-many-more-missing-after-deadly-landslides-in-ethiopia-13519323", time: "2026-03-13T17:37:00Z" },
+      { title: "At least 64 killed, dozens reported missing in Ethiopia landslides, floods", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/at-least-52-killed-dozens-reported-missing-after-landslides-in-ethiopia?traffic_source=rss", time: "2026-03-12T12:15:51Z" },
+      { title: "Floods and landslides kill 30 in southern Ethiopia", source: "BBC News", url: "https://www.bbc.com/news/articles/ce947x4m0e1o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:33:22Z" },
+    ]
+  },
+  {
     name: "Harare", country: "Zimbabwe",
     lat: -17.8252, lng: 31.0335,
     category: "political",
@@ -227,16 +238,6 @@ const locations = [
       { title: "US’s new scramble for Africa is biomedical imperialism", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/13/uss-new-scramble-for-africa-is-biomedical-imperialism?traffic_source=rss", time: "2026-03-13T14:16:01Z" },
       { title: "Arrests, accusations and arguments - the Mugabe family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T05:54:23Z" },
       { title: "Descendants of Zimbabwe resistance heroes urge UK to locate looted skulls", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/descendants-of-zimbabwe-resistance-heroes-urge-uk-to-locate-looted-skulls", time: "2026-03-07T17:00:56Z" },
-    ]
-  },
-  {
-    name: "Addis Ababa", country: "Ethiopia",
-    lat: 9.025, lng: 38.7469,
-    category: "conflict",
-    articles: [
-      { title: "At least 80 killed and many more missing after landslides in Ethiopia", source: "Sky News", url: "https://news.sky.com/story/at-least-80-killed-and-many-more-missing-after-deadly-landslides-in-ethiopia-13519323", time: "2026-03-13T17:37:00Z" },
-      { title: "At least 64 killed, dozens reported missing in Ethiopia landslides, floods", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/at-least-52-killed-dozens-reported-missing-after-landslides-in-ethiopia?traffic_source=rss", time: "2026-03-12T12:15:51Z" },
-      { title: "Floods and landslides kill 30 in southern Ethiopia", source: "BBC News", url: "https://www.bbc.com/news/articles/ce947x4m0e1o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T12:33:22Z" },
     ]
   },
   {
