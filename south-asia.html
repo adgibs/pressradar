@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:38 UTC, 13 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:50 UTC, 13 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">13 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:39 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘We cut down the menu’: Cooking gas crisis hit restaurants in India amid war in Iran", "How Israel-US war on Iran puts $50bn in Indian remittances at risk", "Sri Lanka to repatriate remains of 84 Iranian sailors killed in US attack"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran-US conflict impacts South Asia through economic and humanitarian consequences</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Afghanistan accuses Pakistan of air attacks on homes in Kabul, Kandahar", "Pakistan air strikes hit Kabul and Afghan border provinces, killing four"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan conducts air strikes on Afghan targets killing multiple civilians</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ex-rapper Balendra Shah sweeps to power in Nepal landslide election victory"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Nepal elects ex-rapper Balendra Shah in landslide election victory</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Alcaraz sets up Medvedev Indian Wells semifinal, Sabalenka also advances"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Alcaraz advances to Indian Wells semifinal against Medvedev</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 18:51 UTC, 13 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘We cut down the menu’: Cooking gas crisis hit restaurants in India amid war in Iran", "Sri Lanka to repatriate remains of 84 Iranian sailors killed in US attack", "How Israel-US war on Iran puts $50bn in Indian remittances at risk"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran conflict disrupts South Asia economy, energy supplies, and regional stability</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Afghanistan accuses Pakistan of air attacks on homes in Kabul, Kandahar", "Pakistan air strikes hit Kabul and Afghan border provinces, killing four"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Pakistan-Afghanistan cross-border military tensions escalate with airstrikes on civilian areas</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ex-rapper Balendra Shah sweeps to power in Nepal landslide election victory"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Nepal elects ex-rapper Balendra Shah in landslide victory</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Alcaraz sets up Medvedev Indian Wells semifinal, Sabalenka also advances"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Alcaraz advances to Indian Wells semifinal against Medvedev</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -187,16 +187,6 @@ const locations = [
     ]
   },
   {
-    name: "Colombo", country: "Sri Lanka",
-    lat: 6.9271, lng: 79.8612,
-    category: "economic",
-    articles: [
-      { title: "Sri Lanka to repatriate remains of 84 Iranian sailors killed in US attack", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/13/sri-lanka-to-repatriate-remains-of-84-iranian-sailors-killed-in-us-attack?traffic_source=rss", time: "2026-03-13T10:04:31Z" },
-      { title: "Afghanistan vs Sri Lanka cricket series called off due to Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/10/afghanistan-vs-sri-lanka-cricket-series-called-off-due-to-iran-war?traffic_source=rss", time: "2026-03-10T06:30:43Z" },
-      { title: "After the U.S. sinks an Iranian warship, Sri Lanka takes custody of an Iranian vessel", source: "NPR", url: "https://www.npr.org/2026/03/06/g-s1-112759/after-the-u-s-sinks-an-iranian-warship-sri-lanka-takes-custody-of-an-iranian-vessel", time: "2026-03-06T18:38:00Z" },
-    ]
-  },
-  {
     name: "Persian Gulf", country: "International",
     lat: 26.0, lng: 52.0,
     category: "economic",
@@ -214,6 +204,15 @@ const locations = [
       { title: "Bangladesh parliament meets after uprising, elections ushered in new gov’t", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/bangladesh-parliament-meets-for-first-time-after-uprising-elections?traffic_source=rss", time: "2026-03-12T09:34:06Z" },
       { title: "Bangladesh closes universities due to Iran war energy crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/9/bangladesh-closes-universities-due-to-iran-war-energy-crisis?traffic_source=rss", time: "2026-03-09T12:55:17Z" },
       { title: "Bangladesh shuts universities, limits fuel sale as Iran war causes shortage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/bangladesh-shuts-universities-limits-fuel-sale-as-iran-war-causes-shortage?traffic_source=rss", time: "2026-03-09T07:09:52Z" },
+    ]
+  },
+  {
+    name: "Colombo", country: "Sri Lanka",
+    lat: 6.9271, lng: 79.8612,
+    category: "economic",
+    articles: [
+      { title: "Sri Lanka to repatriate remains of 84 Iranian sailors killed in US attack", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/13/sri-lanka-to-repatriate-remains-of-84-iranian-sailors-killed-in-us-attack?traffic_source=rss", time: "2026-03-13T10:04:31Z" },
+      { title: "Afghanistan vs Sri Lanka cricket series called off due to Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/10/afghanistan-vs-sri-lanka-cricket-series-called-off-due-to-iran-war?traffic_source=rss", time: "2026-03-10T06:30:43Z" },
     ]
   },
   {
