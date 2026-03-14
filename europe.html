@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:50 UTC, 14 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">06:54 UTC, 14 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">14 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:51 UTC, 14 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine war briefing: War in the Middle East is bad news for Ukraine, says Zelenskyy", "Ukrainian President Zelenskyy concerned as U.S. suspends Russia sanctions", "Russia summons UK, French envoys over Ukraine Storm Shadow missile strike"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukraine war impacts global economy and western military support decisions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">France returns colonial-era sacred drum to Ivory Coast</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Austrian glaciers disintegrating due to climate change, say scientists", "Out of the blue? How the colour of light could be used to treat mental illness"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Scientists study climate change effects and innovative health treatments</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["UK signs ‘rebooted’ defence agreement to protect Irish waters", "Made in UK: Ukrainian drone company to open first UK plant to boost production"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">UK strengthens defence partnerships and Ukrainian military production capacity</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘It would be an earthquake for France’: is Marseille about to vote in the far-right?", "Tourism was booming in Cyprus, then a drone hit"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Political upheaval and security incidents affect European regions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Trial starts in case of explosives sent to UK and Poland", "EU backs ban on AI-generated sexualised deepfakes after Grok backlash"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Law enforcement and EU regulation address emerging threats</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 06:55 UTC, 14 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘It would be an earthquake for France’: is Marseille about to vote in the far-right?", "Ukraine war briefing: War in the Middle East is bad news for Ukraine, says Zelenskyy", "Ukrainian President Zelenskyy concerned as U.S. suspends Russia sanctions", "Russia summons UK, French envoys over Ukraine Storm Shadow missile strike"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukraine war and geopolitical tensions dominate European political landscape</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Trial starts in case of explosives sent to UK and Poland", "Made in UK: Ukrainian drone company to open first UK plant to boost production", "Middle East war having &#39;huge impact&#39; on EU economy: Commissioner Christophe Hansen"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Security threats and defence cooperation accelerate across Europe</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Explosion reported at Jewish school in Amsterdam", "Tourism was booming in Cyprus, then a drone hit", "UK signs ‘rebooted’ defence agreement to protect Irish waters"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Safety incidents prompt regional security responses</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Austrian glaciers disintegrating due to climate change, say scientists", "Iran conflict: EU walks diplomatic tightrope between rule of law and support for democracy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Climate and Middle East crises impact EU policy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">France returns colonial-era artefacts to African nations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["His Film Is Spain’s Submission to the Oscars. He’s Not Sure How Spanish It Is.", "EU backs ban on AI-generated sexualised deepfakes after Grok backlash"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Cultural and technological developments shape European society</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -356,21 +356,22 @@ const locations = [
     ]
   },
   {
+    name: "The Hague", country: "Netherlands",
+    lat: 52.0705, lng: 4.3007,
+    category: "political",
+    articles: [
+      { title: "Explosion reported at Jewish school in Amsterdam", source: "Sky News", url: "https://news.sky.com/story/explosion-reported-at-jewish-school-in-amsterdam-13519481", time: "2026-03-14T06:16:00Z" },
+      { title: "'EU needs a bit of a revolution: There is no European strategy or foreign policy'", source: "France 24", url: "https://www.france24.com/en/eu-needs-a-bit-of-a-revolution-there-is-no-european-strategy-or-foreign-policy", time: "2026-03-12T07:35:42Z" },
+      { title: "‘Uncool rules’: the lo-fi pop pranksters reviving the Dutch answer to dada", source: "The Guardian", url: "https://www.theguardian.com/music/2026/mar/12/new-dutch-naivety-nieuwe-nederlandse-naiviteit-protest-songs", time: "2026-03-12T07:00:11Z" },
+    ]
+  },
+  {
     name: "RAF Akrotiri", country: "Cyprus/UK",
     lat: 34.5884, lng: 32.9879,
     category: "military",
     articles: [
       { title: "War fuels debate in Cyprus over UK military bases", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2r1xldl1ko?at_medium=RSS&at_campaign=rss", time: "2026-03-08T08:03:40Z" },
       { title: "UK faces growing calls from locals to remove Cyprus military bases", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/07/uk-faces-growing-calls-from-locals-to-remove-cyprus-military-bases", time: "2026-03-07T23:20:33Z" },
-    ]
-  },
-  {
-    name: "The Hague", country: "Netherlands",
-    lat: 52.0705, lng: 4.3007,
-    category: "political",
-    articles: [
-      { title: "'EU needs a bit of a revolution: There is no European strategy or foreign policy'", source: "France 24", url: "https://www.france24.com/en/eu-needs-a-bit-of-a-revolution-there-is-no-european-strategy-or-foreign-policy", time: "2026-03-12T07:35:42Z" },
-      { title: "‘Uncool rules’: the lo-fi pop pranksters reviving the Dutch answer to dada", source: "The Guardian", url: "https://www.theguardian.com/music/2026/mar/12/new-dutch-naivety-nieuwe-nederlandse-naiviteit-protest-songs", time: "2026-03-12T07:00:11Z" },
     ]
   },
   {
