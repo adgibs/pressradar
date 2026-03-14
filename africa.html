@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:41 UTC, 14 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:38 UTC, 14 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">14 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 08:41 UTC, 14 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France returns sacred talking drum looted from Ivory Coast during colonialism</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Former Arsenal player Partey to plead not guilty to 2 new rape charges", "Ghana star to deny rape charges, UK court hears"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Arsenal player Partey faces multiple rape charges in UK court proceedings</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Drone attack on market in Sudan kills 11, as air war civilian toll mounts", "At least 80 killed and many more missing after landslides in Ethiopia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sudan drone attack and Ethiopia landslides kill dozens across region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Fears for press freedom as billionaire takes control of East Africa&#39;s largest media house"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Billionaire takeover of East Africa&#x27;s largest media house raises press freedom concerns</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Republic of Congo election: Who is running and what’s at stake?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">DR Congo holds presidential election with significant political stakes</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["An Ethiopian national linked to armed militia FANO deported by ICE"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Ethiopian national linked to FANO militia deported by US immigration</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:39 UTC, 14 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Drone attack on market in Sudan kills 11, as air war civilian toll mounts", "At least 80 killed and many more missing after landslides in Ethiopia", "An Ethiopian national linked to armed militia FANO deported by ICE"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Sudan drone attack kills 11; Ethiopia faces landslides and armed militia tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["France returns sacred &#39;talking drum&#39; looted during colonial rule to Ivory Coast", "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">France returns colonial-era sacred drum to Ivory Coast</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Fears for press freedom as billionaire takes control of East Africa&#39;s largest media house", "US’s new scramble for Africa is biomedical imperialism"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Media ownership and Western influence concerns emerge across Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Republic of Congo election: Who is running and what’s at stake?", "Former Arsenal player Partey to plead not guilty to 2 new rape charges"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Congo election underway; Ghana footballer faces rape allegations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘Kill the people’: How men were left to starve in a South African gold mine"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">South African gold mine abandonment leaves workers starving</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Ghana star to deny rape charges, UK court hears"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Ghana footballer denies rape charges in UK court</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -160,6 +160,21 @@ const locations = [
     ]
   },
   {
+    name: "Johannesburg", country: "South Africa",
+    lat: -26.2041, lng: 28.0473,
+    category: "economic",
+    articles: [
+      { title: "‘Kill the people’: How men were left to starve in a South African gold mine", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/14/kill-the-people-how-men-were-left-to-starve-in-a-south-african-gold-mine?traffic_source=rss", time: "2026-03-14T08:34:37Z" },
+      { title: "To stop Africa from hemorrhaging local talent, scientist creates drug discovery lab", source: "NPR", url: "https://www.npr.org/2026/03/12/nx-s1-5729002/to-stop-africa-from-hemorrhaging-local-talent-scientist-creates-drug-discovery-lab", time: "2026-03-12T08:44:26Z" },
+      { title: "Zulu Dawn review – fine ensemble cast show arrogance that led to British imperial disaster", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/12/zulu-dawn-review-peter-o-toole-burt-lancaster", time: "2026-03-12T07:00:13Z" },
+      { title: "New US ambassador to South Africa summoned over 'undiplomatic remarks'", source: "BBC News", url: "https://www.bbc.com/news/articles/c14m1vzmxz3o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T21:30:16Z" },
+      { title: "South African soldiers deploy in Johannesburg to tackle crime and gangs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/south-african-soldiers-deploy-in-johannesburg-to-tackle-crime-and-gangs?traffic_source=rss", time: "2026-03-11T12:46:04Z" },
+      { title: "Mugabe's son drops bail request - what has happened to the family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T10:31:57Z" },
+      { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
+      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
+    ]
+  },
+  {
     name: "Goma", country: "DR Congo",
     lat: -1.6585, lng: 29.2206,
     category: "conflict",
@@ -171,20 +186,6 @@ const locations = [
       { title: "French aid worker for UNICEF killed in DR Congo's Goma, Macron says", source: "France 24", url: "https://www.france24.com/en/africa/20260311-french-aid-worker-for-unicef-killed-in-dr-congo-s-goma-macron-says", time: "2026-03-11T11:22:17Z" },
       { title: "UN aid worker killed in DR Congo’s rebel-held Goma", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/un-aid-worker-killed-in-dr-congos-rebel-held-goma?traffic_source=rss", time: "2026-03-11T11:15:45Z" },
       { title: "Three killed in drone attack on Goma in eastern DRC, M23 rebels say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/drone-attack-goma-eastern-democratic-republic-of-the-congo-m23-rebels", time: "2026-03-11T09:41:04Z" },
-    ]
-  },
-  {
-    name: "Johannesburg", country: "South Africa",
-    lat: -26.2041, lng: 28.0473,
-    category: "economic",
-    articles: [
-      { title: "To stop Africa from hemorrhaging local talent, scientist creates drug discovery lab", source: "NPR", url: "https://www.npr.org/2026/03/12/nx-s1-5729002/to-stop-africa-from-hemorrhaging-local-talent-scientist-creates-drug-discovery-lab", time: "2026-03-12T08:44:26Z" },
-      { title: "Zulu Dawn review – fine ensemble cast show arrogance that led to British imperial disaster", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/12/zulu-dawn-review-peter-o-toole-burt-lancaster", time: "2026-03-12T07:00:13Z" },
-      { title: "New US ambassador to South Africa summoned over 'undiplomatic remarks'", source: "BBC News", url: "https://www.bbc.com/news/articles/c14m1vzmxz3o?at_medium=RSS&at_campaign=rss", time: "2026-03-11T21:30:16Z" },
-      { title: "South African soldiers deploy in Johannesburg to tackle crime and gangs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/south-african-soldiers-deploy-in-johannesburg-to-tackle-crime-and-gangs?traffic_source=rss", time: "2026-03-11T12:46:04Z" },
-      { title: "Mugabe's son drops bail request - what has happened to the family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T10:31:57Z" },
-      { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
-      { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
     ]
   },
   {
