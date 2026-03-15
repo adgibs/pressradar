@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:42 UTC, 15 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:39 UTC, 15 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 08:43 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Republic of Congo votes in election that could extend Sassou’s 42-year rule", "Will Trump help or hinder Zimbabwe&#39;s white farmers in their compensation battle?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">African leaders face domestic political pressures amid economic and social challenges.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["In Scolding the New U.S. Ambassador, South Africa Signals Defiance", "Shark nets planned for €100 million Club Med resort threaten endangered species in South Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">South Africa navigates international relations and environmental conservation concerns simultaneously.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Republic of Congo votes in election that could extend Sassou’s 42-year rule"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Republic of Congo holds election with incumbent Sassou seeking extended tenure.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Will Trump help or hinder Zimbabwe&#39;s white farmers in their compensation battle?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zimbabwe&#x27;s white farmer compensation issue gains international attention under Trump administration.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["In Scolding the New U.S. Ambassador, South Africa Signals Defiance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa criticizes new U.S. ambassador in diplomatic rebuke.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Shark nets planned for €100 million Club Med resort threaten endangered species in South Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Shark nets for South African resort development threaten endangered marine species.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:40 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Republic of Congo votes in election that could extend Sassou’s 42-year rule", "Will Trump help or hinder Zimbabwe&#39;s white farmers in their compensation battle?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">African leaders face domestic political pressures and international scrutiny.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["In Scolding the New U.S. Ambassador, South Africa Signals Defiance", "Shark nets planned for €100 million Club Med resort threaten endangered species in South Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">South Africa signals defiance on foreign policy and environmental concerns.</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,23 +111,6 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "Khartoum", country: "Sudan",
-    lat: 15.5007, lng: 32.5599,
-    category: "conflict",
-    articles: [
-      { title: "Drone attack on market in Sudan kills 11, as air war civilian toll mounts", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/13/drone-attack-on-market-in-sudan-kills-11-as-air-war-civilian-toll-mounts?traffic_source=rss", time: "2026-03-13T20:50:49Z" },
-      { title: "Eswatini says it received more ‘third country’ deportees as part of deal with Trump administration", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/12/trump-immigration-deportations-eswatini", time: "2026-03-12T19:47:15Z" },
-      { title: "Students among 17 dead in RSF drone attack in Sudan’s White Nile State", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/students-among-17-dead-in-rsf-drone-attack-in-sudans-white-nile-state?traffic_source=rss", time: "2026-03-12T06:04:11Z" },
-      { title: "At least 17 killed after drone strikes school in Sudan", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/at-least-17-killed-after-drone-strikes-school-in-sudan", time: "2026-03-11T19:08:31Z" },
-      { title: "The nature of war is changing - and it's a death trap for civilians", source: "Sky News", url: "https://news.sky.com/story/sudan-shows-how-the-nature-of-war-is-changing-and-its-a-death-trap-for-civilians-13518316", time: "2026-03-11T17:35:00Z" },
-      { title: "Sudan’s devastating war rages on as regional rivalries deepen", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/11/sudans-devastating-war-rages-on-as-regional-rivalries-deepen?traffic_source=rss", time: "2026-03-11T14:36:01Z" },
-      { title: "Air strike kills four Iran-linked fighters in Iraq", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/air-strike-kills-four-iran-linked-fighters-in-iraq?traffic_source=rss", time: "2026-03-10T10:00:16Z" },
-      { title: "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/us-blacklists-sudanese-muslim-brotherhood-as-terrorist-group?traffic_source=rss", time: "2026-03-09T21:51:11Z" },
-      { title: "Volunteers rebuild Sudan’s oldest psychiatric hospital destroyed by war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/9/volunteers-rebuild-sudans-oldest-psychiatric-hospital-destroyed-by-war?traffic_source=rss", time: "2026-03-09T09:17:34Z" },
-      { title: "Drone attacks on Sudan markets kill at least 33", source: "France 24", url: "https://www.france24.com/en/africa/20260308-at-least-33-people-killed-separate-drone-strikes-on-sudan-markets", time: "2026-03-08T08:47:08Z" },
-    ]
-  },
-  {
     name: "Johannesburg", country: "South Africa",
     lat: -26.2041, lng: 28.0473,
     category: "economic",
@@ -142,6 +125,22 @@ const locations = [
       { title: "Mugabe's son drops bail request - what has happened to the family after losing power", source: "BBC News", url: "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T10:31:57Z" },
       { title: "ICC rejects bias claims from stranded South Africa, West Indies cricketers", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/11/icc-rejects-bias-claims-from-stranded-south-africa-west-indies-cricketers?traffic_source=rss", time: "2026-03-11T09:14:51Z" },
       { title: "How the US far right bought into the myth of white South Africa’s persecution", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/10/how-the-us-far-right-bought-into-the-myth-of-white-south-africas-persecution", time: "2026-03-10T05:00:09Z" },
+    ]
+  },
+  {
+    name: "Khartoum", country: "Sudan",
+    lat: 15.5007, lng: 32.5599,
+    category: "conflict",
+    articles: [
+      { title: "Drone attack on market in Sudan kills 11, as air war civilian toll mounts", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/13/drone-attack-on-market-in-sudan-kills-11-as-air-war-civilian-toll-mounts?traffic_source=rss", time: "2026-03-13T20:50:49Z" },
+      { title: "Eswatini says it received more ‘third country’ deportees as part of deal with Trump administration", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/12/trump-immigration-deportations-eswatini", time: "2026-03-12T19:47:15Z" },
+      { title: "Students among 17 dead in RSF drone attack in Sudan’s White Nile State", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/students-among-17-dead-in-rsf-drone-attack-in-sudans-white-nile-state?traffic_source=rss", time: "2026-03-12T06:04:11Z" },
+      { title: "At least 17 killed after drone strikes school in Sudan", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/at-least-17-killed-after-drone-strikes-school-in-sudan", time: "2026-03-11T19:08:31Z" },
+      { title: "The nature of war is changing - and it's a death trap for civilians", source: "Sky News", url: "https://news.sky.com/story/sudan-shows-how-the-nature-of-war-is-changing-and-its-a-death-trap-for-civilians-13518316", time: "2026-03-11T17:35:00Z" },
+      { title: "Sudan’s devastating war rages on as regional rivalries deepen", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/11/sudans-devastating-war-rages-on-as-regional-rivalries-deepen?traffic_source=rss", time: "2026-03-11T14:36:01Z" },
+      { title: "Air strike kills four Iran-linked fighters in Iraq", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/air-strike-kills-four-iran-linked-fighters-in-iraq?traffic_source=rss", time: "2026-03-10T10:00:16Z" },
+      { title: "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/us-blacklists-sudanese-muslim-brotherhood-as-terrorist-group?traffic_source=rss", time: "2026-03-09T21:51:11Z" },
+      { title: "Volunteers rebuild Sudan’s oldest psychiatric hospital destroyed by war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/9/volunteers-rebuild-sudans-oldest-psychiatric-hospital-destroyed-by-war?traffic_source=rss", time: "2026-03-09T09:17:34Z" },
     ]
   },
   {
@@ -276,21 +275,20 @@ const locations = [
     ]
   },
   {
-    name: "Kigali", country: "Rwanda",
-    lat: -1.9403, lng: 29.8739,
-    category: "political",
-    articles: [
-      { title: "Globetrotting Constantine back in charge of Rwanda", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cj0d6j6m2rno?at_medium=RSS&at_campaign=rss", time: "2026-03-12T19:06:52Z" },
-      { title: "Trump said he ended a war in Africa. U.S. sanctions say otherwise.", source: "Washington Post", url: "https://www.washingtonpost.com/politics/2026/03/08/trump-war-rwanda-congo-sanctions/", time: "2026-03-08T09:00:10Z" },
-    ]
-  },
-  {
     name: "Abidjan", country: "Ivory Coast",
     lat: 5.36, lng: -4.0083,
     category: "economic",
     articles: [
       { title: "France returns sacred 'talking drum' looted during colonial rule to Ivory Coast", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg3yv2e9p1o?at_medium=RSS&at_campaign=rss", time: "2026-03-13T14:24:41Z" },
       { title: "France returns sacred talking drum looted from Côte d’Ivoire over 100 years ago", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/13/france-returns-sacred-djidji-ayokwe-talking-drum-looted-from-cote-divoire", time: "2026-03-13T13:06:53Z" },
+    ]
+  },
+  {
+    name: "Kigali", country: "Rwanda",
+    lat: -1.9403, lng: 29.8739,
+    category: "political",
+    articles: [
+      { title: "Globetrotting Constantine back in charge of Rwanda", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cj0d6j6m2rno?at_medium=RSS&at_campaign=rss", time: "2026-03-12T19:06:52Z" },
     ]
   },
   {
