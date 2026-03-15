@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:45 UTC, 15 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:09 UTC, 15 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:45 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine war briefing: six people killed as Russia unleashes missile and drone attacks, officials say", "Russian strike on Kyiv region kills 4 and wounds 15, with peace talks stalled", "Russian missile and drone attacks kills several in Kyiv region"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Russian attacks kill multiple people in Ukraine&#x27;s Kyiv region</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Blast at Dutch School Is 2nd Antisemitic Attack in 2 Days, Officials Say", "Explosion reported at Jewish school in Amsterdam"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Antisemitic attacks strike Dutch Jewish schools in consecutive days</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘I won’t hide it, I’m scared’: drone strike alerts Cyprus to its inadequate bomb shelters", "War prompts Europeans to switch holidays away from eastern Mediterranean"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Cyprus and Mediterranean region face security concerns amid regional conflict</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Home Office U-turn will let some dual nationals use EU passport to enter UK", "‘It would be an earthquake for France’: is Marseille about to vote in the far-right?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">UK and France face domestic political shifts on immigration and far-right</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Germany misses climate targets as emissions barely fall in 2025"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Germany fails to meet climate emission reduction targets for 2025</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Jürgen Habermas, German philosopher and sociologist, dies aged 96"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Influential German philosopher Jürgen Habermas dies at age ninety-six</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:09 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine war briefing: six people killed as Russia unleashes missile and drone attacks, officials say", "Russian strike on Kyiv region kills 4 and wounds 15, with peace talks stalled", "Russian missile and drone attacks kills several in Kyiv region"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Russia launches missile and drone attacks on Ukraine killing multiple civilians</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Blast at Dutch School Is 2nd Antisemitic Attack in 2 Days, Officials Say", "Explosion reported at Jewish school in Amsterdam"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Antisemitic attacks strike Dutch schools in consecutive days</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Marseille’s Tight Mayoral Race Is a Bellwether for France’s Future", "Some Olympic Leaders Want to See Fixed Winter Games Host Cities"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">France&#x27;s mayoral race and Olympic host cities dominate European political debates</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Iceland’s Chief ‘Lava Cooler’ Is Bracing for the Next Volcanic Eruption", "War prompts Europeans to switch holidays away from eastern Mediterranean"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Volcanic threats in Iceland and regional conflicts reshape European travel patterns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Home Office U-turn will let some dual nationals use EU passport to enter UK", "Germany misses climate targets as emissions barely fall in 2025"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">UK passport policy shifts and Germany&#x27;s climate targets face scrutiny</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Danish royals Frederik and Mary begin Australia tour in red centre", "‘I won’t hide it, I’m scared’: drone strike alerts Cyprus to its inadequate bomb shelters"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Royal tours and Cyprus security concerns highlight European geopolitical tensions</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -151,6 +151,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Marseille’s Tight Mayoral Race Is a Bellwether for France’s Future", source: "New York Times", url: "https://www.nytimes.com/2026/03/15/world/europe/france-marseille-mayor-election-far-right.html", time: "2026-03-15T04:01:19Z" },
       { title: "‘It would be an earthquake for France’: is Marseille about to vote in the far-right?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/14/france-marseille-far-right-municipal-elections-national-rally", time: "2026-03-14T05:00:10Z" },
       { title: "Ukraine war briefing: War in the Middle East is bad news for Ukraine, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/14/ukraine-war-briefing-war-in-the-middle-east-is-bad-news-for-ukraine-says-zelenskyy", time: "2026-03-14T03:54:57Z" },
       { title: "Ukrainian President Zelenskyy concerned as U.S. suspends Russia sanctions", source: "NPR", url: "https://www.npr.org/2026/03/13/nx-s1-5746678/ukrainian-president-zelenskyy-concerned-as-u-s-suspends-russia-sanctions", time: "2026-03-13T20:42:51Z" },
@@ -249,7 +250,6 @@ const locations = [
       { title: "Oslo Police Investigate Explosion Outside U.S. Embassy", source: "New York Times", url: "https://www.nytimes.com/2026/03/08/world/europe/explosion-us-embassy-oslo.html", time: "2026-03-08T13:32:57Z" },
       { title: "Police investigate an explosion outside the U.S. Embassy in Oslo", source: "NPR", url: "https://www.npr.org/2026/03/08/nx-s1-5741670/explosion-outside-us-embassy-in-oslo-norway", time: "2026-03-08T13:27:13Z" },
       { title: "Explosion reported outside US embassy in Oslo, police say", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yjegg892lo?at_medium=RSS&at_campaign=rss", time: "2026-03-08T05:18:15Z" },
-      { title: "Loud explosion rocks US embassy in Oslo, police search for perpetrators", source: "France 24", url: "https://www.france24.com/en/europe/20260308-loud-explosion-rocks-us-embassy-in-oslo-police-search-for-perpetrators", time: "2026-03-08T03:23:12Z" },
     ]
   },
   {
@@ -319,6 +319,17 @@ const locations = [
     ]
   },
   {
+    name: "Milan", country: "Italy",
+    lat: 45.4642, lng: 9.19,
+    category: "political",
+    articles: [
+      { title: "Some Olympic Leaders Want to See Fixed Winter Games Host Cities", source: "New York Times", url: "https://www.nytimes.com/2026/03/15/world/europe/winter-olympics-future-sites.html", time: "2026-03-15T04:01:06Z" },
+      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/mar/13/the-week-around-the-world-in-20-pictures", time: "2026-03-13T19:00:40Z" },
+      { title: "Valentino’s Alessandro Michele stages tribute to beauty and his mother in Rome", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/13/valentino-alessandro-michele-tribute-beauty-mother-rome", time: "2026-03-13T12:17:50Z" },
+      { title: "Ukraine war briefing: row between Kyiv and Hungary over pipeline carrying Russian oil deepens", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/12/ukraine-war-briefing-row-between-kyiv-and-hungary-over-pipeline-carrying-russian-oil-deepens", time: "2026-03-12T00:28:44Z" },
+    ]
+  },
+  {
     name: "Ankara", country: "Turkey",
     lat: 39.9334, lng: 32.8597,
     category: "security",
@@ -329,16 +340,6 @@ const locations = [
     ]
   },
   {
-    name: "Milan", country: "Italy",
-    lat: 45.4642, lng: 9.19,
-    category: "political",
-    articles: [
-      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/mar/13/the-week-around-the-world-in-20-pictures", time: "2026-03-13T19:00:40Z" },
-      { title: "Valentino’s Alessandro Michele stages tribute to beauty and his mother in Rome", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/13/valentino-alessandro-michele-tribute-beauty-mother-rome", time: "2026-03-13T12:17:50Z" },
-      { title: "Ukraine war briefing: row between Kyiv and Hungary over pipeline carrying Russian oil deepens", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/12/ukraine-war-briefing-row-between-kyiv-and-hungary-over-pipeline-carrying-russian-oil-deepens", time: "2026-03-12T00:28:44Z" },
-    ]
-  },
-  {
     name: "Budapest", country: "Hungary",
     lat: 47.4979, lng: 19.0402,
     category: "political",
@@ -346,16 +347,6 @@ const locations = [
       { title: "Hungary’s Orbán claims Ukrainians ‘threatened’ his family as election campaign ramps up", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/12/orban-ukraine-claims-hungary-election", time: "2026-03-12T08:33:07Z" },
       { title: "War in Ukraine spills into Hungarian election campaign", source: "BBC News", url: "https://www.bbc.com/news/articles/crm8rxwyyz8o?at_medium=RSS&at_campaign=rss", time: "2026-03-12T06:00:39Z" },
       { title: "Ukraine war briefing: Zelenskyy accuses Hungary of ‘banditry’ over seized gold and cash", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/11/ukraine-war-briefing-zelenskyy-accuses-hungary-of-banditry-over-82m-of-seized-gold", time: "2026-03-11T00:36:21Z" },
-    ]
-  },
-  {
-    name: "Stockholm", country: "Sweden",
-    lat: 59.3293, lng: 18.0686,
-    category: "security",
-    articles: [
-      { title: "Yorkshire Water receives fresh funding despite sewage fines and pay row", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/09/yorkshire-water-funding-fines-pay-private-equity-eqt", time: "2026-03-09T14:27:09Z" },
-      { title: "Ukraine war briefing: drone experts will be in Middle East in coming days, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/ukraine-war-briefing-drone-experts-will-be-in-middle-east-in-coming-days-says-zelenskyy", time: "2026-03-09T00:45:28Z" },
-      { title: "Ukraine war briefing: Zelenskyy offers help to Saudi Crown prince on combatting Iranian drones", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/08/ukraine-war-briefing-zelenskyy-offers-help-to-saudi-crown-prince-on-combatting-iranian-drones", time: "2026-03-08T02:57:36Z" },
     ]
   },
   {
@@ -386,6 +377,15 @@ const locations = [
       { title: "Danish royals Frederik and Mary begin Australia tour in red centre", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/15/queen-mary-king-frederik-danish-royals-australia-tour", time: "2026-03-14T22:50:11Z" },
       { title: "Noma head chef resigns from restaurant amid abuse allegations", source: "BBC News", url: "https://www.bbc.com/news/articles/c07jr2pe5j9o?at_medium=RSS&at_campaign=rss", time: "2026-03-12T04:09:16Z" },
       { title: "Noma chef resigns amid shocking allegations of physical abuse of staff", source: "The Guardian", url: "https://www.theguardian.com/food/2026/mar/11/noma-chef-resigns-rene-redzepi", time: "2026-03-12T01:55:03Z" },
+    ]
+  },
+  {
+    name: "Stockholm", country: "Sweden",
+    lat: 59.3293, lng: 18.0686,
+    category: "security",
+    articles: [
+      { title: "Yorkshire Water receives fresh funding despite sewage fines and pay row", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/09/yorkshire-water-funding-fines-pay-private-equity-eqt", time: "2026-03-09T14:27:09Z" },
+      { title: "Ukraine war briefing: drone experts will be in Middle East in coming days, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/ukraine-war-briefing-drone-experts-will-be-in-middle-east-in-coming-days-says-zelenskyy", time: "2026-03-09T00:45:28Z" },
     ]
   },
   {
@@ -462,6 +462,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "Serbia buys Chinese supersonic missiles", source: "Sky News", url: "https://news.sky.com/story/serbia-buys-chinese-supersonic-missiles-13519131", time: "2026-03-13T11:11:00Z" },
+    ]
+  },
+  {
+    name: "Reykjavik", country: "Iceland",
+    lat: 64.1466, lng: -21.9426,
+    category: "political",
+    articles: [
+      { title: "Iceland’s Chief ‘Lava Cooler’ Is Bracing for the Next Volcanic Eruption", source: "New York Times", url: "https://www.nytimes.com/2026/03/15/world/europe/iceland-lava-volcano-eruption-grindavik.html", time: "2026-03-15T04:01:09Z" },
     ]
   },
 ];
