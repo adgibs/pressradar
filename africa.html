@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:35 UTC, 15 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:30 UTC, 15 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:36 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Severe flooding kills 62 in Kenya, as heavy rains continue"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Heavy rains cause severe flooding deaths across Kenya&#x27;s regions.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Republic of Congo votes in election that could extend Sassou’s 42-year rule"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Congo holds election that could extend Sassou&#x27;s four-decade rule.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["In Scolding the New U.S. Ambassador, South Africa Signals Defiance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa signals defiance toward new U.S. ambassador.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Will Trump help or hinder Zimbabwe&#39;s white farmers in their compensation battle?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Trump&#x27;s stance uncertain on Zimbabwe white farmer compensation claims.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:31 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Severe flooding kills 62 in Kenya, as heavy rains continue"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Severe flooding kills 62 in Kenya as heavy rains continue</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Could Nigeria become an alternative oil supplier to the Middle East?", "Nigeria’s online content creator market has boomed. Can the skit-makers and streamers make it pay?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Nigeria emerges as alternative oil supplier and digital content creator hub</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Republic of Congo votes in election that could extend Sassou’s 42-year rule"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Republic of Congo votes in election extending Sassou&#x27;s 42-year rule</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["In Scolding the New U.S. Ambassador, South Africa Signals Defiance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa signals defiance by scolding new U.S. ambassador</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Will Trump help or hinder Zimbabwe&#39;s white farmers in their compensation battle?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Trump administration stance unclear on Zimbabwe white farmer compensation</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -148,6 +148,7 @@ const locations = [
     lat: 15.0, lng: 0.0,
     category: "conflict",
     articles: [
+      { title: "Could Nigeria become an alternative oil supplier to the Middle East?", source: "France 24", url: "https://www.france24.com/en/could-nigeria-become-an-alternative-oil-supplier-to-the-middle-east", time: "2026-03-15T11:16:15Z" },
       { title: "‘Villages are burned, animals slaughtered. We have to let the world know what’s happening’: Tinariwen and Imarhan fight for Tuareg music", source: "The Guardian", url: "https://www.theguardian.com/music/2026/mar/13/tinariwen-imarhan-interview-tuareg-music-desert-blues", time: "2026-03-13T08:00:44Z" },
       { title: "30% of Europe’s cocaine routed through West Africa region", source: "France 24", url: "https://www.france24.com/en/30-of-europe-s-cocaine-routed-through-west-africa-region", time: "2026-03-12T21:34:04Z" },
       { title: "One house, two faiths, one fasting season", source: "BBC News", url: "https://www.bbc.com/news/videos/cwygeypnevxo?at_medium=RSS&at_campaign=rss", time: "2026-03-12T12:40:13Z" },
@@ -370,6 +371,14 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Mining’s toxic timebomb: dams full of poisonous waste are dotted around the world. What happens when they burst?", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/13/minings-toxic-timebomb-dams-full-of-poisonous-waste-are-dotted-around-the-world-what-happens-when-they-burst-aoe", time: "2026-03-13T05:00:41Z" },
+    ]
+  },
+  {
+    name: "Lagos", country: "Nigeria",
+    lat: 6.5244, lng: 3.3792,
+    category: "economic",
+    articles: [
+      { title: "Nigeria’s online content creator market has boomed. Can the skit-makers and streamers make it pay?", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/15/nigerias-online-content-creator-market-has-boomed-can-the-skit-makers-and-streamers-make-it-pay", time: "2026-03-15T11:00:23Z" },
     ]
   },
 ];
