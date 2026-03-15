@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:35 UTC, 15 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:33 UTC, 15 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:36 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Row over university fees shows UK’s ‘reset’ with EU may not be so simple", "Row over tuition fees cut for European students threatens Starmer’s EU reset", "Zelensky accuses EU allies of &#39;blackmail&#39; in oil pipeline row"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UK-EU relations strained over university fees and energy disputes</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Sweden detains captain of Russian shadow fleet ship", "French police detain brothers over &#39;lethal and antisemitic&#39; plot", "Ukraine recovering from Russian strike, concerned Putin is benefiting from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Security threats emerge across Europe from Russia and extremism</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["France votes in local elections seen as crucial indicator for presidential poll", "Marseille’s Tight Mayoral Race Is a Bellwether for France’s Future"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">French local elections signal key indicators for presidential race</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ukraine war briefing: six people killed as Russia unleashes missile and drone attacks, officials say", "Ukraine recovering from Russian strike, concerned Putin is benefiting from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Ukraine sustains Russian attacks while concerned about geopolitical shifts</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["The drones the UK is considering deploying to the Middle East"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">UK considers drone deployments to Middle East operations</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Iceland’s Chief ‘Lava Cooler’ Is Bracing for the Next Volcanic Eruption"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Iceland prepares for potential volcanic eruption monitoring efforts</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:33 UTC, 15 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["French far-right party holds its biggest city in first-round local elections", "France votes in local elections seen as crucial indicator for presidential poll", "Marseille’s Tight Mayoral Race Is a Bellwether for France’s Future"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">French local elections serve as crucial indicator for future presidential race</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Sweden detains captain of Russian shadow fleet ship", "Zelensky accuses EU allies of &#39;blackmail&#39; in oil pipeline row", "Ukraine recovering from Russian strike, concerned Putin is benefiting from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukraine and Russia tensions escalate amid EU pipeline and military disputes</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Row over university fees shows UK’s ‘reset’ with EU may not be so simple", "Row over tuition fees cut for European students threatens Starmer’s EU reset"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">UK-EU university fee negotiations complicate broader reset relations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["French police detain brothers over &#39;lethal and antisemitic&#39; plot", "Ukraine war briefing: six people killed as Russia unleashes missile and drone attacks, officials say"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">France and Ukraine face security threats from attacks and plots</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Trapezes and artists: world’s oldest circus restored to original glory in Paris"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Paris circus restored to original condition after lengthy renovation</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Iceland’s Chief ‘Lava Cooler’ Is Bracing for the Next Volcanic Eruption"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Iceland prepares for next volcanic eruption with specialized response team</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "French far-right party holds its biggest city in first-round local elections", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/french-local-elections-first-round-results", time: "2026-03-15T20:43:13Z" },
       { title: "French police detain brothers over 'lethal and antisemitic' plot", source: "BBC News", url: "https://www.bbc.com/news/articles/ckgl5d3d3kjo?at_medium=RSS&at_campaign=rss", time: "2026-03-15T16:12:34Z" },
       { title: "France votes in local elections seen as crucial indicator for presidential poll", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/france-votes-local-elections-presidential-indicator", time: "2026-03-15T09:10:23Z" },
       { title: "Trapezes and artists: world’s oldest circus restored to original glory in Paris", source: "The Guardian", url: "https://www.theguardian.com/stage/2026/mar/15/restoration-cirque-d-hiver-circus-paris", time: "2026-03-15T05:00:15Z" },
@@ -327,16 +328,6 @@ const locations = [
     ]
   },
   {
-    name: "Ankara", country: "Turkey",
-    lat: 39.9334, lng: 32.8597,
-    category: "security",
-    articles: [
-      { title: "U.S. orders more diplomats to leave Middle East", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/09/us-diplomats-middle-east-iran/", time: "2026-03-09T22:54:25Z" },
-      { title: "Turkey's Erdogan has tough, no-nonsense reputation - and his message on Iran war is clear", source: "Sky News", url: "https://news.sky.com/story/turkeys-erdogan-has-tough-no-nonsense-reputation-and-his-message-on-iran-war-is-clear-13517509", time: "2026-03-09T21:25:00Z" },
-      { title: "An Iranian doctor recounts treating wounds of war", source: "NPR", url: "https://www.npr.org/2026/03/08/nx-s1-5737555/an-iranian-doctor-recounts-treating-wounds-of-war", time: "2026-03-08T21:06:18Z" },
-    ]
-  },
-  {
     name: "Budapest", country: "Hungary",
     lat: 47.4979, lng: 19.0402,
     category: "political",
@@ -387,6 +378,15 @@ const locations = [
     ]
   },
   {
+    name: "Ankara", country: "Turkey",
+    lat: 39.9334, lng: 32.8597,
+    category: "security",
+    articles: [
+      { title: "U.S. orders more diplomats to leave Middle East", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/09/us-diplomats-middle-east-iran/", time: "2026-03-09T22:54:25Z" },
+      { title: "Turkey's Erdogan has tough, no-nonsense reputation - and his message on Iran war is clear", source: "Sky News", url: "https://news.sky.com/story/turkeys-erdogan-has-tough-no-nonsense-reputation-and-his-message-on-iran-war-is-clear-13517509", time: "2026-03-09T21:25:00Z" },
+    ]
+  },
+  {
     name: "Bucharest", country: "Romania",
     lat: 44.4268, lng: 26.1025,
     category: "security",
@@ -419,14 +419,6 @@ const locations = [
     category: "military",
     articles: [
       { title: "‘I won’t hide it, I’m scared’: drone strike alerts Cyprus to its inadequate bomb shelters", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/14/drone-strike-alerts-cyprus-inadequate-bomb-shelters", time: "2026-03-14T14:00:20Z" },
-    ]
-  },
-  {
-    name: "Helsinki", country: "Finland",
-    lat: 60.1699, lng: 24.9384,
-    category: "security",
-    articles: [
-      { title: "Finnish duo win wacky wife-carrying race", source: "BBC News", url: "https://www.bbc.com/news/articles/c15x2ygk993o?at_medium=RSS&at_campaign=rss", time: "2026-03-08T20:38:47Z" },
     ]
   },
   {
