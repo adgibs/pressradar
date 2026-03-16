@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:45 UTC, 16 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:20 UTC, 16 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">16 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:46 UTC, 16 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Nicolas Sarkozy back in court over alleged Libyan funding for 2007 presidential campaign", "French far-right party holds its biggest city in first-round local elections", "France votes in local elections seen as crucial indicator for presidential poll", "Marseille’s Tight Mayoral Race Is a Bellwether for France’s Future"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">French local elections reveal far-right gains amid presidential race indicators</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Ukraine war briefing: Zelenskyy wants new system to control Ukraine drone sales", "Zelensky accuses EU allies of &#39;blackmail&#39; in oil pipeline row", "Ukraine recovering from Russian strike, concerned Putin is benefiting from Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Ukraine seeks drone controls while facing EU tensions over energy</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Row over university fees shows UK’s ‘reset’ with EU may not be so simple", "Row over tuition fees cut for European students threatens Starmer’s EU reset"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">UK university fee row complicates post-Brexit EU relationship reset</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Sweden detains captain of Russian shadow fleet ship", "French police detain brothers over &#39;lethal and antisemitic&#39; plot"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Security threats emerge: Russian ship detention and antisemitic plot arrests</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Iceland’s Chief ‘Lava Cooler’ Is Bracing for the Next Volcanic Eruption"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Iceland prepares defenses against anticipated volcanic eruption activity</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Some Olympic Leaders Want to See Fixed Winter Games Host Cities"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Olympic leadership discusses establishing permanent Winter Games host cities</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:21 UTC, 16 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Row over university fees shows UK’s ‘reset’ with EU may not be so simple", "Row over tuition fees cut for European students threatens Starmer’s EU reset"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UK-EU relations strain over university tuition fees for European students</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Ukraine war briefing: Zelenskyy wants new system to control Ukraine drone sales", "Zelensky accuses EU allies of &#39;blackmail&#39; in oil pipeline row"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Ukraine seeks control over drone sales amid tensions with Western allies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["French far-right party holds its biggest city in first-round local elections", "France votes in local elections seen as crucial indicator for presidential poll"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">French local elections show far-right gains ahead of presidential race</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Europe’s reaction to Trump’s war on Iran is a disaster – for Europe itself | Nathalie Tocci", "‘El Guapo’: The Spanish PM standing up to Trump – podcast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">European leaders respond to Trump&#x27;s Iran policy with divided positions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nicolas Sarkozy back in court over alleged Libyan funding for 2007 presidential campaign", "French police detain brothers over &#39;lethal and antisemitic&#39; plot"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">France faces legal cases involving political funding and antisemitic plot allegations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Sweden detains captain of Russian shadow fleet ship"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Sweden detains captain of Russian shadow fleet vessel in waters</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Europe’s reaction to Trump’s war on Iran is a disaster – for Europe itself | Nathalie Tocci", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/16/europe-reaction-donald-trump-war-iran-legal-iraq", time: "2026-03-16T05:00:07Z" },
       { title: "Nicolas Sarkozy back in court over alleged Libyan funding for 2007 presidential campaign", source: "France 24", url: "https://www.france24.com/en/europe/20260316-sarkozy-libya-campaign-financing-trial-2007-election", time: "2026-03-16T01:42:44Z" },
       { title: "French far-right party holds its biggest city in first-round local elections", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/french-local-elections-first-round-results", time: "2026-03-15T20:43:13Z" },
       { title: "French police detain brothers over 'lethal and antisemitic' plot", source: "BBC News", url: "https://www.bbc.com/news/articles/ckgl5d3d3kjo?at_medium=RSS&at_campaign=rss", time: "2026-03-15T16:12:34Z" },
@@ -209,7 +210,6 @@ const locations = [
       { title: "How are EU and member states reacting to energy crisis triggered by Iran war?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/10/how-eu-member-states-reacting-energy-crisis-iran-war", time: "2026-03-10T16:46:30Z" },
       { title: "Ukraine sent drone experts to protect US bases in Jordan, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/ukraine-sent-drone-experts-protect-us-bases-jordan-zelenskyy", time: "2026-03-09T17:14:17Z" },
       { title: "Von der Leyen calls for EU foreign policy to be ‘more realistic and interest-driven’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/09/ursula-von-der-leyen-eu-foreign-policy-more-realistic-interest-driven", time: "2026-03-09T16:59:19Z" },
-      { title: "Ukraine Sent Drone Experts to Protect U.S. Bases in Jordan, Zelensky Says", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/middleeast/ukraine-shahed-drone-middle-east.html", time: "2026-03-09T04:01:19Z" },
     ]
   },
   {
@@ -286,6 +286,7 @@ const locations = [
     lat: 40.4168, lng: -3.7038,
     category: "political",
     articles: [
+      { title: "‘El Guapo’: The Spanish PM standing up to Trump – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/16/el-guapo-spanish-pm-standing-up-to-trump-pedro-sanchez-podcast", time: "2026-03-16T03:00:04Z" },
       { title: "His Film Is Spain’s Submission to the Oscars. He’s Not Sure How Spanish It Is.", source: "New York Times", url: "https://www.nytimes.com/2026/03/14/world/europe/sirat-spain-film-oscars.html", time: "2026-03-14T04:01:11Z" },
       { title: "Despite Trump's frustration, Spain's Pedro Sánchez doubles down on opposing the war", source: "NPR", url: "https://www.npr.org/2026/03/12/nx-s1-5743426/despite-trumps-frustration-spains-pedro-sanchez-doubles-down-on-opposing-the-war", time: "2026-03-12T21:03:07Z" },
       { title: "Most underrated player on the planet? Valverde steps up for Real", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c4gj45gxedzo?at_medium=RSS&at_campaign=rss", time: "2026-03-11T23:57:02Z" },
@@ -338,13 +339,22 @@ const locations = [
     ]
   },
   {
+    name: "Copenhagen", country: "Denmark",
+    lat: 55.6761, lng: 12.5683,
+    category: "political",
+    articles: [
+      { title: "Danish royals Frederik and Mary begin Australia tour in red centre", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/15/queen-mary-king-frederik-danish-royals-australia-tour", time: "2026-03-14T22:50:11Z" },
+      { title: "Noma head chef resigns from restaurant amid abuse allegations", source: "BBC News", url: "https://www.bbc.com/news/articles/c07jr2pe5j9o?at_medium=RSS&at_campaign=rss", time: "2026-03-12T04:09:16Z" },
+      { title: "Noma chef resigns amid shocking allegations of physical abuse of staff", source: "The Guardian", url: "https://www.theguardian.com/food/2026/mar/11/noma-chef-resigns-rene-redzepi", time: "2026-03-12T01:55:03Z" },
+    ]
+  },
+  {
     name: "Istanbul", country: "Turkey",
     lat: 41.0082, lng: 28.9784,
     category: "economic",
     articles: [
       { title: "Jailed Istanbul mayor goes on trial in corruption case slammed as political", source: "France 24", url: "https://www.france24.com/en/jailed-istanbul-mayor-goes-on-trial-in-corruption-case-slammed-as-political", time: "2026-03-09T15:36:05Z" },
       { title: "Hair apparent: inside the transplant capital of the world – photo essay", source: "The Guardian", url: "https://www.theguardian.com/fashion/2026/mar/09/inside-the-hair-transplant-capital-of-the-world-istanbul", time: "2026-03-09T07:00:44Z" },
-      { title: "Is the Trial of Erdogan’s Top Rival More About Corruption or Politics?", source: "New York Times", url: "https://www.nytimes.com/2026/03/09/world/middleeast/turkey-erdogan-mayor-ekrem-imamoglu.html", time: "2026-03-09T04:01:15Z" },
     ]
   },
   {
@@ -354,17 +364,6 @@ const locations = [
     articles: [
       { title: "Kids in hospital help penguins woo mates with painted pebbles", source: "Washington Post", url: "https://www.washingtonpost.com/lifestyle/2026/03/14/penguins-pebbles-paint-edinburgh-zoo/", time: "2026-03-14T12:03:19Z" },
       { title: "Letter written by Mary, Queen of Scots, prior to beheading draws crowds", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/09/mary-queen-scots-letter-museum/", time: "2026-03-09T09:00:38Z" },
-      { title: "Large Fire in Glasgow Forces Closure of Major Train Station", source: "New York Times", url: "https://www.nytimes.com/2026/03/08/world/europe/glasgow-central-train-station-fire.html", time: "2026-03-09T04:46:57Z" },
-    ]
-  },
-  {
-    name: "Copenhagen", country: "Denmark",
-    lat: 55.6761, lng: 12.5683,
-    category: "political",
-    articles: [
-      { title: "Danish royals Frederik and Mary begin Australia tour in red centre", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/15/queen-mary-king-frederik-danish-royals-australia-tour", time: "2026-03-14T22:50:11Z" },
-      { title: "Noma head chef resigns from restaurant amid abuse allegations", source: "BBC News", url: "https://www.bbc.com/news/articles/c07jr2pe5j9o?at_medium=RSS&at_campaign=rss", time: "2026-03-12T04:09:16Z" },
-      { title: "Noma chef resigns amid shocking allegations of physical abuse of staff", source: "The Guardian", url: "https://www.theguardian.com/food/2026/mar/11/noma-chef-resigns-rene-redzepi", time: "2026-03-12T01:55:03Z" },
     ]
   },
   {
@@ -386,15 +385,6 @@ const locations = [
     ]
   },
   {
-    name: "Bucharest", country: "Romania",
-    lat: 44.4268, lng: 26.1025,
-    category: "security",
-    articles: [
-      { title: "Romania’s Eurovision song criticised for ‘glamorising sexual strangulation’", source: "The Guardian", url: "https://www.theguardian.com/tv-and-radio/2026/mar/13/romania-eurovision-song-choke-me-criticised-glamorising-sexual-strangulation", time: "2026-03-13T10:00:47Z" },
-      { title: "Gambling crackdown in Romania as councils can ban betting shops and slot machines", source: "The Guardian", url: "https://www.theguardian.com/society/2026/mar/09/romania-gambling-decree-allowing-betting-shop-slot-machine-bans", time: "2026-03-09T05:00:39Z" },
-    ]
-  },
-  {
     name: "Warsaw", country: "Poland",
     lat: 52.2297, lng: 21.0122,
     category: "security",
@@ -410,6 +400,14 @@ const locations = [
     articles: [
       { title: "Austrian glaciers disintegrating due to climate change, say scientists", source: "BBC News", url: "https://www.bbc.com/news/articles/cd038pgrr1yo?at_medium=RSS&at_campaign=rss", time: "2026-03-13T19:09:48Z" },
       { title: "Bailiffs board Ryanair plane after airline refuses to pay delayed flight compensation", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/13/bailiffs-board-ryanair-plane-after-airline-refused-to-pay-compensation-over-delayed-flight", time: "2026-03-13T10:00:46Z" },
+    ]
+  },
+  {
+    name: "Bucharest", country: "Romania",
+    lat: 44.4268, lng: 26.1025,
+    category: "security",
+    articles: [
+      { title: "Romania’s Eurovision song criticised for ‘glamorising sexual strangulation’", source: "The Guardian", url: "https://www.theguardian.com/tv-and-radio/2026/mar/13/romania-eurovision-song-choke-me-criticised-glamorising-sexual-strangulation", time: "2026-03-13T10:00:47Z" },
     ]
   },
   {
