@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:02 UTC, 16 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:57 UTC, 16 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">16 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:03 UTC, 16 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["More than 60 dead after severe flooding in Kenya", "Severe flooding kills 62 in Kenya, as heavy rains continue"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Severe flooding in Kenya kills over 60 people amid continued heavy rains</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["&#39;We will go wherever they hide&#39;: Rooting out IS in Somalia", "Ugandan opposition leader goes abroad after two months in hiding"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Somalia pursues IS militants while Uganda&#x27;s opposition leader flees into exile</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Could Nigeria become an alternative oil supplier to the Middle East?", "Nigeria’s online content creator market has boomed. Can the skit-makers and streamers make it pay?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Nigeria emerges as potential oil alternative and digital content creation hub</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:58 UTC, 16 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["More than 60 dead after severe flooding in Kenya"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya experiences severe flooding with over sixty deaths reported.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["&#39;We will go wherever they hide&#39;: Rooting out IS in Somalia", "Ugandan opposition leader goes abroad after two months in hiding"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Security operations and political tensions dominate East African headlines.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Could Nigeria become an alternative oil supplier to the Middle East?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Nigeria emerges as potential alternative oil supplier to Middle East.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Nigeria’s online content creator market has boomed. Can the skit-makers and streamers make it pay?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Nigerian online creators seek sustainable monetization amid market growth.</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -140,7 +140,6 @@ const locations = [
       { title: "Sudan’s devastating war rages on as regional rivalries deepen", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/11/sudans-devastating-war-rages-on-as-regional-rivalries-deepen?traffic_source=rss", time: "2026-03-11T14:36:01Z" },
       { title: "Air strike kills four Iran-linked fighters in Iraq", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/10/air-strike-kills-four-iran-linked-fighters-in-iraq?traffic_source=rss", time: "2026-03-10T10:00:16Z" },
       { title: "US blacklists Sudanese Muslim Brotherhood as ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/us-blacklists-sudanese-muslim-brotherhood-as-terrorist-group?traffic_source=rss", time: "2026-03-09T21:51:11Z" },
-      { title: "Volunteers rebuild Sudan’s oldest psychiatric hospital destroyed by war", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/9/volunteers-rebuild-sudans-oldest-psychiatric-hospital-destroyed-by-war?traffic_source=rss", time: "2026-03-09T09:17:34Z" },
     ]
   },
   {
@@ -238,15 +237,6 @@ const locations = [
     ]
   },
   {
-    name: "Bamako", country: "Mali",
-    lat: 12.6392, lng: -8.0029,
-    category: "conflict",
-    articles: [
-      { title: "Israeli forces kill Palestinian journalist Amal Shamali in Gaza attack", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/israeli-forces-kill-palestinian-journalist-amal-shamali-in-gaza-attack?traffic_source=rss", time: "2026-03-09T14:39:36Z" },
-      { title: "UK media biased against Muslims, says group that analysed 40,000 articles", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/uk-media-bias-muslims?traffic_source=rss", time: "2026-03-09T10:37:52Z" },
-    ]
-  },
-  {
     name: "Darfur", country: "Sudan",
     lat: 13.5, lng: 25.0,
     category: "conflict",
@@ -280,6 +270,14 @@ const locations = [
     articles: [
       { title: "'We will go wherever they hide': Rooting out IS in Somalia", source: "BBC News", url: "https://www.bbc.com/news/articles/cj32d8e2m5eo?at_medium=RSS&at_campaign=rss", time: "2026-03-16T00:05:40Z" },
       { title: "Somalia warns against any Israeli base plans on Somaliland", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/12/somalia-warns-against-any-israeli-base-plans-on-somaliland?traffic_source=rss", time: "2026-03-12T18:51:10Z" },
+    ]
+  },
+  {
+    name: "Bamako", country: "Mali",
+    lat: 12.6392, lng: -8.0029,
+    category: "conflict",
+    articles: [
+      { title: "Israeli forces kill Palestinian journalist Amal Shamali in Gaza attack", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/9/israeli-forces-kill-palestinian-journalist-amal-shamali-in-gaza-attack?traffic_source=rss", time: "2026-03-09T14:39:36Z" },
     ]
   },
   {
