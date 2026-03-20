@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:48 UTC, 20 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:51 UTC, 20 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">20 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:49 UTC, 20 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["U.S. Asked to Keep Military Planes in Sri Lanka Before Iran Airstrikes", "Deepening Iran conflict exposes cracks in U.S. and Israeli objectives", "US intelligence chief admits US, Israel not aligned on Iran war goals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">U.S. and Israel show misaligned objectives amid escalating Iran conflict</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Weather tracker: Unseasonal storms hit parts of Pakistan and India", "Why Pakistani farmers are suing two German companies for deadly 2022 floods"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Climate disasters and litigation reshape South Asian agricultural landscape</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Last 24 hours show a prolonged Iran war could do calamitous damage to global economy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Prolonged Iran war threatens severe global economic damage</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Indian film board blocks release of Oscar-nominated Gaza drama The Voice of Hind Rajab"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian film board censors Oscar-nominated Gaza documentary</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Mumbai celebrates local new year"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Mumbai celebrates local new year festival</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:52 UTC, 20 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["What US-Israeli targets reveal about Iran war goals three weeks in", "Deepening Iran conflict exposes cracks in U.S. and Israeli objectives", "US intelligence chief admits US, Israel not aligned on Iran war goals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US and Israel show diverging strategic objectives in Iran conflict</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Weather tracker: Unseasonal storms hit parts of Pakistan and India", "Why Pakistani farmers are suing two German companies for deadly 2022 floods"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Climate disasters and extreme weather impact South Asia region severely</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["U.S. Asked to Keep Military Planes in Sri Lanka Before Iran Airstrikes", "Last 24 hours show a prolonged Iran war could do calamitous damage to global economy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Iran conflict poses risks to regional military presence and global economy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Indian film board blocks release of Oscar-nominated Gaza drama The Voice of Hind Rajab"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian authorities block release of Oscar-nominated Palestinian documentary film</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,33 +111,6 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
-      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
-      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
-      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
-      { title: "Gavaskar links Sunrisers signing of Pakistan’s Abrar to Indian deaths", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/gavaskar-links-sunrisers-signing-of-pakistan-abrar-to-indian-deaths?traffic_source=rss", time: "2026-03-17T13:40:57Z" },
-      { title: "How Pakistan’s people-led solar boom is easing impact of Middle East energy crisis", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/17/pakistan-people-led-solar-boom-middle-east-energy-crisis", time: "2026-03-17T13:00:47Z" },
-      { title: "Ten ICU patients killed in hospital fire in eastern India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/ten-icu-patients-killed-in-hospital-fire-in-eastern-india?traffic_source=rss", time: "2026-03-16T21:01:22Z" },
-      { title: "Sri Lanka brings in four-day week to eke out stocks of oil and gas hit by Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/16/sri-lanka-four-day-week-oil-and-gas-iran-war", time: "2026-03-16T18:52:04Z" },
-      { title: "Indian farmers dress up as bears to protect crops from monkeys", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/indian-farmers-dress-up-as-bears-to-protect-crops-from-monkeys?traffic_source=rss", time: "2026-03-16T17:37:08Z" },
-      { title: "Fire at India hospital intensive care unit kills 10 people", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/fire-at-india-hospital-intensive-care-unit-kills-10-people?traffic_source=rss", time: "2026-03-16T10:06:42Z" },
-      { title: "India’s scattered workforce: the chatbot keeping families in touch during emergencies", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/16/chatbot-india-migrant-workers-whatsapp-odisha", time: "2026-03-16T06:00:08Z" },
-      { title: "Sabalenka wins first Indian Wells title with victory against Rybakina", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/16/sabalenka-wins-first-indian-wells-title-with-victory-against-rybakina?traffic_source=rss", time: "2026-03-16T04:13:01Z" },
-      { title: "‘Bit of treachery’: US attack on IRIS Dena undermines Indian security ties", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/us-attack-iris-dena-undermines-indian-security-ties-iran", time: "2026-03-15T13:34:52Z" },
-      { title: "Medvedev ends Alcaraz’s winning run, sets up Sinner final at Indian Wells", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/15/medvedev-ends-alcarazs-winning-run-sets-up-sinner-final-at-indian-wells?traffic_source=rss", time: "2026-03-15T07:22:29Z" },
-      { title: "Iran allows limited Indian shipping through Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/14/iran-allows-limited-indian-shipping-through-strait-of-hormuz?traffic_source=rss", time: "2026-03-14T16:23:24Z" },
-      { title: "Two Indian ships cross Strait of Hormuz as Iran says it allowed passage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/14/two-indian-ships-cross-strait-of-hormuz-as-iran-says-it-allowed-passage?traffic_source=rss", time: "2026-03-14T12:58:22Z" },
-      { title: "India releases Ladakh activist Sonam Wangchuk after six months in jail", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/14/india-releases-ladakh-activist-sonam-wangchuk-after-six-months-in-jail?traffic_source=rss", time: "2026-03-14T12:34:17Z" },
-      { title: "How the conflict in Iran is affecting global markets", source: "NPR", url: "https://www.npr.org/2026/03/14/nx-s1-5744647/how-the-conflict-in-iran-is-affecting-global-markets", time: "2026-03-14T11:42:44Z" },
-      { title: "Indian-owned Sunrisers face backlash after signing Pakistan’s Abrar Ahmed", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/14/indian-owned-sunrisers-face-backlash-after-signing-pakistans-abrar-ahmed?traffic_source=rss", time: "2026-03-14T08:45:21Z" },
-      { title: "‘We cut down the menu’: Cooking gas crisis hit restaurants in India amid war in Iran", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260313-cooking-gas-crisis-india-restaurants-war-iran", time: "2026-03-13T16:33:00Z" },
-    ]
-  },
-  {
     name: "Kabul", country: "Afghanistan",
     lat: 34.5553, lng: 69.2075,
     category: "humanitarian",
@@ -162,6 +135,32 @@ const locations = [
       { title: "Afghanistan accuses Pakistan of killing at least four civilians in Kabul strike", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260316-afghanistan-accuses-pakistan-of-killing-at-least-four-civilians-in-kabul-strike", time: "2026-03-16T20:06:16Z" },
       { title: "Afghanistan accuses Pakistan of killing more than 200 in strike on drug treatment hospital", source: "Sky News", url: "https://news.sky.com/story/taliban-accuses-pakistan-of-killing-more-than-200-in-strike-on-drug-treatment-hospital-in-kabul-13520654", time: "2026-03-16T19:16:00Z" },
       { title: "Afghanistan accuses Pakistan of killing 200 in attack on Kabul hospital", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/afghanistan-says-children-among-those-killed-in-latest-attacks-by-pakistan?traffic_source=rss", time: "2026-03-16T17:01:01Z" },
+    ]
+  },
+  {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
+      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
+      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
+      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
+      { title: "Gavaskar links Sunrisers signing of Pakistan’s Abrar to Indian deaths", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/gavaskar-links-sunrisers-signing-of-pakistan-abrar-to-indian-deaths?traffic_source=rss", time: "2026-03-17T13:40:57Z" },
+      { title: "How Pakistan’s people-led solar boom is easing impact of Middle East energy crisis", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/17/pakistan-people-led-solar-boom-middle-east-energy-crisis", time: "2026-03-17T13:00:47Z" },
+      { title: "Ten ICU patients killed in hospital fire in eastern India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/ten-icu-patients-killed-in-hospital-fire-in-eastern-india?traffic_source=rss", time: "2026-03-16T21:01:22Z" },
+      { title: "Sri Lanka brings in four-day week to eke out stocks of oil and gas hit by Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/16/sri-lanka-four-day-week-oil-and-gas-iran-war", time: "2026-03-16T18:52:04Z" },
+      { title: "Indian farmers dress up as bears to protect crops from monkeys", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/indian-farmers-dress-up-as-bears-to-protect-crops-from-monkeys?traffic_source=rss", time: "2026-03-16T17:37:08Z" },
+      { title: "Fire at India hospital intensive care unit kills 10 people", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/fire-at-india-hospital-intensive-care-unit-kills-10-people?traffic_source=rss", time: "2026-03-16T10:06:42Z" },
+      { title: "India’s scattered workforce: the chatbot keeping families in touch during emergencies", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/16/chatbot-india-migrant-workers-whatsapp-odisha", time: "2026-03-16T06:00:08Z" },
+      { title: "Sabalenka wins first Indian Wells title with victory against Rybakina", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/16/sabalenka-wins-first-indian-wells-title-with-victory-against-rybakina?traffic_source=rss", time: "2026-03-16T04:13:01Z" },
+      { title: "‘Bit of treachery’: US attack on IRIS Dena undermines Indian security ties", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/us-attack-iris-dena-undermines-indian-security-ties-iran", time: "2026-03-15T13:34:52Z" },
+      { title: "Medvedev ends Alcaraz’s winning run, sets up Sinner final at Indian Wells", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/15/medvedev-ends-alcarazs-winning-run-sets-up-sinner-final-at-indian-wells?traffic_source=rss", time: "2026-03-15T07:22:29Z" },
+      { title: "Iran allows limited Indian shipping through Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/14/iran-allows-limited-indian-shipping-through-strait-of-hormuz?traffic_source=rss", time: "2026-03-14T16:23:24Z" },
+      { title: "Two Indian ships cross Strait of Hormuz as Iran says it allowed passage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/14/two-indian-ships-cross-strait-of-hormuz-as-iran-says-it-allowed-passage?traffic_source=rss", time: "2026-03-14T12:58:22Z" },
+      { title: "India releases Ladakh activist Sonam Wangchuk after six months in jail", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/14/india-releases-ladakh-activist-sonam-wangchuk-after-six-months-in-jail?traffic_source=rss", time: "2026-03-14T12:34:17Z" },
+      { title: "How the conflict in Iran is affecting global markets", source: "NPR", url: "https://www.npr.org/2026/03/14/nx-s1-5744647/how-the-conflict-in-iran-is-affecting-global-markets", time: "2026-03-14T11:42:44Z" },
+      { title: "Indian-owned Sunrisers face backlash after signing Pakistan’s Abrar Ahmed", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/14/indian-owned-sunrisers-face-backlash-after-signing-pakistans-abrar-ahmed?traffic_source=rss", time: "2026-03-14T08:45:21Z" },
     ]
   },
   {
@@ -206,6 +205,7 @@ const locations = [
     lat: 15.2993, lng: 74.124,
     category: "economic",
     articles: [
+      { title: "What US-Israeli targets reveal about Iran war goals three weeks in", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/what-us-israeli-targets-reveal-about-iran-war-goals-three-weeks-in?traffic_source=rss", time: "2026-03-20T15:35:06Z" },
       { title: "Deepening Iran conflict exposes cracks in U.S. and Israeli objectives", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/20/us-israel-iran-goals-trump-netanyahu/", time: "2026-03-20T09:00:04Z" },
       { title: "US intelligence chief admits US, Israel not aligned on Iran war goals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/us-intelligence-chief-admits-us-israel-not-aligned-on-iran-war-goals?traffic_source=rss", time: "2026-03-19T23:07:25Z" },
       { title: "The US–Israel war with Iran will not end with a clear victor", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/19/the-us-israel-war-with-iran-will-not-end-with-a-clear?traffic_source=rss", time: "2026-03-19T12:38:18Z" },
