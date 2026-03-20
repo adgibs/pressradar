@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:33 UTC, 20 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:33 UTC, 20 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">20 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:34 UTC, 20 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine-Hungary oil pipeline row threatens EU loan", "Hungary&#39;s Orbán accused of disloyalty and blackmail over Ukraine loan veto", "EU&#39;s aid to Ukraine blocked", "Ukraine war briefing: EU president von der Leyen vows to pay loan to Kyiv despite block by Hungary"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Hungary blocks EU aid to Ukraine despite international pressure</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["‘Cowards’: Trump slams NATO over lack of support in US–Israel war on Iran", "Trump calls NATO allies &#39;cowards&#39; as Iran war nears 3-week mark"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Trump criticizes NATO allies as insufficient in Iran conflict</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["NATO pulls several hundred personnel from Iraq amid Iran war", "Will Russian oil be the biggest winner in the US-Israel war on Iran?", "Cuba readies for first Russian oil shipment of the year as energy crisis deepens"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Regional powers adjust strategies amid broader Middle East tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Zelenskyy says Ukraine wants timeline for next round of Russia talks", "Ukraine sends advisers to Gulf as it counterattacks Russian forces in south"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Ukraine pursues diplomatic talks while intensifying military operations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["A Kremlin loyalist suddenly turned against Putin. A day later, he was in a psychiatric hospital.", "Hungary officials ‘gave Ukrainian forced injection’ after raid on bank vehicles"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Rights abuses documented in Russia and Hungary</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["&#39;Polish populists have decided to turn anti-European&#39;: Warsaw mayor Rafal Trzaskowski"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Polish leadership distances itself from European integration course</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:34 UTC, 20 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine-Hungary oil pipeline row threatens EU loan", "Hungary&#39;s Orbán accused of disloyalty and blackmail over Ukraine loan veto", "EU&#39;s aid to Ukraine blocked", "Ukraine war briefing: EU president von der Leyen vows to pay loan to Kyiv despite block by Hungary"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Hungary blocks EU aid to Ukraine over pipeline dispute and loan veto</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["UK forces join military operation to seize Russian &#39;shadow fleet&#39; tanker", "Will Russian oil be the biggest winner in the US-Israel war on Iran?", "Cuba readies for first Russian oil shipment of the year as energy crisis deepens"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:80%"></div></div><span class="ai-bullet-text">Russia&#x27;s shadow fleet and oil assets gain amid broader regional conflicts</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["‘Cowards’: Trump slams NATO over lack of support in US–Israel war on Iran", "Trump calls NATO allies &#39;cowards&#39; as Iran war nears 3-week mark"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:80%"></div></div><span class="ai-bullet-text">Trump criticizes NATO allies as cowards over Iran war support</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Zelenskyy says Ukraine wants timeline for next round of Russia talks", "Ukraine sends advisers to Gulf as it counterattacks Russian forces in south"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Ukraine seeks negotiation timeline while counterattacking Russian forces in south</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["NATO pulls several hundred personnel from Iraq amid Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">NATO withdraws several hundred personnel from Iraq during Iran tensions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["A Kremlin loyalist suddenly turned against Putin. A day later, he was in a psychiatric hospital."]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Kremlin dissident hospitalized after publicly turning against Putin</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -247,6 +247,18 @@ const locations = [
     ]
   },
   {
+    name: "Washington DC", country: "United States",
+    lat: 38.8719, lng: -77.0563,
+    category: "diplomacy",
+    articles: [
+      { title: "US judge sides with New York Times against Pentagon journalism policies", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/us-judge-sides-with-new-york-times-against-pentagon-journalism-policies?traffic_source=rss", time: "2026-03-20T23:07:20Z" },
+      { title: "3/20: The Takeout with Major Garrett", source: "CBS News", url: "https://www.cbsnews.com/video/032026-the-takeout/", time: "2026-03-20T21:00:00Z" },
+      { title: "3/19: The Takeout with Major Garrett", source: "CBS News", url: "https://www.cbsnews.com/video/031926-the-takeout-with-major-garrett/", time: "2026-03-20T00:16:00Z" },
+      { title: "Hegseth says no ‘timeframe’ for war on Iran as Pentagon asks for $200bn", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/hegseth-says-no-timeframe-for-war-on-iran-as-pentagon-asks-for-200bn?traffic_source=rss", time: "2026-03-19T15:37:40Z" },
+      { title: "Trump hasn't decided on sending Americans after Iran's nuclear material, sources say", source: "CBS News", url: "https://www.cbsnews.com/news/trump-americans-iran-nuclear-material/", time: "2026-03-18T16:25:00Z" },
+    ]
+  },
+  {
     name: "Kharkiv", country: "Ukraine",
     lat: 49.9935, lng: 36.2304,
     category: "conflict",
@@ -255,16 +267,6 @@ const locations = [
       { title: "In Ukraine’s Kharkiv, 20,000 children go underground to study", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/in-ukraines-kharkiv-20000-children-go-underground-to-study?traffic_source=rss", time: "2026-03-16T10:26:54Z" },
       { title: "Ukraine war briefing: six people killed as Russia unleashes missile and drone attacks, officials say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/15/ukraine-war-briefing-six-people-killed-as-russia-unleashes-missile-and-drone-attacks-officials-say", time: "2026-03-15T01:50:34Z" },
       { title: "Russian missile and drone attacks kill several across Ukraine", source: "France 24", url: "https://www.france24.com/en/europe/20260314-russian-missile-and-drone-attacks-kills-several-in-kyiv-region", time: "2026-03-14T08:54:23Z" },
-    ]
-  },
-  {
-    name: "Washington DC", country: "United States",
-    lat: 38.8719, lng: -77.0563,
-    category: "diplomacy",
-    articles: [
-      { title: "3/19: The Takeout with Major Garrett", source: "CBS News", url: "https://www.cbsnews.com/video/031926-the-takeout-with-major-garrett/", time: "2026-03-20T00:16:00Z" },
-      { title: "Hegseth says no ‘timeframe’ for war on Iran as Pentagon asks for $200bn", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/hegseth-says-no-timeframe-for-war-on-iran-as-pentagon-asks-for-200bn?traffic_source=rss", time: "2026-03-19T15:37:40Z" },
-      { title: "Trump hasn't decided on sending Americans after Iran's nuclear material, sources say", source: "CBS News", url: "https://www.cbsnews.com/news/trump-americans-iran-nuclear-material/", time: "2026-03-18T16:25:00Z" },
     ]
   },
   {
@@ -282,6 +284,7 @@ const locations = [
     lat: 35.0, lng: 18.0,
     category: "conflict",
     articles: [
+      { title: "UK forces join military operation to seize Russian 'shadow fleet' tanker", source: "Sky News", url: "https://news.sky.com/story/uk-forces-join-military-operation-with-french-navy-to-seize-russian-shadow-fleet-tanker-in-mediterranean-13522372", time: "2026-03-20T20:32:00Z" },
       { title: "Italy warns stricken Russian tanker could explode in Med at any time", source: "BBC News", url: "https://www.bbc.com/news/articles/cn9e9dxw3e1o?at_medium=RSS&at_campaign=rss", time: "2026-03-17T19:21:00Z" },
       { title: "Russian tanker adrift in Mediterranean poses 'imminent and serious' threat, EU states say", source: "Sky News", url: "https://news.sky.com/story/russian-shadow-fleet-gas-tanker-adrift-in-mediterranean-poses-imminent-and-serious-threat-eu-states-say-13520686", time: "2026-03-16T20:51:00Z" },
     ]
