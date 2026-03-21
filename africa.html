@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:30 UTC, 21 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:30 UTC, 21 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">21 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:31 UTC, 21 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='[]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">I&#x27;ve reviewed the four headlines provided. However, I cannot complete the task as requested because there are insufficient headlines to identify 6 distinct developments with multiple related stories.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='[]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">With only 4 headlines covering disparate topics (US immigration policy, boxing eligibility, disability advocacy in Uganda, and military accountability in Kenya), there are no clear thematic groupings or developments with multiple supporting headlines.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='[]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">To produce the 6-line analysis in the requested format, I would need a minimum of 12-15 headlines with identifiable clusters around common themes or stories.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='[]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Could you provide the complete headline list for the Africa region briefing?</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:31 UTC, 21 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports", "WHO says attack on Sudan hospital killed 64, including 13 children", "Hospital attack in Sudan kills 64, including 13 children"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Sudan hospital strike kills 64 people including 13 children</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Trump threatens to deploy ICE to airports amid Homeland Security shutdown"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Trump threatens ICE deployment to airports during security shutdown</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Lin Yu-ting cleared to return to boxing after sex eligibility review"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Boxer Lin Yu-ting cleared to return after eligibility review</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["‘I have fought for Aaron’: A Ugandan mother confronts disability and stigma"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Ugandan mother confronts disability stigma while caring for son</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Army chief was asked about woman &#39;murdered by British soldier&#39; - his response was emphatic"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Kenya army chief responds to British soldier murder allegations</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -250,7 +250,17 @@ const locations = [
     lat: 15.5007, lng: 32.5599,
     category: "conflict",
     articles: [
+      { title: "Hospital attack in Sudan kills 64, including 13 children", source: "Sky News", url: "https://news.sky.com/story/hospital-attack-in-sudan-kills-64-including-13-children-13522914", time: "2026-03-21T22:21:00Z" },
       { title: "Drones expand the deadly front lines of Sudan’s devastating war", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/drones-expand-the-deadly-front-lines-of-sudans-devastating-war?traffic_source=rss", time: "2026-03-17T15:46:39Z" },
+    ]
+  },
+  {
+    name: "Darfur", country: "Sudan",
+    lat: 13.5, lng: 25.0,
+    category: "conflict",
+    articles: [
+      { title: "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/strike-on-sudan-hospital-kills-wounds-world-health-organization-reports", time: "2026-03-21T23:15:04Z" },
+      { title: "WHO says attack on Sudan hospital killed 64, including 13 children", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/who-says-attack-on-sudan-hospital-killed-64-including-13-children?traffic_source=rss", time: "2026-03-21T22:43:25Z" },
     ]
   },
   {
