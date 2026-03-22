@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:32 UTC, 22 Mar 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:27 UTC, 22 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">22 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:33 UTC, 22 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine war briefing: US, Ukrainian negotiators meet in Florida as Russian attacks kill more civilians", "Bahrain says Patriot system intercepted drone over homes"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ukrainian officials and US negotiators meet while Russian attacks continue killing civilians.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Patriarch Filaret Dies at 97, Orthodox Church of Ukraine Says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Patriarch Filaret of the Orthodox Church of Ukraine dies at age ninety-seven.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Former FBI chief, Robert Mueller, dead at 81"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Former FBI director Robert Mueller dies at eighty-one years old.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:28 UTC, 22 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Russian attacks kill six in Ukraine, officials say", "Ukraine war briefing: US, Ukrainian negotiators meet in Florida as Russian attacks kill more civilians"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Russian attacks kill civilians across Ukraine as conflict continues</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Russia is killing Telegram, its most popular messaging app, despite fears of pushback"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Russia restricts Telegram messaging app despite public opposition</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Patriarch Filaret Dies at 97, Orthodox Church of Ukraine Says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Patriarch Filaret of Ukrainian Orthodox Church dies at ninety-seven</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Former FBI chief, Robert Mueller, dead at 81"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Former FBI Director Robert Mueller dies at eighty-one</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Bahrain says Patriot system intercepted drone over homes"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Bahrain reports Patriot system intercepts drone over residential areas</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Russian attacks kill six in Ukraine, officials say", source: "BBC News", url: "https://www.bbc.com/news/articles/crl18nwjzzzo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T11:07:06Z" },
       { title: "Bahrain says Patriot system intercepted drone over homes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/bahrain-says-patriot-system-intercepted-drone-over-homes?traffic_source=rss", time: "2026-03-21T16:02:46Z" },
       { title: "Zelensky Sends Negotiators to the U.S., Hoping to Revive Peace Talks", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/europe/ukraine-russia-peace-talks-iran.html", time: "2026-03-21T09:01:33Z" },
       { title: "Russia's school propaganda was  highlighted by Oscar-winning film - but does it work?", source: "BBC News", url: "https://www.bbc.com/news/articles/c7vq5g64y98o?at_medium=RSS&at_campaign=rss", time: "2026-03-21T01:05:03Z" },
@@ -158,7 +159,6 @@ const locations = [
       { title: "Ukraine eyes money and tech in return for Middle East drone support", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/15/money-technology-important-in-return-for-middle-east-support-zelenskyy?traffic_source=rss", time: "2026-03-15T20:03:03Z" },
       { title: "Zelensky accuses EU allies of 'blackmail' in oil pipeline row", source: "BBC News", url: "https://www.bbc.com/news/articles/c3v7q6d0nq0o?at_medium=RSS&at_campaign=rss", time: "2026-03-15T12:00:35Z" },
       { title: "Ukraine's anti-drone tech is in high demand as Iran attacks its neighbors", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/ukraines-anti-drone-tech-high-demand-iran-attacks-neighbors-rcna263113", time: "2026-03-15T12:00:00Z" },
-      { title: "Ukraine recovering from Russian strike, concerned Putin is benefiting from Iran war", source: "France 24", url: "https://www.france24.com/en/ukraine-recovering-from-russian-strike-concerned-putin-is-benefiting-from-iran-war", time: "2026-03-15T10:37:06Z" },
     ]
   },
   {
@@ -166,6 +166,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Russia is killing Telegram, its most popular messaging app, despite fears of pushback", source: "NBC News", url: "https://www.nbcnews.com/world/russia/russia-killing-telegram-popular-messaging-app-fears-pushback-rcna263904", time: "2026-03-22T11:15:00Z" },
       { title: "Patriarch Filaret Dies at 97, Orthodox Church of Ukraine Says", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/europe/patriarch-filaret-dead.html", time: "2026-03-21T17:54:04Z" },
       { title: "Former FBI chief, Robert Mueller, dead at 81", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/former-fbi-chief-robert-mueller-dead-at-81?traffic_source=rss", time: "2026-03-21T17:42:27Z" },
       { title: "Russian ship potentially bringing oil to Cuba is test of Kremlin allyship", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/21/russia-tanker-cuba-oil/", time: "2026-03-21T09:00:00Z" },
