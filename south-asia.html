@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:37 UTC, 23 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:07 UTC, 23 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">23 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:38 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan cancels spectators at T20 cricket league due to oil crisis</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Trump threats, U.S. troop build-up raise specter of battle for Hormuz", "Did Iran launch missiles at US-UK base on Diego Garcia? Here’s what to know"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">US-Iran tensions escalate with military build-up and missile strike allegations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Kashmiris donate gold and cash to support Iran", "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">India-Pakistan region faces economic strain from Iran conflict and Gulf disruption</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘I count their breaths’: A homeless mother protects her children in Delhi"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Delhi homeless mother struggles to protect children amid economic hardship</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:07 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Caught Between Two Conflicts, Afghans Flee Iran", "Kashmiris donate gold and cash to support Iran", "Did Iran launch missiles at US-UK base on Diego Garcia? Here’s what to know"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran conflict impacts regional populations and international military presence</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan cricket league operates under severe economic constraints</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Trump threats, U.S. troop build-up raise specter of battle for Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US military buildup threatens Persian Gulf shipping routes</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["‘I count their breaths’: A homeless mother protects her children in Delhi"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian homelessness crisis affects vulnerable families in capital</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 34.5553, lng: 69.2075,
     category: "humanitarian",
     articles: [
+      { title: "Caught Between Two Conflicts, Afghans Flee Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/iran-afghanistan-border-refugees.html", time: "2026-03-23T04:42:04Z" },
       { title: "‘This is the saddest moment’: families search for loved ones on Eid after Kabul hospital strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/kabul-hospital-strike-eid-pakistan-taliban-families-search-for-victims", time: "2026-03-21T08:00:47Z" },
       { title: "As Pakistan and Afghanistan declare truce, civilians in Kabul count the cost of war", source: "NPR", url: "https://www.npr.org/2026/03/19/g-s1-114417/as-pakistan-and-afghanistan-declare-truce-civilians-in-kabul-count-the-cost-of-war", time: "2026-03-19T12:11:54Z" },
       { title: "Funerals held for Afghans killed in Pakistani strike on Kabul hospital", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/funerals-held-for-afghans-killed-in-pakistani-strike-on-kabul-hospital?traffic_source=rss", time: "2026-03-19T00:14:18Z" },
@@ -139,28 +140,6 @@ const locations = [
     ]
   },
   {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
-      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
-      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
-      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
-      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
-      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
-      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
-      { title: "Gavaskar links Sunrisers signing of Pakistan’s Abrar to Indian deaths", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/gavaskar-links-sunrisers-signing-of-pakistan-abrar-to-indian-deaths?traffic_source=rss", time: "2026-03-17T13:40:57Z" },
-      { title: "How Pakistan’s people-led solar boom is easing impact of Middle East energy crisis", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/17/pakistan-people-led-solar-boom-middle-east-energy-crisis", time: "2026-03-17T13:00:47Z" },
-      { title: "Ten ICU patients killed in hospital fire in eastern India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/ten-icu-patients-killed-in-hospital-fire-in-eastern-india?traffic_source=rss", time: "2026-03-16T21:01:22Z" },
-      { title: "Sri Lanka brings in four-day week to eke out stocks of oil and gas hit by Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/16/sri-lanka-four-day-week-oil-and-gas-iran-war", time: "2026-03-16T18:52:04Z" },
-      { title: "Indian farmers dress up as bears to protect crops from monkeys", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/indian-farmers-dress-up-as-bears-to-protect-crops-from-monkeys?traffic_source=rss", time: "2026-03-16T17:37:08Z" },
-      { title: "Fire at India hospital intensive care unit kills 10 people", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/fire-at-india-hospital-intensive-care-unit-kills-10-people?traffic_source=rss", time: "2026-03-16T10:06:42Z" },
-      { title: "India’s scattered workforce: the chatbot keeping families in touch during emergencies", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/16/chatbot-india-migrant-workers-whatsapp-odisha", time: "2026-03-16T06:00:08Z" },
-      { title: "Sabalenka wins first Indian Wells title with victory against Rybakina", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/16/sabalenka-wins-first-indian-wells-title-with-victory-against-rybakina?traffic_source=rss", time: "2026-03-16T04:13:01Z" },
-    ]
-  },
-  {
     name: "Islamabad", country: "Pakistan",
     lat: 33.6844, lng: 73.0479,
     category: "political",
@@ -180,6 +159,27 @@ const locations = [
       { title: "Afghanistan accuses Pakistan of air strike on drug rehab centre", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/afghanistan-accuses-pakistan-of-air-strike-on-drug-rehab-centre?traffic_source=rss", time: "2026-03-17T01:35:36Z" },
       { title: "Afghanistan accuses Pakistan of deadly strike on Kabul hospital", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/16/afghanistan-accuses-pakistan-of-kabul-hospital-strike-killed", time: "2026-03-17T01:08:53Z" },
       { title: "Afghanistan says children among four killed in latest attacks by Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/afghanistan-says-children-among-those-killed-in-latest-attacks-by-pakistan?traffic_source=rss", time: "2026-03-16T17:01:01Z" },
+    ]
+  },
+  {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
+      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
+      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
+      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
+      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
+      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
+      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
+      { title: "Gavaskar links Sunrisers signing of Pakistan’s Abrar to Indian deaths", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/gavaskar-links-sunrisers-signing-of-pakistan-abrar-to-indian-deaths?traffic_source=rss", time: "2026-03-17T13:40:57Z" },
+      { title: "How Pakistan’s people-led solar boom is easing impact of Middle East energy crisis", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/17/pakistan-people-led-solar-boom-middle-east-energy-crisis", time: "2026-03-17T13:00:47Z" },
+      { title: "Ten ICU patients killed in hospital fire in eastern India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/ten-icu-patients-killed-in-hospital-fire-in-eastern-india?traffic_source=rss", time: "2026-03-16T21:01:22Z" },
+      { title: "Sri Lanka brings in four-day week to eke out stocks of oil and gas hit by Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/16/sri-lanka-four-day-week-oil-and-gas-iran-war", time: "2026-03-16T18:52:04Z" },
+      { title: "Indian farmers dress up as bears to protect crops from monkeys", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/indian-farmers-dress-up-as-bears-to-protect-crops-from-monkeys?traffic_source=rss", time: "2026-03-16T17:37:08Z" },
+      { title: "Fire at India hospital intensive care unit kills 10 people", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/fire-at-india-hospital-intensive-care-unit-kills-10-people?traffic_source=rss", time: "2026-03-16T10:06:42Z" },
+      { title: "India’s scattered workforce: the chatbot keeping families in touch during emergencies", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/16/chatbot-india-migrant-workers-whatsapp-odisha", time: "2026-03-16T06:00:08Z" },
     ]
   },
   {
@@ -244,14 +244,6 @@ const locations = [
     articles: [
       { title: "Did Iran launch missiles at US-UK base on Diego Garcia? Here’s what to know", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/did-iran-launch-missiles-at-us-uk-base-on-diego-garcia-heres-what-to-know?traffic_source=rss", time: "2026-03-22T13:03:57Z" },
       { title: "UK says Iran missile attack on Diego Garcia failed", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/uk-says-iran-missile-attack-on-diego-garcia-failed?traffic_source=rss", time: "2026-03-21T15:59:35Z" },
-    ]
-  },
-  {
-    name: "Dhaka", country: "Bangladesh",
-    lat: 23.8103, lng: 90.4125,
-    category: "climate",
-    articles: [
-      { title: "The War Is Making It Harder to Keep the Lights On, 2,000 Miles Away", source: "New York Times", url: "https://www.nytimes.com/2026/03/16/business/iran-bangladesh-imported-gas.html", time: "2026-03-16T04:01:05Z" },
     ]
   },
   {
