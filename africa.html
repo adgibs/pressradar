@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:48 UTC, 23 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:16 UTC, 23 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">23 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:49 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Kenyan police investigate alleged disappearance of ex-foreign minister", "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya addresses security concerns and amnesty for illegal military volunteers</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says", "Sudan army denies carrying out hospital attack that killed 64 during Eid"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sudan hospital attack kills dozens amid ongoing conflict dispute</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Power without a throne: how Khalifa Haftar controls Libya – podcast", "‘She gave her life to protect the richness of Congo’: inside the deadly assault on Upemba wildlife park"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Democratic Republic of Congo faces political control and wildlife security threats</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Energy shock talk grabs headlines but the Iran war is also driving the world towards a food crisis | Heather Stewart"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Global food crisis looms as Iran conflict disrupts energy markets</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:17 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘Sahel is no longer fooled’ Niger civil society leader", "Power without a throne: how Khalifa Haftar controls Libya – podcast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Regional strongmen consolidate power outside formal political structures across Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Kenyan police investigate alleged disappearance of ex-foreign minister", "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya grapples with security concerns and citizen involvement in foreign conflicts</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Hospital attack in Sudan kills dozens amid ongoing humanitarian crisis</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 15.0, lng: 0.0,
     category: "conflict",
     articles: [
+      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
       { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
       { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
       { title: "Starmer meets Nigerian president as record steel deal agreed", source: "BBC News", url: "https://www.bbc.com/news/articles/crm1w24p8p7o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:59:09Z" },
@@ -134,7 +135,6 @@ const locations = [
       { title: "Many killed, wounded after blasts hit Nigeria’s Maiduguri, witnesses say", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/17/many-killed-wounded-after-blasts-hit-nigerias-maiduguri-witnesses-say?traffic_source=rss", time: "2026-03-17T01:05:44Z" },
       { title: "Scores of people killed in series of bomb blasts in northern Nigeria", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/scores-of-people-killed-in-series-of-bomb-blasts-in-northern-nigeria?traffic_source=rss", time: "2026-03-17T00:35:27Z" },
       { title: "Fifa sanctions Nigeria and DR Congo over World Cup play-off", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cdxg10vzwp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-16T18:13:30Z" },
-      { title: "‘We cannot replace USAID, but we can do big things’: conservation plots a future without American money", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/16/conservation-trump-cuts-natural-world-usaid-funding-biodiversity-aoe", time: "2026-03-16T12:00:18Z" },
     ]
   },
   {
@@ -178,7 +178,6 @@ const locations = [
       { title: "Ukraine war briefing: Russia agrees to stop recruiting Kenyans in fight against Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/17/ukraine-war-briefing-russia-agrees-stop-recruiting-kenyans", time: "2026-03-17T00:48:45Z" },
       { title: "Kenyans will no longer be enlisted to fight for Russia in Ukraine", source: "France 24", url: "https://www.france24.com/en/enyans-will-no-longer-be-enlisted-to-fight-for-russia-in-ukraine", time: "2026-03-16T21:38:19Z" },
       { title: "Kenya and Russia agree no Kenyans will be recruited for Ukraine war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/kenya-and-russia-agree-no-kenyans-will-be-recruited-for-ukraine-war?traffic_source=rss", time: "2026-03-16T14:14:34Z" },
-      { title: "Russia agrees to stop using Kenyan recruits in Ukraine conflict, Kenya says", source: "BBC News", url: "https://www.bbc.com/news/articles/cev7rdwmky9o?at_medium=RSS&at_campaign=rss", time: "2026-03-16T13:11:02Z" },
     ]
   },
   {
@@ -216,7 +215,6 @@ const locations = [
       { title: "Iran strikes gulf oil, gas sites as war jolts energy markets, what cost for South Africa ?", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260320-iran-strikes-gulf-oil-gas-sites-as-war-jolts-energy-markets-what-cost-for-south-africa", time: "2026-03-20T22:07:53Z" },
       { title: "South Africans say criminal gangs are exploiting the water crisis", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg3gjx22j0o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T06:01:49Z" },
       { title: "South African fruit exports face delays as Iran war disrupts shipping", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/south-african-fruit-exports-face-delays-as-iran-war-disrupts-shipping?traffic_source=rss", time: "2026-03-17T04:20:32Z" },
-      { title: "Whistleblower murder suspect is former elite officer, South African police say", source: "BBC News", url: "https://www.bbc.com/news/articles/czr05nz3dp8o?at_medium=RSS&at_campaign=rss", time: "2026-03-16T11:49:05Z" },
     ]
   },
   {
