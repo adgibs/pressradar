@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:16 UTC, 23 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">14:59 UTC, 23 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">23 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:17 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["‘Sahel is no longer fooled’ Niger civil society leader", "Power without a throne: how Khalifa Haftar controls Libya – podcast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Regional strongmen consolidate power outside formal political structures across Africa</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Kenyan police investigate alleged disappearance of ex-foreign minister", "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya grapples with security concerns and citizen involvement in foreign conflicts</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Hospital attack in Sudan kills dozens amid ongoing humanitarian crisis</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:00 UTC, 23 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", "‘Sahel is no longer fooled’ Niger civil society leader"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Nigerian police arrest assault suspects; Sahel rejects foreign interference</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Kenyan police investigate alleged disappearance of ex-foreign minister", "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kenya investigates missing ex-minister; grants amnesty to Ukraine fighters</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ex-teacher accused of Scotland school abuse found guilty of sex attack in South Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South African court convicts Scottish teacher of sexual assault</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Power without a throne: how Khalifa Haftar controls Libya – podcast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Podcast examines Khalifa Haftar&#x27;s control over Libya</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Hospital attack in Sudan kills dozens, WHO confirms</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 15.0, lng: 0.0,
     category: "conflict",
     articles: [
+      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
       { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
       { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
       { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
@@ -177,7 +178,6 @@ const locations = [
       { title: "‘How do I survive?’ Drought plagues Kenya’s Turkana amid surplus elsewhere", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/17/how-do-i-survive-drought-plagues-kenyas-turkana-amid-surplus-elsewhere?traffic_source=rss", time: "2026-03-17T11:07:46Z" },
       { title: "Ukraine war briefing: Russia agrees to stop recruiting Kenyans in fight against Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/17/ukraine-war-briefing-russia-agrees-stop-recruiting-kenyans", time: "2026-03-17T00:48:45Z" },
       { title: "Kenyans will no longer be enlisted to fight for Russia in Ukraine", source: "France 24", url: "https://www.france24.com/en/enyans-will-no-longer-be-enlisted-to-fight-for-russia-in-ukraine", time: "2026-03-16T21:38:19Z" },
-      { title: "Kenya and Russia agree no Kenyans will be recruited for Ukraine war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/16/kenya-and-russia-agree-no-kenyans-will-be-recruited-for-ukraine-war?traffic_source=rss", time: "2026-03-16T14:14:34Z" },
     ]
   },
   {
@@ -237,15 +237,6 @@ const locations = [
     ]
   },
   {
-    name: "Lusaka", country: "Zambia",
-    lat: -15.3875, lng: 28.3228,
-    category: "economic",
-    articles: [
-      { title: "Aspiring female Zambian politicians asked for sexual favours, official says", source: "BBC News", url: "https://www.bbc.com/news/articles/cm28ldvj3jvo?at_medium=RSS&at_campaign=rss", time: "2026-03-17T13:31:08Z" },
-      { title: "No H.I.V. Aid Without More Access to Minerals: U.S. Ponders ‘Sticks’ Against Zambia", source: "New York Times", url: "https://www.nytimes.com/2026/03/16/health/zambia-hiv-aid-minerals-trump.html", time: "2026-03-16T13:37:00Z" },
-    ]
-  },
-  {
     name: "Tunis", country: "Tunisia",
     lat: 36.8065, lng: 10.1815,
     category: "political",
@@ -273,19 +264,28 @@ const locations = [
     ]
   },
   {
+    name: "Cape Town", country: "South Africa",
+    lat: -33.9249, lng: 18.4241,
+    category: "political",
+    articles: [
+      { title: "Ex-teacher accused of Scotland school abuse found guilty of sex attack in South Africa", source: "BBC News", url: "https://www.bbc.com/news/articles/c98kdp0z9gyo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:50:10Z" },
+      { title: "In Cape Town’s historic Bo-Kaap, homes under siege from rich foreign buyers", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/18/in-cape-towns-historic-bo-kaap-homes-under-siege-from-rich-foreign-buyers?traffic_source=rss", time: "2026-03-18T09:26:04Z" },
+    ]
+  },
+  {
+    name: "Lusaka", country: "Zambia",
+    lat: -15.3875, lng: 28.3228,
+    category: "economic",
+    articles: [
+      { title: "Aspiring female Zambian politicians asked for sexual favours, official says", source: "BBC News", url: "https://www.bbc.com/news/articles/cm28ldvj3jvo?at_medium=RSS&at_campaign=rss", time: "2026-03-17T13:31:08Z" },
+    ]
+  },
+  {
     name: "Mogadishu", country: "Somalia",
     lat: 2.0469, lng: 45.3182,
     category: "conflict",
     articles: [
       { title: "‘Fourth world nation’: Trump slams Somalia, Ilhan Omar", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/16/fourth-world-nation-trump-slams-somalia-ilhan-omar?traffic_source=rss", time: "2026-03-16T21:16:51Z" },
-    ]
-  },
-  {
-    name: "Cape Town", country: "South Africa",
-    lat: -33.9249, lng: 18.4241,
-    category: "political",
-    articles: [
-      { title: "In Cape Town’s historic Bo-Kaap, homes under siege from rich foreign buyers", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/18/in-cape-towns-historic-bo-kaap-homes-under-siege-from-rich-foreign-buyers?traffic_source=rss", time: "2026-03-18T09:26:04Z" },
     ]
   },
   {
