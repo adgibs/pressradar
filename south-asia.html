@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:21 UTC, 24 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:03 UTC, 24 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">24 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:21 UTC, 24 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Afghanistan Frees American Detainee Amid Mounting U.S. Pressure", "Pakistan Dials Up Its Information War"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Afghanistan and Pakistan face mounting US pressure and information warfare escalation.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘The whole country is doing it’: how illegal kidney traders target Pakistan’s desperate brick kiln workers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Illegal organ trafficking networks exploit vulnerable brick kiln workers across Pakistan.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Global fuel shortages impact daily transportation and mobility in South Asia.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:03 UTC, 24 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Why has India arrested US, Ukrainian nationals under anti-terror laws?", "Trump says peace talks progressing as Iran officials deny negotiations", "Pakistan Dials Up Its Information War"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India arrests US and Ukrainian nationals; Pakistan escalates information warfare</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", "Trump says peace talks progressing as Iran officials deny negotiations", "Afghanistan&#39;s Taliban releases detained US national Dennis Coyle"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan offers to host US-Iran talks as Afghanistan releases American detainee</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan world’s most polluted country in 2025: Report", "‘The whole country is doing it’: how illegal kidney traders target Pakistan’s desperate brick kiln workers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan faces severe pollution crisis and illegal organ trafficking exploitation</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["IPL champions Bengaluru to keep 11 seats empty in honour of stampede dead", "‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">India grapples with stampede tragedy and widespread fuel shortages</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Rare Middle East storm could bring floods, damaging winds and tornadoes"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Rare Middle East storm threatens region with floods and tornadoes</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Afghanistan Frees American Detainee Amid Mounting U.S. Pressure"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Afghanistan frees detained American amid increased US diplomatic pressure</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -115,6 +115,7 @@ const locations = [
     lat: 34.5553, lng: 69.2075,
     category: "humanitarian",
     articles: [
+      { title: "Afghanistan's Taliban releases detained US national Dennis Coyle", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260324-afghanistan-taliban-government-releases-detained-us-national-dennis-coyle", time: "2026-03-24T13:22:19Z" },
       { title: "Afghanistan Frees American Detainee Amid Mounting U.S. Pressure", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/afghanistan-releases-american-detainee.html", time: "2026-03-24T13:11:17Z" },
       { title: "Caught Between Two Conflicts, Afghans Flee Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/iran-afghanistan-border-refugees.html", time: "2026-03-23T04:42:04Z" },
       { title: "‘This is the saddest moment’: families search for loved ones on Eid after Kabul hospital strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/kabul-hospital-strike-eid-pakistan-taliban-families-search-for-victims", time: "2026-03-21T08:00:47Z" },
@@ -130,24 +131,6 @@ const locations = [
       { title: "Families search for loved ones after deadly attack on Kabul hospital", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/families-search-for-loved-ones-after-deadly-attack-on-kabul-hospital?traffic_source=rss", time: "2026-03-17T23:56:25Z" },
       { title: "Afghanistan says at least 400 people are dead in Kabul after Pakistan airstrike", source: "NPR", url: "https://www.npr.org/2026/03/17/nx-s1-5750477/afghanistan-says-at-least-400-people-are-dead-in-kabul-after-pakistan-airstrike", time: "2026-03-17T20:33:32Z" },
       { title: "‘Everything was burning, people were burning’: witnesses describe strike on Kabul drug rehab centre", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/17/witness-horrific-scenes-pakistan-air-strike-kabul-drug-rehab-centre", time: "2026-03-17T15:29:07Z" },
-      { title: "Rescue teams recover bodies after deadly Kabul hospital air strike", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/17/rescue-teams-recover-bodies-after-deadly-kabul-hospital-air-strike?traffic_source=rss", time: "2026-03-17T14:51:11Z" },
-    ]
-  },
-  {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/iran-war-fuel-shortages-affecting-readers-worldwide", time: "2026-03-24T00:17:30Z" },
-      { title: "US-Israeli war on Iran strains food, water and fuel prices in India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/us-israeli-war-on-iran-strains-food-water-and-fuel-prices-in-india?traffic_source=rss", time: "2026-03-23T12:50:53Z" },
-      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
-      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
-      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
-      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
-      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
-      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
-      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
-      { title: "Gavaskar links Sunrisers signing of Pakistan’s Abrar to Indian deaths", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/gavaskar-links-sunrisers-signing-of-pakistan-abrar-to-indian-deaths?traffic_source=rss", time: "2026-03-17T13:40:57Z" },
     ]
   },
   {
@@ -155,6 +138,9 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "political",
     articles: [
+      { title: "Pakistan world’s most polluted country in 2025: Report", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-worlds-most-polluted-country-in-2025-report?traffic_source=rss", time: "2026-03-24T13:47:12Z" },
+      { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
+      { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
       { title: "Pakistan Dials Up Its Information War", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/pakistan-media-news-misinformation.html", time: "2026-03-24T04:00:11Z" },
       { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
       { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
@@ -164,6 +150,23 @@ const locations = [
       { title: "UN revises Kabul rehab strike toll as Pakistan denies targeting civilians", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/18/un-revises-kabul-rehab-strike-toll-as-pakistan-denies-targeting-civilians?traffic_source=rss", time: "2026-03-18T12:22:14Z" },
       { title: "Pakistani government wants to 'create anarchy' in Afghanistan, claims Hamid Karzai", source: "Sky News", url: "https://news.sky.com/story/pakistani-government-wants-to-create-anarchy-in-afghanistan-claims-hamid-karzai-13521135", time: "2026-03-17T22:19:00Z" },
       { title: "Pakistan denies hospital strike in Afghanistan as death toll hits 400", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/17/pakistan-denies-hospital-strike-in-afghanistan-as-death-toll-hits-400?traffic_source=rss", time: "2026-03-17T22:06:38Z" },
+    ]
+  },
+  {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "Why has India arrested US, Ukrainian nationals under anti-terror laws?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/why-has-india-arrested-us-ukrainian-nationals-under-anti-terror-laws?traffic_source=rss", time: "2026-03-24T14:05:02Z" },
+      { title: "‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/iran-war-fuel-shortages-affecting-readers-worldwide", time: "2026-03-24T00:17:30Z" },
+      { title: "US-Israeli war on Iran strains food, water and fuel prices in India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/us-israeli-war-on-iran-strains-food-water-and-fuel-prices-in-india?traffic_source=rss", time: "2026-03-23T12:50:53Z" },
+      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
+      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
+      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
+      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
+      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
+      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
+      { title: "Ozempic Is About to Go Generic in India, China and Canada", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/health/ozempic-wegovy-generic-india-china-canada.html", time: "2026-03-19T04:00:11Z" },
     ]
   },
   {
@@ -185,6 +188,7 @@ const locations = [
     lat: 26.0, lng: 52.0,
     category: "economic",
     articles: [
+      { title: "Rare Middle East storm could bring floods, damaging winds and tornadoes", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/03/24/middle-east-storm-flooding-tornado-iran-dubai/", time: "2026-03-24T13:41:27Z" },
       { title: "More Marines are headed to Middle East as Iran war reaches the 3-week mark", source: "NPR", url: "https://www.npr.org/2026/03/20/nx-s1-5754550/israel-strikes-tehran-iran-attacks-gulf", time: "2026-03-20T10:21:36Z" },
       { title: "Last 24 hours show a prolonged Iran war could do calamitous damage to global economy", source: "Sky News", url: "https://news.sky.com/story/iran-war-last-24-hours-show-a-prolonged-conflict-could-do-calamitous-damage-to-global-economy-13521949", time: "2026-03-19T19:24:00Z" },
       { title: "Attacks on Energy Infrastructure Could Lead to Much Higher Prices", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/business/energy-environment/iran-oil-natural-gas-attacks.html", time: "2026-03-19T13:56:35Z" },
@@ -258,6 +262,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "‘The whole country is doing it’: how illegal kidney traders target Pakistan’s desperate brick kiln workers", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/24/pakistan-brick-kiln-workers-selling-kidney-debt-victims", time: "2026-03-24T06:00:12Z" },
+    ]
+  },
+  {
+    name: "Bangalore", country: "India",
+    lat: 12.9716, lng: 77.5946,
+    category: "economic",
+    articles: [
+      { title: "IPL champions Bengaluru to keep 11 seats empty in honour of stampede dead", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/ipl-champions-bengaluru-to-keep-11-seats-empty-in-honour-of-stampede-dead?traffic_source=rss", time: "2026-03-24T12:57:56Z" },
     ]
   },
 ];
