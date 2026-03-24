@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:03 UTC, 24 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:04 UTC, 24 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">24 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:03 UTC, 24 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Nigeria&#39;s Dangote refinery increases exports as Middle East war shakes global markets", "Nigerian refinery begins fuel exports to Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Nigeria&#x27;s Dangote refinery increases exports amid global market volatility</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", "Trump says peace talks progressing as Iran officials deny negotiations"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan offers to host US-Iran peace talks as negotiations progress</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["The tragic toll of Sudan’s destroyed healthcare", "Inside the alleged Russian operation to trigger anti-government protests in Angola"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Sudan&#x27;s healthcare system destroyed; Russia allegedly orchestrates Angola protests</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ivory Coast heritage sites under threat despite significant discoveries", "Airbnb in firing line as Cape Town’s housing crisis catches up with middle class"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">African heritage sites threatened; Cape Town housing crisis deepens</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘Extraordinary event’ for mountain gorillas as new twins born in DRC"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Mountain gorilla twins born in DRC conservation milestone</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Elon Musk&#39;s Starlink blocked from operating in Namibia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Elon Musk&#x27;s Starlink blocked from operating in Namibia</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:05 UTC, 24 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ghana and EU sign landmark defence deal to combat militant Islamist threat", "Inside the alleged Russian operation to trigger anti-government protests in Angola"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Ghana strengthens EU defence ties against Islamists; Russia allegedly fuels Angola unrest</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Nigeria&#39;s Dangote refinery increases exports as Middle East war shakes global markets", "Nigerian refinery begins fuel exports to Africa"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Nigeria&#x27;s Dangote refinery exports fuel as Middle East tensions reshape markets</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["&#39;I intend to go back to my country&#39;: Exiled Ugandan opposition leader Bobi Wine", "Trump says peace talks progressing as Iran officials deny negotiations"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Iran peace negotiations progress amid denials from Tehran officials</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["It doesn’t take a miracle to cut infant deaths, just basic care | Letter", "The tragic toll of Sudan’s destroyed healthcare"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Healthcare collapse and infant mortality crisis worsen across Sahel and Sudan</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Airbnb in firing line as Cape Town’s housing crisis catches up with middle class"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Cape Town&#x27;s housing shortage extends displacement crisis to middle-class residents</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Elon Musk&#39;s Starlink blocked from operating in Namibia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Namibia blocks Starlink operations citing regulatory and sovereignty concerns</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,6 +111,31 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Sahel Region", country: "West Africa",
+    lat: 15.0, lng: 0.0,
+    category: "conflict",
+    articles: [
+      { title: "It doesn’t take a miracle to cut infant deaths, just basic care | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/it-doesnt-take-a-miracle-to-cut-infant-deaths-just-basic-care", time: "2026-03-24T16:49:57Z" },
+      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
+      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
+      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
+      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
+      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
+      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
+      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
+      { title: "Starmer meets Nigerian president as record steel deal agreed", source: "BBC News", url: "https://www.bbc.com/news/articles/crm1w24p8p7o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:59:09Z" },
+      { title: "Drone attack from Sudan kills 17 people in Chad as war spills over border", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/drone-attack-from-sudan-kills-17-in-chad-as-conflict-spills-over?traffic_source=rss", time: "2026-03-19T13:30:14Z" },
+      { title: "Chad warns Sudan it will retaliate after drone strike on mourners kills 17", source: "BBC News", url: "https://www.bbc.com/news/articles/c0mjn0g708ro?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:30:01Z" },
+      { title: "Nigeria’s Osimhen tried to defy broken arm in Galatasaray loss at Liverpool", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/nigerias-osimhen-tried-to-defy-broken-arm-in-galatasaray-loss-at-liverpool?traffic_source=rss", time: "2026-03-19T12:12:23Z" },
+      { title: "Jihadist violence in Nigeria and DRC rose sharply last year even as global deaths from terror fell", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/jihadist-violence-nigeria-drc-terrorism-index", time: "2026-03-19T05:01:00Z" },
+      { title: "Nigeria’s President Tinubu meets royals in UK state visit", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/18/nigerias-president-tinubu-meets-royals-in-historic-uk-state-visit?traffic_source=rss", time: "2026-03-18T21:46:17Z" },
+      { title: "Senegal calls for inquiry after being stripped of AFCON title", source: "France 24", url: "https://www.france24.com/en/senegal-calls-for-inquiry-after-being-stripped-of-afcon-title", time: "2026-03-18T21:34:39Z" },
+      { title: "King says UK 'blessed' by Nigerian influence as he hosts state banquet for president", source: "Sky News", url: "https://news.sky.com/story/king-says-uk-blessed-by-nigerian-influence-as-he-hosts-state-banquet-for-president-tinubu-and-the-first-lady-13521525", time: "2026-03-18T20:13:00Z" },
+      { title: "King greets Nigerian president for first UK state visit in 37 years", source: "BBC News", url: "https://www.bbc.com/news/articles/cedzqqp9x2do?at_medium=RSS&at_campaign=rss", time: "2026-03-18T12:47:50Z" },
+      { title: "23 killed in Nigeria suicide attack", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260317-23-killed-in-nigeria-suicide-attack", time: "2026-03-17T21:22:27Z" },
+    ]
+  },
+  {
     name: "Dakar", country: "Senegal",
     lat: 14.7167, lng: -17.4677,
     category: "political",
@@ -132,30 +157,6 @@ const locations = [
       { title: "CAF strips Senegal of AFCON title, Morocco declared African champions", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/17/caf-strips-senegal-of-afcon-title-morocco-declared-african-champions?traffic_source=rss", time: "2026-03-17T22:57:33Z" },
       { title: "Morocco awarded Afcon title after CAF overturns result", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce949glzzglo?at_medium=RSS&at_campaign=rss", time: "2026-03-17T22:28:57Z" },
       { title: "Senegal stripped of Africa Cup of Nations over misconduct in final", source: "Sky News", url: "https://news.sky.com/story/senegal-stripped-of-africa-cup-of-nations-over-misconduct-in-final-13521079", time: "2026-03-17T21:38:00Z" },
-    ]
-  },
-  {
-    name: "Sahel Region", country: "West Africa",
-    lat: 15.0, lng: 0.0,
-    category: "conflict",
-    articles: [
-      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
-      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
-      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
-      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
-      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
-      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
-      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
-      { title: "Starmer meets Nigerian president as record steel deal agreed", source: "BBC News", url: "https://www.bbc.com/news/articles/crm1w24p8p7o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:59:09Z" },
-      { title: "Drone attack from Sudan kills 17 people in Chad as war spills over border", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/drone-attack-from-sudan-kills-17-in-chad-as-conflict-spills-over?traffic_source=rss", time: "2026-03-19T13:30:14Z" },
-      { title: "Chad warns Sudan it will retaliate after drone strike on mourners kills 17", source: "BBC News", url: "https://www.bbc.com/news/articles/c0mjn0g708ro?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:30:01Z" },
-      { title: "Nigeria’s Osimhen tried to defy broken arm in Galatasaray loss at Liverpool", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/nigerias-osimhen-tried-to-defy-broken-arm-in-galatasaray-loss-at-liverpool?traffic_source=rss", time: "2026-03-19T12:12:23Z" },
-      { title: "Jihadist violence in Nigeria and DRC rose sharply last year even as global deaths from terror fell", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/jihadist-violence-nigeria-drc-terrorism-index", time: "2026-03-19T05:01:00Z" },
-      { title: "Nigeria’s President Tinubu meets royals in UK state visit", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/18/nigerias-president-tinubu-meets-royals-in-historic-uk-state-visit?traffic_source=rss", time: "2026-03-18T21:46:17Z" },
-      { title: "Senegal calls for inquiry after being stripped of AFCON title", source: "France 24", url: "https://www.france24.com/en/senegal-calls-for-inquiry-after-being-stripped-of-afcon-title", time: "2026-03-18T21:34:39Z" },
-      { title: "King says UK 'blessed' by Nigerian influence as he hosts state banquet for president", source: "Sky News", url: "https://news.sky.com/story/king-says-uk-blessed-by-nigerian-influence-as-he-hosts-state-banquet-for-president-tinubu-and-the-first-lady-13521525", time: "2026-03-18T20:13:00Z" },
-      { title: "King greets Nigerian president for first UK state visit in 37 years", source: "BBC News", url: "https://www.bbc.com/news/articles/cedzqqp9x2do?at_medium=RSS&at_campaign=rss", time: "2026-03-18T12:47:50Z" },
-      { title: "23 killed in Nigeria suicide attack", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260317-23-killed-in-nigeria-suicide-attack", time: "2026-03-17T21:22:27Z" },
     ]
   },
   {
@@ -186,7 +187,6 @@ const locations = [
       { title: "Congo-Brazzaville’s Sassou Nguesso reaps landslide re-election win, provisional results suggest", source: "France 24", url: "https://www.france24.com/en/africa/20260317-congo-brazzaville-s-sassou-nguesso-reaps-landslide-re-election-win-provisional-results-suggest", time: "2026-03-17T20:51:32Z" },
       { title: "Congolese President Sassou Nguesso wins fifth term: Provisional results", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/17/congos-president-nguesso-to-secure-fifth-term-provisional-results-predict?traffic_source=rss", time: "2026-03-17T19:05:19Z" },
       { title: "Ex-Belgian diplomat ordered to stand trial over murder of Congo’s Lumumba", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/17/belgium-diplomat-ordered-to-stand-trial-over-killing-of-patrice-lumumba?traffic_source=rss", time: "2026-03-17T17:04:55Z" },
-      { title: "Belgian court clears way for trial over 1961 killing of Congo PM Lumumba", source: "BBC News", url: "https://www.bbc.com/news/articles/czd899vn6e9o?at_medium=RSS&at_campaign=rss", time: "2026-03-17T15:06:47Z" },
     ]
   },
   {
@@ -209,7 +209,6 @@ const locations = [
       { title: "The tragic toll of Sudan’s destroyed healthcare", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/the-tragic-toll-of-sudans-destroyed-healthcare?traffic_source=rss", time: "2026-03-24T13:13:11Z" },
       { title: "Sudan army denies carrying out hospital attack that killed 64 during Eid", source: "BBC News", url: "https://www.bbc.com/news/articles/cr715xynkvvo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T12:15:05Z" },
       { title: "Hospital attack in Sudan kills 64, including 13 children", source: "Sky News", url: "https://news.sky.com/story/hospital-attack-in-sudan-kills-64-including-13-children-13522914", time: "2026-03-21T22:21:00Z" },
-      { title: "Drones expand the deadly front lines of Sudan’s devastating war", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/17/drones-expand-the-deadly-front-lines-of-sudans-devastating-war?traffic_source=rss", time: "2026-03-17T15:46:39Z" },
     ]
   },
   {
@@ -223,6 +222,26 @@ const locations = [
     ]
   },
   {
+    name: "Kampala", country: "Uganda",
+    lat: 0.3476, lng: 32.5825,
+    category: "political",
+    articles: [
+      { title: "'I intend to go back to my country': Exiled Ugandan opposition leader Bobi Wine", source: "France 24", url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260324-i-intend-to-go-back-to-my-country-exiled-ugandan-opposition-leader-bobi-wine", time: "2026-03-24T16:06:59Z" },
+      { title: "‘I have fought for Aaron’: A Ugandan mother confronts disability and stigma", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/21/i-have-fought-for-aaron-a-ugandan-mother-confronts-disability-and-stigma?traffic_source=rss", time: "2026-03-21T09:42:23Z" },
+      { title: "Forty years after the last one was poached rhinos are back in the wild in Uganda", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4g41n9j4lo?at_medium=RSS&at_campaign=rss", time: "2026-03-18T17:36:05Z" },
+    ]
+  },
+  {
+    name: "Accra", country: "Ghana",
+    lat: 5.6037, lng: -0.187,
+    category: "economic",
+    articles: [
+      { title: "Ghana and EU sign landmark defence deal to combat militant Islamist threat", source: "BBC News", url: "https://www.bbc.com/news/articles/c87w80xe1jro?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:45:47Z" },
+      { title: "Ghana pushes for slave trade to be declared a crime against Humanity", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/ghana-pushes-for-slave-trade-to-be-declared-a-crime-against-humanity?traffic_source=rss", time: "2026-03-22T08:22:02Z" },
+      { title: "Why wearing traditional dress will always be political", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/18/why-wearing-traditional-dress-will-always-be-political-afcon", time: "2026-03-18T13:27:28Z" },
+    ]
+  },
+  {
     name: "Johannesburg", country: "South Africa",
     lat: -26.2041, lng: 28.0473,
     category: "economic",
@@ -232,30 +251,12 @@ const locations = [
     ]
   },
   {
-    name: "Kampala", country: "Uganda",
-    lat: 0.3476, lng: 32.5825,
-    category: "political",
-    articles: [
-      { title: "‘I have fought for Aaron’: A Ugandan mother confronts disability and stigma", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/21/i-have-fought-for-aaron-a-ugandan-mother-confronts-disability-and-stigma?traffic_source=rss", time: "2026-03-21T09:42:23Z" },
-      { title: "Forty years after the last one was poached rhinos are back in the wild in Uganda", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4g41n9j4lo?at_medium=RSS&at_campaign=rss", time: "2026-03-18T17:36:05Z" },
-    ]
-  },
-  {
     name: "Tunis", country: "Tunisia",
     lat: 36.8065, lng: 10.1815,
     category: "political",
     articles: [
       { title: "Leading anti‑racism activist in Tunisia jailed for eight years", source: "BBC News", url: "https://www.bbc.com/news/articles/clyjg1x7r43o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T13:17:56Z" },
       { title: "Tunisia’s Capital Is Captivating a New Generation of Travelers", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/travel/tunisia-capital-history-fashion-food-art.html", time: "2026-03-20T09:00:11Z" },
-    ]
-  },
-  {
-    name: "Accra", country: "Ghana",
-    lat: 5.6037, lng: -0.187,
-    category: "economic",
-    articles: [
-      { title: "Ghana pushes for slave trade to be declared a crime against Humanity", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/ghana-pushes-for-slave-trade-to-be-declared-a-crime-against-humanity?traffic_source=rss", time: "2026-03-22T08:22:02Z" },
-      { title: "Why wearing traditional dress will always be political", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/18/why-wearing-traditional-dress-will-always-be-political-afcon", time: "2026-03-18T13:27:28Z" },
     ]
   },
   {
