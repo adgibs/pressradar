@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:44 UTC, 25 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:44 UTC, 25 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">25 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:44 UTC, 25 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?", "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan mediates US-Iran talks amid regional fuel price pressures</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "Indian police manage long lines as panic grows over fuel shortages"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces cooking gas shortages with public protests and panic</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Russian weapons, tactics seen in Ukraine are shaping Myanmar’s civil war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Russian military influence reshapes Myanmar&#x27;s ongoing civil conflict</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Indian historic havelis deteriorate despite preservation revival efforts</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:44 UTC, 25 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "Indian police manage long lines as panic grows over fuel shortages", "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces cooking gas and fuel shortages amid regional price pressures</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan mediates U.S.-Iran talks as both sides seek diplomatic resolution</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US investors inject record billion dollars into Indian Premier League cricket</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">India&#x27;s historic haveli homes face deterioration despite revival efforts</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Russian weapons, tactics seen in Ukraine are shaping Myanmar’s civil war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Russian weapons and tactics influence Myanmar&#x27;s ongoing civil conflict</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='[]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:0%"></div></div><span class="ai-bullet-text">No additional development with sufficient headline support</span><span class="ai-bullet-count">0</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -230,6 +230,15 @@ const locations = [
     ]
   },
   {
+    name: "Bangalore", country: "India",
+    lat: 12.9716, lng: 77.5946,
+    category: "economic",
+    articles: [
+      { title: "US investors bet big on Indian cricket with record billion-dollar IPL deals", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/us-investors-bet-big-on-indian-cricket-with-record-billion-dollar-ipl-deals?traffic_source=rss", time: "2026-03-25T20:51:50Z" },
+      { title: "IPL champions Bengaluru to keep 11 seats empty in honour of stampede dead", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/ipl-champions-bengaluru-to-keep-11-seats-empty-in-honour-of-stampede-dead?traffic_source=rss", time: "2026-03-24T12:57:56Z" },
+    ]
+  },
+  {
     name: "Karachi", country: "Pakistan",
     lat: 24.8607, lng: 67.0011,
     category: "security",
@@ -251,14 +260,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "‘The whole country is doing it’: how illegal kidney traders target Pakistan’s desperate brick kiln workers", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/24/pakistan-brick-kiln-workers-selling-kidney-debt-victims", time: "2026-03-24T06:00:12Z" },
-    ]
-  },
-  {
-    name: "Bangalore", country: "India",
-    lat: 12.9716, lng: 77.5946,
-    category: "economic",
-    articles: [
-      { title: "IPL champions Bengaluru to keep 11 seats empty in honour of stampede dead", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/ipl-champions-bengaluru-to-keep-11-seats-empty-in-honour-of-stampede-dead?traffic_source=rss", time: "2026-03-24T12:57:56Z" },
     ]
   },
   {
