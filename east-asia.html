@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:57 UTC, 25 Mar 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:00 UTC, 25 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">25 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 08:58 UTC, 25 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Philippines declares national emergency as fuel supplies dwindle", "Philippines declares ‘national energy emergency’ and boosts coal power as Iran war grinds on", "Philippines declares energy emergency over Iran conflict", "How is the Philippines reacting to its energy emergency?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Philippines declares energy emergency as fuel supplies dwindle amid Iran conflict</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Kim Jong Un says North Korea will never give up on nuclear weapons", "Kim vows to &#39;irreversibly&#39; cement North Korea&#39;s nuclear status", "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">North Korea reinforces nuclear commitment while workers labor in Russia</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Hong Kong booksellers arrested for &#39;seditious publications&#39; as Jimmy Lai&#39;s biography seized", "Hong Kong grants police power to demand phone and computer passwords", "Sara Duterte impeachment hearings start as political death match heats up"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Hong Kong intensifies surveillance powers and arrests as Duterte impeachment begins</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["US and China both believe the other is a declining power", "Australia and EU seal trade deal to cut reliance on China’s rare earths"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US and China compete for geopolitical influence and supply chain control</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Take Shorter Showers: South Korea Kicks Off an Energy-Saving Drive", "Indonesians fire wooden cannons in post-Eid tradition"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Korea launches energy conservation while Indonesia celebrates post-Eid traditions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Pit viper among new species discovered in cave in Cambodia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Cave exploration in Cambodia uncovers new pit viper species</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:01 UTC, 25 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Philippines declares national emergency as fuel supplies dwindle", "Philippines declares ‘national energy emergency’ and boosts coal power as Iran war grinds on", "Philippines declares energy emergency over Iran conflict"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Philippines declares national energy emergency amid Iran conflict fallout</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Kim Jong Un says North Korea will never give up on nuclear weapons", "Kim vows to &#39;irreversibly&#39; cement North Korea&#39;s nuclear status"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Kim Jong Un vows North Korea will never abandon nuclear weapons</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["US and China both believe the other is a declining power", "Australia and EU seal trade deal to cut reliance on China’s rare earths"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">US-China tensions persist as Australia-EU secure alternative trade partnerships</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Sara Duterte impeachment hearings start as political death match heats up", "Hong Kong booksellers arrested for &#39;seditious publications&#39; as Jimmy Lai&#39;s biography seized"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Political turmoil grips Philippines and Hong Kong amid governance crises</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Belarus’s Lukashenko makes first visit to North Korea in bid to deepen ties"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Lukashenko visits North Korea to strengthen bilateral diplomatic relations</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Take Shorter Showers: South Korea Kicks Off an Energy-Saving Drive"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">South Korea launches energy conservation campaign amid regional tensions</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -212,6 +212,21 @@ const locations = [
     ]
   },
   {
+    name: "Pyongyang", country: "North Korea",
+    lat: 39.0392, lng: 125.7625,
+    category: "military",
+    articles: [
+      { title: "Belarus’s Lukashenko makes first visit to North Korea in bid to deepen ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/belaruss-lukashenko-makes-first-visit-to-north-korea-in-bid-to-deepen-ties?traffic_source=rss", time: "2026-03-25T09:23:36Z" },
+      { title: "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia", source: "NBC News", url: "https://www.nbcnews.com/world/asia/cockroaches-surveillance-16-hour-days-life-north-korean-worker-russia-rcna264849", time: "2026-03-25T00:01:40Z" },
+      { title: "Kim Jong Un says North Korea will never give up on nuclear weapons", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/kim-jong-un-says-north-korea-will-never-give-up-on-nuclear-weapons?traffic_source=rss", time: "2026-03-24T18:01:06Z" },
+      { title: "Kim vows to 'irreversibly' cement North Korea's nuclear status", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114945/kim-vows-to-irreversibly-cement-north-koreas-nuclear-status", time: "2026-03-24T11:05:14Z" },
+      { title: "How North Korea’s Kim Jong-un Is Using the Iran War to Justify His Nuclear Arsenal", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/north-korea-kim-iran-nuclear.html", time: "2026-03-24T03:44:06Z" },
+      { title: "North Korea’s Kim Jong Un says nuclear-armed status ‘irreversible’", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260323-north-korea-kim-jong-un-nuclear-armed-status-irreversible", time: "2026-03-23T23:08:05Z" },
+      { title: "Kim Jong Un reappointed as president of North Korea", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/kim-jong-un-reappointed-as-president-of-north-korea?traffic_source=rss", time: "2026-03-23T07:08:41Z" },
+      { title: "North Korean leader Kim and his daughter ride a tank together during army training", source: "NBC News", url: "https://www.nbcnews.com/world/asia/north-korean-leader-kim-daughter-ride-tank-together-army-training-rcna264388", time: "2026-03-20T06:03:50Z" },
+    ]
+  },
+  {
     name: "Manila", country: "Philippines",
     lat: 14.5995, lng: 120.9842,
     category: "territorial",
@@ -223,21 +238,6 @@ const locations = [
       { title: "Philippines declares energy emergency over Iran conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/c3ex8ez3717o?at_medium=RSS&at_campaign=rss", time: "2026-03-24T14:59:37Z" },
       { title: "Fuel rations and cash handouts: Iran war energy shock hits Asia | The Latest", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/20/cash-handouts-and-ac-limits-iran-war-causes-energy-shock-in-asia-the-latest", time: "2026-03-20T17:42:22Z" },
       { title: "Fuel rations and cash handouts: Iran war energy shock hits Asia – The Latest", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/fuel-rations-and-cash-handouts-iran-war-energy-shock-hits-asia-the-latest", time: "2026-03-20T16:53:57Z" },
-      { title: "Fuel rations and no air con: south-east Asian nations race to conserve energy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/18/south-east-asia-nations-conserve-energy-oil-soaring-costs", time: "2026-03-18T09:28:00Z" },
-    ]
-  },
-  {
-    name: "Pyongyang", country: "North Korea",
-    lat: 39.0392, lng: 125.7625,
-    category: "military",
-    articles: [
-      { title: "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia", source: "NBC News", url: "https://www.nbcnews.com/world/asia/cockroaches-surveillance-16-hour-days-life-north-korean-worker-russia-rcna264849", time: "2026-03-25T00:01:40Z" },
-      { title: "Kim Jong Un says North Korea will never give up on nuclear weapons", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/kim-jong-un-says-north-korea-will-never-give-up-on-nuclear-weapons?traffic_source=rss", time: "2026-03-24T18:01:06Z" },
-      { title: "Kim vows to 'irreversibly' cement North Korea's nuclear status", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114945/kim-vows-to-irreversibly-cement-north-koreas-nuclear-status", time: "2026-03-24T11:05:14Z" },
-      { title: "How North Korea’s Kim Jong-un Is Using the Iran War to Justify His Nuclear Arsenal", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/north-korea-kim-iran-nuclear.html", time: "2026-03-24T03:44:06Z" },
-      { title: "North Korea’s Kim Jong Un says nuclear-armed status ‘irreversible’", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260323-north-korea-kim-jong-un-nuclear-armed-status-irreversible", time: "2026-03-23T23:08:05Z" },
-      { title: "Kim Jong Un reappointed as president of North Korea", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/kim-jong-un-reappointed-as-president-of-north-korea?traffic_source=rss", time: "2026-03-23T07:08:41Z" },
-      { title: "North Korean leader Kim and his daughter ride a tank together during army training", source: "NBC News", url: "https://www.nbcnews.com/world/asia/north-korean-leader-kim-daughter-ride-tank-together-army-training-rcna264388", time: "2026-03-20T06:03:50Z" },
     ]
   },
   {
