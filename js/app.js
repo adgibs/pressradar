@@ -679,6 +679,7 @@ function applyFilters() {
   renderMarkers();
   renderTrending();
   fitMapToMarkers();
+  if (typeof renderGlobe === 'function') renderGlobe();
   saveFiltersToSession();
 }
 
@@ -810,6 +811,11 @@ function toggleDarkMode() {
   // Update Leaflet tile layer for dark mode
   if (typeof map !== 'undefined' && typeof applyMapTiles === 'function') {
     applyMapTiles();
+  }
+  // Update globe background for dark mode
+  if (globe) {
+    globe.backgroundImageUrl(isDark ? '//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png' : '')
+         .backgroundColor(isDark ? '#0a0a2e' : '#f0f4f8');
   }
 }
 // Restore dark mode preference
@@ -967,3 +973,186 @@ function applyMapTiles() {
     }, 600);
   }
 })();
+
+// ===== GLOBE VIEW (Global page only) =====
+let globe = null;
+let globeView = false; // true = globe visible, false = flat map visible
+let globeRingsData = []; // for radius circle on globe
+
+function initGlobe() {
+  if (globe || typeof Globe === 'undefined') return;
+  const container = document.getElementById('globe-container');
+  if (!container) return;
+
+  const isDark = document.body.classList.contains('dark');
+
+  globe = Globe()(container)
+    .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg')
+    .bumpImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png')
+    .backgroundImageUrl(isDark ? '//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png' : '')
+    .backgroundColor(isDark ? '#0a0a2e' : '#f0f4f8')
+    .showAtmosphere(true)
+    .atmosphereColor('lightskyblue')
+    .atmosphereAltitude(0.15)
+    .pointOfView({ lat: 20, lng: 0, altitude: 2.5 })
+    // Points layer
+    .pointsData([])
+    .pointLat('lat')
+    .pointLng('lng')
+    .pointColor('color')
+    .pointAltitude('alt')
+    .pointRadius('radius')
+    .pointLabel(d => '<div style="font:13px/1.4 sans-serif;padding:4px 8px;background:rgba(0,0,0,0.75);color:#fff;border-radius:6px;max-width:220px;"><b>' + d.name + '</b><br>' + d.country + '<br>' + d.count + ' article' + (d.count > 1 ? 's' : '') + '</div>')
+    // Rings layer (for radius visualization)
+    .ringsData([])
+    .ringLat('lat')
+    .ringLng('lng')
+    .ringMaxRadius('maxR')
+    .ringPropagationSpeed(2)
+    .ringRepeatPeriod(1200)
+    .ringColor(() => 'rgba(231, 76, 60, 0.6)')
+    // Globe click = set radius center
+    .onGlobeClick(({ lat, lng }) => {
+      radiusCenter = { lat, lng };
+      updateRadiusOverlay();
+      applyFilters();
+      const section = document.getElementById('radius-section');
+      if (section) section.style.display = '';
+      const presets = document.getElementById('radius-presets');
+      if (presets) presets.style.display = '';
+      const clearBtn = document.getElementById('clear-radius-btn');
+      if (clearBtn) clearBtn.style.display = '';
+      const info = document.getElementById('radius-info');
+      if (info) info.textContent = 'Showing articles within ' + radiusKm + ' km';
+    })
+    // Point click = scroll to sidebar
+    .onPointClick(point => {
+      if (point && point.name) scrollToLocation(point.name);
+    });
+
+  // Resize observer
+  const ro = new ResizeObserver(() => {
+    if (globe && container.offsetWidth > 0) {
+      globe.width(container.offsetWidth).height(container.offsetHeight);
+    }
+  });
+  ro.observe(container);
+}
+
+function renderGlobe() {
+  if (!globe || !globeView) return;
+
+  const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
+  const hidePaywall = document.getElementById('hide-paywall')?.checked;
+  const points = [];
+
+  locations.forEach(loc => {
+    if (activeCountry && loc.country !== activeCountry) return;
+    if (radiusCenter && haversineDistance(radiusCenter.lat, radiusCenter.lng, loc.lat, loc.lng) > radiusKm) return;
+
+    const visibleArticles = loc.articles.filter(a => {
+      const t = new Date(a.time).getTime();
+      if (t < timelineMin || t > timelineMax) return false;
+      if (activeSource && a.source !== activeSource) return false;
+      if (searchText && !a.title.toLowerCase().includes(searchText)) return false;
+      if (hidePaywall && isPaywall(a.source)) return false;
+      if (showFavoritesOnly && !getFavorites().includes(a.url)) return false;
+      if (activeBriefingTitles && !activeBriefingTitles.has(a.title)) return false;
+      return true;
+    });
+    if (visibleArticles.length === 0) return;
+
+    const count = visibleArticles.length;
+    points.push({
+      lat: loc.lat,
+      lng: loc.lng,
+      name: loc.name,
+      country: loc.country,
+      count: count,
+      color: catColors[loc.category] || '#c0392b',
+      alt: 0.01 + count * 0.008,
+      radius: Math.max(0.15, Math.min(0.8, count * 0.06))
+    });
+  });
+
+  globe.pointsData(points);
+
+  // Update rings for radius
+  if (radiusCenter) {
+    // Convert km to angular degrees (rough: 1 degree ≈ 111km)
+    const radiusDeg = radiusKm / 111;
+    globe.ringsData([{ lat: radiusCenter.lat, lng: radiusCenter.lng, maxR: radiusDeg }]);
+  } else {
+    globe.ringsData([]);
+  }
+}
+
+function switchToGlobe() {
+  if (globeView) return;
+  globeView = true;
+
+  const mapEl = document.getElementById('map');
+  const globeEl = document.getElementById('globe-container');
+  const mapStyleToggle = document.getElementById('map-style-toggle');
+  const wrapper = document.getElementById('map-wrapper');
+  const aiBox = document.getElementById('ai-summary-box');
+  if (mapEl) mapEl.style.display = 'none';
+  if (globeEl) globeEl.style.display = 'block';
+  if (mapStyleToggle) mapStyleToggle.style.display = 'none';
+  // Move AI briefing to wrapper so it's visible over globe
+  if (aiBox && wrapper) wrapper.appendChild(aiBox);
+
+  document.getElementById('btn-globe')?.classList.add('active');
+  document.getElementById('btn-flat')?.classList.remove('active');
+
+  // Lazy init
+  if (!globe) initGlobe();
+  // Small delay to let container size settle
+  setTimeout(() => {
+    const container = document.getElementById('globe-container');
+    if (globe && container) {
+      globe.width(container.offsetWidth).height(container.offsetHeight);
+    }
+    renderGlobe();
+    // Fly to radius center if set
+    if (radiusCenter) {
+      globe.pointOfView({ lat: radiusCenter.lat, lng: radiusCenter.lng, altitude: 1.5 }, 1000);
+    }
+  }, 100);
+
+  localStorage.setItem('pressradar-globeview', '1');
+}
+
+function switchToFlat() {
+  if (!globeView) return;
+  globeView = false;
+
+  const mapEl = document.getElementById('map');
+  const globeEl = document.getElementById('globe-container');
+  const mapStyleToggle = document.getElementById('map-style-toggle');
+  const aiBox = document.getElementById('ai-summary-box');
+  if (mapEl) mapEl.style.display = '';
+  if (globeEl) globeEl.style.display = 'none';
+  if (mapStyleToggle) mapStyleToggle.style.display = '';
+  // Move AI briefing back into map
+  if (aiBox && mapEl) mapEl.insertBefore(aiBox, mapEl.firstChild);
+
+  document.getElementById('btn-flat')?.classList.add('active');
+  document.getElementById('btn-globe')?.classList.remove('active');
+
+  // Refresh Leaflet map size (it may have been hidden)
+  setTimeout(() => map.invalidateSize(), 100);
+
+  localStorage.setItem('pressradar-globeview', '0');
+}
+
+// Auto-init globe on Global page if it was the last used view
+if (window.pageConfig.region === 'Global') {
+  document.addEventListener('DOMContentLoaded', () => {
+    const pref = localStorage.getItem('pressradar-globeview');
+    // Default to globe view on Global page
+    if (pref !== '0') {
+      switchToGlobe();
+    }
+  });
+}

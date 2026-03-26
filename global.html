@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -38,12 +39,19 @@
 </div>
 
 <div id="container">
+  <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
+  <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
   <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:54 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Iran rejects Trump proposal to end war, leaving status of talks unclear", "&#39;Tehran assumes war is behind them:  Iran will not capitulate, Trump has it all wrong&#39;", "Gulf countries seeking seat at negotiation table following Iranian attacks", "WATCH: Trump claims Iran war ‘way ahead of schedule’, claims Iran negotiating with US"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran rejects Trump&#x27;s war-ending proposal amid unclear negotiation status</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Trump describes UK aircraft carriers as ‘toys’ in latest anti-Nato jibe", "Trump says UK’s aircraft carriers are just ‘toys’, repeating complaint about lack of support for US in Iran – UK politics live", "‘Tehran’s tollbooth’: a visual guide to how a trickle of ships still passes through strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Trump criticizes UK military capabilities in latest NATO dispute</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["More than one million displaced by Israel’s evacuations in Lebanon", "South Sudan and Mauritius impose electricity curbs as Iran war triggers fuel fears in Africa", "NGO counts over 10 settler attacks a day amid Iran war; 14 said hurt in latest violence"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Conflict displaces millions and triggers regional instability concerns</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Knesset advances compensation for businesses impacted by war, benefits for reservists", "Unable to shut down Kan, coalition maneuvers to control public broadcaster’s budget"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Israeli government advances war-related compensation and broadcaster control measures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["New Zealand ministry gave $30K in taxpayers&#39; funds to Gaza advocacy campaign", "European Allies Worry Russia Is Preparing to Deliver Drones to Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">International actors respond to Middle East tensions with funding and military concerns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nepal’s PM-to-be uses rap to call for unity in first post-election message", "Finnish MP convicted for saying homosexuality is ‘developmental disorder’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Political figures face scrutiny over divisive statements in democracies</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
     <button class="style-btn" id="btn-terrain" onclick="setMapStyle('terrain')">Terrain</button>
   </div></div>
+  <div id="view-mode-toggle">
+    <button class="view-btn active" id="btn-globe" onclick="switchToGlobe()">🌍 Globe</button>
+    <button class="view-btn" id="btn-flat" onclick="switchToFlat()">🗺️ Flat Map</button>
+  </div>
+  </div><!-- end map-wrapper -->
   <div id="sidebar">
     <div id="sidebar-header">
       <h2>News by Location</h2>
