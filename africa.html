@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:12 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:40 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:13 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Senegal to parade Afcon trophy despite title being stripped", "Senegal pledges to fight ‘robbery’ after CAF strips it of AFCON title", "Senegal appeal to CAS against handing over of AFCON title to Morocco"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Senegal challenges CAF&#x27;s decision to strip it of AFCON title</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["UN adopts Ghana&#39;s resolution to class slave trade as crime against humanity – video", "UN names African slave trade &#39;gravest crime against humanity&#39;", "UN adopts slavery resolution despite resistance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UN adopts resolution classifying slave trade as crime against humanity</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["South Sudan and Mauritius impose electricity curbs as Iran war triggers fuel fears in Africa", "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Iran conflict triggers fuel and energy concerns across African nations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Zimbabwe says 15 nationals killed after being lured to fight for Russia", "Two drone strikes on civilian targets kill 28 people in Sudan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Military violence kills dozens in Zimbabwe and Sudan</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nigeria takes its place on world stage in quest to become regional superpower", "Egypt says it is ready to host Iran de-escalation talks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Nigeria advances regional influence while Egypt facilitates Iran diplomacy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Fifa investigates Congolese FA boss jailed alongside wife and son"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">FIFA investigates imprisoned Congolese Football Association official</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:41 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Iran starts to formalize its chokehold on the Strait of Hormuz with a &#39;toll booth&#39; regime", "South Sudan and Mauritius impose electricity curbs as Iran war triggers fuel fears in Africa", "What to know about efforts to end the Iran war after Trump’s ceasefire proposal", "Rwanda: Rwanda Urges De-Escalation Amid Middle East Tensions"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran conflict creates regional tensions and fuel security concerns across Africa</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Nigeria: Why We Promised Support for Soldier Accused of N114 Million Fraud - Abia Govt", "Nigeria: Ondo Community Petitions Aiyedatiwa Over Abandoned World Bank Projects", "Nigeria: Nigeria Govt Launches $552m Programme to Reform Basic Education"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Nigeria addresses governance, infrastructure, and education reform challenges</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Fifa investigates Congolese FA boss jailed alongside wife and son", "Somalia: Somalia PM Dismisses Two State Ministers in Cabinet Reshuffle", "Nigeria: Court Orders Arrest of Turaki, Factional PDP Chairman"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Government personnel changes occur across Congo, Somalia, and Nigeria</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Uganda: Uganda Military Chief Says Country Would Join War If Israel Faces Defeat", "Africa: AU Welcomes UN Resolution Recognizing Slave Trade As Crime Against Humanity"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">African nations respond to Middle East tensions and historical accountability</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Uganda: Kampala Youth Pledge Individual Responsibility in Climate Change Fight", "Ghana: Kofi Tonto Criticises Alleged Single Source Contracting Under NDC"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Uganda climate pledges and Ghana procurement transparency debated</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Uganda: Molly Katanga Begins Her Defence, Narrates to Court How She Was Beaten", "South Africa: Eastern Cape Government Hub Gutted By Fire"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Individual legal cases and infrastructure incidents reported in Uganda and South Africa</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -112,10 +112,35 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Sahel Region", country: "West Africa",
+    lat: 15.0, lng: 0.0,
+    category: "conflict",
+    articles: [
+      { title: "Nigeria: Why We Promised Support for Soldier Accused of N114 Million Fraud - Abia Govt", source: "AllAfrica", url: "https://allafrica.com/stories/202603260481.html", time: "2026-03-26T15:19:26Z" },
+      { title: "Nigeria: Ondo Community Petitions Aiyedatiwa Over Abandoned World Bank Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202603260476.html", time: "2026-03-26T15:18:08Z" },
+      { title: "Nigeria: Nigeria Govt Launches $552m Programme to Reform Basic Education", source: "AllAfrica", url: "https://allafrica.com/stories/202603260462.html", time: "2026-03-26T15:09:55Z" },
+      { title: "Nigeria takes its place on world stage in quest to become regional superpower", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/26/nigeria-regional-superpower-uk-reparative-justice-trade-economic-ties", time: "2026-03-26T14:45:44Z" },
+      { title: "Nigeria: Nigeria's Broadband Demand May Spike By 2030", source: "AllAfrica", url: "https://allafrica.com/stories/202603260242.html", time: "2026-03-26T10:10:58Z" },
+      { title: "Burkina Faso: Burkina Faso Leads the Way in Culturally Inspired AI", source: "AllAfrica", url: "https://allafrica.com/stories/202603260198.html", time: "2026-03-26T09:52:51Z" },
+      { title: "Nigeria: Nigeria Joins Ghana, 121 Others Urging Reparations for Slavery's Historical Wrongs", source: "AllAfrica", url: "https://allafrica.com/stories/202603260169.html", time: "2026-03-26T09:00:26Z" },
+      { title: "Boubacar Ould Messaoud, 80, Leader in Antislavery Fight in Mauritania", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/boubacar-ould-messaoud-dead.html", time: "2026-03-25T20:02:11Z" },
+      { title: "Iran, Nigeria, and Africa’s oil dependency", source: "Al Jazeera", url: "https://www.aljazeera.com/video/africa-now/2026/3/25/iran-nigeria-and-africas-oil-dependency?traffic_source=rss", time: "2026-03-25T16:16:23Z" },
+      { title: "It doesn’t take a miracle to cut infant deaths, just basic care | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/it-doesnt-take-a-miracle-to-cut-infant-deaths-just-basic-care", time: "2026-03-24T16:49:57Z" },
+      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
+      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
+      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
+      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
+      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
+      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
+      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
+    ]
+  },
+  {
     name: "Nairobi", country: "Kenya",
     lat: -1.2921, lng: 36.8219,
     category: "political",
     articles: [
+      { title: "East African asylum seeker deported by U.S. to Equatorial Guinea", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/east-african-asylum-seeker-deported-by-u-s-to-equatorial-guinea", time: "2026-03-25T22:20:42Z" },
       { title: "UN names African slave trade 'gravest crime against humanity'", source: "France 24", url: "https://www.france24.com/en/un-names-african-slave-trade-gravest-crime-against-humanity", time: "2026-03-25T21:35:53Z" },
       { title: "In Nairobi, residents blame flood devastation on inadequate infrastructure", source: "France 24", url: "https://www.france24.com/en/in-nairobi-residents-blame-flood-devastation-on-inadequate-infrastructure", time: "2026-03-25T14:58:59Z" },
       { title: "Dozens of bodies including children exhumed from mass grave in Kenya", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/dozens-of-bodies-including-children-exhumed-from-mass-grave-in-kenya?traffic_source=rss", time: "2026-03-25T12:36:14Z" },
@@ -132,28 +157,13 @@ const locations = [
     ]
   },
   {
-    name: "Sahel Region", country: "West Africa",
-    lat: 15.0, lng: 0.0,
-    category: "conflict",
-    articles: [
-      { title: "Nigeria takes its place on world stage in quest to become regional superpower", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/26/nigeria-regional-superpower-uk-reparative-justice-trade-economic-ties", time: "2026-03-26T14:45:44Z" },
-      { title: "Boubacar Ould Messaoud, 80, Leader in Antislavery Fight in Mauritania", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/boubacar-ould-messaoud-dead.html", time: "2026-03-25T20:02:11Z" },
-      { title: "Iran, Nigeria, and Africa’s oil dependency", source: "Al Jazeera", url: "https://www.aljazeera.com/video/africa-now/2026/3/25/iran-nigeria-and-africas-oil-dependency?traffic_source=rss", time: "2026-03-25T16:16:23Z" },
-      { title: "It doesn’t take a miracle to cut infant deaths, just basic care | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/it-doesnt-take-a-miracle-to-cut-infant-deaths-just-basic-care", time: "2026-03-24T16:49:57Z" },
-      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
-      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
-      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
-      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
-      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
-      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
-      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
-    ]
-  },
-  {
     name: "Accra", country: "Ghana",
     lat: 5.6037, lng: -0.187,
     category: "economic",
     articles: [
+      { title: "Ghana: Kofi Tonto Criticises Alleged Single Source Contracting Under NDC", source: "AllAfrica", url: "https://allafrica.com/stories/202603260470.html", time: "2026-03-26T15:15:08Z" },
+      { title: "Africa: AU Welcomes UN Resolution Recognizing Slave Trade As Crime Against Humanity", source: "AllAfrica", url: "https://allafrica.com/stories/202603260449.html", time: "2026-03-26T14:53:32Z" },
+      { title: "Ghana: IGP Deploys Reinforcement to Nkwanta After Violent Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202603260448.html", time: "2026-03-26T14:53:07Z" },
       { title: "UN adopts Ghana's resolution to class slave trade as crime against humanity – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/25/un-adopts-ghanas-resolution-to-class-slave-trade-as-against-humanity-video", time: "2026-03-25T22:21:55Z" },
       { title: "U.S. Rejects Vote to Recognize Slavery as a ‘Crime Against Humanity’", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/un-slave-trade-vote-us-ghana-israel.html", time: "2026-03-25T21:25:40Z" },
       { title: "UN adopts slavery resolution despite resistance", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/un-adopts-slavery-resolution-despite-resistance?traffic_source=rss", time: "2026-03-25T20:50:15Z" },
@@ -169,6 +179,7 @@ const locations = [
     lat: 30.0444, lng: 31.2357,
     category: "political",
     articles: [
+      { title: "What to know about efforts to end the Iran war after Trump’s ceasefire proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/iran-war-trump-negotiations-ceasefire-updates-b2946317.html", time: "2026-03-26T15:51:37Z" },
       { title: "Egypt says it is ready to host Iran de-escalation talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/egypt-says-it-is-ready-to-host-iran-de-escalation-talks?traffic_source=rss", time: "2026-03-25T23:44:14Z" },
       { title: "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/mohamed-salah-is-liverpool-exit-the-end-or-can-world-cup-spur-egypt-star?traffic_source=rss", time: "2026-03-25T13:44:24Z" },
       { title: "Why is Mohamed Salah leaving Liverpool, and which club will he join next?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next?traffic_source=rss", time: "2026-03-25T12:32:05Z" },
@@ -177,6 +188,22 @@ const locations = [
       { title: "Egypt’s Mohamed Salah to leave Liverpool at end of season after 9-year stay", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/egypts-mohamed-salah-to-leave-liverpool-at-end-of-season-after-9-year-stay?traffic_source=rss", time: "2026-03-24T19:23:24Z" },
       { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
       { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
+    ]
+  },
+  {
+    name: "Johannesburg", country: "South Africa",
+    lat: -26.2041, lng: 28.0473,
+    category: "economic",
+    articles: [
+      { title: "South Africa: Eastern Cape Government Hub Gutted By Fire", source: "AllAfrica", url: "https://allafrica.com/stories/202603260457.html", time: "2026-03-26T15:07:45Z" },
+      { title: "South Africa: Upstreaming Offers SA a Smarter Response to Organised Crime and Corruption", source: "AllAfrica", url: "https://allafrica.com/stories/202603260292.html", time: "2026-03-26T10:38:18Z" },
+      { title: "South Africa: No, South African Student Did Not Receive R630,432 Instead of R6,000 From Aid Scheme Nsfas", source: "AllAfrica", url: "https://allafrica.com/stories/202603260288.html", time: "2026-03-26T10:37:06Z" },
+      { title: "South Africa: Cachalia Says Police Boss Masemola Will Not Be Suspended", source: "AllAfrica", url: "https://allafrica.com/stories/202603260257.html", time: "2026-03-26T10:18:08Z" },
+      { title: "South Africa: Mantashe Tells South Africans Not to Panic Over Fuel Shortages", source: "AllAfrica", url: "https://allafrica.com/stories/202603260256.html", time: "2026-03-26T10:17:45Z" },
+      { title: "South Africa: Mining Company Linked to Zimbabwean President Is Destroying Famous Landmarks", source: "AllAfrica", url: "https://allafrica.com/stories/202603260218.html", time: "2026-03-26T10:00:49Z" },
+      { title: "South Africa's police chief to appear in court over controversial health contract", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyjpxnzdvyo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T16:33:10Z" },
+      { title: "Lebo M sues comedian Learnmore Jonasi claiming Circle of Life misrepresentation", source: "The Guardian", url: "https://www.theguardian.com/culture/2026/mar/25/ebo-m-lion-king-circle-of-life-chant-learnmore-jonasi-lawsuit", time: "2026-03-25T03:06:10Z" },
+      { title: "Iran strikes gulf oil, gas sites as war jolts energy markets, what cost for South Africa ?", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260320-iran-strikes-gulf-oil-gas-sites-as-war-jolts-energy-markets-what-cost-for-south-africa", time: "2026-03-20T22:07:53Z" },
     ]
   },
   {
@@ -201,6 +228,7 @@ const locations = [
       { title: "Senegal to parade Afcon trophy despite title being stripped", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c070kg5rn0ko?at_medium=RSS&at_campaign=rss", time: "2026-03-26T14:35:52Z" },
       { title: "Senegal pledges to fight ‘robbery’ after CAF strips it of AFCON title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/senegal-pledges-to-fight-robbery-after-caf-strips-it-of-afcon-title?traffic_source=rss", time: "2026-03-26T13:04:08Z" },
       { title: "AFCON & CAF: Justice or Chaos?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/game-theory/2026/3/26/aje-onl-afconcaf_v5-260326?traffic_source=rss", time: "2026-03-26T11:13:45Z" },
+      { title: "Senegal vows to fight 'unfair administrative robbery' after CAF strips AFCON title", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/senegal-caf-morocco-cas-paris-b2946048.html", time: "2026-03-26T10:16:48Z" },
       { title: "Senegal appeal to CAS against handing over of AFCON title to Morocco", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/senegal-appeal-to-cas-against-handing-over-of-afcon-title-to-morocco?traffic_source=rss", time: "2026-03-26T06:16:38Z" },
       { title: "Senegal appeal to be heard 'as swiftly as possible'", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c895x5x0jy5o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T16:50:20Z" },
       { title: "Senegal and Morocco tied by religion and trade but divided by AFCON fallout", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/senegal-and-morocco-tied-by-religion-and-trade-but-divided-by-afcon-fallout?traffic_source=rss", time: "2026-03-19T22:51:25Z" },
@@ -212,6 +240,8 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Fifa investigates Congolese FA boss jailed alongside wife and son", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c5y7e411p02o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:07:26Z" },
+      { title: "‘I killed hundreds of people’: Meet the children forced to wage endless war in the DRC", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/war-child-soldiers-rape-drc-b2936747.html", time: "2026-03-26T10:02:24Z" },
+      { title: "Uganda: Uganda to Withdraw Troops From Some Positions in Eastern DR Congo, Says Gen Muhoozi", source: "AllAfrica", url: "https://allafrica.com/stories/202603260167.html", time: "2026-03-26T09:00:23Z" },
       { title: "‘It’s going to give us closure’: could there finally be justice for the murder of Patrice Lumumba?", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/25/the-long-wave-patrice-lumumba-assassination-congo-trial", time: "2026-03-25T14:31:35Z" },
       { title: "‘Extraordinary event’ for mountain gorillas as new twins born in DRC", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/24/mountain-gorillas-twins-born-drc-aoe", time: "2026-03-24T12:42:56Z" },
       { title: "‘She gave her life to protect the richness of Congo’: inside the deadly assault on Upemba wildlife park", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/22/upemba-national-park-drc-militia-assault-rangers-killed-aoe", time: "2026-03-22T12:00:21Z" },
@@ -219,13 +249,26 @@ const locations = [
     ]
   },
   {
-    name: "Johannesburg", country: "South Africa",
-    lat: -26.2041, lng: 28.0473,
-    category: "economic",
+    name: "Kampala", country: "Uganda",
+    lat: 0.3476, lng: 32.5825,
+    category: "political",
     articles: [
-      { title: "South Africa's police chief to appear in court over controversial health contract", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyjpxnzdvyo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T16:33:10Z" },
-      { title: "Lebo M sues comedian Learnmore Jonasi claiming Circle of Life misrepresentation", source: "The Guardian", url: "https://www.theguardian.com/culture/2026/mar/25/ebo-m-lion-king-circle-of-life-chant-learnmore-jonasi-lawsuit", time: "2026-03-25T03:06:10Z" },
-      { title: "Iran strikes gulf oil, gas sites as war jolts energy markets, what cost for South Africa ?", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260320-iran-strikes-gulf-oil-gas-sites-as-war-jolts-energy-markets-what-cost-for-south-africa", time: "2026-03-20T22:07:53Z" },
+      { title: "Uganda: Kampala Youth Pledge Individual Responsibility in Climate Change Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202603260479.html", time: "2026-03-26T15:19:07Z" },
+      { title: "Uganda: Molly Katanga Begins Her Defence, Narrates to Court How She Was Beaten", source: "AllAfrica", url: "https://allafrica.com/stories/202603260478.html", time: "2026-03-26T15:18:38Z" },
+      { title: "Uganda: Uganda Military Chief Says Country Would Join War If Israel Faces Defeat", source: "AllAfrica", url: "https://allafrica.com/stories/202603260463.html", time: "2026-03-26T15:11:06Z" },
+      { title: "'I intend to go back to my country': Exiled Ugandan opposition leader Bobi Wine", source: "France 24", url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260324-i-intend-to-go-back-to-my-country-exiled-ugandan-opposition-leader-bobi-wine", time: "2026-03-24T16:06:59Z" },
+      { title: "‘I have fought for Aaron’: A Ugandan mother confronts disability and stigma", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/21/i-have-fought-for-aaron-a-ugandan-mother-confronts-disability-and-stigma?traffic_source=rss", time: "2026-03-21T09:42:23Z" },
+    ]
+  },
+  {
+    name: "Bamako", country: "Mali",
+    lat: 12.6392, lng: -8.0029,
+    category: "conflict",
+    articles: [
+      { title: "Iran starts to formalize its chokehold on the Strait of Hormuz with a 'toll booth' regime", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/iran-tehran-united-nations-strait-of-hormuz-ships-b2946521.html", time: "2026-03-26T19:20:24Z" },
+      { title: "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/26/iran-war-live-us-demands-tehran-accept-defeat-israel-pounds-lebanon?traffic_source=rss", time: "2026-03-26T00:00:00Z" },
+      { title: "Iran calls US proposal to end war ‘maximalist, unreasonable’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/iran-calls-us-proposal-to-end-war-maximalist-unreasonable?traffic_source=rss", time: "2026-03-25T15:11:36Z" },
+      { title: "Trump threatens to deploy ICE to airports amid Homeland Security shutdown", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/trump-threatens-to-deploy-ice-to-airports-amid-homeland-security-shutdown?traffic_source=rss", time: "2026-03-21T16:57:54Z" },
     ]
   },
   {
@@ -249,29 +292,11 @@ const locations = [
     ]
   },
   {
-    name: "Bamako", country: "Mali",
-    lat: 12.6392, lng: -8.0029,
-    category: "conflict",
-    articles: [
-      { title: "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/26/iran-war-live-us-demands-tehran-accept-defeat-israel-pounds-lebanon?traffic_source=rss", time: "2026-03-26T00:00:00Z" },
-      { title: "Iran calls US proposal to end war ‘maximalist, unreasonable’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/iran-calls-us-proposal-to-end-war-maximalist-unreasonable?traffic_source=rss", time: "2026-03-25T15:11:36Z" },
-      { title: "Trump threatens to deploy ICE to airports amid Homeland Security shutdown", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/trump-threatens-to-deploy-ice-to-airports-amid-homeland-security-shutdown?traffic_source=rss", time: "2026-03-21T16:57:54Z" },
-    ]
-  },
-  {
-    name: "Kampala", country: "Uganda",
-    lat: 0.3476, lng: 32.5825,
-    category: "political",
-    articles: [
-      { title: "'I intend to go back to my country': Exiled Ugandan opposition leader Bobi Wine", source: "France 24", url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260324-i-intend-to-go-back-to-my-country-exiled-ugandan-opposition-leader-bobi-wine", time: "2026-03-24T16:06:59Z" },
-      { title: "‘I have fought for Aaron’: A Ugandan mother confronts disability and stigma", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/21/i-have-fought-for-aaron-a-ugandan-mother-confronts-disability-and-stigma?traffic_source=rss", time: "2026-03-21T09:42:23Z" },
-    ]
-  },
-  {
     name: "Cape Town", country: "South Africa",
     lat: -33.9249, lng: 18.4241,
     category: "political",
     articles: [
+      { title: "South Africa: Cape Town Gang Violence Intensifies - South African News Briefs - March 26, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202603260103.html", time: "2026-03-26T05:37:37Z" },
       { title: "Airbnb in firing line as Cape Town’s housing crisis catches up with middle class", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/airbnb-cape-town-housing-crisis-middle-class", time: "2026-03-24T09:21:04Z" },
       { title: "Ex-teacher accused of Scotland school abuse found guilty of sex attack in South Africa", source: "BBC News", url: "https://www.bbc.com/news/articles/c98kdp0z9gyo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:50:10Z" },
     ]
@@ -282,7 +307,45 @@ const locations = [
     category: "political",
     articles: [
       { title: "Zimbabwe says 15 nationals killed after being lured to fight for Russia", source: "BBC News", url: "https://www.bbc.com/news/articles/clyxevz45x9o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T10:28:32Z" },
+      { title: "Zimbabwe: Mnangagwa Falls Over Himself in Chivayo Praise, Says Controversial Businessman Has Golden Heart", source: "AllAfrica", url: "https://allafrica.com/stories/202603260025.html", time: "2026-03-26T04:42:28Z" },
       { title: "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/ukraine-war-briefing-zelenskyy-says-us-has-linked-security-guarantees-to-ceding-of-donbas", time: "2026-03-26T03:59:51Z" },
+    ]
+  },
+  {
+    name: "Abuja", country: "Nigeria",
+    lat: 9.0579, lng: 7.4951,
+    category: "political",
+    articles: [
+      { title: "Nigeria: Court Orders Arrest of Turaki, Factional PDP Chairman", source: "AllAfrica", url: "https://allafrica.com/stories/202603260475.html", time: "2026-03-26T15:17:16Z" },
+      { title: "Nigeria: Court Grants Speedy Hearing As Terror Suspects Admit Spying On U.S., Israeli Embassies", source: "AllAfrica", url: "https://allafrica.com/stories/202603260299.html", time: "2026-03-26T10:44:03Z" },
+      { title: "Nigeria: Maiduguri Bombings Show New Threat to Civilians", source: "AllAfrica", url: "https://allafrica.com/stories/202603260191.html", time: "2026-03-26T09:51:33Z" },
+    ]
+  },
+  {
+    name: "Kigali", country: "Rwanda",
+    lat: -1.9403, lng: 29.8739,
+    category: "political",
+    articles: [
+      { title: "Rwanda: Rwanda Urges De-Escalation Amid Middle East Tensions", source: "AllAfrica", url: "https://allafrica.com/stories/202603260474.html", time: "2026-03-26T15:16:51Z" },
+      { title: "Rwanda batter becomes youngest women's T20 centurion", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cdxdrk9jzzqo?at_medium=RSS&at_campaign=rss", time: "2026-03-21T19:02:56Z" },
+    ]
+  },
+  {
+    name: "Windhoek", country: "Namibia",
+    lat: -22.5609, lng: 17.0658,
+    category: "economic",
+    articles: [
+      { title: "Namibia: Nandi-Ndaitwah Assesses Zambezi Floods As School Close, Communities Refuse to Relocate", source: "AllAfrica", url: "https://allafrica.com/stories/202603260332.html", time: "2026-03-26T12:03:12Z" },
+      { title: "Elon Musk's Starlink blocked from operating in Namibia", source: "BBC News", url: "https://www.bbc.com/news/articles/crl1ny1g6e0o?at_medium=RSS&at_campaign=rss", time: "2026-03-24T10:50:17Z" },
+    ]
+  },
+  {
+    name: "Monrovia", country: "Liberia",
+    lat: 6.2907, lng: -10.7605,
+    category: "political",
+    articles: [
+      { title: "Liberia: Missing Paper Trail Shakes U.S.$6.2m Corruption Case Against Tweah, Others", source: "AllAfrica", url: "https://allafrica.com/stories/202603260273.html", time: "2026-03-26T10:24:33Z" },
+      { title: "Liberia: French President Declines Boakai's Request to Mediate Guinea-Liberia Border Dispute", source: "AllAfrica", url: "https://allafrica.com/stories/202603260203.html", time: "2026-03-26T09:56:26Z" },
     ]
   },
   {
@@ -302,14 +365,6 @@ const locations = [
     ]
   },
   {
-    name: "Kigali", country: "Rwanda",
-    lat: -1.9403, lng: 29.8739,
-    category: "political",
-    articles: [
-      { title: "Rwanda batter becomes youngest women's T20 centurion", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cdxdrk9jzzqo?at_medium=RSS&at_campaign=rss", time: "2026-03-21T19:02:56Z" },
-    ]
-  },
-  {
     name: "Goma", country: "DR Congo",
     lat: -1.6585, lng: 29.2206,
     category: "humanitarian",
@@ -323,14 +378,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Inside the alleged Russian operation to trigger anti-government protests in Angola", source: "BBC News", url: "https://www.bbc.com/news/articles/c1mklzkz41jo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T00:18:10Z" },
-    ]
-  },
-  {
-    name: "Windhoek", country: "Namibia",
-    lat: -22.5609, lng: 17.0658,
-    category: "economic",
-    articles: [
-      { title: "Elon Musk's Starlink blocked from operating in Namibia", source: "BBC News", url: "https://www.bbc.com/news/articles/crl1ny1g6e0o?at_medium=RSS&at_campaign=rss", time: "2026-03-24T10:50:17Z" },
     ]
   },
   {
@@ -363,6 +410,22 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "South Sudan and Mauritius impose electricity curbs as Iran war triggers fuel fears in Africa", source: "BBC News", url: "https://www.bbc.com/news/articles/cq8wkq1n9epo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:04:51Z" },
+    ]
+  },
+  {
+    name: "Mogadishu", country: "Somalia",
+    lat: 2.0469, lng: 45.3182,
+    category: "conflict",
+    articles: [
+      { title: "Somalia: Somalia PM Dismisses Two State Ministers in Cabinet Reshuffle", source: "AllAfrica", url: "https://allafrica.com/stories/202603260464.html", time: "2026-03-26T15:11:23Z" },
+    ]
+  },
+  {
+    name: "Mbabane", country: "Eswatini",
+    lat: -26.3054, lng: 31.1367,
+    category: "political",
+    articles: [
+      { title: "Eswatini to repatriate Cambodian man deported by US", source: "The Independent", url: "https://www.independent.co.uk/asia/southeast-asia/donald-trump-us-deportation-cambodia-eswatini-b2945887.html", time: "2026-03-26T04:52:53Z" },
     ]
   },
 ];

@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:12 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:40 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:13 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Trump confirms May meeting with Xi Jinping as Iran war forces postponement", "Trump’s trip to meet Xi Jinping in China rescheduled for May due to Iran war", "Trump to visit Xi Jinping in China on May 14 and 15 after Iran war delay"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Trump-Xi meeting rescheduled to May due to Iran war implications</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["Malaysia Says Iran Will Allow Its Ships to Pass Through the Strait of Hormuz", "Malaysia’s prime minister says Iran talks should end war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Malaysia facilitates Iran dialogue to resolve regional shipping tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["North Korea’s Kim meets Lukashenko, slams ‘pressure ​on Belarus from West’", "Lukashenko greeted by Kim Jong Un on first visit to North Korea", "Kim Jong Un gifted gun after Belarus friendship treaty"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Kim Jong Un hosts Lukashenko, strengthens Belarus-North Korea ties</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["China bars executives at Meta-owned AI company from leaving country"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">China restricts Meta AI executives from leaving country</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["&#39;We are being choked&#39;: Philippines transport workers strike over fuel costs", "Philippines farmers feeling the pinch of the war on Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Iran war disrupts Philippines economy affecting transport and agriculture</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ex-Taiwan presidential hopeful sentenced to 17 years for corruption", "Chinese Education Influencer’s Sudden Death Prompts Grief, and Reflection"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan corruption conviction and Chinese influencer death mark domestic developments</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:41 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["N Korea, Belarus sign ‘friendship’ treaty", "Kim Jong Un gifted gun after Belarus friendship treaty", "North Korea and Belarus sign ‘fundamental’ treaty as Lukashenko visits Kim in Pyongyang"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">North Korea and Belarus deepen ties with friendship treaty signed</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["US lawmakers pan China for interfering in WTO conference", "The Iran war is costing China dearly, too", "China threatens Mexico with trade reprisals over 50% import duties", "The Guardian view on China and Iran: the war poses bigger questions for Beijing than where to get its oil | Editorial"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">China faces international pressure over WTO interference and Iran war costs</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Japan to join drills on Philippine soil, first since WWII", "U.S. envoy calls on Taiwan legislators to pass special defense budget", "Circling Taiwan in style"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Taiwan strengthens defense posture amid regional security concerns</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Former Taipei Mayor Ko sentenced to 17 years in prison", "Number of Taiwanese missing in China rising"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan experiences internal governance crisis and missing persons cases</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mideast war fuels disinformation about Taiwan’s gas supply", "EDITORIAL: Taiwan must not let its guard down"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan confronts disinformation and security vulnerabilities</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["China bans runners over ‘obstructive’ marathon behavior"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:20%"></div></div><span class="ai-bullet-text">China implements sports behavior restrictions on marathon runners</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -116,14 +116,60 @@ const locations = [
     lat: 39.9042, lng: 116.4074,
     category: "military",
     articles: [
+      { title: "US lawmakers pan China for interfering in WTO conference", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/03/27/2003854563", time: "2026-03-27T00:00:00Z" },
+      { title: "The Iran war is costing China dearly, too", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/27/2003854542", time: "2026-03-27T00:00:00Z" },
+      { title: "China bans runners over ‘obstructive’ marathon behavior", source: "Taipei Times", url: "https://www.taipeitimes.com/News/sport/archives/2026/03/27/2003854554", time: "2026-03-27T00:00:00Z" },
+      { title: "China threatens Mexico with trade reprisals over 50% import duties", source: "South China Morning Post", url: "https://www.scmp.com/news/china/article/3348054/china-threatens-mexico-trade-reprisals-over-50-import-duties?utm_source=rss_feed", time: "2026-03-26T19:04:39Z" },
       { title: "The Guardian view on China and Iran: the war poses bigger questions for Beijing than where to get its oil | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/26/the-guardian-view-on-china-and-iran-the-war-poses-bigger-questions-for-beijing-than-where-to-get-its-oil", time: "2026-03-26T18:50:30Z" },
+      { title: "Can Donald Trump end his war on Iran in time for rescheduled China trip?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348033/can-donald-trump-end-his-war-iran-time-rescheduled-china-trip?utm_source=rss_feed", time: "2026-03-26T15:00:09Z" },
+      { title: "UK blocks China wind turbine project on ‘national security’ amid tense business climate", source: "South China Morning Post", url: "https://www.scmp.com/economy/global-economy/article/3348039/uk-blocks-china-wind-turbine-project-national-security-amid-tense-business-climate?utm_source=rss_feed", time: "2026-03-26T13:30:04Z" },
+      { title: "At Boao forum, China reassures foreign investors as Iran, tariff wars rattle global trade", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/at-boao-forum-china-reassures-foreign-investors-as-iran-tariff-war-rattle-global-trade", time: "2026-03-26T13:15:00Z" },
+      { title: "Trump eyes China deal, but dragging out talks risks backlash, warns former diplomat", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348020/trump-eyes-china-deal-dragging-out-talks-risks-backlash-warns-former-diplomat?utm_source=rss_feed", time: "2026-03-26T13:00:13Z" },
+      { title: "China’s CNOOC to boost oil and gas output amid Middle East strife", source: "South China Morning Post", url: "https://www.scmp.com/business/article/3348035/chinas-cnooc-boost-oil-and-gas-output-amid-middle-east-strife?utm_source=rss_feed", time: "2026-03-26T12:36:39Z" },
+      { title: "As oil-shocked world turns to renewables, China will reap the rewards", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3347634/oil-shocked-world-turns-renewables-china-will-reap-rewards?utm_source=rss_feed", time: "2026-03-26T12:30:07Z" },
+      { title: "Germany’s Merz floats EU-China trade deal as European capitals soften on Beijing", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348030/germanys-merz-floats-eu-china-trade-deal-capitals-soften-beijing?utm_source=rss_feed", time: "2026-03-26T12:00:51Z" },
+      { title: "What can the Iran war tell China about missile interception?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347981/iran-war-shows-why-china-must-change-course-missile-interception-tech-analysis?utm_source=rss_feed", time: "2026-03-26T10:00:18Z" },
+      { title: "China bans runner after mid-marathon splits goes viral", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-bans-runner-after-mid-marathon-splits-goes-viral", time: "2026-03-26T09:31:00Z" },
+      { title: "China urges peace talks in Iran war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-urges-peace-talks-in-iran-war", time: "2026-03-26T09:17:01Z" },
+      { title: "China warns US against building ammunition facility in the Philippines", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-warns-us-against-building-ammunition-facility-in-philippines", time: "2026-03-26T09:13:00Z" },
+      { title: "Singapore leader sees China helping small groups realise big results for Asia", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347989/singapore-leader-sees-china-helping-small-groups-realise-big-results-asia?utm_source=rss_feed", time: "2026-03-26T09:00:44Z" },
+      { title: "Trump sets new China visit date as Iran war stokes economic risks", source: "South China Morning Post", url: "https://www.scmp.com/plus/news/china/diplomacy/article/3347988/trump-sets-new-china-visit-date-iran-war-stokes-economic-risks?utm_source=rss_feed", time: "2026-03-26T09:00:29Z" },
+      { title: "‘Demand shock’: China cannot escape the impact of a long Iran war, analyst warns", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347932/demand-shock-china-cannot-escape-impact-long-iran-war-analyst-warns?utm_source=rss_feed", time: "2026-03-26T08:00:09Z" },
+      { title: "Trump confirms May visit to China after Iran war forces delay to landmark trip", source: "The Independent", url: "https://www.independent.co.uk/asia/china/trump-china-visit-xi-jinping-iran-war-b2945886.html", time: "2026-03-26T06:46:26Z" },
+      { title: "As Iran war rages, China links peace to economic growth at Boao Forum", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347963/iran-war-rages-china-links-peace-economic-growth-boao-forum?utm_source=rss_feed", time: "2026-03-26T06:39:36Z" },
       { title: "Chinese Education Influencer’s Sudden Death Prompts Grief, and Reflection", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/asia/chinese-influencer-zhang-death.html", time: "2026-03-26T04:24:08Z" },
+      { title: "China says ‘glimmer of hope’ on Iran war talks", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-says-glimmer-of-hope-on-iran-war-talks", time: "2026-03-26T04:10:00Z" },
+      { title: "China opens world’s largest ship data set that could be used to train drones", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347679/china-opens-worlds-largest-ship-data-set-could-be-used-train-drones?utm_source=rss_feed", time: "2026-03-26T04:06:50Z" },
+      { title: "China plays a critical role as world forges new pathways: PM Wong", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-has-critical-role-in-shaping-resilient-global-order-says-pm-wong", time: "2026-03-26T03:43:03Z" },
+      { title: "China’s weight-loss drug makers take on global giants as Novo Nordisk patent expires", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3347869/chinas-weight-loss-drug-makers-take-global-giants-novo-nordisk-patent-expires?utm_source=rss_feed", time: "2026-03-26T03:00:08Z" },
+      { title: "Euro, Chinese yuan to end US dollar dominance, top economist says", source: "South China Morning Post", url: "https://www.scmp.com/plus/news/china/money-wealth/article/3347930/euro-chinese-yuan-end-us-dollar-dominance-top-economist-says?utm_source=rss_feed", time: "2026-03-26T02:31:08Z" },
       { title: "Trump confirms May meeting with Xi Jinping as Iran war forces postponement", source: "BBC News", url: "https://www.bbc.com/news/articles/c05dpr1m71go?at_medium=RSS&at_campaign=rss", time: "2026-03-26T01:42:26Z" },
+      { title: "Chinese satellite performs landmark refuelling test in low Earth orbit", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347888/chinese-satellite-performs-landmark-refuelling-test-low-earth-orbit?utm_source=rss_feed", time: "2026-03-26T01:31:00Z" },
       { title: "Trump’s trip to meet Xi Jinping in China rescheduled for May due to Iran war", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/trump-xi-jinping-china-trip-rescheduled-may", time: "2026-03-26T00:39:27Z" },
+      { title: "Iran war could boost China’s ‘petroyuan’ and weaken US dollar dominance, analysts say", source: "South China Morning Post", url: "https://www.scmp.com/economy/global-economy/article/3347893/iran-war-could-boost-chinas-petroyuan-and-weaken-us-dollar-dominance-analysts-say?utm_source=rss_feed", time: "2026-03-26T00:00:41Z" },
+      { title: "Chinese nationals, companies charged in US with smuggling AI chips and drug trafficking", source: "South China Morning Post", url: "https://www.scmp.com/news/us/article/3347923/chinese-nationals-companies-charged-us-smuggling-ai-chips-and-drug-trafficking?utm_source=rss_feed", time: "2026-03-25T23:50:59Z" },
       { title: "China bars executives at Meta-owned AI company from leaving country", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/25/meta-manus-china-executives-banned/", time: "2026-03-25T22:17:01Z" },
+      { title: "Why China’s strategy to stay out of Iran war is working – and crisis may spur opportunity", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347827/why-chinas-strategy-stay-out-iran-war-working-and-crisis-may-spur-opportunity?utm_source=rss_feed", time: "2026-03-25T22:00:08Z" },
+      { title: "Asian-Americans say they are still seen as foreign, study finds", source: "South China Morning Post", url: "https://www.scmp.com/news/us/society-culture/article/3347918/asian-americans-say-they-are-still-seen-foreign-study-finds?utm_source=rss_feed", time: "2026-03-25T20:50:58Z" },
       { title: "Trump to visit Xi Jinping in China on May 14 and 15 after Iran war delay", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/trump-to-visit-xi-jinping-in-china-on-may-14-and-15-after-iran-war-delay?traffic_source=rss", time: "2026-03-25T20:20:16Z" },
+      { title: "Xi-Trump summit: White House locks in new dates in May", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347914/xi-trump-summit-white-house-locks-new-dates-may?utm_source=rss_feed", time: "2026-03-25T18:46:14Z" },
       { title: "Trump Had His Eye on China, Then Plunged Into a New Mideast War", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/us/politics/trump-china-mideast.html", time: "2026-03-25T16:56:13Z" },
+      { title: "Airbus wins Chinese airline’s 101-plane order in victory over Boeing in key market", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347905/airbus-wins-chinese-airlines-101-plane-order-victory-over-boeing-key-market?utm_source=rss_feed", time: "2026-03-25T15:00:43Z" },
+      { title: "Should China be worried about Japan’s maritime force overhaul?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347889/should-china-be-worried-about-japans-maritime-force-overhaul?utm_source=rss_feed", time: "2026-03-25T15:00:08Z" },
+      { title: "Semicon China: AI, advanced packaging set to drive country’s chip industry growth", source: "South China Morning Post", url: "https://www.scmp.com/tech/big-tech/article/3347902/semicon-china-ai-advanced-packaging-set-drive-countrys-chip-industry-growth?utm_source=rss_feed", time: "2026-03-25T14:13:25Z" },
+      { title: "Pinduoduo operator’s profit slides as Chinese firm cites higher reinvestment", source: "South China Morning Post", url: "https://www.scmp.com/tech/big-tech/article/3347894/pinduoduo-operator-pdds-profit-slides-chinese-firm-cites-higher-reinvestment?utm_source=rss_feed", time: "2026-03-25T12:45:50Z" },
+      { title: "China names AI tokens after the yuan. Should the US worry for the dollar?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347887/china-names-trillions-ai-token-after-yuan-should-us-worry-dollar?utm_source=rss_feed", time: "2026-03-25T12:00:26Z" },
+      { title: "Former defence exec Tan Ruisong given death sentence for ‘exceptional’ corruption", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347885/former-defence-exec-tan-ruisong-given-death-sentence-exceptional-corruption?utm_source=rss_feed", time: "2026-03-25T12:00:08Z" },
+      { title: "Are US and China looking for ‘minimum stability’ after going through a ‘rough patch’?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347855/are-us-and-china-looking-minimum-stability-after-going-through-rough-patch?utm_source=rss_feed", time: "2026-03-25T10:00:19Z" },
+      { title: "Amid struggles at home, 80% of Chinese companies in EU plan more investment", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347861/amid-struggles-home-80-chinese-companies-eu-plan-more-investment?utm_source=rss_feed", time: "2026-03-25T09:02:48Z" },
+      { title: "China-owned vessel secures rare Strait of Hormuz transit as Iran war grinds on", source: "South China Morning Post", url: "https://www.scmp.com/economy/global-economy/article/3347860/china-owned-vessel-secures-rare-strait-hormuz-transit-iran-war-grinds?utm_source=rss_feed", time: "2026-03-25T09:00:35Z" },
+      { title: "China calls for US-Iran talks as war upends Gulf states’ global ties", source: "South China Morning Post", url: "https://www.scmp.com/plus/news/world/middle-east/article/3347856/china-calls-us-iran-talks-war-upends-gulf-states-global-ties?utm_source=rss_feed", time: "2026-03-25T09:00:16Z" },
       { title: "US and China both believe the other is a declining power", source: "NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5727653/us-and-china-both-believe-the-other-is-a-declining-power", time: "2026-03-25T08:41:51Z" },
+      { title: "Why a global private-credit meltdown would hit China hard", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3347602/why-global-private-credit-meltdown-would-hit-china-hard?utm_source=rss_feed", time: "2026-03-25T08:30:09Z" },
+      { title: "Visa-free travel, rising foreign visitors boost luxury hotel growth in China", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3347704/visa-free-travel-rising-foreign-visitors-boost-luxury-hotel-growth-china?utm_source=rss_feed", time: "2026-03-25T04:30:08Z" },
+      { title: "China’s 7-day hypersonic design; Andy Lau’s Ming mystery: 7 science highlights", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347780/top-china-arms-experts-vanish-andy-laus-ming-dynasty-mystery-7-science-highlights?utm_source=rss_feed", time: "2026-03-25T04:12:08Z" },
+      { title: "A missile launch pad on the seabed? Chinese simulation suggests it’s possible", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347675/missile-launch-pad-seabed-chinese-simulation-suggests-its-possible?utm_source=rss_feed", time: "2026-03-25T01:00:14Z" },
+      { title: "US unlikely to convince China to join new nuclear arms control agreement, experts say", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347775/us-unlikely-get-china-join-new-nuclear-arms-control-agreement-say-experts?utm_source=rss_feed", time: "2026-03-24T23:02:23Z" },
       { title: "Russian Oil Shipment Puts Focus on Kremlin Spy Outpost in Cuba", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/us/politics/cuba-russia-china.html", time: "2026-03-24T16:45:39Z" },
       { title: "Australia and EU seal trade deal to cut reliance on China’s rare earths", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/australia-and-eu-seal-trade-deal-to-cut-reliance-on-chinas-rare-earths?traffic_source=rss", time: "2026-03-24T11:48:03Z" },
       { title: "China dials back on fuel price hikes to 'reduce burden' on drivers", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyvxejqyx4o?at_medium=RSS&at_campaign=rss", time: "2026-03-24T05:56:42Z" },
@@ -143,6 +189,12 @@ const locations = [
     lat: 37.5665, lng: 126.978,
     category: "diplomacy",
     articles: [
+      { title: "N Korea, Belarus sign ‘friendship’ treaty", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/03/27/2003854570", time: "2026-03-27T00:00:00Z" },
+      { title: "South Korea to roll out $17 billion ‘wartime’ budget", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/south-korea-to-roll-out-17-billion-wartime-budget", time: "2026-03-26T09:28:00Z" },
+      { title: "South Korea’s population drop eases, raising hopes of reversal", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/south-koreas-population-drop-eases-raising-hopes-of-reversal", time: "2026-03-26T07:05:00Z" },
+      { title: "Air quality hits unhealthy levels in Seoul, other parts of South Korea", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/air-quality-hits-unhealthy-levels-in-seoul-other-parts-of-south-korea", time: "2026-03-26T06:59:00Z" },
+      { title: "South Korea to raise fuel price cap but expand tax break to cushion blow from Iran conflict", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/south-korea-to-raise-fuel-price-cap-but-expand-tax-break-to-cushion-blow-from-iran-conflict", time: "2026-03-26T06:44:00Z" },
+      { title: "Popularity of ‘energy bars for the nose’ among South Korean students sparks concern over lung damage", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/popularity-of-energy-bars-for-the-nose-among-south-korean-students-sparks-concern-over-lung-damage", time: "2026-03-26T04:51:00Z" },
       { title: "Take Shorter Showers: South Korea Kicks Off an Energy-Saving Drive", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/south-korea-energy-savings.html", time: "2026-03-24T12:30:09Z" },
       { title: "‘So awesome’: BTS fans on K-pop’s biggest comeback", source: "The Guardian", url: "https://www.theguardian.com/music/2026/mar/22/bts-concert-arirang-kpop-fans-comeback-south-korea-seoul", time: "2026-03-22T00:32:32Z" },
       { title: "Pop megastars BTS electrify historic centre of Seoul with comeback concert", source: "BBC News", url: "https://www.bbc.com/news/articles/cj371jr203ko?at_medium=RSS&at_campaign=rss", time: "2026-03-21T22:01:05Z" },
@@ -166,6 +218,11 @@ const locations = [
     lat: 35.6762, lng: 139.6503,
     category: "diplomacy",
     articles: [
+      { title: "Japan to join drills on Philippine soil, first since WWII", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/03/27/2003854573", time: "2026-03-27T00:00:00Z" },
+      { title: "SPEAK UP: Hit Japan comics Chibi Maruko, Crayon Shin to collab (2/2) 《櫻桃小丸子》、《蠟筆小新》 相見歡（下）", source: "Taipei Times", url: "https://www.taipeitimes.com/News/lang/archives/2026/03/27/2003854527", time: "2026-03-27T00:00:00Z" },
+      { title: "Japan to join army drills on Philippine soil for first time since World War II", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/japan-to-join-army-drills-on-philippine-soil-in-first-since-wwii", time: "2026-03-26T03:55:00Z" },
+      { title: "Japan starts release of state-held oil to stabilise supplies amid Iran war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-starts-release-of-state-held-oil-to-stabilise-supplies-amid-iran-war", time: "2026-03-26T02:59:00Z" },
+      { title: "Senior Japanese minister expresses regret over military officer’s arrest at Chinese embassy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347833/senior-japanese-minister-expresses-regret-over-army-officers-arrest-chinese-embassy?utm_source=rss_feed", time: "2026-03-25T07:15:48Z" },
       { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
       { title: "Unease in Japan after Trump cites Pearl Harbor to defend Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/unease-in-japan-after-trump-uses-pearl-harbor-to-defend-iran-war?traffic_source=rss", time: "2026-03-21T14:34:12Z" },
       { title: "Japan beat Australia to lift Women’s Asian Cup title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/japan-beat-australia-to-lift-womens-asian-cup-title?traffic_source=rss", time: "2026-03-21T11:57:41Z" },
@@ -178,7 +235,51 @@ const locations = [
       { title: "Using Charm and Restraint, Japan’s Leader Mostly Avoids Trump’s Wrath", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/trump-japan-prime-minister-meeting.html", time: "2026-03-20T04:01:24Z" },
       { title: "Trump downplays Iran war's impact on global energy prices", source: "CBS News", url: "https://www.cbsnews.com/video/trump-downplays-iran-wars-impact-on-global-energy-prices/", time: "2026-03-19T23:27:00Z" },
       { title: "Trump compares Iran strikes to Pearl Harbor as he meets Japan’s PM", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/trump-compares-iran-strikes-to-pearl-harbor-as-he-meets-japans-pm?traffic_source=rss", time: "2026-03-19T20:48:37Z" },
-      { title: "Trump brings up Pearl Harbor while meeting with Japan's prime minister", source: "CBS News", url: "https://www.cbsnews.com/news/trump-pearl-harbor-meeting-japanese-prime-minister/", time: "2026-03-19T20:31:28Z" },
+    ]
+  },
+  {
+    name: "Taipei", country: "Taiwan",
+    lat: 25.033, lng: 121.5654,
+    category: "territorial",
+    articles: [
+      { title: "Former Taipei Mayor Ko sentenced to 17 years in prison", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854547", time: "2026-03-27T00:00:00Z" },
+      { title: "Number of Taiwanese missing in China rising", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/03/27/2003854558", time: "2026-03-27T00:00:00Z" },
+      { title: "Mideast war fuels disinformation about Taiwan’s gas supply", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/03/27/2003854561", time: "2026-03-27T00:00:00Z" },
+      { title: "U.S. envoy calls on Taiwan legislators to pass special defense budget", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/03/27/2003854562", time: "2026-03-27T00:00:00Z" },
+      { title: "EDITORIAL: Taiwan must not let its guard down", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/27/2003854536", time: "2026-03-27T00:00:00Z" },
+      { title: "Judge goes hitless; Taiwan’s Teng named", source: "Taipei Times", url: "https://www.taipeitimes.com/News/sport/archives/2026/03/27/2003854553", time: "2026-03-27T00:00:00Z" },
+      { title: "Circling Taiwan in style", source: "Taipei Times", url: "https://www.taipeitimes.com/News/feat/archives/2026/03/27/2003854544", time: "2026-03-27T00:00:00Z" },
+      { title: "US supports Taiwan on defence and energy, says senior diplomat", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/us-supports-taiwan-on-defence-energy-senior-diplomat-says", time: "2026-03-26T13:48:00Z" },
+      { title: "Taiwanese court jails former Taipei mayor Ko Wen-je for 17 years for corruption", source: "South China Morning Post", url: "https://www.scmp.com/news/china/politics/article/3348010/taiwanese-court-jails-former-taipei-mayor-ko-wen-je-17-years-corruption?utm_source=rss_feed", time: "2026-03-26T11:00:07Z" },
+      { title: "Ex-Taiwan presidential hopeful sentenced to 17 years for corruption", source: "BBC News", url: "https://www.bbc.com/news/articles/cn9q3dw3qj7o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T10:11:38Z" },
+      { title: "Former Taipei mayor sentenced to 17 years in corruption case", source: "Straits Times", url: "https://www.straitstimes.com/asia/former-taipei-mayor-sentenced-to-17-years-in-corruption-case", time: "2026-03-26T08:47:03Z" },
+      { title: "Ex-Taipei mayor jailed 17 years for corruption", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/ex-taipei-mayor-jailed-17-years-for-corruption", time: "2026-03-26T08:07:00Z" },
+      { title: "Japan says it shares US view on Taiwan despite no mention after summit", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-says-it-shares-us-view-on-taiwan-despite-no-mention-after-summit", time: "2026-03-26T06:50:00Z" },
+      { title: "Middle East war fuels disinformation about Taiwan’s gas supply", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/middle-east-war-fuels-disinformation-about-taiwans-gas-supply", time: "2026-03-26T05:27:00Z" },
+      { title: "Taiwan says next US arms purchase is on track after guarantee", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/taiwan-indicates-next-us-arms-sale-is-on-track-after-receiving-guarantee-letter", time: "2026-03-26T02:21:57Z" },
+      { title: "Can Taiwan fulfil its Asia-Pacific drone hub goal with a ‘non-red’ supply chain push?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347745/can-taiwan-fulfil-its-asia-pacific-drone-hub-goal-non-red-supply-chain-push?utm_source=rss_feed", time: "2026-03-25T02:00:14Z" },
+      { title: "How a medieval English abbey became a Chinese wedding destination", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd8k82p9j5o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T09:27:40Z" },
+    ]
+  },
+  {
+    name: "Hong Kong", country: "China",
+    lat: 22.3193, lng: 114.1694,
+    category: "trade",
+    articles: [
+      { title: "Caution for visitors to Hong Kong", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/27/2003854537", time: "2026-03-27T00:00:00Z" },
+      { title: "China still on track to supplant US as world’s No 1 economy in 10 years: academic", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347863/china-still-track-supplant-us-worlds-no-1-economy-10-years-academic?utm_source=rss_feed", time: "2026-03-25T14:00:10Z" },
+      { title: "‘They can reach me wherever’: China using financial tactics to coerce people who flee, says report", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/china-hong-kong-dissidents-transnational-repression-report", time: "2026-03-25T13:44:21Z" },
+      { title: "Former Hong Kong exchange executive Ba Shusong reported out of public sight", source: "South China Morning Post", url: "https://www.scmp.com/business/markets/article/3347879/former-hong-kong-exchange-executive-ba-shusong-reported-out-public-sight?utm_source=rss_feed", time: "2026-03-25T10:30:21Z" },
+      { title: "Pop Mart shares dive despite soaring profit as investors fear Labubu dependence", source: "South China Morning Post", url: "https://www.scmp.com/business/article/3347851/pop-mart-shares-dive-despite-soaring-profit-investors-fear-labubu-dependence?utm_source=rss_feed", time: "2026-03-25T08:30:12Z" },
+      { title: "China consumer firms post strong results but analysts warn recovery may lag", source: "South China Morning Post", url: "https://www.scmp.com/business/banking-finance/article/3347779/china-consumer-stocks-jump-strong-earnings-analysts-warn-limited-recovery?utm_source=rss_feed", time: "2026-03-25T01:39:46Z" },
+      { title: "Hong Kong booksellers arrested for 'seditious publications' as Jimmy Lai's biography seized", source: "Sky News", url: "https://news.sky.com/story/hong-kong-booksellers-arrested-for-seditious-publications-as-jimmy-lais-biography-seized-13523939", time: "2026-03-24T16:35:00Z" },
+      { title: "Hong Kong grants police power to demand phone and computer passwords", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/hong-kong-grants-police-power-to-demand-phone-and-computer-passwords?traffic_source=rss", time: "2026-03-24T09:12:24Z" },
+      { title: "Hong Kong police can demand phone and computer passwords under amended national security law", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/hong-kong-phone-passwords-national-security-law", time: "2026-03-24T02:53:50Z" },
+      { title: "A Painter Reveals Hong Kong’s Natural Wonders — and Where to See Them", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-painter-hikes.html", time: "2026-03-24T02:00:17Z" },
+      { title: "Outside Art Basel Hong Kong, Cyborgs, Abstractions and More", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-art-week-shows.html", time: "2026-03-24T01:57:31Z" },
+      { title: "Exploring Hong Kong’s Textile Trail", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-textiles-history.html", time: "2026-03-24T01:56:40Z" },
+      { title: "Hong Kong government employee denies ordering surveillance of UK dissidents", source: "BBC News", url: "https://www.bbc.com/news/articles/c78l934gg0xo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T21:11:16Z" },
+      { title: "Asian stock markets plunge amid Trump’s ultimatum on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/23/asian-stock-markets-plunge-amid-trumps-ultimatum-on-iran?traffic_source=rss", time: "2026-03-23T01:56:28Z" },
     ]
   },
   {
@@ -187,6 +288,7 @@ const locations = [
     category: "military",
     articles: [
       { title: "Kim Jong Un gifted gun after Belarus friendship treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/kim-jong-un-gifted-gun-after-belarus-friendship-treaty?traffic_source=rss", time: "2026-03-26T18:03:33Z" },
+      { title: "North Korea and Belarus sign ‘fundamental’ treaty as Lukashenko visits Kim in Pyongyang", source: "The Independent", url: "https://www.independent.co.uk/asia/east-asia/north-korea-belarus-kim-jong-un-alexander-lukashenko-b2945937.html", time: "2026-03-26T17:58:47Z" },
       { title: "North Korea’s Kim meets Lukashenko, slams ‘pressure ​on Belarus from West’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/north-koreas-kim-meets-lukashenko-slams-pressure-on-belarus-from-west?traffic_source=rss", time: "2026-03-26T12:12:55Z" },
       { title: "Lukashenko greeted by Kim Jong Un on first visit to North Korea", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260325-lukashenko-greeted-by-kim-jong-un-on-first-visit-to-north-korea", time: "2026-03-25T23:10:47Z" },
       { title: "Belarus’s Lukashenko makes first visit to North Korea in bid to deepen ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/belaruss-lukashenko-makes-first-visit-to-north-korea-in-bid-to-deepen-ties?traffic_source=rss", time: "2026-03-25T09:23:36Z" },
@@ -200,27 +302,14 @@ const locations = [
     ]
   },
   {
-    name: "Hong Kong", country: "China",
-    lat: 22.3193, lng: 114.1694,
-    category: "trade",
-    articles: [
-      { title: "‘They can reach me wherever’: China using financial tactics to coerce people who flee, says report", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/china-hong-kong-dissidents-transnational-repression-report", time: "2026-03-25T13:44:21Z" },
-      { title: "Hong Kong booksellers arrested for 'seditious publications' as Jimmy Lai's biography seized", source: "Sky News", url: "https://news.sky.com/story/hong-kong-booksellers-arrested-for-seditious-publications-as-jimmy-lais-biography-seized-13523939", time: "2026-03-24T16:35:00Z" },
-      { title: "Hong Kong grants police power to demand phone and computer passwords", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/hong-kong-grants-police-power-to-demand-phone-and-computer-passwords?traffic_source=rss", time: "2026-03-24T09:12:24Z" },
-      { title: "Hong Kong police can demand phone and computer passwords under amended national security law", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/hong-kong-phone-passwords-national-security-law", time: "2026-03-24T02:53:50Z" },
-      { title: "A Painter Reveals Hong Kong’s Natural Wonders — and Where to See Them", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-painter-hikes.html", time: "2026-03-24T02:00:17Z" },
-      { title: "Outside Art Basel Hong Kong, Cyborgs, Abstractions and More", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-art-week-shows.html", time: "2026-03-24T01:57:31Z" },
-      { title: "Exploring Hong Kong’s Textile Trail", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-textiles-history.html", time: "2026-03-24T01:56:40Z" },
-      { title: "Hong Kong government employee denies ordering surveillance of UK dissidents", source: "BBC News", url: "https://www.bbc.com/news/articles/c78l934gg0xo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T21:11:16Z" },
-      { title: "Asian stock markets plunge amid Trump’s ultimatum on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/23/asian-stock-markets-plunge-amid-trumps-ultimatum-on-iran?traffic_source=rss", time: "2026-03-23T01:56:28Z" },
-    ]
-  },
-  {
     name: "Manila", country: "Philippines",
     lat: 14.5995, lng: 120.9842,
     category: "territorial",
     articles: [
+      { title: "Philippines suspends spot sales of electricity due to Middle East conflict", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/philippines-suspends-spot-sales-of-electricity-due-to-middle-east-conflict", time: "2026-03-26T06:30:00Z" },
       { title: "'We are being choked': Philippines transport workers strike over fuel costs", source: "BBC News", url: "https://www.bbc.com/news/articles/c4glxn24gd6o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T04:22:31Z" },
+      { title: "Russian oil arrives as Philippines battles ‘energy emergency’", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/russian-oil-arrives-as-philippines-battles-energy-emergency", time: "2026-03-26T03:38:00Z" },
+      { title: "174 arrested after Philippine police bust online cockfighting ring in Manila", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/174-arrested-after-philippine-police-bust-online-cockfighting-ring-in-manila", time: "2026-03-26T03:21:00Z" },
       { title: "Philippines farmers feeling the pinch of the war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/philippines-farmers-feeling-the-pinch-of-the-war-on-iran?traffic_source=rss", time: "2026-03-25T20:59:41Z" },
       { title: "How is the Philippines reacting to its energy emergency?", source: "BBC News", url: "https://www.bbc.com/news/videos/c5yj4eze972o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T06:47:11Z" },
       { title: "Philippines declares national emergency as fuel supplies dwindle", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/philippines-declares-national-emergency-as-fuel-supplies-dwindle?traffic_source=rss", time: "2026-03-25T01:38:49Z" },
@@ -232,13 +321,21 @@ const locations = [
     ]
   },
   {
-    name: "Phnom Penh", country: "Cambodia",
-    lat: 11.5564, lng: 104.9282,
-    category: "diplomacy",
+    name: "Bangkok", country: "Thailand",
+    lat: 13.7563, lng: 100.5018,
+    category: "trade",
     articles: [
-      { title: "Pit viper among new species discovered in cave in Cambodia", source: "CBS News", url: "https://www.cbsnews.com/news/flying-snake-pit-viper-rare-new-species-discovered-cambodia-cave-report/", time: "2026-03-24T15:04:25Z" },
-      { title: "Secrets of the karst: new species found in Cambodia’s limestone caves – in pictures", source: "The Guardian", url: "https://www.theguardian.com/environment/gallery/2026/mar/23/cambodia-karst-new-species-limestone-caves-aoe", time: "2026-03-23T11:01:47Z" },
-      { title: "I discovered three new geckos in Cambodia’s limestone caves – and that’s not all we found", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/22/i-discovered-three-new-geckos-in-cambodia-limestone-caves-and-thats-not-all-we-found-aoe", time: "2026-03-23T00:01:35Z" },
+      { title: "Oil fund defends sudden steep price hikes", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224734/oil-fund-defends-sudden-steep-price-hikes", time: "2026-03-26T09:33:00Z" },
+      { title: "The Thailand Biennale Brings More to Phuket Than Mass Tourism", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/arts/design/phuket-thailand-biennale.html", time: "2026-03-26T09:01:08Z" },
+      { title: "Thai fishing industry nears a standstill as Iran war pushes up fuel costs", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-fishing-industry-nears-a-standstill-as-iran-war-pushes-up-fuel-costs", time: "2026-03-26T05:32:09Z" },
+      { title: "Thailand orders daily checks on petrol stations’ fuel stock levels to deter hoarding", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thailand-orders-daily-checks-on-petrol-stations-fuel-stock-levels-to-deter-hoarding", time: "2026-03-26T04:36:00Z" },
+      { title: "Lao suspect tells police of grisly killing", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224588/lao-suspect-tells-police-of-grisly-killing", time: "2026-03-26T04:16:00Z" },
+      { title: "Thai fuel prices soar by six baht a litre", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224535/thai-fuel-prices-soar-by-six-baht-a-litre", time: "2026-03-26T01:15:00Z" },
+      { title: "Stricter rules for digital platforms", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224394/stricter-rules-for-digital-platforms", time: "2026-03-26T01:07:00Z" },
+      { title: "War unlikely to dent Songkran revenue", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224319/war-unlikely-to-dent-songkran-revenue", time: "2026-03-26T00:06:00Z" },
+      { title: "Regulator offers 3 power tariff rates", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224294/regulator-offers-3-power-tariff-rates", time: "2026-03-25T22:58:00Z" },
+      { title: "Lawmakers urged to cut aide quota", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3224274/lawmakers-urged-to-cut-aide-quota", time: "2026-03-25T22:40:00Z" },
+      { title: "Breaking the Cycle review – meet the charismatic Thai politician striving to change his country’s history", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/23/breaking-the-cycle-review-thanathorn-juangroongruangkit", time: "2026-03-23T06:00:42Z" },
     ]
   },
   {
@@ -247,17 +344,25 @@ const locations = [
     category: "trade",
     articles: [
       { title: "Malaysia Says Iran Will Allow Its Ships to Pass Through the Strait of Hormuz", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/asia/iran-malaysia-ships-strait-of-hormuz.html", time: "2026-03-26T18:18:32Z" },
+      { title: "Iran allowing Malaysian vessels to pass in Strait, PM Anwar says after talks with regional leaders", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/iran-allowing-malaysian-vessels-to-pass-in-strait-pm-says-after-talks-with-regional-leaders", time: "2026-03-26T11:42:13Z" },
+      { title: "Malaysia to take action against owners of foreign vehicles who pump Ron95 petrol from April 1", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/enforcement-against-drivers-of-foreign-registered-vehicles-who-pump-ron95-petrol-to-begin-on-april-1", time: "2026-03-26T10:33:00Z" },
+      { title: "Major forest fire in Johor under control, say Malaysian authorities", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/major-forest-fire-in-johor-under-control-say-malaysian-authorities", time: "2026-03-26T10:20:00Z" },
+      { title: "Malaysia taking steps to boost fertiliser supply, says minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysia-taking-steps-to-boost-fertiliser-supply-minister-says", time: "2026-03-26T09:49:00Z" },
       { title: "Malaysia’s prime minister says Iran talks should end war", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/malaysias-prime-minister-says-iran-talks-should-end-war?traffic_source=rss", time: "2026-03-26T04:36:31Z" },
       { title: "Malaysia moves to tighten rules for expats, raising fears of talent flight", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/26/malaysia-moves-to-tighten-rules-for-expats-raising-fears-of-talent-flight?traffic_source=rss", time: "2026-03-26T02:40:43Z" },
     ]
   },
   {
-    name: "Taipei", country: "Taiwan",
-    lat: 25.033, lng: 121.5654,
-    category: "territorial",
+    name: "Phnom Penh", country: "Cambodia",
+    lat: 11.5564, lng: 104.9282,
+    category: "diplomacy",
     articles: [
-      { title: "Ex-Taiwan presidential hopeful sentenced to 17 years for corruption", source: "BBC News", url: "https://www.bbc.com/news/articles/cn9q3dw3qj7o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T10:11:38Z" },
-      { title: "How a medieval English abbey became a Chinese wedding destination", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd8k82p9j5o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T09:27:40Z" },
+      { title: "Cambodian Trump deportee becomes second to be released by Eswatini, lawyers say", source: "Straits Times", url: "https://www.straitstimes.com/asia/cambodian-trump-deportee-becomes-second-to-be-released-by-eswatini-lawyers-say", time: "2026-03-26T10:57:13Z" },
+      { title: "Cambodia court upholds 14 years’ jail sentences for journalists over border photo", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/cambodia-court-upholds-14-years-jail-for-journalists-over-border-photo", time: "2026-03-26T06:53:00Z" },
+      { title: "Eswatini to repatriate Cambodian man deported by US", source: "The Independent", url: "https://www.independent.co.uk/asia/southeast-asia/donald-trump-us-deportation-cambodia-eswatini-b2945887.html", time: "2026-03-26T04:52:53Z" },
+      { title: "Pit viper among new species discovered in cave in Cambodia", source: "CBS News", url: "https://www.cbsnews.com/news/flying-snake-pit-viper-rare-new-species-discovered-cambodia-cave-report/", time: "2026-03-24T15:04:25Z" },
+      { title: "Secrets of the karst: new species found in Cambodia’s limestone caves – in pictures", source: "The Guardian", url: "https://www.theguardian.com/environment/gallery/2026/mar/23/cambodia-karst-new-species-limestone-caves-aoe", time: "2026-03-23T11:01:47Z" },
+      { title: "I discovered three new geckos in Cambodia’s limestone caves – and that’s not all we found", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/22/i-discovered-three-new-geckos-in-cambodia-limestone-caves-and-thats-not-all-we-found-aoe", time: "2026-03-23T00:01:35Z" },
     ]
   },
   {
@@ -265,6 +370,7 @@ const locations = [
     lat: 15.0, lng: 115.0,
     category: "military",
     articles: [
+      { title: "How much junk is in South China Sea? Beijing flexes surveillance muscle with survey", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347973/how-much-junk-south-china-sea-beijing-flexes-surveillance-muscle-survey?utm_source=rss_feed", time: "2026-03-26T09:30:09Z" },
       { title: "Tonga PM welcomes US deal to explore deep-sea minerals amid environmental concerns", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/tonga-us-deal-deep-sea-minerals-environmental-concern", time: "2026-03-24T01:32:02Z" },
       { title: "Reliant on imported fuel, Pacific islands appeal for help as oil prices surge", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/20/reliant-on-imported-fuel-pacific-islands-appeal-for-help-as-oil-prices-surge", time: "2026-03-20T02:52:28Z" },
     ]
@@ -274,17 +380,9 @@ const locations = [
     lat: 1.3521, lng: 103.8198,
     category: "trade",
     articles: [
+      { title: "Malaysia slashes subsidised RON95 quota by a third to 200 litres as temporary measure", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysia-slashes-subsidised-ron95-quota-by-a-third-to-200-litres-until-oil-supply-recovers", time: "2026-03-26T13:50:00Z" },
       { title: "Indian singer's drowning was accidental - Singapore coroner", source: "BBC News", url: "https://www.bbc.com/news/articles/c747x091n79o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T12:40:21Z" },
       { title: "US deports Singaporean vlogger convicted of child sex offences", source: "BBC News", url: "https://www.bbc.com/news/articles/cj40xekver1o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T04:13:07Z" },
-    ]
-  },
-  {
-    name: "Bangkok", country: "Thailand",
-    lat: 13.7563, lng: 100.5018,
-    category: "trade",
-    articles: [
-      { title: "The Thailand Biennale Brings More to Phuket Than Mass Tourism", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/arts/design/phuket-thailand-biennale.html", time: "2026-03-26T09:01:08Z" },
-      { title: "Breaking the Cycle review – meet the charismatic Thai politician striving to change his country’s history", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/23/breaking-the-cycle-review-thanathorn-juangroongruangkit", time: "2026-03-23T06:00:42Z" },
     ]
   },
   {
@@ -292,7 +390,18 @@ const locations = [
     lat: -6.2088, lng: 106.8456,
     category: "trade",
     articles: [
+      { title: "VW pulls Skoda brand from China after years of falling sales", source: "South China Morning Post", url: "https://www.scmp.com/business/china-evs/article/3348007/vw-pulls-skoda-brand-china-after-years-falling-sales?utm_source=rss_feed", time: "2026-03-26T10:30:08Z" },
+      { title: "Indonesia military officer steps down following acid attack on activist", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-military-officer-steps-down-following-acid-attack-on-activist", time: "2026-03-26T02:36:50Z" },
       { title: "Indonesians fire wooden cannons in post-Eid tradition", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/indonesians-fire-wooden-cannons-in-post-eid-tradition?traffic_source=rss", time: "2026-03-25T04:51:22Z" },
+    ]
+  },
+  {
+    name: "Haikou", country: "China",
+    lat: 20.0174, lng: 110.3492,
+    category: "military",
+    articles: [
+      { title: "Singapore supports Hainan’s development as free trade port: PM Wong", source: "Straits Times", url: "https://www.straitstimes.com/asia/singapore-supports-hainans-development-as-free-trade-port-pm-wong", time: "2026-03-26T15:55:00Z" },
+      { title: "Job fears, security risks spark call for Chinese government ‘red lines’ in AI applications", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347940/job-fears-security-risks-spark-call-chinese-government-red-lines-ai-applications?utm_source=rss_feed", time: "2026-03-26T09:00:08Z" },
     ]
   },
   {
@@ -309,6 +418,38 @@ const locations = [
     category: "military",
     articles: [
       { title: "Australia refuses to say how many Chinese nationals are arriving by boat, saying it may damage bilateral relations", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/25/australia-chinese-nationals-arriving-by-boat-indonesia-reports-surge", time: "2026-03-25T14:00:09Z" },
+    ]
+  },
+  {
+    name: "Guangzhou", country: "China",
+    lat: 23.1291, lng: 113.2644,
+    category: "trade",
+    articles: [
+      { title: "China’s consumer goods factories cut output as Iran war sends costs soaring", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347808/chinas-consumer-goods-factories-cut-output-iran-war-sends-costs-soaring?utm_source=rss_feed", time: "2026-03-25T05:23:59Z" },
+    ]
+  },
+  {
+    name: "Urumqi", country: "China",
+    lat: 43.8256, lng: 87.6168,
+    category: "territorial",
+    articles: [
+      { title: "How ‘salmon’ raised in landlocked Xinjiang is netting fans in China", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3347727/how-salmon-raised-landlocked-xinjiang-netting-fans-china?utm_source=rss_feed", time: "2026-03-25T02:00:08Z" },
+    ]
+  },
+  {
+    name: "Vientiane", country: "Laos",
+    lat: 17.9757, lng: 102.6331,
+    category: "diplomacy",
+    articles: [
+      { title: "Laos delivers emergency aid after over 2,000 households hit by rare hailstorm in Vientiane", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/laos-delivers-emergency-aid-after-over-2000-households-hit-by-rare-hailstorm-in-vientiane", time: "2026-03-26T05:05:00Z" },
+    ]
+  },
+  {
+    name: "Bali", country: "Indonesia",
+    lat: -8.3405, lng: 115.092,
+    category: "trade",
+    articles: [
+      { title: "Indonesia police investigate fatal stabbing of Dutch man in Bali", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-police-investigate-fatal-stabbing-of-dutch-man-in-bali", time: "2026-03-26T02:36:00Z" },
     ]
   },
 ];
