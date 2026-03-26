@@ -985,6 +985,47 @@ function applyMapTiles() {
 
 // ===== GLOBE VIEW (Global page only) =====
 
+const GLOBE_STYLES = {
+  natural: {
+    img: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg',
+    bump: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png',
+    label: 'Natural'
+  },
+  dark: {
+    img: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg',
+    bump: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png',
+    label: 'Night'
+  },
+  topo: {
+    img: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png',
+    bump: '',
+    label: 'Terrain'
+  },
+  water: {
+    img: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-water.png',
+    bump: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png',
+    label: 'Minimal'
+  }
+};
+let currentGlobeStyle = localStorage.getItem('pressradar-globestyle') || 'natural';
+
+function setGlobeStyle(style) {
+  currentGlobeStyle = style;
+  localStorage.setItem('pressradar-globestyle', style);
+  if (globe && GLOBE_STYLES[style]) {
+    globe.globeImageUrl(GLOBE_STYLES[style].img);
+    if (GLOBE_STYLES[style].bump) {
+      globe.bumpImageUrl(GLOBE_STYLES[style].bump);
+    }
+  }
+  // Update button states
+  document.querySelectorAll('#globe-style-toggle .style-btn').forEach(b => {
+    b.classList.remove('active');
+  });
+  const btn = document.getElementById('btn-globe-' + style);
+  if (btn) btn.classList.add('active');
+}
+
 function initGlobe() {
   if (globe || typeof Globe === 'undefined') return;
   const container = document.getElementById('globe-container');
@@ -992,9 +1033,10 @@ function initGlobe() {
 
   const isDark = document.body.classList.contains('dark');
 
+  const globeStyle = GLOBE_STYLES[currentGlobeStyle] || GLOBE_STYLES.natural;
   globe = Globe()(container)
-    .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg')
-    .bumpImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png')
+    .globeImageUrl(globeStyle.img)
+    .bumpImageUrl(globeStyle.bump || '')
     .backgroundImageUrl(isDark ? '//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png' : '')
     .backgroundColor(isDark ? '#0a0a2e' : '#f0f4f8')
     .showAtmosphere(true)
@@ -1076,8 +1118,8 @@ function renderGlobe() {
       country: loc.country,
       count: count,
       color: catColors[loc.category] || '#c0392b',
-      alt: 0.01 + count * 0.008,
-      radius: Math.max(0.15, Math.min(0.8, count * 0.06))
+      alt: 0.005,
+      radius: Math.max(0.2, Math.min(1.0, 0.2 + count * 0.05))
     });
   });
 
@@ -1102,9 +1144,11 @@ function switchToGlobe() {
   const mapStyleToggle = document.getElementById('map-style-toggle');
   const wrapper = document.getElementById('map-wrapper');
   const aiBox = document.getElementById('ai-summary-box');
+  const globeStyleToggle = document.getElementById('globe-style-toggle');
   if (mapEl) mapEl.style.display = 'none';
   if (globeEl) globeEl.style.display = 'block';
   if (mapStyleToggle) mapStyleToggle.style.display = 'none';
+  if (globeStyleToggle) globeStyleToggle.style.display = '';
   // Move AI briefing to wrapper so it's visible over globe
   if (aiBox && wrapper) wrapper.appendChild(aiBox);
 
@@ -1113,6 +1157,12 @@ function switchToGlobe() {
 
   // Lazy init
   if (!globe) initGlobe();
+  // Restore saved globe style button state
+  if (currentGlobeStyle !== 'natural') {
+    document.querySelectorAll('#globe-style-toggle .style-btn').forEach(b => b.classList.remove('active'));
+    const styleBtn = document.getElementById('btn-globe-' + currentGlobeStyle);
+    if (styleBtn) styleBtn.classList.add('active');
+  }
   // Small delay to let container size settle
   setTimeout(() => {
     const container = document.getElementById('globe-container');
@@ -1137,9 +1187,11 @@ function switchToFlat() {
   const globeEl = document.getElementById('globe-container');
   const mapStyleToggle = document.getElementById('map-style-toggle');
   const aiBox = document.getElementById('ai-summary-box');
+  const globeStyleToggle = document.getElementById('globe-style-toggle');
   if (mapEl) mapEl.style.display = '';
   if (globeEl) globeEl.style.display = 'none';
   if (mapStyleToggle) mapStyleToggle.style.display = '';
+  if (globeStyleToggle) globeStyleToggle.style.display = 'none';
   // Move AI briefing back into map
   if (aiBox && mapEl) mapEl.insertBefore(aiBox, mapEl.firstChild);
 
