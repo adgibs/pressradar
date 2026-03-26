@@ -14,10 +14,10 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:40 UTC, 25 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:41 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
-  <div class="date-badge">25 March 2026</div>
+  <div class="date-badge">26 March 2026</div>
 </div>
 
 <div id="region-nav">
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:40 UTC, 25 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "Indian police manage long lines as panic grows over fuel shortages"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces widespread cooking gas and fuel shortages amid public panic</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan mediates U.S.-Iran talks as both sides seek diplomatic resolution</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["From Pakistan to Egypt, Iran war drives up fuel prices in the Global South"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Iran conflict drives fuel price increases across Global South nations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US investors commit record billion-dollar deals to Indian Premier League</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">India&#x27;s historic haveli homes deteriorate despite preservation revival efforts</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Russian weapons, tactics seen in Ukraine are shaping Myanmar’s civil war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Russian military tactics and weapons influence Myanmar&#x27;s ongoing civil conflict</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 02:42 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces energy crisis as cooking gas prices surge amid regional tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan mediates U.S.-Iran nuclear talks with escalating diplomatic activity</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals", "India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">India navigates economic investment growth and cultural heritage preservation</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">American investors pour record billion dollars into Indian Premier League cricket</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">India&#x27;s historic haveli homes deteriorate despite restoration efforts</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">U.S.-Iran nuclear deal prospects remain uncertain despite mediation attempts</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,25 +111,6 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "Islamabad", country: "Pakistan",
-    lat: 33.6844, lng: 73.0479,
-    category: "political",
-    articles: [
-      { title: "Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/25/us-iran-war-trump-talks-pakistan/", time: "2026-03-25T12:17:35Z" },
-      { title: "US-Iran mediation: What are each side’s demands – and is a deal possible?", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/us-iran-mediation-what-are-each-sides-demands-and-is-a-deal-possible?traffic_source=rss", time: "2026-03-25T11:45:09Z" },
-      { title: "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/from-pakistan-to-egypt-iran-war-drives-up-fuel-prices-in-the-global-south?traffic_source=rss", time: "2026-03-25T05:20:18Z" },
-      { title: "Pakistan world’s most polluted country in 2025: Report", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-worlds-most-polluted-country-in-2025-report?traffic_source=rss", time: "2026-03-24T13:47:12Z" },
-      { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
-      { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
-      { title: "Pakistan is poised to host the U.S. and Iran for talks to end the war", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5759000/iran-war-talks", time: "2026-03-24T11:08:10Z" },
-      { title: "Pakistan Dials Up Its Information War", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/pakistan-media-news-misinformation.html", time: "2026-03-24T04:00:11Z" },
-      { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
-      { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
-      { title: "Why Pakistani farmers are suing two German companies for deadly 2022 floods", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/20/why-pakistani-farmers-are-suing-two-german-companies-for-deadly-2022-floods?traffic_source=rss", time: "2026-03-20T04:22:09Z" },
-      { title: "Pakistani strike killed hundreds, Afghanistan says, as regional conflicts boil", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/18/afghanistan-pakistan-rehab-strike-taliban/", time: "2026-03-18T23:57:49Z" },
-    ]
-  },
-  {
     name: "New Delhi", country: "India",
     lat: 28.6139, lng: 77.209,
     category: "political",
@@ -149,18 +130,21 @@ const locations = [
     ]
   },
   {
-    name: "Kabul", country: "Afghanistan",
-    lat: 34.5553, lng: 69.2075,
-    category: "humanitarian",
+    name: "Islamabad", country: "Pakistan",
+    lat: 33.6844, lng: 73.0479,
+    category: "political",
     articles: [
-      { title: "Taliban release US academic held in detention for more than a year", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/taliban-us-academic-dennis-coyle", time: "2026-03-24T18:42:23Z" },
-      { title: "Afghanistan frees detained US citizen Dennis Coyle as gesture of ‘goodwill’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/afghanistan-frees-detained-us-citizen-dennis-coyle-as-gesture-of-goodwill?traffic_source=rss", time: "2026-03-24T18:11:34Z" },
-      { title: "Afghanistan's Taliban releases detained US national Dennis Coyle", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260324-afghanistan-taliban-government-releases-detained-us-national-dennis-coyle", time: "2026-03-24T13:22:19Z" },
-      { title: "Afghanistan Frees American Detainee Amid Mounting U.S. Pressure", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/afghanistan-releases-american-detainee.html", time: "2026-03-24T13:11:17Z" },
-      { title: "Caught Between Two Conflicts, Afghans Flee Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/iran-afghanistan-border-refugees.html", time: "2026-03-23T04:42:04Z" },
-      { title: "‘This is the saddest moment’: families search for loved ones on Eid after Kabul hospital strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/kabul-hospital-strike-eid-pakistan-taliban-families-search-for-victims", time: "2026-03-21T08:00:47Z" },
-      { title: "As Pakistan and Afghanistan declare truce, civilians in Kabul count the cost of war", source: "NPR", url: "https://www.npr.org/2026/03/19/g-s1-114417/as-pakistan-and-afghanistan-declare-truce-civilians-in-kabul-count-the-cost-of-war", time: "2026-03-19T12:11:54Z" },
-      { title: "Funerals held for Afghans killed in Pakistani strike on Kabul hospital", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/funerals-held-for-afghans-killed-in-pakistani-strike-on-kabul-hospital?traffic_source=rss", time: "2026-03-19T00:14:18Z" },
+      { title: "Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/25/us-iran-war-trump-talks-pakistan/", time: "2026-03-25T12:17:35Z" },
+      { title: "US-Iran mediation: What are each side’s demands – and is a deal possible?", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/us-iran-mediation-what-are-each-sides-demands-and-is-a-deal-possible?traffic_source=rss", time: "2026-03-25T11:45:09Z" },
+      { title: "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/from-pakistan-to-egypt-iran-war-drives-up-fuel-prices-in-the-global-south?traffic_source=rss", time: "2026-03-25T05:20:18Z" },
+      { title: "Pakistan world’s most polluted country in 2025: Report", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-worlds-most-polluted-country-in-2025-report?traffic_source=rss", time: "2026-03-24T13:47:12Z" },
+      { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
+      { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
+      { title: "Pakistan is poised to host the U.S. and Iran for talks to end the war", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5759000/iran-war-talks", time: "2026-03-24T11:08:10Z" },
+      { title: "Pakistan Dials Up Its Information War", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/pakistan-media-news-misinformation.html", time: "2026-03-24T04:00:11Z" },
+      { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
+      { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
+      { title: "Why Pakistani farmers are suing two German companies for deadly 2022 floods", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/20/why-pakistani-farmers-are-suing-two-german-companies-for-deadly-2022-floods?traffic_source=rss", time: "2026-03-20T04:22:09Z" },
     ]
   },
   {
@@ -176,6 +160,20 @@ const locations = [
       { title: "US intelligence chief admits US, Israel not aligned on Iran war goals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/us-intelligence-chief-admits-us-israel-not-aligned-on-iran-war-goals?traffic_source=rss", time: "2026-03-19T23:07:25Z" },
       { title: "The US–Israel war with Iran will not end with a clear victor", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/19/the-us-israel-war-with-iran-will-not-end-with-a-clear?traffic_source=rss", time: "2026-03-19T12:38:18Z" },
       { title: "Lionel Messi scores 900th goal as Nashville oust Miami in Champions Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/lionel-messi-scores-900th-goal-as-nashville-oust-miami-in-champions-cup?traffic_source=rss", time: "2026-03-19T04:25:07Z" },
+    ]
+  },
+  {
+    name: "Kabul", country: "Afghanistan",
+    lat: 34.5553, lng: 69.2075,
+    category: "humanitarian",
+    articles: [
+      { title: "Taliban release US academic held in detention for more than a year", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/taliban-us-academic-dennis-coyle", time: "2026-03-24T18:42:23Z" },
+      { title: "Afghanistan frees detained US citizen Dennis Coyle as gesture of ‘goodwill’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/afghanistan-frees-detained-us-citizen-dennis-coyle-as-gesture-of-goodwill?traffic_source=rss", time: "2026-03-24T18:11:34Z" },
+      { title: "Afghanistan's Taliban releases detained US national Dennis Coyle", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260324-afghanistan-taliban-government-releases-detained-us-national-dennis-coyle", time: "2026-03-24T13:22:19Z" },
+      { title: "Afghanistan Frees American Detainee Amid Mounting U.S. Pressure", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/asia/afghanistan-releases-american-detainee.html", time: "2026-03-24T13:11:17Z" },
+      { title: "Caught Between Two Conflicts, Afghans Flee Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/iran-afghanistan-border-refugees.html", time: "2026-03-23T04:42:04Z" },
+      { title: "‘This is the saddest moment’: families search for loved ones on Eid after Kabul hospital strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/kabul-hospital-strike-eid-pakistan-taliban-families-search-for-victims", time: "2026-03-21T08:00:47Z" },
+      { title: "As Pakistan and Afghanistan declare truce, civilians in Kabul count the cost of war", source: "NPR", url: "https://www.npr.org/2026/03/19/g-s1-114417/as-pakistan-and-afghanistan-declare-truce-civilians-in-kabul-count-the-cost-of-war", time: "2026-03-19T12:11:54Z" },
     ]
   },
   {
