@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:02 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:56 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:03 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["UN adopts Ghana&#39;s resolution to class slave trade as crime against humanity – video", "UN names African slave trade &#39;gravest crime against humanity&#39;", "UN adopts slavery resolution despite resistance", "UN votes to describe slave trade as ‘gravest crime against humanity’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UN adopts resolution classifying African slave trade as crime against humanity</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Senegal appeal to CAS against handing over of AFCON title to Morocco", "Senegal appeal to be heard &#39;as swiftly as possible&#39;", "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Senegal appeals AFCON title decision to CAS with urgent hearing sought</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Egypt says it is ready to host Iran de-escalation talks", "Ghana and EU sign defence partnership to counter west Africa insecurity"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Egypt offers to host Iran de-escalation talks; Ghana signs EU defence pact</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["In Nairobi, residents blame flood devastation on inadequate infrastructure", "Heroism, horror and the ‘pits of hell’: inside the last days of El Fasher"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Infrastructure failures worsen flooding in Nairobi; conflict intensifies in El Fasher</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Fans and players from five African World Cup countries face $15,000 bond to enter US", "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">African World Cup fans face US entry bonds; Salah&#x27;s future uncertain</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["South Africa&#39;s police chief to appear in court over controversial health contract", "Iran, Nigeria, and Africa’s oil dependency"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa police chief faces court; Iran oil impacts African economies</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:57 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["UN adopts Ghana&#39;s resolution to class slave trade as crime against humanity – video", "UN names African slave trade &#39;gravest crime against humanity&#39;", "UN adopts slavery resolution despite resistance", "UN votes to describe slave trade as ‘gravest crime against humanity’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UN adopts resolution classifying African slave trade as crime against humanity</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Senegal appeal to CAS against handing over of AFCON title to Morocco", "Senegal appeal to be heard &#39;as swiftly as possible&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Senegal appeals CAS decision to hand AFCON title to Morocco</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Two drone strikes on civilian targets kill 28 people in Sudan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Drone strikes kill 28 civilians in Sudan</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Zimbabwe says 15 nationals killed after being lured to fight for Russia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zimbabwe reports 15 nationals killed fighting for Russia in Ukraine</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["In Nairobi, residents blame flood devastation on inadequate infrastructure", "Ghana and EU sign defence partnership to counter west Africa insecurity"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Kenya floods expose infrastructure gaps; Ghana strengthens EU defence ties</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["South Africa&#39;s police chief to appear in court over controversial health contract", "‘It’s going to give us closure’: could there finally be justice for the murder of Patrice Lumumba?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa police chief faces court; DR Congo pursues Lumumba murder justice</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -182,6 +182,20 @@ const locations = [
     ]
   },
   {
+    name: "Darfur", country: "Sudan",
+    lat: 13.5, lng: 25.0,
+    category: "conflict",
+    articles: [
+      { title: "Two drone strikes on civilian targets kill 28 people in Sudan", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/sudan-drone-strikes-civilian-targets-north-darfur-market-north-kordofan-truck", time: "2026-03-26T10:24:21Z" },
+      { title: "Heroism, horror and the ‘pits of hell’: inside the last days of El Fasher", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher", time: "2026-03-25T13:01:34Z" },
+      { title: "Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/africa/sudan-hospital-darfur-attack.html", time: "2026-03-22T15:23:33Z" },
+      { title: "A strike on a hospital in Sudan killed at least 64 people, WHO says", source: "NPR", url: "https://www.npr.org/2026/03/22/nx-s1-5756283/strike-hospital-sudan-killed-64", time: "2026-03-22T08:04:16Z" },
+      { title: "A strike on a health care centre in Sudan killed at least 64 people, WHO says", source: "France 24", url: "https://www.france24.com/en/africa/20260322-a-strike-on-a-health-care-centre-in-sudan-killed-at-least-64-people-who-says", time: "2026-03-22T06:47:44Z" },
+      { title: "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/strike-on-sudan-hospital-kills-wounds-world-health-organization-reports", time: "2026-03-21T23:15:04Z" },
+      { title: "WHO says attack on Sudan hospital killed 64, including 13 children", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/who-says-attack-on-sudan-hospital-killed-64-including-13-children?traffic_source=rss", time: "2026-03-21T22:43:25Z" },
+    ]
+  },
+  {
     name: "Dakar", country: "Senegal",
     lat: 14.7167, lng: -17.4677,
     category: "political",
@@ -192,20 +206,6 @@ const locations = [
       { title: "Senegal instruct lawyers, while CAF’s Motsepe defends Morocco’s AFCON award", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/senegal-instruct-lawyers-while-cafs-motsepe-defends-moroccos-afcon-award?traffic_source=rss", time: "2026-03-19T16:14:41Z" },
       { title: "‘Unjust and ridiculous’: Senegalese football fans bewildered by loss of Afcon title", source: "The Guardian", url: "https://www.theguardian.com/football/2026/mar/19/senegalese-fans-disbelief-loss-afcon-title-morocco", time: "2026-03-19T13:33:01Z" },
       { title: "Morocco says stripping Senegal of AFCON win ‘upholds rights and integrity’", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/morocco-says-striping-senegal-of-afcon-title-upholds-rules?traffic_source=rss", time: "2026-03-19T12:56:59Z" },
-      { title: "Denounce 'abject' Afcon decision - senior Caf member", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ckg1gg5pgl7o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T09:54:33Z" },
-    ]
-  },
-  {
-    name: "Darfur", country: "Sudan",
-    lat: 13.5, lng: 25.0,
-    category: "conflict",
-    articles: [
-      { title: "Heroism, horror and the ‘pits of hell’: inside the last days of El Fasher", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher", time: "2026-03-25T13:01:34Z" },
-      { title: "Attack on a Sudan Hospital Kills Dozens, Head of W.H.O. Says", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/africa/sudan-hospital-darfur-attack.html", time: "2026-03-22T15:23:33Z" },
-      { title: "A strike on a hospital in Sudan killed at least 64 people, WHO says", source: "NPR", url: "https://www.npr.org/2026/03/22/nx-s1-5756283/strike-hospital-sudan-killed-64", time: "2026-03-22T08:04:16Z" },
-      { title: "A strike on a health care centre in Sudan killed at least 64 people, WHO says", source: "France 24", url: "https://www.france24.com/en/africa/20260322-a-strike-on-a-health-care-centre-in-sudan-killed-at-least-64-people-who-says", time: "2026-03-22T06:47:44Z" },
-      { title: "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/strike-on-sudan-hospital-kills-wounds-world-health-organization-reports", time: "2026-03-21T23:15:04Z" },
-      { title: "WHO says attack on Sudan hospital killed 64, including 13 children", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/who-says-attack-on-sudan-hospital-killed-64-including-13-children?traffic_source=rss", time: "2026-03-21T22:43:25Z" },
     ]
   },
   {
@@ -278,12 +278,20 @@ const locations = [
     ]
   },
   {
+    name: "Harare", country: "Zimbabwe",
+    lat: -17.8252, lng: 31.0335,
+    category: "political",
+    articles: [
+      { title: "Zimbabwe says 15 nationals killed after being lured to fight for Russia", source: "BBC News", url: "https://www.bbc.com/news/articles/clyxevz45x9o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T10:28:32Z" },
+      { title: "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/ukraine-war-briefing-zelenskyy-says-us-has-linked-security-guarantees-to-ceding-of-donbas", time: "2026-03-26T03:59:51Z" },
+    ]
+  },
+  {
     name: "Dar es Salaam", country: "Tanzania",
     lat: -6.7924, lng: 39.2083,
     category: "economic",
     articles: [
       { title: "Energy shock talk grabs headlines but the Iran war is also driving the world towards a food crisis | Heather Stewart", source: "The Guardian", url: "https://www.theguardian.com/business/2026/mar/22/energy-shock-iran-war-also-driving-world-towards-food-crisis", time: "2026-03-22T12:53:50Z" },
-      { title: "Woman has sentence quashed by Tanzania court after over a decade on death row", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/tanzania-lemi-limbu-freed-woman-learning-disabilities-death-row", time: "2026-03-19T10:00:05Z" },
     ]
   },
   {
@@ -340,14 +348,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "Inside Trump’s Secret Deal to Deport Migrants to Cameroon", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/in-secret-deportation-deal-us-leveraged-favors-and-funds.html", time: "2026-03-25T09:01:05Z" },
-    ]
-  },
-  {
-    name: "Harare", country: "Zimbabwe",
-    lat: -17.8252, lng: 31.0335,
-    category: "political",
-    articles: [
-      { title: "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/ukraine-war-briefing-zelenskyy-says-us-has-linked-security-guarantees-to-ceding-of-donbas", time: "2026-03-26T03:59:51Z" },
     ]
   },
 ];

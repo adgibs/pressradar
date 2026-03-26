@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:03 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:56 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:03 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran", "Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan attempts to mediate escalating U.S.-Iran tensions diplomatically.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals", "India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces infrastructure and economic challenges across sectors.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">India confronts domestic cooking gas supply shortages.</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">U.S.-Iran negotiations face uncertain prospects for agreement.</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 10:57 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran", "Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan attempts mediation between United States and Iran tensions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Dozens dead in Bangladesh as passenger bus plunges into Padma River", "Protest in India over cooking gas crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Bangladesh and India face separate humanitarian crises affecting citizens</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US investors commit record billion-dollar funding to Indian Premier League</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">India&#x27;s historic haveli homes face deterioration amid preservation challenges</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US-Iran negotiations present complex demands with uncertain resolution prospects</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -141,7 +141,6 @@ const locations = [
       { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
       { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
       { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
-      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
     ]
   },
   {
@@ -262,6 +261,14 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Indian police manage long lines as panic grows over fuel shortages", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/indian-police-manage-long-lines-as-panic-grows-over-fuel-shortages?traffic_source=rss", time: "2026-03-25T01:35:56Z" },
+    ]
+  },
+  {
+    name: "Dhaka", country: "Bangladesh",
+    lat: 23.8103, lng: 90.4125,
+    category: "climate",
+    articles: [
+      { title: "Dozens dead in Bangladesh as passenger bus plunges into Padma River", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/dozens-dead-in-bangladesh-as-passenger-bus-plunges-into-padma-river?traffic_source=rss", time: "2026-03-26T10:24:29Z" },
     ]
   },
 ];
