@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:36 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:36 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:36 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["US lawmakers pan China for interfering in WTO conference", "The Iran war is costing China dearly, too", "On Taiwan, Trump reimagines strategic ambiguity to suit his own ends"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China faces criticism over WTO interference and Iran war costs</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["N Korea, Belarus sign ‘friendship’ treaty", "Japan to join drills on Philippine soil, first since WWII", "Israeli naval intelligence reduces Iranian threat to Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">North Korea, Belarus strengthen ties amid regional military developments</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Former Taipei Mayor Ko sentenced to 17 years in prison", "Number of Taiwanese missing in China rising", "Caution for visitors to Hong Kong"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Taiwan security concerns rise with arrests and missing persons</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["U.S. envoy calls on Taiwan legislators to pass special defense budget", "EDITORIAL: Taiwan must not let its guard down"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan urged to strengthen defense spending and readiness</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mideast war fuels disinformation about Taiwan’s gas supply", "Chief of Staff Zamir warns IDF will collapse due to lack of manpower, raises &#39;ten red flags&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Disinformation campaigns and military manpower shortages create security pressures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["China bans runners over ‘obstructive’ marathon behavior", "Judge goes hitless; Taiwan’s Teng named"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Cultural and sports developments reported across East Asia region</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:36 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["The Iran war is costing China dearly, too", "Manila’s streets empty as fuel prices surge amid Strait of Hormuz crisis", "Manila’s streets empty as fuel prices surge amid Strait of Hormuz crisis", "Easing of fuel subsidies sparks winners and losers among stocks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Middle East conflict drives global energy prices and economic disruption</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["US lawmakers pan China for interfering in WTO conference", "N Korea, Belarus sign ‘friendship’ treaty", "Number of Taiwanese missing in China rising"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China and North Korea expand ties amid geopolitical tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["U.S. envoy calls on Taiwan legislators to pass special defense budget", "EDITORIAL: Taiwan must not let its guard down", "Circling Taiwan in style"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Taiwan strengthens defense posture and military readiness</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Former Taipei Mayor Ko sentenced to 17 years in prison", "Caution for visitors to Hong Kong"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Legal crackdowns intensify in China and Hong Kong region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Japan to join drills on Philippine soil, first since WWII", "Why Iraq is the most fragile front in the US-Israel war on Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Military operations escalate in Pacific and Middle East theaters</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mideast war fuels disinformation about Taiwan’s gas supply", "Eurovision Song Contest oddsmakers predict Israel will win televoting again this year"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Cultural and information issues emerge across Asia-Pacific region</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,6 +144,12 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Why Iraq is the most fragile front in the US-Israel war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-take-2/2026/3/26/aje-onl-tt_irq_neighborspillover_av_v2-260326?traffic_source=rss", time: "2026-03-26T22:23:40Z" },
+      { title: "What are the red lines for Iran and the US in the war?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/3/26/what-are-the-red-lines-for-iran-and-the-us-in-the-war?traffic_source=rss", time: "2026-03-26T22:03:40Z" },
+      { title: "Trump says talks with Iran ‘going very well,’ delays strikes on power plants by 10 days", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-says-talks-with-iran-going-very-well-delays-strikes-on-power-plants-by-10-days/", time: "2026-03-26T21:52:02Z" },
+      { title: "Amid war, Iranian hardliners ramp up once-taboo calls to seek nuclear bomb", source: "Times of Israel", url: "https://www.timesofisrael.com/amid-war-iranian-hardliners-ramp-up-once-taboo-calls-to-seek-nuclear-bomb/", time: "2026-03-26T21:36:03Z" },
+      { title: "Al Jazeera visits Iran’s UNESCO-listed palace damaged by war", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/al-jazeera-visits-irans-unesco-listed-palace-damaged-by-war?traffic_source=rss", time: "2026-03-26T21:33:17Z" },
+      { title: "Iran's war propaganda includes memes directed at Trump", source: "NPR", url: "https://www.npr.org/2026/03/26/nx-s1-5760944/irans-war-propaganda-includes-memes-directed-at-trump", time: "2026-03-26T21:29:39Z" },
       { title: "Gulf nations take lead on Iran at UN while Europe weakens stance, Danon tells 'Post' - interview", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-891365", time: "2026-03-26T21:23:11Z" },
       { title: "The U.S. and Iran can't even agree on whether they're talking", source: "NPR", url: "https://www.npr.org/2026/03/26/nx-s1-5761378/the-u-s-and-iran-cant-even-agree-on-whether-theyre-talking", time: "2026-03-26T21:09:17Z" },
       { title: "Iran placing messages on missiles as war of narratives intensifies", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/iran-placing-messages-on-missiles-as-war-of-narratives-intensifies?traffic_source=rss", time: "2026-03-26T20:56:21Z" },
@@ -297,6 +303,7 @@ const locations = [
       { title: "Missiles overhead, silence below: Israel’s home front holds firm", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/missiles-overhead-silence-below-israels-home-front-holds-firm?traffic_source=rss", time: "2026-03-25T14:41:47Z" },
       { title: "NATO’s ‘Trump Whisperer’ Faces Blowback Over Support for Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/middleeast/iran-nato-rutte-trump.html", time: "2026-03-25T14:16:03Z" },
       { title: "Israel talks up Iranian threats to European cities to justify war", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/israel-talks-up-iranian-threats-to-european-cities-to-justify-war?traffic_source=rss", time: "2026-03-25T13:54:32Z" },
+      { title: "American Jews won't be silenced. We have every right to oppose the Iran war", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-03-25/ty-article-opinion/.premium/american-jews-wont-be-silenced-we-have-every-right-to-oppose-the-iran-war/0000019d-2199-d7c1-a59f-efdb2cae0000", time: "2026-03-25T13:03:09Z" },
       { title: "Iranian attacks amount to violation of sovereignty, Gulf states tell UN", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/iranian-attacks-amount-to-violation-of-sovereignty-gulf-states-tell-un?traffic_source=rss", time: "2026-03-25T13:00:22Z" },
       { title: "Trump’s war on Iran, in his own words", source: "Al Jazeera", url: "https://www.aljazeera.com/video/2026/3/25/trumps-war-on-iran-in-his-own-words?traffic_source=rss", time: "2026-03-25T12:36:58Z" },
       { title: "Husband of soldier killed in Iran war reflects on her service", source: "CBS News", url: "https://www.cbsnews.com/video/husband-of-soldier-killed-in-iran-war-recalls-last-moments-with-her-we-thought-she-was-safe/", time: "2026-03-25T12:29:00Z" },
@@ -637,13 +644,6 @@ const locations = [
       { title: "Iran strikes Qatari natural gas plant after Israeli attack on key Iranian gas field", source: "CBS News", url: "https://www.cbsnews.com/video/iran-strikes-qatari-natural-gas-plant-after-israeli-attack-on-key-iranian-gas-field/", time: "2026-03-19T23:25:00Z" },
       { title: "Are US and Israel aligned on Iran war? Deciphering Trump's post after gas field attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/c8x7leknlywo?at_medium=RSS&at_campaign=rss", time: "2026-03-19T23:19:00Z" },
       { title: "US intelligence chief admits US, Israel not aligned on Iran war goals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/us-intelligence-chief-admits-us-israel-not-aligned-on-iran-war-goals?traffic_source=rss", time: "2026-03-19T23:07:25Z" },
-      { title: "US reportedly weighing military reinforcements as Iran war enters possible new phase", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260319-us-reportedly-weighing-military-reinforcements-as-iran-war-enters-possible-new-phase", time: "2026-03-19T22:30:26Z" },
-      { title: "3/19: CBS Evening News", source: "CBS News", url: "https://www.cbsnews.com/video/031926-cbs-evening-news/", time: "2026-03-19T22:30:00Z" },
-      { title: "Week three of Roaring Lion: Iran's leadership hollowed out, Arab world reaches breaking point", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-890605", time: "2026-03-19T22:09:36Z" },
-      { title: "Video of Iranian soldier being targeted in Tehran strike is AI-generated", source: "France 24", url: "https://www.france24.com/en/tv-shows/truth-or-fake/20260319-video-of-iranian-soldier-being-targeted-in-a-tehran-strike-is-ai-generated", time: "2026-03-19T22:08:09Z" },
-      { title: "Teenager among first to be executed over Iran's anti-government protests", source: "BBC News", url: "https://www.bbc.com/news/articles/ce9mzn7k722o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T22:07:17Z" },
-      { title: "Iran’s new supreme leader linked to properties with ‘line of sight’ into Israeli UK Embassy", source: "Fox News", url: "https://www.foxnews.com/world/irans-new-supreme-leader-linked-properties-line-sight-israeli-uk-embassy", time: "2026-03-19T22:00:19Z" },
-      { title: "Iran's Princess Noor Pahlavi to ‘Post’: ‘Iranians have chance to reclaim their country’ - interview", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-890610", time: "2026-03-19T21:47:31Z" },
     ]
   },
   {
@@ -652,6 +652,8 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Eurovision Song Contest oddsmakers predict Israel will win televoting again this year", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-891377", time: "2026-03-26T22:39:27Z" },
+      { title: "Two killed, 8 injured in Israeli air strike in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/two-killed-8-injured-israeli-air-strike-southern-lebanon", time: "2026-03-26T21:57:43Z" },
+      { title: "'I opened several social media accounts to fight antisemites. I'm a serious troll'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/holylandings/2026-03-26/ty-article-magazine/.highlight/i-opened-several-social-media-accounts-to-fight-antisemites-im-a-real-troll/0000019d-2baa-d8a3-abff-3baa1e460000", time: "2026-03-26T21:36:07Z" },
       { title: "Chief of Staff Zamir warns IDF will collapse due to lack of manpower, raises 'ten red flags'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-891368", time: "2026-03-26T21:34:04Z" },
       { title: "IDF soldier killed in southern Lebanon by Hezbollah anti-tank missile", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891364", time: "2026-03-26T20:58:14Z" },
       { title: "Israel sends more troops into southern Lebanon as ground invasion expands", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/israel-sends-more-troops-into-southern-lebanon-as-ground-invasion-expands?traffic_source=rss", time: "2026-03-26T20:10:30Z" },
@@ -964,8 +966,6 @@ const locations = [
       { title: "On 19th day of war, Netanyahu says Iran can no longer enrich uranium, build missiles", source: "Times of Israel", url: "https://www.timesofisrael.com/on-19th-day-of-war-netanyahu-says-iran-can-no-longer-enrich-uranium-build-missiles/", time: "2026-03-19T23:25:16Z" },
       { title: "Preparing the next generation of leaders", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/banking-and-finance/article-890617", time: "2026-03-19T23:16:25Z" },
       { title: "Netanyahu says Israel 'acted alone' in attack on Iranian gas field", source: "BBC News", url: "https://www.bbc.com/news/articles/c2k3jgy9vq3o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T22:41:40Z" },
-      { title: "Netanyahu says Iran’s uranium enrichment abilities destroyed", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/netanyahu-says-irans-uranium-enrichment-abilities-destroyed?traffic_source=rss", time: "2026-03-19T22:03:44Z" },
-      { title: "Iran says it will show ‘zero restraint’ if energy infrastructure is targeted again", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/iran-says-it-will-show-zero-restraint-if-energy-infrastructure-is-targeted-again", time: "2026-03-19T22:02:05Z" },
     ]
   },
   {
@@ -973,6 +973,9 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Manila’s streets empty as fuel prices surge amid Strait of Hormuz crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/26/manilas-streets-empty-as-fuel-prices-surge-amid-strait-of-hormuz-crisis?traffic_source=rss", time: "2026-03-26T22:30:16Z" },
+      { title: "War in the Mideast: are the UK, Australia and Taiwan about to run out of fuel?", source: "France 24", url: "https://www.france24.com/en/tv-shows/truth-or-fake/20260326-war-in-the-mideast-are-the-uk-australia-and-taiwan-about-to-run-out-of-fuel", time: "2026-03-26T22:03:26Z" },
+      { title: "Trump postpones US strikes on Iranian power grid to April 6 amid talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/trump-postpones-us-strikes-on-iranian-power-grid-to-april-6-amid-talks?traffic_source=rss", time: "2026-03-26T22:03:25Z" },
       { title: "Israeli naval intelligence reduces Iranian threat to Strait of Hormuz", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891355", time: "2026-03-26T21:40:35Z" },
       { title: "Iran suggests Spain may be able to send ships through Strait of Hormuz as it is ‘non-hostile’ country", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-spain-ships-strait-of-hormuz-b2946406.html", time: "2026-03-26T21:10:55Z" },
       { title: "War on Iran could be 'catalyst' for erosion of US petrodollar, Deutsche Bank says", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/war-iran-could-be-catalyst-erosion-us-petrodollar-deutsche-bank-says", time: "2026-03-26T21:10:12Z" },
@@ -1161,7 +1164,11 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Rescuers in race against time to save life of whale stranded off German coast", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/stranded-whale-germany-rescue-life-b2946591.html", time: "2026-03-26T22:28:21Z" },
+      { title: "G.O.P. Senator Weighs Forcing Congress to Vote to Authorize the Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/us/senator-murkowski-iran-war-vote-congress.html", time: "2026-03-26T21:42:07Z" },
+      { title: "Rubio Says Allies Should Help Secure Strait by Iran for Oil and Gas Ships", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/middleeast/rubio-strait-of-hormuz-iran-oil.html", time: "2026-03-26T21:34:26Z" },
       { title: "Pentagon mulling diverting Ukraine defense aid to the Middle East: Report", source: "The Hill", url: "https://thehill.com/policy/defense/5803102-ukraine-pentagon-us-munitions-iran/", time: "2026-03-26T21:29:28Z" },
+      { title: "At least nine people dead, dozens missing as boat sinks off Djibouti coast", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/at-least-nine-people-dead-dozens-missing-as-boat-sinks-off-djibouti-coast?traffic_source=rss", time: "2026-03-26T21:21:10Z" },
       { title: "Trump extends pause on striking Iranian energy infrastructure to April", source: "The Hill", url: "https://thehill.com/homenews/administration/5803089-trump-extends-energy-pause/", time: "2026-03-26T20:46:31Z" },
       { title: "US Secretary of State says ‘growing amount of energy’ flowing through Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-secretary-state-says-growing-amount-energy-flowing-through-hormuz", time: "2026-03-26T20:34:12Z" },
       { title: "Pete Hegseth given brutal new nickname by Pentagon staffers, report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pete-hegseth-nickname-pentagon-mcnamara-b2946487.html", time: "2026-03-26T20:31:44Z" },
@@ -1287,6 +1294,8 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Guardian: Ex-PM Olmert urges ICC to intervene against West Bank 'Jewish terrorism'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-27/ty-article/report-ex-pm-olmert-urges-icc-to-intervene-against-west-bank-jewish-terror/0000019d-2bc3-d8a3-abff-3be30aea0000", time: "2026-03-26T22:16:30Z" },
+      { title: "Top Jewish philanthropists, rabbis urge Israeli president to take action against 'Jewish extremists'", source: "Haaretz", url: "https://www.haaretz.com/jewish/2026-03-27/ty-article/.premium/jewish-rabbis-urge-israeli-president-to-take-action-against-jewish-extremists/0000019d-2aa6-dc71-a7ff-ebfe34990000", time: "2026-03-26T22:10:18Z" },
       { title: "Cocaine, caffeine, painkillers consumed by sharks in Bahamas, study finds", source: "CBS News", url: "https://www.cbsnews.com/news/cocaine-caffeine-painkillers-sharks-bahamas-study/", time: "2026-03-26T18:28:54Z" },
       { title: "Israel losing sway over Trump on Iran war course as IDF chief raises '10 red flags'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-26/ty-article/.premium/israel-losing-sway-over-trump-on-iran-as-idf-chief-raises-10-red-flags/0000019d-2b08-d868-a1bd-7be915c20000", time: "2026-03-26T17:44:51Z" },
       { title: "New Zealand ministry gave $30K in taxpayers' funds to Gaza advocacy campaign", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-891327", time: "2026-03-26T17:41:52Z" },
@@ -1311,6 +1320,7 @@ const locations = [
       { title: "‘He will call me Mama’: The Gaza ‘grandmother’ raising an orphaned baby", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/26/he-will-call-me-mama-the-gaza-grandmother-raising-an-orphaned-baby?traffic_source=rss", time: "2026-03-26T08:53:33Z" },
       { title: "US seeks Hamas ‘political surrender’ in new Gaza plan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/us-seeks-hamas-political-surrender-in-new-gaza-plan?traffic_source=rss", time: "2026-03-26T08:42:56Z" },
       { title: "West Bank extremist violence is eroding Israel's national security from within - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891191", time: "2026-03-26T05:59:13Z" },
+      { title: "Israeli settlers attack shepherds in West Bank, attempt to steal livestock", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-26/ty-article-live/wall-street-journal-trump-tells-aides-to-wrap-up-iran-conflict-in-coming-weeks/0000019d-281c-d77a-a7ff-fffcacd50000", time: "2026-03-26T03:20:31Z" },
       { title: "6 injured in central Israel, West Bank settlement as Iran fires wave of missile salvos", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-26-2026/", time: "2026-03-26T01:01:56Z" },
       { title: "Video shows Israeli strike hitting displacement camp in Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/video-shows-israeli-strike-hitting-displacement-camp-in-gaza?traffic_source=rss", time: "2026-03-25T22:12:18Z" },
       { title: "Report: Palestinian killed, several wounded after IDF soldiers fire at vehicle during West Bank pursuit", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-25/ty-article/.premium/report-palestinian-killed-after-idf-soldiers-fire-at-vehicle-during-wb-pursuit/0000019d-26e3-d62e-addd-27eb2ec20000", time: "2026-03-25T21:40:17Z" },
@@ -1397,7 +1407,6 @@ const locations = [
       { title: "As Iran war diverts attention from Gaza, Hamas police openly tighten grip on Strip", source: "Times of Israel", url: "https://www.timesofisrael.com/as-iran-war-diverts-attention-from-gaza-hamas-police-openly-tighten-grip-on-strip/", time: "2026-03-20T01:09:56Z" },
       { title: "Palestinians bury four women killed in Iranian missile attack", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/palestinians-bury-four-women-killed-in-iranian-missile-attack?traffic_source=rss", time: "2026-03-20T01:09:50Z" },
       { title: "Sirens sound across Israel, Iran sends multiple missile barrages", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890618", time: "2026-03-20T00:47:23Z" },
-      { title: "Israel continues Gaza attacks amid regional war, kills several Palestinians", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/israel-continues-gaza-attacks-amid-regional-war-kills-several-palestinians?traffic_source=rss", time: "2026-03-19T22:00:17Z" },
     ]
   },
   {
@@ -1405,6 +1414,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Displaced by War, Many Seek Shelter in Beirut", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/middleeast/war-displaced-beirut.html", time: "2026-03-26T21:33:04Z" },
       { title: "Israeli army expands ground offensive in southern Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260326-israeli-army-expands-ground-offensive-in-southern-lebanon/", time: "2026-03-26T19:35:24Z" },
       { title: "Do Israel, Iran and Hezbollah think we're stupid enough to believe any of us is winning?", source: "Haaretz", url: "https://www.haaretz.com/israel-news/haaretz-today/2026-03-26/ty-article/.highlight/do-israel-iran-and-hezbollah-think-were-stupid/0000019d-2b6b-d77a-a7ff-ffeb374f0000", time: "2026-03-26T19:29:38Z" },
       { title: "Israeli strikes kill 22 in Lebanon, death toll exceeds 1,110", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260326-israeli-strikes-kill-22-in-lebanon-death-toll-exceeds-1110/", time: "2026-03-26T18:12:29Z" },
@@ -1595,6 +1605,7 @@ const locations = [
       { title: "On Taiwan, Trump reimagines strategic ambiguity to suit his own ends", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3347597/taiwan-trump-reimagines-strategic-ambiguity-suit-his-own-ends?utm_source=rss_feed", time: "2026-03-26T21:30:08Z" },
       { title: "China threatens Mexico with trade reprisals over 50% import duties", source: "South China Morning Post", url: "https://www.scmp.com/news/china/article/3348054/china-threatens-mexico-trade-reprisals-over-50-import-duties?utm_source=rss_feed", time: "2026-03-26T19:04:39Z" },
       { title: "The Guardian view on China and Iran: the war poses bigger questions for Beijing than where to get its oil | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/26/the-guardian-view-on-china-and-iran-the-war-poses-bigger-questions-for-beijing-than-where-to-get-its-oil", time: "2026-03-26T18:50:30Z" },
+      { title: "Why was a £1.5bn Chinese plan to invest in a Highland yard blocked?", source: "BBC News", url: "https://www.bbc.com/news/articles/cj9411wpnw1o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T15:31:28Z" },
       { title: "Can Donald Trump end his war on Iran in time for rescheduled China trip?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348033/can-donald-trump-end-his-war-iran-time-rescheduled-china-trip?utm_source=rss_feed", time: "2026-03-26T15:00:09Z" },
       { title: "UK blocks China wind turbine project on ‘national security’ amid tense business climate", source: "South China Morning Post", url: "https://www.scmp.com/economy/global-economy/article/3348039/uk-blocks-china-wind-turbine-project-national-security-amid-tense-business-climate?utm_source=rss_feed", time: "2026-03-26T13:30:04Z" },
       { title: "At Boao forum, China reassures foreign investors as Iran, tariff wars rattle global trade", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/at-boao-forum-china-reassures-foreign-investors-as-iran-tariff-war-rattle-global-trade", time: "2026-03-26T13:15:00Z" },
@@ -1799,6 +1810,7 @@ const locations = [
       { title: "Drone crashes in Romania after Russia strikes Ukraine", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0326/1565275-ukraine-russia/", time: "2026-03-26T08:09:15Z" },
       { title: "Despite sanctions: German company wants to build fuel elements with Putin's nuclear group", source: "Euronews", url: "http://www.euronews.com/2026/03/26/despite-sanctions-german-company-wants-to-build-fuel-elements-with-putins-nuclear-group", time: "2026-03-26T06:05:00Z" },
       { title: "Russia slams second US-Israeli strike at Iran’s Bushehr nuclear reactor", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/russia-slams-second-us-israeli-strike-at-irans-bushehr-nuclear-reactor?traffic_source=rss", time: "2026-03-26T03:31:36Z" },
+      { title: "Trump Draws Bipartisan Backlash for Easing Oil Sanctions on Russia and Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/us/politics/trump-bipartisan-backlash-oil-sanctions-russia-iran.html", time: "2026-03-26T01:42:31Z" },
       { title: "British forces will be able to board Russian shadow fleet ships in UK waters", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0n9z3jlvo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T23:03:55Z" },
       { title: "Keir Starmer allows UK military to board Russia’s shadow fleet vessels", source: "The Hill", url: "https://thehill.com/policy/defense/5801009-uk-navy-interdicts-russian-tankers/", time: "2026-03-25T22:30:28Z" },
       { title: "Lacking 'morals, values, or principles': Georgia government 'guided by Kremlin'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260325-lacking-morals-values-or-principles-georgia-government-guided-by-kremlin", time: "2026-03-25T21:38:13Z" },
@@ -2079,7 +2091,6 @@ const locations = [
       { title: "Denmark Was Ready to Blow Up Airfields to Stop a U.S. Invasion of Greenland", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/europe/denmark-blow-up-greenland-runways-us-invasion.html", time: "2026-03-20T19:09:17Z" },
       { title: "‘Yes to fields of wheat, no to fields of iron’: how the world’s greenest country soured on solar", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/20/solar-power-renewable-energy-denmark-backlash-national-elections", time: "2026-03-20T14:00:27Z" },
       { title: "Denmark sent explosives to blow up Greenland runways amid Trump invasion threat", source: "Sky News", url: "https://news.sky.com/story/denmark-sent-explosives-to-blow-up-greenland-runways-amid-trump-invasion-threat-13522093", time: "2026-03-20T08:40:00Z" },
-      { title: "Denmark planned to blow up Greenland runways if US invaded, reports say", source: "BBC News", url: "https://www.bbc.com/news/articles/c33ln4mp1p2o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T21:52:36Z" },
     ]
   },
   {
@@ -2162,6 +2173,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Did the government cover up February’s Gulf of Mexico oil spill?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/gulf-oil-spill-government-response/", time: "2026-03-26T21:45:42Z" },
       { title: "Sheinbaum defends ‘Plan B’ electoral reform after Senate strips key provision: Thursday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-plan-b-electoral-reform-senate-march-26-mananera/", time: "2026-03-26T21:04:29Z" },
       { title: "Argentina follows Trump’s lead and labels notorious cartel a terrorist organization", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/argentina-jalisco-new-generation-cartel-cjng-trump-b2946533.html", time: "2026-03-26T19:55:14Z" },
       { title: "iPhone launches Tap to Pay in Mexico, expanding the country’s digital payment options", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/iphone-tap-to-pay-mexico-digital-payment/", time: "2026-03-26T18:38:30Z" },
@@ -2257,6 +2269,7 @@ const locations = [
     category: "political",
     articles: [
       { title: "US judge questions block on Maduro’s use of Venezuelan funds for defence", source: "Dawn", url: "https://www.dawn.com/news/1985654/us-judge-questions-block-on-maduros-use-of-venezuelan-funds-for-defence", time: "2026-03-26T19:16:20Z" },
+      { title: "India, other friendly countries granted passage through Hormuz: Iran", source: "The Hindu", url: "https://www.thehindu.com/news/national/india-among-five-nations-granted-passage-through-strait-of-hormuz-by-tehran/article70786984.ece", time: "2026-03-26T18:03:26Z" },
       { title: "Indian among two killed in UAE by debris of intercepted missiles", source: "The Hindu", url: "https://www.thehindu.com/news/national/indian-among-two-killed-in-uae-by-debris-of-intercepted-missiles/article70789711.ece", time: "2026-03-26T17:57:59Z" },
       { title: "Fuel crisis updates: PM Modi to interact with CMs; review preparedness, plans on West Asia conflict", source: "The Hindu", url: "https://www.thehindu.com/news/national/lpg-fuel-petrol-crisis-west-asia-strait-of-hormuz-us-israel-iran-live-updates/article70786856.ece", time: "2026-03-26T17:21:57Z" },
       { title: "Jaishankar, French counterpart discuss Iran, Hormuz at G7 meet", source: "The Hindu", url: "https://www.thehindu.com/news/national/jaishankar-in-france-for-g7-meet-west-asia-crisis-tops-agenda/article70786927.ece", time: "2026-03-26T17:05:10Z" },
@@ -2353,6 +2366,30 @@ const locations = [
     ]
   },
   {
+    name: "Tokyo", country: "Japan",
+    lat: 35.6762, lng: 139.6503,
+    category: "diplomacy",
+    articles: [
+      { title: "Japan to join drills on Philippine soil, first since WWII", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/03/27/2003854573", time: "2026-03-27T00:00:00Z" },
+      { title: "SPEAK UP: Hit Japan comics Chibi Maruko, Crayon Shin to collab (2/2) 《櫻桃小丸子》、《蠟筆小新》 相見歡（下）", source: "Taipei Times", url: "https://www.taipeitimes.com/News/lang/archives/2026/03/27/2003854527", time: "2026-03-27T00:00:00Z" },
+      { title: "'Get out, get out!': Max Verstappen kicks journalist out of press conference", source: "Sky News", url: "https://news.sky.com/story/former-f1-champion-max-verstappen-tells-journalist-to-get-out-of-japanese-grand-prix-press-conference-13524842", time: "2026-03-26T20:31:00Z" },
+      { title: "Japan to join army drills on Philippine soil for first time since World War II", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/japan-to-join-army-drills-on-philippine-soil-in-first-since-wwii", time: "2026-03-26T03:55:00Z" },
+      { title: "Japan starts release of state-held oil to stabilise supplies amid Iran war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-starts-release-of-state-held-oil-to-stabilise-supplies-amid-iran-war", time: "2026-03-26T02:59:00Z" },
+      { title: "Senior Japanese minister expresses regret over military officer’s arrest at Chinese embassy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347833/senior-japanese-minister-expresses-regret-over-army-officers-arrest-chinese-embassy?utm_source=rss_feed", time: "2026-03-25T07:15:48Z" },
+      { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
+      { title: "Unease in Japan after Trump cites Pearl Harbor to defend Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/unease-in-japan-after-trump-uses-pearl-harbor-to-defend-iran-war?traffic_source=rss", time: "2026-03-21T14:34:12Z" },
+      { title: "Japan beat Australia to lift Women’s Asian Cup title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/japan-beat-australia-to-lift-womens-asian-cup-title?traffic_source=rss", time: "2026-03-21T11:57:41Z" },
+      { title: "Iran says it will allow Japanese ships to transit the Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-says-it-will-allow-japanese-ships-to-transit-the-strait-of-hormuz?traffic_source=rss", time: "2026-03-21T08:21:20Z" },
+      { title: "LIVE: Japan vs Australia – Women’s Asian Cup 2026 final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/21/live-japan-vs-australia-womens-asian-cup-2026-final?traffic_source=rss", time: "2026-03-21T06:01:04Z" },
+      { title: "Japan's PM walks tightrope in high-stakes Washington visit", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260320-japan-s-pm-walks-tightrope-in-high-stakes-washington-visit", time: "2026-03-20T15:27:05Z" },
+      { title: "Trump makes Pearl Harbor remark in meeting with Japan's PM", source: "BBC News", url: "https://www.bbc.com/news/articles/c8dlpr074q3o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T09:55:19Z" },
+      { title: "Japan vs Australia: Women’s Asian Cup final – team news, start and lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/20/japan-vs-australia-womens-asian-cup-final-team-news-start-and-lineups?traffic_source=rss", time: "2026-03-20T04:45:40Z" },
+      { title: "How Japan Reacted to Trump’s Pearl Harbor Joke", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/japan-trump-pearl-harbor.html", time: "2026-03-20T04:42:55Z" },
+      { title: "Using Charm and Restraint, Japan’s Leader Mostly Avoids Trump’s Wrath", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/trump-japan-prime-minister-meeting.html", time: "2026-03-20T04:01:24Z" },
+      { title: "Trump downplays Iran war's impact on global energy prices", source: "CBS News", url: "https://www.cbsnews.com/video/trump-downplays-iran-wars-impact-on-global-energy-prices/", time: "2026-03-19T23:27:00Z" },
+    ]
+  },
+  {
     name: "Sahel Region", country: "West Africa",
     lat: 15.0, lng: 0.0,
     category: "conflict",
@@ -2377,34 +2414,12 @@ const locations = [
     ]
   },
   {
-    name: "Tokyo", country: "Japan",
-    lat: 35.6762, lng: 139.6503,
-    category: "diplomacy",
-    articles: [
-      { title: "Japan to join drills on Philippine soil, first since WWII", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/03/27/2003854573", time: "2026-03-27T00:00:00Z" },
-      { title: "SPEAK UP: Hit Japan comics Chibi Maruko, Crayon Shin to collab (2/2) 《櫻桃小丸子》、《蠟筆小新》 相見歡（下）", source: "Taipei Times", url: "https://www.taipeitimes.com/News/lang/archives/2026/03/27/2003854527", time: "2026-03-27T00:00:00Z" },
-      { title: "Japan to join army drills on Philippine soil for first time since World War II", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/japan-to-join-army-drills-on-philippine-soil-in-first-since-wwii", time: "2026-03-26T03:55:00Z" },
-      { title: "Japan starts release of state-held oil to stabilise supplies amid Iran war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-starts-release-of-state-held-oil-to-stabilise-supplies-amid-iran-war", time: "2026-03-26T02:59:00Z" },
-      { title: "Senior Japanese minister expresses regret over military officer’s arrest at Chinese embassy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347833/senior-japanese-minister-expresses-regret-over-army-officers-arrest-chinese-embassy?utm_source=rss_feed", time: "2026-03-25T07:15:48Z" },
-      { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
-      { title: "Unease in Japan after Trump cites Pearl Harbor to defend Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/unease-in-japan-after-trump-uses-pearl-harbor-to-defend-iran-war?traffic_source=rss", time: "2026-03-21T14:34:12Z" },
-      { title: "Japan beat Australia to lift Women’s Asian Cup title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/japan-beat-australia-to-lift-womens-asian-cup-title?traffic_source=rss", time: "2026-03-21T11:57:41Z" },
-      { title: "Iran says it will allow Japanese ships to transit the Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-says-it-will-allow-japanese-ships-to-transit-the-strait-of-hormuz?traffic_source=rss", time: "2026-03-21T08:21:20Z" },
-      { title: "LIVE: Japan vs Australia – Women’s Asian Cup 2026 final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/21/live-japan-vs-australia-womens-asian-cup-2026-final?traffic_source=rss", time: "2026-03-21T06:01:04Z" },
-      { title: "Japan's PM walks tightrope in high-stakes Washington visit", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260320-japan-s-pm-walks-tightrope-in-high-stakes-washington-visit", time: "2026-03-20T15:27:05Z" },
-      { title: "Trump makes Pearl Harbor remark in meeting with Japan's PM", source: "BBC News", url: "https://www.bbc.com/news/articles/c8dlpr074q3o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T09:55:19Z" },
-      { title: "Japan vs Australia: Women’s Asian Cup final – team news, start and lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/20/japan-vs-australia-womens-asian-cup-final-team-news-start-and-lineups?traffic_source=rss", time: "2026-03-20T04:45:40Z" },
-      { title: "How Japan Reacted to Trump’s Pearl Harbor Joke", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/japan-trump-pearl-harbor.html", time: "2026-03-20T04:42:55Z" },
-      { title: "Using Charm and Restraint, Japan’s Leader Mostly Avoids Trump’s Wrath", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/trump-japan-prime-minister-meeting.html", time: "2026-03-20T04:01:24Z" },
-      { title: "Trump downplays Iran war's impact on global energy prices", source: "CBS News", url: "https://www.cbsnews.com/video/trump-downplays-iran-wars-impact-on-global-energy-prices/", time: "2026-03-19T23:27:00Z" },
-    ]
-  },
-  {
     name: "Berlin", country: "Germany",
     lat: 52.52, lng: 13.405,
     category: "economic",
     articles: [
       { title: "German soldier suspended after allegedly passing plans of defence purchases to lobbyist", source: "Euronews", url: "http://www.euronews.com/2026/03/26/german-soldier-suspended-after-allegedly-passing-plans-of-defence-purchases-to-lobbyist", time: "2026-03-26T20:10:39Z" },
+      { title: "Rescuers attempt to save stranded humpback whale off German coast", source: "BBC News", url: "https://www.bbc.com/news/articles/ce3dn005x7xo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:02:03Z" },
       { title: "DJ Ahmet review – totally charming tale of teen travails in North Macedonia", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/26/dj-ahmet-review-totally-charming-tale-of-teen-travails-in-north-macedonia", time: "2026-03-26T16:00:37Z" },
       { title: "Even Germany’s far right AfD is distancing itself from Donald Trump", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/germany-afd-trump-elections-iran-b2946054.html", time: "2026-03-26T14:28:11Z" },
       { title: "Study: one in five young Germans plans to emigrate", source: "Euronews", url: "http://www.euronews.com/2026/03/26/study-one-in-five-young-germans-plans-to-emigrate", time: "2026-03-26T13:07:47Z" },
@@ -2420,6 +2435,30 @@ const locations = [
       { title: "Germany has a shortage of workers - so it's turning to India for help", source: "BBC News", url: "https://www.bbc.com/news/articles/c3wlww83yv4o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T00:03:25Z" },
       { title: "Death, power and paranoia: painting that shocked German society finally returns to Berlin", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/mar/21/death-power-and-paranoia-painting-that-shocked-german-society-finally-returns-to-berlin", time: "2026-03-21T05:00:43Z" },
       { title: "Viktor Orbán refuses to agree to €90bn loan for Ukraine as EU leaders accuse him of betrayal", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/hungary-orban-ukraine-loan-veto-eu-summit-europe", time: "2026-03-20T00:07:21Z" },
+    ]
+  },
+  {
+    name: "Buenos Aires", country: "Argentina",
+    lat: -34.6037, lng: -58.3816,
+    category: "economic",
+    articles: [
+      { title: "Argentina declares Jalisco New Generation Cartel a ‘terrorist’ group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/argentina-declares-jalisco-new-generation-cartel-a-terrorist-group?traffic_source=rss", time: "2026-03-26T22:03:55Z" },
+      { title: "Argentina’s economy grows by 1.9% in January, driven by agriculture and mining", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/economics/argentinas-economy-grows-by-1-9-in-january-driven-by-agriculture-and-mining", time: "2026-03-26T21:50:50Z" },
+      { title: "Argentina kicks off privatization process of airport ramps company", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/argentina-kicks-off-privatization-process-of-airport-ramps-company", time: "2026-03-26T21:34:22Z" },
+      { title: "US votes against UN resolution labeling slavery ‘gravest crime against humanity’", source: "The Hill", url: "https://thehill.com/policy/international/5802886-un-resolution-slavery-reparations-vote/", time: "2026-03-26T20:02:30Z" },
+      { title: "Bounced checks due to insufficient funds reach pandemic levels", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/business/bounced-checks-due-to-insufficient-funds-reach-pandemic-levels", time: "2026-03-26T14:04:12Z" },
+      { title: "Glacier law modification debate kicks off with a 400-person public hearing", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/glacier-law-modification-debate-kicks-off-with-a-400-person-public-hearing", time: "2026-03-25T21:40:45Z" },
+      { title: "Manuel Adorni announces new bills in first press conference since scandals", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/manuel-adorni-announces-new-bills-in-first-press-conference-since-scandals", time: "2026-03-25T20:09:13Z" },
+      { title: "Get Out!: smoked meats, cinema, and surreal visions", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/what-to-do-in-argentina/what-to-do-in-buenos-aires/get-out/get-out-smoked-meats-cinema-and-surreal-visions", time: "2026-03-25T19:35:36Z" },
+      { title: "Franco Colapinto to showcase F1 car in Buenos Aires in April", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/sports/franco-colapinto/franco-colapinto-to-showcase-f1-car-in-buenos-aires-in-april", time: "2026-03-25T16:37:40Z" },
+      { title: "Argentine tourist accused of racism will not have to serve jail time, Brazil judge rules", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/society/argentine-tourist-accused-of-racism-will-not-have-to-serve-jail-time-brazil-judge-rules", time: "2026-03-25T15:33:02Z" },
+      { title: "How weaving, glamping and kayak tours are helping to tackle deforestation in Argentina’s Gran Chaco", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/25/argentina-gran-chaco-deforestation-eco-tourism-weaving-glamping-kayak-tours", time: "2026-03-25T11:00:06Z" },
+      { title: "Thousands march to mark 50th anniversary of Argentina’s bloody coup", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/thousands-march-to-mark-50th-anniversary-of-argentinas-bloody-coup?traffic_source=rss", time: "2026-03-25T04:57:23Z" },
+      { title: "Argentines call for memory, truth and justice 50 years since the last military coup", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/human-rights/argentines-call-for-memory-truth-and-justice-50-years-since-the-last-military-coup", time: "2026-03-24T23:05:56Z" },
+      { title: "Mothers of the Plaza de Mayo reflect on 50th anniversary of Argentina coup", source: "Al Jazeera", url: "https://www.aljazeera.com/news/longform/2026/3/24/mothers-of-the-plaza-de-mayo-reflect-on-50th-anniversary-of-argentina-coup?traffic_source=rss", time: "2026-03-24T14:01:12Z" },
+      { title: "Argentina was the model of how to survive a dictatorship. Javier Milei is changing that | Jordana Timerman", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/24/argentina-50th-anniversary-coup-dictatorship-javier-milei", time: "2026-03-24T11:00:37Z" },
+      { title: "Fate of Argentina’s disappeared remains ‘open wound’ as more victims identified", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/argentina-disappeared-victims-identified-dirty-war", time: "2026-03-24T10:00:32Z" },
+      { title: "Government Cuts Gut the Memory of Argentina’s Dirty War", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/americas/government-cuts-argentina-dirty-war.html", time: "2026-03-24T09:01:04Z" },
     ]
   },
   {
@@ -2468,25 +2507,46 @@ const locations = [
     ]
   },
   {
-    name: "Buenos Aires", country: "Argentina",
-    lat: -34.6037, lng: -58.3816,
+    name: "Bangkok", country: "Thailand",
+    lat: 13.7563, lng: 100.5018,
     category: "economic",
     articles: [
-      { title: "Argentina kicks off privatization process of airport ramps company", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/argentina-kicks-off-privatization-process-of-airport-ramps-company", time: "2026-03-26T21:34:22Z" },
-      { title: "US votes against UN resolution labeling slavery ‘gravest crime against humanity’", source: "The Hill", url: "https://thehill.com/policy/international/5802886-un-resolution-slavery-reparations-vote/", time: "2026-03-26T20:02:30Z" },
-      { title: "Bounced checks due to insufficient funds reach pandemic levels", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/business/bounced-checks-due-to-insufficient-funds-reach-pandemic-levels", time: "2026-03-26T14:04:12Z" },
-      { title: "Glacier law modification debate kicks off with a 400-person public hearing", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/glacier-law-modification-debate-kicks-off-with-a-400-person-public-hearing", time: "2026-03-25T21:40:45Z" },
-      { title: "Manuel Adorni announces new bills in first press conference since scandals", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/manuel-adorni-announces-new-bills-in-first-press-conference-since-scandals", time: "2026-03-25T20:09:13Z" },
-      { title: "Get Out!: smoked meats, cinema, and surreal visions", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/what-to-do-in-argentina/what-to-do-in-buenos-aires/get-out/get-out-smoked-meats-cinema-and-surreal-visions", time: "2026-03-25T19:35:36Z" },
-      { title: "Franco Colapinto to showcase F1 car in Buenos Aires in April", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/sports/franco-colapinto/franco-colapinto-to-showcase-f1-car-in-buenos-aires-in-april", time: "2026-03-25T16:37:40Z" },
-      { title: "Argentine tourist accused of racism will not have to serve jail time, Brazil judge rules", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/society/argentine-tourist-accused-of-racism-will-not-have-to-serve-jail-time-brazil-judge-rules", time: "2026-03-25T15:33:02Z" },
-      { title: "How weaving, glamping and kayak tours are helping to tackle deforestation in Argentina’s Gran Chaco", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/25/argentina-gran-chaco-deforestation-eco-tourism-weaving-glamping-kayak-tours", time: "2026-03-25T11:00:06Z" },
-      { title: "Thousands march to mark 50th anniversary of Argentina’s bloody coup", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/thousands-march-to-mark-50th-anniversary-of-argentinas-bloody-coup?traffic_source=rss", time: "2026-03-25T04:57:23Z" },
-      { title: "Argentines call for memory, truth and justice 50 years since the last military coup", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/human-rights/argentines-call-for-memory-truth-and-justice-50-years-since-the-last-military-coup", time: "2026-03-24T23:05:56Z" },
-      { title: "Mothers of the Plaza de Mayo reflect on 50th anniversary of Argentina coup", source: "Al Jazeera", url: "https://www.aljazeera.com/news/longform/2026/3/24/mothers-of-the-plaza-de-mayo-reflect-on-50th-anniversary-of-argentina-coup?traffic_source=rss", time: "2026-03-24T14:01:12Z" },
-      { title: "Argentina was the model of how to survive a dictatorship. Javier Milei is changing that | Jordana Timerman", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/24/argentina-50th-anniversary-coup-dictatorship-javier-milei", time: "2026-03-24T11:00:37Z" },
-      { title: "Fate of Argentina’s disappeared remains ‘open wound’ as more victims identified", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/argentina-disappeared-victims-identified-dirty-war", time: "2026-03-24T10:00:32Z" },
-      { title: "Government Cuts Gut the Memory of Argentina’s Dirty War", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/americas/government-cuts-argentina-dirty-war.html", time: "2026-03-24T09:01:04Z" },
+      { title: "Easing of fuel subsidies sparks winners and losers among stocks", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3225078/easing-of-fuel-subsidies-sparks-winners-and-losers-among-stocks", time: "2026-03-26T22:26:00Z" },
+      { title: "Thailand vows to host 1st Disneyland in region", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3225023/thailand-vows-to-host-1st-disneyland-in-region", time: "2026-03-26T22:12:00Z" },
+      { title: "Businesses start to feel  the pinch", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224983/businesses-start-to-feel-the-pinch", time: "2026-03-26T22:03:00Z" },
+      { title: "Credit outlook steady as fuel subsidy ditched", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3225018/credit-outlook-steady-as-fuel-subsidy-ditched", time: "2026-03-26T21:29:00Z" },
+      { title: "Oil fund defends sudden steep price hikes", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224734/oil-fund-defends-sudden-steep-price-hikes", time: "2026-03-26T09:33:00Z" },
+      { title: "The Thailand Biennale Brings More to Phuket Than Mass Tourism", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/arts/design/phuket-thailand-biennale.html", time: "2026-03-26T09:01:08Z" },
+      { title: "Thai fishing industry nears a standstill as Iran war pushes up fuel costs", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-fishing-industry-nears-a-standstill-as-iran-war-pushes-up-fuel-costs", time: "2026-03-26T05:32:09Z" },
+      { title: "Thailand orders daily checks on petrol stations’ fuel stock levels to deter hoarding", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thailand-orders-daily-checks-on-petrol-stations-fuel-stock-levels-to-deter-hoarding", time: "2026-03-26T04:36:00Z" },
+      { title: "Lao suspect tells police of grisly killing", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224588/lao-suspect-tells-police-of-grisly-killing", time: "2026-03-26T04:16:00Z" },
+      { title: "Thai fuel prices soar by six baht a litre", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224535/thai-fuel-prices-soar-by-six-baht-a-litre", time: "2026-03-26T01:15:00Z" },
+      { title: "Stricter rules for digital platforms", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224394/stricter-rules-for-digital-platforms", time: "2026-03-26T01:07:00Z" },
+      { title: "War unlikely to dent Songkran revenue", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224319/war-unlikely-to-dent-songkran-revenue", time: "2026-03-26T00:06:00Z" },
+      { title: "Regulator offers 3 power tariff rates", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224294/regulator-offers-3-power-tariff-rates", time: "2026-03-25T22:58:00Z" },
+      { title: "Lawmakers urged to cut aide quota", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3224274/lawmakers-urged-to-cut-aide-quota", time: "2026-03-25T22:40:00Z" },
+      { title: "Breaking the Cycle review – meet the charismatic Thai politician striving to change his country’s history", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/23/breaking-the-cycle-review-thanathorn-juangroongruangkit", time: "2026-03-23T06:00:42Z" },
+    ]
+  },
+  {
+    name: "Cairo", country: "Egypt",
+    lat: 30.0444, lng: 31.2357,
+    category: "humanitarian",
+    articles: [
+      { title: "What to know about efforts to end the Iran war after Trump’s ceasefire proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/iran-war-trump-negotiations-ceasefire-updates-b2946317.html", time: "2026-03-26T15:51:37Z" },
+      { title: "Africa: Afreximbank Launches Inaugural Accelerator Programme Cohort to Scale Africa's Digital Trade Ecosystem", source: "AllAfrica", url: "https://allafrica.com/stories/202603260431.html", time: "2026-03-26T14:17:00Z" },
+      { title: "Egypt says it is ready to host Iran de-escalation talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/egypt-says-it-is-ready-to-host-iran-de-escalation-talks?traffic_source=rss", time: "2026-03-25T23:44:14Z" },
+      { title: "Egypt says it is ready to host Iran de-escalation talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/egypt-says-it-is-ready-to-host-iran-de-escalation-talks?traffic_source=rss", time: "2026-03-25T23:44:14Z" },
+      { title: "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/mohamed-salah-is-liverpool-exit-the-end-or-can-world-cup-spur-egypt-star?traffic_source=rss", time: "2026-03-25T13:44:24Z" },
+      { title: "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/mohamed-salah-is-liverpool-exit-the-end-or-can-world-cup-spur-egypt-star?traffic_source=rss", time: "2026-03-25T13:44:24Z" },
+      { title: "Why is Mohamed Salah leaving Liverpool, and which club will he join next?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next?traffic_source=rss", time: "2026-03-25T12:32:05Z" },
+      { title: "Why is Mohamed Salah leaving Liverpool, and which club will he join next?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next?traffic_source=rss", time: "2026-03-25T12:32:05Z" },
+      { title: "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/from-pakistan-to-egypt-iran-war-drives-up-fuel-prices-in-the-global-south?traffic_source=rss", time: "2026-03-25T05:20:18Z" },
+      { title: "Salah to leave Liverpool at end of season", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c0e7ww12w2qo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T20:34:23Z" },
+      { title: "Egypt’s Mohamed Salah to leave Liverpool at end of season after 9-year stay", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/egypts-mohamed-salah-to-leave-liverpool-at-end-of-season-after-9-year-stay?traffic_source=rss", time: "2026-03-24T19:23:24Z" },
+      { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
+      { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
+      { title: "Ancient graffiti in Egypt’s Valley of the Kings proves presence of Indian tourists 2,000 years ago", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-890652", time: "2026-03-21T10:00:00Z" },
     ]
   },
   {
@@ -2494,6 +2554,7 @@ const locations = [
     lat: -1.2921, lng: 36.8219,
     category: "political",
     articles: [
+      { title: "Kenya: No New Taxes As Govt Targets Wider Tax Base, Mbadi Says", source: "AllAfrica", url: "https://allafrica.com/stories/202603260467.html", time: "2026-03-26T15:13:15Z" },
       { title: "East African asylum seeker deported by U.S. to Equatorial Guinea", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/east-african-asylum-seeker-deported-by-u-s-to-equatorial-guinea", time: "2026-03-25T22:20:42Z" },
       { title: "UN names African slave trade 'gravest crime against humanity'", source: "France 24", url: "https://www.france24.com/en/un-names-african-slave-trade-gravest-crime-against-humanity", time: "2026-03-25T21:35:53Z" },
       { title: "In Nairobi, residents blame flood devastation on inadequate infrastructure", source: "France 24", url: "https://www.france24.com/en/in-nairobi-residents-blame-flood-devastation-on-inadequate-infrastructure", time: "2026-03-25T14:58:59Z" },
@@ -2507,28 +2568,6 @@ const locations = [
       { title: "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty", source: "BBC News", url: "https://www.bbc.com/news/articles/cj94jmj2p28o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T19:05:30Z" },
       { title: "Army chief was asked about woman 'murdered by British soldier' - his response was emphatic", source: "Sky News", url: "https://news.sky.com/story/army-chief-was-asked-about-woman-murdered-by-british-soldier-his-response-was-emphatic-13522292", time: "2026-03-21T00:01:00Z" },
       { title: "Desperate for food drought-stricken Kenyans turn to the gingerbread tree", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg521yj9lvo?at_medium=RSS&at_campaign=rss", time: "2026-03-20T00:06:24Z" },
-      { title: "Senegal not losing without a fight", source: "France 24", url: "https://www.france24.com/en/senegal-not-losing-without-a-fight", time: "2026-03-19T21:41:06Z" },
-    ]
-  },
-  {
-    name: "Madrid", country: "Spain",
-    lat: 40.4168, lng: -3.7038,
-    category: "political",
-    articles: [
-      { title: "Iran suggests Spain may be able to send ships through Strait of Hormuz as it is ‘non-hostile’ country", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-spain-ships-strait-of-hormuz-b2946406.html", time: "2026-03-26T21:10:55Z" },
-      { title: "Spanish woman to die by euthanasia after long legal battle with father", source: "BBC News", url: "https://www.bbc.com/news/articles/c7vqdd23y0vo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:45:47Z" },
-      { title: "Iran reportedly allows Spanish ships to transit Hormuz strait due to position on war", source: "Euronews", url: "http://www.euronews.com/2026/03/26/can-spain-use-the-strait-of-hormuz-thanks-to-its-stance-on-the-iran-war", time: "2026-03-26T17:34:35Z" },
-      { title: "Spanish woman wins legal battle to end her life under euthanasia law", source: "The Guardian", url: "https://www.theguardian.com/society/2026/mar/26/spanish-woman-wins-legal-battle-to-end-her-life-under-euthanasia-law", time: "2026-03-26T16:42:15Z" },
-      { title: "The Man Who Keeps Time at Madrid’s Royal Palace", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/style/madrid-royal-palace-clocks.html", time: "2026-03-26T09:00:57Z" },
-      { title: "EU set to vote on trade deal with the US - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/26/us-eu-trade-tariff-trade-deal-ukraine-iran-rutte-denmark-europe-live-news-updates", time: "2026-03-26T08:54:22Z" },
-      { title: "Spain's Prime Minister Pedro Sánchez warns Iran war 'far worse' than Iraq in 2003", source: "Euronews", url: "http://www.euronews.com/2026/03/25/spains-prime-minister-pedro-sanchez-warns-iran-war-far-worse-than-iraq-in-2003", time: "2026-03-25T12:46:14Z" },
-      { title: "Rubio testimony sheds light on friend's shadowy Venezuela play", source: "Axios", url: "https://www.axios.com/2026/03/25/rubio-testimony-friend-trial-venezuela", time: "2026-03-25T01:24:13Z" },
-      { title: "Real talk is nonsense but I may coach again - Klopp", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c8ejkj69jzro?at_medium=RSS&at_campaign=rss", time: "2026-03-23T23:46:20Z" },
-      { title: "Alabama student reportedly fell to his death in Barcelona waters by accident", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/21/jimmy-gracey-alabama-student-fell-barcelona-water-death", time: "2026-03-21T13:42:13Z" },
-      { title: "€5 billion aimed at offsetting the economic impact of the Middle East conflict", source: "France 24", url: "https://www.france24.com/en/video/20260321-%E2%82%AC5-billion-aimed-at-offsetting-the-economic-impact-of-the-middle-east-conflict", time: "2026-03-21T10:50:49Z" },
-      { title: "'Multiple factors' caused 2025 Spain and Portugal blackout, says report", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0r3z3lvqo?at_medium=RSS&at_campaign=rss", time: "2026-03-20T14:14:58Z" },
-      { title: "Spain Says the Sun Shields It From Rising Gas Costs. Is That True?", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/europe/spain-iran-energy-renewables-gas-sun.html", time: "2026-03-20T04:01:16Z" },
-      { title: "Body of missing Illinois student found in waters off beach of Barcelona", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/illinois-student-dead-barcelona", time: "2026-03-19T21:54:53Z" },
     ]
   },
   {
@@ -2572,30 +2611,11 @@ const locations = [
     ]
   },
   {
-    name: "Cairo", country: "Egypt",
-    lat: 30.0444, lng: 31.2357,
-    category: "humanitarian",
-    articles: [
-      { title: "What to know about efforts to end the Iran war after Trump’s ceasefire proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/iran-war-trump-negotiations-ceasefire-updates-b2946317.html", time: "2026-03-26T15:51:37Z" },
-      { title: "Egypt says it is ready to host Iran de-escalation talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/egypt-says-it-is-ready-to-host-iran-de-escalation-talks?traffic_source=rss", time: "2026-03-25T23:44:14Z" },
-      { title: "Egypt says it is ready to host Iran de-escalation talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/egypt-says-it-is-ready-to-host-iran-de-escalation-talks?traffic_source=rss", time: "2026-03-25T23:44:14Z" },
-      { title: "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/mohamed-salah-is-liverpool-exit-the-end-or-can-world-cup-spur-egypt-star?traffic_source=rss", time: "2026-03-25T13:44:24Z" },
-      { title: "Mohamed Salah: Is Liverpool exit the end? Can World Cup spur Egypt star?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/mohamed-salah-is-liverpool-exit-the-end-or-can-world-cup-spur-egypt-star?traffic_source=rss", time: "2026-03-25T13:44:24Z" },
-      { title: "Why is Mohamed Salah leaving Liverpool, and which club will he join next?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next?traffic_source=rss", time: "2026-03-25T12:32:05Z" },
-      { title: "Why is Mohamed Salah leaving Liverpool, and which club will he join next?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next?traffic_source=rss", time: "2026-03-25T12:32:05Z" },
-      { title: "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/25/from-pakistan-to-egypt-iran-war-drives-up-fuel-prices-in-the-global-south?traffic_source=rss", time: "2026-03-25T05:20:18Z" },
-      { title: "Salah to leave Liverpool at end of season", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c0e7ww12w2qo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T20:34:23Z" },
-      { title: "Egypt’s Mohamed Salah to leave Liverpool at end of season after 9-year stay", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/egypts-mohamed-salah-to-leave-liverpool-at-end-of-season-after-9-year-stay?traffic_source=rss", time: "2026-03-24T19:23:24Z" },
-      { title: "Pakistan ‘ready to host US-Iran talks’: Can latest peace push work?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work?traffic_source=rss", time: "2026-03-24T13:42:11Z" },
-      { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
-      { title: "Ancient graffiti in Egypt’s Valley of the Kings proves presence of Indian tourists 2,000 years ago", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-890652", time: "2026-03-21T10:00:00Z" },
-    ]
-  },
-  {
     name: "Pyongyang", country: "North Korea",
     lat: 39.0392, lng: 125.7625,
     category: "conflict",
     articles: [
+      { title: "North Korea, Belarus sign friendship treaty, KCNA says", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-belarus-sign-friendship-treaty-kcna-says", time: "2026-03-26T22:02:08Z" },
       { title: "Kim Jong Un gifted gun after Belarus friendship treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/kim-jong-un-gifted-gun-after-belarus-friendship-treaty?traffic_source=rss", time: "2026-03-26T18:03:33Z" },
       { title: "North Korea and Belarus sign ‘fundamental’ treaty as Lukashenko visits Kim in Pyongyang", source: "The Independent", url: "https://www.independent.co.uk/asia/east-asia/north-korea-belarus-kim-jong-un-alexander-lukashenko-b2945937.html", time: "2026-03-26T17:58:47Z" },
       { title: "North Korea’s Kim meets Lukashenko, slams ‘pressure ​on Belarus from West’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/north-koreas-kim-meets-lukashenko-slams-pressure-on-belarus-from-west?traffic_source=rss", time: "2026-03-26T12:12:55Z" },
@@ -2615,6 +2635,7 @@ const locations = [
     lat: 14.5995, lng: 120.9842,
     category: "conflict",
     articles: [
+      { title: "Manila’s streets empty as fuel prices surge amid Strait of Hormuz crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/26/manilas-streets-empty-as-fuel-prices-surge-amid-strait-of-hormuz-crisis?traffic_source=rss", time: "2026-03-26T22:30:16Z" },
       { title: "Philippines suspends spot sales of electricity due to Middle East conflict", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/philippines-suspends-spot-sales-of-electricity-due-to-middle-east-conflict", time: "2026-03-26T06:30:00Z" },
       { title: "'We are being choked': Philippines transport workers strike over fuel costs", source: "BBC News", url: "https://www.bbc.com/news/articles/c4glxn24gd6o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T04:22:31Z" },
       { title: "Russian oil arrives as Philippines battles ‘energy emergency’", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/russian-oil-arrives-as-philippines-battles-energy-emergency", time: "2026-03-26T03:38:00Z" },
@@ -2627,6 +2648,45 @@ const locations = [
       { title: "Philippines declares energy emergency over Iran conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/c3ex8ez3717o?at_medium=RSS&at_campaign=rss", time: "2026-03-24T14:59:37Z" },
       { title: "Fuel rations and cash handouts: Iran war energy shock hits Asia | The Latest", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/20/cash-handouts-and-ac-limits-iran-war-causes-energy-shock-in-asia-the-latest", time: "2026-03-20T17:42:22Z" },
       { title: "Fuel rations and cash handouts: Iran war energy shock hits Asia – The Latest", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/fuel-rations-and-cash-handouts-iran-war-energy-shock-hits-asia-the-latest", time: "2026-03-20T16:53:57Z" },
+    ]
+  },
+  {
+    name: "Madrid", country: "Spain",
+    lat: 40.4168, lng: -3.7038,
+    category: "political",
+    articles: [
+      { title: "Iran suggests Spain may be able to send ships through Strait of Hormuz as it is ‘non-hostile’ country", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-spain-ships-strait-of-hormuz-b2946406.html", time: "2026-03-26T21:10:55Z" },
+      { title: "Spanish woman to die by euthanasia after long legal battle with father", source: "BBC News", url: "https://www.bbc.com/news/articles/c7vqdd23y0vo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:45:47Z" },
+      { title: "Iran reportedly allows Spanish ships to transit Hormuz strait due to position on war", source: "Euronews", url: "http://www.euronews.com/2026/03/26/can-spain-use-the-strait-of-hormuz-thanks-to-its-stance-on-the-iran-war", time: "2026-03-26T17:34:35Z" },
+      { title: "Spanish woman wins legal battle to end her life under euthanasia law", source: "The Guardian", url: "https://www.theguardian.com/society/2026/mar/26/spanish-woman-wins-legal-battle-to-end-her-life-under-euthanasia-law", time: "2026-03-26T16:42:15Z" },
+      { title: "The Man Who Keeps Time at Madrid’s Royal Palace", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/style/madrid-royal-palace-clocks.html", time: "2026-03-26T09:00:57Z" },
+      { title: "EU set to vote on trade deal with the US - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/26/us-eu-trade-tariff-trade-deal-ukraine-iran-rutte-denmark-europe-live-news-updates", time: "2026-03-26T08:54:22Z" },
+      { title: "Spain's Prime Minister Pedro Sánchez warns Iran war 'far worse' than Iraq in 2003", source: "Euronews", url: "http://www.euronews.com/2026/03/25/spains-prime-minister-pedro-sanchez-warns-iran-war-far-worse-than-iraq-in-2003", time: "2026-03-25T12:46:14Z" },
+      { title: "Rubio testimony sheds light on friend's shadowy Venezuela play", source: "Axios", url: "https://www.axios.com/2026/03/25/rubio-testimony-friend-trial-venezuela", time: "2026-03-25T01:24:13Z" },
+      { title: "Real talk is nonsense but I may coach again - Klopp", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c8ejkj69jzro?at_medium=RSS&at_campaign=rss", time: "2026-03-23T23:46:20Z" },
+      { title: "Alabama student reportedly fell to his death in Barcelona waters by accident", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/21/jimmy-gracey-alabama-student-fell-barcelona-water-death", time: "2026-03-21T13:42:13Z" },
+      { title: "€5 billion aimed at offsetting the economic impact of the Middle East conflict", source: "France 24", url: "https://www.france24.com/en/video/20260321-%E2%82%AC5-billion-aimed-at-offsetting-the-economic-impact-of-the-middle-east-conflict", time: "2026-03-21T10:50:49Z" },
+      { title: "'Multiple factors' caused 2025 Spain and Portugal blackout, says report", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0r3z3lvqo?at_medium=RSS&at_campaign=rss", time: "2026-03-20T14:14:58Z" },
+      { title: "Spain Says the Sun Shields It From Rising Gas Costs. Is That True?", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/europe/spain-iran-energy-renewables-gas-sun.html", time: "2026-03-20T04:01:16Z" },
+    ]
+  },
+  {
+    name: "Goa", country: "India",
+    lat: 15.2993, lng: 74.124,
+    category: "economic",
+    articles: [
+      { title: "Crude prices test GDP, inflation goals", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3225108/crude-prices-test-gdp-inflation-goals", time: "2026-03-26T22:19:00Z" },
+      { title: "India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/asia/india-pakistan-iran-trump-modi.html", time: "2026-03-26T08:11:45Z" },
+      { title: "Bangladesh PM Tarique Rahman calls March 25, 1971 genocide as ‘pre-planned massacre’", source: "The Hindu", url: "https://www.thehindu.com/news/international/bangladesh-pm-tarique-rahman-calls-march-25-1971-genocide-as-pre-planned-massacre/article70787234.ece", time: "2026-03-26T08:03:45Z" },
+      { title: "Trump plans May visit to China for talks with Xi after Iran war delay", source: "Dawn", url: "https://www.dawn.com/news/1985501/trump-plans-may-visit-to-china-for-talks-with-xi-after-iran-war-delay", time: "2026-03-26T06:33:14Z" },
+      { title: "BRICS shifts gears as Brazil passes the gavel to India amid global tensions and ambitious goals", source: "The Hindu", url: "https://www.thehindu.com/news/international/brics-shifts-gears-as-brazil-passes-the-gavel-to-india-amid-global-tensions-and-ambitious-goals/article70407772.ece", time: "2026-03-25T11:37:04Z" },
+      { title: "The South at the centre", source: "The Hindu", url: "https://www.thehindu.com/sci-tech/energy-and-environment/the-south-at-the-centre/article70285022.ece", time: "2026-03-25T11:27:52Z" },
+      { title: "The Israeli military wants several more weeks to fight Iran war, officials say", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5759317/israel-iran-war", time: "2026-03-24T18:42:30Z" },
+      { title: "Lionel Messi scores as Inter Miami rally past NYCFC in MLS", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/23/lionel-messi-scores-as-inter-miami-rally-past-nycfc-in-mls?traffic_source=rss", time: "2026-03-23T06:20:25Z" },
+      { title: "Trump threats, U.S. troop build-up raise specter of battle for Hormuz", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/22/marines-hormuz-strait-decisive-battle-iran-trump/", time: "2026-03-22T18:46:46Z" },
+      { title: "What US-Israeli targets reveal about Iran war goals three weeks in", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/what-us-israeli-targets-reveal-about-iran-war-goals-three-weeks-in?traffic_source=rss", time: "2026-03-20T15:35:06Z" },
+      { title: "Deepening Iran conflict exposes cracks in U.S. and Israeli objectives", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/20/us-israel-iran-goals-trump-netanyahu/", time: "2026-03-20T09:00:04Z" },
+      { title: "US intelligence chief admits US, Israel not aligned on Iran war goals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/us-intelligence-chief-admits-us-israel-not-aligned-on-iran-war-goals?traffic_source=rss", time: "2026-03-19T23:07:25Z" },
     ]
   },
   {
@@ -2684,24 +2744,6 @@ const locations = [
     ]
   },
   {
-    name: "Bangkok", country: "Thailand",
-    lat: 13.7563, lng: 100.5018,
-    category: "economic",
-    articles: [
-      { title: "Oil fund defends sudden steep price hikes", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224734/oil-fund-defends-sudden-steep-price-hikes", time: "2026-03-26T09:33:00Z" },
-      { title: "The Thailand Biennale Brings More to Phuket Than Mass Tourism", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/arts/design/phuket-thailand-biennale.html", time: "2026-03-26T09:01:08Z" },
-      { title: "Thai fishing industry nears a standstill as Iran war pushes up fuel costs", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-fishing-industry-nears-a-standstill-as-iran-war-pushes-up-fuel-costs", time: "2026-03-26T05:32:09Z" },
-      { title: "Thailand orders daily checks on petrol stations’ fuel stock levels to deter hoarding", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thailand-orders-daily-checks-on-petrol-stations-fuel-stock-levels-to-deter-hoarding", time: "2026-03-26T04:36:00Z" },
-      { title: "Lao suspect tells police of grisly killing", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224588/lao-suspect-tells-police-of-grisly-killing", time: "2026-03-26T04:16:00Z" },
-      { title: "Thai fuel prices soar by six baht a litre", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3224535/thai-fuel-prices-soar-by-six-baht-a-litre", time: "2026-03-26T01:15:00Z" },
-      { title: "Stricter rules for digital platforms", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224394/stricter-rules-for-digital-platforms", time: "2026-03-26T01:07:00Z" },
-      { title: "War unlikely to dent Songkran revenue", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224319/war-unlikely-to-dent-songkran-revenue", time: "2026-03-26T00:06:00Z" },
-      { title: "Regulator offers 3 power tariff rates", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3224294/regulator-offers-3-power-tariff-rates", time: "2026-03-25T22:58:00Z" },
-      { title: "Lawmakers urged to cut aide quota", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3224274/lawmakers-urged-to-cut-aide-quota", time: "2026-03-25T22:40:00Z" },
-      { title: "Breaking the Cycle review – meet the charismatic Thai politician striving to change his country’s history", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/23/breaking-the-cycle-review-thanathorn-juangroongruangkit", time: "2026-03-23T06:00:42Z" },
-    ]
-  },
-  {
     name: "Accra", country: "Ghana",
     lat: 5.6037, lng: -0.187,
     category: "economic",
@@ -2717,24 +2759,6 @@ const locations = [
       { title: "Ghana demands compensation for slavery in landmark UN vote", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg06q36052o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T11:22:05Z" },
       { title: "Ghana and EU sign landmark defence deal to combat militant Islamist threat", source: "BBC News", url: "https://www.bbc.com/news/articles/c87w80xe1jro?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:45:47Z" },
       { title: "Ghana pushes for slave trade to be declared a crime against Humanity", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/ghana-pushes-for-slave-trade-to-be-declared-a-crime-against-humanity?traffic_source=rss", time: "2026-03-22T08:22:02Z" },
-    ]
-  },
-  {
-    name: "Goa", country: "India",
-    lat: 15.2993, lng: 74.124,
-    category: "economic",
-    articles: [
-      { title: "India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/asia/india-pakistan-iran-trump-modi.html", time: "2026-03-26T08:11:45Z" },
-      { title: "Bangladesh PM Tarique Rahman calls March 25, 1971 genocide as ‘pre-planned massacre’", source: "The Hindu", url: "https://www.thehindu.com/news/international/bangladesh-pm-tarique-rahman-calls-march-25-1971-genocide-as-pre-planned-massacre/article70787234.ece", time: "2026-03-26T08:03:45Z" },
-      { title: "Trump plans May visit to China for talks with Xi after Iran war delay", source: "Dawn", url: "https://www.dawn.com/news/1985501/trump-plans-may-visit-to-china-for-talks-with-xi-after-iran-war-delay", time: "2026-03-26T06:33:14Z" },
-      { title: "BRICS shifts gears as Brazil passes the gavel to India amid global tensions and ambitious goals", source: "The Hindu", url: "https://www.thehindu.com/news/international/brics-shifts-gears-as-brazil-passes-the-gavel-to-india-amid-global-tensions-and-ambitious-goals/article70407772.ece", time: "2026-03-25T11:37:04Z" },
-      { title: "The South at the centre", source: "The Hindu", url: "https://www.thehindu.com/sci-tech/energy-and-environment/the-south-at-the-centre/article70285022.ece", time: "2026-03-25T11:27:52Z" },
-      { title: "The Israeli military wants several more weeks to fight Iran war, officials say", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5759317/israel-iran-war", time: "2026-03-24T18:42:30Z" },
-      { title: "Lionel Messi scores as Inter Miami rally past NYCFC in MLS", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/23/lionel-messi-scores-as-inter-miami-rally-past-nycfc-in-mls?traffic_source=rss", time: "2026-03-23T06:20:25Z" },
-      { title: "Trump threats, U.S. troop build-up raise specter of battle for Hormuz", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/22/marines-hormuz-strait-decisive-battle-iran-trump/", time: "2026-03-22T18:46:46Z" },
-      { title: "What US-Israeli targets reveal about Iran war goals three weeks in", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/what-us-israeli-targets-reveal-about-iran-war-goals-three-weeks-in?traffic_source=rss", time: "2026-03-20T15:35:06Z" },
-      { title: "Deepening Iran conflict exposes cracks in U.S. and Israeli objectives", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/20/us-israel-iran-goals-trump-netanyahu/", time: "2026-03-20T09:00:04Z" },
-      { title: "US intelligence chief admits US, Israel not aligned on Iran war goals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/us-intelligence-chief-admits-us-israel-not-aligned-on-iran-war-goals?traffic_source=rss", time: "2026-03-19T23:07:25Z" },
     ]
   },
   {
@@ -3330,6 +3354,16 @@ const locations = [
     ]
   },
   {
+    name: "Santiago", country: "Chile",
+    lat: -33.4489, lng: -70.6693,
+    category: "political",
+    articles: [
+      { title: "Police fire water cannons at Chile student protest", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/police-fire-water-cannons-at-chile-student-protest?traffic_source=rss", time: "2026-03-26T22:15:19Z" },
+      { title: "‘There’s biological treasure here’: Chile’s endemic seals gain protection with new marine park", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/23/chile-seals-colony-gain-protection-new-marine-park-juan-fernandez-archipelago-wildlife", time: "2026-03-23T12:00:49Z" },
+      { title: "Real Madrid vs Atletico Madrid: La Liga – team news, start, lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/real-madrid-vs-atletico-madrid-la-liga-team-news-start-lineups?traffic_source=rss", time: "2026-03-21T09:34:42Z" },
+    ]
+  },
+  {
     name: "Qom", country: "Iran",
     lat: 34.6401, lng: 50.8764,
     category: "conflict",
@@ -3480,15 +3514,6 @@ const locations = [
     articles: [
       { title: "ECC approves Rs100bn supplementary grant for PM’s austerity fund", source: "Dawn", url: "https://www.dawn.com/news/1985638/ecc-approves-rs100bn-supplementary-grant-for-pms-austerity-fund", time: "2026-03-26T17:11:24Z" },
       { title: "Kashmiris donate gold and cash to support Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/kashmiris-donate-gold-and-cash-to-support-iran?traffic_source=rss", time: "2026-03-22T23:38:44Z" },
-    ]
-  },
-  {
-    name: "Santiago", country: "Chile",
-    lat: -33.4489, lng: -70.6693,
-    category: "political",
-    articles: [
-      { title: "‘There’s biological treasure here’: Chile’s endemic seals gain protection with new marine park", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/23/chile-seals-colony-gain-protection-new-marine-park-juan-fernandez-archipelago-wildlife", time: "2026-03-23T12:00:49Z" },
-      { title: "Real Madrid vs Atletico Madrid: La Liga – team news, start, lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/real-madrid-vs-atletico-madrid-la-liga-team-news-start-lineups?traffic_source=rss", time: "2026-03-21T09:34:42Z" },
     ]
   },
   {
