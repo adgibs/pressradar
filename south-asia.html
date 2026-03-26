@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:10 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:16 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 05:11 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "From Pakistan to Egypt, Iran war drives up fuel prices in the Global South"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces cooking gas shortages amid broader fuel price pressures</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan mediates between United States and Iran nuclear negotiations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">US investors commit record billion dollars to Indian Premier League</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">India&#x27;s historic haveli homes deteriorate despite preservation revival efforts</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 07:16 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US investors drive record billion-dollar deals in Indian cricket IPL</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Protest in India over cooking gas crisis", "India&#39;s historic haveli homes caught between revival and ruin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">India faces cooking gas shortages and heritage conservation challenges</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", "US-Iran mediation: What are each side’s demands – and is a deal possible?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan mediates US-Iran talks as diplomatic negotiations progress</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,24 +111,6 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "New Delhi", country: "India",
-    lat: 28.6139, lng: 77.209,
-    category: "political",
-    articles: [
-      { title: "India's historic haveli homes caught between revival and ruin", source: "France 24", url: "https://www.france24.com/en/video/20260325-india-s-historic-haveli-homes-caught-between-revival-and-ruin", time: "2026-03-25T16:56:03Z" },
-      { title: "Protest in India over cooking gas crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/protest-in-india-over-cooking-gas-crisis?traffic_source=rss", time: "2026-03-25T16:36:39Z" },
-      { title: "Why has India arrested US, Ukrainian nationals under anti-terror laws?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/why-has-india-arrested-us-ukrainian-nationals-under-anti-terror-laws?traffic_source=rss", time: "2026-03-24T14:05:02Z" },
-      { title: "‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/iran-war-fuel-shortages-affecting-readers-worldwide", time: "2026-03-24T00:17:30Z" },
-      { title: "US-Israeli war on Iran strains food, water and fuel prices in India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/us-israeli-war-on-iran-strains-food-water-and-fuel-prices-in-india?traffic_source=rss", time: "2026-03-23T12:50:53Z" },
-      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
-      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
-      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
-      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
-      { title: "Manure dryers and devil dancers: the British empire’s attempt to use photography to control India", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/19/british-empire-photography-to-control-india-colonialism", time: "2026-03-19T07:00:02Z" },
-      { title: "‘Waiting for days’: India feels impact of gas supply chain disruption amid Iran conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/india-liquefied-petroleum-gas-lpg-supply-chain-disruption-iran-conflict", time: "2026-03-19T06:00:01Z" },
-    ]
-  },
-  {
     name: "Islamabad", country: "Pakistan",
     lat: 33.6844, lng: 73.0479,
     category: "political",
@@ -144,6 +126,22 @@ const locations = [
       { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
       { title: "Pakistan T20 cricket league to be held in empty stadiums amid oil crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/22/pakistan-super-league-matches-to-be-held-in-empty-stadiums-amid-oil-crisis?traffic_source=rss", time: "2026-03-22T16:00:40Z" },
       { title: "Why Pakistani farmers are suing two German companies for deadly 2022 floods", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/20/why-pakistani-farmers-are-suing-two-german-companies-for-deadly-2022-floods?traffic_source=rss", time: "2026-03-20T04:22:09Z" },
+    ]
+  },
+  {
+    name: "New Delhi", country: "India",
+    lat: 28.6139, lng: 77.209,
+    category: "political",
+    articles: [
+      { title: "India's historic haveli homes caught between revival and ruin", source: "France 24", url: "https://www.france24.com/en/video/20260325-india-s-historic-haveli-homes-caught-between-revival-and-ruin", time: "2026-03-25T16:56:03Z" },
+      { title: "Protest in India over cooking gas crisis", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/protest-in-india-over-cooking-gas-crisis?traffic_source=rss", time: "2026-03-25T16:36:39Z" },
+      { title: "Why has India arrested US, Ukrainian nationals under anti-terror laws?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/why-has-india-arrested-us-ukrainian-nationals-under-anti-terror-laws?traffic_source=rss", time: "2026-03-24T14:05:02Z" },
+      { title: "‘We consider every mile we drive’: how fuel shortages are affecting readers worldwide", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/iran-war-fuel-shortages-affecting-readers-worldwide", time: "2026-03-24T00:17:30Z" },
+      { title: "US-Israeli war on Iran strains food, water and fuel prices in India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/us-israeli-war-on-iran-strains-food-water-and-fuel-prices-in-india?traffic_source=rss", time: "2026-03-23T12:50:53Z" },
+      { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
+      { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
+      { title: "India cooking gas crisis forces exodus of textile workers", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/20/india-cooking-gas-crisis-forces-exodus-of-textile-workers?traffic_source=rss", time: "2026-03-20T21:17:30Z" },
+      { title: "Gabbard says Pakistan missiles a future threat to US, but experts push back", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/gabbard-says-pakistan-missiles-a-future-threat-to-us-but-experts-push-back?traffic_source=rss", time: "2026-03-19T10:29:39Z" },
     ]
   },
   {
