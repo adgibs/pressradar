@@ -10,7 +10,7 @@ Interactive global news map with 7 regional pages. Fetches RSS news, geocodes ar
 
 - **GitHub repo:** `adgibs/pressradar`
 - **GitHub username:** `adgibs`
-- **Live site:** https://pressradar.me
+- **Live site:** https://adgibs.github.io/pressradar
 - **Default branch:** `main`
 - **Workflow:** Commit directly to `main` (no PRs — auto-deployed via GitHub Pages)
 
@@ -162,5 +162,6 @@ Shared styles for all pages. Key sections:
 - Do NOT hardcode map coordinates in `app.js` — use `window.pageConfig`. (Caused all pages to zoom to Middle East.)
 - When extracting shared code from multiple HTML files, always verify that `fetch_news.py` regex injection patterns still match the refactored HTML structure.
 - Gemini free tier has zero quota in UK region — do not attempt to use it. Use Anthropic API instead.
-- The Cowork VM cannot `git push` — always instruct the user to push from their Mac.
-- After committing in the VM, remind user to push. Unpushed commits are invisible to GitHub Actions.
+
+## The Cowork VM cannot `git push` — always instruct the user to push from their Mac.
+## After committing in the VM, remind user to push. Unpushed commits are invisible to GitHub Actions.

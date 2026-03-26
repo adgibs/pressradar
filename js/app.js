@@ -70,6 +70,22 @@ let activeCountry = null; // null = show all
 let activeSource = null;  // null = show all
 let activeBriefingTitles = null; // null = show all, Set = filter to these titles
 
+// Radius filter (Global page only)
+let radiusCenter = null;   // {lat, lng} or null
+let radiusKm = 500;        // current radius in km
+let radiusCircle = null;   // Leaflet circle layer
+let radiusMarker = null;   // Leaflet marker for center point
+
+function haversineDistance(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLng/2) * Math.sin(dLng/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
 // ===== MAP INIT =====
 const map = L.map('map', {
   center: window.pageConfig.mapCenter,
@@ -83,6 +99,64 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
   subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
+
+// ===== RADIUS CLICK (Global page only) =====
+if (window.pageConfig.region === 'Global') {
+  map.on('click', function(e) {
+    radiusCenter = { lat: e.latlng.lat, lng: e.latlng.lng };
+    updateRadiusOverlay();
+    applyFilters();
+    const section = document.getElementById('radius-section');
+    if (section) section.style.display = '';
+    const presets = document.getElementById('radius-presets');
+    if (presets) presets.style.display = '';
+    const clearBtn = document.getElementById('clear-radius-btn');
+    if (clearBtn) clearBtn.style.display = '';
+    const info = document.getElementById('radius-info');
+    if (info) info.textContent = 'Showing articles within ' + radiusKm + ' km';
+  });
+}
+
+function updateRadiusOverlay() {
+  if (radiusCircle) map.removeLayer(radiusCircle);
+  if (radiusMarker) map.removeLayer(radiusMarker);
+  if (!radiusCenter) return;
+  radiusCircle = L.circle([radiusCenter.lat, radiusCenter.lng], {
+    radius: radiusKm * 1000,
+    color: '#e74c3c', weight: 2, opacity: 0.5,
+    fillColor: '#e74c3c', fillOpacity: 0.08, dashArray: '6, 4'
+  }).addTo(map);
+  radiusMarker = L.circleMarker([radiusCenter.lat, radiusCenter.lng], {
+    radius: 6, fillColor: '#e74c3c', color: '#fff', weight: 2, fillOpacity: 1
+  }).addTo(map);
+  map.fitBounds(radiusCircle.getBounds().pad(0.1));
+}
+
+function setRadius(km) {
+  radiusKm = km;
+  updateRadiusOverlay();
+  applyFilters();
+  document.querySelectorAll('#radius-presets .preset-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector('#radius-presets .preset-btn[onclick="setRadius(' + km + ')"]');
+  if (btn) btn.classList.add('active');
+  const info = document.getElementById('radius-info');
+  if (info && radiusCenter) info.textContent = 'Showing articles within ' + km + ' km';
+  saveFiltersToSession();
+}
+
+function clearRadius() {
+  radiusCenter = null;
+  if (radiusCircle) { map.removeLayer(radiusCircle); radiusCircle = null; }
+  if (radiusMarker) { map.removeLayer(radiusMarker); radiusMarker = null; }
+  const clearBtn = document.getElementById('clear-radius-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  const presets = document.getElementById('radius-presets');
+  if (presets) presets.style.display = 'none';
+  const info = document.getElementById('radius-info');
+  if (info) info.textContent = 'Click anywhere on the map to set a location';
+  applyFilters();
+  saveFiltersToSession();
+}
 
 // ===== MARKERS =====
 const markerLayer = L.layerGroup().addTo(map);
@@ -123,6 +197,8 @@ function renderMarkers() {
 
   locations.forEach(loc => {
     if (activeCountry && loc.country !== activeCountry) return;
+    // Radius filter (Global page)
+    if (radiusCenter && haversineDistance(radiusCenter.lat, radiusCenter.lng, loc.lat, loc.lng) > radiusKm) return;
 
     // Filter articles by time, source, search text, and paywall
     const hidePaywall = document.getElementById('hide-paywall')?.checked;
@@ -194,6 +270,7 @@ function renderMarkers() {
     const heatPoints = [];
     locations.forEach(loc => {
       if (activeCountry && loc.country !== activeCountry) return;
+      if (radiusCenter && haversineDistance(radiusCenter.lat, radiusCenter.lng, loc.lat, loc.lng) > radiusKm) return;
       const searchText = (document.getElementById('search-box')?.value || '').toLowerCase();
       const hidePaywall = document.getElementById('hide-paywall')?.checked;
       const visibleArticles = loc.articles.filter(a => {
@@ -299,6 +376,11 @@ function renderSidebar() {
 
   // Apply country filter
   let filtered = activeCountry ? locations.filter(l => l.country === activeCountry) : [...locations];
+
+  // Apply radius filter (Global page)
+  if (radiusCenter) {
+    filtered = filtered.filter(loc => haversineDistance(radiusCenter.lat, radiusCenter.lng, loc.lat, loc.lng) <= radiusKm);
+  }
 
   // Apply time filter
   filtered = filtered.map(loc => {
@@ -558,7 +640,9 @@ function saveFiltersToSession() {
       source: activeSource,
       preset: document.querySelector('.preset-btn.active')?.getAttribute('onclick')?.match(/setPreset\('(.+?)'\)/)?.[1] || null,
       search: document.getElementById('search-box')?.value || '',
-      hidePaywall: document.getElementById('hide-paywall')?.checked || false
+      hidePaywall: document.getElementById('hide-paywall')?.checked || false,
+      radiusCenter: radiusCenter,
+      radiusKm: radiusKm
     }));
   } catch(ex) {}
 }
@@ -599,6 +683,8 @@ function applyFilters() {
 }
 
 function fitMapToMarkers() {
+  // When radius is active, the map is already fitted by updateRadiusOverlay
+  if (radiusCenter) return;
   if (!activeCountry && !activeSource && !activeBriefingTitles) {
     map.flyTo(window.pageConfig.mapCenter, window.pageConfig.mapZoom, { duration: 0.6 });
     return;
@@ -648,6 +734,25 @@ function scrollToLocation(locName) {
       activeSource = saved.source || null;
       if (saved.search) document.getElementById('search-box').value = saved.search;
       if (saved.hidePaywall) document.getElementById('hide-paywall').checked = true;
+      // Restore radius state (Global page)
+      if (saved.radiusCenter) {
+        radiusCenter = saved.radiusCenter;
+        radiusKm = saved.radiusKm || 500;
+        updateRadiusOverlay();
+        const section = document.getElementById('radius-section');
+        if (section) {
+          const presets = document.getElementById('radius-presets');
+          const clearBtn = document.getElementById('clear-radius-btn');
+          const info = document.getElementById('radius-info');
+          if (presets) presets.style.display = '';
+          if (clearBtn) clearBtn.style.display = '';
+          if (info) info.textContent = 'Showing articles within ' + radiusKm + ' km';
+          // Highlight correct radius button
+          document.querySelectorAll('#radius-presets .preset-btn').forEach(b => b.classList.remove('active'));
+          const btn = document.querySelector('#radius-presets .preset-btn[onclick="setRadius(' + radiusKm + ')"]');
+          if (btn) btn.classList.add('active');
+        }
+      }
       // setPreset triggers applyFilters which renders everything
       setPreset(saved.preset || '48h');
     } else {
@@ -667,6 +772,12 @@ function scrollToLocation(locName) {
   }
   autoExpandArticles();
 })();
+
+// Show radius section on Global page
+if (window.pageConfig.region === 'Global') {
+  const radiusSec = document.getElementById('radius-section');
+  if (radiusSec) radiusSec.style.display = '';
+}
 
 // Set article count
 document.getElementById('total-count').textContent = allTimes.length;

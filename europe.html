@@ -14,13 +14,14 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:07 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:37 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
 </div>
 
 <div id="region-nav">
+  <button class="region-tab" onclick="window.location.href='global.html'">Global</button>
   <button class="region-tab" onclick="window.location.href='index.html'">Middle East</button>
   <button class="region-tab" onclick="window.location.href='ukraine.html'">Ukraine</button>
   <button class="region-tab" onclick="window.location.href='east-asia.html'">East Asia</button>
@@ -115,6 +116,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "MEPs back plans for ‘return hubs’, raising fears of ‘human rights black holes’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/meps-back-plans-for-return-hubs-raising-fears-of-human-rights-black-holes", time: "2026-03-26T17:23:33Z" },
       { title: "NATO reports 20% increase in Europe, Canada's defence spending", source: "France 24", url: "https://www.france24.com/en/europe/20260326-nato-reports-20-increase-europe-canada-defence-spending", time: "2026-03-26T14:10:06Z" },
       { title: "After ‘Sausage Making,’ European Lawmakers Approve U.S. Trade Deal", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/eu-trade-deal-us-european-parliament.html", time: "2026-03-26T13:05:05Z" },
       { title: "Brussels opens investigation into Snapchat amid concern over children’s safety", source: "The Guardian", url: "https://www.theguardian.com/technology/2026/mar/26/brussels-opens-investigation-into-snapchat-amid-concern-over-childrens-safety", time: "2026-03-26T12:55:17Z" },
@@ -303,6 +305,7 @@ const locations = [
     lat: 47.4979, lng: 19.0402,
     category: "political",
     articles: [
+      { title: "Orban's Hungarian government accused of mass voter intimidation ahead of election", source: "BBC News", url: "https://www.bbc.com/news/articles/c36r0068xp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:16:06Z" },
       { title: "Hungary is 'the Kremlin's biggest agent in the EU', analyst says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260324-hungary-is-the-kremlin-s-biggest-agent-in-the-eu-analyst-says", time: "2026-03-24T22:07:16Z" },
       { title: "The global authoritarian right loves Orbán – and that could cost him in Hungary’s elections | Gellert Tamas", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/24/viktor-orban-hungary-elections-global-authoritarian-right", time: "2026-03-24T05:00:09Z" },
       { title: "Ukraine war briefing: Russia setting up long-range drone bases in Belarus, Zelenskyy says", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/ukraine-war-briefing-russia-setting-up-long-range-drone-bases-in-belarus-zelenskyy-says", time: "2026-03-24T04:03:21Z" },
@@ -331,7 +334,6 @@ const locations = [
       { title: "'Multiple factors' caused 2025 Spain and Portugal blackout, says report", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0r3z3lvqo?at_medium=RSS&at_campaign=rss", time: "2026-03-20T14:14:58Z" },
       { title: "Spain Says the Sun Shields It From Rising Gas Costs. Is That True?", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/europe/spain-iran-energy-renewables-gas-sun.html", time: "2026-03-20T04:01:16Z" },
       { title: "Body of missing Illinois student found in waters off beach of Barcelona", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/illinois-student-dead-barcelona", time: "2026-03-19T21:54:53Z" },
-      { title: "Spanish Police Search for American College Student Missing After Club Visit", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/world/europe/american-student-missing-spain-barcelona-james-gracey.html", time: "2026-03-19T17:10:41Z" },
     ]
   },
   {
@@ -418,6 +420,16 @@ const locations = [
     ]
   },
   {
+    name: "Helsinki", country: "Finland",
+    lat: 60.1699, lng: 24.9384,
+    category: "security",
+    articles: [
+      { title: "Finnish MP convicted for saying homosexuality is ‘developmental disorder’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/finnish-mp-paivi-rasanen-convicted-homosexuality-developmental-disorder", time: "2026-03-26T17:18:26Z" },
+      { title: "War in Iran ‘not a Nato matter’, Finland president says in defence of alliance - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/26/us-eu-trade-tariff-trade-deal-ukraine-iran-rutte-denmark-europe-live-news-updates", time: "2026-03-26T16:35:16Z" },
+      { title: "Finland is world's happiest country ninth year in a row, UN happiness report finds", source: "France 24", url: "https://www.france24.com/en/video/20260320-finland-is-world-s-happiest-country-ninth-year-in-a-row-un-happiness-report-finds", time: "2026-03-20T15:48:33Z" },
+    ]
+  },
+  {
     name: "Dublin", country: "Ireland",
     lat: 53.3498, lng: -6.2603,
     category: "economic",
@@ -433,15 +445,6 @@ const locations = [
     articles: [
       { title: "Tens of thousands rally in Prague to protest new PM Andrej Babis", source: "France 24", url: "https://www.france24.com/en/tens-of-thousands-rally-in-prague-to-protest-new-pm-andrej-babis", time: "2026-03-22T12:46:47Z" },
       { title: "Ukraine war briefing: US, Ukrainian negotiators meet in Florida as Russian attacks kill more civilians", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/ukraine-war-briefing-us-ukrainian-negotiators-meet-in-florida-as-russian-attacks-kill-more-civilians", time: "2026-03-22T02:10:06Z" },
-    ]
-  },
-  {
-    name: "Helsinki", country: "Finland",
-    lat: 60.1699, lng: 24.9384,
-    category: "security",
-    articles: [
-      { title: "War in Iran ‘not a Nato matter’, Finland president says in defence of alliance - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/26/us-eu-trade-tariff-trade-deal-ukraine-iran-rutte-denmark-europe-live-news-updates", time: "2026-03-26T16:35:16Z" },
-      { title: "Finland is world's happiest country ninth year in a row, UN happiness report finds", source: "France 24", url: "https://www.france24.com/en/video/20260320-finland-is-world-s-happiest-country-ninth-year-in-a-row-un-happiness-report-finds", time: "2026-03-20T15:48:33Z" },
     ]
   },
   {

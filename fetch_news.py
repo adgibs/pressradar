@@ -1817,10 +1817,83 @@ def main():
     if am_articles:
         new_articles["Americas"] = ("americas.html", am_articles)
 
+    # ── Global (global.html) — merge all regions ──
+    print("\n=== Building Global Page ===")
+    global_all_locations = {}
+    global_all_urls = set()
+
+    # Define the category remap for global unified categories
+    CATEGORY_REMAP = {
+        # Middle East
+        "strikes": "conflict", "humanitarian": "humanitarian", "energy": "economic", "uk": "political", "evacuation": "humanitarian",
+        # Ukraine
+        "conflict": "conflict", "diplomacy": "diplomacy", "nato": "conflict",
+        # East Asia
+        "military": "conflict", "trade": "economic", "territorial": "conflict",
+        # Africa
+        "political": "political", "economic": "economic", "health": "health",
+        # Europe
+        "security": "conflict", "climate": "health", "social": "political",
+        # South Asia
+        "climate": "health",
+        # Americas
+        "migration": "humanitarian",
+        # Pass through
+        "humanitarian": "humanitarian", "diplomacy": "diplomacy", "economic": "economic", "political": "political", "conflict": "conflict", "health": "health",
+    }
+
+    # Read all regional pages and merge their articles
+    regional_files = [
+        ("index.html", "Middle East"),
+        ("ukraine.html", "Ukraine"),
+        ("east-asia.html", "East Asia"),
+        ("africa.html", "Africa"),
+        ("europe.html", "Europe"),
+        ("south-asia.html", "South Asia"),
+        ("americas.html", "Americas"),
+    ]
+
+    for html_file, region_name in regional_files:
+        html_path = Path(__file__).parent / html_file
+        if not html_path.exists():
+            print(f"  Warning: {html_file} not found")
+            continue
+        page_html = html_path.read_text()
+        region_locations = parse_existing_articles(page_html)
+
+        for loc_name, loc_data in region_locations.items():
+            # Remap category to global unified categories
+            old_cat = loc_data.get("category", "conflict")
+            new_cat = CATEGORY_REMAP.get(old_cat, old_cat)
+
+            # Add region field
+            loc_data_with_region = dict(loc_data)
+            loc_data_with_region["region"] = region_name
+            loc_data_with_region["category"] = new_cat
+
+            if loc_name not in global_all_locations:
+                global_all_locations[loc_name] = loc_data_with_region
+            else:
+                # Merge articles, avoiding duplicates by URL
+                for article in loc_data["articles"]:
+                    if article["url"] not in global_all_urls:
+                        global_all_locations[loc_name]["articles"].append(article)
+                        global_all_urls.add(article["url"])
+
+    # Update global.html with merged data
+    if global_all_locations:
+        global_js_data = generate_js_data(global_all_locations)
+        update_html(global_js_data, "global.html")
+        global_article_count = sum(len(loc["articles"]) for loc in global_all_locations.values())
+        print(f"  Global: {global_article_count} articles across {len(global_all_locations)} locations")
+    else:
+        print("  Global: No articles to merge")
+
     # ── AI Summaries (from all articles in the last 24 hours) ──
     print("\n=== Generating AI Summaries ===")
     cutoff_24h = (datetime.now(timezone.utc) - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
     region_pages = [
+        ("Global", "global.html"),
         ("Middle East", "index.html"),
         ("Ukraine", "ukraine.html"),
         ("East Asia", "east-asia.html"),
