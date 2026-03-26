@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:14 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:13 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:14 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan says it is mediating US-Iran talks", "The U.S. and Iran are in &#39;indirect talks,&#39; says intermediary Pakistan, as war rages on", "India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan mediates US-Iran indirect talks as regional tensions persist</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nepal’s PM-to-be uses rap to call for unity in first post-election message"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Nepal&#x27;s incoming PM uses rap music to promote post-election unity</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Dozens dead in Bangladesh as passenger bus plunges into Padma River"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Bangladesh bus accident kills dozens after plunging into Padma River</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US investors commit record billion-dollar deals to Indian Premier League</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:13 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan says it is mediating US-Iran talks", "The U.S. and Iran are in &#39;indirect talks,&#39; says intermediary Pakistan, as war rages on", "India Appears Sidelined as Pakistan Tries to Play Peacemaker in Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan mediates indirect US-Iran talks as regional tensions persist</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["After Wooing Trump With Deals, Pakistan Gets a Seat at the Table", "Nepal’s PM-to-be uses rap to call for unity in first post-election message"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pakistan courts Trump administration while Nepal elects new leadership</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Dozens dead in Bangladesh as passenger bus plunges into Padma River", "US investors bet big on Indian cricket with record billion-dollar IPL deals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Bangladesh transport disaster kills dozens; India attracts record sports investment</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -116,6 +116,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "political",
     articles: [
+      { title: "After Wooing Trump With Deals, Pakistan Gets a Seat at the Table", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/us/politics/trump-pakistan-iran.html", time: "2026-03-26T19:57:33Z" },
       { title: "Pakistan says it is mediating US-Iran talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/pakistan-says-it-is-mediating-us-iran-talks?traffic_source=rss", time: "2026-03-26T15:33:07Z" },
       { title: "The U.S. and Iran are in 'indirect talks,' says intermediary Pakistan, as war rages on", source: "NPR", url: "https://www.npr.org/2026/03/26/nx-s1-5761882/iran-war-peace-conditions", time: "2026-03-26T09:44:35Z" },
       { title: "Pakistan’s effort to mediate U.S.-Iran talks appears to gather steam", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/25/us-iran-war-trump-talks-pakistan/", time: "2026-03-25T12:17:35Z" },
@@ -174,17 +175,6 @@ const locations = [
     ]
   },
   {
-    name: "Persian Gulf", country: "International",
-    lat: 26.0, lng: 52.0,
-    category: "economic",
-    articles: [
-      { title: "Israel, Iran trade strikes as U.S. says it is pausing attacks on energy targets", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/24/us-trump-iran-israel-tel-aviv-strike/", time: "2026-03-24T15:28:22Z" },
-      { title: "Rare Middle East storm could bring floods, damaging winds and tornadoes", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/03/24/middle-east-storm-flooding-tornado-iran-dubai/", time: "2026-03-24T13:41:27Z" },
-      { title: "More Marines are headed to Middle East as Iran war reaches the 3-week mark", source: "NPR", url: "https://www.npr.org/2026/03/20/nx-s1-5754550/israel-strikes-tehran-iran-attacks-gulf", time: "2026-03-20T10:21:36Z" },
-      { title: "Last 24 hours show a prolonged Iran war could do calamitous damage to global economy", source: "Sky News", url: "https://news.sky.com/story/iran-war-last-24-hours-show-a-prolonged-conflict-could-do-calamitous-damage-to-global-economy-13521949", time: "2026-03-19T19:24:00Z" },
-    ]
-  },
-  {
     name: "Colombo", country: "Sri Lanka",
     lat: 6.9271, lng: 79.8612,
     category: "economic",
@@ -193,6 +183,16 @@ const locations = [
       { title: "A Public Holiday Every Week? Sri Lankans Bemoan the Enforced Day Off.", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/asia/sri-lanka-public-holiday-oil-war.html", time: "2026-03-21T04:00:14Z" },
       { title: "Sri Lanka says it denied US request to land two aircraft at Mattala airport", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/sri-lanka-says-it-denied-us-request-to-land-two-aircraft-at-mattala-airport?traffic_source=rss", time: "2026-03-20T19:21:09Z" },
       { title: "U.S. Asked to Keep Military Planes in Sri Lanka Before Iran Airstrikes", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/sri-lanka-iran-war-ships-aircraft.html", time: "2026-03-20T09:34:53Z" },
+    ]
+  },
+  {
+    name: "Persian Gulf", country: "International",
+    lat: 26.0, lng: 52.0,
+    category: "economic",
+    articles: [
+      { title: "Israel, Iran trade strikes as U.S. says it is pausing attacks on energy targets", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/24/us-trump-iran-israel-tel-aviv-strike/", time: "2026-03-24T15:28:22Z" },
+      { title: "Rare Middle East storm could bring floods, damaging winds and tornadoes", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/03/24/middle-east-storm-flooding-tornado-iran-dubai/", time: "2026-03-24T13:41:27Z" },
+      { title: "More Marines are headed to Middle East as Iran war reaches the 3-week mark", source: "NPR", url: "https://www.npr.org/2026/03/20/nx-s1-5754550/israel-strikes-tehran-iran-attacks-gulf", time: "2026-03-20T10:21:36Z" },
     ]
   },
   {
