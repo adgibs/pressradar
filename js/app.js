@@ -123,6 +123,8 @@ if (window.pageConfig.region === 'Global') {
 }
 
 function updateRadiusOverlay() {
+  // In globe view, the globe handles its own radius visualization via rings
+  if (globeView) return;
   if (radiusCircle) map.removeLayer(radiusCircle);
   if (radiusMarker) map.removeLayer(radiusMarker);
   if (!radiusCenter) return;
@@ -689,6 +691,8 @@ function applyFilters() {
 }
 
 function fitMapToMarkers() {
+  // Skip when globe is active (Leaflet map is hidden and can't compute bounds)
+  if (globeView) return;
   // When radius is active, the map is already fitted by updateRadiusOverlay
   if (radiusCenter) return;
   if (!activeCountry && !activeSource && !activeBriefingTitles) {
