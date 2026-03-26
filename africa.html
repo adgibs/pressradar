@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:25 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:09 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -37,7 +37,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:26 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Senegal pledges to fight ‘robbery’ after CAF strips it of AFCON title", "AFCON &amp; CAF: Justice or Chaos?", "Senegal appeal to CAS against handing over of AFCON title to Morocco", "Senegal appeal to be heard &#39;as swiftly as possible&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Senegal appeals CAF decision stripping it of AFCON title to Morocco</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["UN adopts Ghana&#39;s resolution to class slave trade as crime against humanity – video", "UN names African slave trade &#39;gravest crime against humanity&#39;", "UN adopts slavery resolution despite resistance", "UN votes to describe slave trade as ‘gravest crime against humanity’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UN adopts resolution classifying African slave trade as crime against humanity</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Zimbabwe says 15 nationals killed after being lured to fight for Russia", "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Zimbabwe reports nationals killed fighting for Russia in Ukraine conflict</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Two drone strikes on civilian targets kill 28 people in Sudan", "Egypt says it is ready to host Iran de-escalation talks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Sudan drone strikes kill civilians as Egypt offers Iran talks venue</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Army commander convicted of Guinea stadium massacre dies in prison"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Guinea&#x27;s army commander convicted of stadium massacre dies in prison</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["South Africa&#39;s police chief to appear in court over controversial health contract"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">South Africa police chief faces court over health contract controversy</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:10 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Senegal to parade Afcon trophy despite title being stripped", "Senegal pledges to fight ‘robbery’ after CAF strips it of AFCON title", "Senegal appeal to CAS against handing over of AFCON title to Morocco", "Senegal appeal to be heard &#39;as swiftly as possible&#39;"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Senegal appeals CAF&#x27;s decision to strip it of AFCON title</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["UN adopts Ghana&#39;s resolution to class slave trade as crime against humanity – video", "UN names African slave trade &#39;gravest crime against humanity&#39;", "U.S. Rejects Vote to Recognize Slavery as a ‘Crime Against Humanity’", "UN adopts slavery resolution despite resistance", "UN votes to describe slave trade as ‘gravest crime against humanity’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">UN adopts resolution classifying African slave trade as crime against humanity</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Zimbabwe says 15 nationals killed after being lured to fight for Russia", "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">African nations report citizens killed in foreign conflicts abroad</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Two drone strikes on civilian targets kill 28 people in Sudan", "Egypt says it is ready to host Iran de-escalation talks"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Sudan faces drone strikes; Egypt offers Iran de-escalation talks</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nigeria takes its place on world stage in quest to become regional superpower", "Boubacar Ould Messaoud, 80, Leader in Antislavery Fight in Mauritania"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">West African leaders pursue regional influence and antislavery advocacy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["South Africa&#39;s police chief to appear in court over controversial health contract"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">South Africa police chief faces court over health contract</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -111,26 +111,6 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "Sahel Region", country: "West Africa",
-    lat: 15.0, lng: 0.0,
-    category: "conflict",
-    articles: [
-      { title: "Boubacar Ould Messaoud, 80, Leader in Antislavery Fight in Mauritania", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/boubacar-ould-messaoud-dead.html", time: "2026-03-25T20:02:11Z" },
-      { title: "Iran, Nigeria, and Africa’s oil dependency", source: "Al Jazeera", url: "https://www.aljazeera.com/video/africa-now/2026/3/25/iran-nigeria-and-africas-oil-dependency?traffic_source=rss", time: "2026-03-25T16:16:23Z" },
-      { title: "It doesn’t take a miracle to cut infant deaths, just basic care | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/it-doesnt-take-a-miracle-to-cut-infant-deaths-just-basic-care", time: "2026-03-24T16:49:57Z" },
-      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
-      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
-      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
-      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
-      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
-      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
-      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
-      { title: "Starmer meets Nigerian president as record steel deal agreed", source: "BBC News", url: "https://www.bbc.com/news/articles/crm1w24p8p7o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:59:09Z" },
-      { title: "Drone attack from Sudan kills 17 people in Chad as war spills over border", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/drone-attack-from-sudan-kills-17-in-chad-as-conflict-spills-over?traffic_source=rss", time: "2026-03-19T13:30:14Z" },
-      { title: "Chad warns Sudan it will retaliate after drone strike on mourners kills 17", source: "BBC News", url: "https://www.bbc.com/news/articles/c0mjn0g708ro?at_medium=RSS&at_campaign=rss", time: "2026-03-19T13:30:01Z" },
-    ]
-  },
-  {
     name: "Nairobi", country: "Kenya",
     lat: -1.2921, lng: 36.8219,
     category: "political",
@@ -148,6 +128,24 @@ const locations = [
       { title: "Army chief was asked about woman 'murdered by British soldier' - his response was emphatic", source: "Sky News", url: "https://news.sky.com/story/army-chief-was-asked-about-woman-murdered-by-british-soldier-his-response-was-emphatic-13522292", time: "2026-03-21T00:01:00Z" },
       { title: "Desperate for food drought-stricken Kenyans turn to the gingerbread tree", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg521yj9lvo?at_medium=RSS&at_campaign=rss", time: "2026-03-20T00:06:24Z" },
       { title: "Senegal not losing without a fight", source: "France 24", url: "https://www.france24.com/en/senegal-not-losing-without-a-fight", time: "2026-03-19T21:41:06Z" },
+    ]
+  },
+  {
+    name: "Sahel Region", country: "West Africa",
+    lat: 15.0, lng: 0.0,
+    category: "conflict",
+    articles: [
+      { title: "Nigeria takes its place on world stage in quest to become regional superpower", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/26/nigeria-regional-superpower-uk-reparative-justice-trade-economic-ties", time: "2026-03-26T14:45:44Z" },
+      { title: "Boubacar Ould Messaoud, 80, Leader in Antislavery Fight in Mauritania", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/africa/boubacar-ould-messaoud-dead.html", time: "2026-03-25T20:02:11Z" },
+      { title: "Iran, Nigeria, and Africa’s oil dependency", source: "Al Jazeera", url: "https://www.aljazeera.com/video/africa-now/2026/3/25/iran-nigeria-and-africas-oil-dependency?traffic_source=rss", time: "2026-03-25T16:16:23Z" },
+      { title: "It doesn’t take a miracle to cut infant deaths, just basic care | Letter", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/it-doesnt-take-a-miracle-to-cut-infant-deaths-just-basic-care", time: "2026-03-24T16:49:57Z" },
+      { title: "Nigeria's Dangote refinery increases exports as Middle East war shakes global markets", source: "France 24", url: "https://www.france24.com/en/nigeria-s-dangote-refinery-increases-exports-as-middle-east-war-shakes-global-markets", time: "2026-03-24T12:52:54Z" },
+      { title: "Nigerian refinery begins fuel exports to Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260324-nigerian-refinery-begins-fuel-exports-to-africa", time: "2026-03-24T11:04:33Z" },
+      { title: "Nigerian heritage key to my success - Itauma", source: "BBC News", url: "https://www.bbc.com/sport/boxing/articles/clydn1elxw0o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T15:34:48Z" },
+      { title: "Nigerian police arrest 15 after viral videos of alleged sexual assault at festival", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9vn71vjq1o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T14:09:11Z" },
+      { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
+      { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
+      { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
     ]
   },
   {
@@ -199,13 +197,13 @@ const locations = [
     lat: 14.7167, lng: -17.4677,
     category: "political",
     articles: [
+      { title: "Senegal to parade Afcon trophy despite title being stripped", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c070kg5rn0ko?at_medium=RSS&at_campaign=rss", time: "2026-03-26T14:35:52Z" },
       { title: "Senegal pledges to fight ‘robbery’ after CAF strips it of AFCON title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/senegal-pledges-to-fight-robbery-after-caf-strips-it-of-afcon-title?traffic_source=rss", time: "2026-03-26T13:04:08Z" },
       { title: "AFCON & CAF: Justice or Chaos?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/game-theory/2026/3/26/aje-onl-afconcaf_v5-260326?traffic_source=rss", time: "2026-03-26T11:13:45Z" },
       { title: "Senegal appeal to CAS against handing over of AFCON title to Morocco", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/senegal-appeal-to-cas-against-handing-over-of-afcon-title-to-morocco?traffic_source=rss", time: "2026-03-26T06:16:38Z" },
       { title: "Senegal appeal to be heard 'as swiftly as possible'", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c895x5x0jy5o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T16:50:20Z" },
       { title: "Senegal and Morocco tied by religion and trade but divided by AFCON fallout", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/senegal-and-morocco-tied-by-religion-and-trade-but-divided-by-afcon-fallout?traffic_source=rss", time: "2026-03-19T22:51:25Z" },
       { title: "Senegal instruct lawyers, while CAF’s Motsepe defends Morocco’s AFCON award", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/19/senegal-instruct-lawyers-while-cafs-motsepe-defends-moroccos-afcon-award?traffic_source=rss", time: "2026-03-19T16:14:41Z" },
-      { title: "‘Unjust and ridiculous’: Senegalese football fans bewildered by loss of Afcon title", source: "The Guardian", url: "https://www.theguardian.com/football/2026/mar/19/senegalese-fans-disbelief-loss-afcon-title-morocco", time: "2026-03-19T13:33:01Z" },
     ]
   },
   {
