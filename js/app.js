@@ -1005,6 +1005,12 @@ const GLOBE_STYLES = {
     img: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-water.png',
     bump: '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png',
     label: 'Minimal'
+  },
+  satellite: {
+    tiles: true,
+    tileUrl: (x, y, l) => `//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${l}/${y}/${x}`,
+    bump: '',
+    label: 'Satellite'
   }
 };
 let currentGlobeStyle = localStorage.getItem('pressradar-globestyle') || 'natural';
@@ -1012,10 +1018,14 @@ let currentGlobeStyle = localStorage.getItem('pressradar-globestyle') || 'natura
 function setGlobeStyle(style) {
   currentGlobeStyle = style;
   localStorage.setItem('pressradar-globestyle', style);
-  if (globe && GLOBE_STYLES[style]) {
-    globe.globeImageUrl(GLOBE_STYLES[style].img);
-    if (GLOBE_STYLES[style].bump) {
-      globe.bumpImageUrl(GLOBE_STYLES[style].bump);
+  const gs = GLOBE_STYLES[style];
+  if (globe && gs) {
+    if (gs.tiles) {
+      // Satellite: use tile engine, clear static image
+      globe.globeImageUrl('').globeTileEngineUrl(gs.tileUrl).bumpImageUrl('');
+    } else {
+      // Static texture: clear tile engine, set image
+      globe.globeTileEngineUrl(null).globeImageUrl(gs.img).bumpImageUrl(gs.bump || '');
     }
   }
   // Update button states
@@ -1034,9 +1044,16 @@ function initGlobe() {
   const isDark = document.body.classList.contains('dark');
 
   const globeStyle = GLOBE_STYLES[currentGlobeStyle] || GLOBE_STYLES.natural;
-  globe = Globe()(container)
-    .globeImageUrl(globeStyle.img)
-    .bumpImageUrl(globeStyle.bump || '')
+  globe = Globe()(container);
+
+  // Apply texture: tile engine for satellite, static image for others
+  if (globeStyle.tiles) {
+    globe.globeImageUrl('').globeTileEngineUrl(globeStyle.tileUrl).bumpImageUrl('');
+  } else {
+    globe.globeImageUrl(globeStyle.img).bumpImageUrl(globeStyle.bump || '');
+  }
+
+  globe
     .backgroundImageUrl(isDark ? '//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png' : '')
     .backgroundColor(isDark ? '#0a0a2e' : '#f0f4f8')
     .showAtmosphere(true)
