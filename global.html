@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:37 UTC, 26 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:54 UTC, 26 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:08 UTC, 26 Mar 2026</div><div id="ai-summary-text"></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:54 UTC, 26 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Iran rejects Trump proposal to end war, leaving status of talks unclear", "&#39;Tehran assumes war is behind them:  Iran will not capitulate, Trump has it all wrong&#39;", "Gulf countries seeking seat at negotiation table following Iranian attacks", "WATCH: Trump claims Iran war ‘way ahead of schedule’, claims Iran negotiating with US"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran rejects Trump&#x27;s war-ending proposal amid unclear negotiation status</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Trump describes UK aircraft carriers as ‘toys’ in latest anti-Nato jibe", "Trump says UK’s aircraft carriers are just ‘toys’, repeating complaint about lack of support for US in Iran – UK politics live", "‘Tehran’s tollbooth’: a visual guide to how a trickle of ships still passes through strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Trump criticizes UK military capabilities in latest NATO dispute</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["More than one million displaced by Israel’s evacuations in Lebanon", "South Sudan and Mauritius impose electricity curbs as Iran war triggers fuel fears in Africa", "NGO counts over 10 settler attacks a day amid Iran war; 14 said hurt in latest violence"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Conflict displaces millions and triggers regional instability concerns</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Knesset advances compensation for businesses impacted by war, benefits for reservists", "Unable to shut down Kan, coalition maneuvers to control public broadcaster’s budget"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Israeli government advances war-related compensation and broadcaster control measures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["New Zealand ministry gave $30K in taxpayers&#39; funds to Gaza advocacy campaign", "European Allies Worry Russia Is Preparing to Deliver Drones to Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">International actors respond to Middle East tensions with funding and military concerns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Nepal’s PM-to-be uses rap to call for unity in first post-election message", "Finnish MP convicted for saying homosexuality is ‘developmental disorder’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Political figures face scrutiny over divisive statements in democracies</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -129,6 +129,7 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Iran rejects Trump proposal to end war, leaving status of talks unclear", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/26/us-israel-iran-navy-chief-killed-hormuz/", time: "2026-03-26T17:39:06Z" },
       { title: "'Tehran assumes war is behind them:  Iran will not capitulate, Trump has it all wrong'", source: "France 24", url: "https://www.france24.com/en/tehran-assumes-war-is-behind-them-iran-will-not-capitulate-trump-has-it-all-wrong", time: "2026-03-26T17:30:53Z" },
       { title: "Gulf countries seeking seat at negotiation table following Iranian attacks", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891322", time: "2026-03-26T17:10:34Z" },
       { title: "NGO counts over 10 settler attacks a day amid Iran war; 14 said hurt in latest violence", source: "Times of Israel", url: "https://www.timesofisrael.com/ngo-counts-over-10-settler-attacks-a-day-amid-iran-war-14-said-hurt-in-latest-violence/", time: "2026-03-26T17:03:21Z" },
@@ -630,6 +631,7 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "More than one million displaced by Israel’s evacuations in Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/26/more-than-one-million-displaced-by-israels-evacuations-in-lebanon?traffic_source=rss", time: "2026-03-26T17:40:31Z" },
       { title: "Unable to shut down Kan, coalition maneuvers to control public broadcaster’s budget", source: "Times of Israel", url: "https://www.timesofisrael.com/unable-to-shut-down-kan-coalition-maneuvers-to-control-public-broadcasters-budget/", time: "2026-03-26T17:03:19Z" },
       { title: "Arab-Israeli educator Suleiman Suleiman advocates shared responsibility and coexistence", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-sits-down-with/article-891276", time: "2026-03-26T13:41:06Z" },
       { title: "Teen volunteer paramedic killed in Israeli strike in Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/teen-volunteer-paramedic-killed-in-israeli-strike-in-lebanon?traffic_source=rss", time: "2026-03-26T13:19:28Z" },
@@ -907,7 +909,6 @@ const locations = [
       { title: "Authorities warn Israelis of phishing attempt in fake Home Front Command messages", source: "Times of Israel", url: "https://www.timesofisrael.com/authorities-warn-israelis-of-phishing-attempt-in-fake-home-front-command-messages/", time: "2026-03-19T19:27:04Z" },
       { title: "In first, poll shows Eisenkot overtaking Bennett as Netanyahu’s top challenger", source: "Times of Israel", url: "https://www.timesofisrael.com/in-first-poll-shows-eisenkot-overtaking-bennett-as-netanyahus-top-challenger/", time: "2026-03-19T18:05:43Z" },
       { title: "Israel makes progress against Iran missiles, but disputes within IDF about the extent", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-890563", time: "2026-03-19T18:00:58Z" },
-      { title: "Mamdani’s wife backed Palestinian terrorism in old social media posts, report says", source: "Times of Israel", url: "https://www.timesofisrael.com/mamdanis-wife-backed-palestinian-terrorism-in-old-social-media-posts-report-says/", time: "2026-03-19T17:42:04Z" },
     ]
   },
   {
@@ -1260,6 +1261,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Trump describes UK aircraft carriers as ‘toys’ in latest anti-Nato jibe", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/26/donald-trump-uk-aircraft-carriers-toys-nato-keir-starmer-iran", time: "2026-03-26T17:49:18Z" },
       { title: "One killed, eleven injured in Nahariya by Hezbollah rocket fire", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891315", time: "2026-03-26T16:45:06Z" },
       { title: "Alleged Hezbollah member on U.S. terror list is arrested in Ecuador", source: "CBS News", url: "https://www.cbsnews.com/news/alleged-hezbollah-member-us-terror-list-arrested-ecuador/", time: "2026-03-26T12:11:46Z" },
       { title: "Hezbollah fires 6 rockets at central Israel; woman moderately injured running to shelter", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-26-2026/", time: "2026-03-26T01:01:56Z" },
@@ -1465,7 +1467,6 @@ const locations = [
       { title: "Netanyahu seeks to appease Trump with latest Iran remarks to the press", source: "France 24", url: "https://www.france24.com/en/netanyahu-seeks-to-appease-trump-with-latest-iran-remarks-to-the-press", time: "2026-03-19T19:49:42Z" },
       { title: "Netanyahu’s Iran war press briefing targeted at ‘audience of one’: Donald Trump", source: "France 24", url: "https://www.france24.com/en/netanyahu-s-iran-war-press-briefing-targeted-at-audience-of-one-donald-trump", time: "2026-03-19T19:47:26Z" },
       { title: "Hegseth says biggest attack on Iran to come, US-Israel goals are questioned", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-890594", time: "2026-03-19T18:52:34Z" },
-      { title: "World-Class Living in the Heart of Jerusalem - Sponsored Content", source: "Times of Israel", url: "https://toi.li/PLeofd", time: "2026-03-19T17:44:10Z" },
     ]
   },
   {
@@ -1671,6 +1672,40 @@ const locations = [
     ]
   },
   {
+    name: "London", country: "United Kingdom",
+    lat: 51.5074, lng: -0.1278,
+    category: "political",
+    articles: [
+      { title: "Trump says UK’s aircraft carriers are just ‘toys’, repeating complaint about lack of support for US in Iran – UK politics live", source: "The Guardian", url: "https://www.theguardian.com/politics/live/2026/mar/26/keir-starmer-ukraine-iran-social-media-ban-councils-pensions-latest-news-updates", time: "2026-03-26T17:43:28Z" },
+      { title: "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/ukraine-war-briefing-zelenskyy-says-us-has-linked-security-guarantees-to-ceding-of-donbas", time: "2026-03-26T03:59:51Z" },
+      { title: "British forces will be able to board Russian shadow fleet ships in UK waters", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0n9z3jlvo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T23:03:55Z" },
+      { title: "UK armed forces authorised to board Russian tankers in British waters", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/mar/25/uk-armed-forces-authorised-to-board-russia-tankers-shadow-fleet", time: "2026-03-25T22:30:19Z" },
+      { title: "Two Men Arrested in Attack on Jewish Charity Ambulances in London", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/europe/jewish-ambulances-arson-arrests.html", time: "2026-03-25T09:38:35Z" },
+      { title: "‘Was that an earthquake?’ Italy’s great psycho-geographer tackles the Vesuvius-haunted Naples tourists seldom see", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/24/earthquake-italys-great-psycho-geographer-vesuvius-haunted-naples-tourists", time: "2026-03-24T15:00:41Z" },
+      { title: "How weeks of war have reshaped Iran's negotiating position", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5757512/how-weeks-of-war-have-reshaped-irans-negotiating-position", time: "2026-03-24T08:39:32Z" },
+      { title: "British Army retires Land Rover vehicles from its fleet, marking the end of an era", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5754760/british-army-retires-land-rover-vehicles-from-its-fleet-marking-the-end-of-an-era", time: "2026-03-24T08:39:16Z" },
+      { title: "UK police probe possible Iran link after Jewish charity ambulances set on fire", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114920/uk-police-probe-possible-iran-link-after-jewish-charity-ambulances-set-on-fire", time: "2026-03-24T05:43:51Z" },
+      { title: "Trump Sours on British Leader Over Iran War: ‘What If Donald Shouts at Me?’", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/trump-starmer-snl.html", time: "2026-03-24T04:00:22Z" },
+      { title: "UK must back North Sea oil and gas drilling, says trade body", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g8x7q4l8go?at_medium=RSS&at_campaign=rss", time: "2026-03-24T00:31:09Z" },
+      { title: "Could Iranian missiles reach London and Paris?", source: "BBC News", url: "https://www.bbc.com/news/articles/cly73y5e788o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T16:45:52Z" },
+      { title: "UK police probe anti-Semitic attack on Jewish ambulances", source: "France 24", url: "https://www.france24.com/en/video/20260323-uk-police-probe-anti-semitic-attack-on-jewish-ambulances", time: "2026-03-23T15:00:37Z" },
+      { title: "Jewish charity ambulances set ablaze in London in suspected hate crime", source: "France 24", url: "https://www.france24.com/en/jewish-charity-ambulances-set-ablaze-in-london-in-suspected-hate-crime", time: "2026-03-23T14:19:07Z" },
+      { title: "London Arson Attack on Jewish Ambulance Service Investigated as Hate Crime, Police Say", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/jewish-ambulances-fire-london.html", time: "2026-03-23T10:58:46Z" },
+      { title: "Ambulances set ablaze at London synagogue in attack Starmer calls antisemitic", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/23/hatzola-ambulances-jewish-antisemitism-arson/", time: "2026-03-23T10:32:18Z" },
+      { title: "British couple detained in Iran feel 'let down' and call on Starmer to 'help us'", source: "Sky News", url: "https://news.sky.com/story/british-couple-detained-in-iran-feel-let-down-and-call-on-starmer-to-help-us-13523391", time: "2026-03-23T09:59:00Z" },
+      { title: "London police probe ‘anti-Semitic arson attack’ after Jewish charity ambulances set ablaze", source: "France 24", url: "https://www.france24.com/en/europe/20260323-london-police-probe-anti-semitic-arson-attack-after-jewish-charity-ambulances-set-ablaze", time: "2026-03-23T09:01:25Z" },
+      { title: "Ukraine war briefing: Russia trying to ‘intensify’ attacks; US-Ukraine talks end", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/ukraine-war-briefing-russia-trying-to-intensify-attacks-us-ukraine-talks-end", time: "2026-03-23T00:30:42Z" },
+      { title: "Northern Lights seen across UK forecast to return", source: "Sky News", url: "https://news.sky.com/story/northern-lights-spectacular-views-across-the-world-forecast-to-return-13522611", time: "2026-03-21T14:23:00Z" },
+      { title: "End of an heir-a: The U.K. abolishes aristocrats' right to inherit Parliament seats", source: "NPR", url: "https://www.npr.org/2026/03/21/nx-s1-5137843/uk-parliament-abolishes-hereditary-lords", time: "2026-03-21T13:34:12Z" },
+      { title: "King Harold's 200-mile march to the Battle of Hastings was a 'myth', historian says", source: "France 24", url: "https://www.france24.com/en/europe/20260321-king-harold-200-mile-march-to-the-battle-of-hastings-was-myth-historian-says", time: "2026-03-21T10:57:46Z" },
+      { title: "Owners from Great Britain travelling to EU warned over pet passport ‘dodge’", source: "The Guardian", url: "https://www.theguardian.com/lifeandstyle/2026/mar/21/pet-passport-dodge-travel-uk-eu-animal-health-certificate", time: "2026-03-21T08:00:47Z" },
+      { title: "Love Actually? Washington’s current relationship with Britain is more like Contempt Actually | Timothy Garton Ash", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/21/britain-us-special-relationship-trump-starmer", time: "2026-03-21T06:00:46Z" },
+      { title: "Army chief was asked about woman 'murdered by British soldier' - his response was emphatic", source: "Sky News", url: "https://news.sky.com/story/army-chief-was-asked-about-woman-murdered-by-british-soldier-his-response-was-emphatic-13522292", time: "2026-03-21T00:01:00Z" },
+      { title: "Is it time for the UK to acknowledge the ‘rhetoric to reality gap’ on its military power?", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/20/britain-defence-policy-military-power-world-stage", time: "2026-03-20T18:50:04Z" },
+      { title: "‘Saturday Night Live’ Arrives in London", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/arts/television/saturday-night-live-london-uk.html", time: "2026-03-20T12:46:25Z" },
+    ]
+  },
+  {
     name: "Copenhagen", country: "Denmark",
     lat: 55.6761, lng: 12.5683,
     category: "political",
@@ -1701,39 +1736,6 @@ const locations = [
       { title: "‘Yes to fields of wheat, no to fields of iron’: how the world’s greenest country soured on solar", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/20/solar-power-renewable-energy-denmark-backlash-national-elections", time: "2026-03-20T14:00:27Z" },
       { title: "Denmark sent explosives to blow up Greenland runways amid Trump invasion threat", source: "Sky News", url: "https://news.sky.com/story/denmark-sent-explosives-to-blow-up-greenland-runways-amid-trump-invasion-threat-13522093", time: "2026-03-20T08:40:00Z" },
       { title: "Denmark planned to blow up Greenland runways if US invaded, reports say", source: "BBC News", url: "https://www.bbc.com/news/articles/c33ln4mp1p2o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T21:52:36Z" },
-    ]
-  },
-  {
-    name: "London", country: "United Kingdom",
-    lat: 51.5074, lng: -0.1278,
-    category: "political",
-    articles: [
-      { title: "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/ukraine-war-briefing-zelenskyy-says-us-has-linked-security-guarantees-to-ceding-of-donbas", time: "2026-03-26T03:59:51Z" },
-      { title: "British forces will be able to board Russian shadow fleet ships in UK waters", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg0n9z3jlvo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T23:03:55Z" },
-      { title: "UK armed forces authorised to board Russian tankers in British waters", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/mar/25/uk-armed-forces-authorised-to-board-russia-tankers-shadow-fleet", time: "2026-03-25T22:30:19Z" },
-      { title: "Two Men Arrested in Attack on Jewish Charity Ambulances in London", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/europe/jewish-ambulances-arson-arrests.html", time: "2026-03-25T09:38:35Z" },
-      { title: "‘Was that an earthquake?’ Italy’s great psycho-geographer tackles the Vesuvius-haunted Naples tourists seldom see", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/24/earthquake-italys-great-psycho-geographer-vesuvius-haunted-naples-tourists", time: "2026-03-24T15:00:41Z" },
-      { title: "How weeks of war have reshaped Iran's negotiating position", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5757512/how-weeks-of-war-have-reshaped-irans-negotiating-position", time: "2026-03-24T08:39:32Z" },
-      { title: "British Army retires Land Rover vehicles from its fleet, marking the end of an era", source: "NPR", url: "https://www.npr.org/2026/03/24/nx-s1-5754760/british-army-retires-land-rover-vehicles-from-its-fleet-marking-the-end-of-an-era", time: "2026-03-24T08:39:16Z" },
-      { title: "UK police probe possible Iran link after Jewish charity ambulances set on fire", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114920/uk-police-probe-possible-iran-link-after-jewish-charity-ambulances-set-on-fire", time: "2026-03-24T05:43:51Z" },
-      { title: "Trump Sours on British Leader Over Iran War: ‘What If Donald Shouts at Me?’", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/trump-starmer-snl.html", time: "2026-03-24T04:00:22Z" },
-      { title: "UK must back North Sea oil and gas drilling, says trade body", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g8x7q4l8go?at_medium=RSS&at_campaign=rss", time: "2026-03-24T00:31:09Z" },
-      { title: "Could Iranian missiles reach London and Paris?", source: "BBC News", url: "https://www.bbc.com/news/articles/cly73y5e788o?at_medium=RSS&at_campaign=rss", time: "2026-03-23T16:45:52Z" },
-      { title: "UK police probe anti-Semitic attack on Jewish ambulances", source: "France 24", url: "https://www.france24.com/en/video/20260323-uk-police-probe-anti-semitic-attack-on-jewish-ambulances", time: "2026-03-23T15:00:37Z" },
-      { title: "Jewish charity ambulances set ablaze in London in suspected hate crime", source: "France 24", url: "https://www.france24.com/en/jewish-charity-ambulances-set-ablaze-in-london-in-suspected-hate-crime", time: "2026-03-23T14:19:07Z" },
-      { title: "London Arson Attack on Jewish Ambulance Service Investigated as Hate Crime, Police Say", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/jewish-ambulances-fire-london.html", time: "2026-03-23T10:58:46Z" },
-      { title: "Ambulances set ablaze at London synagogue in attack Starmer calls antisemitic", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/23/hatzola-ambulances-jewish-antisemitism-arson/", time: "2026-03-23T10:32:18Z" },
-      { title: "British couple detained in Iran feel 'let down' and call on Starmer to 'help us'", source: "Sky News", url: "https://news.sky.com/story/british-couple-detained-in-iran-feel-let-down-and-call-on-starmer-to-help-us-13523391", time: "2026-03-23T09:59:00Z" },
-      { title: "London police probe ‘anti-Semitic arson attack’ after Jewish charity ambulances set ablaze", source: "France 24", url: "https://www.france24.com/en/europe/20260323-london-police-probe-anti-semitic-arson-attack-after-jewish-charity-ambulances-set-ablaze", time: "2026-03-23T09:01:25Z" },
-      { title: "Ukraine war briefing: Russia trying to ‘intensify’ attacks; US-Ukraine talks end", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/ukraine-war-briefing-russia-trying-to-intensify-attacks-us-ukraine-talks-end", time: "2026-03-23T00:30:42Z" },
-      { title: "Northern Lights seen across UK forecast to return", source: "Sky News", url: "https://news.sky.com/story/northern-lights-spectacular-views-across-the-world-forecast-to-return-13522611", time: "2026-03-21T14:23:00Z" },
-      { title: "End of an heir-a: The U.K. abolishes aristocrats' right to inherit Parliament seats", source: "NPR", url: "https://www.npr.org/2026/03/21/nx-s1-5137843/uk-parliament-abolishes-hereditary-lords", time: "2026-03-21T13:34:12Z" },
-      { title: "King Harold's 200-mile march to the Battle of Hastings was a 'myth', historian says", source: "France 24", url: "https://www.france24.com/en/europe/20260321-king-harold-200-mile-march-to-the-battle-of-hastings-was-myth-historian-says", time: "2026-03-21T10:57:46Z" },
-      { title: "Owners from Great Britain travelling to EU warned over pet passport ‘dodge’", source: "The Guardian", url: "https://www.theguardian.com/lifeandstyle/2026/mar/21/pet-passport-dodge-travel-uk-eu-animal-health-certificate", time: "2026-03-21T08:00:47Z" },
-      { title: "Love Actually? Washington’s current relationship with Britain is more like Contempt Actually | Timothy Garton Ash", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/21/britain-us-special-relationship-trump-starmer", time: "2026-03-21T06:00:46Z" },
-      { title: "Army chief was asked about woman 'murdered by British soldier' - his response was emphatic", source: "Sky News", url: "https://news.sky.com/story/army-chief-was-asked-about-woman-murdered-by-british-soldier-his-response-was-emphatic-13522292", time: "2026-03-21T00:01:00Z" },
-      { title: "Is it time for the UK to acknowledge the ‘rhetoric to reality gap’ on its military power?", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/mar/20/britain-defence-policy-military-power-world-stage", time: "2026-03-20T18:50:04Z" },
-      { title: "‘Saturday Night Live’ Arrives in London", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/arts/television/saturday-night-live-london-uk.html", time: "2026-03-20T12:46:25Z" },
     ]
   },
   {
@@ -1844,31 +1846,6 @@ const locations = [
     ]
   },
   {
-    name: "Tokyo", country: "Japan",
-    lat: 35.6762, lng: 139.6503,
-    category: "diplomacy",
-    articles: [
-      { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
-      { title: "Unease in Japan after Trump cites Pearl Harbor to defend Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/unease-in-japan-after-trump-uses-pearl-harbor-to-defend-iran-war?traffic_source=rss", time: "2026-03-21T14:34:12Z" },
-      { title: "Japan beat Australia to lift Women’s Asian Cup title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/japan-beat-australia-to-lift-womens-asian-cup-title?traffic_source=rss", time: "2026-03-21T11:57:41Z" },
-      { title: "Iran says it will allow Japanese ships to transit the Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-says-it-will-allow-japanese-ships-to-transit-the-strait-of-hormuz?traffic_source=rss", time: "2026-03-21T08:21:20Z" },
-      { title: "LIVE: Japan vs Australia – Women’s Asian Cup 2026 final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/21/live-japan-vs-australia-womens-asian-cup-2026-final?traffic_source=rss", time: "2026-03-21T06:01:04Z" },
-      { title: "Japan's PM walks tightrope in high-stakes Washington visit", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260320-japan-s-pm-walks-tightrope-in-high-stakes-washington-visit", time: "2026-03-20T15:27:05Z" },
-      { title: "Trump makes Pearl Harbor remark in meeting with Japan's PM", source: "BBC News", url: "https://www.bbc.com/news/articles/c8dlpr074q3o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T09:55:19Z" },
-      { title: "Japan vs Australia: Women’s Asian Cup final – team news, start and lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/20/japan-vs-australia-womens-asian-cup-final-team-news-start-and-lineups?traffic_source=rss", time: "2026-03-20T04:45:40Z" },
-      { title: "How Japan Reacted to Trump’s Pearl Harbor Joke", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/japan-trump-pearl-harbor.html", time: "2026-03-20T04:42:55Z" },
-      { title: "Using Charm and Restraint, Japan’s Leader Mostly Avoids Trump’s Wrath", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/trump-japan-prime-minister-meeting.html", time: "2026-03-20T04:01:24Z" },
-      { title: "Trump downplays Iran war's impact on global energy prices", source: "CBS News", url: "https://www.cbsnews.com/video/trump-downplays-iran-wars-impact-on-global-energy-prices/", time: "2026-03-19T23:27:00Z" },
-      { title: "Trump compares Iran strikes to Pearl Harbor as he meets Japan’s PM", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/trump-compares-iran-strikes-to-pearl-harbor-as-he-meets-japans-pm?traffic_source=rss", time: "2026-03-19T20:48:37Z" },
-      { title: "Trump brings up Pearl Harbor while meeting with Japan's prime minister", source: "CBS News", url: "https://www.cbsnews.com/news/trump-pearl-harbor-meeting-japanese-prime-minister/", time: "2026-03-19T20:31:28Z" },
-      { title: "Trump Jokes About Pearl Harbor in Meeting With Japan’s Leader", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/us/politics/trump-japan-pearl-harbor-oval-office-takaichi.html", time: "2026-03-19T18:57:35Z" },
-      { title: "Trump mocks Japan about Pearl Harbor in response to question about Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/trump-mocks-japan-pearl-harbor-iran-war", time: "2026-03-19T18:48:25Z" },
-      { title: "Trump makes Pearl Harbor joke during meeting with Japanese prime minister", source: "NBC News", url: "https://www.nbcnews.com/politics/donald-trump/pearl-harbor-joke-iran-operation-meeting-japan-prime-minister-war-rcna264325", time: "2026-03-19T18:27:16Z" },
-      { title: "Trump references Pearl Harbor during meeting with Japanese PM on Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/trump-references-pearl-harbor-during-meeting-with-japanese-pm-on-iran-war?traffic_source=rss", time: "2026-03-19T18:05:50Z" },
-      { title: "Trump compares attack on Iran to Pearl Harbor in meeting with Japanese PM", source: "BBC News", url: "https://www.bbc.com/news/videos/cx248jvgwj8o?at_medium=RSS&at_campaign=rss", time: "2026-03-19T17:50:38Z" },
-    ]
-  },
-  {
     name: "Caracas", country: "Venezuela",
     lat: 10.4806, lng: -66.9036,
     category: "political",
@@ -1891,6 +1868,30 @@ const locations = [
       { title: "From mall to torture site: Venezuela debates El Helicoide prison's future", source: "NPR", url: "https://www.npr.org/2026/03/20/nx-s1-5745107/el-helicoide-venezuela-prison-torture", time: "2026-03-20T09:30:00Z" },
       { title: "Delcy Rodríguez replaces Venezuela’s top military commanders", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/20/delcy-rodriguez-replaces-venezuelas-top-military-commanders", time: "2026-03-20T09:15:43Z" },
       { title: "Venezuela interim president replaces top military commanders in sweeping reforms", source: "France 24", url: "https://www.france24.com/en/americas/20260320-venezuela-interim-president-military-commanders-reforms", time: "2026-03-20T03:10:45Z" },
+    ]
+  },
+  {
+    name: "Tokyo", country: "Japan",
+    lat: 35.6762, lng: 139.6503,
+    category: "diplomacy",
+    articles: [
+      { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
+      { title: "Unease in Japan after Trump cites Pearl Harbor to defend Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/unease-in-japan-after-trump-uses-pearl-harbor-to-defend-iran-war?traffic_source=rss", time: "2026-03-21T14:34:12Z" },
+      { title: "Japan beat Australia to lift Women’s Asian Cup title", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/japan-beat-australia-to-lift-womens-asian-cup-title?traffic_source=rss", time: "2026-03-21T11:57:41Z" },
+      { title: "Iran says it will allow Japanese ships to transit the Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-says-it-will-allow-japanese-ships-to-transit-the-strait-of-hormuz?traffic_source=rss", time: "2026-03-21T08:21:20Z" },
+      { title: "LIVE: Japan vs Australia – Women’s Asian Cup 2026 final", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/liveblog/2026/3/21/live-japan-vs-australia-womens-asian-cup-2026-final?traffic_source=rss", time: "2026-03-21T06:01:04Z" },
+      { title: "Japan's PM walks tightrope in high-stakes Washington visit", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260320-japan-s-pm-walks-tightrope-in-high-stakes-washington-visit", time: "2026-03-20T15:27:05Z" },
+      { title: "Trump makes Pearl Harbor remark in meeting with Japan's PM", source: "BBC News", url: "https://www.bbc.com/news/articles/c8dlpr074q3o?at_medium=RSS&at_campaign=rss", time: "2026-03-20T09:55:19Z" },
+      { title: "Japan vs Australia: Women’s Asian Cup final – team news, start and lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/20/japan-vs-australia-womens-asian-cup-final-team-news-start-and-lineups?traffic_source=rss", time: "2026-03-20T04:45:40Z" },
+      { title: "How Japan Reacted to Trump’s Pearl Harbor Joke", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/japan-trump-pearl-harbor.html", time: "2026-03-20T04:42:55Z" },
+      { title: "Using Charm and Restraint, Japan’s Leader Mostly Avoids Trump’s Wrath", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/asia/trump-japan-prime-minister-meeting.html", time: "2026-03-20T04:01:24Z" },
+      { title: "Trump downplays Iran war's impact on global energy prices", source: "CBS News", url: "https://www.cbsnews.com/video/trump-downplays-iran-wars-impact-on-global-energy-prices/", time: "2026-03-19T23:27:00Z" },
+      { title: "Trump compares Iran strikes to Pearl Harbor as he meets Japan’s PM", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/19/trump-compares-iran-strikes-to-pearl-harbor-as-he-meets-japans-pm?traffic_source=rss", time: "2026-03-19T20:48:37Z" },
+      { title: "Trump brings up Pearl Harbor while meeting with Japan's prime minister", source: "CBS News", url: "https://www.cbsnews.com/news/trump-pearl-harbor-meeting-japanese-prime-minister/", time: "2026-03-19T20:31:28Z" },
+      { title: "Trump Jokes About Pearl Harbor in Meeting With Japan’s Leader", source: "New York Times", url: "https://www.nytimes.com/2026/03/19/us/politics/trump-japan-pearl-harbor-oval-office-takaichi.html", time: "2026-03-19T18:57:35Z" },
+      { title: "Trump mocks Japan about Pearl Harbor in response to question about Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/19/trump-mocks-japan-pearl-harbor-iran-war", time: "2026-03-19T18:48:25Z" },
+      { title: "Trump makes Pearl Harbor joke during meeting with Japanese prime minister", source: "NBC News", url: "https://www.nbcnews.com/politics/donald-trump/pearl-harbor-joke-iran-operation-meeting-japan-prime-minister-war-rcna264325", time: "2026-03-19T18:27:16Z" },
+      { title: "Trump references Pearl Harbor during meeting with Japanese PM on Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/trump-references-pearl-harbor-during-meeting-with-japanese-pm-on-iran-war?traffic_source=rss", time: "2026-03-19T18:05:50Z" },
     ]
   },
   {
@@ -2063,6 +2064,25 @@ const locations = [
     ]
   },
   {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "Arizona gun dealer accused of selling firearms to two Mexican cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/arizona-gun-dealer-mexican-cartels", time: "2026-03-26T15:49:22Z" },
+      { title: "Amid US-Israel war, Iran football team trains in Turkiye before World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/amid-us-israel-war-iran-football-team-trains-in-turkiye-before-world-cup?traffic_source=rss", time: "2026-03-26T09:48:22Z" },
+      { title: "Migrants march in southern Mexico to denounce immigration restrictions", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/25/migrants-march-in-southern-mexico-to-denounce-immigration-restrictions?traffic_source=rss", time: "2026-03-25T23:52:44Z" },
+      { title: "New Mexico trial finds Meta chose 'growth and profit over children's safety'", source: "France 24", url: "https://www.france24.com/en/new-mexico-trial-finds-meta-chose-growth-and-profit-over-children-s-safety", time: "2026-03-25T13:51:37Z" },
+      { title: "Meta platforms found guilty of harming children's health and safety in US state trial", source: "France 24", url: "https://www.france24.com/en/meta-platforms-found-guilty-of-harming-children-s-health-and-safety-in-us-state-trial", time: "2026-03-25T11:05:46Z" },
+      { title: "Meta ordered to pay $375 million over child exploitation in landmark verdict", source: "France 24", url: "https://www.france24.com/en/americas/20260324-meta-ordered-to-pay-375-million-over-child-exploitation-in-landmark-verdict", time: "2026-03-24T22:01:17Z" },
+      { title: "Abel leaves LA: self-deportation from Trump's America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/video/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:25Z" },
+      { title: "Abel leaves LA: self-deportation from Trump’s America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/ng-interactive/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:19Z" },
+      { title: "The ‘self-deportee’ hounded out of the US to Mexico: ‘There are days when I feel literally insane’", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/mar/24/self-deportation-los-angeles-mexico-trump-immigration", time: "2026-03-24T11:00:36Z" },
+      { title: "229 migrants found calling for help in back of truck in Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/hundreds-migrants-calling-help-back-truck-mexico/", time: "2026-03-24T10:33:00Z" },
+      { title: "Aid flotilla for Cuba sets sail from Mexico", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/aid-flotilla-for-cuba-sets-sail-from-mexico?traffic_source=rss", time: "2026-03-21T03:31:10Z" },
+      { title: "Mexican military says 11 killed in raid targeting Sinaloa cartel leader", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/mexican-military-says-11-killed-in-raid-targeting-sinaloa-cartel-leader?traffic_source=rss", time: "2026-03-19T23:15:48Z" },
+    ]
+  },
+  {
     name: "Sahel Region", country: "West Africa",
     lat: 15.0, lng: 0.0,
     category: "conflict",
@@ -2078,24 +2098,6 @@ const locations = [
       { title: "‘Sahel is no longer fooled’ Niger civil society leader", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/sahel-is-no-longer-fooled-niger-civil-society-leader?traffic_source=rss", time: "2026-03-23T11:47:08Z" },
       { title: "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict", source: "BBC News", url: "https://www.bbc.com/news/articles/clyv1j8ne7ko?at_medium=RSS&at_campaign=rss", time: "2026-03-22T00:55:31Z" },
       { title: "‘The children are not safe here’: the Nigerian couple fighting infanticide – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/20/the-children-are-not-safe-here-the-nigerian-couple-fighting-infanticide-podcast", time: "2026-03-20T05:00:09Z" },
-    ]
-  },
-  {
-    name: "Mexico City", country: "Mexico",
-    lat: 19.4326, lng: -99.1332,
-    category: "political",
-    articles: [
-      { title: "Amid US-Israel war, Iran football team trains in Turkiye before World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/amid-us-israel-war-iran-football-team-trains-in-turkiye-before-world-cup?traffic_source=rss", time: "2026-03-26T09:48:22Z" },
-      { title: "Migrants march in southern Mexico to denounce immigration restrictions", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/25/migrants-march-in-southern-mexico-to-denounce-immigration-restrictions?traffic_source=rss", time: "2026-03-25T23:52:44Z" },
-      { title: "New Mexico trial finds Meta chose 'growth and profit over children's safety'", source: "France 24", url: "https://www.france24.com/en/new-mexico-trial-finds-meta-chose-growth-and-profit-over-children-s-safety", time: "2026-03-25T13:51:37Z" },
-      { title: "Meta platforms found guilty of harming children's health and safety in US state trial", source: "France 24", url: "https://www.france24.com/en/meta-platforms-found-guilty-of-harming-children-s-health-and-safety-in-us-state-trial", time: "2026-03-25T11:05:46Z" },
-      { title: "Meta ordered to pay $375 million over child exploitation in landmark verdict", source: "France 24", url: "https://www.france24.com/en/americas/20260324-meta-ordered-to-pay-375-million-over-child-exploitation-in-landmark-verdict", time: "2026-03-24T22:01:17Z" },
-      { title: "Abel leaves LA: self-deportation from Trump's America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/video/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:25Z" },
-      { title: "Abel leaves LA: self-deportation from Trump’s America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/ng-interactive/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:19Z" },
-      { title: "The ‘self-deportee’ hounded out of the US to Mexico: ‘There are days when I feel literally insane’", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/mar/24/self-deportation-los-angeles-mexico-trump-immigration", time: "2026-03-24T11:00:36Z" },
-      { title: "229 migrants found calling for help in back of truck in Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/hundreds-migrants-calling-help-back-truck-mexico/", time: "2026-03-24T10:33:00Z" },
-      { title: "Aid flotilla for Cuba sets sail from Mexico", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/aid-flotilla-for-cuba-sets-sail-from-mexico?traffic_source=rss", time: "2026-03-21T03:31:10Z" },
-      { title: "Mexican military says 11 killed in raid targeting Sinaloa cartel leader", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/mexican-military-says-11-killed-in-raid-targeting-sinaloa-cartel-leader?traffic_source=rss", time: "2026-03-19T23:15:48Z" },
     ]
   },
   {
@@ -3189,6 +3191,14 @@ const locations = [
     category: "health",
     articles: [
       { title: "Dozens dead in Bangladesh as passenger bus plunges into Padma River", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/dozens-dead-in-bangladesh-as-passenger-bus-plunges-into-padma-river?traffic_source=rss", time: "2026-03-26T10:24:29Z" },
+    ]
+  },
+  {
+    name: "Kathmandu", country: "Nepal",
+    lat: 27.7172, lng: 85.324,
+    category: "political",
+    articles: [
+      { title: "Nepal’s PM-to-be uses rap to call for unity in first post-election message", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/nepal-pm-balendra-shah-rap", time: "2026-03-26T17:43:52Z" },
     ]
   },
 ];
