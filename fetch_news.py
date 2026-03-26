@@ -39,6 +39,12 @@ FEEDS = [
     # Regional
     {"url": "https://www.timesofisrael.com/feed/", "source": "Times of Israel"},
     {"url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx", "source": "Jerusalem Post"},
+    {"url": "https://www.haaretz.com/srv/haaretz-latest-headlines", "source": "Haaretz"},
+    {"url": "https://www.middleeasteye.net/rss", "source": "Middle East Eye"},
+    {"url": "https://www.middleeastmonitor.com/feed/", "source": "Middle East Monitor"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://theintercept.com/feed/", "source": "The Intercept"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
 ]
 
 # ── Middle East Keywords & Location Mapping ───────────────────────
@@ -464,6 +470,16 @@ UKRAINE_FEEDS = [
     {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
     {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
     {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://www.euronews.com/rss?level=theme&name=news", "source": "Euronews"},
+    {"url": "https://www.irishtimes.com/cmlink/news-1.1319192", "source": "Irish Times"},
+    {"url": "https://www.rte.ie/feeds/rss/?index=/news/world/", "source": "RTE News"},
+    {"url": "https://abcnews.go.com/abcnews/internationalheadlines", "source": "ABC News"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
+    {"url": "https://theintercept.com/feed/", "source": "The Intercept"},
+    {"url": "https://www.latimes.com/world/rss2.0.xml", "source": "LA Times"},
+    {"url": "https://api.axios.com/feed/", "source": "Axios"},
+    {"url": "https://thehill.com/feed/", "source": "The Hill"},
 ]
 
 UKRAINE_KEYWORDS = [
@@ -603,6 +619,14 @@ EAST_ASIA_FEEDS = [
     {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
     {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
     {"url": "https://www3.nhk.or.jp/nhkworld/en/news/rss/index.xml", "source": "NHK World"},
+    {"url": "https://www.scmp.com/rss/4/feed", "source": "South China Morning Post"},
+    {"url": "https://www.taipeitimes.com/xml/index.rss", "source": "Taipei Times"},
+    {"url": "https://www.bangkokpost.com/rss/data/topstories.xml", "source": "Bangkok Post"},
+    {"url": "https://www.straitstimes.com/news/asia/rss.xml", "source": "Straits Times"},
+    {"url": "https://www.smh.com.au/rss/world.xml", "source": "Sydney Morning Herald"},
+    {"url": "https://www.nzherald.co.nz/arc/outboundfeeds/rss/section/nz/?outputType=xml", "source": "NZ Herald"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
 ]
 
 EAST_ASIA_KEYWORDS = [
@@ -775,6 +799,10 @@ AFRICA_FEEDS = [
     {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
     {"url": "https://www.france24.com/en/africa/rss", "source": "France 24"},
     {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf", "source": "AllAfrica"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
+    {"url": "https://theintercept.com/feed/", "source": "The Intercept"},
 ]
 
 AFRICA_KEYWORDS = [
@@ -941,6 +969,16 @@ EUROPE_FEEDS = [
     {"url": "https://www.france24.com/en/europe/rss", "source": "France 24"},
     {"url": "https://www.dw.com/rss/en/eu/s-31459", "source": "Deutsche Welle"},
     {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://www.euronews.com/rss?level=theme&name=news", "source": "Euronews"},
+    {"url": "https://www.irishtimes.com/cmlink/news-1.1319192", "source": "Irish Times"},
+    {"url": "https://www.rte.ie/feeds/rss/?index=/news/world/", "source": "RTE News"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
+    {"url": "https://www.latimes.com/world/rss2.0.xml", "source": "LA Times"},
+    {"url": "https://api.axios.com/feed/", "source": "Axios"},
+    {"url": "https://thehill.com/feed/", "source": "The Hill"},
+    {"url": "https://theintercept.com/feed/", "source": "The Intercept"},
+    {"url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/", "source": "Globe and Mail"},
 ]
 
 EUROPE_KEYWORDS = [
@@ -1151,6 +1189,12 @@ SOUTH_ASIA_FEEDS = [
     {"url": "https://feeds.washingtonpost.com/rss/world", "source": "Washington Post"},
     {"url": "https://www.france24.com/en/asia-pacific/rss", "source": "France 24"},
     {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
+    {"url": "https://www.thehindu.com/news/international/feeder/default.rss", "source": "The Hindu"},
+    {"url": "https://www.dawn.com/feeds/home", "source": "Dawn"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
+    {"url": "https://www.bangkokpost.com/rss/data/topstories.xml", "source": "Bangkok Post"},
+    {"url": "https://www.straitstimes.com/news/asia/rss.xml", "source": "Straits Times"},
 ]
 
 SOUTH_ASIA_KEYWORDS = [
@@ -1288,6 +1332,16 @@ AMERICAS_FEEDS = [
     {"url": "https://feeds.npr.org/1004/rss.xml", "source": "NPR"},
     {"url": "https://feeds.nbcnews.com/nbcnews/public/world", "source": "NBC News"},
     {"url": "https://www.cbsnews.com/latest/rss/world", "source": "CBS News"},
+    {"url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/", "source": "Globe and Mail"},
+    {"url": "https://mexiconewsdaily.com/feed/", "source": "Mexico News Daily"},
+    {"url": "https://buenosairesherald.com/feed/", "source": "Buenos Aires Herald"},
+    {"url": "https://abcnews.go.com/abcnews/internationalheadlines", "source": "ABC News"},
+    {"url": "https://www.pbs.org/newshour/feeds/rss/world", "source": "PBS NewsHour"},
+    {"url": "https://www.latimes.com/world/rss2.0.xml", "source": "LA Times"},
+    {"url": "https://api.axios.com/feed/", "source": "Axios"},
+    {"url": "https://thehill.com/feed/", "source": "The Hill"},
+    {"url": "https://www.independent.co.uk/news/world/rss", "source": "The Independent"},
+    {"url": "https://theintercept.com/feed/", "source": "The Intercept"},
 ]
 
 AMERICAS_KEYWORDS = [
