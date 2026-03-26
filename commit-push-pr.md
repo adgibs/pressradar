@@ -48,15 +48,33 @@ If anything looks wrong, **stop and ask** before proceeding.
    git commit -m "<message>"
    ```
 
-4. **Tell the user to push from their Mac:**
-   > The Cowork VM cannot push to GitHub. Run this on your Mac:
-   > ```bash
-   > cd "/Users/andrew/0. Swift Coding/pressradar" && git pull --rebase && git push
-   > ```
-   > If you get "unstaged changes" errors:
-   > ```bash
-   > git stash && git pull --rebase && git push && git stash pop
-   > ```
+4. **Push to GitHub:**
+
+   **Option A — Cowork VM (preferred when PAT is configured):**
+   If a GitHub PAT with `Contents` + `Workflows` scope is configured on the git remote, push directly:
+   ```bash
+   git push
+   ```
+   The PAT is set per-session via:
+   ```bash
+   git remote set-url origin https://adgibs:<PAT>@github.com/adgibs/pressradar.git
+   ```
+
+   **Option B — Mac push script:**
+   A `push.sh` script is included in the repo root. Run from Terminal:
+   ```bash
+   cd "/Users/andrew/0. Swift Coding/pressradar" && bash push.sh
+   ```
+   It handles pull-rebase, stash, and push automatically.
+
+   **Option C — Manual Mac push:**
+   ```bash
+   cd "/Users/andrew/0. Swift Coding/pressradar" && git pull --rebase && git push
+   ```
+   If you get "unstaged changes" errors:
+   ```bash
+   git stash && git pull --rebase && git push && git stash pop
+   ```
 
 5. **Trigger a workflow run** (if fetch_news.py or AI logic changed):
    > Go to **GitHub → Actions → Update PressRadar News → Run workflow**
@@ -68,7 +86,7 @@ If anything looks wrong, **stop and ask** before proceeding.
 
 - **Always commit to `main`** — no feature branches or PRs for this project.
 - **Never use `git add -A`** — stage specific files to avoid committing `__pycache__/`, `.env`, or other junk.
-- **The VM cannot push** — always instruct the user to push from their Mac.
+- **The VM can push if a PAT is configured** on the git remote. Otherwise instruct the user to push from their Mac or use `push.sh`.
 - **After pushing**, remind the user to trigger a workflow run if `fetch_news.py` changed.
 - If there are merge conflicts from the auto-update bot, use `git stash && git pull --rebase && git push && git stash pop`.
 - **Never commit** `.env`, `__pycache__/`, or API keys.

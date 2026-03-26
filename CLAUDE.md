@@ -129,7 +129,7 @@ Shared styles for all pages. Key sections:
 - **Don't refactor unless asked.** Flag unrelated issues — don't silently fix them.
 - **Never silently delete or overwrite files.** Always confirm before destructive operations.
 - **At the start of each session**, confirm: current directory (`pwd`), current branch (`git branch`), and remote (`git remote -v`).
-- **User pushes from Mac.** The Cowork VM cannot push to GitHub — always tell the user to push.
+- **Pushing:** If a GitHub PAT is configured on the remote, push directly from the VM. Otherwise use `push.sh` or instruct the user to push from Mac.
 
 ---
 
@@ -163,5 +163,8 @@ Shared styles for all pages. Key sections:
 - When extracting shared code from multiple HTML files, always verify that `fetch_news.py` regex injection patterns still match the refactored HTML structure.
 - Gemini free tier has zero quota in UK region — do not attempt to use it. Use Anthropic API instead.
 
-## The Cowork VM cannot `git push` — always instruct the user to push from their Mac.
-## After committing in the VM, remind user to push. Unpushed commits are invisible to GitHub Actions.
+## Pushing to GitHub
+- If a GitHub PAT is configured on the remote (`git remote set-url origin https://adgibs:<PAT>@github.com/adgibs/pressradar.git`), push directly from the VM.
+- If no PAT is configured, instruct user to push from Mac using `push.sh` or manually.
+- `push.sh` in the repo root handles pull-rebase + push automatically.
+- After pushing, always verify success — unpushed commits are invisible to GitHub Actions.
