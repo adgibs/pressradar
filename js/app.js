@@ -1149,11 +1149,9 @@ function switchToFlat() {
 
 // Auto-init globe on Global page if it was the last used view
 if (window.pageConfig.region === 'Global') {
-  document.addEventListener('DOMContentLoaded', () => {
-    const pref = localStorage.getItem('pressradar-globeview');
-    // Default to globe view on Global page
-    if (pref !== '0') {
-      switchToGlobe();
-    }
-  });
+  const pref = localStorage.getItem('pressradar-globeview');
+  // Default to globe view on Global page
+  if (pref !== '0') {
+    switchToGlobe();
+  }
 }
