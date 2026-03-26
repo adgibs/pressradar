@@ -76,9 +76,10 @@ let radiusKm = 500;        // current radius in km
 let radiusCircle = null;   // Leaflet circle layer
 let radiusMarker = null;   // Leaflet marker for center point
 
-// Globe view (Global page only)
-let globe = null;
-let globeView = false;     // true = globe visible, false = flat map visible
+// Globe view (Global page only) — use var to avoid TDZ issues since
+// renderGlobe() can be called from applyFilters() before globe code section runs
+var globe = null;
+var globeView = false;     // true = globe visible, false = flat map visible
 
 function haversineDistance(lat1, lng1, lat2, lng2) {
   const R = 6371;
