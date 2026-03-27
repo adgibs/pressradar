@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:02 UTC, 27 Mar 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:45 UTC, 27 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">27 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:02 UTC, 27 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["BREAKING: YPF case: U.S. court reverses US$16 billion sentence against Argentina", "Caputo rejects rumors of recession and says Argentine economy boasts ‘record’ growth", "Peso breaks past 18 to the dollar after Banxico’s surprise rate cut"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Argentina wins major legal victory while peso weakens despite economic claims</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Hegseth removes 2 Black and 2 female officers from promotion list: Report", "Fiery Ethics Committee hearing ends in guilty ruling for Rep. Sheila Cherfilus-McCormick"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">U.S. government officials face ethics investigations and removal proceedings</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["School stabbing in Chile leaves 1 dead and 4 injured", "Meet the children left without parents under El Salvador’s emergency decree"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Violence and security crises affect Chile and El Salvador populations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["El Jalapeño: Mexican architect one vote away from completing 500 year revenge plan", "Young wineries like Altos Norte are changing how wine lovers see Jalisco"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Mexican cultural and economic developments reshape regional industries</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Brazil&#39;s Bolsonaro leaves hospital and heads home to serve his 27-year sentence", "Costa Rica to accept 25 &#39;third country&#39; deportees from US every week"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Latin American countries manage criminal justice and migration pressures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Arctic sea ice hits lowest winter level as heat records are shattered worldwide", "Scientists film whale giving birth while other whales work together to help her"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Wildlife and environmental stories emerge from Americas region</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:45 UTC, 27 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Navy launches search for 2 missing aid boats bound for Cuba: Friday’s mañanera recapped", "Two Cuba-bound aid ships missing after leaving Mexico", "Mexico says a third of 130,000 missing people might be alive, fueling criticisms by families", "Mexico believes thousands of country’s 130,000 missing people could still be alive"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Mexico searches for missing aid boats and thousands of disappeared persons</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Colombian mayor says body found in search for missing U.S. flight attendant", "School stabbing in Chile leaves 1 dead and 4 injured"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Violence claims lives across Colombia and Chile</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Hegseth removes 2 Black and 2 female officers from promotion list: Report", "Canada’s Bill C-12 an ‘attack on refugee, migrant rights’: Advocates"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Government policies face criticism over rights concerns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Peso breaks past 18 to the dollar after Banxico’s surprise rate cut", "BREAKING: YPF case: U.S. court reverses US$16 billion sentence against Argentina"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Currency weakens and Argentina wins major court case</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["As wallets shrink, Buenos Aires’ fine dining weathers the storm", "Young wineries like Altos Norte are changing how wine lovers see Jalisco"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Economic challenges reshape Argentina and Mexico&#x27;s consumer sectors</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Arctic sea ice hits lowest winter level as heat records are shattered worldwide", "Scientists film whale giving birth while other whales work together to help her"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Environmental and wildlife stories capture scientific attention</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -112,6 +112,62 @@ const catLabels = { political: "Politics / governance", security: "Security / co
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "Navy launches search for 2 missing aid boats bound for Cuba: Friday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/missing-cuba-aid-boats-march-27-mananera/", time: "2026-03-27T20:20:10Z" },
+      { title: "Mexico says a third of 130,000 missing people might be alive, fueling criticisms by families", source: "ABC News", url: "https://abcnews.com/International/wireStory/mexico-130000-missing-people-alive-fueling-criticisms-families-131480737", time: "2026-03-27T19:38:35Z" },
+      { title: "Mexico believes thousands of country’s 130,000 missing people could still be alive", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mexico-cartel-missing-people-disappearances-b2947335.html", time: "2026-03-27T19:05:49Z" },
+      { title: "El Jalapeño: Mexican architect one vote away from completing 500 year revenge plan", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexican-architect-one-vote-away-from-completing-500-year-revenge-plan/", time: "2026-03-27T18:24:31Z" },
+      { title: "Two Cuba-bound aid ships missing after leaving Mexico", source: "BBC News", url: "https://www.bbc.com/news/articles/cp84kw1y337o?at_medium=RSS&at_campaign=rss", time: "2026-03-27T18:04:02Z" },
+      { title: "Young wineries like Altos Norte are changing how wine lovers see Jalisco", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/altos-norte-wines-of-jalisco/", time: "2026-03-27T17:45:52Z" },
+      { title: "Peso breaks past 18 to the dollar after Banxico’s surprise rate cut", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexican-peso-dollar-18-iran-war-rate-cut/", time: "2026-03-27T17:44:05Z" },
+      { title: "Meet the drug war’s latest creation: Cychlorphine", source: "The Hill", url: "https://thehill.com/opinion/healthcare/5803049-cychlorphine-emerges-illicit-market/", time: "2026-03-27T16:00:00Z" },
+      { title: "Gulf of Mexico oil spill spread hundreds of miles, killed wildlife and polluted Mexican reserves", source: "ABC News", url: "https://abcnews.com/International/wireStory/gulf-mexico-oil-spill-spread-hundreds-miles-killed-131454235", time: "2026-03-27T11:30:59Z" },
+      { title: "Wildlife killed, reefs damaged in ‘active’ Gulf of Mexico oil spill", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/wildlife-killed-reefs-damaged-in-active-gulf-of-mexico-oil-spill?traffic_source=rss", time: "2026-03-27T09:50:16Z" },
+      { title: "Motherhood, makeup and Zumba: the rehabilitation of one of Mexico’s most dangerous prisons", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/27/modulo2-rehabilitation-mexico-most-dangerous-prisons-women", time: "2026-03-27T06:00:06Z" },
+      { title: "2 boats carrying aid to Cuba reported missing by Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/2-boats-carrying-aid-to-cuba-reported-missing-by-mexico/", time: "2026-03-27T03:49:50Z" },
+      { title: "Endangered monarch butterfly population surges 64 percent", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/endangered-monarch-butterfly-population-surges-64-percent?traffic_source=rss", time: "2026-03-27T03:05:27Z" },
+      { title: "Woman whose son died from drugs bought on social media celebrates verdicts against Meta, YouTube", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/max-youtube-snapchat-meta-colorado-b2946712.html", time: "2026-03-27T02:53:47Z" },
+      { title: "Mexico launches search for two missing aid boats bound for Cuba", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/mexico-launches-search-for-two-missing-aid-boats-bound-for-cuba?traffic_source=rss", time: "2026-03-27T02:35:28Z" },
+      { title: "After 7 years, renowned search collective founder Ceci Flores finds her son’s remains in Sonora", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ceci-flores-search-collective-sons-remains-sonora/", time: "2026-03-27T00:33:25Z" },
+      { title: "Bucking expectations, central bank cuts interest rate despite inflationary pressures", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/bucking-expectations-central-bank-cuts-interest-rate-despite-inflationary-pressures/", time: "2026-03-27T00:26:40Z" },
+      { title: "Mexico in Numbers: What are Mexico’s most popular airlines?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/mexico-in-numbers-most-popular-airlines/", time: "2026-03-26T23:45:26Z" },
+      { title: "Face-shaped conchas in Mexico City feed another wave of Harfuch-mania", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/face-shaped-conchas-in-mexico-city/", time: "2026-03-26T23:17:20Z" },
+      { title: "China threatens retaliation over Mexico’s tariff hikes", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/china-mexico-tariff-retaliation-threats/", time: "2026-03-26T22:59:10Z" },
+      { title: "Did the government cover up February’s Gulf of Mexico oil spill?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/gulf-oil-spill-government-response/", time: "2026-03-26T21:45:42Z" },
+      { title: "Sheinbaum defends ‘Plan B’ electoral reform after Senate strips key provision: Thursday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-plan-b-electoral-reform-senate-march-26-mananera/", time: "2026-03-26T21:04:29Z" },
+      { title: "Argentina follows Trump’s lead and labels notorious cartel a terrorist organization", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/argentina-jalisco-new-generation-cartel-cjng-trump-b2946533.html", time: "2026-03-26T19:55:14Z" },
+      { title: "iPhone launches Tap to Pay in Mexico, expanding the country’s digital payment options", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/iphone-tap-to-pay-mexico-digital-payment/", time: "2026-03-26T18:38:30Z" },
+      { title: "Why Tijuana is so much more than a border city", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/baja-california-peninsula/why-you-should-visit-tijuana/", time: "2026-03-26T18:00:39Z" },
+      { title: "Arizona gun dealer accused of selling firearms to two Mexican cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/arizona-gun-dealer-mexican-cartels", time: "2026-03-26T15:49:22Z" },
+      { title: "On the job education for construction workers in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/on-the-job-education-for-construction-workers-in-mexico/", time: "2026-03-26T12:00:40Z" },
+      { title: "Californians with deep ties to Jalisco rattled by cartel violence and fears of bloody power struggle", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-26/californians-with-deep-ties-to-jalisco-rattled-by-cartel-violence-fears-of-bloody-power-struggle", time: "2026-03-26T10:00:00Z" },
+      { title: "Amid US-Israel war, Iran football team trains in Turkiye before World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/amid-us-israel-war-iran-football-team-trains-in-turkiye-before-world-cup?traffic_source=rss", time: "2026-03-26T09:48:22Z" },
+      { title: "Migrants march in southern Mexico to denounce immigration restrictions", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/25/migrants-march-in-southern-mexico-to-denounce-immigration-restrictions?traffic_source=rss", time: "2026-03-25T23:52:44Z" },
+      { title: "Jalisco shines its culinary credentials as host of the Michelin Mexico Guide opening ceremony", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/jalisco-shines-its-culinary-credentials-as-host-of-the-michelin-mexico-guide-opening-ceremony/", time: "2026-03-25T23:38:36Z" },
+      { title: "13 Mexicans have died in US custody during the Trump administration", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/13-mexicans-died-in-us-custody-trump/", time: "2026-03-25T23:07:31Z" },
+      { title: "How rich is rich in Mexico: How much does the upper class earn, and what does their world look like?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-upper-class-world/", time: "2026-03-25T23:01:41Z" },
+      { title: "Uber and licensed taxis settle their long dispute by joining forces in CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/uber-alliance-taxis-mexico-city/", time: "2026-03-25T22:09:57Z" },
+      { title: "New poll: What do Americans think about Mexico and the Mexico-US relationship?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/new-poll-what-do-americans-think-about-mexico-and-the-mexico-us-relationship/", time: "2026-03-25T22:06:12Z" },
+      { title: "Sheinbaum addresses school shooting yesterday in Michoacán: Wednesday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-school-shooting-michoacan-mananera-wednesday/", time: "2026-03-25T20:03:15Z" },
+      { title: "Opinion: What might a regional utopia look like? Part 1", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/opinion-what-might-a-regional-utopia-look-like-part-1/", time: "2026-03-25T19:14:29Z" },
+      { title: "Meta and YouTube found negligent in landmark social media addiction trial", source: "Axios", url: "https://www.axios.com/2026/03/25/meta-youtube-verdict-social-media-addiction-trial", time: "2026-03-25T18:19:24Z" },
+      { title: "Migrants march from southern Mexico, protesting delays and seeking papers to work", source: "ABC News", url: "https://abcnews.com/International/wireStory/migrants-march-southern-mexico-protesting-delays-seeking-papers-131400640", time: "2026-03-25T16:16:34Z" },
+      { title: "New Mexico trial finds Meta chose 'growth and profit over children's safety'", source: "France 24", url: "https://www.france24.com/en/new-mexico-trial-finds-meta-chose-growth-and-profit-over-children-s-safety", time: "2026-03-25T13:51:37Z" },
+      { title: "Meta platforms found guilty of harming children's health and safety in US state trial", source: "France 24", url: "https://www.france24.com/en/meta-platforms-found-guilty-of-harming-children-s-health-and-safety-in-us-state-trial", time: "2026-03-25T11:05:46Z" },
+      { title: "Meta knowingly harmed children’s mental health and prioritized profits over safety, jury determines", source: "Globe and Mail", url: "https://www.theglobeandmail.com/business/technology/science/article-meta-trial-new-mexico-children-mental-health/", time: "2026-03-25T01:03:05Z" },
+      { title: "New Mexico social media lawsuit ends in $375-million verdict against Meta", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-24/new-mexico-social-media-harms-lawsuit-375-million-verdict", time: "2026-03-24T22:38:22Z" },
+      { title: "Meta ordered to pay $375 million over child exploitation in landmark verdict", source: "France 24", url: "https://www.france24.com/en/americas/20260324-meta-ordered-to-pay-375-million-over-child-exploitation-in-landmark-verdict", time: "2026-03-24T22:01:17Z" },
+      { title: "Abel leaves LA: self-deportation from Trump's America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/video/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:25Z" },
+      { title: "Abel leaves LA: self-deportation from Trump’s America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/ng-interactive/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:19Z" },
+      { title: "The ‘self-deportee’ hounded out of the US to Mexico: ‘There are days when I feel literally insane’", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/mar/24/self-deportation-los-angeles-mexico-trump-immigration", time: "2026-03-24T11:00:36Z" },
+      { title: "229 migrants found calling for help in back of truck in Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/hundreds-migrants-calling-help-back-truck-mexico/", time: "2026-03-24T10:33:00Z" },
+      { title: "Aid flotilla for Cuba sets sail from Mexico", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/aid-flotilla-for-cuba-sets-sail-from-mexico?traffic_source=rss", time: "2026-03-21T03:31:10Z" },
+    ]
+  },
+  {
     name: "Havana", country: "Cuba",
     lat: 23.1136, lng: -82.3666,
     category: "political",
@@ -163,61 +219,6 @@ const locations = [
       { title: "Tons of aid flows into Cuba as humanitarian convoy arrives on the island", source: "France 24", url: "https://www.france24.com/en/tons-of-aid-flows-into-cuba-as-humanitarian-convoy-arrives-on-the-island", time: "2026-03-21T10:44:04Z" },
       { title: "Russian ship potentially bringing oil to Cuba is test of Kremlin allyship", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/21/russia-tanker-cuba-oil/", time: "2026-03-21T09:00:00Z" },
       { title: "Cuba rejects U.S. Embassy request to bring in fuel, calls it ‘shameless’", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/20/us-embassy-havana-cuba-fuel-blackout/", time: "2026-03-20T21:54:51Z" },
-      { title: "In Cuba, all-night lines for 5 gallons of gas as residents grapple with shortages", source: "NBC News", url: "https://www.nbcnews.com/world/cuba/cubans-fuel-shortages-long-lines-food-rcna264435", time: "2026-03-20T20:13:55Z" },
-      { title: "Cuba Power Outages and Flight Cancellations: What Travelers Need to Know in 2026", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/travel/cuba-flights-travel-advice-power-oil.html", time: "2026-03-20T19:55:31Z" },
-      { title: "Aid Ship Departs for Cuba as Island Grapples With a Fuel Blockade", source: "New York Times", url: "https://www.nytimes.com/2026/03/20/world/americas/cuba-fuel-blockade-aid-convoy.html", time: "2026-03-20T19:26:29Z" },
-    ]
-  },
-  {
-    name: "Mexico City", country: "Mexico",
-    lat: 19.4326, lng: -99.1332,
-    category: "political",
-    articles: [
-      { title: "El Jalapeño: Mexican architect one vote away from completing 500 year revenge plan", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexican-architect-one-vote-away-from-completing-500-year-revenge-plan/", time: "2026-03-27T18:24:31Z" },
-      { title: "Young wineries like Altos Norte are changing how wine lovers see Jalisco", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/altos-norte-wines-of-jalisco/", time: "2026-03-27T17:45:52Z" },
-      { title: "Peso breaks past 18 to the dollar after Banxico’s surprise rate cut", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexican-peso-dollar-18-iran-war-rate-cut/", time: "2026-03-27T17:44:05Z" },
-      { title: "Meet the drug war’s latest creation: Cychlorphine", source: "The Hill", url: "https://thehill.com/opinion/healthcare/5803049-cychlorphine-emerges-illicit-market/", time: "2026-03-27T16:00:00Z" },
-      { title: "Gulf of Mexico oil spill spread hundreds of miles, killed wildlife and polluted Mexican reserves", source: "ABC News", url: "https://abcnews.com/International/wireStory/gulf-mexico-oil-spill-spread-hundreds-miles-killed-131454235", time: "2026-03-27T11:30:59Z" },
-      { title: "Wildlife killed, reefs damaged in ‘active’ Gulf of Mexico oil spill", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/wildlife-killed-reefs-damaged-in-active-gulf-of-mexico-oil-spill?traffic_source=rss", time: "2026-03-27T09:50:16Z" },
-      { title: "Motherhood, makeup and Zumba: the rehabilitation of one of Mexico’s most dangerous prisons", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/27/modulo2-rehabilitation-mexico-most-dangerous-prisons-women", time: "2026-03-27T06:00:06Z" },
-      { title: "2 boats carrying aid to Cuba reported missing by Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/2-boats-carrying-aid-to-cuba-reported-missing-by-mexico/", time: "2026-03-27T03:49:50Z" },
-      { title: "Endangered monarch butterfly population surges 64 percent", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/endangered-monarch-butterfly-population-surges-64-percent?traffic_source=rss", time: "2026-03-27T03:05:27Z" },
-      { title: "Woman whose son died from drugs bought on social media celebrates verdicts against Meta, YouTube", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/max-youtube-snapchat-meta-colorado-b2946712.html", time: "2026-03-27T02:53:47Z" },
-      { title: "Mexico launches search for two missing aid boats bound for Cuba", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/mexico-launches-search-for-two-missing-aid-boats-bound-for-cuba?traffic_source=rss", time: "2026-03-27T02:35:28Z" },
-      { title: "After 7 years, renowned search collective founder Ceci Flores finds her son’s remains in Sonora", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ceci-flores-search-collective-sons-remains-sonora/", time: "2026-03-27T00:33:25Z" },
-      { title: "Bucking expectations, central bank cuts interest rate despite inflationary pressures", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/bucking-expectations-central-bank-cuts-interest-rate-despite-inflationary-pressures/", time: "2026-03-27T00:26:40Z" },
-      { title: "Mexico in Numbers: What are Mexico’s most popular airlines?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/mexico-in-numbers-most-popular-airlines/", time: "2026-03-26T23:45:26Z" },
-      { title: "Face-shaped conchas in Mexico City feed another wave of Harfuch-mania", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/face-shaped-conchas-in-mexico-city/", time: "2026-03-26T23:17:20Z" },
-      { title: "China threatens retaliation over Mexico’s tariff hikes", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/china-mexico-tariff-retaliation-threats/", time: "2026-03-26T22:59:10Z" },
-      { title: "Did the government cover up February’s Gulf of Mexico oil spill?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/gulf-oil-spill-government-response/", time: "2026-03-26T21:45:42Z" },
-      { title: "Sheinbaum defends ‘Plan B’ electoral reform after Senate strips key provision: Thursday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-plan-b-electoral-reform-senate-march-26-mananera/", time: "2026-03-26T21:04:29Z" },
-      { title: "Argentina follows Trump’s lead and labels notorious cartel a terrorist organization", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/argentina-jalisco-new-generation-cartel-cjng-trump-b2946533.html", time: "2026-03-26T19:55:14Z" },
-      { title: "iPhone launches Tap to Pay in Mexico, expanding the country’s digital payment options", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/iphone-tap-to-pay-mexico-digital-payment/", time: "2026-03-26T18:38:30Z" },
-      { title: "Why Tijuana is so much more than a border city", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/baja-california-peninsula/why-you-should-visit-tijuana/", time: "2026-03-26T18:00:39Z" },
-      { title: "Arizona gun dealer accused of selling firearms to two Mexican cartels", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/arizona-gun-dealer-mexican-cartels", time: "2026-03-26T15:49:22Z" },
-      { title: "On the job education for construction workers in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/on-the-job-education-for-construction-workers-in-mexico/", time: "2026-03-26T12:00:40Z" },
-      { title: "Californians with deep ties to Jalisco rattled by cartel violence and fears of bloody power struggle", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-26/californians-with-deep-ties-to-jalisco-rattled-by-cartel-violence-fears-of-bloody-power-struggle", time: "2026-03-26T10:00:00Z" },
-      { title: "Amid US-Israel war, Iran football team trains in Turkiye before World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/26/amid-us-israel-war-iran-football-team-trains-in-turkiye-before-world-cup?traffic_source=rss", time: "2026-03-26T09:48:22Z" },
-      { title: "Migrants march in southern Mexico to denounce immigration restrictions", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/25/migrants-march-in-southern-mexico-to-denounce-immigration-restrictions?traffic_source=rss", time: "2026-03-25T23:52:44Z" },
-      { title: "Jalisco shines its culinary credentials as host of the Michelin Mexico Guide opening ceremony", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/jalisco-shines-its-culinary-credentials-as-host-of-the-michelin-mexico-guide-opening-ceremony/", time: "2026-03-25T23:38:36Z" },
-      { title: "13 Mexicans have died in US custody during the Trump administration", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/13-mexicans-died-in-us-custody-trump/", time: "2026-03-25T23:07:31Z" },
-      { title: "How rich is rich in Mexico: How much does the upper class earn, and what does their world look like?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-upper-class-world/", time: "2026-03-25T23:01:41Z" },
-      { title: "Uber and licensed taxis settle their long dispute by joining forces in CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/uber-alliance-taxis-mexico-city/", time: "2026-03-25T22:09:57Z" },
-      { title: "New poll: What do Americans think about Mexico and the Mexico-US relationship?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/new-poll-what-do-americans-think-about-mexico-and-the-mexico-us-relationship/", time: "2026-03-25T22:06:12Z" },
-      { title: "Sheinbaum addresses school shooting yesterday in Michoacán: Wednesday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-school-shooting-michoacan-mananera-wednesday/", time: "2026-03-25T20:03:15Z" },
-      { title: "Opinion: What might a regional utopia look like? Part 1", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/opinion-what-might-a-regional-utopia-look-like-part-1/", time: "2026-03-25T19:14:29Z" },
-      { title: "Meta and YouTube found negligent in landmark social media addiction trial", source: "Axios", url: "https://www.axios.com/2026/03/25/meta-youtube-verdict-social-media-addiction-trial", time: "2026-03-25T18:19:24Z" },
-      { title: "Migrants march from southern Mexico, protesting delays and seeking papers to work", source: "ABC News", url: "https://abcnews.com/International/wireStory/migrants-march-southern-mexico-protesting-delays-seeking-papers-131400640", time: "2026-03-25T16:16:34Z" },
-      { title: "New Mexico trial finds Meta chose 'growth and profit over children's safety'", source: "France 24", url: "https://www.france24.com/en/new-mexico-trial-finds-meta-chose-growth-and-profit-over-children-s-safety", time: "2026-03-25T13:51:37Z" },
-      { title: "Meta platforms found guilty of harming children's health and safety in US state trial", source: "France 24", url: "https://www.france24.com/en/meta-platforms-found-guilty-of-harming-children-s-health-and-safety-in-us-state-trial", time: "2026-03-25T11:05:46Z" },
-      { title: "Meta knowingly harmed children’s mental health and prioritized profits over safety, jury determines", source: "Globe and Mail", url: "https://www.theglobeandmail.com/business/technology/science/article-meta-trial-new-mexico-children-mental-health/", time: "2026-03-25T01:03:05Z" },
-      { title: "New Mexico social media lawsuit ends in $375-million verdict against Meta", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-24/new-mexico-social-media-harms-lawsuit-375-million-verdict", time: "2026-03-24T22:38:22Z" },
-      { title: "Meta ordered to pay $375 million over child exploitation in landmark verdict", source: "France 24", url: "https://www.france24.com/en/americas/20260324-meta-ordered-to-pay-375-million-over-child-exploitation-in-landmark-verdict", time: "2026-03-24T22:01:17Z" },
-      { title: "Abel leaves LA: self-deportation from Trump's America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/video/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:25Z" },
-      { title: "Abel leaves LA: self-deportation from Trump’s America - documentary", source: "The Guardian", url: "https://www.theguardian.com/global/ng-interactive/2026/mar/24/abel-leaves-la-self-deportation-from-trumps-america-documentary", time: "2026-03-24T11:02:19Z" },
-      { title: "The ‘self-deportee’ hounded out of the US to Mexico: ‘There are days when I feel literally insane’", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/mar/24/self-deportation-los-angeles-mexico-trump-immigration", time: "2026-03-24T11:00:36Z" },
-      { title: "229 migrants found calling for help in back of truck in Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/hundreds-migrants-calling-help-back-truck-mexico/", time: "2026-03-24T10:33:00Z" },
-      { title: "Aid flotilla for Cuba sets sail from Mexico", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/aid-flotilla-for-cuba-sets-sail-from-mexico?traffic_source=rss", time: "2026-03-21T03:31:10Z" },
     ]
   },
   {
@@ -300,6 +301,7 @@ const locations = [
     lat: 45.4215, lng: -75.6972,
     category: "political",
     articles: [
+      { title: "Canada’s Bill C-12 an ‘attack on refugee, migrant rights’: Advocates", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/canadas-bill-c-12-an-attack-on-refugee-migrant-rights-advocates?traffic_source=rss", time: "2026-03-27T19:02:50Z" },
       { title: "Air Canada Chief Apologizes for English-Language Condolences After Plane Crash", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/canada/air-canada-ceo-english-apology-crash.html", time: "2026-03-26T19:58:19Z" },
       { title: "Under Carney, Canada Finally Hits NATO’s 2% Spending Target", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/canada/carney-canada-nato-spending.html", time: "2026-03-26T15:58:03Z" },
       { title: "NATO reports surge in Europe, Canada defense spending", source: "The Hill", url: "https://thehill.com/policy/defense/5802225-europe-canada-nato-defense-spending/", time: "2026-03-26T15:51:24Z" },
@@ -336,6 +338,8 @@ const locations = [
     lat: -34.6037, lng: -58.3816,
     category: "economic",
     articles: [
+      { title: "As wallets shrink, Buenos Aires’ fine dining weathers the storm", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/what-to-do-in-argentina/what-to-do-in-buenos-aires/food-drinks/as-wallets-shrink-buenos-aires-fine-dining-weathers-the-storm", time: "2026-03-27T19:32:38Z" },
+      { title: "Ca7riel & Paco Amoroso’s ‘Free Spirits’: a thrilling journey of post-burnout rebirth", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/culture-ideas/music/ca7riel-paco-amorosos-free-spirits-a-thrilling-journey-of-post-burnout-rebirth", time: "2026-03-27T19:07:11Z" },
       { title: "Government re-files bill to sweep dead letter regulations", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/government-re-files-bill-to-sweep-dead-letter-regulations", time: "2026-03-27T17:19:56Z" },
       { title: "BREAKING: YPF case: U.S. court reverses US$16 billion sentence against Argentina", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/judiciary/breaking-ypf-case-u-s-court-reverses-us16-billion-sentence-against-argentina", time: "2026-03-27T16:51:22Z" },
       { title: "Caputo rejects rumors of recession and says Argentine economy boasts ‘record’ growth", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/economics/caputo-rejects-rumors-of-recession-and-says-argentine-economy-boasts-record-growth", time: "2026-03-27T14:30:25Z" },
@@ -364,6 +368,7 @@ const locations = [
     lat: 4.711, lng: -74.0721,
     category: "security",
     articles: [
+      { title: "Colombian mayor says body found in search for missing U.S. flight attendant", source: "CBS News", url: "https://www.cbsnews.com/news/colombia-medellin-body-found-eric-gutierrez-molina-american-airlines/", time: "2026-03-27T19:38:00Z" },
       { title: "Partner of flight attendant missing in Colombia: 'I want to believe that he's alive'", source: "CBS News", url: "https://www.cbsnews.com/news/american-airlines-flight-attendant-missing-colombia-eric-fernado-gutierrez-molina/", time: "2026-03-27T03:46:43Z" },
       { title: "American Airlines flight attendant from Dallas vanishes on layover in Colombia", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/american-airlines-flight-attendant-disappearance-colombia-b2946581.html", time: "2026-03-26T21:04:34Z" },
       { title: "At least 66 killed in military plane crash in Colombia", source: "France 24", url: "https://www.france24.com/en/video/20260324-at-least-66-killed-in-military-plane-crash-in-colombia", time: "2026-03-24T11:21:17Z" },
@@ -426,17 +431,6 @@ const locations = [
     ]
   },
   {
-    name: "San Jose", country: "Costa Rica",
-    lat: 9.9281, lng: -84.0907,
-    category: "economic",
-    articles: [
-      { title: "Costa Rica to accept 25 'third country' deportees from US every week", source: "ABC News", url: "https://abcnews.com/International/wireStory/costa-rica-accept-25-country-deportees-us-week-131443398", time: "2026-03-27T14:04:17Z" },
-      { title: "Costa Rica to accept 25 deportees per week under Trump deportation effort", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/costa-rica-to-accept-25-deportees-per-week-under-trump-deportation-effort?traffic_source=rss", time: "2026-03-26T23:09:57Z" },
-      { title: "Costa Rica Agrees to Take Migrants Deported by the Trump Administration", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/americas/costa-rica-us-deportation-deal.html", time: "2026-03-24T19:54:09Z" },
-      { title: "Ex-minister Gamboa targeted in Costa Rica’s first extradition to the US", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/20/ex-minister-gamboa-targeted-in-costa-ricas-first-extradition-to-the-us?traffic_source=rss", time: "2026-03-20T20:39:59Z" },
-    ]
-  },
-  {
     name: "Santiago", country: "Chile",
     lat: -33.4489, lng: -70.6693,
     category: "political",
@@ -445,6 +439,16 @@ const locations = [
       { title: "Police fire water cannons at Chile student protest", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/police-fire-water-cannons-at-chile-student-protest?traffic_source=rss", time: "2026-03-26T22:15:19Z" },
       { title: "‘There’s biological treasure here’: Chile’s endemic seals gain protection with new marine park", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/23/chile-seals-colony-gain-protection-new-marine-park-juan-fernandez-archipelago-wildlife", time: "2026-03-23T12:00:49Z" },
       { title: "Real Madrid vs Atletico Madrid: La Liga – team news, start, lineups", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/21/real-madrid-vs-atletico-madrid-la-liga-team-news-start-lineups?traffic_source=rss", time: "2026-03-21T09:34:42Z" },
+    ]
+  },
+  {
+    name: "San Jose", country: "Costa Rica",
+    lat: 9.9281, lng: -84.0907,
+    category: "economic",
+    articles: [
+      { title: "Costa Rica to accept 25 'third country' deportees from US every week", source: "ABC News", url: "https://abcnews.com/International/wireStory/costa-rica-accept-25-country-deportees-us-week-131443398", time: "2026-03-27T14:04:17Z" },
+      { title: "Costa Rica to accept 25 deportees per week under Trump deportation effort", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/costa-rica-to-accept-25-deportees-per-week-under-trump-deportation-effort?traffic_source=rss", time: "2026-03-26T23:09:57Z" },
+      { title: "Costa Rica Agrees to Take Migrants Deported by the Trump Administration", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/americas/costa-rica-us-deportation-deal.html", time: "2026-03-24T19:54:09Z" },
     ]
   },
   {
