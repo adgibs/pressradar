@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:32 UTC, 28 Mar 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:03 UTC, 28 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">28 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:33 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Ukraine-Russia war latest: Rubio denies Zelensky’s claim that Trump wants Kyiv to give up land to Moscow", "Ukraine war briefing: Rubio stridently denies US is demanding Kyiv give up eastern Donbas to Russia", "Scoop: Rubio and EU official had heated exchange on Russia at G7 meeting"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US Secretary Rubio denies Trump demanding Ukraine cede eastern territory to Russia</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["US carrier Ford arrives in Croatia for repairs after fire", "Russia-bound cargo ship seen dropping anchor near subsea cables off Irish coast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Naval and maritime incidents reported near European coasts and waters</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["22 migrants die off Greece after six days at sea", "Rubio warns Europe that Iran could impose ‘tolling system’ on Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Security threats emerge involving migration deaths and Iranian strait control</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Austria plans to ban children under 14 from social media, joining several other countries", "Idaho expands transgender bathroom ban to private businesses"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Social media and bathroom access restrictions advance in various countries</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘Changing a city is complicated’: Anne Hidalgo looks back on 12 years as Paris mayor", "Trump Doonbeg private cottage jumps in value as club declares record membership"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Political figures and property developments dominate local European news cycles</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ireland’s skylarks were disappearing but this simple solution could bring their song back"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Ireland&#x27;s skylark population decline may reverse through conservation efforts</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:04 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Twenty-two migrants die off Greek coast after spending six days at sea in a rubber boat", "22 people die after six days adrift in boat attempting to reach Europe from Libya", "22 migrants die off Greece after six days at sea"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Twenty-two migrants die after six days adrift in rubber boat off Greek coast</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Ukraine-Russia war latest: Rubio denies Zelensky’s claim that Trump wants Kyiv to give up land to Moscow", "Ukraine war briefing: Rubio stridently denies US is demanding Kyiv give up eastern Donbas to Russia", "Scoop: Rubio and EU official had heated exchange on Russia at G7 meeting"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US denies demanding Ukraine cede eastern territory to Russia at G7 meeting</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["MEPs urge Commission leaders to stop Russia from returning to the Venice Biennale", "‘Life! Life! Life!’: Reviving a Globe-Trotting Sculptor of the Gilded Age"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">European cultural institutions debate Russia&#x27;s participation in international artistic events</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Young voters shake Italy’s political calm as referendum exposes tensions for Giorgia Meloni", "‘Changing a city is complicated’: Anne Hidalgo looks back on 12 years as Paris mayor"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">European leaders navigate political transitions and generational shifts in governance</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Ireland’s skylarks were disappearing but this simple solution could bring their song back", "Russia-bound cargo ship seen dropping anchor near subsea cables off Irish coast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Ireland faces environmental and security challenges in coastal waters and skies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Austria plans to ban children under 14 from social media, joining several other countries", "Man’s body discovered in Cookstown, Dublin"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Austria proposes child social media restrictions as violent crime reported in Dublin</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -116,6 +116,8 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "MEPs urge Commission leaders to stop Russia from returning to the Venice Biennale", source: "Euronews", url: "http://www.euronews.com/culture/2026/03/28/meps-urge-commission-leaders-to-stop-russia-from-returning-to-the-venice-biennale", time: "2026-03-28T12:39:32Z" },
+      { title: "Young voters shake Italy’s political calm as referendum exposes tensions for Giorgia Meloni", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/young-voters-italy-referendum-giorgia-meloni", time: "2026-03-28T12:00:26Z" },
       { title: "Ukraine-Russia war latest: Rubio denies Zelensky’s claim that Trump wants Kyiv to give up land to Moscow", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-zelensky-putin-oligarchs-economy-b2945082.html", time: "2026-03-28T09:20:38Z" },
       { title: "Idaho expands transgender bathroom ban to private businesses", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5805263-idaho-transgender-bathroom-law/", time: "2026-03-27T23:36:35Z" },
       { title: "Johnson calls out GOP Senate over 'joke' of a DHS plan", source: "Axios", url: "https://www.axios.com/2026/03/27/dhs-funding-deal-ice-senate-talks-trump-thune", time: "2026-03-27T21:10:13Z" },
@@ -497,6 +499,8 @@ const locations = [
     lat: 37.9838, lng: 23.7275,
     category: "social",
     articles: [
+      { title: "Twenty-two migrants die off Greek coast after spending six days at sea in a rubber boat", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/crete-migrants-death-greece-b2947579.html", time: "2026-03-28T12:44:43Z" },
+      { title: "22 people die after six days adrift in boat attempting to reach Europe from Libya", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/22-people-die-after-six-days-adrift-in-boat-attempting-to-reach-europe-from-libya", time: "2026-03-28T12:32:24Z" },
       { title: "US carrier Ford arrives in Croatia for repairs after fire", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/carrier-ford-croatia-hit-repairs-b2947560.html", time: "2026-03-28T11:20:23Z" },
       { title: "22 migrants die off Greece after six days at sea", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565640-22-migrants-die-off-greece-after-six-days-at-sea/", time: "2026-03-28T09:35:54Z" },
       { title: "Watch live: Trump gives remarks at Greek Independence Day celebration", source: "The Hill", url: "https://thehill.com/video-clips/5802716-greek-independence-white-house/", time: "2026-03-26T18:55:14Z" },
@@ -597,15 +601,6 @@ const locations = [
     ]
   },
   {
-    name: "Edinburgh", country: "United Kingdom",
-    lat: 55.9533, lng: -3.1883,
-    category: "political",
-    articles: [
-      { title: "Thirteen arrested in joint Scotland and Spain gangland raids", source: "BBC News", url: "https://www.bbc.com/news/articles/cgqk0g9kvpdo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T12:11:38Z" },
-      { title: "Iranian Man Arrested After Trying to Enter U.K. Naval Base, Police Say", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/europe/iran-scotland-naval-base-clyde.html", time: "2026-03-21T12:20:25Z" },
-    ]
-  },
-  {
     name: "Vienna", country: "Austria",
     lat: 48.2082, lng: 16.3738,
     category: "political",
@@ -621,6 +616,14 @@ const locations = [
     articles: [
       { title: "In an Istanbul market, I came across an old German phrase book – and a reminder of how not to speak to migrants | Carolin Würfel", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/28/istanbul-market-german-phrase-book-migrants-turkey-berlin", time: "2026-03-28T05:00:18Z" },
       { title: "Turkey-operated tanker carrying Russian oil struck by naval drone in Black Sea", source: "France 24", url: "https://www.france24.com/en/europe/20260326-turkey-operated-tanker-carrying-russian-oil-struck-by-naval-drone-in-black-sea", time: "2026-03-26T09:21:14Z" },
+    ]
+  },
+  {
+    name: "Edinburgh", country: "United Kingdom",
+    lat: 55.9533, lng: -3.1883,
+    category: "political",
+    articles: [
+      { title: "Thirteen arrested in joint Scotland and Spain gangland raids", source: "BBC News", url: "https://www.bbc.com/news/articles/cgqk0g9kvpdo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T12:11:38Z" },
     ]
   },
   {
