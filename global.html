@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:48 UTC, 28 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:34 UTC, 28 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">28 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 18:48 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve", "South Korea’s view on the “China (Taiwan)” spat"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Western allies strengthen Taiwan support amid China tensions</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "Disinformation targets Taiwan LNG supply", "Japan’s Chinese population growing amid souring ties", "Coast guard says Taiwanese boat in Xiamen, crew safe"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:80%"></div></div><span class="ai-bullet-text">China escalates trade and information warfare against rivals</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Impact of Nepal’s election on China", "Taiwan defines key industries: sources"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">China&#x27;s regional influence and data security concerns grow</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now", "&#39;The Road to October 7&#39;: The long centuries of hatred that led to Hamas’s attack - review"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Middle East conflict and political tensions persist</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mercedes set up for hot Japanese Grand Prix", "IDF detains CNN journalists in the West Bank, one crew member injured, cameras damaged"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Global security incidents affect media and sports operations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Chinese dominates OED’s update"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:20%"></div></div><span class="ai-bullet-text">Chinese language dominates Oxford English Dictionary update</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:34 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China-Taiwan tensions escalate amid NATO concerns and US-Taiwan defense ties</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "South Korea’s view on the “China (Taiwan)” spat", "DPM Dar says Iran has allowed ‘20 more ships’ under Pakistan flag to cross Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China escalates trade disputes and regional maritime tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Disinformation targets Taiwan LNG supply"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Disinformation and data security threats target Taiwan and allies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["IDF says up to 90% of Iran’s weapons industry could be hit within days", "Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Iran&#x27;s military capabilities face potential strikes and political pressure</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Impact of Nepal’s election on China", "Japan’s Chinese population growing amid souring ties"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">China&#x27;s influence expands across Nepal and Japan demographics</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan defines key industries: sources", "Taiwanese artistry"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan showcases cultural and economic identity developments</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,7 +144,10 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "IDF says up to 90% of Iran’s weapons industry could be hit within days", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891471", time: "2026-03-28T21:58:31Z" },
       { title: "Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891469", time: "2026-03-28T21:25:04Z" },
+      { title: "Ukraine Finalizes Air Defense Deals With Gulf Nations Amid War in Mideast", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/ukraine-air-defense-deal-qatar-saudi-arabia.html", time: "2026-03-28T19:19:10Z" },
+      { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
       { title: "Iran-backed Houthis open third front against Israel as Tehran seeks leverage ahead of talks", source: "Fox News", url: "https://www.foxnews.com/world/iran-backed-houthis-open-third-front-against-israel-tehran-seeks-leverage-ahead-talks", time: "2026-03-28T18:00:32Z" },
       { title: "As war rages, Iranian politicians push for exit from nuclear weapons treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/lawmakers-push-npt-exit-as-us-israel-hit-irans-nuclear-sites-steel-plants?traffic_source=rss", time: "2026-03-28T17:48:55Z" },
       { title: "Paris cops thwart suspected terrorist bombing near Bank of America", source: "Times of Israel", url: "https://www.timesofisrael.com/paris-cops-thwart-suspected-terrorist-bombing-near-bank-of-america/", time: "2026-03-28T16:54:01Z" },
@@ -641,9 +644,6 @@ const locations = [
       { title: "As Israeli owners struggle from daily Iranian attacks, pets pay the price of war", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890607", time: "2026-03-21T20:00:00Z" },
       { title: "Iranian missile struck town housing nuclear facility: Iran war shows 'no signs of abating'", source: "France 24", url: "https://www.france24.com/en/iranian-missile-struck-town-housing-nuclear-facility-iran-war-shows-no-sign-of-abating", time: "2026-03-21T19:47:12Z" },
       { title: "Joe Kent speaks out against Iran war at prayer event after resigning", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/joe-kent-speaks-out-against-iran-war-at-prayer-event-after-resigning?traffic_source=rss", time: "2026-03-21T19:46:04Z" },
-      { title: "With Fire and Song, Kurds in Turkey Hail the Start of Spring", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/middleeast/kurds-turkey-newroz-iran.html", time: "2026-03-21T19:25:06Z" },
-      { title: "EU urges members to start storing winter gas as Iran war causes price surge", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/eu-urges-members-to-start-storing-winter-gas-as-iran-war-causes-price-surge?traffic_source=rss", time: "2026-03-21T19:24:11Z" },
-      { title: "Three weeks in, Iran war appears to have escalated beyond Trump’s control", source: "Times of Israel", url: "https://www.timesofisrael.com/three-weeks-in-iran-war-appears-to-have-escalated-beyond-trumps-control/", time: "2026-03-21T19:12:03Z" },
     ]
   },
   {
@@ -651,13 +651,17 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "“Schadenfreude, how sweet it is”", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-schadenfreude-how-sweet-it-is/", time: "2026-03-28T19:18:40Z" },
+      { title: "Fitch leaves Israel's rating outlook negative and foresees growth in deficit", source: "Haaretz", url: "https://www.haaretz.com/israel-news/business/economy-finance/2026-03-28/ty-article/.premium/fitch-leaves-israels-rating-outlook-negative-and-foresees-growth-in-deficit/0000019d-3548-d774-afdd-bdce4d650000", time: "2026-03-28T18:43:49Z" },
       { title: "Who says Israeli attacks in Lebanon kill nine paramedics, wound seven", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/who-says-israeli-attacks-lebanon-kill-nine-paramedics-wound-seven", time: "2026-03-28T18:15:42Z" },
+      { title: "Three Lebanese journalists killed in Israeli airstrike on car", source: "Sky News", url: "https://news.sky.com/story/three-lebanese-journalists-killed-in-israeli-airstrike-on-car-13525607", time: "2026-03-28T17:56:00Z" },
       { title: "Israel Court reiterates that state must adequately feed all Palestinian prisoners, not just underweight", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/israel-court-reiterates-that-state-must-adequately-feed-palestinian-prisoners/0000019d-34bf-dcc3-abdd-3cff5d910000", time: "2026-03-28T17:21:56Z" },
       { title: "BBC Arabic defended as lone voice in region for giving ‘Israeli perspective’", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/28/bbc-arabic-defended-lone-voice-region-israeli-perspective", time: "2026-03-28T17:00:32Z" },
       { title: "Israelis rally against Iran war; Police violently disperse protesters in Tel Aviv", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-03-28/ty-article/.premium/anti-war-protests-gather-across-country-police-violently-disperse-demonstrators/0000019d-3553-d3e9-adbf-77df542a0000", time: "2026-03-28T16:55:46Z" },
       { title: "CNN crew say troops assaulted them, detained them, then trumpeted far-right ideology", source: "Times of Israel", url: "https://www.timesofisrael.com/cnn-crew-say-troops-assaulted-them-detained-them-then-trumpeted-far-right-ideology/", time: "2026-03-28T16:45:31Z" },
       { title: "German city wary as Volkswagen weighs shifting car plant to Iron Dome production", source: "Times of Israel", url: "https://www.timesofisrael.com/german-city-wary-as-volkswagen-weighs-shifting-car-plant-to-iron-dome-production/", time: "2026-03-28T16:35:18Z" },
       { title: "Five injured in Beit Shemesh after sirens sound across central Israel", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891463", time: "2026-03-28T15:50:20Z" },
+      { title: "Three-time Hungarian women’s chess champ Tícia Gara makes strategic move to Israel", source: "Jerusalem Post", url: "https://www.jpost.com/aliyah/article-891330", time: "2026-03-28T15:43:16Z" },
       { title: "Three journalists killed in Israeli strike on marked press car in Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/three-journalists-killed-in-israeli-strike-on-marked-press-car-in-lebanon?traffic_source=rss", time: "2026-03-28T15:40:03Z" },
       { title: "Amir Peretz saw what others missed: Iron Dome reshaped Israel’s defense and future - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891323", time: "2026-03-28T15:35:14Z" },
       { title: "Israeli airstrike kills three journalists covering the war in Lebanon", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/lebanon-journalists-killed-israel-al-manar-b2947634.html", time: "2026-03-28T15:32:55Z" },
@@ -1012,6 +1016,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Qatar elder statesman warns Israel’s war on Iran risks spiralling out of control", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/qatar-elder-statesman-warns-israels-war-iran-risks-spiralling-out-control", time: "2026-03-28T19:21:03Z" },
       { title: "Strikes intensify in Middle East as Strait of Hormuz remains locked down", source: "CBS News", url: "https://www.cbsnews.com/video/strikes-intensify-in-middle-east-as-strait-of-hormuz-remains-locked-down/", time: "2026-03-28T13:48:00Z" },
       { title: "Trump claims Iran allowed 10 tankers through Hormuz. Evidence shows otherwise", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-03-28/ty-article/.premium/trump-claims-iran-allowed-10-tankers-through-hormuz-evidence-shows-otherwise/0000019d-33ad-d1e2-ab9d-33ed7ffa0000", time: "2026-03-28T11:14:53Z" },
       { title: "3/28: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/032826-cbs-saturday-morning/", time: "2026-03-28T11:00:00Z" },
@@ -1889,6 +1894,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "DPM Dar says Iran has allowed ‘20 more ships’ under Pakistan flag to cross Strait of Hormuz", source: "Dawn", url: "https://www.dawn.com/news/1986336/dpm-dar-says-iran-has-allowed-20-more-ships-under-pakistan-flag-to-cross-strait-of-hormuz", time: "2026-03-28T19:24:18Z" },
       { title: "‘Exercise in deflection masquerading as concern’: FO rejects India’s comments on Pakistan’s Shia community", source: "Dawn", url: "https://www.dawn.com/news/1986308/exercise-in-deflection-masquerading-as-concern-fo-rejects-indias-comments-on-pakistans-shia-community", time: "2026-03-28T16:58:15Z" },
       { title: "Iran President lauds Pakistan for mediation to stop U.S., Israel ‘aggression’", source: "The Hindu", url: "https://www.thehindu.com/shorts/iran-president-lauds-pakistan-for-mediation-to-stop-us-israel-aggression/article70797194.ece", time: "2026-03-28T16:13:16Z" },
       { title: "Iran-Israel war LIVE: Iran President lauds Pakistan for mediation to stop U.S., Israel 'aggression'", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-israel-us-war-west-asia-conflict-strait-of-hormuz-attacks-march-28-2026/article70795241.ece", time: "2026-03-28T13:40:51Z" },
@@ -2108,6 +2114,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
     articles: [
+      { title: "Several hurt as Iranian missile hits Jerusalem-area town; Hezbollah continues to strike north", source: "Times of Israel", url: "https://www.timesofisrael.com/several-hurt-as-iranian-missile-hits-jerusalem-area-town-hezbollah-continues-to-strike-north/", time: "2026-03-28T19:12:30Z" },
       { title: "Christian leaders in Jerusalem call on Israel to reopen Church of the Holy Sepulchre ahead of Easter", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-christian-leaders-in-jerusalem-call-on-israel-to-reopen-church-of-the-holy-sepulchre-ahead-of-easter/", time: "2026-03-28T15:12:27Z" },
       { title: "Man killed Friday by missile shrapnel named Vyacheslav Vidmant; dozens wounded Saturday across Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/man-killed-friday-by-missile-shrapnel-in-tel-aviv-named-vyacheslav-vidmant/0000019d-3499-d0ed-a39d-7fb97fcb0000", time: "2026-03-28T15:00:12Z" },
       { title: "IDF fatally shoots two Palestinians in East Jerusalem, Palestinian Health Ministry says", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-27/ty-article/.premium/idf-fatally-shoots-two-palestinians-in-east-jerusalem-health-ministry-says/0000019d-301c-d351-a9bf-723e72f50000", time: "2026-03-27T18:34:44Z" },
@@ -2232,6 +2239,8 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Ukraine Finalizes Air Defense Deals With Gulf Nations Amid War in Mideast", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/ukraine-air-defense-deal-qatar-saudi-arabia.html", time: "2026-03-28T19:19:10Z" },
+      { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
       { title: "Ukraine’s Zelenskyy signs air defence deals with UAE, Qatar on Gulf tour", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/zelenskyy-signs-air-defence-deals-with-uae-qatar-on-gulf-tour?traffic_source=rss", time: "2026-03-28T16:16:28Z" },
       { title: "Deadly Russian strikes damage port, maternity hospital", source: "France 24", url: "https://www.france24.com/en/deadly-russian-strikes-damage-port-maternity-hospital", time: "2026-03-28T15:08:38Z" },
       { title: "MEPs urge Commission leaders to stop Russia from returning to the Venice Biennale", source: "Euronews", url: "http://www.euronews.com/culture/2026/03/28/meps-urge-commission-leaders-to-stop-russia-from-returning-to-the-venice-biennale", time: "2026-03-28T12:39:32Z" },
@@ -3233,25 +3242,6 @@ const locations = [
     ]
   },
   {
-    name: "Erbil", country: "Iraq",
-    lat: 36.1901, lng: 44.0091,
-    category: "conflict",
-    articles: [
-      { title: "Iraq's PM condemns attack on house of Kurdistan region's president", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iraqs-pm-condemns-attack-house-kurdistan-regions-president", time: "2026-03-28T14:18:25Z" },
-      { title: "Aasiya Andrabi: How India's terror laws turned dissent into life sentences", source: "Middle East Eye", url: "https://www.middleeasteye.net/big-story/aasiya-andrabi-how-india-terror-laws-turned-dissent-life-sentences", time: "2026-03-28T10:00:10Z" },
-      { title: "Most of Iraq’s oil activities, projects halted due to war conditions, says ministry", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-most-of-iraqs-oil-activities-projects-halted-due-to-war-conditions-says-ministry/", time: "2026-03-27T15:39:41Z" },
-      { title: "UK sanctions two Iraqi men over Islamic State funding", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/uk-government-iraq-isis-sanctions-b2947074.html", time: "2026-03-27T13:57:11Z" },
-      { title: "Iran-backed Iraqi militias attack Kurdistan over 450 times since beginning of war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891316", time: "2026-03-26T16:45:56Z" },
-      { title: "What we know about US attack on Iraqi military site", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/what-we-know-about-us-attack-on-iraqi-military-site?traffic_source=rss", time: "2026-03-25T17:10:28Z" },
-      { title: "Deadly US attack on Iraqi military base sparks condemnation", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/deadly-us-attack-on-iraqi-military-base-sparks-condemnation?traffic_source=rss", time: "2026-03-25T16:31:23Z" },
-      { title: "Fire burns on top of a residential building in Iraq after an attack", source: "NBC News", url: "https://www.nbcnews.com/video/fire-burns-on-top-of-a-residential-building-in-iraq-after-an-attack-260014661970", time: "2026-03-25T12:37:20Z" },
-      { title: "Seven Iraqi soldiers killed, 13 wounded in strike near PMF base in Anbar", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891115", time: "2026-03-25T09:47:40Z" },
-      { title: "Explosion, fire at Erbil high-rise amid Iranian attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/explosion-fire-at-erbil-high-rise-amid-iranian-attacks?traffic_source=rss", time: "2026-03-24T23:00:31Z" },
-      { title: "Iran-backed militias strike Kurdistan, killing Peshmerga in northern Iraq", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891006", time: "2026-03-24T10:01:31Z" },
-      { title: "The view from Professor Dominic Tierney, author of The Right Way to Lose a War", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260321-the-view-from-professor-dominic-tierney-author-of-the-right-way-to-lose-a-war", time: "2026-03-21T19:23:11Z" },
-    ]
-  },
-  {
     name: "Riyadh", country: "Saudi Arabia",
     lat: 24.7136, lng: 46.6753,
     category: "economic",
@@ -3325,6 +3315,24 @@ const locations = [
       { title: "New UN climate report says the past decade was the hottest on record", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/new-un-climate-report-says-the-past-decade-was-the-hottest-on-record?traffic_source=rss", time: "2026-03-23T12:24:41Z" },
       { title: "'Every indicator is flashing red,' says UN as it warns of record 'climate imbalance'", source: "Sky News", url: "https://news.sky.com/story/every-indicator-is-flashing-red-says-un-as-it-warns-of-record-climate-imbalance-13523433", time: "2026-03-23T11:17:00Z" },
       { title: "Cortina d'Ampezzo mixes Olympic legacy with Alpine glamour", source: "NPR", url: "https://www.npr.org/2026/03/22/nx-s1-5726237/cortina-olympic-legacy-alpine-glamour", time: "2026-03-22T10:00:00Z" },
+    ]
+  },
+  {
+    name: "Erbil", country: "Iraq",
+    lat: 36.1901, lng: 44.0091,
+    category: "conflict",
+    articles: [
+      { title: "Iraq's PM condemns attack on house of Kurdistan region's president", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iraqs-pm-condemns-attack-house-kurdistan-regions-president", time: "2026-03-28T14:18:25Z" },
+      { title: "Aasiya Andrabi: How India's terror laws turned dissent into life sentences", source: "Middle East Eye", url: "https://www.middleeasteye.net/big-story/aasiya-andrabi-how-india-terror-laws-turned-dissent-life-sentences", time: "2026-03-28T10:00:10Z" },
+      { title: "Most of Iraq’s oil activities, projects halted due to war conditions, says ministry", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-most-of-iraqs-oil-activities-projects-halted-due-to-war-conditions-says-ministry/", time: "2026-03-27T15:39:41Z" },
+      { title: "UK sanctions two Iraqi men over Islamic State funding", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/uk-government-iraq-isis-sanctions-b2947074.html", time: "2026-03-27T13:57:11Z" },
+      { title: "Iran-backed Iraqi militias attack Kurdistan over 450 times since beginning of war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891316", time: "2026-03-26T16:45:56Z" },
+      { title: "What we know about US attack on Iraqi military site", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/what-we-know-about-us-attack-on-iraqi-military-site?traffic_source=rss", time: "2026-03-25T17:10:28Z" },
+      { title: "Deadly US attack on Iraqi military base sparks condemnation", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/25/deadly-us-attack-on-iraqi-military-base-sparks-condemnation?traffic_source=rss", time: "2026-03-25T16:31:23Z" },
+      { title: "Fire burns on top of a residential building in Iraq after an attack", source: "NBC News", url: "https://www.nbcnews.com/video/fire-burns-on-top-of-a-residential-building-in-iraq-after-an-attack-260014661970", time: "2026-03-25T12:37:20Z" },
+      { title: "Seven Iraqi soldiers killed, 13 wounded in strike near PMF base in Anbar", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891115", time: "2026-03-25T09:47:40Z" },
+      { title: "Explosion, fire at Erbil high-rise amid Iranian attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/explosion-fire-at-erbil-high-rise-amid-iranian-attacks?traffic_source=rss", time: "2026-03-24T23:00:31Z" },
+      { title: "Iran-backed militias strike Kurdistan, killing Peshmerga in northern Iraq", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891006", time: "2026-03-24T10:01:31Z" },
     ]
   },
   {
@@ -4043,16 +4051,6 @@ const locations = [
     ]
   },
   {
-    name: "Kigali", country: "Rwanda",
-    lat: -1.9403, lng: 29.8739,
-    category: "political",
-    articles: [
-      { title: "Rwanda: Penalties Loom for Drivers Who Fail to Yield to Ambulances", source: "AllAfrica", url: "https://allafrica.com/stories/202603270206.html", time: "2026-03-27T09:39:20Z" },
-      { title: "Rwanda: Rwanda Urges De-Escalation Amid Middle East Tensions", source: "AllAfrica", url: "https://allafrica.com/stories/202603260474.html", time: "2026-03-26T15:16:51Z" },
-      { title: "Rwanda batter becomes youngest women's T20 centurion", source: "BBC News", url: "https://www.bbc.com/sport/cricket/articles/cdxdrk9jzzqo?at_medium=RSS&at_campaign=rss", time: "2026-03-21T19:02:56Z" },
-    ]
-  },
-  {
     name: "The Hague", country: "Netherlands",
     lat: 52.0705, lng: 4.3007,
     category: "political",
@@ -4201,6 +4199,15 @@ const locations = [
     articles: [
       { title: "Cambridge top architect Francois Penz relocates to China from UK", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347941/cambridge-top-architect-francois-penz-relocates-china-uk?utm_source=rss_feed", time: "2026-03-28T10:00:13Z" },
       { title: "Leading Chinese hypersonic aviation scientist Yan Hong dies at 56", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3348183/leading-chinese-hypersonic-aviation-scientist-yan-hong-dies-56?utm_source=rss_feed", time: "2026-03-27T13:00:15Z" },
+    ]
+  },
+  {
+    name: "Kigali", country: "Rwanda",
+    lat: -1.9403, lng: 29.8739,
+    category: "political",
+    articles: [
+      { title: "Rwanda: Penalties Loom for Drivers Who Fail to Yield to Ambulances", source: "AllAfrica", url: "https://allafrica.com/stories/202603270206.html", time: "2026-03-27T09:39:20Z" },
+      { title: "Rwanda: Rwanda Urges De-Escalation Amid Middle East Tensions", source: "AllAfrica", url: "https://allafrica.com/stories/202603260474.html", time: "2026-03-26T15:16:51Z" },
     ]
   },
   {
