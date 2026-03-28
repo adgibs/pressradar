@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:40 UTC, 28 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:34 UTC, 28 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">28 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:40 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US and allies strengthen Taiwan support amid China tensions</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "South Korea’s view on the “China (Taiwan)” spat", "Coast guard says Taiwanese boat in Xiamen, crew safe"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China escalates trade disputes and regional assertiveness</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Disinformation targets Taiwan LNG supply", "Japan’s Chinese population growing amid souring ties", "IDF detains CNN journalists in the West Bank, one crew member injured, cameras damaged"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Disinformation and regional instability threaten multiple countries</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Impact of Nepal’s election on China"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Chinese data security and political influence operations exposed</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["More than 3,500 U.S. troops arrive in Middle East as Iran war intensifies", "Turkish intelligence chief warns Israel-US war on Iran risks global crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Iran conflict intensifies with US military deployment</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan defines key industries: sources"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Taiwan identifies strategic industries for economic resilience</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:34 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China-Taiwan tensions escalate amid NATO cooperation and US diplomatic engagement</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "Disinformation targets Taiwan LNG supply", "South Korea’s view on the “China (Taiwan)” spat"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China escalates trade disputes and disinformation campaigns against regional rivals</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Japan’s Chinese population growing amid souring ties"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Data security concerns grow amid Chinese espionage and migration patterns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Impact of Nepal’s election on China", "Taiwan defines key industries: sources"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan and Nepal navigate economic policies amid Chinese regional influence</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mercedes set up for hot Japanese Grand Prix", "IDF detains CNN journalists in the West Bank, one crew member injured, cameras damaged"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">International incidents disrupt sporting events and press freedoms globally</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Mexico’s week in review: A surprise rate cut, a sliding peso and an oil spill that’s becoming a political problem"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Mexico faces economic pressures from rate cuts and environmental crises</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,9 +144,12 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Paris cops thwart suspected terrorist bombing near Bank of America", source: "Times of Israel", url: "https://www.timesofisrael.com/paris-cops-thwart-suspected-terrorist-bombing-near-bank-of-america/", time: "2026-03-28T16:54:01Z" },
+      { title: "Lebanon condemns ‘blatant war crime’ after Israel kills three journalists", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/lebanon-condemns-blatant-war-crime-israel-kills-three-journalists", time: "2026-03-28T16:41:04Z" },
       { title: "More than 3,500 U.S. troops arrive in Middle East as Iran war intensifies", source: "CBS News", url: "https://www.cbsnews.com/news/us-troops-uss-tripoli-centcom-middle-east-arrive-iran/", time: "2026-03-28T16:35:32Z" },
       { title: "Iranian strike on Saudi base wounds several US troops, damages aircraft", source: "France 24", url: "https://www.france24.com/en/iranian-strike-on-saudi-base-wounds-several-us-troops-damages-aircraft", time: "2026-03-28T16:31:37Z" },
       { title: "One month in, disapproval high but US lawmakers take no action on Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/one-month-in-disapproval-high-but-us-lawmakers-take-no-action-on-iran-war?traffic_source=rss", time: "2026-03-28T15:39:46Z" },
+      { title: "Ugandan military chief vows to back Israel against Iran in viral social media barrage", source: "Fox News", url: "https://www.foxnews.com/world/ugandan-military-chief-vows-back-israel-against-iran-viral-social-media-barrage", time: "2026-03-28T15:38:05Z" },
       { title: "US has destroyed only a third of Iran’s missiles, intelligence suggests", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/us-destroyed-third-iran-missiles-intelligence-suggests-trump", time: "2026-03-28T14:56:04Z" },
       { title: "Pakistan Set to Host Top Regional Diplomats for Talks on Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/middleeast/iran-pakistan-diplomacy.html", time: "2026-03-28T14:21:47Z" },
       { title: "Houthi forces enter Iran conflict with missile attacks on Israeli military sites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/houthi-forces-enter-iran-conflict-with-missile-attacks-on-israeli-military-sites", time: "2026-03-28T14:14:45Z" },
@@ -641,9 +644,6 @@ const locations = [
       { title: "Iranian man, Romanian woman charged after allegedly trying to enter UK nuclear missile base, officials say", source: "Fox News", url: "https://www.foxnews.com/world/iranian-man-romanian-woman-charged-allegedly-trying-enter-uk-nuclear-missile-base-officials-say", time: "2026-03-21T18:35:00Z" },
       { title: "Israel's Mossad calls on Iranians to share information on Islamic Republic's nuclear industry", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-890713", time: "2026-03-21T18:16:10Z" },
       { title: "Why there's no sign of the conflict in the Middle East 'winding down'", source: "BBC News", url: "https://www.bbc.com/news/videos/cwywlv9ked0o?at_medium=RSS&at_campaign=rss", time: "2026-03-21T17:52:25Z" },
-      { title: "Wide-scale Israeli strikes 'significantly degrade' Iran's ballistic missile production ability", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890710", time: "2026-03-21T17:08:01Z" },
-      { title: "With Khamenei gone, Iran accelerates shift toward military power, IRGC dominance - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-890497", time: "2026-03-21T17:00:00Z" },
-      { title: "Syria attempting to avoid regional conflict, Iran war as it navigates internal strife -analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890711", time: "2026-03-21T16:47:56Z" },
     ]
   },
   {
@@ -651,6 +651,11 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "Israel Court reiterates that state must adequately feed all Palestinian prisoners, not just underweight", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/israel-court-reiterates-that-state-must-adequately-feed-palestinian-prisoners/0000019d-34bf-dcc3-abdd-3cff5d910000", time: "2026-03-28T17:21:56Z" },
+      { title: "BBC Arabic defended as lone voice in region for giving ‘Israeli perspective’", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/28/bbc-arabic-defended-lone-voice-region-israeli-perspective", time: "2026-03-28T17:00:32Z" },
+      { title: "Israelis rally against Iran war; Police violently disperse protesters in Tel Aviv", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-03-28/ty-article/.premium/anti-war-protests-gather-across-country-police-violently-disperse-demonstrators/0000019d-3553-d3e9-adbf-77df542a0000", time: "2026-03-28T16:55:46Z" },
+      { title: "CNN crew say troops assaulted them, detained them, then trumpeted far-right ideology", source: "Times of Israel", url: "https://www.timesofisrael.com/cnn-crew-say-troops-assaulted-them-detained-them-then-trumpeted-far-right-ideology/", time: "2026-03-28T16:45:31Z" },
+      { title: "German city wary as Volkswagen weighs shifting car plant to Iron Dome production", source: "Times of Israel", url: "https://www.timesofisrael.com/german-city-wary-as-volkswagen-weighs-shifting-car-plant-to-iron-dome-production/", time: "2026-03-28T16:35:18Z" },
       { title: "Five injured in Beit Shemesh after sirens sound across central Israel", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891463", time: "2026-03-28T15:50:20Z" },
       { title: "Three journalists killed in Israeli strike on marked press car in Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/three-journalists-killed-in-israeli-strike-on-marked-press-car-in-lebanon?traffic_source=rss", time: "2026-03-28T15:40:03Z" },
       { title: "Amir Peretz saw what others missed: Iron Dome reshaped Israel’s defense and future - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891323", time: "2026-03-28T15:35:14Z" },
@@ -658,6 +663,7 @@ const locations = [
       { title: "IDF kills Hezbollah-linked journalist, says he was part of elite Radwan Force", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-kills-hezbollah-linked-journalist-says-he-was-part-of-elite-radwan-force/", time: "2026-03-28T14:59:15Z" },
       { title: "IDF investigates how Iranian cluster bomblet penetrated safe room in central Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/idf-investigates-how-iranian-cluster-bomb-penetrated-safe-room-in-central-israel/0000019d-309a-d6f6-a79d-f3dee8d40000", time: "2026-03-28T14:11:28Z" },
       { title: "Three reporters killed in Israeli strike in southern Lebanon, Lebanese news outlet reports", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-28/ty-article/.premium/report-three-reporters-killed-in-israeli-strike-in-southern-lebanon/0000019d-3475-d472-afff-fc7fc8900000", time: "2026-03-28T13:43:54Z" },
+      { title: "Three journalists reportedly killed in Israeli strike in southern Lebanon", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-28/ty-article/report-three-reporters-killed-in-israeli-strike-in-southern-lebanon/0000019d-3475-d472-afff-fc7fc8900000", time: "2026-03-28T13:43:54Z" },
       { title: "Jaffa man shot to death in 66th Israeli Arab murder this year", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-891458", time: "2026-03-28T13:26:48Z" },
       { title: "Archaeologists find 2,500-year-old mass grave of infants in Israel", source: "Haaretz", url: "https://www.haaretz.com/archaeology/2026-03-28/ty-article/archaeologists-find-2-500-year-old-mass-grave-of-infants-in-israel/0000019d-3452-d774-afdd-bcd605f90000", time: "2026-03-28T12:46:45Z" },
       { title: "How the US and Israel are making the Islamic republic stronger", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/3/28/how-the-us-and-israel-are-making-the-islamic-republic?traffic_source=rss", time: "2026-03-28T11:12:32Z" },
@@ -999,7 +1005,6 @@ const locations = [
       { title: "Dimona residents report repeated runs to shelter during Iranian missile attack", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-890717", time: "2026-03-21T21:24:28Z" },
       { title: "Robert Mueller, who probed Russia’s 2016 election meddling, dies; Trump: ‘Good, I’m glad’", source: "Times of Israel", url: "https://www.timesofisrael.com/robert-mueller-who-probed-russias-2016-election-meddling-dies-trump-good-im-glad/", time: "2026-03-21T20:30:09Z" },
       { title: "'My Israeli Journey': Shaul Mofaz recounts battles, politics, and family - review", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-890459", time: "2026-03-21T18:30:00Z" },
-      { title: "As Antisemitism spikes, JWed.com sees more Jewish marriages with a record 4,100 - Sponsored Content", source: "Times of Israel", url: "https://toi.li/R2ME0R", time: "2026-03-21T17:20:34Z" },
     ]
   },
   {
@@ -1227,6 +1232,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Mexico's navy locates 2 missing sailboats carrying aid off the coast of Cuba", source: "ABC News", url: "https://abcnews.com/International/wireStory/mexicos-navy-locates-2-missing-sailboats-carrying-aid-131503756", time: "2026-03-28T17:05:46Z" },
       { title: "Washington says it wants a deal. Its actions point to a ground war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-washington-says-it-wants-a-deal-its-actions-point-to-a-ground-war/", time: "2026-03-28T16:15:05Z" },
       { title: "MAGA lawmakers at war as House Republicans slam Senate GOPers for fleeing DC amid shutdown", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/maga-house-senate-shutdown-dc-b2947596.html", time: "2026-03-28T14:54:34Z" },
       { title: "USS Massachusetts – submarine with ability to carry 24 Tomahawk cruise missiles –  joins Navy fleet", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/uss-massachusetts-submarine-missiles-siedsma-b2947582.html", time: "2026-03-28T14:29:38Z" },
@@ -1400,7 +1406,6 @@ const locations = [
       { title: "Iran war live: Tehran threatens to mine Gulf if coast, islands attacked", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/23/iran-war-live-tehran-vows-to-completely-close-hormuz-if-power-plants-hit?traffic_source=rss", time: "2026-03-23T00:00:00Z" },
       { title: "Patriot missile may have exploded over Bahrain homes, injuring dozens, research finds", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890745", time: "2026-03-22T09:02:22Z" },
       { title: "US says it has crippled Iranian threat in Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/us-says-it-has-crippled-iranian-threat-in-strait-of-hormuz?traffic_source=rss", time: "2026-03-21T21:37:48Z" },
-      { title: "Internet Blackout Keeps Iranians From Reaching Loved Ones During Nowruz Holiday", source: "New York Times", url: "https://www.nytimes.com/2026/03/21/world/middleeast/iran-war-nowruz-internet-blackout.html", time: "2026-03-21T17:28:22Z" },
     ]
   },
   {
@@ -1408,7 +1413,9 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "'The Road to October 7': The long centuries of hatred that led to Hamas’s attack - review", source: "Jerusalem Post", url: "https://www.jpost.com/history/article-891312", time: "2026-03-28T19:08:35Z" },
       { title: "IDF detains CNN journalists in the West Bank, one crew member injured, cameras damaged", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891464", time: "2026-03-28T19:04:44Z" },
+      { title: "Rights groups call for emergency meeting of parties to the Geneva Conventions regarding the proposed Israeli law to execute Palestinian prisoners", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-rights-groups-call-for-emergency-meeting-of-parties-to-the-geneva-conventions-regarding-the-proposed-israeli-law-to-execute-palestinian-prisoners/", time: "2026-03-28T17:11:14Z" },
       { title: "Turkish intelligence chief warns Israel-US war on Iran risks global crisis", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-turkish-intelligence-chief-warns-israel-us-war-on-iran-risks-global-crisis/", time: "2026-03-28T16:31:59Z" },
       { title: "Israel military kills 15-year-old Palestinian boy in West Bank, health ministry says", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/west-bank-bethlehem-boy-killed-b2947652.html", time: "2026-03-28T16:16:32Z" },
       { title: "One month into war: 23 dead in Israel and West Bank, including five at work", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/one-month-in-23-dead-in-israel-west-bank-as-result-of-iran-war/0000019d-338e-dcc3-abdd-3fde4d5c0000", time: "2026-03-28T11:40:17Z" },
@@ -1877,6 +1884,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "‘Exercise in deflection masquerading as concern’: FO rejects India’s comments on Pakistan’s Shia community", source: "Dawn", url: "https://www.dawn.com/news/1986308/exercise-in-deflection-masquerading-as-concern-fo-rejects-indias-comments-on-pakistans-shia-community", time: "2026-03-28T16:58:15Z" },
       { title: "Iran President lauds Pakistan for mediation to stop U.S., Israel ‘aggression’", source: "The Hindu", url: "https://www.thehindu.com/shorts/iran-president-lauds-pakistan-for-mediation-to-stop-us-israel-aggression/article70797194.ece", time: "2026-03-28T16:13:16Z" },
       { title: "Iran-Israel war LIVE: Iran President lauds Pakistan for mediation to stop U.S., Israel 'aggression'", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-israel-us-war-west-asia-conflict-strait-of-hormuz-attacks-march-28-2026/article70795241.ece", time: "2026-03-28T13:40:51Z" },
       { title: "FIA director general says agency has compiled data of human smugglers, facilitators", source: "Dawn", url: "https://www.dawn.com/news/1986275/fia-director-general-says-agency-has-compiled-data-of-human-smugglers-facilitators", time: "2026-03-28T13:23:31Z" },
@@ -1960,6 +1968,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Mexico’s week in review: A surprise rate cut, a sliding peso and an oil spill that’s becoming a political problem", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-week-in-review-rate-cut-peso-oil-spill/", time: "2026-03-28T17:24:02Z" },
       { title: "MND Tutor | Sagrada Familia", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-tutor/mnd-tutor-sagrada-familia/", time: "2026-03-28T13:37:23Z" },
       { title: "The MND News Quiz of the Week: March 29th", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/quizzes/the-mnd-news-quiz-of-the-week-march-29th/", time: "2026-03-28T13:36:15Z" },
       { title: "Mexico is no stranger to hosting World Cup games between nations at war", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/mexico-is-no-stranger-to-hosting-world-cup-games-between-nations-at-war/", time: "2026-03-28T13:33:22Z" },
@@ -2089,6 +2098,70 @@ const locations = [
     ]
   },
   {
+    name: "Paris", country: "France",
+    lat: 48.8566, lng: 2.3522,
+    category: "political",
+    articles: [
+      { title: "‘Bomb attack’ at Bank of America in Paris thwarted by police", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/bank-of-america-bomb-attack-paris-france-b2947656.html", time: "2026-03-28T16:46:42Z" },
+      { title: "France hosts ‘No Kings’ march as anti-Trump protests spread", source: "Euronews", url: "http://www.euronews.com/video/2026/03/28/france-hosts-no-kings-march-as-anti-trump-protests-spread", time: "2026-03-28T16:42:32Z" },
+      { title: "Police in Paris foil attempted bomb attack outside Bank of America building", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/paris-police-foil-attempted-bomb-attack-bank-of-america", time: "2026-03-28T15:30:39Z" },
+      { title: "Deadly Russian strikes damage port, maternity hospital", source: "France 24", url: "https://www.france24.com/en/deadly-russian-strikes-damage-port-maternity-hospital", time: "2026-03-28T15:08:38Z" },
+      { title: "French authorities foil bomb attack outside Bank of America branch in Paris", source: "Euronews", url: "http://www.euronews.com/2026/03/28/french-authorities-foil-bomb-attack-outside-bank-of-america-branch-in-paris", time: "2026-03-28T14:44:09Z" },
+      { title: "France foils Paris bomb attack outside US bank", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0328/1565679-france-foils-paris-bomb-attack-outside-us-bank/", time: "2026-03-28T14:15:21Z" },
+      { title: "What the GLP-1 era means for body positivity", source: "Axios", url: "https://www.axios.com/2026/03/28/body-positivity-glp-1-social-media", time: "2026-03-28T10:00:07Z" },
+      { title: "‘Changing a city is complicated’: Anne Hidalgo looks back on 12 years as Paris mayor", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/changing-a-city-is-complicated-anne-hidalgo-looks-back-on-12-years-as-paris-mayor", time: "2026-03-28T05:00:18Z" },
+      { title: "Ukraine war briefing: Rubio stridently denies US is demanding Kyiv give up eastern Donbas to Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/ukraine-war-briefing-rubio-zelenskyy-deal-donbas-to-russia", time: "2026-03-28T01:19:07Z" },
+      { title: "Rubio warns Europe that Iran could impose ‘tolling system’ on Strait of Hormuz", source: "The Hill", url: "https://thehill.com/homenews/administration/5804665-marco-rubio-iran-strait-hormuz-tolling/", time: "2026-03-27T20:22:08Z" },
+      { title: "France rebukes Lavrov, says Russia does not defend international law", source: "France 24", url: "https://www.france24.com/en/europe/20260327-france-rebukes-lavrov-says-russia-does-not-defend-international-law", time: "2026-03-27T18:23:19Z" },
+      { title: "First golden snub‑nosed monkey born outside Asia makes debut at French zoo", source: "Euronews", url: "http://www.euronews.com/video/2026/03/27/first-golden-snubnosed-monkey-born-outside-asia-makes-debut-at-french-zoo", time: "2026-03-27T18:03:46Z" },
+      { title: "'We need to double down' on energy autonomy: EIB chief Nadia Calviño", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260327-we-need-to-double-down-on-energy-autonomy-eib-chief-nadia-calvi%C3%B1o", time: "2026-03-27T17:14:01Z" },
+      { title: "Rubio tells allies Iran war will continue 2-4 more weeks", source: "Axios", url: "https://www.axios.com/2026/03/27/iran-war-timeline-rubio-2-4-weeks", time: "2026-03-27T16:58:16Z" },
+      { title: "Soviet famine still haunts Moldova, 80 years on", source: "France 24", url: "https://www.france24.com/en/tv-shows/revisited/20260327-soviet-famine-still-haunts-moldova-80-years-on", time: "2026-03-27T15:33:22Z" },
+      { title: "Austria plans social media ban for under-14s", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyv70de9exo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T14:25:02Z" },
+      { title: "G7 meets on Russia-Ukraine war as Rubio tries to sell U.S. strategy in Iran to skeptical allies insulted by Trump", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/g7-meets-on-russia-ukraine-war-as-rubio-tries-to-sell-u-s-strategy-in-iran-to-skeptical-allies-insulted-by-trump", time: "2026-03-27T13:31:56Z" },
+      { title: "Opus Dei: Spain under influence of ultra-conservative Catholic movement", source: "France 24", url: "https://www.france24.com/en/tv-shows/reporters/20260327-opus-dei-spain-under-influence-of-ultra-conservative-catholic-movement", time: "2026-03-27T12:27:52Z" },
+      { title: "Rubio tries to sell Iran war to skeptical G7 diplomats after Trump criticizes NATO", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-rubio-g7-iran-war-trump-nato/", time: "2026-03-27T10:51:02Z" },
+      { title: "Rubio heads to Europe to try garner support for Iran war", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5763475/iran-war-talks-rubio-markets-g7", time: "2026-03-27T09:49:02Z" },
+      { title: "Rubio meets with other G7 nations for first time since Iran war", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5762023/rubio-meets-with-other-g7-nations-for-first-time-since-iran-war", time: "2026-03-27T08:41:20Z" },
+      { title: "US weighs sending 10,000 troops to Middle East - media", source: "RTE News", url: "https://www.rte.ie/news/2026/0327/1565447-middle-east-tracker/", time: "2026-03-27T07:42:52Z" },
+      { title: "Progressive Paris has many weapons to fight the far right, but the best? Spaces where you can simply hang out | Alexander Hurst", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/27/progressive-paris-far-right-french-capital-food-culture-community-extremists", time: "2026-03-27T05:00:04Z" },
+      { title: "'Return hubs' for migrants clear EU parliament hurdle", source: "France 24", url: "https://www.france24.com/en/return-hubs-for-migrants-clear-eu-parliament-hurdle", time: "2026-03-26T21:01:32Z" },
+      { title: "Russia's spring offensive in Ukraine expected to focus on 'Fortress Belt' in Donetsk region", source: "France 24", url: "https://www.france24.com/en/russia-s-spring-offensive-in-ukraine-expected-to-focus-on-fortress-belt-in-donetsk-region", time: "2026-03-26T20:50:33Z" },
+      { title: "Nation’s ‘fanciest’ restaurant fuming over California apartment complex NIMBY battle", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/french-laundry-affordable-housing-battle-california-b2946362.html", time: "2026-03-26T18:09:50Z" },
+      { title: "G7 meets in France to mend rupture with US on Middle East war", source: "France 24", url: "https://www.france24.com/en/europe/20260326-g7-meets-in-france-mend-rupture-with-us-on-middle-east-war", time: "2026-03-26T16:17:39Z" },
+      { title: "Iran war will jolt U.S. inflation, new analysis finds", source: "Axios", url: "https://www.axios.com/2026/03/26/iran-war-inflation-ai", time: "2026-03-26T15:56:05Z" },
+      { title: "French court hands Islam scholar Tariq Ramadan 18-year jail term for rape", source: "BBC News", url: "https://www.bbc.com/news/articles/cj408984v2xo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T14:31:23Z" },
+      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
+      { title: "France denies excluding S Africa from G7 over US pressure", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0326/1565270-g7-france/", time: "2026-03-26T07:36:39Z" },
+      { title: "NATO officer says allies must urgently rethink defence, prepare for 'new enemy'", source: "France 24", url: "https://www.france24.com/en/europe/20260325-nato-officer-says-allies-must-urgently-rethink-defence-prepare-for-new-enemy", time: "2026-03-25T16:46:55Z" },
+      { title: "Ex-EU border chief faces French investigation for crimes against humanity", source: "France 24", url: "https://www.france24.com/en/ex-eu-border-chief-faces-french-investigation-for-crimes-against-humanity", time: "2026-03-25T16:32:37Z" },
+      { title: "Celine Dion is headed back to Paris", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-celine-dion-is-headed-back-to-paris/", time: "2026-03-25T16:20:12Z" },
+      { title: "Cancer nurse turned archbishop installed as first female Church of England leader", source: "France 24", url: "https://www.france24.com/en/cancer-nurse-turned-archbishop-installed-as-first-female-church-of-england-leader", time: "2026-03-25T16:11:47Z" },
+      { title: "Celine Dion set to make Paris comeback after triumphant 2024 Olympics appearance", source: "Globe and Mail", url: "https://www.theglobeandmail.com/culture/music/article-celine-dion-perform-paris/", time: "2026-03-25T16:04:49Z" },
+      { title: "Danish PM hands in government resignation after defeat in general election", source: "France 24", url: "https://www.france24.com/en/danish-pm-hands-in-government-resignation-after-defeat-in-general-election", time: "2026-03-25T11:54:14Z" },
+      { title: "Russia and Ukraine escalate drone attacks as Moscow starts spring offensive", source: "France 24", url: "https://www.france24.com/en/russia-and-ukraine-escalate-drone-attacks-as-moscow-starts-spring-offensive", time: "2026-03-25T10:56:19Z" },
+      { title: "A Master of Animation Is Back, With a ‘Magnificent’ Story", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/movies/sylvain-chomet-a-magnificent-life.html", time: "2026-03-25T09:02:22Z" },
+      { title: "Rubio plans travel to France to sell Iran war to skeptical G7 allies", source: "NPR", url: "https://www.npr.org/2026/03/25/g-s1-115053/rubio-plans-travel-to-france-to-sell-iran-war-to-skeptical-g7-allies", time: "2026-03-25T05:23:03Z" },
+      { title: "Danish PM's left bloc leads election, but no majority", source: "France 24", url: "https://www.france24.com/en/danish-pm-s-left-bloc-leads-election-but-no-majority", time: "2026-03-24T20:34:38Z" },
+      { title: "Danish PM seeking third term as election underway", source: "France 24", url: "https://www.france24.com/en/danish-pm-seeking-third-term-as-election-underway", time: "2026-03-24T14:45:43Z" },
+      { title: "Denmark election dominated by domestic issues followed by Greenland crisis", source: "France 24", url: "https://www.france24.com/en/denmark-election-dominated-by-domestic-issues-although-greenland-crisis-weighed-in", time: "2026-03-24T14:06:01Z" },
+      { title: "The Guardian view on France after Macron: local elections offer clues to seeing off the far-right threat | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/23/the-guardian-view-on-france-after-macron-local-elections-offer-clues-to-seeing-off-the-far-right-threat-", time: "2026-03-23T18:39:01Z" },
+      { title: "French local election results give unexpected lift to centrist parties", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/france-local-election-results-unexpected-lift-centrist-parties", time: "2026-03-23T14:40:48Z" },
+      { title: "Jean-Luc Mélenchon is problematic, but ostracising France’s radical left is a failed strategy | Rokhaya Diallo", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/23/jean-luc-melenchon-france-radical-left-la-france-insoumise", time: "2026-03-23T14:17:53Z" },
+      { title: "Lionel Jospin, France’s Former Prime Minister, Dies at 88", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/lionel-jospin-dead.html", time: "2026-03-23T12:47:52Z" },
+      { title: "‘Absolute moral rigour’: new Paris mayor Emmanuel Grégoire’s ideals face stern test", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/emmanuel-gregoire-new-paris-mayor", time: "2026-03-23T11:48:06Z" },
+      { title: "France's former Socialist Prime Minister Lionel Jospin dies at 88", source: "BBC News", url: "https://www.bbc.com/news/articles/cp861v8mj8mo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T11:29:26Z" },
+      { title: "France's Socialists hold onto power in major cities in election boost for mainstream", source: "BBC News", url: "https://www.bbc.com/news/articles/crk14m7mjddo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T23:27:59Z" },
+      { title: "Socialists’ Emmanuel Grégoire on track to win Paris mayoralty", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/paris-mayoral-race-socialist-emmanuel-gregoire-projected-to-win", time: "2026-03-22T21:29:48Z" },
+      { title: "French Local Elections Are Yardstick for Far Right. Initial Results Are Mixed.", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/france-mayor-elections.html", time: "2026-03-22T21:03:57Z" },
+      { title: "'All eyes are on the three biggest cities– Paris, Marseille and Lyon'", source: "France 24", url: "https://www.france24.com/en/video/20260322-all-eyes-are-on-the-three-biggest-cities%E2%80%93-paris-marseille-and-lyon", time: "2026-03-22T08:50:21Z" },
+      { title: "French voters to choose mayors in key cities including Paris and Marseille", source: "France 24", url: "https://www.france24.com/en/europe/20260322-french-voters-to-choose-mayors-in-key-cities-including-paris-and-marseille", time: "2026-03-22T07:08:02Z" },
+      { title: "Mayoral races in balance as voting opens in last round of French local elections", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/france-second-round-local-elections-voting-mayoral-races-paris-marseille", time: "2026-03-22T07:00:14Z" },
+      { title: "France Is Voting for Thousands of New Mayors. Here’s Why It Matters.", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/france-mayors-elections-far-right.html", time: "2026-03-22T04:01:22Z" },
+      { title: "The Billionaire Funding France’s Far Right", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/pierre-eduoard-sterin-france-far-right.html", time: "2026-03-22T04:01:17Z" },
+    ]
+  },
+  {
     name: "Jerusalem", country: "Israel",
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
@@ -2148,68 +2221,6 @@ const locations = [
       { title: "Netanyahu, Katz instruct IDF to strike homes, bridges in Lebanon to curb Hezbollah", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-890779", time: "2026-03-22T12:00:35Z" },
       { title: "Exploring identity through art at Jerusalem's Museum on the Seam", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-890474", time: "2026-03-22T12:00:00Z" },
       { title: "Live: Iran has fired more than 400 missiles at Israel since war began, IDF says", source: "France 24", url: "https://www.france24.com/en/middle-east/20260322-live-trump-threatens-to-strike-iran-s-power-plants-if-strait-of-hormuz-does-not-open-within-48-hours", time: "2026-03-22T06:14:50Z" },
-    ]
-  },
-  {
-    name: "Paris", country: "France",
-    lat: 48.8566, lng: 2.3522,
-    category: "political",
-    articles: [
-      { title: "Police in Paris foil attempted bomb attack outside Bank of America building", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/paris-police-foil-attempted-bomb-attack-bank-of-america", time: "2026-03-28T15:30:39Z" },
-      { title: "Deadly Russian strikes damage port, maternity hospital", source: "France 24", url: "https://www.france24.com/en/deadly-russian-strikes-damage-port-maternity-hospital", time: "2026-03-28T15:08:38Z" },
-      { title: "French authorities foil bomb attack outside Bank of America branch in Paris", source: "Euronews", url: "http://www.euronews.com/2026/03/28/french-authorities-foil-bomb-attack-outside-bank-of-america-branch-in-paris", time: "2026-03-28T14:44:09Z" },
-      { title: "France foils Paris bomb attack outside US bank", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0328/1565679-france-foils-paris-bomb-attack-outside-us-bank/", time: "2026-03-28T14:15:21Z" },
-      { title: "What the GLP-1 era means for body positivity", source: "Axios", url: "https://www.axios.com/2026/03/28/body-positivity-glp-1-social-media", time: "2026-03-28T10:00:07Z" },
-      { title: "‘Changing a city is complicated’: Anne Hidalgo looks back on 12 years as Paris mayor", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/changing-a-city-is-complicated-anne-hidalgo-looks-back-on-12-years-as-paris-mayor", time: "2026-03-28T05:00:18Z" },
-      { title: "Ukraine war briefing: Rubio stridently denies US is demanding Kyiv give up eastern Donbas to Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/ukraine-war-briefing-rubio-zelenskyy-deal-donbas-to-russia", time: "2026-03-28T01:19:07Z" },
-      { title: "Rubio warns Europe that Iran could impose ‘tolling system’ on Strait of Hormuz", source: "The Hill", url: "https://thehill.com/homenews/administration/5804665-marco-rubio-iran-strait-hormuz-tolling/", time: "2026-03-27T20:22:08Z" },
-      { title: "France rebukes Lavrov, says Russia does not defend international law", source: "France 24", url: "https://www.france24.com/en/europe/20260327-france-rebukes-lavrov-says-russia-does-not-defend-international-law", time: "2026-03-27T18:23:19Z" },
-      { title: "First golden snub‑nosed monkey born outside Asia makes debut at French zoo", source: "Euronews", url: "http://www.euronews.com/video/2026/03/27/first-golden-snubnosed-monkey-born-outside-asia-makes-debut-at-french-zoo", time: "2026-03-27T18:03:46Z" },
-      { title: "'We need to double down' on energy autonomy: EIB chief Nadia Calviño", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260327-we-need-to-double-down-on-energy-autonomy-eib-chief-nadia-calvi%C3%B1o", time: "2026-03-27T17:14:01Z" },
-      { title: "Rubio tells allies Iran war will continue 2-4 more weeks", source: "Axios", url: "https://www.axios.com/2026/03/27/iran-war-timeline-rubio-2-4-weeks", time: "2026-03-27T16:58:16Z" },
-      { title: "Soviet famine still haunts Moldova, 80 years on", source: "France 24", url: "https://www.france24.com/en/tv-shows/revisited/20260327-soviet-famine-still-haunts-moldova-80-years-on", time: "2026-03-27T15:33:22Z" },
-      { title: "Austria plans social media ban for under-14s", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyv70de9exo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T14:25:02Z" },
-      { title: "G7 meets on Russia-Ukraine war as Rubio tries to sell U.S. strategy in Iran to skeptical allies insulted by Trump", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/g7-meets-on-russia-ukraine-war-as-rubio-tries-to-sell-u-s-strategy-in-iran-to-skeptical-allies-insulted-by-trump", time: "2026-03-27T13:31:56Z" },
-      { title: "Opus Dei: Spain under influence of ultra-conservative Catholic movement", source: "France 24", url: "https://www.france24.com/en/tv-shows/reporters/20260327-opus-dei-spain-under-influence-of-ultra-conservative-catholic-movement", time: "2026-03-27T12:27:52Z" },
-      { title: "Rubio tries to sell Iran war to skeptical G7 diplomats after Trump criticizes NATO", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-rubio-g7-iran-war-trump-nato/", time: "2026-03-27T10:51:02Z" },
-      { title: "Rubio heads to Europe to try garner support for Iran war", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5763475/iran-war-talks-rubio-markets-g7", time: "2026-03-27T09:49:02Z" },
-      { title: "Rubio meets with other G7 nations for first time since Iran war", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5762023/rubio-meets-with-other-g7-nations-for-first-time-since-iran-war", time: "2026-03-27T08:41:20Z" },
-      { title: "US weighs sending 10,000 troops to Middle East - media", source: "RTE News", url: "https://www.rte.ie/news/2026/0327/1565447-middle-east-tracker/", time: "2026-03-27T07:42:52Z" },
-      { title: "Progressive Paris has many weapons to fight the far right, but the best? Spaces where you can simply hang out | Alexander Hurst", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/27/progressive-paris-far-right-french-capital-food-culture-community-extremists", time: "2026-03-27T05:00:04Z" },
-      { title: "'Return hubs' for migrants clear EU parliament hurdle", source: "France 24", url: "https://www.france24.com/en/return-hubs-for-migrants-clear-eu-parliament-hurdle", time: "2026-03-26T21:01:32Z" },
-      { title: "Russia's spring offensive in Ukraine expected to focus on 'Fortress Belt' in Donetsk region", source: "France 24", url: "https://www.france24.com/en/russia-s-spring-offensive-in-ukraine-expected-to-focus-on-fortress-belt-in-donetsk-region", time: "2026-03-26T20:50:33Z" },
-      { title: "Nation’s ‘fanciest’ restaurant fuming over California apartment complex NIMBY battle", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/french-laundry-affordable-housing-battle-california-b2946362.html", time: "2026-03-26T18:09:50Z" },
-      { title: "G7 meets in France to mend rupture with US on Middle East war", source: "France 24", url: "https://www.france24.com/en/europe/20260326-g7-meets-in-france-mend-rupture-with-us-on-middle-east-war", time: "2026-03-26T16:17:39Z" },
-      { title: "Iran war will jolt U.S. inflation, new analysis finds", source: "Axios", url: "https://www.axios.com/2026/03/26/iran-war-inflation-ai", time: "2026-03-26T15:56:05Z" },
-      { title: "French court hands Islam scholar Tariq Ramadan 18-year jail term for rape", source: "BBC News", url: "https://www.bbc.com/news/articles/cj408984v2xo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T14:31:23Z" },
-      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
-      { title: "France denies excluding S Africa from G7 over US pressure", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0326/1565270-g7-france/", time: "2026-03-26T07:36:39Z" },
-      { title: "NATO officer says allies must urgently rethink defence, prepare for 'new enemy'", source: "France 24", url: "https://www.france24.com/en/europe/20260325-nato-officer-says-allies-must-urgently-rethink-defence-prepare-for-new-enemy", time: "2026-03-25T16:46:55Z" },
-      { title: "Ex-EU border chief faces French investigation for crimes against humanity", source: "France 24", url: "https://www.france24.com/en/ex-eu-border-chief-faces-french-investigation-for-crimes-against-humanity", time: "2026-03-25T16:32:37Z" },
-      { title: "Celine Dion is headed back to Paris", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-celine-dion-is-headed-back-to-paris/", time: "2026-03-25T16:20:12Z" },
-      { title: "Cancer nurse turned archbishop installed as first female Church of England leader", source: "France 24", url: "https://www.france24.com/en/cancer-nurse-turned-archbishop-installed-as-first-female-church-of-england-leader", time: "2026-03-25T16:11:47Z" },
-      { title: "Celine Dion set to make Paris comeback after triumphant 2024 Olympics appearance", source: "Globe and Mail", url: "https://www.theglobeandmail.com/culture/music/article-celine-dion-perform-paris/", time: "2026-03-25T16:04:49Z" },
-      { title: "Danish PM hands in government resignation after defeat in general election", source: "France 24", url: "https://www.france24.com/en/danish-pm-hands-in-government-resignation-after-defeat-in-general-election", time: "2026-03-25T11:54:14Z" },
-      { title: "Russia and Ukraine escalate drone attacks as Moscow starts spring offensive", source: "France 24", url: "https://www.france24.com/en/russia-and-ukraine-escalate-drone-attacks-as-moscow-starts-spring-offensive", time: "2026-03-25T10:56:19Z" },
-      { title: "A Master of Animation Is Back, With a ‘Magnificent’ Story", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/movies/sylvain-chomet-a-magnificent-life.html", time: "2026-03-25T09:02:22Z" },
-      { title: "Rubio plans travel to France to sell Iran war to skeptical G7 allies", source: "NPR", url: "https://www.npr.org/2026/03/25/g-s1-115053/rubio-plans-travel-to-france-to-sell-iran-war-to-skeptical-g7-allies", time: "2026-03-25T05:23:03Z" },
-      { title: "Danish PM's left bloc leads election, but no majority", source: "France 24", url: "https://www.france24.com/en/danish-pm-s-left-bloc-leads-election-but-no-majority", time: "2026-03-24T20:34:38Z" },
-      { title: "Danish PM seeking third term as election underway", source: "France 24", url: "https://www.france24.com/en/danish-pm-seeking-third-term-as-election-underway", time: "2026-03-24T14:45:43Z" },
-      { title: "Denmark election dominated by domestic issues followed by Greenland crisis", source: "France 24", url: "https://www.france24.com/en/denmark-election-dominated-by-domestic-issues-although-greenland-crisis-weighed-in", time: "2026-03-24T14:06:01Z" },
-      { title: "The Guardian view on France after Macron: local elections offer clues to seeing off the far-right threat | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/23/the-guardian-view-on-france-after-macron-local-elections-offer-clues-to-seeing-off-the-far-right-threat-", time: "2026-03-23T18:39:01Z" },
-      { title: "French local election results give unexpected lift to centrist parties", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/france-local-election-results-unexpected-lift-centrist-parties", time: "2026-03-23T14:40:48Z" },
-      { title: "Jean-Luc Mélenchon is problematic, but ostracising France’s radical left is a failed strategy | Rokhaya Diallo", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/23/jean-luc-melenchon-france-radical-left-la-france-insoumise", time: "2026-03-23T14:17:53Z" },
-      { title: "Lionel Jospin, France’s Former Prime Minister, Dies at 88", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/lionel-jospin-dead.html", time: "2026-03-23T12:47:52Z" },
-      { title: "‘Absolute moral rigour’: new Paris mayor Emmanuel Grégoire’s ideals face stern test", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/emmanuel-gregoire-new-paris-mayor", time: "2026-03-23T11:48:06Z" },
-      { title: "France's former Socialist Prime Minister Lionel Jospin dies at 88", source: "BBC News", url: "https://www.bbc.com/news/articles/cp861v8mj8mo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T11:29:26Z" },
-      { title: "France's Socialists hold onto power in major cities in election boost for mainstream", source: "BBC News", url: "https://www.bbc.com/news/articles/crk14m7mjddo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T23:27:59Z" },
-      { title: "Socialists’ Emmanuel Grégoire on track to win Paris mayoralty", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/paris-mayoral-race-socialist-emmanuel-gregoire-projected-to-win", time: "2026-03-22T21:29:48Z" },
-      { title: "French Local Elections Are Yardstick for Far Right. Initial Results Are Mixed.", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/france-mayor-elections.html", time: "2026-03-22T21:03:57Z" },
-      { title: "'All eyes are on the three biggest cities– Paris, Marseille and Lyon'", source: "France 24", url: "https://www.france24.com/en/video/20260322-all-eyes-are-on-the-three-biggest-cities%E2%80%93-paris-marseille-and-lyon", time: "2026-03-22T08:50:21Z" },
-      { title: "French voters to choose mayors in key cities including Paris and Marseille", source: "France 24", url: "https://www.france24.com/en/europe/20260322-french-voters-to-choose-mayors-in-key-cities-including-paris-and-marseille", time: "2026-03-22T07:08:02Z" },
-      { title: "Mayoral races in balance as voting opens in last round of French local elections", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/france-second-round-local-elections-voting-mayoral-races-paris-marseille", time: "2026-03-22T07:00:14Z" },
-      { title: "France Is Voting for Thousands of New Mayors. Here’s Why It Matters.", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/france-mayors-elections-far-right.html", time: "2026-03-22T04:01:22Z" },
-      { title: "The Billionaire Funding France’s Far Right", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/europe/pierre-eduoard-sterin-france-far-right.html", time: "2026-03-22T04:01:17Z" },
     ]
   },
   {
@@ -2377,6 +2388,46 @@ const locations = [
       { title: "US-Israeli war on Iran strains food, water and fuel prices in India", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/us-israeli-war-on-iran-strains-food-water-and-fuel-prices-in-india?traffic_source=rss", time: "2026-03-23T12:50:53Z" },
       { title: "‘I count their breaths’: A homeless mother protects her children in Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/22/i-count-their-breaths-a-homeless-mother-protects-her-children-in-delhi?traffic_source=rss", time: "2026-03-22T08:18:05Z" },
       { title: "As War Disrupts India’s Gulf Ties, Economy Faces ‘New Broadside’", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/business/india-economy-middle-east.html", time: "2026-03-22T04:42:38Z" },
+    ]
+  },
+  {
+    name: "Sanaa", country: "Yemen",
+    lat: 15.3694, lng: 44.191,
+    category: "conflict",
+    articles: [
+      { title: "JD Vance on Iran: 'We're taking care of business, we're going to be out of there soon, and gas prices are going to come back down'", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-28/ty-article/.premium/vance-on-iran-were-taking-care-of-business-were-going-be-out-of-there-soon/0000019d-34fd-de07-a9fd-b7ff56b10000", time: "2026-03-28T16:57:14Z" },
+      { title: "Yemen's Houthis claim first missile attack on Israel since war began", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/yemens-houthis-claim-first-missile-attack-on-israel-since-war-began", time: "2026-03-28T16:03:18Z" },
+      { title: "What could Houthi involvement in the Iran war mean?", source: "France 24", url: "https://www.france24.com/en/what-could-houthi-involvement-in-the-iran-war-mean", time: "2026-03-28T15:52:59Z" },
+      { title: "Why the Houthis waited until now to strike - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891461", time: "2026-03-28T14:07:05Z" },
+      { title: "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/israel-saudi-arabia-middle-east-hezbollah-donald-trump-b2947592.html", time: "2026-03-28T13:18:42Z" },
+      { title: "Iran-backed Houthis in Yemen launch attack on Israel for first time in war", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/28/iran-us-war-yemen-trump/", time: "2026-03-28T12:16:17Z" },
+      { title: "Protests in Yemen against US-Israeli attacks as Houthis warn of action", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/28/protests-in-yemen-against-us-israeli-attacks-as-houthis-warn-of-action?traffic_source=rss", time: "2026-03-28T11:24:33Z" },
+      { title: "Yemen’s Houthis Fire at Israel, Vowing Further Attacks", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/middleeast/yemen-houthis-attack-israel-war.html", time: "2026-03-28T10:23:07Z" },
+      { title: "Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation", source: "NBC News", url: "https://www.nbcnews.com/world/iran/iran-backed-houthis-fire-missile-israel-yemen-risking-escalation-rcna265581", time: "2026-03-28T10:12:01Z" },
+      { title: "Iranian-backed Houthi rebels say launched missile attack on Israel", source: "France 24", url: "https://www.france24.com/en/iranian-backed-houthi-rebels-say-launched-missile-attack-on-israel", time: "2026-03-28T09:55:07Z" },
+      { title: "Yemen's Houthis claim missile attack on Israel in expanding conflict", source: "France 24", url: "https://www.france24.com/en/yemen-s-houthis-claim-missile-attack-on-israel-in-expanding-conflict", time: "2026-03-28T09:53:42Z" },
+      { title: "Over a dozen U.S. soldiers injured in attack on Saudi base as Iran-backed Houthis enter war", source: "NPR", url: "https://www.npr.org/2026/03/28/nx-s1-5764720/iran-war-one-month", time: "2026-03-28T09:38:20Z" },
+      { title: "Who are the Houthis, Iran’s allies in Yemen? - explainer", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891454", time: "2026-03-28T09:01:10Z" },
+      { title: "Yemen's Houthis claim missile attack on Israel, say attacks will continue", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-claim-missile-attack-israel-say-attacks-will-continue", time: "2026-03-28T07:48:43Z" },
+      { title: "Yemen’s Houthis launch missile attack on Israel as war on Iran intensifies", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/yemens-houthis-claim-responsibility-for-a-missile-attack-on-israel-2?traffic_source=rss", time: "2026-03-28T07:30:45Z" },
+      { title: "Yemen's Houthis join Iran war, consider closing Red Sea shipping route", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/idf-detects-missile-fire-from-yemen-in-first-since-hamas-cease-fire/0000019d-32ee-d687-a9fd-b6fe015d0000", time: "2026-03-28T07:19:01Z" },
+      { title: "First Houthi launch toward Israel since war began triggers alerts across the Negev", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891453", time: "2026-03-28T07:11:09Z" },
+      { title: "Yemen's Houthis warn US and Israel against using Red Sea in attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-warn-us-and-israel-against-using-red-sea-attacks", time: "2026-03-28T06:05:14Z" },
+      { title: "Yemen’s Iran-backed Houthis threaten to join war: ‘Our fingers are on the trigger’", source: "Times of Israel", url: "https://www.timesofisrael.com/yemens-iran-backed-houthis-threaten-to-join-war-our-fingers-are-on-the-trigger/", time: "2026-03-28T03:46:45Z" },
+      { title: "Yemen's pro-Iran Houthis confirm they launched the missile on Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article-live/.premium/twelve-u-s-troops-wounded-in-iran-strike-on-base-in-saudi-arabia-official-says/0000019d-3225-d8a3-abff-3a25e5aa0000", time: "2026-03-28T02:32:53Z" },
+      { title: "Houthis warn ‘fingers on the trigger’ as US-Israel war on Iran continues", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/houthis-warn-fingers-on-the-trigger-as-us-israeli-war-on-iran-continues?traffic_source=rss", time: "2026-03-27T22:53:23Z" },
+      { title: "‘Fingers on the trigger’ for military intervention, Houthis warn", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/fingers-on-the-trigger-for-military-intervention-houthis-warn?traffic_source=rss", time: "2026-03-27T22:35:24Z" },
+      { title: "One killed, several injured in latest Iranian missile attack on central Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-28-2026/", time: "2026-03-27T21:17:12Z" },
+      { title: "Yemenis fear economic consequences of being dragged into US-Iran conflict", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/yemenis-fear-economic-consequences-of-being-dragged-into-us-iran-conflict?traffic_source=rss", time: "2026-03-27T11:24:32Z" },
+      { title: "Egypt denies reports of ship carrying military-use steel to Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-egypt-denies-reports-of-ship-carrying-military-use-steel-to-israel/", time: "2026-03-27T11:01:32Z" },
+      { title: "Yemen's Houthis threaten to join war if U.S., Israel use Red Sea to strike Iran", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-27/ty-article-live/.premium/report-trump-weighs-sending-another-10-000-ground-troops-to-the-middle-east/0000019d-2cfb-dc71-a7ff-effbe4250000", time: "2026-03-27T01:57:29Z" },
+      { title: "Yemen’s Houthis say to intervene militarily if needed amid Iran-US war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260326-yemens-houthis-say-to-intervene-militarily-if-needed-amid-iran-us-war/", time: "2026-03-26T19:44:56Z" },
+      { title: "Yemen's Houthis warn of 'military response' to US-Israeli attacks if required", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-warn-military-response-us-israeli-attacks-if-required", time: "2026-03-26T15:02:51Z" },
+      { title: "Saudi Arabia stoic amid Iran war, but attacks on Red Sea ports could change that", source: "Times of Israel", url: "https://www.timesofisrael.com/saudi-arabia-stoic-amid-iran-war-but-attacks-on-red-sea-ports-could-change-that/", time: "2026-03-26T12:56:51Z" },
+      { title: "Iran threatens to seize control of another key strait in Red Sea if Trump launches ground invasion", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-bab-al-mandab-strait-houthi-attack-trump-b2945804.html", time: "2026-03-25T23:40:27Z" },
+      { title: "Saudi Arabia working to keep Houthis out of Iran war as group threatens readiness to fight - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890906", time: "2026-03-23T13:46:03Z" },
+      { title: "Will the Houthis join Iran in war against Israel and the US?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/3/22/will-the-houthis-join-iran-in-war-against-israel-and-the-us?traffic_source=rss", time: "2026-03-22T01:22:48Z" },
+      { title: "Saudi Arabia expels Iran military attache, four embassy staff", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/saudi-arabia-expels-iran-military-attache-and-four-team-members?traffic_source=rss", time: "2026-03-21T23:00:56Z" },
     ]
   },
   {
@@ -2576,44 +2627,6 @@ const locations = [
       { title: "Taiwan says next US arms purchase is on track after guarantee", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/taiwan-indicates-next-us-arms-sale-is-on-track-after-receiving-guarantee-letter", time: "2026-03-26T02:21:57Z" },
       { title: "Can Taiwan fulfil its Asia-Pacific drone hub goal with a ‘non-red’ supply chain push?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3347745/can-taiwan-fulfil-its-asia-pacific-drone-hub-goal-non-red-supply-chain-push?utm_source=rss_feed", time: "2026-03-25T02:00:14Z" },
       { title: "How a medieval English abbey became a Chinese wedding destination", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd8k82p9j5o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T09:27:40Z" },
-    ]
-  },
-  {
-    name: "Sanaa", country: "Yemen",
-    lat: 15.3694, lng: 44.191,
-    category: "conflict",
-    articles: [
-      { title: "Yemen's Houthis claim first missile attack on Israel since war began", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/yemens-houthis-claim-first-missile-attack-on-israel-since-war-began", time: "2026-03-28T16:03:18Z" },
-      { title: "What could Houthi involvement in the Iran war mean?", source: "France 24", url: "https://www.france24.com/en/what-could-houthi-involvement-in-the-iran-war-mean", time: "2026-03-28T15:52:59Z" },
-      { title: "Why the Houthis waited until now to strike - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891461", time: "2026-03-28T14:07:05Z" },
-      { title: "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/israel-saudi-arabia-middle-east-hezbollah-donald-trump-b2947592.html", time: "2026-03-28T13:18:42Z" },
-      { title: "Iran-backed Houthis in Yemen launch attack on Israel for first time in war", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/28/iran-us-war-yemen-trump/", time: "2026-03-28T12:16:17Z" },
-      { title: "Protests in Yemen against US-Israeli attacks as Houthis warn of action", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/28/protests-in-yemen-against-us-israeli-attacks-as-houthis-warn-of-action?traffic_source=rss", time: "2026-03-28T11:24:33Z" },
-      { title: "Yemen’s Houthis Fire at Israel, Vowing Further Attacks", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/middleeast/yemen-houthis-attack-israel-war.html", time: "2026-03-28T10:23:07Z" },
-      { title: "Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation", source: "NBC News", url: "https://www.nbcnews.com/world/iran/iran-backed-houthis-fire-missile-israel-yemen-risking-escalation-rcna265581", time: "2026-03-28T10:12:01Z" },
-      { title: "Iranian-backed Houthi rebels say launched missile attack on Israel", source: "France 24", url: "https://www.france24.com/en/iranian-backed-houthi-rebels-say-launched-missile-attack-on-israel", time: "2026-03-28T09:55:07Z" },
-      { title: "Yemen's Houthis claim missile attack on Israel in expanding conflict", source: "France 24", url: "https://www.france24.com/en/yemen-s-houthis-claim-missile-attack-on-israel-in-expanding-conflict", time: "2026-03-28T09:53:42Z" },
-      { title: "Who are the Houthis, Iran’s allies in Yemen? - explainer", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891454", time: "2026-03-28T09:01:10Z" },
-      { title: "Yemen's Houthis claim missile attack on Israel, say attacks will continue", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-claim-missile-attack-israel-say-attacks-will-continue", time: "2026-03-28T07:48:43Z" },
-      { title: "Yemen’s Houthis launch missile attack on Israel as war on Iran intensifies", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/yemens-houthis-claim-responsibility-for-a-missile-attack-on-israel-2?traffic_source=rss", time: "2026-03-28T07:30:45Z" },
-      { title: "Yemen's Houthis join Iran war, consider closing Red Sea shipping route", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/idf-detects-missile-fire-from-yemen-in-first-since-hamas-cease-fire/0000019d-32ee-d687-a9fd-b6fe015d0000", time: "2026-03-28T07:19:01Z" },
-      { title: "First Houthi launch toward Israel since war began triggers alerts across the Negev", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891453", time: "2026-03-28T07:11:09Z" },
-      { title: "Yemen's Houthis warn US and Israel against using Red Sea in attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-warn-us-and-israel-against-using-red-sea-attacks", time: "2026-03-28T06:05:14Z" },
-      { title: "Yemen’s Iran-backed Houthis threaten to join war: ‘Our fingers are on the trigger’", source: "Times of Israel", url: "https://www.timesofisrael.com/yemens-iran-backed-houthis-threaten-to-join-war-our-fingers-are-on-the-trigger/", time: "2026-03-28T03:46:45Z" },
-      { title: "Yemen's pro-Iran Houthis confirm they launched the missile on Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article-live/.premium/twelve-u-s-troops-wounded-in-iran-strike-on-base-in-saudi-arabia-official-says/0000019d-3225-d8a3-abff-3a25e5aa0000", time: "2026-03-28T02:32:53Z" },
-      { title: "Houthis warn ‘fingers on the trigger’ as US-Israel war on Iran continues", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/houthis-warn-fingers-on-the-trigger-as-us-israeli-war-on-iran-continues?traffic_source=rss", time: "2026-03-27T22:53:23Z" },
-      { title: "‘Fingers on the trigger’ for military intervention, Houthis warn", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/fingers-on-the-trigger-for-military-intervention-houthis-warn?traffic_source=rss", time: "2026-03-27T22:35:24Z" },
-      { title: "One killed, several injured in latest Iranian missile attack on central Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-28-2026/", time: "2026-03-27T21:17:12Z" },
-      { title: "Yemenis fear economic consequences of being dragged into US-Iran conflict", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/yemenis-fear-economic-consequences-of-being-dragged-into-us-iran-conflict?traffic_source=rss", time: "2026-03-27T11:24:32Z" },
-      { title: "Egypt denies reports of ship carrying military-use steel to Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-egypt-denies-reports-of-ship-carrying-military-use-steel-to-israel/", time: "2026-03-27T11:01:32Z" },
-      { title: "Yemen's Houthis threaten to join war if U.S., Israel use Red Sea to strike Iran", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-27/ty-article-live/.premium/report-trump-weighs-sending-another-10-000-ground-troops-to-the-middle-east/0000019d-2cfb-dc71-a7ff-effbe4250000", time: "2026-03-27T01:57:29Z" },
-      { title: "Yemen’s Houthis say to intervene militarily if needed amid Iran-US war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260326-yemens-houthis-say-to-intervene-militarily-if-needed-amid-iran-us-war/", time: "2026-03-26T19:44:56Z" },
-      { title: "Yemen's Houthis warn of 'military response' to US-Israeli attacks if required", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-warn-military-response-us-israeli-attacks-if-required", time: "2026-03-26T15:02:51Z" },
-      { title: "Saudi Arabia stoic amid Iran war, but attacks on Red Sea ports could change that", source: "Times of Israel", url: "https://www.timesofisrael.com/saudi-arabia-stoic-amid-iran-war-but-attacks-on-red-sea-ports-could-change-that/", time: "2026-03-26T12:56:51Z" },
-      { title: "Iran threatens to seize control of another key strait in Red Sea if Trump launches ground invasion", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-bab-al-mandab-strait-houthi-attack-trump-b2945804.html", time: "2026-03-25T23:40:27Z" },
-      { title: "Saudi Arabia working to keep Houthis out of Iran war as group threatens readiness to fight - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890906", time: "2026-03-23T13:46:03Z" },
-      { title: "Will the Houthis join Iran in war against Israel and the US?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/3/22/will-the-houthis-join-iran-in-war-against-israel-and-the-us?traffic_source=rss", time: "2026-03-22T01:22:48Z" },
-      { title: "Saudi Arabia expels Iran military attache, four embassy staff", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/saudi-arabia-expels-iran-military-attache-and-four-team-members?traffic_source=rss", time: "2026-03-21T23:00:56Z" },
     ]
   },
   {
@@ -2830,6 +2843,34 @@ const locations = [
     ]
   },
   {
+    name: "Dublin", country: "Ireland",
+    lat: 53.3498, lng: -6.2603,
+    category: "economic",
+    articles: [
+      { title: "Belfast man charged with assault of cabin crew member prior to Dublin-Amsterdam flight", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/28/belfast-man-charged-with-assault-of-cabin-crew-member-prior-to-dublin-amsterdam-flight/", time: "2026-03-28T16:39:36Z" },
+      { title: "Man charged in €1.5m drugs seizure at Dublin home ‘not the Napoleon of crime’, court told", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/28/man-charged-in-15m-drugs-seizure-at-dublin-home-not-the-napoleon-of-crime-court-told/", time: "2026-03-28T15:43:03Z" },
+      { title: "Man (34) charged with attempted murder of Dublin woman set on fire at home", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/28/man-34-charged-with-attempted-murder-over-fire-attack-on-clondalkin-woman/", time: "2026-03-28T12:50:04Z" },
+      { title: "Irish citizens planning summer travel urged to check passports are in date", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/28/check-passport-before-booking-summer-holiday-cautions-minister/", time: "2026-03-28T06:00:01Z" },
+      { title: "Ireland’s skylarks were disappearing but this simple solution could bring their song back", source: "Irish Times", url: "https://www.irishtimes.com/environment/2026/03/28/irelands-skylarks-were-disappearing-but-this-simple-solution-could-bring-their-song-back/", time: "2026-03-28T06:00:00Z" },
+      { title: "Russia-bound cargo ship seen dropping anchor near subsea cables off Irish coast", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/28/russia-bound-cargo-ship-seen-dropping-anchor-near-subsea-cables-off-irish-coast/", time: "2026-03-28T06:00:00Z" },
+      { title: "Man’s body discovered in Cookstown, Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/27/mans-body-discovered-in-cookstown-dublin/", time: "2026-03-27T22:26:25Z" },
+      { title: "Trump Doonbeg private cottage jumps in value as club declares record membership", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/27/trump-doonbeg-private-cottage-jumps-in-value-as-club-declares-record-membership/", time: "2026-03-27T20:03:47Z" },
+      { title: "‘Behind one there is 10 more coming’: A corner of Dublin shares its pride in Troy Parrott", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/03/27/behind-one-there-is-10-more-coming-a-corner-of-dublin-shares-its-pride-in-troy-parrott/", time: "2026-03-27T17:29:02Z" },
+      { title: "The ‘most dangerous’ place to be a woman: The 30 women who have died violently in Northern Ireland since 2020", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/28/the-most-dangerous-place-to-be-a-woman-the-30-women-who-have-died-violently-in-northern-ireland-since-2020/", time: "2026-03-27T16:00:00Z" },
+      { title: "Man declared fit to stand trial charged with attempted murder of children in Dublin", source: "Sky News", url: "https://news.sky.com/story/man-declared-fit-to-stand-trial-charged-with-attempted-murder-of-three-children-in-dublin-attack-13525060", time: "2026-03-27T13:04:00Z" },
+      { title: "Man declared fit to stand trial for attempted murder of three children", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/parnell-square-dublin-riad-bouchaker-b2946950.html", time: "2026-03-27T11:30:56Z" },
+      { title: "Judge rules man fit to stand trial over Parnell Square attack in Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/27/judge-to-rule-if-man-fit-to-stand-trial-over-parnell-square-attack-in-dublin/", time: "2026-03-27T11:02:16Z" },
+      { title: "Judge rules man fit to stand trial in June over Parnell Square attack in Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/27/judge-rules-man-fit-to-stand-trial-in-june-over-parnell-square-attack-in-dublin/", time: "2026-03-27T11:02:16Z" },
+      { title: "Irish-American duo with ‘scary’ MS diagnosis to attempt Cork to Donegal ultra-marathon challenge", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/27/irish-american-duo-with-scary-ms-diagnosis-to-attempt-cork-to-donegal-ultra-marathon-challenge/", time: "2026-03-27T08:00:00Z" },
+      { title: "Why I decided to do a master’s in Luxembourg", source: "Irish Times", url: "https://www.irishtimes.com/ireland/education/2026/03/27/why-i-decided-to-do-a-masters-in-luxembourg/", time: "2026-03-27T06:01:00Z" },
+      { title: "Dublin-based woman suspected of killing husband and daughter in Iceland told police she was ‘a monster’", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/27/dublin-based-woman-suspected-of-killing-husband-and-daughter-in-iceland-told-police-she-was-a-monster/", time: "2026-03-27T06:00:00Z" },
+      { title: "EU court adviser casts doubt on Ireland’s nitrates derogation in water quality case", source: "Irish Times", url: "https://www.irishtimes.com/environment/2026/03/26/eu-court-adviser-casts-doubt-on-irelands-nitrates-derogation-in-water-quality-case/", time: "2026-03-26T19:14:25Z" },
+      { title: "Mapped: Military activity in the Irish AOR in southern Lebanon", source: "RTE News", url: "https://www.rte.ie/news/primetime/2026/0326/1565251-irish-aor-lebanon/", time: "2026-03-26T06:00:00Z" },
+      { title: "Irish metals refinery is in supply chain that feeds Russian war machine, records suggest", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/irish-metals-refinery-is-in-supply-chain-that-feeds-russian-war-machine-records-suggest", time: "2026-03-24T05:00:11Z" },
+      { title: "Irish government to cut excise duty on diesel and petrol", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvmvx0gyvo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T23:58:05Z" },
+    ]
+  },
+  {
     name: "Bogota", country: "Colombia",
     lat: 4.711, lng: -74.0721,
     category: "conflict",
@@ -2909,33 +2950,6 @@ const locations = [
       { title: "Eritrea to end 18-year AFCON isolation by playing Eswatini in qualifier", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/24/eritrea-to-end-18-year-afcon-isolation-by-playing-eswatini-in-qualifier?traffic_source=rss", time: "2026-03-24T07:27:35Z" },
       { title: "Kenyan police investigate alleged disappearance of ex-foreign minister", source: "BBC News", url: "https://www.bbc.com/news/articles/c3ex8vglvkxo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T09:29:27Z" },
       { title: "Kenyans fighting illegally for Russia in Ukraine to be granted amnesty", source: "BBC News", url: "https://www.bbc.com/news/articles/cj94jmj2p28o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T19:05:30Z" },
-    ]
-  },
-  {
-    name: "Dublin", country: "Ireland",
-    lat: 53.3498, lng: -6.2603,
-    category: "economic",
-    articles: [
-      { title: "Man charged in €1.5m drugs seizure at Dublin home ‘not the Napoleon of crime’, court told", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/28/man-charged-in-15m-drugs-seizure-at-dublin-home-not-the-napoleon-of-crime-court-told/", time: "2026-03-28T15:43:03Z" },
-      { title: "Man (34) charged with attempted murder of Dublin woman set on fire at home", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/28/man-34-charged-with-attempted-murder-over-fire-attack-on-clondalkin-woman/", time: "2026-03-28T12:50:04Z" },
-      { title: "Irish citizens planning summer travel urged to check passports are in date", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/28/check-passport-before-booking-summer-holiday-cautions-minister/", time: "2026-03-28T06:00:01Z" },
-      { title: "Ireland’s skylarks were disappearing but this simple solution could bring their song back", source: "Irish Times", url: "https://www.irishtimes.com/environment/2026/03/28/irelands-skylarks-were-disappearing-but-this-simple-solution-could-bring-their-song-back/", time: "2026-03-28T06:00:00Z" },
-      { title: "Russia-bound cargo ship seen dropping anchor near subsea cables off Irish coast", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/28/russia-bound-cargo-ship-seen-dropping-anchor-near-subsea-cables-off-irish-coast/", time: "2026-03-28T06:00:00Z" },
-      { title: "Man’s body discovered in Cookstown, Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/27/mans-body-discovered-in-cookstown-dublin/", time: "2026-03-27T22:26:25Z" },
-      { title: "Trump Doonbeg private cottage jumps in value as club declares record membership", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/27/trump-doonbeg-private-cottage-jumps-in-value-as-club-declares-record-membership/", time: "2026-03-27T20:03:47Z" },
-      { title: "‘Behind one there is 10 more coming’: A corner of Dublin shares its pride in Troy Parrott", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/03/27/behind-one-there-is-10-more-coming-a-corner-of-dublin-shares-its-pride-in-troy-parrott/", time: "2026-03-27T17:29:02Z" },
-      { title: "The ‘most dangerous’ place to be a woman: The 30 women who have died violently in Northern Ireland since 2020", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/28/the-most-dangerous-place-to-be-a-woman-the-30-women-who-have-died-violently-in-northern-ireland-since-2020/", time: "2026-03-27T16:00:00Z" },
-      { title: "Man declared fit to stand trial charged with attempted murder of children in Dublin", source: "Sky News", url: "https://news.sky.com/story/man-declared-fit-to-stand-trial-charged-with-attempted-murder-of-three-children-in-dublin-attack-13525060", time: "2026-03-27T13:04:00Z" },
-      { title: "Man declared fit to stand trial for attempted murder of three children", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/parnell-square-dublin-riad-bouchaker-b2946950.html", time: "2026-03-27T11:30:56Z" },
-      { title: "Judge rules man fit to stand trial over Parnell Square attack in Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/27/judge-to-rule-if-man-fit-to-stand-trial-over-parnell-square-attack-in-dublin/", time: "2026-03-27T11:02:16Z" },
-      { title: "Judge rules man fit to stand trial in June over Parnell Square attack in Dublin", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/03/27/judge-rules-man-fit-to-stand-trial-in-june-over-parnell-square-attack-in-dublin/", time: "2026-03-27T11:02:16Z" },
-      { title: "Irish-American duo with ‘scary’ MS diagnosis to attempt Cork to Donegal ultra-marathon challenge", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/27/irish-american-duo-with-scary-ms-diagnosis-to-attempt-cork-to-donegal-ultra-marathon-challenge/", time: "2026-03-27T08:00:00Z" },
-      { title: "Why I decided to do a master’s in Luxembourg", source: "Irish Times", url: "https://www.irishtimes.com/ireland/education/2026/03/27/why-i-decided-to-do-a-masters-in-luxembourg/", time: "2026-03-27T06:01:00Z" },
-      { title: "Dublin-based woman suspected of killing husband and daughter in Iceland told police she was ‘a monster’", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/27/dublin-based-woman-suspected-of-killing-husband-and-daughter-in-iceland-told-police-she-was-a-monster/", time: "2026-03-27T06:00:00Z" },
-      { title: "EU court adviser casts doubt on Ireland’s nitrates derogation in water quality case", source: "Irish Times", url: "https://www.irishtimes.com/environment/2026/03/26/eu-court-adviser-casts-doubt-on-irelands-nitrates-derogation-in-water-quality-case/", time: "2026-03-26T19:14:25Z" },
-      { title: "Mapped: Military activity in the Irish AOR in southern Lebanon", source: "RTE News", url: "https://www.rte.ie/news/primetime/2026/0326/1565251-irish-aor-lebanon/", time: "2026-03-26T06:00:00Z" },
-      { title: "Irish metals refinery is in supply chain that feeds Russian war machine, records suggest", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/irish-metals-refinery-is-in-supply-chain-that-feeds-russian-war-machine-records-suggest", time: "2026-03-24T05:00:11Z" },
-      { title: "Irish government to cut excise duty on diesel and petrol", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvmvx0gyvo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T23:58:05Z" },
     ]
   },
   {
@@ -3230,7 +3244,6 @@ const locations = [
       { title: "Explosion, fire at Erbil high-rise amid Iranian attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/explosion-fire-at-erbil-high-rise-amid-iranian-attacks?traffic_source=rss", time: "2026-03-24T23:00:31Z" },
       { title: "Iran-backed militias strike Kurdistan, killing Peshmerga in northern Iraq", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891006", time: "2026-03-24T10:01:31Z" },
       { title: "The view from Professor Dominic Tierney, author of The Right Way to Lose a War", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260321-the-view-from-professor-dominic-tierney-author-of-the-right-way-to-lose-a-war", time: "2026-03-21T19:23:11Z" },
-      { title: "Iraqi Kurds mark Nowruz, celebrating light over darkness", source: "NPR", url: "https://www.npr.org/sections/the-picture-show/2026/03/21/nx-s1-5753923/nowruz-iraqi-kurds-photos", time: "2026-03-21T16:56:00Z" },
     ]
   },
   {
@@ -3398,22 +3411,6 @@ const locations = [
     ]
   },
   {
-    name: "Diego Garcia", country: "UK (BIOT)",
-    lat: -7.3195, lng: 72.4229,
-    category: "political",
-    articles: [
-      { title: "Is Iran really able to strike London, and is the UK prepared for an attack?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/is-iran-able-strike-london-is-uk-prepared", time: "2026-03-23T17:04:36Z" },
-      { title: "‘False flag attack’: Iran denies claims it fired missiles at Diego Garcia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/iran-denies-targeting-us-uk-diego-garcia-airbase-claims-false-flag-attack?traffic_source=rss", time: "2026-03-23T13:00:11Z" },
-      { title: "Iran's attack on US-UK Diego Garcia base is not a turning point, but a warning - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-890826", time: "2026-03-22T19:50:01Z" },
-      { title: "Amid Israeli warnings, UK minister says no proof Iran trying to hit Europe, doubts it can do so", source: "Times of Israel", url: "https://www.timesofisrael.com/amid-israeli-warnings-uk-minister-says-no-proof-iran-trying-to-hit-europe-doubts-it-can-do-so/", time: "2026-03-22T13:11:57Z" },
-      { title: "Did Iran launch missiles at US-UK base on Diego Garcia? Here’s what to know", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/did-iran-launch-missiles-at-us-uk-base-on-diego-garcia-heres-what-to-know?traffic_source=rss", time: "2026-03-22T13:03:57Z" },
-      { title: "Iran not believed to have capability or intent to bomb Britain, says UK minister", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/iran-capability-intent-bomb-missiles-britain-steve-reed", time: "2026-03-22T10:42:44Z" },
-      { title: "Trump proven right on Iran's long-range missile capability as regime targets US-UK base, experts say", source: "Fox News", url: "https://www.foxnews.com/world/trump-proven-right-irans-long-range-missile-capability-regime-targets-us-uk-base-experts-say", time: "2026-03-21T22:07:28Z" },
-      { title: "Iran strikes Israeli nuclear town in retaliation for Natanz attack amid escalating conflict", source: "France 24", url: "https://www.france24.com/en/middle-east/20260321-iran-strikes-israeli-nuclear-town-in-retaliation-for-natanz-attack-amid-escalating-conflict", time: "2026-03-21T21:12:12Z" },
-      { title: "Diego Garcia: The remote island hosting a key US-UK military base targeted by Iran", source: "Times of Israel", url: "https://www.timesofisrael.com/diego-garcia-the-remote-island-hosting-a-key-us-uk-military-base-targeted-by-iran/", time: "2026-03-21T17:07:51Z" },
-    ]
-  },
-  {
     name: "Athens", country: "Greece",
     lat: 37.9838, lng: 23.7275,
     category: "political",
@@ -3443,6 +3440,21 @@ const locations = [
       { title: "‘This is not a joke’: Business community condemns statements against Pakistan’s GSP+ status", source: "Dawn", url: "https://www.dawn.com/news/1985895/this-is-not-a-joke-business-community-condemns-statements-against-pakistans-gsp-status", time: "2026-03-27T12:46:15Z" },
       { title: "Punjab Institute of Mental Health patient drives ambulance to Shahdara hospital posing as ‘new MS’", source: "Dawn", url: "https://www.dawn.com/news/1985711/punjab-institute-of-mental-health-patient-drives-ambulance-to-shahdara-hospital-posing-as-new-ms", time: "2026-03-27T03:48:37Z" },
       { title: "‘The whole country is doing it’: how illegal kidney traders target Pakistan’s desperate brick kiln workers", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/24/pakistan-brick-kiln-workers-selling-kidney-debt-victims", time: "2026-03-24T06:00:12Z" },
+    ]
+  },
+  {
+    name: "Diego Garcia", country: "UK (BIOT)",
+    lat: -7.3195, lng: 72.4229,
+    category: "political",
+    articles: [
+      { title: "Is Iran really able to strike London, and is the UK prepared for an attack?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/is-iran-able-strike-london-is-uk-prepared", time: "2026-03-23T17:04:36Z" },
+      { title: "‘False flag attack’: Iran denies claims it fired missiles at Diego Garcia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/iran-denies-targeting-us-uk-diego-garcia-airbase-claims-false-flag-attack?traffic_source=rss", time: "2026-03-23T13:00:11Z" },
+      { title: "Iran's attack on US-UK Diego Garcia base is not a turning point, but a warning - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-890826", time: "2026-03-22T19:50:01Z" },
+      { title: "Amid Israeli warnings, UK minister says no proof Iran trying to hit Europe, doubts it can do so", source: "Times of Israel", url: "https://www.timesofisrael.com/amid-israeli-warnings-uk-minister-says-no-proof-iran-trying-to-hit-europe-doubts-it-can-do-so/", time: "2026-03-22T13:11:57Z" },
+      { title: "Did Iran launch missiles at US-UK base on Diego Garcia? Here’s what to know", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/did-iran-launch-missiles-at-us-uk-base-on-diego-garcia-heres-what-to-know?traffic_source=rss", time: "2026-03-22T13:03:57Z" },
+      { title: "Iran not believed to have capability or intent to bomb Britain, says UK minister", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/iran-capability-intent-bomb-missiles-britain-steve-reed", time: "2026-03-22T10:42:44Z" },
+      { title: "Trump proven right on Iran's long-range missile capability as regime targets US-UK base, experts say", source: "Fox News", url: "https://www.foxnews.com/world/trump-proven-right-irans-long-range-missile-capability-regime-targets-us-uk-base-experts-say", time: "2026-03-21T22:07:28Z" },
+      { title: "Iran strikes Israeli nuclear town in retaliation for Natanz attack amid escalating conflict", source: "France 24", url: "https://www.france24.com/en/middle-east/20260321-iran-strikes-israeli-nuclear-town-in-retaliation-for-natanz-attack-amid-escalating-conflict", time: "2026-03-21T21:12:12Z" },
     ]
   },
   {
@@ -3503,6 +3515,21 @@ const locations = [
       { title: "Nine people wounded in Bnei Brak by Iranian cluster bomb munitions", source: "Times of Israel", url: "https://www.timesofisrael.com/nine-people-wounded-in-bnei-brak-by-iranian-cluster-bomb-munitions/", time: "2026-03-25T01:20:58Z" },
       { title: "Iran claims Israel, US, attacked near nuclear power plant, no technical damage or casualties", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891089", time: "2026-03-24T21:41:01Z" },
       { title: "Russia warns US-Israeli strikes near Bushehr nuclear plant are extremely dangerous", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-890896", time: "2026-03-23T12:16:15Z" },
+    ]
+  },
+  {
+    name: "South China Sea", country: "International",
+    lat: 15.0, lng: 115.0,
+    category: "conflict",
+    articles: [
+      { title: "Manila, Beijing resume talks on South China Sea, energy security", source: "Straits Times", url: "https://www.straitstimes.com/asia/manila-beijing-resume-talks-on-south-china-sea-energy-security", time: "2026-03-28T15:02:33Z" },
+      { title: "Manila, Beijing resume talks on South China Sea, energy security", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/manila-beijing-resume-talks-on-south-china-sea-energy-security", time: "2026-03-28T15:02:33Z" },
+      { title: "Asean countries warned against exploiting US-China tensions for short-term gain", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348238/asean-countries-warned-against-exploiting-us-china-tensions-short-term-gain?utm_source=rss_feed", time: "2026-03-28T08:00:08Z" },
+      { title: "German defence minister urges strong US presence in Indo-Pacific amid China concerns", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348118/german-defence-minister-urges-strong-us-presence-indo-pacific-amid-china-concerns?utm_source=rss_feed", time: "2026-03-27T09:00:11Z" },
+      { title: "Philippines, France sign military pact amid South China Sea tensions", source: "Straits Times", url: "https://www.straitstimes.com/asia/philippines-france-sign-military-pact-amid-south-china-sea-tensions", time: "2026-03-27T01:42:11Z" },
+      { title: "Philippines, France sign military pact amid South China Sea tensions", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/philippines-france-sign-military-pact-amid-south-china-sea-tensions", time: "2026-03-27T01:42:11Z" },
+      { title: "How much junk is in South China Sea? Beijing flexes surveillance muscle with survey", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347973/how-much-junk-south-china-sea-beijing-flexes-surveillance-muscle-survey?utm_source=rss_feed", time: "2026-03-26T09:30:09Z" },
+      { title: "Tonga PM welcomes US deal to explore deep-sea minerals amid environmental concerns", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/tonga-us-deal-deep-sea-minerals-environmental-concern", time: "2026-03-24T01:32:02Z" },
     ]
   },
   {
@@ -3607,20 +3634,6 @@ const locations = [
     ]
   },
   {
-    name: "South China Sea", country: "International",
-    lat: 15.0, lng: 115.0,
-    category: "conflict",
-    articles: [
-      { title: "Manila, Beijing resume talks on South China Sea, energy security", source: "Straits Times", url: "https://www.straitstimes.com/asia/manila-beijing-resume-talks-on-south-china-sea-energy-security", time: "2026-03-28T15:02:33Z" },
-      { title: "Asean countries warned against exploiting US-China tensions for short-term gain", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348238/asean-countries-warned-against-exploiting-us-china-tensions-short-term-gain?utm_source=rss_feed", time: "2026-03-28T08:00:08Z" },
-      { title: "German defence minister urges strong US presence in Indo-Pacific amid China concerns", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348118/german-defence-minister-urges-strong-us-presence-indo-pacific-amid-china-concerns?utm_source=rss_feed", time: "2026-03-27T09:00:11Z" },
-      { title: "Philippines, France sign military pact amid South China Sea tensions", source: "Straits Times", url: "https://www.straitstimes.com/asia/philippines-france-sign-military-pact-amid-south-china-sea-tensions", time: "2026-03-27T01:42:11Z" },
-      { title: "Philippines, France sign military pact amid South China Sea tensions", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/philippines-france-sign-military-pact-amid-south-china-sea-tensions", time: "2026-03-27T01:42:11Z" },
-      { title: "How much junk is in South China Sea? Beijing flexes surveillance muscle with survey", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347973/how-much-junk-south-china-sea-beijing-flexes-surveillance-muscle-survey?utm_source=rss_feed", time: "2026-03-26T09:30:09Z" },
-      { title: "Tonga PM welcomes US deal to explore deep-sea minerals amid environmental concerns", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/tonga-us-deal-deep-sea-minerals-environmental-concern", time: "2026-03-24T01:32:02Z" },
-    ]
-  },
-  {
     name: "Darfur", country: "Sudan",
     lat: 13.5, lng: 25.0,
     category: "conflict",
@@ -3646,20 +3659,6 @@ const locations = [
       { title: "Nigeria: Court Orders Arrest of Turaki, Factional PDP Chairman", source: "AllAfrica", url: "https://allafrica.com/stories/202603260475.html", time: "2026-03-26T15:17:16Z" },
       { title: "Nigeria: Court Grants Speedy Hearing As Terror Suspects Admit Spying On U.S., Israeli Embassies", source: "AllAfrica", url: "https://allafrica.com/stories/202603260299.html", time: "2026-03-26T10:44:03Z" },
       { title: "Nigeria: Maiduguri Bombings Show New Threat to Civilians", source: "AllAfrica", url: "https://allafrica.com/stories/202603260191.html", time: "2026-03-26T09:51:33Z" },
-    ]
-  },
-  {
-    name: "Bamako", country: "Mali",
-    lat: 12.6392, lng: -8.0029,
-    category: "conflict",
-    articles: [
-      { title: "Trump brings farmers to White House to tout relief from the pain he’s unleashed on them — and bash Somalis along the way", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/rump-farmers-white-house-tariffs-iran-b2947296.html", time: "2026-03-27T18:59:21Z" },
-      { title: "Americans seek redemption at figure skating worlds, just weeks after the Olympics", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5761994/figure-skating-world-championships-malinin-glenn", time: "2026-03-27T12:51:16Z" },
-      { title: "Zimbabwe: Zimbabwe Legalises Ban On Second-Hand Clothes Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202603270101.html", time: "2026-03-27T07:23:25Z" },
-      { title: "Iran starts to formalize its chokehold on the Strait of Hormuz with a 'toll booth' regime", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/iran-tehran-united-nations-strait-of-hormuz-ships-b2946521.html", time: "2026-03-26T19:20:24Z" },
-      { title: "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/26/iran-war-live-us-demands-tehran-accept-defeat-israel-pounds-lebanon?traffic_source=rss", time: "2026-03-26T00:00:00Z" },
-      { title: "Iran calls US proposal to end war ‘maximalist, unreasonable’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/iran-calls-us-proposal-to-end-war-maximalist-unreasonable?traffic_source=rss", time: "2026-03-25T15:11:36Z" },
-      { title: "Trump threatens to deploy ICE to airports amid Homeland Security shutdown", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/trump-threatens-to-deploy-ice-to-airports-amid-homeland-security-shutdown?traffic_source=rss", time: "2026-03-21T16:57:54Z" },
     ]
   },
   {
@@ -3718,6 +3717,32 @@ const locations = [
     ]
   },
   {
+    name: "Eastern Mediterranean", country: "International",
+    lat: 34.0, lng: 33.0,
+    category: "conflict",
+    articles: [
+      { title: "Pope Leo XIV urges Monaco residents to use wealth for good, reject 'idolatry of power and money' fueling wars", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-xiv-urges-monaco-residents-to-use-wealth-for-good-reject-idolatry-of-power-and-money-fueling-wars", time: "2026-03-28T16:57:57Z" },
+      { title: "Iraqi foreign minister: Our country has become part of the geography of the current war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-iraqi-foreign-minister-our-country-has-become-part-of-the-geography-of-the-current-war/", time: "2026-03-27T09:45:42Z" },
+      { title: "WHO warns of health crisis ‘unfolding in real time’ across Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/who-warns-of-health-crisis-unfolding-in-real-time-across-middle-east", time: "2026-03-26T05:00:27Z" },
+      { title: "Israel says it will seize parts of southern Lebanon as ‘defensive buffer’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/netanyahu-vows-further-strikes-iran-lebanon-missile-hits-tel-aviv-middle-east-crisis", time: "2026-03-24T18:02:00Z" },
+      { title: "Defense Minister Israel Katz confirms plan to occupy southern Lebanon as 'defensive buffer'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891052", time: "2026-03-24T16:21:42Z" },
+      { title: "On Beirut’s Waterfront, Loss Meets Life, and Luxury, Amid War", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/middleeast/beirut-israel-war-displaced-corniche.html", time: "2026-03-22T09:01:08Z" },
+    ]
+  },
+  {
+    name: "Bamako", country: "Mali",
+    lat: 12.6392, lng: -8.0029,
+    category: "conflict",
+    articles: [
+      { title: "Trump brings farmers to White House to tout relief from the pain he’s unleashed on them — and bash Somalis along the way", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/rump-farmers-white-house-tariffs-iran-b2947296.html", time: "2026-03-27T18:59:21Z" },
+      { title: "Americans seek redemption at figure skating worlds, just weeks after the Olympics", source: "NPR", url: "https://www.npr.org/2026/03/27/nx-s1-5761994/figure-skating-world-championships-malinin-glenn", time: "2026-03-27T12:51:16Z" },
+      { title: "Zimbabwe: Zimbabwe Legalises Ban On Second-Hand Clothes Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202603270101.html", time: "2026-03-27T07:23:25Z" },
+      { title: "Iran starts to formalize its chokehold on the Strait of Hormuz with a 'toll booth' regime", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/iran-tehran-united-nations-strait-of-hormuz-ships-b2946521.html", time: "2026-03-26T19:20:24Z" },
+      { title: "Iran war live: US demands Tehran accept defeat; Israel pounds Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/26/iran-war-live-us-demands-tehran-accept-defeat-israel-pounds-lebanon?traffic_source=rss", time: "2026-03-26T00:00:00Z" },
+      { title: "Iran calls US proposal to end war ‘maximalist, unreasonable’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/iran-calls-us-proposal-to-end-war-maximalist-unreasonable?traffic_source=rss", time: "2026-03-25T15:11:36Z" },
+    ]
+  },
+  {
     name: "Windhoek", country: "Namibia",
     lat: -22.5609, lng: 17.0658,
     category: "economic",
@@ -3741,18 +3766,6 @@ const locations = [
       { title: "India among five nations granted passage through Strait of Hormuz by Tehran", source: "The Hindu", url: "https://www.thehindu.com/news/national/india-among-five-nations-granted-passage-through-strait-of-hormuz-by-tehran/article70786984.ece", time: "2026-03-26T06:36:02Z" },
       { title: "Israel, Iran trade strikes as U.S. says it is pausing attacks on energy targets", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/24/us-trump-iran-israel-tel-aviv-strike/", time: "2026-03-24T15:28:22Z" },
       { title: "Rare Middle East storm could bring floods, damaging winds and tornadoes", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/03/24/middle-east-storm-flooding-tornado-iran-dubai/", time: "2026-03-24T13:41:27Z" },
-    ]
-  },
-  {
-    name: "Eastern Mediterranean", country: "International",
-    lat: 34.0, lng: 33.0,
-    category: "conflict",
-    articles: [
-      { title: "Iraqi foreign minister: Our country has become part of the geography of the current war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260327-iraqi-foreign-minister-our-country-has-become-part-of-the-geography-of-the-current-war/", time: "2026-03-27T09:45:42Z" },
-      { title: "WHO warns of health crisis ‘unfolding in real time’ across Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/who-warns-of-health-crisis-unfolding-in-real-time-across-middle-east", time: "2026-03-26T05:00:27Z" },
-      { title: "Israel says it will seize parts of southern Lebanon as ‘defensive buffer’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/netanyahu-vows-further-strikes-iran-lebanon-missile-hits-tel-aviv-middle-east-crisis", time: "2026-03-24T18:02:00Z" },
-      { title: "Defense Minister Israel Katz confirms plan to occupy southern Lebanon as 'defensive buffer'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891052", time: "2026-03-24T16:21:42Z" },
-      { title: "On Beirut’s Waterfront, Loss Meets Life, and Luxury, Amid War", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/middleeast/beirut-israel-war-displaced-corniche.html", time: "2026-03-22T09:01:08Z" },
     ]
   },
   {
@@ -3780,6 +3793,18 @@ const locations = [
     ]
   },
   {
+    name: "Baghdad", country: "Iraq",
+    lat: 33.3152, lng: 44.3661,
+    category: "conflict",
+    articles: [
+      { title: "Strike kills Iraqi government-linked fighter, wounds six", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/strike-kills-iraqi-government-linked-fighter-wounds-six", time: "2026-03-28T17:21:22Z" },
+      { title: "Al-Sudani deserves political pity", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-al-sudani-deserves-political-pity/", time: "2026-03-25T18:51:46Z" },
+      { title: "US strikes against Iran-backed militias in Iraq reportedly continue as Baghdad warns of 'right to respond'", source: "Fox News", url: "https://www.foxnews.com/world/us-strikes-against-iran-backed-militias-iraq-reportedly-continue-baghdad-warns-right-respond", time: "2026-03-25T15:09:31Z" },
+      { title: "Iraqi factions announce carrying out 23 military operations targeting US bases", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-iraqi-factions-announce-carrying-out-23-military-operations-targeting-us-bases/", time: "2026-03-25T14:24:38Z" },
+      { title: "Iranian-backed militias claim 30 killed, wounded in US airstrikes on base", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891019", time: "2026-03-24T11:29:42Z" },
+    ]
+  },
+  {
     name: "Prague", country: "Czech Republic",
     lat: 50.0755, lng: 14.4378,
     category: "political",
@@ -3789,17 +3814,6 @@ const locations = [
       { title: "Thousands of Irish fans in Prague dare to hope: ‘We’re gonna nab it’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/26/thousands-of-irish-fans-in-prague-dare-to-hope-were-gonna-nab-it/", time: "2026-03-26T15:24:59Z" },
       { title: "Tens of thousands rally in Prague to protest new PM Andrej Babis", source: "France 24", url: "https://www.france24.com/en/tens-of-thousands-rally-in-prague-to-protest-new-pm-andrej-babis", time: "2026-03-22T12:46:47Z" },
       { title: "Ukraine war briefing: US, Ukrainian negotiators meet in Florida as Russian attacks kill more civilians", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/ukraine-war-briefing-us-ukrainian-negotiators-meet-in-florida-as-russian-attacks-kill-more-civilians", time: "2026-03-22T02:10:06Z" },
-    ]
-  },
-  {
-    name: "Baghdad", country: "Iraq",
-    lat: 33.3152, lng: 44.3661,
-    category: "conflict",
-    articles: [
-      { title: "Al-Sudani deserves political pity", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-al-sudani-deserves-political-pity/", time: "2026-03-25T18:51:46Z" },
-      { title: "US strikes against Iran-backed militias in Iraq reportedly continue as Baghdad warns of 'right to respond'", source: "Fox News", url: "https://www.foxnews.com/world/us-strikes-against-iran-backed-militias-iraq-reportedly-continue-baghdad-warns-right-respond", time: "2026-03-25T15:09:31Z" },
-      { title: "Iraqi factions announce carrying out 23 military operations targeting US bases", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-iraqi-factions-announce-carrying-out-23-military-operations-targeting-us-bases/", time: "2026-03-25T14:24:38Z" },
-      { title: "Iranian-backed militias claim 30 killed, wounded in US airstrikes on base", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891019", time: "2026-03-24T11:29:42Z" },
     ]
   },
   {
@@ -3975,6 +3989,16 @@ const locations = [
     ]
   },
   {
+    name: "Odesa", country: "Ukraine",
+    lat: 46.4825, lng: 30.7233,
+    category: "conflict",
+    articles: [
+      { title: "Zelensky condemns Russian drone strike on Odesa as ‘pure terror’ after maternity hospital hit", source: "The Independent", url: "https://www.independent.co.uk/tv/news/ukraine-russia-war-hospital-drone-strike-video-b2947654.html", time: "2026-03-28T16:40:30Z" },
+      { title: "Russian strikes on Ukraine kill at least 5", source: "France 24", url: "https://www.france24.com/en/russian-strikes-on-ukraine-kill-at-least-5", time: "2026-03-28T15:54:30Z" },
+      { title: "‘A toxic punch’: fears Russia’s war is pushing the Black Sea and its dolphins past tipping point", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/a-toxic-punch-fears-russia-war-black-sea-dolphins", time: "2026-03-26T07:00:30Z" },
+    ]
+  },
+  {
     name: "Hanoi", country: "Vietnam",
     lat: 21.0285, lng: 105.8542,
     category: "diplomacy",
@@ -4137,15 +4161,6 @@ const locations = [
     articles: [
       { title: "Russia-bound cargo ship seen dropping anchor near subsea cables off Irish coast", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/03/28/russia-bound-cargo-ship-seen-dropping-anchor-near-subsea-cables-off-irish-coast/", time: "2026-03-28T06:00:00Z" },
       { title: "Moscow and St Petersburg internet blackouts raise fears of Kremlin surveillance", source: "France 24", url: "https://www.france24.com/en/europe/20260326-moscow-mobile-internet-restored-as-saint-petersburg-goes-offline", time: "2026-03-26T18:10:47Z" },
-    ]
-  },
-  {
-    name: "Odesa", country: "Ukraine",
-    lat: 46.4825, lng: 30.7233,
-    category: "conflict",
-    articles: [
-      { title: "Russian strikes on Ukraine kill at least 5", source: "France 24", url: "https://www.france24.com/en/russian-strikes-on-ukraine-kill-at-least-5", time: "2026-03-28T15:54:30Z" },
-      { title: "‘A toxic punch’: fears Russia’s war is pushing the Black Sea and its dolphins past tipping point", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/a-toxic-punch-fears-russia-war-black-sea-dolphins", time: "2026-03-26T07:00:30Z" },
     ]
   },
   {
