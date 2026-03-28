@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:34 UTC, 28 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:37 UTC, 28 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">28 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:34 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China-Taiwan tensions escalate amid NATO concerns and US-Taiwan defense ties</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "South Korea’s view on the “China (Taiwan)” spat", "DPM Dar says Iran has allowed ‘20 more ships’ under Pakistan flag to cross Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China escalates trade disputes and regional maritime tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Disinformation targets Taiwan LNG supply"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Disinformation and data security threats target Taiwan and allies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["IDF says up to 90% of Iran’s weapons industry could be hit within days", "Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Iran&#x27;s military capabilities face potential strikes and political pressure</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Impact of Nepal’s election on China", "Japan’s Chinese population growing amid souring ties"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">China&#x27;s influence expands across Nepal and Japan demographics</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan defines key industries: sources", "Taiwanese artistry"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan showcases cultural and economic identity developments</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:37 UTC, 28 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China used fake profiles to spy on NATO, EU: source", "Interoperability touted as a deterrent against China", "EU urges closer cooperation with Taiwan, partners", "US senators visiting Taiwan to urge defense resolve", "South Korea’s view on the “China (Taiwan)” spat"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US and allies strengthen Taiwan support amid China tensions</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["China starts trade probes against US", "Disinformation targets Taiwan LNG supply", "Japan’s Chinese population growing amid souring ties", "Coast guard says Taiwanese boat in Xiamen, crew safe"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:80%"></div></div><span class="ai-bullet-text">China escalates trade and information warfare against regional rivals</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Court convicts pair over sale of data of Chinese", "Impact of Nepal’s election on China", "Taiwan defines key industries: sources"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Chinese economic influence and political impacts spread across Asia</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["IDF says up to 90% of Iran’s weapons industry could be hit within days", "Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Iran faces potential military strikes and political opposition intensifies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan in Time: Ferry in flames: The Qiandao Lake tragedy", "Mercedes set up for hot Japanese Grand Prix"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Regional incidents impact transportation and sporting events in Asia</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["3 journalists killed in Israeli airstrike on southern Lebanese city of Jezzine"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:20%"></div></div><span class="ai-bullet-text">Israeli airstrikes kill journalists in southern Lebanon conflict</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -146,6 +146,8 @@ const locations = [
     articles: [
       { title: "IDF says up to 90% of Iran’s weapons industry could be hit within days", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891471", time: "2026-03-28T21:58:31Z" },
       { title: "Crown Prince Reza Pahlavi to CPAC: A free Iran is within reach right now", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891469", time: "2026-03-28T21:25:04Z" },
+      { title: "Airstrikes batter a university and residential zones in Tehran.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/28/world/iran-war-trump-israel-oil/airstrikes-university-tehran", time: "2026-03-28T20:23:30Z" },
+      { title: "European allies say Russia is helping Iran more than acknowledged", source: "CBS News", url: "https://www.cbsnews.com/news/russia-iran-war-european-allies-intelligence-help/", time: "2026-03-28T20:16:15Z" },
       { title: "Ukraine Finalizes Air Defense Deals With Gulf Nations Amid War in Mideast", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/ukraine-air-defense-deal-qatar-saudi-arabia.html", time: "2026-03-28T19:19:10Z" },
       { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
       { title: "Iran-backed Houthis open third front against Israel as Tehran seeks leverage ahead of talks", source: "Fox News", url: "https://www.foxnews.com/world/iran-backed-houthis-open-third-front-against-israel-tehran-seeks-leverage-ahead-talks", time: "2026-03-28T18:00:32Z" },
@@ -157,6 +159,7 @@ const locations = [
       { title: "One month in, disapproval high but US lawmakers take no action on Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/one-month-in-disapproval-high-but-us-lawmakers-take-no-action-on-iran-war?traffic_source=rss", time: "2026-03-28T15:39:46Z" },
       { title: "Ugandan military chief vows to back Israel against Iran in viral social media barrage", source: "Fox News", url: "https://www.foxnews.com/world/ugandan-military-chief-vows-back-israel-against-iran-viral-social-media-barrage", time: "2026-03-28T15:38:05Z" },
       { title: "US has destroyed only a third of Iran’s missiles, intelligence suggests", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/us-destroyed-third-iran-missiles-intelligence-suggests-trump", time: "2026-03-28T14:56:04Z" },
+      { title: "Iran risks renewed protests as citizens reach 'breaking point' amid war-stricken economy", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891462", time: "2026-03-28T14:51:46Z" },
       { title: "Pakistan Set to Host Top Regional Diplomats for Talks on Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/middleeast/iran-pakistan-diplomacy.html", time: "2026-03-28T14:21:47Z" },
       { title: "Houthi forces enter Iran conflict with missile attacks on Israeli military sites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/houthi-forces-enter-iran-conflict-with-missile-attacks-on-israeli-military-sites", time: "2026-03-28T14:14:45Z" },
       { title: "Iran warns neighbours not to let ‘enemies run the war’ from their land", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/iran-warns-neighbours-not-to-let-enemies-run-the-war-from-their-land?traffic_source=rss", time: "2026-03-28T13:34:32Z" },
@@ -641,9 +644,6 @@ const locations = [
       { title: "How the Iran war is wasting American resources", source: "NPR", url: "https://www.npr.org/2026/03/21/nx-s1-5753825/how-the-iran-war-is-wasting-american-resources", time: "2026-03-21T21:47:48Z" },
       { title: "Allies in name only: Israel left alone against Iranian aggression - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-890534", time: "2026-03-21T21:30:00Z" },
       { title: "Mojtaba Khamenei alive, but IRGC leading Iran currently, sources tell Post", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890716", time: "2026-03-21T21:01:09Z" },
-      { title: "As Israeli owners struggle from daily Iranian attacks, pets pay the price of war", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890607", time: "2026-03-21T20:00:00Z" },
-      { title: "Iranian missile struck town housing nuclear facility: Iran war shows 'no signs of abating'", source: "France 24", url: "https://www.france24.com/en/iranian-missile-struck-town-housing-nuclear-facility-iran-war-shows-no-sign-of-abating", time: "2026-03-21T19:47:12Z" },
-      { title: "Joe Kent speaks out against Iran war at prayer event after resigning", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/21/joe-kent-speaks-out-against-iran-war-at-prayer-event-after-resigning?traffic_source=rss", time: "2026-03-21T19:46:04Z" },
     ]
   },
   {
@@ -651,6 +651,8 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "3 journalists killed in Israeli airstrike on southern Lebanese city of Jezzine", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-3-journalists-killed-in-israeli-airstrike-on-southern-lebanese-city-of-jezzine/", time: "2026-03-28T20:35:13Z" },
+      { title: "Missiles hit southern Israeli city of Eilat", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/28/missiles-hit-southern-israeli-city-of-eilat?traffic_source=rss", time: "2026-03-28T19:59:31Z" },
       { title: "“Schadenfreude, how sweet it is”", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-schadenfreude-how-sweet-it-is/", time: "2026-03-28T19:18:40Z" },
       { title: "Fitch leaves Israel's rating outlook negative and foresees growth in deficit", source: "Haaretz", url: "https://www.haaretz.com/israel-news/business/economy-finance/2026-03-28/ty-article/.premium/fitch-leaves-israels-rating-outlook-negative-and-foresees-growth-in-deficit/0000019d-3548-d774-afdd-bdce4d650000", time: "2026-03-28T18:43:49Z" },
       { title: "Who says Israeli attacks in Lebanon kill nine paramedics, wound seven", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/who-says-israeli-attacks-lebanon-kill-nine-paramedics-wound-seven", time: "2026-03-28T18:15:42Z" },
@@ -1008,7 +1010,6 @@ const locations = [
       { title: "Several hurt in Iranian cluster bomb attack around Tel Aviv; Hezbollah rocket in north kills 1", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-22-2026/", time: "2026-03-21T23:55:31Z" },
       { title: "What would a radioactive leak from Dimona mean for southern Israel? - explainer", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/article-890721", time: "2026-03-21T23:52:03Z" },
       { title: "Dimona residents report repeated runs to shelter during Iranian missile attack", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-890717", time: "2026-03-21T21:24:28Z" },
-      { title: "Robert Mueller, who probed Russia’s 2016 election meddling, dies; Trump: ‘Good, I’m glad’", source: "Times of Israel", url: "https://www.timesofisrael.com/robert-mueller-who-probed-russias-2016-election-meddling-dies-trump-good-im-glad/", time: "2026-03-21T20:30:09Z" },
     ]
   },
   {
@@ -1016,6 +1017,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Iran allows Pakistani ships through Hormuz in ‘harbinger of peace’ move", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-allows-pakistani-ships-through-hormuz-harbinger-peace-move", time: "2026-03-28T19:42:12Z" },
       { title: "Qatar elder statesman warns Israel’s war on Iran risks spiralling out of control", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/qatar-elder-statesman-warns-israels-war-iran-risks-spiralling-out-control", time: "2026-03-28T19:21:03Z" },
       { title: "Strikes intensify in Middle East as Strait of Hormuz remains locked down", source: "CBS News", url: "https://www.cbsnews.com/video/strikes-intensify-in-middle-east-as-strait-of-hormuz-remains-locked-down/", time: "2026-03-28T13:48:00Z" },
       { title: "Trump claims Iran allowed 10 tankers through Hormuz. Evidence shows otherwise", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-03-28/ty-article/.premium/trump-claims-iran-allowed-10-tankers-through-hormuz-evidence-shows-otherwise/0000019d-33ad-d1e2-ab9d-33ed7ffa0000", time: "2026-03-28T11:14:53Z" },
@@ -1564,6 +1566,7 @@ const locations = [
       { title: "Chinese dominates OED’s update", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/29/2003854635", time: "2026-03-29T00:00:00Z" },
       { title: "Impact of Nepal’s election on China", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/29/2003854636", time: "2026-03-29T00:00:00Z" },
       { title: "China starts trade probes against US", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/03/29/2003854671", time: "2026-03-29T00:00:00Z" },
+      { title: "Kash Patel’s FBI to release Eric Swalwell files from decades-old investigation involving Chinese spy: report", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/kash-patel-fbi-eric-swalwell-files-b2947688.html", time: "2026-03-28T19:44:52Z" },
       { title: "1 month, 2 straits, more strikes: how long will the US-Israeli war on Iran last?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348265/1-month-2-straits-more-strikes-how-long-will-us-israeli-war-iran-last?utm_source=rss_feed", time: "2026-03-28T14:31:19Z" },
       { title: "Beijing tightens drone rules, citing ‘low-altitude security’ concerns", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3348257/beijing-tightens-drone-rules-citing-low-altitude-security-concerns?utm_source=rss_feed", time: "2026-03-28T12:30:08Z" },
       { title: "AI ‘collusion’ forcing down wages a bigger threat than job-stealing robots: ILO economist", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3348124/ai-collusion-forcing-down-wages-bigger-threat-job-stealing-robots-ilo-economist?utm_source=rss_feed", time: "2026-03-28T11:00:10Z" },
@@ -2173,6 +2176,69 @@ const locations = [
     ]
   },
   {
+    name: "Kyiv", country: "Ukraine",
+    lat: 50.4501, lng: 30.5234,
+    category: "conflict",
+    articles: [
+      { title: "European allies say Russia is helping Iran more than acknowledged", source: "CBS News", url: "https://www.cbsnews.com/news/russia-iran-war-european-allies-intelligence-help/", time: "2026-03-28T20:16:15Z" },
+      { title: "Ukraine Finalizes Air Defense Deals With Gulf Nations Amid War in Mideast", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/ukraine-air-defense-deal-qatar-saudi-arabia.html", time: "2026-03-28T19:19:10Z" },
+      { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
+      { title: "Ukraine’s Zelenskyy signs air defence deals with UAE, Qatar on Gulf tour", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/zelenskyy-signs-air-defence-deals-with-uae-qatar-on-gulf-tour?traffic_source=rss", time: "2026-03-28T16:16:28Z" },
+      { title: "Deadly Russian strikes damage port, maternity hospital", source: "France 24", url: "https://www.france24.com/en/deadly-russian-strikes-damage-port-maternity-hospital", time: "2026-03-28T15:08:38Z" },
+      { title: "MEPs urge Commission leaders to stop Russia from returning to the Venice Biennale", source: "Euronews", url: "http://www.euronews.com/culture/2026/03/28/meps-urge-commission-leaders-to-stop-russia-from-returning-to-the-venice-biennale", time: "2026-03-28T12:39:32Z" },
+      { title: "Consumers caught in triple stack of pain", source: "Axios", url: "https://www.axios.com/2026/03/28/iran-war-inflation-costs", time: "2026-03-28T12:19:25Z" },
+      { title: "Strikes kill at least 5 in Ukraine, as Zelenskyy discusses drone defense on UAE visit", source: "ABC News", url: "https://abcnews.com/International/wireStory/nighttime-strikes-kill-5-ukraine-zelenskyy-discusses-drone-131497906", time: "2026-03-28T11:55:57Z" },
+      { title: "Russian strikes on Ukraine kill 4 as deal to end war dims", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/russian-strikes-on-ukraine-cities-kill-4-as-deal-to-end-war-dims?traffic_source=rss", time: "2026-03-28T11:11:48Z" },
+      { title: "Zelenskyy arrives in Qatar as Gulf tour shapes new partnerships for Ukraine", source: "Euronews", url: "http://www.euronews.com/2026/03/28/zelenskyy-arrives-in-qatar-as-gulf-tour-shapes-new-partnerships-for-ukraine", time: "2026-03-28T10:35:36Z" },
+      { title: "Ukraine rejects Iran claim it destroyed anti-drone base", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565635-middle-east/", time: "2026-03-28T08:56:36Z" },
+      { title: "Russian attacks kill four in Ukraine, child dies in drone strike on Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260328-strikes-on-ukrainian-cities-kill-three-child-dies-in-drone-attack-on-moscow", time: "2026-03-28T08:17:04Z" },
+      { title: "Strikes on Ukrainian cities kill three - authorities", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565631-ukraine-russia/", time: "2026-03-28T07:41:35Z" },
+      { title: "Ukraine's drone defense tech reshapes combat as warfare evolves", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/ukraines-drone-defense-tech-reshapes-combat-as-warfare-evolves", time: "2026-03-27T22:40:23Z" },
+      { title: "Iran's drone attacks raise concerns about U.S. readiness for next-gen threats", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/irans-drone-attacks-raise-concerns-about-u-s-readiness-for-next-gen-threats", time: "2026-03-27T22:35:03Z" },
+      { title: "US could divert Kyiv arms to help attacks on Iran - Rubio", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0327/1565584-us-ukraine/", time: "2026-03-27T17:59:36Z" },
+      { title: "G7 meets on Russia-Ukraine war as Rubio tries to sell U.S. strategy in Iran to skeptical allies insulted by Trump", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/g7-meets-on-russia-ukraine-war-as-rubio-tries-to-sell-u-s-strategy-in-iran-to-skeptical-allies-insulted-by-trump", time: "2026-03-27T13:31:56Z" },
+      { title: "Ukraine announces ‘mutually beneficial’ defence deal with Saudi Arabia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/ukraine-announces-defense-pact-with-saudi-arabia?traffic_source=rss", time: "2026-03-27T12:25:11Z" },
+      { title: "Ukraine and Saudi Arabia announce defence cooperation in Kyiv’s first deal in the Gulf", source: "Euronews", url: "http://www.euronews.com/2026/03/27/ukraine-and-saudi-arabia-announce-defence-cooperation-in-kyivs-first-deal-in-the-gulf", time: "2026-03-27T11:39:11Z" },
+      { title: "G7 meets on the Iran war as Rubio tries to sell US strategy to skeptical allies insulted by Trump", source: "ABC News", url: "https://abcnews.com/International/wireStory/g7-meets-iran-war-rubio-sell-us-strategy-131460101", time: "2026-03-27T11:27:23Z" },
+      { title: "Starmer says Iran and Ukraine wars could reshape global order and ‘define us for a generation’ – UK politics live", source: "The Guardian", url: "https://www.theguardian.com/politics/live/2026/mar/27/starmer-says-iran-and-ukraine-wars-could-reshape-global-order-and-define-us-for-a-generation-uk-politics-live", time: "2026-03-27T09:48:37Z" },
+      { title: "Ukraine fends off increased attacks, strikes Russian oil revenue", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/27/ukraine-fends-off-increased-attacks-strikes-russian-oil-revenue?traffic_source=rss", time: "2026-03-27T08:04:34Z" },
+      { title: "Zelensky makes surprise Saudi Arabia trip for ‘important meetings’ as Ukraine steps up Middle East support", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-zelensky-saudi-arabia-iran-war-b2946730.html", time: "2026-03-27T04:37:01Z" },
+      { title: "Luna hosts Russian lawmakers to mixed GOP reactions, outrage from others", source: "The Hill", url: "https://thehill.com/policy/international/5803437-luna-russian-delegation-meeting/", time: "2026-03-26T23:07:38Z" },
+      { title: "Save us, Elon Musk! X could deboost foreign slop accounts ruining public discourse", source: "The Hill", url: "https://thehill.com/opinion/robbys-radar/5802763-improving-x-discourse-social-media/", time: "2026-03-26T18:27:56Z" },
+      { title: "Zelensky visits Saudi Arabia after offering Ukraine's drone expertise", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2r4wxdw3no?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:24:13Z" },
+      { title: "Zelensky makes surprise Saudi Arabia trip for ‘important meetings’ as Ukraine steps up Middle East support", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/zelensky-saudi-arabia-ukraine-iran-war-b2946435.html", time: "2026-03-26T17:37:00Z" },
+      { title: "European Allies Worry Russia Is Preparing to Deliver Drones to Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/iran-russia-europe-drones.html", time: "2026-03-26T17:12:52Z" },
+      { title: "Ukraine-Russia war latest: Trump says US could divert weapons from Kyiv to Middle East", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-territory-peace-talks-b2945082.html", time: "2026-03-26T17:08:09Z" },
+      { title: "G7 meets in France to mend rupture with US on Middle East war", source: "France 24", url: "https://www.france24.com/en/europe/20260326-g7-meets-in-france-mend-rupture-with-us-on-middle-east-war", time: "2026-03-26T16:17:39Z" },
+      { title: "Immigrant trucker returns to war-torn Ukraine rather than risk ICE encounter: ‘I preferred going back home’", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/trump-truck-license-immigrant-job-loss", time: "2026-03-26T14:00:40Z" },
+      { title: "Trump’s strategic impatience threatens his efforts in Ukraine and Iran", source: "The Hill", url: "https://thehill.com/opinion/national-security/5800655-trump-strategic-patience-war/", time: "2026-03-26T11:00:00Z" },
+      { title: "Facing European cold shoulder, Ukraine turns to Middle East partners", source: "Euronews", url: "http://www.euronews.com/2026/03/26/facing-european-cold-shoulder-ukraine-turns-to-middle-east-partners", time: "2026-03-26T09:36:26Z" },
+      { title: "In Rural Ukraine, Basic Health Care Is a Casualty of War", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/ukraine-russia-war-health-care.html", time: "2026-03-26T09:01:16Z" },
+      { title: "Zimbabwe says 15 of its citizens killed after fraudulent recruitment into Russia-Ukraine war", source: "ABC News", url: "https://abcnews.com/International/wireStory/zimbabwe-15-citizens-killed-after-fraudulent-recruitment-russia-131410142", time: "2026-03-25T20:13:36Z" },
+      { title: "Zimbabwe says 15 of its citizens killed after fraudulent recruitment by Russia into Ukraine war", source: "Euronews", url: "http://www.euronews.com/2026/03/25/zimbabwe-says-15-of-its-citizens-killed-after-fraudulent-recruitment-by-russia-into-ukrain", time: "2026-03-25T19:48:44Z" },
+      { title: "Russia hits Ukrainian cities, intensifying bombing as U.S. focuses on Iran", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/25/ukraine-russia-drone-attack/", time: "2026-03-25T17:34:22Z" },
+      { title: "Ukraine: Massive wave of daytime Russian strikes hits sites nationwide", source: "France 24", url: "https://www.france24.com/en/video/20260325-ukraine-massive-wave-of-daytime-russian-strikes-hits-sites-nationwide", time: "2026-03-25T14:34:13Z" },
+      { title: "Estonia and Latvia say territories hit by stray Ukrainian drones", source: "BBC News", url: "https://www.bbc.com/news/articles/c1eql309n12o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T12:42:14Z" },
+      { title: "Estonia and Latvia say they were hit by drones as Ukraine unleashes massive attack on Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260325-estonia-and-latvia-say-they-were-hit-by-drones-as-ukraine-unleashes-massive-attack-on-russia", time: "2026-03-25T10:02:18Z" },
+      { title: "Ukraine Finally Got Battlefield Momentum. Now Comes a Russian Offensive.", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/europe/ukraine-russia-war-zaporizhzhia.html", time: "2026-03-25T09:41:18Z" },
+      { title: "Moldova imposes 60-day energy emergency after Russian strikes in Ukraine cut key power line", source: "ABC News", url: "https://abcnews.com/International/wireStory/moldova-imposes-60-day-energy-emergency-after-russian-131373623", time: "2026-03-25T06:44:53Z" },
+      { title: "Russian weapons, tactics seen in Ukraine are shaping Myanmar’s civil war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/russian-weapons-tactics-seen-in-ukraine-are-shaping-myanmars-civil-war?traffic_source=rss", time: "2026-03-24T23:43:51Z" },
+      { title: "Russia Launches Daytime Attack on Ukraine With Over 500 Drones", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/russia-attack-drones-ukraine-lviv.html", time: "2026-03-24T21:03:01Z" },
+      { title: "Russia hits Ukraine with rare daytime barrage as new offensive begins", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/russia-hits-ukraine-with-deadly-daytime-barrage-as-spring-offensive-starts?traffic_source=rss", time: "2026-03-24T20:15:35Z" },
+      { title: "Ukraine Unesco site damaged as Russia launches 400 drones in deadly daytime attack", source: "BBC News", url: "https://www.bbc.com/news/articles/cz90gpyw90wo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:28:54Z" },
+      { title: "Russia launches fresh wave of strikes on civilian areas across Ukraine", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/russia-strikes-civilian-areas-ukraine", time: "2026-03-24T13:41:00Z" },
+      { title: "At least five killed in massive wave of Russian strikes across Ukraine, officials say", source: "BBC News", url: "https://www.bbc.com/news/articles/c87wxvn0z3vo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T11:09:21Z" },
+      { title: "Ukraine Spent Big to Shield Energy Industry From Drones. Is the Mideast Next?", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/ukraine-middle-east-oil-and-gas-drones.html", time: "2026-03-24T04:01:05Z" },
+      { title: "Ukraine strikes key Russian oil port and refinery", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/ukraine-strikes-key-russian-oil-port-and-refinery?traffic_source=rss", time: "2026-03-23T20:35:31Z" },
+      { title: "Could the Iran war help Ukraine get back in Trump's good books?", source: "CBS News", url: "https://www.cbsnews.com/news/trump-ukraine-iran-war-us-weapons-stockpiles-kyiv-sees-opportunities/", time: "2026-03-23T16:31:49Z" },
+      { title: "A Choice of Deadly Drones Is Only a Few Clicks Away for Ukrainian Troops", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/ukraine-drones-marketplace-military-russia.html", time: "2026-03-23T09:34:28Z" },
+      { title: "Ukrainians are growing more pessimistic about the prospects for peace, survey says", source: "NPR", url: "https://www.npr.org/2026/03/23/nx-s1-5754745/ukrainians-are-growing-more-pessimistic-about-the-prospects-for-peace-survey-says", time: "2026-03-23T08:43:20Z" },
+      { title: "What a team of investigative reporters found out about Banksy's identity", source: "NPR", url: "https://www.npr.org/2026/03/22/nx-s1-5753796/what-a-team-of-investigative-reporters-found-out-about-banksys-identity", time: "2026-03-22T21:26:35Z" },
+      { title: "Ukraine’s Zelenskyy urges allies to pressure Russia ahead of US talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/ukraines-zelenskyy-urges-allies-to-pressure-russia-ahead-of-us-talks?traffic_source=rss", time: "2026-03-22T17:42:52Z" },
+      { title: "Russian attacks kill six in Ukraine, officials say", source: "BBC News", url: "https://www.bbc.com/news/articles/crl18nwjzzzo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T11:07:06Z" },
+    ]
+  },
+  {
     name: "Moscow", country: "Russia",
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
@@ -2235,72 +2301,11 @@ const locations = [
     ]
   },
   {
-    name: "Kyiv", country: "Ukraine",
-    lat: 50.4501, lng: 30.5234,
-    category: "conflict",
-    articles: [
-      { title: "Ukraine Finalizes Air Defense Deals With Gulf Nations Amid War in Mideast", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/ukraine-air-defense-deal-qatar-saudi-arabia.html", time: "2026-03-28T19:19:10Z" },
-      { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
-      { title: "Ukraine’s Zelenskyy signs air defence deals with UAE, Qatar on Gulf tour", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/zelenskyy-signs-air-defence-deals-with-uae-qatar-on-gulf-tour?traffic_source=rss", time: "2026-03-28T16:16:28Z" },
-      { title: "Deadly Russian strikes damage port, maternity hospital", source: "France 24", url: "https://www.france24.com/en/deadly-russian-strikes-damage-port-maternity-hospital", time: "2026-03-28T15:08:38Z" },
-      { title: "MEPs urge Commission leaders to stop Russia from returning to the Venice Biennale", source: "Euronews", url: "http://www.euronews.com/culture/2026/03/28/meps-urge-commission-leaders-to-stop-russia-from-returning-to-the-venice-biennale", time: "2026-03-28T12:39:32Z" },
-      { title: "Consumers caught in triple stack of pain", source: "Axios", url: "https://www.axios.com/2026/03/28/iran-war-inflation-costs", time: "2026-03-28T12:19:25Z" },
-      { title: "Strikes kill at least 5 in Ukraine, as Zelenskyy discusses drone defense on UAE visit", source: "ABC News", url: "https://abcnews.com/International/wireStory/nighttime-strikes-kill-5-ukraine-zelenskyy-discusses-drone-131497906", time: "2026-03-28T11:55:57Z" },
-      { title: "Russian strikes on Ukraine kill 4 as deal to end war dims", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/russian-strikes-on-ukraine-cities-kill-4-as-deal-to-end-war-dims?traffic_source=rss", time: "2026-03-28T11:11:48Z" },
-      { title: "Zelenskyy arrives in Qatar as Gulf tour shapes new partnerships for Ukraine", source: "Euronews", url: "http://www.euronews.com/2026/03/28/zelenskyy-arrives-in-qatar-as-gulf-tour-shapes-new-partnerships-for-ukraine", time: "2026-03-28T10:35:36Z" },
-      { title: "Ukraine rejects Iran claim it destroyed anti-drone base", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565635-middle-east/", time: "2026-03-28T08:56:36Z" },
-      { title: "Russian attacks kill four in Ukraine, child dies in drone strike on Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260328-strikes-on-ukrainian-cities-kill-three-child-dies-in-drone-attack-on-moscow", time: "2026-03-28T08:17:04Z" },
-      { title: "Strikes on Ukrainian cities kill three - authorities", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565631-ukraine-russia/", time: "2026-03-28T07:41:35Z" },
-      { title: "Ukraine's drone defense tech reshapes combat as warfare evolves", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/ukraines-drone-defense-tech-reshapes-combat-as-warfare-evolves", time: "2026-03-27T22:40:23Z" },
-      { title: "Iran's drone attacks raise concerns about U.S. readiness for next-gen threats", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/irans-drone-attacks-raise-concerns-about-u-s-readiness-for-next-gen-threats", time: "2026-03-27T22:35:03Z" },
-      { title: "US could divert Kyiv arms to help attacks on Iran - Rubio", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0327/1565584-us-ukraine/", time: "2026-03-27T17:59:36Z" },
-      { title: "G7 meets on Russia-Ukraine war as Rubio tries to sell U.S. strategy in Iran to skeptical allies insulted by Trump", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/g7-meets-on-russia-ukraine-war-as-rubio-tries-to-sell-u-s-strategy-in-iran-to-skeptical-allies-insulted-by-trump", time: "2026-03-27T13:31:56Z" },
-      { title: "Ukraine announces ‘mutually beneficial’ defence deal with Saudi Arabia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/ukraine-announces-defense-pact-with-saudi-arabia?traffic_source=rss", time: "2026-03-27T12:25:11Z" },
-      { title: "Ukraine and Saudi Arabia announce defence cooperation in Kyiv’s first deal in the Gulf", source: "Euronews", url: "http://www.euronews.com/2026/03/27/ukraine-and-saudi-arabia-announce-defence-cooperation-in-kyivs-first-deal-in-the-gulf", time: "2026-03-27T11:39:11Z" },
-      { title: "G7 meets on the Iran war as Rubio tries to sell US strategy to skeptical allies insulted by Trump", source: "ABC News", url: "https://abcnews.com/International/wireStory/g7-meets-iran-war-rubio-sell-us-strategy-131460101", time: "2026-03-27T11:27:23Z" },
-      { title: "Starmer says Iran and Ukraine wars could reshape global order and ‘define us for a generation’ – UK politics live", source: "The Guardian", url: "https://www.theguardian.com/politics/live/2026/mar/27/starmer-says-iran-and-ukraine-wars-could-reshape-global-order-and-define-us-for-a-generation-uk-politics-live", time: "2026-03-27T09:48:37Z" },
-      { title: "Ukraine fends off increased attacks, strikes Russian oil revenue", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/3/27/ukraine-fends-off-increased-attacks-strikes-russian-oil-revenue?traffic_source=rss", time: "2026-03-27T08:04:34Z" },
-      { title: "Zelensky makes surprise Saudi Arabia trip for ‘important meetings’ as Ukraine steps up Middle East support", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-zelensky-saudi-arabia-iran-war-b2946730.html", time: "2026-03-27T04:37:01Z" },
-      { title: "Luna hosts Russian lawmakers to mixed GOP reactions, outrage from others", source: "The Hill", url: "https://thehill.com/policy/international/5803437-luna-russian-delegation-meeting/", time: "2026-03-26T23:07:38Z" },
-      { title: "Save us, Elon Musk! X could deboost foreign slop accounts ruining public discourse", source: "The Hill", url: "https://thehill.com/opinion/robbys-radar/5802763-improving-x-discourse-social-media/", time: "2026-03-26T18:27:56Z" },
-      { title: "Zelensky visits Saudi Arabia after offering Ukraine's drone expertise", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2r4wxdw3no?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:24:13Z" },
-      { title: "Zelensky makes surprise Saudi Arabia trip for ‘important meetings’ as Ukraine steps up Middle East support", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/zelensky-saudi-arabia-ukraine-iran-war-b2946435.html", time: "2026-03-26T17:37:00Z" },
-      { title: "European Allies Worry Russia Is Preparing to Deliver Drones to Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/iran-russia-europe-drones.html", time: "2026-03-26T17:12:52Z" },
-      { title: "Ukraine-Russia war latest: Trump says US could divert weapons from Kyiv to Middle East", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-territory-peace-talks-b2945082.html", time: "2026-03-26T17:08:09Z" },
-      { title: "G7 meets in France to mend rupture with US on Middle East war", source: "France 24", url: "https://www.france24.com/en/europe/20260326-g7-meets-in-france-mend-rupture-with-us-on-middle-east-war", time: "2026-03-26T16:17:39Z" },
-      { title: "Immigrant trucker returns to war-torn Ukraine rather than risk ICE encounter: ‘I preferred going back home’", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/trump-truck-license-immigrant-job-loss", time: "2026-03-26T14:00:40Z" },
-      { title: "Trump’s strategic impatience threatens his efforts in Ukraine and Iran", source: "The Hill", url: "https://thehill.com/opinion/national-security/5800655-trump-strategic-patience-war/", time: "2026-03-26T11:00:00Z" },
-      { title: "Facing European cold shoulder, Ukraine turns to Middle East partners", source: "Euronews", url: "http://www.euronews.com/2026/03/26/facing-european-cold-shoulder-ukraine-turns-to-middle-east-partners", time: "2026-03-26T09:36:26Z" },
-      { title: "In Rural Ukraine, Basic Health Care Is a Casualty of War", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/ukraine-russia-war-health-care.html", time: "2026-03-26T09:01:16Z" },
-      { title: "Zimbabwe says 15 of its citizens killed after fraudulent recruitment into Russia-Ukraine war", source: "ABC News", url: "https://abcnews.com/International/wireStory/zimbabwe-15-citizens-killed-after-fraudulent-recruitment-russia-131410142", time: "2026-03-25T20:13:36Z" },
-      { title: "Zimbabwe says 15 of its citizens killed after fraudulent recruitment by Russia into Ukraine war", source: "Euronews", url: "http://www.euronews.com/2026/03/25/zimbabwe-says-15-of-its-citizens-killed-after-fraudulent-recruitment-by-russia-into-ukrain", time: "2026-03-25T19:48:44Z" },
-      { title: "Russia hits Ukrainian cities, intensifying bombing as U.S. focuses on Iran", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/25/ukraine-russia-drone-attack/", time: "2026-03-25T17:34:22Z" },
-      { title: "Ukraine: Massive wave of daytime Russian strikes hits sites nationwide", source: "France 24", url: "https://www.france24.com/en/video/20260325-ukraine-massive-wave-of-daytime-russian-strikes-hits-sites-nationwide", time: "2026-03-25T14:34:13Z" },
-      { title: "Estonia and Latvia say territories hit by stray Ukrainian drones", source: "BBC News", url: "https://www.bbc.com/news/articles/c1eql309n12o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T12:42:14Z" },
-      { title: "Estonia and Latvia say they were hit by drones as Ukraine unleashes massive attack on Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260325-estonia-and-latvia-say-they-were-hit-by-drones-as-ukraine-unleashes-massive-attack-on-russia", time: "2026-03-25T10:02:18Z" },
-      { title: "Ukraine Finally Got Battlefield Momentum. Now Comes a Russian Offensive.", source: "New York Times", url: "https://www.nytimes.com/2026/03/25/world/europe/ukraine-russia-war-zaporizhzhia.html", time: "2026-03-25T09:41:18Z" },
-      { title: "Moldova imposes 60-day energy emergency after Russian strikes in Ukraine cut key power line", source: "ABC News", url: "https://abcnews.com/International/wireStory/moldova-imposes-60-day-energy-emergency-after-russian-131373623", time: "2026-03-25T06:44:53Z" },
-      { title: "Russian weapons, tactics seen in Ukraine are shaping Myanmar’s civil war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/russian-weapons-tactics-seen-in-ukraine-are-shaping-myanmars-civil-war?traffic_source=rss", time: "2026-03-24T23:43:51Z" },
-      { title: "Russia Launches Daytime Attack on Ukraine With Over 500 Drones", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/russia-attack-drones-ukraine-lviv.html", time: "2026-03-24T21:03:01Z" },
-      { title: "Russia hits Ukraine with rare daytime barrage as new offensive begins", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/russia-hits-ukraine-with-deadly-daytime-barrage-as-spring-offensive-starts?traffic_source=rss", time: "2026-03-24T20:15:35Z" },
-      { title: "Ukraine Unesco site damaged as Russia launches 400 drones in deadly daytime attack", source: "BBC News", url: "https://www.bbc.com/news/articles/cz90gpyw90wo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:28:54Z" },
-      { title: "Russia launches fresh wave of strikes on civilian areas across Ukraine", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/russia-strikes-civilian-areas-ukraine", time: "2026-03-24T13:41:00Z" },
-      { title: "At least five killed in massive wave of Russian strikes across Ukraine, officials say", source: "BBC News", url: "https://www.bbc.com/news/articles/c87wxvn0z3vo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T11:09:21Z" },
-      { title: "Ukraine Spent Big to Shield Energy Industry From Drones. Is the Mideast Next?", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/europe/ukraine-middle-east-oil-and-gas-drones.html", time: "2026-03-24T04:01:05Z" },
-      { title: "Ukraine strikes key Russian oil port and refinery", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/ukraine-strikes-key-russian-oil-port-and-refinery?traffic_source=rss", time: "2026-03-23T20:35:31Z" },
-      { title: "Could the Iran war help Ukraine get back in Trump's good books?", source: "CBS News", url: "https://www.cbsnews.com/news/trump-ukraine-iran-war-us-weapons-stockpiles-kyiv-sees-opportunities/", time: "2026-03-23T16:31:49Z" },
-      { title: "A Choice of Deadly Drones Is Only a Few Clicks Away for Ukrainian Troops", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/europe/ukraine-drones-marketplace-military-russia.html", time: "2026-03-23T09:34:28Z" },
-      { title: "Ukrainians are growing more pessimistic about the prospects for peace, survey says", source: "NPR", url: "https://www.npr.org/2026/03/23/nx-s1-5754745/ukrainians-are-growing-more-pessimistic-about-the-prospects-for-peace-survey-says", time: "2026-03-23T08:43:20Z" },
-      { title: "What a team of investigative reporters found out about Banksy's identity", source: "NPR", url: "https://www.npr.org/2026/03/22/nx-s1-5753796/what-a-team-of-investigative-reporters-found-out-about-banksys-identity", time: "2026-03-22T21:26:35Z" },
-      { title: "Ukraine’s Zelenskyy urges allies to pressure Russia ahead of US talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/ukraines-zelenskyy-urges-allies-to-pressure-russia-ahead-of-us-talks?traffic_source=rss", time: "2026-03-22T17:42:52Z" },
-      { title: "Russian attacks kill six in Ukraine, officials say", source: "BBC News", url: "https://www.bbc.com/news/articles/crl18nwjzzzo?at_medium=RSS&at_campaign=rss", time: "2026-03-22T11:07:06Z" },
-    ]
-  },
-  {
     name: "Havana", country: "Cuba",
     lat: 23.1136, lng: -82.3666,
     category: "political",
     articles: [
+      { title: "2 missing boats carrying aid to Cuba have been found, Mexican navy says", source: "CBS News", url: "https://www.cbsnews.com/news/2-boats-carrying-aid-to-cuba-reported-missing-by-mexico/", time: "2026-03-28T20:27:27Z" },
       { title: "Two Cuba-bound aid ships found days after disappearing", source: "BBC News", url: "https://www.bbc.com/news/articles/clye4w10g22o?at_medium=RSS&at_campaign=rss", time: "2026-03-28T12:39:28Z" },
       { title: "Cuba holds civilian military drills amid deepening fuel crisis", source: "France 24", url: "https://www.france24.com/en/cuba-holds-civilian-military-drills-amid-deepening-fuel-crisis", time: "2026-03-28T11:33:08Z" },
       { title: "Castro Heirs Emerge Across Cuba’s Political Scene Amid Energy Crisis and Trump Threats", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/americas/castro-family-cuba-energy-crisis-trump.html", time: "2026-03-28T09:02:14Z" },
@@ -2408,6 +2413,8 @@ const locations = [
     lat: 15.3694, lng: 44.191,
     category: "conflict",
     articles: [
+      { title: "Houthis say they launched second attack on Israel, vow more strikes", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/houthis-say-they-launched-second-attack-israel-vow-more-strikes", time: "2026-03-28T20:19:26Z" },
+      { title: "Houthi missile attack on Israel stokes fears of renewed strikes on Red Sea shipping", source: "Times of Israel", url: "https://www.timesofisrael.com/houthi-missile-attack-on-israel-stokes-fears-of-renewed-strikes-on-red-sea-shipping/", time: "2026-03-28T19:21:27Z" },
       { title: "Israel targeted in Yemen’s Houthis first missile strike as US troop deployment raises fears of wider war", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-war-missile-attacks-yemen-houthis-b2947663.html", time: "2026-03-28T18:40:22Z" },
       { title: "JD Vance on Iran: 'We're taking care of business, we're going to be out of there soon, and gas prices are going to come back down'", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-28/ty-article/.premium/vance-on-iran-were-taking-care-of-business-were-going-be-out-of-there-soon/0000019d-34fd-de07-a9fd-b7ff56b10000", time: "2026-03-28T16:57:14Z" },
       { title: "Yemen's Houthis claim first missile attack on Israel since war began", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/yemens-houthis-claim-first-missile-attack-on-israel-since-war-began", time: "2026-03-28T16:03:18Z" },
@@ -3044,6 +3051,30 @@ const locations = [
     ]
   },
   {
+    name: "Dubai", country: "UAE",
+    lat: 25.2048, lng: 55.2708,
+    category: "conflict",
+    articles: [
+      { title: "In Dubai, a famed horse race goes on, despite the war.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/28/world/iran-war-trump-israel-oil/in-dubai-a-famed-horse-race-goes-on-despite-the-war", time: "2026-03-28T20:05:50Z" },
+      { title: "Ukraine’s Zelenskyy signs air defence deals with UAE, Qatar on Gulf tour", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/zelenskyy-signs-air-defence-deals-with-uae-qatar-on-gulf-tour?traffic_source=rss", time: "2026-03-28T16:16:28Z" },
+      { title: "UAE aluminium firm reports damage and injuries from Iranian attack", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-aluminium-firm-reports-damage-and-injuries-iranian-attack", time: "2026-03-28T15:52:25Z" },
+      { title: "Kuwait Airport attacked by several drones as Iran continues attacking Gulf", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891457", time: "2026-03-28T12:00:09Z" },
+      { title: "Iran says it 'destroyed' Ukrainian air defence depot in Dubai", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-it-destroyed-ukrainian-air-defence-depot-dubai", time: "2026-03-28T10:57:09Z" },
+      { title: "Missile debris injures five Indian nationals in Abu Dhabi, officials say", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/missile-debris-injures-five-indian-nationals-abu-dhabi-officials-say", time: "2026-03-28T04:29:50Z" },
+      { title: "UAE says interception debris caused fires in Abu Dhabi", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-says-interception-debris-caused-fires-abu-dhabi", time: "2026-03-28T03:31:40Z" },
+      { title: "How to get by in Dubai: What to do when your cruise is stranded by war", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891269", time: "2026-03-27T21:26:15Z" },
+      { title: "World’s tallest building struck by lightning as Dubai hit by heavy storms", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/burj-khalifa-lightning-dubai-heavy-storm-b2947334.html", time: "2026-03-27T20:34:38Z" },
+      { title: "Burj Khalifa hit by lightning as Dubai suffers flooding after storms and heavy rainfall", source: "Sky News", url: "https://news.sky.com/story/worlds-tallest-building-hit-by-lightning-as-dubai-suffers-flooding-after-heavy-storms-13524988", time: "2026-03-27T09:42:00Z" },
+      { title: "UAE, Kuwait responding to attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-kuwait-responding-attacks", time: "2026-03-27T00:27:30Z" },
+      { title: "Two dead in Abu Dhabi as US-Iran war intensifies despite peace talk claims", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/abu-dhabi-uae-iran-israel-war-b2945989.html", time: "2026-03-26T14:27:03Z" },
+      { title: "Two Killed in Abu Dhabi as Gulf States Face Fresh Attacks", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/middleeast/iran-missile-strikes-abu-dhabi.html", time: "2026-03-26T13:23:18Z" },
+      { title: "9 injured as Iran fires 7 missile salvos at Israel within hours, many with cluster warheads", source: "Times of Israel", url: "https://www.timesofisrael.com/9-injured-as-iran-fires-7-missile-salvos-at-israel-within-hours-many-with-cluster-warheads/", time: "2026-03-26T10:34:59Z" },
+      { title: "Emirati security officer urges Arab Gulf to further strengthen ties with Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-emirati-security-officer-urges-arab-gulf-to-further-strengthen-ties-with-israel/", time: "2026-03-25T14:17:00Z" },
+      { title: "Asian Champions League quarterfinal sends Iran’s Tractor FC to Saudi Arabia", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/asian-champions-league-quarterfinal-sends-irans-tractor-fc-to-saudi-arabia?traffic_source=rss", time: "2026-03-25T12:18:33Z" },
+      { title: "Planes are landing, taking off within five minutes of missile alerts in UAE, WSJ report reveals", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890830", time: "2026-03-22T20:55:11Z" },
+    ]
+  },
+  {
     name: "Budapest", country: "Hungary",
     lat: 47.4979, lng: 19.0402,
     category: "diplomacy",
@@ -3065,29 +3096,6 @@ const locations = [
       { title: "EU restricts Hungary's access to classified intelligence over alleged leaks to Russia", source: "France 24", url: "https://www.france24.com/en/eu-restricts-hungary-s-access-to-classified-intelligence-over-alleged-leaks-to-russia", time: "2026-03-23T15:53:13Z" },
       { title: "EU restricts Hungary's access to classified intelligence over alleged leaks to Russia", source: "France 24", url: "https://www.france24.com/en/eu-restricts-hungary-s-access-to-classified-intelligence-over-alleged-leaks-to-russia", time: "2026-03-23T15:53:13Z" },
       { title: "Trump lauds Viktor Orbán as Europe’s far-right leaders gather in Budapest", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/22/trump-lauds-viktor-orban-far-right-leaders-gather-budapest", time: "2026-03-22T16:13:27Z" },
-    ]
-  },
-  {
-    name: "Dubai", country: "UAE",
-    lat: 25.2048, lng: 55.2708,
-    category: "conflict",
-    articles: [
-      { title: "Ukraine’s Zelenskyy signs air defence deals with UAE, Qatar on Gulf tour", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/zelenskyy-signs-air-defence-deals-with-uae-qatar-on-gulf-tour?traffic_source=rss", time: "2026-03-28T16:16:28Z" },
-      { title: "UAE aluminium firm reports damage and injuries from Iranian attack", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-aluminium-firm-reports-damage-and-injuries-iranian-attack", time: "2026-03-28T15:52:25Z" },
-      { title: "Kuwait Airport attacked by several drones as Iran continues attacking Gulf", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891457", time: "2026-03-28T12:00:09Z" },
-      { title: "Iran says it 'destroyed' Ukrainian air defence depot in Dubai", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-it-destroyed-ukrainian-air-defence-depot-dubai", time: "2026-03-28T10:57:09Z" },
-      { title: "Missile debris injures five Indian nationals in Abu Dhabi, officials say", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/missile-debris-injures-five-indian-nationals-abu-dhabi-officials-say", time: "2026-03-28T04:29:50Z" },
-      { title: "UAE says interception debris caused fires in Abu Dhabi", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-says-interception-debris-caused-fires-abu-dhabi", time: "2026-03-28T03:31:40Z" },
-      { title: "How to get by in Dubai: What to do when your cruise is stranded by war", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891269", time: "2026-03-27T21:26:15Z" },
-      { title: "World’s tallest building struck by lightning as Dubai hit by heavy storms", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/burj-khalifa-lightning-dubai-heavy-storm-b2947334.html", time: "2026-03-27T20:34:38Z" },
-      { title: "Burj Khalifa hit by lightning as Dubai suffers flooding after storms and heavy rainfall", source: "Sky News", url: "https://news.sky.com/story/worlds-tallest-building-hit-by-lightning-as-dubai-suffers-flooding-after-heavy-storms-13524988", time: "2026-03-27T09:42:00Z" },
-      { title: "UAE, Kuwait responding to attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-kuwait-responding-attacks", time: "2026-03-27T00:27:30Z" },
-      { title: "Two dead in Abu Dhabi as US-Iran war intensifies despite peace talk claims", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/abu-dhabi-uae-iran-israel-war-b2945989.html", time: "2026-03-26T14:27:03Z" },
-      { title: "Two Killed in Abu Dhabi as Gulf States Face Fresh Attacks", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/middleeast/iran-missile-strikes-abu-dhabi.html", time: "2026-03-26T13:23:18Z" },
-      { title: "9 injured as Iran fires 7 missile salvos at Israel within hours, many with cluster warheads", source: "Times of Israel", url: "https://www.timesofisrael.com/9-injured-as-iran-fires-7-missile-salvos-at-israel-within-hours-many-with-cluster-warheads/", time: "2026-03-26T10:34:59Z" },
-      { title: "Emirati security officer urges Arab Gulf to further strengthen ties with Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-emirati-security-officer-urges-arab-gulf-to-further-strengthen-ties-with-israel/", time: "2026-03-25T14:17:00Z" },
-      { title: "Asian Champions League quarterfinal sends Iran’s Tractor FC to Saudi Arabia", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/25/asian-champions-league-quarterfinal-sends-irans-tractor-fc-to-saudi-arabia?traffic_source=rss", time: "2026-03-25T12:18:33Z" },
-      { title: "Planes are landing, taking off within five minutes of missile alerts in UAE, WSJ report reveals", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-890830", time: "2026-03-22T20:55:11Z" },
     ]
   },
   {
@@ -3471,21 +3479,6 @@ const locations = [
     ]
   },
   {
-    name: "Natanz", country: "Iran",
-    lat: 33.5131, lng: 51.9164,
-    category: "conflict",
-    articles: [
-      { title: "The race against time to destroy Iran’s illicit nuclear weapons program heats up amid fresh strikes", source: "Fox News", url: "https://www.foxnews.com/world/race-against-time-destroy-irans-illicit-nuclear-weapons-program-heats-up-amid-fresh-strikes", time: "2026-03-27T19:42:06Z" },
-      { title: "Drone footage shows widespread damage to two Israeli cities after Iranian missile strikes – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/22/drone-footage-shows-widespread-damage-to-two-israeli-cities-after-iranian-missile-strikes-video", time: "2026-03-22T13:02:35Z" },
-      { title: "The risk of World War III is actually decreasing - this is why - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-890267", time: "2026-03-22T02:00:00Z" },
-      { title: "Over 100 injured, 11 seriously, in Iranian missile strikes on southern cities of Arad, Dimona", source: "Times of Israel", url: "https://www.timesofisrael.com/over-100-injured-11-seriously-in-iranian-missile-strikes-on-southern-cities-of-arad-dimona/", time: "2026-03-21T23:54:11Z" },
-      { title: "Iran strikes towns near Israel’s nuclear site in escalating tit-for-tat", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-strikes-towns-near-israels-nuclear-site-in-escalating-tit-for-tat?traffic_source=rss", time: "2026-03-21T22:57:24Z" },
-      { title: "Iran hits Israeli town housing nuclear facility in retaliation for Natanz strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/iran-hits-israeli-town-housing-nuclear-facility-in-retaliation-for-natanz-strike", time: "2026-03-21T20:58:15Z" },
-      { title: "IDF says it hit Tehran university site used to develop components for nuclear weapons", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-says-it-hit-tehran-university-site-used-to-develop-components-for-nuclear-weapons/", time: "2026-03-21T20:30:11Z" },
-      { title: "IAEA looking into Iran’s report that Natanz nuclear site hit in strikes", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/21/iran-us-war-israel-nuclear-executions/", time: "2026-03-21T20:29:15Z" },
-    ]
-  },
-  {
     name: "Doha", country: "Qatar",
     lat: 25.2854, lng: 51.531,
     category: "economic",
@@ -3588,6 +3581,20 @@ const locations = [
       { title: "Pakistan conveyed U.S. proposal, senior Iranian official says", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-pakistan-conveyed-us-proposal-senior-iranian-official-says/", time: "2026-03-25T16:24:40Z" },
       { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
       { title: "Qatari and Turkish citizens die in military helicopter crash", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2v4k0xn9no?at_medium=RSS&at_campaign=rss", time: "2026-03-22T13:35:44Z" },
+    ]
+  },
+  {
+    name: "Natanz", country: "Iran",
+    lat: 33.5131, lng: 51.9164,
+    category: "conflict",
+    articles: [
+      { title: "Iran weighing possible withdrawal from Nuclear Non-Proliferation Treaty", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-iran-weighing-possible-withdrawal-from-nuclear-non-proliferation-treaty/", time: "2026-03-28T19:43:25Z" },
+      { title: "The race against time to destroy Iran’s illicit nuclear weapons program heats up amid fresh strikes", source: "Fox News", url: "https://www.foxnews.com/world/race-against-time-destroy-irans-illicit-nuclear-weapons-program-heats-up-amid-fresh-strikes", time: "2026-03-27T19:42:06Z" },
+      { title: "Drone footage shows widespread damage to two Israeli cities after Iranian missile strikes – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/22/drone-footage-shows-widespread-damage-to-two-israeli-cities-after-iranian-missile-strikes-video", time: "2026-03-22T13:02:35Z" },
+      { title: "The risk of World War III is actually decreasing - this is why - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-890267", time: "2026-03-22T02:00:00Z" },
+      { title: "Over 100 injured, 11 seriously, in Iranian missile strikes on southern cities of Arad, Dimona", source: "Times of Israel", url: "https://www.timesofisrael.com/over-100-injured-11-seriously-in-iranian-missile-strikes-on-southern-cities-of-arad-dimona/", time: "2026-03-21T23:54:11Z" },
+      { title: "Iran strikes towns near Israel’s nuclear site in escalating tit-for-tat", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/21/iran-strikes-towns-near-israels-nuclear-site-in-escalating-tit-for-tat?traffic_source=rss", time: "2026-03-21T22:57:24Z" },
+      { title: "Iran hits Israeli town housing nuclear facility in retaliation for Natanz strike", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/21/iran-hits-israeli-town-housing-nuclear-facility-in-retaliation-for-natanz-strike", time: "2026-03-21T20:58:15Z" },
     ]
   },
   {
