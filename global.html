@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:36 UTC, 29 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:39 UTC, 29 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">29 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:36 UTC, 29 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["N Korea’s Kim oversees test of high-thrust engine", "US considers Iran operation as Pakistan hosts regional peace talks focused on Hormuz", "Pakistan prepares to host peace talks as Iran accuses US of ground assault plans"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran and Pakistan host regional peace talks amid US military concerns</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Iranian ambassador refuses to leave Lebanon after being declared persona non grata - report", "A fractured opposition hands Netanyahu a full term - analysis", "Eisenkot rejects Bennett’s offer to unite parties, says he won’t serve as ‘number two’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Israeli political tensions continue as opposition fragments ahead of elections</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Zelensky visits Jordan on Middle East tour to bolster security ties", "Zelensky visits Jordan on Middle East tour to bolster security ties"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Zelensky tours Middle East to strengthen Ukraine&#x27;s regional security partnerships</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Lawmaker slams China-friendly promotion", "MAC on why songs may be banned in China"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan faces Chinese cultural and political pressure on multiple fronts</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan’s new ambassador arrives in Belize", "Sun PhuQuoc Airways launches Taipei-Phu Quoc flights"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan expands diplomatic presence and regional air connectivity initiatives</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["RSF attack on Sudan’s South Kordofan kills at least 14, including children"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">RSF attack kills civilians in Sudan&#x27;s South Kordofan region</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 20:39 UTC, 29 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Iranian ambassador refuses to leave Lebanon after being declared persona non grata - report", "Iran’s envoy to remain in Lebanon in defiance of expulsion by Beirut — diplomatic source", "A fractured opposition hands Netanyahu a full term - analysis", "Eisenkot rejects Bennett’s offer to unite parties, says he won’t serve as ‘number two’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iranian ambassador defies Lebanon expulsion order amid regional tensions</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["N Korea’s Kim oversees test of high-thrust engine", "Pakistan PM appreciates Saudi Arabia for showing &#39;remarkable restraint&#39; during West Asia tensions", "US considers Iran operation as Pakistan hosts regional peace talks focused on Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">North Korea tests engine while Pakistan hosts West Asia peace talks</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Lawmaker slams China-friendly promotion", "MAC on why songs may be banned in China", "Ryan Hass On Taiwan: Is America dividing on Taiwan — And implications for Taiwan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Taiwan faces diplomatic pressure as US debates its strategic role</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Bodies cover the streets in Haiti as warring gangs torch town and unleash bloodshed", "Europe seeks to increase deportations, quietly adopting Trump administration tactics"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Gang violence escalates in Haiti; Europe adopts stricter deportation policies</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan’s new ambassador arrives in Belize", "Sun PhuQuoc Airways launches Taipei-Phu Quoc flights"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan expands regional connectivity with new ambassador and airline routes</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Gaza receiving over 70,000 cubic meters per day, COGAT claims", "&#39;My destiny is tied to theirs&#39;: In the wake of October 7, Israelis return to the kibbutz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Gaza receives humanitarian aid as Israelis rebuild post-October communities</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -651,6 +651,14 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "'My destiny is tied to theirs': In the wake of October 7, Israelis return to the kibbutz", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-03-29/ty-article-magazine/.premium/my-destiny-is-tied-to-theirs-the-kibbutz-makes-a-comeback-in-october-7s-wake/0000019d-2ae6-d62e-addd-2beee30a0000", time: "2026-03-29T20:19:08Z" },
+      { title: "Video of Israeli soldier holding turtle triggers outrage in Lebanon", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-29/ty-article/.premium/video-of-israeli-soldier-holding-turtle-triggers-outrage-in-lebanon/0000019d-3ac9-defb-a59d-becbce060000", time: "2026-03-29T20:11:41Z" },
+      { title: "IDF probe finds ‘no negligence’ by troops in accidental killing of farmer in north", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-probe-finds-no-negligence-by-troops-in-accidental-killing-of-farmer-in-north/", time: "2026-03-29T19:59:28Z" },
+      { title: "Lebanon death toll tops 1,200 as Israel vows to ‘change’ north", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-death-toll-tops-1200-israel-vows-change-north", time: "2026-03-29T19:58:21Z" },
+      { title: "PM says Israel to expand south Lebanon buffer zone as IDF pushes deeper into territory", source: "Times of Israel", url: "https://www.timesofisrael.com/pm-says-israel-to-expand-south-lebanon-buffer-zone-as-idf-pushes-deeper-into-territory/", time: "2026-03-29T19:44:52Z" },
+      { title: "High Court orders freeze to proactive monitoring by Ben Gvir’s new ‘anti-incitement’ body", source: "Times of Israel", url: "https://www.timesofisrael.com/high-court-orders-freeze-to-proactive-monitoring-by-ben-gvirs-new-anti-incitement-body/", time: "2026-03-29T19:40:57Z" },
+      { title: "Lebanon’s Catholics observe Palm Sunday under looming threat of war", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/3/29/lebanons-catholics-observe-palm-sunday-under-looming-threat-of-war?traffic_source=rss", time: "2026-03-29T19:36:26Z" },
+      { title: "Netanyahu doubles down on Orban endorsement in fringe Hungarian evangelical magazine", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-03-29/ty-article/.premium/netanyahu-doubles-down-on-orban-backing-in-fringe-hungarian-evangelical-magazine/0000019d-3a6f-defb-a59d-beefbf590000", time: "2026-03-29T19:35:26Z" },
       { title: "Huckabee calls Pizzaballa's blockage from Holy Sepulchre on Palm Sunday 'unfortunate overreach'", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891543", time: "2026-03-29T18:35:45Z" },
       { title: "Assault on CNN crew by Israeli soldiers reveals the IDF's hierarchy of accountability", source: "Haaretz", url: "https://www.haaretz.com/israel-news/haaretz-today/2026-03-29/ty-article/.highlight/assault-on-cnn-crew-by-idf-troops-reveals-the-idfs-hierarchy-of-accountability/0000019d-39a4-defb-a59d-bfae523f0000", time: "2026-03-29T18:26:52Z" },
       { title: "Herzog’s office requests additional materials from Justice Ministry on PM’s pardon request", source: "Times of Israel", url: "https://www.timesofisrael.com/herzogs-office-requests-additional-materials-from-justice-ministry-on-pms-pardon-request/", time: "2026-03-29T18:24:50Z" },
@@ -1032,7 +1040,6 @@ const locations = [
       { title: "Israel's open secret: Why is Dimona at the center of Israel’s nuclear weapon ambiguity? - explainer", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890838", time: "2026-03-22T22:48:21Z" },
       { title: "Trump weighs possible wartime Israel visit to receive Israel Prize on Independence Day", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890835", time: "2026-03-22T21:45:11Z" },
       { title: "Sa’ar slams German envoy for condemning settler violence in post on Israeli war casualties", source: "Times of Israel", url: "https://www.timesofisrael.com/saar-slams-german-envoy-for-condemning-settler-violence-in-post-on-israeli-war-casualties/", time: "2026-03-22T20:59:19Z" },
-      { title: "Father of settler teen killed by Palestinian says son was ‘sacrifice’ for settlements cause", source: "Times of Israel", url: "https://www.timesofisrael.com/father-of-settler-teen-killed-by-palestinian-says-son-was-sacrifice-for-settlements-cause/", time: "2026-03-22T20:19:41Z" },
     ]
   },
   {
@@ -1040,6 +1047,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "War wipes $120bn from UAE markets, as economy comes under pressure", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/war-wipes-120bn-uae-markets-economy-comes-under-pressure", time: "2026-03-29T19:51:54Z" },
+      { title: "Egypt begins energy-saving measures amid surging oil prices", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260329-egypt-begins-energy-saving-measures-amid-surging-oil-prices/", time: "2026-03-29T19:38:31Z" },
       { title: "What the Houthis’ entry into the Iran war means for the conflict and the wider region", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/29/what-the-houthis-entry-into-the-iran-war-means-for-the-conflict-and-the-wider-region", time: "2026-03-29T18:27:37Z" },
       { title: "From Hormuz to Households: How Geopolitics Is Repricing Indonesia’s Cooking Oil", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260329-from-hormuz-to-households-how-geopolitics-is-repricing-indonesias-cooking-oil/", time: "2026-03-29T18:12:17Z" },
       { title: "‘We can insure the ship, but we cannot insure a human life.’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/29/we-can-insure-the-ship-but-we-cannot-insure-a-human-life?traffic_source=rss", time: "2026-03-29T17:05:19Z" },
@@ -1249,7 +1258,6 @@ const locations = [
       { title: "Higher oil prices from war with Iran threaten global economy", source: "NBC News", url: "https://www.nbcnews.com/video/higher-oil-prices-from-war-with-iran-threaten-global-economy-259833413889", time: "2026-03-22T23:09:05Z" },
       { title: "Iran unswayed by Trump's 48-hour deadline and threats to 'obliterate' energy infrastructure", source: "NBC News", url: "https://www.nbcnews.com/video/iran-unswayed-by-trump-s-48-hour-deadline-and-threats-to-obliterate-energy-infrastructure-259832901951", time: "2026-03-22T23:07:58Z" },
       { title: "Iran chokes Strait of Hormuz with reported $2M tanker toll, regime threatens global oil supply", source: "Fox News", url: "https://www.foxnews.com/world/iran-chokes-strait-hormuz-reported-2m-tanker-toll-regime-threatens-global-oil-supply", time: "2026-03-22T20:55:30Z" },
-      { title: "Strait of Hormuz: Trump’s ultimatum to Iran", source: "France 24", url: "https://www.france24.com/en/strait-of-hormuz-trump-s-ultimatum-to-iran", time: "2026-03-22T19:37:26Z" },
     ]
   },
   {
@@ -1597,8 +1605,6 @@ const locations = [
       { title: "Rescue teams brave fire in suspected attack on Gaza City residential area", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/rescue-teams-brave-fire-in-suspected-attack-on-gaza-city-residential-area?traffic_source=rss", time: "2026-03-23T07:34:46Z" },
       { title: "‘There’s no ceasefire’: Gaza paramedic and father of two killed as civilian death toll since October passes 650", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/mar/23/gaza-ceasefire-paramedic-father-killed-civilian-death-toll", time: "2026-03-23T05:00:42Z" },
       { title: "West Bank settler violence surges as Israeli strikes in Gaza kill 4 Palestinians", source: "France 24", url: "https://www.france24.com/en/middle-east/20260322-west-bank-settler-violence-gaza-strikes-palestinians-killed", time: "2026-03-22T23:12:26Z" },
-      { title: "Israeli air strikes on Gaza kill four Palestinians", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/israeli-air-strikes-on-gaza-kill-four-palestinians?traffic_source=rss", time: "2026-03-22T20:17:33Z" },
-      { title: "Israeli settlers violently storm through occupied West Bank", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/israeli-settlers-violently-storm-through-occupied-west-bank?traffic_source=rss", time: "2026-03-22T19:35:29Z" },
     ]
   },
   {
@@ -1737,6 +1743,7 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Iranian ambassador refuses to leave Lebanon after being declared persona non grata - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891552", time: "2026-03-29T20:54:16Z" },
+      { title: "Iran’s envoy to remain in Lebanon in defiance of expulsion by Beirut — diplomatic source", source: "Times of Israel", url: "https://www.timesofisrael.com/irans-envoy-to-remain-in-lebanon-in-defiance-of-expulsion-by-beirut-diplomatic-source/", time: "2026-03-29T20:25:04Z" },
       { title: "Israel’s military posted two images of Ali Choeib in what it said was a Hezbollah uniform. One was fake.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/29/world/iran-war-trump-israel-oil/israels-military-posted-two-images-of-ali-choeib-in-what-it-said-was-a-hezbollah-uniform-one-was-fake", time: "2026-03-29T18:30:02Z" },
       { title: "Hundreds Gather for Funeral of 3 Lebanese Killed in Israeli Strike", source: "New York Times", url: "https://www.nytimes.com/2026/03/29/world/middleeast/funerals-lebanese-killed-israeli-strike.html", time: "2026-03-29T17:02:50Z" },
       { title: "'Legitimate targets': Iran threatens to strike American and Israeli universities across the Middle East", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-03-29/ty-article/.premium/iran-threatens-to-strike-u-s-and-israeli-universities-across-the-middle-east/0000019d-3a6e-dc64-a3df-fa6f37950000", time: "2026-03-29T16:52:34Z" },
@@ -1841,9 +1848,6 @@ const locations = [
       { title: "Israel to 'advance targeted ground operations' in Lebanon", source: "France 24", url: "https://www.france24.com/en/israel-to-advance-targeted-ground-operations-in-lebanon", time: "2026-03-23T13:58:58Z" },
       { title: "Israel strikes key bridge in south Lebanon, stoking fears of ground invasion", source: "France 24", url: "https://www.france24.com/en/israel-strikes-key-bridge-in-south-lebanon-stoking-fears-of-ground-invasion", time: "2026-03-23T10:08:23Z" },
       { title: "Here’s What Happened in the War in the Middle East on Sunday", source: "New York Times", url: "https://www.nytimes.com/2026/03/22/world/middleeast/middle-east-war-recap.html", time: "2026-03-22T20:54:59Z" },
-      { title: "Displaced families shelter in tents in Beirut amid Israeli strikes", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/22/displaced-families-shelter-in-tents-in-beirut-amid-israeli-strikes?traffic_source=rss", time: "2026-03-22T20:33:30Z" },
-      { title: "Israel to expand ground and air attacks against Hezbollah in Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/c30rl05evd8o?at_medium=RSS&at_campaign=rss", time: "2026-03-22T20:23:07Z" },
-      { title: "'Obsessed with Jews': Sa’ar slams German amb. for equating Iran strikes to settler violence", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-890829", time: "2026-03-22T20:04:25Z" },
     ]
   },
   {
@@ -1851,6 +1855,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "Pakistan PM appreciates Saudi Arabia for showing 'remarkable restraint' during West Asia tensions", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-pm-appreciates-saudi-arabia-for-showing-remarkable-restraint-during-west-asia-tensions/article70800714.ece", time: "2026-03-29T20:29:48Z" },
       { title: "Pakistan prepares to host peace talks as Iran accuses US of ground assault plans", source: "Straits Times", url: "https://www.straitstimes.com/asia/pakistan-prepares-to-host-peace-talks-as-iran-accuses-us-of-ground-assault-plans", time: "2026-03-29T19:33:08Z" },
       { title: "Pakistan says it’s ready to facilitate US-Iran talks within days", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/pakistan-says-its-ready-to-facilitate-us-iran-talks-within-days", time: "2026-03-29T18:41:26Z" },
       { title: "First PIA direct flight to London in 6 years lands at Heathrow Airport", source: "Dawn", url: "https://www.dawn.com/news/1986542/first-pia-direct-flight-to-london-in-6-years-lands-at-heathrow-airport", time: "2026-03-29T18:18:25Z" },
@@ -1963,6 +1968,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "Europe seeks to increase deportations, quietly adopting Trump administration tactics", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/europe-seeks-to-increase-deportations-quietly-adopting-trump-administration-tactics", time: "2026-03-29T20:33:43Z" },
       { title: "Zelensky visits Jordan on Middle East tour to bolster security ties", source: "France 24", url: "https://www.france24.com/en/europe/20260329-zelensky-visits-jordan-on-middle-east-tour-to-bolster-security-ties", time: "2026-03-29T19:27:19Z" },
       { title: "Scalise: Some senators ‘expressed buyer’s remorse’ about DHS bill", source: "The Hill", url: "https://thehill.com/homenews/house/5806560-scalise-criticizes-senate-dhs-bill/", time: "2026-03-29T17:56:31Z" },
       { title: "EU may look again at sanctions on alumina after investigation finds links to Russian arms", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/03/29/eu-may-look-again-at-sanctions-on-alumina-after-investigation-finds-links-to-russian-arms/", time: "2026-03-29T17:00:00Z" },
@@ -2752,46 +2758,6 @@ const locations = [
     ]
   },
   {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "‘We will see a new government in Venezuela, in Cuba and in Iran’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/29/we-will-see-a-new-government-in-venezuela-in-cuba-and-in?traffic_source=rss", time: "2026-03-29T11:09:04Z" },
-      { title: "Johnson calls out GOP Senate over 'joke' of a DHS plan", source: "Axios", url: "https://www.axios.com/2026/03/27/dhs-funding-deal-ice-senate-talks-trump-thune", time: "2026-03-27T21:10:13Z" },
-      { title: "As Maduro appears in New York court, Venezuela’s state apparatus 'remains in place'", source: "France 24", url: "https://www.france24.com/en/as-maduro-appears-in-new-york-court-venezuela-s-state-apparatus-remains-in-place", time: "2026-03-27T07:48:22Z" },
-      { title: "Former Venezuelan president Maduro seeks to throw out US drug charges", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/former-venezuelan-president-maduro-seeks-to-throw-out-us-drug-charges?traffic_source=rss", time: "2026-03-27T01:07:50Z" },
-      { title: "Maduro held in near-total isolation inside Brooklyn jail as legal fight unfolds", source: "CBS News", url: "https://www.cbsnews.com/video/maduro-held-in-near-total-isolation-inside-brooklyn-jail-as-legal-fight-unfolds/", time: "2026-03-27T00:38:00Z" },
-      { title: "Scoop: Altman told staff he tried to 'save' Anthropic in Pentagon clash", source: "Axios", url: "https://www.axios.com/2026/03/26/sam-altman-openai-anthropic-pentagon", time: "2026-03-26T23:15:20Z" },
-      { title: "What happened at Maduro's second court appearance", source: "BBC News", url: "https://www.bbc.com/news/videos/c20q373e8xwo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T23:00:06Z" },
-      { title: "Venezuelans deported by US detail fresh claims of torture and abuse at El Salvador mega-prison", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/cecot-human-rights-petition", time: "2026-03-26T21:14:41Z" },
-      { title: "Protests erupt outside US court over Maduro case", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/protests-erupt-outside-us-court-over-maduro-case?traffic_source=rss", time: "2026-03-26T20:44:16Z" },
-      { title: "A smile and a handshake as Maduro case drags Venezuela crisis to New York court", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/nicolas-maduro-cilia-flores-court", time: "2026-03-26T20:43:05Z" },
-      { title: "Flatterers out in force to fill Trump’s head with Venezuelan statue dreams", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/trump-venezuela-statue", time: "2026-03-26T20:37:28Z" },
-      { title: "US judge weighs Trump decision to bar Venezuelan funds for Maduro’s defence", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/us-judge-weighs-trump-decision-to-bar-venezuelan-funds-for-maduros-defence?traffic_source=rss", time: "2026-03-26T19:53:04Z" },
-      { title: "'War,' 'Excursion,' 'Operation': Trump's war on Iran semantics", source: "Axios", url: "https://www.axios.com/2026/03/26/trump-iran-war-semantics-congress-approval", time: "2026-03-26T19:45:17Z" },
-      { title: "Venezuela’s Nicolás Maduro needs money for his legal defense. A judge could ignite a diplomatic brawl", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/venezuela-nicolas-maduro-court-hearing-president-b2946529.html", time: "2026-03-26T19:39:19Z" },
-      { title: "Maduro defense, prosecutors argue over blocked funds to pay for legal team", source: "The Hill", url: "https://thehill.com/blogs/ballot-box/5802906-venezuela-maduro-flores-legal-fees/", time: "2026-03-26T19:34:08Z" },
-      { title: "US prosecutors argue Maduro 'plundered' Venezuelan wealth in court battle over legal fees", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g8wxyq7v5o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:49:46Z" },
-      { title: "Judge says he won’t dismiss Nicolás Maduro’s case over legal fees dispute", source: "NBC News", url: "https://www.nbcnews.com/now/video/judge-says-he-won-t-dismiss-nicolas-maduro-s-case-over-legal-fees-dispute-260133957510", time: "2026-03-26T18:23:12Z" },
-      { title: "Nicol&aacute;s Maduro's lawyer argues against U.S. blocking funding for drug trafficking case defense", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/nicolas-maduros-lawyer-argues-against-u-s-blocking-funding-for-drug-trafficking-case-defense", time: "2026-03-26T17:54:19Z" },
-      { title: "Nicolás Maduro appears again in New York court on ‘narco-terrorism’ charges", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/nicolas-maduro-federal-court-narco-terrorism-case", time: "2026-03-26T16:43:44Z" },
-      { title: "Hegseth prays at service for violence against ‘those who deserve no mercy’", source: "The Hill", url: "https://thehill.com/policy/defense/5802042-defense-secretary-pentagon-prayer/", time: "2026-03-26T15:58:32Z" },
-      { title: "Nicolás Maduro and his wife back in federal court for first time since arraignment", source: "NBC News", url: "https://www.nbcnews.com/news/us-news/nicolas-maduro-wife-back-federal-court-first-time-arraignment-rcna265273", time: "2026-03-26T14:28:28Z" },
-      { title: "The Latest: Former Venezuelan President Nicolás Maduro to appear in New York City court", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/nicolas-maduro-venezuelan-new-york-city-manhattan-donald-trump-b2946235.html", time: "2026-03-26T14:08:49Z" },
-      { title: "Former Venezuelan President Maduro and his wife set to appear in federal court", source: "CBS News", url: "https://www.cbsnews.com/video/former-venezuelan-president-maduro-and-his-wife-set-to-appear-in-federal-court/", time: "2026-03-26T12:24:00Z" },
-      { title: "Venezuela’s Maduro set to again appear in US court: How strong is the case?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/venezuelas-maduro-set-to-again-appear-in-us-court-how-strong-is-the-case?traffic_source=rss", time: "2026-03-26T11:56:47Z" },
-      { title: "Venezuela’s Maduro set to appear in US court months after abduction", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/venezuelas-maduro-set-to-appear-in-us-court-months-after-abduction?traffic_source=rss", time: "2026-03-26T08:57:01Z" },
-      { title: "In one of country's poorest states, Venezuelans hope for post-Maduro boom", source: "BBC News", url: "https://www.bbc.com/news/articles/c3dlxvmr5n0o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T06:08:07Z" },
-      { title: "Ousted Venezuelan president Maduro to appear in New York court", source: "France 24", url: "https://www.france24.com/en/americas/20260326-ousted-venezuelan-president-maduro-to-appear-in-new-york-court", time: "2026-03-26T01:54:33Z" },
-      { title: "US traveller recounts brutal detention in Venezuela’s feared prisons: ‘They beat me, chained me up’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/venezuela-detention-james-luckey", time: "2026-03-25T12:01:48Z" },
-      { title: "Mysterious trading patterns follow Trump into war", source: "Axios", url: "https://www.axios.com/2026/03/25/trump-iran-oil-insider-trading", time: "2026-03-25T09:53:22Z" },
-      { title: "Rubio testimony sheds light on friend's shadowy Venezuela play", source: "Axios", url: "https://www.axios.com/2026/03/25/rubio-testimony-friend-trial-venezuela", time: "2026-03-25T01:24:13Z" },
-      { title: "Marco Rubio testifies in former housemate's Maduro lobbying trial", source: "BBC News", url: "https://www.bbc.com/news/articles/cj940j7ngwyo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:54:02Z" },
-      { title: "He was Rubio’s friend and roommate. Now Rubio will testify against him.", source: "Washington Post", url: "https://www.washingtonpost.com/politics/2026/03/24/marco-rubio-maduro-rivera-miami-venezuela-politics/", time: "2026-03-24T09:00:26Z" },
-      { title: "Emerging from latest blackout, Cuba says ready for any potential US attack", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/22/emerging-from-latest-blackout-cuba-says-ready-for-any-potential-us-attack?traffic_source=rss", time: "2026-03-22T20:28:34Z" },
-    ]
-  },
-  {
     name: "Ottawa", country: "Canada",
     lat: 45.4215, lng: -75.6972,
     category: "political",
@@ -2829,6 +2795,45 @@ const locations = [
       { title: "Canada’s Military Wants to Prove It Can Defend the High Arctic", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/canada/canada-arctic-territory-military.html", time: "2026-03-23T09:00:45Z" },
       { title: "New York's LaGuardia airport reopens after runway collision kills two pilots", source: "France 24", url: "https://www.france24.com/en/americas/20260323-new-york-s-laguardia-airport-reopens-after-runway-collision-kills-two", time: "2026-03-23T07:09:11Z" },
       { title: "Two killed after Canada Air jet hits fire truck at NYC’s LaGuardia airport", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/air-canada-jet-collides-with-ground-vehicle-at-new-york-airport?traffic_source=rss", time: "2026-03-23T05:48:23Z" },
+    ]
+  },
+  {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "‘We will see a new government in Venezuela, in Cuba and in Iran’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/29/we-will-see-a-new-government-in-venezuela-in-cuba-and-in?traffic_source=rss", time: "2026-03-29T11:09:04Z" },
+      { title: "Johnson calls out GOP Senate over 'joke' of a DHS plan", source: "Axios", url: "https://www.axios.com/2026/03/27/dhs-funding-deal-ice-senate-talks-trump-thune", time: "2026-03-27T21:10:13Z" },
+      { title: "As Maduro appears in New York court, Venezuela’s state apparatus 'remains in place'", source: "France 24", url: "https://www.france24.com/en/as-maduro-appears-in-new-york-court-venezuela-s-state-apparatus-remains-in-place", time: "2026-03-27T07:48:22Z" },
+      { title: "Former Venezuelan president Maduro seeks to throw out US drug charges", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/former-venezuelan-president-maduro-seeks-to-throw-out-us-drug-charges?traffic_source=rss", time: "2026-03-27T01:07:50Z" },
+      { title: "Maduro held in near-total isolation inside Brooklyn jail as legal fight unfolds", source: "CBS News", url: "https://www.cbsnews.com/video/maduro-held-in-near-total-isolation-inside-brooklyn-jail-as-legal-fight-unfolds/", time: "2026-03-27T00:38:00Z" },
+      { title: "Scoop: Altman told staff he tried to 'save' Anthropic in Pentagon clash", source: "Axios", url: "https://www.axios.com/2026/03/26/sam-altman-openai-anthropic-pentagon", time: "2026-03-26T23:15:20Z" },
+      { title: "What happened at Maduro's second court appearance", source: "BBC News", url: "https://www.bbc.com/news/videos/c20q373e8xwo?at_medium=RSS&at_campaign=rss", time: "2026-03-26T23:00:06Z" },
+      { title: "Venezuelans deported by US detail fresh claims of torture and abuse at El Salvador mega-prison", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/cecot-human-rights-petition", time: "2026-03-26T21:14:41Z" },
+      { title: "Protests erupt outside US court over Maduro case", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/protests-erupt-outside-us-court-over-maduro-case?traffic_source=rss", time: "2026-03-26T20:44:16Z" },
+      { title: "A smile and a handshake as Maduro case drags Venezuela crisis to New York court", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/nicolas-maduro-cilia-flores-court", time: "2026-03-26T20:43:05Z" },
+      { title: "Flatterers out in force to fill Trump’s head with Venezuelan statue dreams", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/26/trump-venezuela-statue", time: "2026-03-26T20:37:28Z" },
+      { title: "US judge weighs Trump decision to bar Venezuelan funds for Maduro’s defence", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/us-judge-weighs-trump-decision-to-bar-venezuelan-funds-for-maduros-defence?traffic_source=rss", time: "2026-03-26T19:53:04Z" },
+      { title: "'War,' 'Excursion,' 'Operation': Trump's war on Iran semantics", source: "Axios", url: "https://www.axios.com/2026/03/26/trump-iran-war-semantics-congress-approval", time: "2026-03-26T19:45:17Z" },
+      { title: "Venezuela’s Nicolás Maduro needs money for his legal defense. A judge could ignite a diplomatic brawl", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/venezuela-nicolas-maduro-court-hearing-president-b2946529.html", time: "2026-03-26T19:39:19Z" },
+      { title: "Maduro defense, prosecutors argue over blocked funds to pay for legal team", source: "The Hill", url: "https://thehill.com/blogs/ballot-box/5802906-venezuela-maduro-flores-legal-fees/", time: "2026-03-26T19:34:08Z" },
+      { title: "US prosecutors argue Maduro 'plundered' Venezuelan wealth in court battle over legal fees", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g8wxyq7v5o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T18:49:46Z" },
+      { title: "Judge says he won’t dismiss Nicolás Maduro’s case over legal fees dispute", source: "NBC News", url: "https://www.nbcnews.com/now/video/judge-says-he-won-t-dismiss-nicolas-maduro-s-case-over-legal-fees-dispute-260133957510", time: "2026-03-26T18:23:12Z" },
+      { title: "Nicol&aacute;s Maduro's lawyer argues against U.S. blocking funding for drug trafficking case defense", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/nicolas-maduros-lawyer-argues-against-u-s-blocking-funding-for-drug-trafficking-case-defense", time: "2026-03-26T17:54:19Z" },
+      { title: "Nicolás Maduro appears again in New York court on ‘narco-terrorism’ charges", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/nicolas-maduro-federal-court-narco-terrorism-case", time: "2026-03-26T16:43:44Z" },
+      { title: "Hegseth prays at service for violence against ‘those who deserve no mercy’", source: "The Hill", url: "https://thehill.com/policy/defense/5802042-defense-secretary-pentagon-prayer/", time: "2026-03-26T15:58:32Z" },
+      { title: "Nicolás Maduro and his wife back in federal court for first time since arraignment", source: "NBC News", url: "https://www.nbcnews.com/news/us-news/nicolas-maduro-wife-back-federal-court-first-time-arraignment-rcna265273", time: "2026-03-26T14:28:28Z" },
+      { title: "The Latest: Former Venezuelan President Nicolás Maduro to appear in New York City court", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/nicolas-maduro-venezuelan-new-york-city-manhattan-donald-trump-b2946235.html", time: "2026-03-26T14:08:49Z" },
+      { title: "Former Venezuelan President Maduro and his wife set to appear in federal court", source: "CBS News", url: "https://www.cbsnews.com/video/former-venezuelan-president-maduro-and-his-wife-set-to-appear-in-federal-court/", time: "2026-03-26T12:24:00Z" },
+      { title: "Venezuela’s Maduro set to again appear in US court: How strong is the case?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/venezuelas-maduro-set-to-again-appear-in-us-court-how-strong-is-the-case?traffic_source=rss", time: "2026-03-26T11:56:47Z" },
+      { title: "Venezuela’s Maduro set to appear in US court months after abduction", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/venezuelas-maduro-set-to-appear-in-us-court-months-after-abduction?traffic_source=rss", time: "2026-03-26T08:57:01Z" },
+      { title: "In one of country's poorest states, Venezuelans hope for post-Maduro boom", source: "BBC News", url: "https://www.bbc.com/news/articles/c3dlxvmr5n0o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T06:08:07Z" },
+      { title: "Ousted Venezuelan president Maduro to appear in New York court", source: "France 24", url: "https://www.france24.com/en/americas/20260326-ousted-venezuelan-president-maduro-to-appear-in-new-york-court", time: "2026-03-26T01:54:33Z" },
+      { title: "US traveller recounts brutal detention in Venezuela’s feared prisons: ‘They beat me, chained me up’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/venezuela-detention-james-luckey", time: "2026-03-25T12:01:48Z" },
+      { title: "Mysterious trading patterns follow Trump into war", source: "Axios", url: "https://www.axios.com/2026/03/25/trump-iran-oil-insider-trading", time: "2026-03-25T09:53:22Z" },
+      { title: "Rubio testimony sheds light on friend's shadowy Venezuela play", source: "Axios", url: "https://www.axios.com/2026/03/25/rubio-testimony-friend-trial-venezuela", time: "2026-03-25T01:24:13Z" },
+      { title: "Marco Rubio testifies in former housemate's Maduro lobbying trial", source: "BBC News", url: "https://www.bbc.com/news/articles/cj940j7ngwyo?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:54:02Z" },
+      { title: "He was Rubio’s friend and roommate. Now Rubio will testify against him.", source: "Washington Post", url: "https://www.washingtonpost.com/politics/2026/03/24/marco-rubio-maduro-rivera-miami-venezuela-politics/", time: "2026-03-24T09:00:26Z" },
     ]
   },
   {
@@ -3043,6 +3048,7 @@ const locations = [
     lat: 22.3193, lng: 114.1694,
     category: "economic",
     articles: [
+      { title: "Tech powerhouse, China gateway, talent magnet: How Hong Kong is coming for the world’s best", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/tech-powerhouse-china-gateway-talent-magnet-hong-kong-talent-exchange", time: "2026-03-29T20:00:00Z" },
       { title: "China protests US alert over security rules change in Hong Kong", source: "Straits Times", url: "https://www.straitstimes.com/asia/china-protests-us-alert-over-security-rules-change-in-hong-kong", time: "2026-03-29T09:42:46Z" },
       { title: "China summons US envoy to Hong Kong over alert on security law changes", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/china-summons-us-envoy-to-hong-kong-over-alert-on-security-law-changes", time: "2026-03-29T08:25:00Z" },
       { title: "China denies retaliating against Panama ships, accuses Washington of canal grab", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348217/china-denies-retaliating-against-panama-ships-accuses-washington-canal-grab?utm_source=rss_feed", time: "2026-03-27T20:09:58Z" },
@@ -3065,6 +3071,35 @@ const locations = [
       { title: "Exploring Hong Kong’s Textile Trail", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/arts/design/hong-kong-textiles-history.html", time: "2026-03-24T01:56:40Z" },
       { title: "Hong Kong government employee denies ordering surveillance of UK dissidents", source: "BBC News", url: "https://www.bbc.com/news/articles/c78l934gg0xo?at_medium=RSS&at_campaign=rss", time: "2026-03-23T21:11:16Z" },
       { title: "Asian stock markets plunge amid Trump’s ultimatum on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/23/asian-stock-markets-plunge-amid-trumps-ultimatum-on-iran?traffic_source=rss", time: "2026-03-23T01:56:28Z" },
+    ]
+  },
+  {
+    name: "Muscat", country: "Oman",
+    lat: 23.588, lng: 58.3829,
+    category: "humanitarian",
+    articles: [
+      { title: "‘We’ll see’: Border czar Tom Homan coy over whether ICE agents will leave airports once shutdown ends", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/tom-homan-ice-airports-shutdown-dhs-b2947998.html", time: "2026-03-29T20:17:16Z" },
+      { title: "Transcript: Tom Homan on 'Face the Nation with Margaret Brennan,' March 29, 2026", source: "CBS News", url: "https://www.cbsnews.com/news/tom-homan-border-czar-face-the-nation-transcript-03-29-2026/", time: "2026-03-29T16:45:21Z" },
+      { title: "Jack White blasts ‘egomaniacal conman’ Trump’s decision to include his own signature on dollar bills", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/jack-white-donald-trump-dollar-signature-b2947929.html", time: "2026-03-29T16:13:01Z" },
+      { title: "Oman says no group claimed responsibility for recent attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/oman-says-no-group-claimed-responsibility-recent-attacks", time: "2026-03-29T07:08:05Z" },
+      { title: "At least 22 people die after six days adrift in boat en route to Europe from Libya", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/22-people-die-after-six-days-adrift-in-boat-attempting-to-reach-europe-from-libya", time: "2026-03-28T12:32:24Z" },
+      { title: "Model agent begged Epstein to have sex with woman, emails show", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jeffrey-epstein-files-ramsey-elkholy-women-doj-b2947545.html", time: "2026-03-28T10:56:55Z" },
+      { title: "Five dead after crash between train and van on crossing in Mississippi", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mississippi-train-crash-wiggins-biloxi-b2947520.html", time: "2026-03-28T08:26:10Z" },
+      { title: "53-year-old woman accused of stripping naked and assaulting customers in a Pennsylvania grocery store", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/naked-woman-grocery-store-pennsylvania-assault-b2947282.html", time: "2026-03-27T19:45:51Z" },
+      { title: "Russian man who assaulted woman during Barron Trump FaceTime call sentenced to 4 years", source: "Fox News", url: "https://www.foxnews.com/world/russian-man-who-assaulted-woman-during-barron-trump-facetime-call-sentenced-4-years", time: "2026-03-27T17:37:23Z" },
+      { title: "Man jailed for attacking woman after Barron Trump alerted police", source: "CBS News", url: "https://www.cbsnews.com/news/man-sentenced-uk-attack-woman-barron-trump-alerted-police/", time: "2026-03-27T14:00:14Z" },
+      { title: "Woman whose son died from drugs bought on social media celebrates verdicts against Meta, YouTube", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/max-youtube-snapchat-meta-colorado-b2946712.html", time: "2026-03-27T02:53:47Z" },
+      { title: "Spanish woman dies by euthanasia after lengthy court battle with parents", source: "The Independent", url: "https://www.independent.co.uk/news/world/noelia-castillo-euthanasia-law-spain-b2946671.html", time: "2026-03-27T00:09:48Z" },
+      { title: "Roman fort found north of Hadrian’s Wall may have been used to defend against unconquered Scotland", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/archaeology-around-the-world/article-891179", time: "2026-03-26T21:50:09Z" },
+      { title: "Border Czar Tom Homan rejects Democrats’ calls for ICE agents to remove their masks", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/tom-homan-ice-masks-democrats-dhs-shutdown-b2946504.html", time: "2026-03-26T20:15:48Z" },
+      { title: "Desperate search for missing woman whose husband says she jumped out of moving car", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/missing-woman-long-island-brittany-kritis-garip-b2946222.html", time: "2026-03-26T14:57:17Z" },
+      { title: "Detroit woman stuns judge by driving during virtual court meeting – and then lying about it", source: "The Independent", url: "https://www.independent.co.uk/tv/news/woman-driving-court-meeting-zoom-detroit-b2946197.html", time: "2026-03-26T13:38:37Z" },
+      { title: "Australian woman convicted after putting googly eyes on controversial ‘Blue Blob’ sculpture", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/australia-blue-blob-sculpture-googly-eyes-conviction-b2945881.html", time: "2026-03-26T06:55:36Z" },
+      { title: "Sarah Mullally enthroned as first female archbishop of Canterbury", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/sarah-mullally-enthroned-as-first-female-archbishop-of-canterbury?traffic_source=rss", time: "2026-03-26T00:51:48Z" },
+      { title: "For the first time in more than 1,400 years, Church of England gets a woman leader", source: "NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5753707/archbishop-canterbury-church-england-sarah-mullally", time: "2026-03-25T17:11:19Z" },
+      { title: "Meet Karin Prien, the woman who could become Germany’s first Jewish president", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-891102", time: "2026-03-25T02:48:12Z" },
+      { title: "Decades after Romania’s secret police trailed a Jewish photographer, their files have become a film", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-891098", time: "2026-03-25T02:01:02Z" },
+      { title: "NATO scrambles jets as Russia fires nearly 400 drones toward Ukraine, signaling new spring offensive", source: "Fox News", url: "https://www.foxnews.com/world/nato-scrambles-jets-russia-fires-nearly-400-drones-toward-ukraine-signaling-new-spring-offensive", time: "2026-03-24T17:11:38Z" },
     ]
   },
   {
@@ -3094,34 +3129,6 @@ const locations = [
       { title: "Japan starts release of state-held oil to stabilise supplies amid Iran war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-starts-release-of-state-held-oil-to-stabilise-supplies-amid-iran-war", time: "2026-03-26T02:59:00Z" },
       { title: "Senior Japanese minister expresses regret over military officer’s arrest at Chinese embassy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3347833/senior-japanese-minister-expresses-regret-over-army-officers-arrest-chinese-embassy?utm_source=rss_feed", time: "2026-03-25T07:15:48Z" },
       { title: "Japan to begin biggest-ever oil release from national reserves as Middle East energy crisis bites", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/japan-oil-release-national-reserves", time: "2026-03-24T04:36:06Z" },
-    ]
-  },
-  {
-    name: "Muscat", country: "Oman",
-    lat: 23.588, lng: 58.3829,
-    category: "humanitarian",
-    articles: [
-      { title: "Transcript: Tom Homan on 'Face the Nation with Margaret Brennan,' March 29, 2026", source: "CBS News", url: "https://www.cbsnews.com/news/tom-homan-border-czar-face-the-nation-transcript-03-29-2026/", time: "2026-03-29T16:45:21Z" },
-      { title: "Jack White blasts ‘egomaniacal conman’ Trump’s decision to include his own signature on dollar bills", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/jack-white-donald-trump-dollar-signature-b2947929.html", time: "2026-03-29T16:13:01Z" },
-      { title: "Oman says no group claimed responsibility for recent attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/oman-says-no-group-claimed-responsibility-recent-attacks", time: "2026-03-29T07:08:05Z" },
-      { title: "At least 22 people die after six days adrift in boat en route to Europe from Libya", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/22-people-die-after-six-days-adrift-in-boat-attempting-to-reach-europe-from-libya", time: "2026-03-28T12:32:24Z" },
-      { title: "Model agent begged Epstein to have sex with woman, emails show", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jeffrey-epstein-files-ramsey-elkholy-women-doj-b2947545.html", time: "2026-03-28T10:56:55Z" },
-      { title: "Five dead after crash between train and van on crossing in Mississippi", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mississippi-train-crash-wiggins-biloxi-b2947520.html", time: "2026-03-28T08:26:10Z" },
-      { title: "53-year-old woman accused of stripping naked and assaulting customers in a Pennsylvania grocery store", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/naked-woman-grocery-store-pennsylvania-assault-b2947282.html", time: "2026-03-27T19:45:51Z" },
-      { title: "Russian man who assaulted woman during Barron Trump FaceTime call sentenced to 4 years", source: "Fox News", url: "https://www.foxnews.com/world/russian-man-who-assaulted-woman-during-barron-trump-facetime-call-sentenced-4-years", time: "2026-03-27T17:37:23Z" },
-      { title: "Man jailed for attacking woman after Barron Trump alerted police", source: "CBS News", url: "https://www.cbsnews.com/news/man-sentenced-uk-attack-woman-barron-trump-alerted-police/", time: "2026-03-27T14:00:14Z" },
-      { title: "Woman whose son died from drugs bought on social media celebrates verdicts against Meta, YouTube", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/max-youtube-snapchat-meta-colorado-b2946712.html", time: "2026-03-27T02:53:47Z" },
-      { title: "Spanish woman dies by euthanasia after lengthy court battle with parents", source: "The Independent", url: "https://www.independent.co.uk/news/world/noelia-castillo-euthanasia-law-spain-b2946671.html", time: "2026-03-27T00:09:48Z" },
-      { title: "Roman fort found north of Hadrian’s Wall may have been used to defend against unconquered Scotland", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/archaeology-around-the-world/article-891179", time: "2026-03-26T21:50:09Z" },
-      { title: "Border Czar Tom Homan rejects Democrats’ calls for ICE agents to remove their masks", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/tom-homan-ice-masks-democrats-dhs-shutdown-b2946504.html", time: "2026-03-26T20:15:48Z" },
-      { title: "Desperate search for missing woman whose husband says she jumped out of moving car", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/missing-woman-long-island-brittany-kritis-garip-b2946222.html", time: "2026-03-26T14:57:17Z" },
-      { title: "Detroit woman stuns judge by driving during virtual court meeting – and then lying about it", source: "The Independent", url: "https://www.independent.co.uk/tv/news/woman-driving-court-meeting-zoom-detroit-b2946197.html", time: "2026-03-26T13:38:37Z" },
-      { title: "Australian woman convicted after putting googly eyes on controversial ‘Blue Blob’ sculpture", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/australia-blue-blob-sculpture-googly-eyes-conviction-b2945881.html", time: "2026-03-26T06:55:36Z" },
-      { title: "Sarah Mullally enthroned as first female archbishop of Canterbury", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/sarah-mullally-enthroned-as-first-female-archbishop-of-canterbury?traffic_source=rss", time: "2026-03-26T00:51:48Z" },
-      { title: "For the first time in more than 1,400 years, Church of England gets a woman leader", source: "NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5753707/archbishop-canterbury-church-england-sarah-mullally", time: "2026-03-25T17:11:19Z" },
-      { title: "Meet Karin Prien, the woman who could become Germany’s first Jewish president", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-891102", time: "2026-03-25T02:48:12Z" },
-      { title: "Decades after Romania’s secret police trailed a Jewish photographer, their files have become a film", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-891098", time: "2026-03-25T02:01:02Z" },
-      { title: "NATO scrambles jets as Russia fires nearly 400 drones toward Ukraine, signaling new spring offensive", source: "Fox News", url: "https://www.foxnews.com/world/nato-scrambles-jets-russia-fires-nearly-400-drones-toward-ukraine-signaling-new-spring-offensive", time: "2026-03-24T17:11:38Z" },
     ]
   },
   {
@@ -4074,17 +4081,6 @@ const locations = [
     ]
   },
   {
-    name: "Diego Garcia", country: "UK (BIOT)",
-    lat: -7.3195, lng: 72.4229,
-    category: "political",
-    articles: [
-      { title: "Zelensky claims Russia surveilling US military bases for Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/zelensky-claims-russia-surveilling-us-military-bases-iran", time: "2026-03-29T01:00:56Z" },
-      { title: "Is Iran really able to strike London, and is the UK prepared for an attack?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/is-iran-able-strike-london-is-uk-prepared", time: "2026-03-23T17:04:36Z" },
-      { title: "‘False flag attack’: Iran denies claims it fired missiles at Diego Garcia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/iran-denies-targeting-us-uk-diego-garcia-airbase-claims-false-flag-attack?traffic_source=rss", time: "2026-03-23T13:00:11Z" },
-      { title: "Iran's attack on US-UK Diego Garcia base is not a turning point, but a warning - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-890826", time: "2026-03-22T19:50:01Z" },
-    ]
-  },
-  {
     name: "Qom", country: "Iran",
     lat: 34.6401, lng: 50.8764,
     category: "conflict",
@@ -4181,6 +4177,16 @@ const locations = [
       { title: "Skeleton found in Dutch church may be famous musketeer D'Artagnan – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/25/skeleton-dutch-church-musketeer-dartagnan-video", time: "2026-03-25T19:40:48Z" },
       { title: "Skeleton of Three Musketeers hero d’Artagnan may have been found", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/skeleton-three-musketeers-dartagnan-alexandre-dumas", time: "2026-03-25T15:51:51Z" },
       { title: "Musketeer d'Artagnan's remains believed found under Dutch church", source: "BBC News", url: "https://www.bbc.com/news/articles/cm2rew2dgzzo?at_medium=RSS&at_campaign=rss", time: "2026-03-25T14:30:39Z" },
+    ]
+  },
+  {
+    name: "Diego Garcia", country: "UK (BIOT)",
+    lat: -7.3195, lng: 72.4229,
+    category: "political",
+    articles: [
+      { title: "Zelensky claims Russia surveilling US military bases for Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/zelensky-claims-russia-surveilling-us-military-bases-iran", time: "2026-03-29T01:00:56Z" },
+      { title: "Is Iran really able to strike London, and is the UK prepared for an attack?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/23/is-iran-able-strike-london-is-uk-prepared", time: "2026-03-23T17:04:36Z" },
+      { title: "‘False flag attack’: Iran denies claims it fired missiles at Diego Garcia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/iran-denies-targeting-us-uk-diego-garcia-airbase-claims-false-flag-attack?traffic_source=rss", time: "2026-03-23T13:00:11Z" },
     ]
   },
   {
@@ -4331,6 +4337,16 @@ const locations = [
       { title: "Costa Rica to accept 25 'third country' deportees from US every week", source: "ABC News", url: "https://abcnews.com/International/wireStory/costa-rica-accept-25-country-deportees-us-week-131443398", time: "2026-03-27T14:04:17Z" },
       { title: "Costa Rica to accept 25 deportees per week under Trump deportation effort", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/costa-rica-to-accept-25-deportees-per-week-under-trump-deportation-effort?traffic_source=rss", time: "2026-03-26T23:09:57Z" },
       { title: "Costa Rica Agrees to Take Migrants Deported by the Trump Administration", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/americas/costa-rica-us-deportation-deal.html", time: "2026-03-24T19:54:09Z" },
+    ]
+  },
+  {
+    name: "Port-au-Prince", country: "Haiti",
+    lat: 18.5944, lng: -72.3074,
+    category: "conflict",
+    articles: [
+      { title: "Bodies cover the streets in Haiti as warring gangs torch town and unleash bloodshed", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/haiti-violence-gang-war-gran-grif-petite-riviere-de-lartibonite-b2948001.html", time: "2026-03-29T20:34:05Z" },
+      { title: "House discharge petition on TPS for Haiti secures enough signatures to force vote", source: "The Hill", url: "https://thehill.com/homenews/house/5806112-trump-haiti-tps-petition-vote/", time: "2026-03-28T22:45:53Z" },
+      { title: "Fiery Ethics Committee hearing ends in guilty ruling for Rep. Sheila Cherfilus-McCormick", source: "Axios", url: "https://www.axios.com/2026/03/27/sheila-cherfilus-mccormick-guilty-ethics-trial", time: "2026-03-27T14:03:47Z" },
     ]
   },
   {
@@ -4565,15 +4581,6 @@ const locations = [
     articles: [
       { title: "No injuries in rooftop explosion, fire at downtown Toronto building", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-no-injuries-in-rooftop-explosion-fire-at-downtown-toronto-building/", time: "2026-03-27T23:41:08Z" },
       { title: "Imprisoned Canadian says he was tortured in Ethiopia", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-imprisoned-canadian-says-he-was-tortured-in-ethiopia/", time: "2026-03-25T23:13:47Z" },
-    ]
-  },
-  {
-    name: "Port-au-Prince", country: "Haiti",
-    lat: 18.5944, lng: -72.3074,
-    category: "conflict",
-    articles: [
-      { title: "House discharge petition on TPS for Haiti secures enough signatures to force vote", source: "The Hill", url: "https://thehill.com/homenews/house/5806112-trump-haiti-tps-petition-vote/", time: "2026-03-28T22:45:53Z" },
-      { title: "Fiery Ethics Committee hearing ends in guilty ruling for Rep. Sheila Cherfilus-McCormick", source: "Axios", url: "https://www.axios.com/2026/03/27/sheila-cherfilus-mccormick-guilty-ethics-trial", time: "2026-03-27T14:03:47Z" },
     ]
   },
   {
