@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:36 UTC, 29 Mar 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:40 UTC, 29 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">29 March 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 15:37 UTC, 29 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan hosts four-nation bid to encourage US, Iran towards diplomacy", "Pakistan hosts diplomatic discussions on ending war", "Pakistan hosts top Saudi, Turkish, Egyptian diplomats over war in Iran", "Iran war live: Pakistan, Egypt, Turkiye, Saudi diplomats meet in Islamabad"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan hosts diplomatic talks involving Saudi, Turkish, Egyptian officials on Iran conflict</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Africa: CAF&#39;s Senegal Decision Exposes a Deeper Crisis in African Football", "Senegal parade Afcon trophy despite title controversy", "Senegal parade AFCON trophy, despite title being awarded to Morocco"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Senegal parades AFCON trophy despite controversy over CAF&#x27;s decision to award title to Morocco</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Olympic gender test ‘a disrespect for women’, South Africa’s Semenya says", "Goodbye Graaff-Reinet: South African town’s name change stirs racial tensions"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">South Africa faces gender testing controversy and racial tensions over town name change</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["US-Israel war on Iran: What’s happening on day 30 of attacks?", "Shops and restaurants in Egypt told to close early as energy crisis deepens"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Iran war escalates while Egypt confronts deepening energy crisis affecting businesses</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["One ant for $220: the new frontier of wildlife trafficking"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Wildlife trafficking expands to endangered insects with ants selling for $220 each</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:41 UTC, 29 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Pakistan hosts four-nation bid to encourage US, Iran towards diplomacy", "Pakistan hosts diplomatic discussions on ending war", "Pakistan hosts top Saudi, Turkish, Egyptian diplomats over war in Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Pakistan hosts diplomatic talks involving multiple nations on regional conflicts</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["US-Israel war on Iran: What’s happening on day 30 of attacks?", "Iran war live: Pakistan, Egypt, Turkiye, Saudi diplomats meet in Islamabad", "Shops and restaurants in Egypt told to close early as energy crisis deepens"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Middle East tensions and energy crisis affect African nations&#x27; stability</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Africa: CAF&#39;s Senegal Decision Exposes a Deeper Crisis in African Football", "Goodbye Graaff-Reinet: South African town’s name change stirs racial tensions"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">African governance issues spark controversy across sports and municipal politics</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Olympic gender test ‘a disrespect for women’, South Africa’s Semenya says", "One ant for $220: the new frontier of wildlife trafficking"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Wildlife and human rights concerns dominate South African discourse</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Recognising the slave trade as a crime against humanity is an essential first step | Letters"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Slave trade recognition as crime against humanity debated in Nigeria</span><span class="ai-bullet-count">1</span></div><div class="ai-bullet" data-titles='["Jack White blasts ‘egomaniacal conman’ Trump’s decision to include his own signature on dollar bills"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Musician criticizes US political figure&#x27;s decision on currency design</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -293,6 +293,21 @@ const locations = [
     ]
   },
   {
+    name: "Abuja", country: "Nigeria",
+    lat: 9.0579, lng: 7.4951,
+    category: "political",
+    articles: [
+      { title: "Recognising the slave trade as a crime against humanity is an essential first step | Letters", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/29/recognising-the-slave-trade-as-a-against-humanity-is-an-essential-first-step", time: "2026-03-29T16:06:08Z" },
+      { title: "Nigeria: Army Intensifies Offensives, Records Gains Against Iswap, Boko Haram in Northast", source: "AllAfrica", url: "https://allafrica.com/stories/202603270408.html", time: "2026-03-27T12:07:15Z" },
+      { title: "Nigeria: NCAA, Army Collaborate for Improved Aviation Security At Abuja Airport", source: "AllAfrica", url: "https://allafrica.com/stories/202603270019.html", time: "2026-03-27T04:46:13Z" },
+      { title: "Nigeria: Tinubu Urges Traditional Rulers to Serve As Frontline Peace Builders", source: "AllAfrica", url: "https://allafrica.com/stories/202603270017.html", time: "2026-03-27T04:46:12Z" },
+      { title: "Nigeria: Nigeria to Hold High-Level Talks With China On Health Security, Pandemic Preparedness", source: "AllAfrica", url: "https://allafrica.com/stories/202603270018.html", time: "2026-03-27T04:46:12Z" },
+      { title: "Nigeria: Court Orders Arrest of Turaki, Factional PDP Chairman", source: "AllAfrica", url: "https://allafrica.com/stories/202603260475.html", time: "2026-03-26T15:17:16Z" },
+      { title: "Nigeria: Court Grants Speedy Hearing As Terror Suspects Admit Spying On U.S., Israeli Embassies", source: "AllAfrica", url: "https://allafrica.com/stories/202603260299.html", time: "2026-03-26T10:44:03Z" },
+      { title: "Nigeria: Maiduguri Bombings Show New Threat to Civilians", source: "AllAfrica", url: "https://allafrica.com/stories/202603260191.html", time: "2026-03-26T09:51:33Z" },
+    ]
+  },
+  {
     name: "Kinshasa", country: "DR Congo",
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
@@ -304,20 +319,6 @@ const locations = [
       { title: "Uganda: Uganda to Withdraw Troops From Some Positions in Eastern DR Congo, Says Gen Muhoozi", source: "AllAfrica", url: "https://allafrica.com/stories/202603260167.html", time: "2026-03-26T09:00:23Z" },
       { title: "‘It’s going to give us closure’: could there finally be justice for the murder of Patrice Lumumba?", source: "The Guardian", url: "https://www.theguardian.com/news/2026/mar/25/the-long-wave-patrice-lumumba-assassination-congo-trial", time: "2026-03-25T14:31:35Z" },
       { title: "‘Extraordinary event’ for mountain gorillas as new twins born in DRC", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/mar/24/mountain-gorillas-twins-born-drc-aoe", time: "2026-03-24T12:42:56Z" },
-    ]
-  },
-  {
-    name: "Abuja", country: "Nigeria",
-    lat: 9.0579, lng: 7.4951,
-    category: "political",
-    articles: [
-      { title: "Nigeria: Army Intensifies Offensives, Records Gains Against Iswap, Boko Haram in Northast", source: "AllAfrica", url: "https://allafrica.com/stories/202603270408.html", time: "2026-03-27T12:07:15Z" },
-      { title: "Nigeria: NCAA, Army Collaborate for Improved Aviation Security At Abuja Airport", source: "AllAfrica", url: "https://allafrica.com/stories/202603270019.html", time: "2026-03-27T04:46:13Z" },
-      { title: "Nigeria: Tinubu Urges Traditional Rulers to Serve As Frontline Peace Builders", source: "AllAfrica", url: "https://allafrica.com/stories/202603270017.html", time: "2026-03-27T04:46:12Z" },
-      { title: "Nigeria: Nigeria to Hold High-Level Talks With China On Health Security, Pandemic Preparedness", source: "AllAfrica", url: "https://allafrica.com/stories/202603270018.html", time: "2026-03-27T04:46:12Z" },
-      { title: "Nigeria: Court Orders Arrest of Turaki, Factional PDP Chairman", source: "AllAfrica", url: "https://allafrica.com/stories/202603260475.html", time: "2026-03-26T15:17:16Z" },
-      { title: "Nigeria: Court Grants Speedy Hearing As Terror Suspects Admit Spying On U.S., Israeli Embassies", source: "AllAfrica", url: "https://allafrica.com/stories/202603260299.html", time: "2026-03-26T10:44:03Z" },
-      { title: "Nigeria: Maiduguri Bombings Show New Threat to Civilians", source: "AllAfrica", url: "https://allafrica.com/stories/202603260191.html", time: "2026-03-26T09:51:33Z" },
     ]
   },
   {
@@ -441,19 +442,20 @@ const locations = [
     ]
   },
   {
+    name: "Goma", country: "DR Congo",
+    lat: -1.6585, lng: 29.2206,
+    category: "humanitarian",
+    articles: [
+      { title: "Jack White blasts ‘egomaniacal conman’ Trump’s decision to include his own signature on dollar bills", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/jack-white-donald-trump-dollar-signature-b2947929.html", time: "2026-03-29T16:13:01Z" },
+      { title: "Power without a throne: how Khalifa Haftar controls Libya – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/23/power-without-a-throne-how-khalifa-haftar-controls-libya-podcast", time: "2026-03-23T05:00:42Z" },
+    ]
+  },
+  {
     name: "Tunis", country: "Tunisia",
     lat: 36.8065, lng: 10.1815,
     category: "political",
     articles: [
       { title: "Fans and players from five African World Cup countries face $15,000 bond to enter US", source: "The Guardian", url: "https://www.theguardian.com/football/2026/mar/25/fans-and-players-from-five-african-world-cup-countries-face-15000-bond-to-enter-us", time: "2026-03-25T19:04:34Z" },
-    ]
-  },
-  {
-    name: "Goma", country: "DR Congo",
-    lat: -1.6585, lng: 29.2206,
-    category: "humanitarian",
-    articles: [
-      { title: "Power without a throne: how Khalifa Haftar controls Libya – podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/mar/23/power-without-a-throne-how-khalifa-haftar-controls-libya-podcast", time: "2026-03-23T05:00:42Z" },
     ]
   },
   {
