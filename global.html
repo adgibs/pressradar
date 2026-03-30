@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:41 UTC, 30 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:41 UTC, 30 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">30 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:42 UTC, 30 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Netanyahu: &#39;Only long-term solution for Hormuz crisis is rerouting pipes to Mediterranean&#39;", "Michigan synagogue attack was Hezbollah-inspired terrorism, FBI confirms", "White House ballroom project to include &#39;massive&#39; military complex", "Why most Jewish Israelis back the death penalty for terrorists - analysis", "Petition targets newly passed death penalty law, calling it discriminatory, unconstitutional", "Is a peaceful settlement possible in Iran?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Middle East tensions rise amid security concerns and policy debates</span><span class="ai-bullet-count">7</span></div><div class="ai-bullet" data-titles='["KMT’s Cheng accepts Xi invitation to visit China", "Prosecutors probe China talent poaching", "US support for Taiwan strong: senators", "China sanctions Japan lawmaker over Taiwan trips", "Taiwan missed out on CPTPP three times, official says", "Taiwan-S Korea relations at stake"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:85%"></div></div><span class="ai-bullet-text">China-Taiwan relations strained by diplomatic friction and economic exclusion</span><span class="ai-bullet-count">6</span></div><div class="ai-bullet" data-titles='["Starlux launches Japan flights from Taichung", "Stink of crime hangs over Vietnam chemical plant"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:28%"></div></div><span class="ai-bullet-text">Regional trade and environmental issues emerge across Asia-Pacific</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan economic indicator index hits 4-year high: NDC", "EDITORIAL: Taiwan and the future of robots"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:28%"></div></div><span class="ai-bullet-text">Taiwan economic growth and technological innovation advance domestically</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Public-private endeavor aims to restore Taipei frog", "Taiwanese Astros pitcher helps bring in win"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:28%"></div></div><span class="ai-bullet-text">Cultural and sports developments highlight Taiwan society</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Family says body found in Colombia identified as missing US flight attendant"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:14%"></div></div><span class="ai-bullet-text">US citizen identified deceased in Colombia</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:41 UTC, 30 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Netanyahu: &#39;Only long-term solution for Hormuz crisis is rerouting pipes to Mediterranean&#39;", "Administrative building in Sharjah region targeted by Iranian drone, UAE authorities announce", "Middle East crisis live: Kuwait issues oil spill warning after tanker attacked in Dubai port", "US raises concern over Israel’s closure of Jerusalem holy sites", "Michigan synagogue attack was Hezbollah-inspired terrorism, FBI confirms"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Middle East tensions escalate with drone strikes and security incidents</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["KMT’s Cheng accepts Xi invitation to visit China", "Prosecutors probe China talent poaching", "US support for Taiwan strong: senators", "China sanctions Japan lawmaker over Taiwan trips", "Taiwan missed out on CPTPP three times, official says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China-Taiwan relations strained over diplomatic and trade disputes</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["Taiwan economic indicator index hits 4-year high: NDC", "Taiwan-S Korea relations at stake"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan economy strengthens while regional partnerships face pressure</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Starlux launches Japan flights from Taichung", "Chinese coffee brands need more than low prices to compete with global players: analysts"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Asian business developments span aviation and consumer markets</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Public-private endeavor aims to restore Taipei frog", "Stink of crime hangs over Vietnam chemical plant"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Environmental and criminal issues emerge across Asia-Pacific region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["1 in 10 UK women face period poverty forcing some to take dangerous health risks, campaigners warn"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:20%"></div></div><span class="ai-bullet-text">UK campaign highlights period poverty affecting one in ten women</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -651,6 +651,9 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "Israeli airstrike kills 3 journalists covering war in southern Lebanon", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/israeli-airstrike-kills-3-journalists-covering-war-in-southern-lebanon", time: "2026-03-30T22:50:50Z" },
+      { title: "News Wrap: Russian oil tanker arrives in Cuba", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-russian-oil-tanker-arrives-in-cuba", time: "2026-03-30T22:45:11Z" },
+      { title: "Facing a resurgent Hezbollah, Israel slouches back to a security zone in Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/facing-a-resurgent-hezbollah-israel-slouches-back-to-a-security-zone-in-lebanon/", time: "2026-03-30T22:33:51Z" },
       { title: "Defense sources: Ending IDF war on Iran waits for Trump decision on Hormuz, nuke issue", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891707", time: "2026-03-30T22:02:21Z" },
       { title: "Knesset passes death penalty law for Palestinians convicted of deadly acts of terror", source: "Times of Israel", url: "https://www.timesofisrael.com/knesset-passes-death-penalty-law-for-palestinians-convicted-of-deadly-acts-of-terror/", time: "2026-03-30T21:38:04Z" },
       { title: "‘Dangerous escalation’: World reacts to Israel passing death penalty law", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/dangerous-escalation-world-reacts-to-israel-passing-death-penalty-law?traffic_source=rss", time: "2026-03-30T21:29:12Z" },
@@ -1081,10 +1084,6 @@ const locations = [
       { title: "Knesset passes law allowing rabbinical courts to arbitrate civil disputes", source: "Times of Israel", url: "https://www.timesofisrael.com/knesset-passes-law-allowing-rabbinical-courts-to-arbitrate-civil-disputes/", time: "2026-03-24T01:26:43Z" },
       { title: "Study: Birthright travelers look different after Oct. 7 — but the effect remains the same", source: "Times of Israel", url: "https://www.timesofisrael.com/study-birthright-travelers-look-different-after-oct-7-but-the-effect-remains-the-same/", time: "2026-03-24T00:42:03Z" },
       { title: "Smotrich says Litani River should be Israel’s new border with Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/smotrich-says-litani-river-should-be-israels-new-border-with-lebanon/", time: "2026-03-24T00:01:04Z" },
-      { title: "6 people lightly hurt as Iranian missile attack targets Tel Aviv", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-24-2026/", time: "2026-03-23T23:11:42Z" },
-      { title: "Macron says Lebanon’s fight is ‘just’ amid escalating attacks by Israel", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/23/macron-says-lebanons-fight-is-just-amid-escalating-attacks-by-israel?traffic_source=rss", time: "2026-03-23T22:59:25Z" },
-      { title: "UN expert says world has given Israel ‘licence to torture Palestinians’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/un-expert-says-world-has-given-israel-licence-to-torture-palestinians?traffic_source=rss", time: "2026-03-23T22:58:33Z" },
-      { title: "In Broadway’s ‘Giant,’ Roald Dahl is a warped messenger for a vital debate about Israel", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-890984", time: "2026-03-23T22:43:58Z" },
     ]
   },
   {
@@ -1092,6 +1091,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Key moments from Marco Rubio’s interview with Al Jazeera", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/key-moments-from-marco-rubios-interview-with-al-jazeera?traffic_source=rss", time: "2026-03-30T22:33:49Z" },
       { title: "NY Times accuses Pentagon of defying press access policy order", source: "The Hill", url: "https://thehill.com/regulation/court-battles/5808093-pentagon-press-policy-new-york-times-challenge/", time: "2026-03-30T21:31:11Z" },
       { title: "US used new ballistic missile in strike that killed teens in Iran sports hall: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/us-used-new-ballistic-missile-strike-hit-iran-sports-hall-teens", time: "2026-03-30T21:14:20Z" },
       { title: "The war in Iran: Key takeaways from Al Jazeera’s interview with Marco Rubio", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/the-war-in-iran-key-takeaways-from-al-jazeeras-interview-with-marco-rubio?traffic_source=rss", time: "2026-03-30T21:03:25Z" },
@@ -1314,6 +1314,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Iran advances a plan to charge a toll for ships to traverse the Strait of Hormuz.", source: "New York Times", url: "https://www.nytimes.com/live/2026/03/30/world/iran-war-trump-oil-news/strait-of-hormuz-toll-iran", time: "2026-03-30T22:54:46Z" },
       { title: "Trump threatens to destroy Iran’s Kharg Island oil hub if no deal reached", source: "France 24", url: "https://www.france24.com/en/middle-east/20260330-trump-threatens-to-obliterate-iran-kharg-island-oil-hub-if-no-deal-reached-usa-strait-of-hormuz", time: "2026-03-30T21:57:52Z" },
       { title: "Trump Zigzags on Iran, Claiming ‘Great Progress’ but Making Threats", source: "New York Times", url: "https://www.nytimes.com/2026/03/30/world/middleeast/trump-iran-threats-kharg-island.html", time: "2026-03-30T20:22:25Z" },
       { title: "Trump threatens to ‘obliterate’ Iran’s energy grid if ceasefire not reached ‘shortly’", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/30/trump-threatens-to-obliterate-irans-energy-grid-if-ceasefire-not-reached-shortly", time: "2026-03-30T18:33:22Z" },
@@ -1704,6 +1705,7 @@ const locations = [
       { title: "KMT’s Cheng accepts Xi invitation to visit China", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/03/31/2003854751", time: "2026-03-31T00:00:00Z" },
       { title: "Prosecutors probe China talent poaching", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/03/31/2003854752", time: "2026-03-31T00:00:00Z" },
       { title: "輕鬆華語GO: EASY CHINESE GO", source: "Taipei Times", url: "https://www.taipeitimes.com/News/lang/archives/2026/03/31/2003854735", time: "2026-03-31T00:00:00Z" },
+      { title: "The ‘Third Front’: China resurrects Mao’s military capabilities", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/31/third-front-china-mao-military-factories-defences", time: "2026-03-30T23:00:24Z" },
       { title: "Born in the USA? China targeted in Trump’s birthright citizenship fight", source: "South China Morning Post", url: "https://www.scmp.com/news/us/diplomacy/article/3348460/born-usa-china-targeted-americas-birthright-citizenship-fight?utm_source=rss_feed", time: "2026-03-30T21:55:09Z" },
       { title: "Chinese container ships pass through Strait of Hormuz at second attempt, data shows", source: "South China Morning Post", url: "https://www.scmp.com/news/world/middle-east/article/3348455/chinese-container-ships-pass-through-strait-hormuz-second-attempt-data-shows?utm_source=rss_feed", time: "2026-03-30T19:27:59Z" },
       { title: "French court convicts Chinese captain of oil tanker linked to Russian shadow fleet", source: "South China Morning Post", url: "https://www.scmp.com/news/world/europe/article/3348452/french-court-convicts-chinese-captain-oil-tanker-linked-russian-shadow-fleet?utm_source=rss_feed", time: "2026-03-30T17:21:28Z" },
@@ -2237,7 +2239,6 @@ const locations = [
       { title: "European Commission president warns of ‘brutal, harsh and unforgiving’ world — video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/mar/24/european-commission-president-brutal-world-address-australia-parliament-video", time: "2026-03-24T03:44:13Z" },
       { title: "European wine, chocolate and cars to become cheaper in Australia amid landmark trade deal with EU", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/mar/24/australia-european-union-trade-deal-makes-cars-wine-chocolate-cheaper", time: "2026-03-24T03:24:08Z" },
       { title: "EU, Australia seal landmark free trade deal amid global tensions", source: "France 24", url: "https://www.france24.com/en/europe/20260324-eu-australia-landmark-free-trade-deal-global-tensions", time: "2026-03-24T03:03:23Z" },
-      { title: "EU 'deeply concerned' by reports Hungary leaked negotiation details to Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260323-eu-concern-hungary-russia-leak-negotiations-ukraine", time: "2026-03-23T22:44:33Z" },
     ]
   },
   {
@@ -2245,6 +2246,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
     articles: [
+      { title: "US raises concern over Israel’s closure of Jerusalem holy sites", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/us-raises-concern-over-israels-closure-of-jerusalem-holy-sites?traffic_source=rss", time: "2026-03-30T23:21:37Z" },
       { title: "Petition targets newly passed death penalty law, calling it discriminatory, unconstitutional", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-891709", time: "2026-03-30T22:33:01Z" },
       { title: "US raises concerns with Israel over restrictions at Jerusalem holy sites during Holy Week", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260330-us-raises-concerns-with-israel-over-restrictions-at-jerusalem-holy-sites-during-holy-week/", time: "2026-03-30T19:19:31Z" },
       { title: "Israeli Knesset passes law mandating death penalty for Palestinian prisoners", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260330-israeli-knesset-passes-law-mandating-death-penalty-for-palestinian-prisoners/", time: "2026-03-30T19:15:57Z" },
@@ -2341,6 +2343,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "News Wrap: Russian oil tanker arrives in Cuba", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-russian-oil-tanker-arrives-in-cuba", time: "2026-03-30T22:45:11Z" },
       { title: "Allowing Russian oil tanker to reach Cuba ‘not a policy change,’ White House says", source: "The Hill", url: "https://thehill.com/homenews/administration/5807956-russian-oil-tanker-cuba-white-house/", time: "2026-03-30T19:57:23Z" },
       { title: "Cuba waits for Russian oil tanker to arrive amid US blockade", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/cuba-waits-for-russian-oil-tanker-to-arrive-amid-us-blockade?traffic_source=rss", time: "2026-03-30T18:56:01Z" },
       { title: "Russia is unlikely to run out of soldiers anytime soon – here’s why", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/russia-ukraine-war-attack-casualties-b2948559.html", time: "2026-03-30T17:22:45Z" },
@@ -2426,9 +2429,11 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "1 of 4 trapped miners pulled to safety in Sinaloa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/one-4-miners-sinaloa/", time: "2026-03-30T22:57:32Z" },
       { title: "25 tonnes of counterfeit World Cup-related products seized in CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/25-tonnes-of-world-cup-related-counterfeit-products-seized-in-mexico-citys-tepito-neighborhood/", time: "2026-03-30T21:51:05Z" },
       { title: "AZ gun store owner accused of arming 2 Mexican cartels", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/arizona-gun-store-owner-cjng/", time: "2026-03-30T21:49:31Z" },
       { title: "Sheinbaum’s security strategy has led to a historic increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-historic-prison-population-increase-sheinbaums-security-strategy/", time: "2026-03-30T21:16:44Z" },
+      { title: "Sheinbaum’s security strategy has led to an 11% increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-prison-population-increased-sheinbaum/", time: "2026-03-30T21:16:44Z" },
       { title: "Sheinbaum makes monetary donation to Cuba: Monday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-donation-cuba-mananera-recapped/", time: "2026-03-30T17:41:36Z" },
       { title: "ICE announces death of another Mexican detainee in US immigration custody", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/ice-announces-death-of-another-mexican-detainee-in-us-immigration-custody?traffic_source=rss", time: "2026-03-30T17:20:51Z" },
       { title: "Ernesto Gómez Gallardo: The architect who redefined Mexican furniture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ernesto-gomez-gallardo-arguelles-redefined-mexican-furniture/", time: "2026-03-30T16:24:07Z" },
@@ -2665,6 +2670,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Céline Dion makes her big comeback with concerts in Paris after six year hiatus", source: "France 24", url: "https://www.france24.com/en/europe/20260330-c%C3%A9line-dion-makes-her-big-comeback-with-concerts-in-paris-after-six-year-hiatus", time: "2026-03-30T22:57:15Z" },
       { title: "Celine Dion announces return with 10 shows in Paris", source: "RTE News", url: "https://www.rte.ie/entertainment/2026/0330/1565988-celine-dion-announces-return-with-10-shows-in-paris/", time: "2026-03-30T19:52:06Z" },
       { title: "Celine Dion Announces Comeback Concerts in Paris", source: "New York Times", url: "https://www.nytimes.com/2026/03/30/arts/music/celine-dion-paris-concerts.html", time: "2026-03-30T19:42:11Z" },
       { title: "UK-France beach patrol deal to intercept small boats on verge of collapse", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/mar/30/uk-france-beach-patrol-deal-intercept-small-boats-negotiations-deadlocked", time: "2026-03-30T18:36:27Z" },
@@ -2999,6 +3005,7 @@ const locations = [
     lat: 13.7563, lng: 100.5018,
     category: "economic",
     articles: [
+      { title: "Call for fuel tax cut as crisis mounts", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3227524/call-for-fuel-tax-cut-as-crisis-mounts", time: "2026-03-30T22:46:00Z" },
       { title: "Arsenic levels rising in Mekong", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3227579/arsenic-levels-rising-in-mekong", time: "2026-03-30T22:04:00Z" },
       { title: "Govt ramps up shipping and aviation safeguards", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3227429/govt-ramps-up-shipping-and-aviation-safeguards", time: "2026-03-30T21:06:00Z" },
       { title: "Thai undertaker reveals corpse to justify fuel buy", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-undertaker-reveals-corpse-to-justify-fuel-buy", time: "2026-03-30T11:59:00Z" },
@@ -3103,6 +3110,7 @@ const locations = [
     lat: 10.4806, lng: -66.9036,
     category: "political",
     articles: [
+      { title: "News Wrap: Russian oil tanker arrives in Cuba", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-russian-oil-tanker-arrives-in-cuba", time: "2026-03-30T22:45:11Z" },
       { title: "US embassy reopens in Venezuela months after Maduro abduction", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/us-embassy-reopens-in-venezuela-months-after-maduro-abduction?traffic_source=rss", time: "2026-03-30T20:16:40Z" },
       { title: "US reopens embassy in Venezuela in significant thawing of relations", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/30/us-reopens-embassy-venezuela", time: "2026-03-30T17:27:57Z" },
       { title: "US resumes operations at embassy in Caracas", source: "The Hill", url: "https://thehill.com/policy/international/5807557-us-embassy-caracas-resumes-operations/", time: "2026-03-30T16:41:40Z" },
@@ -3230,6 +3238,7 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "1 in 10 UK women face period poverty forcing some to take dangerous health risks, campaigners warn", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/period-poverty-uk-actionaid-women-b2948414.html", time: "2026-03-30T23:19:55Z" },
       { title: "Israel's proposed 'discriminatory' death penalty plans criticised by UK and allies", source: "Sky News", url: "https://news.sky.com/story/israels-proposed-discriminatory-death-penalty-plans-criticised-by-uk-and-allies-13526104", time: "2026-03-30T17:00:00Z" },
       { title: "Iran’s cultural heritage sites at risk of destruction from US-Israeli bombing, UK scholars warn", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-cultural-heritage-sites-war-us-israel-b2948249.html", time: "2026-03-30T11:25:46Z" },
       { title: "I’m a woman living with HIV – UK aid cuts are a betrayal to women and girls in sub-Saharan Africa", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/hiv-uk-aid-cuts-aids-lenacapavir-b2948289.html", time: "2026-03-30T11:09:02Z" },
@@ -3464,6 +3473,7 @@ const locations = [
     lat: 41.9028, lng: 12.4964,
     category: "political",
     articles: [
+      { title: "News Wrap: Russian oil tanker arrives in Cuba", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-russian-oil-tanker-arrives-in-cuba", time: "2026-03-30T22:45:11Z" },
       { title: "Thieves steal works by Cézanne, Renoir, Matisse in less than 3 minutes", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/30/italy-art-heist-cezanne-renoir-matisse/", time: "2026-03-30T21:20:56Z" },
       { title: "Powell: Fed yet to decide on whether to 'look through' war's impact", source: "Axios", url: "https://www.axios.com/2026/03/30/powell-fed-iran-war-inflation", time: "2026-03-30T16:03:50Z" },
       { title: "Thieves steal paintings by Renoir, Cézanne, Matisse in Italian museum heist", source: "Globe and Mail", url: "https://www.theglobeandmail.com/culture/art-and-architecture/article-italian-museum-thieves-paintings-heist-renoir-cezanne-matisse/", time: "2026-03-30T15:58:56Z" },
@@ -3632,38 +3642,6 @@ const locations = [
     ]
   },
   {
-    name: "Pyongyang", country: "North Korea",
-    lat: 39.0392, lng: 125.7625,
-    category: "conflict",
-    articles: [
-      { title: "Air China resumes flights to North Korea after six-year pause", source: "France 24", url: "https://www.france24.com/en/video/20260330-air-china-resumes-flights-to-north-korea-after-six-year-pause", time: "2026-03-30T11:10:16Z" },
-      { title: "Smiling Kim Jong Un watches on as troops pummel each other with bricks and axes at military showcase", source: "The Independent", url: "https://www.independent.co.uk/tv/news/kim-jong-un-north-korea-military-parade-video-b2948230.html", time: "2026-03-30T10:55:08Z" },
-      { title: "China steps up North Korea connections as regular Beijing-Pyongyang flights resume", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348370/china-steps-north-korea-connections-regular-beijing-pyongyang-flights-resume?utm_source=rss_feed", time: "2026-03-30T07:09:20Z" },
-      { title: "Air China resumes flights to North Korea after 6-year pause", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/air-china-resumes-flights-to-north-korea-after-6-year-pause", time: "2026-03-29T23:35:00Z" },
-      { title: "North Korea conducts engine test for missile capable of reaching U.S. mainland", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/north-korea-conducts-engine-test-for-missile-capable-of-reaching-u-s-mainland", time: "2026-03-29T22:04:23Z" },
-      { title: "Kim Jong Un oversees powerful missile engine test as North Korea ramps up US strike capability", source: "The Independent", url: "https://www.independent.co.uk/tv/news/kim-jong-un-north-korea-missile-us-b2947924.html", time: "2026-03-29T21:32:22Z" },
-      { title: "North Korea tests missile that it claims can target U.S. mainland", source: "CBS News", url: "https://www.cbsnews.com/news/north-korea-missile-test-united-states-reach-mainland/", time: "2026-03-29T12:28:35Z" },
-      { title: "High hopes at China’s gateway to North Korea as trains resume", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/high-hopes-at-chinas-gateway-to-north-korea-as-trains-resume", time: "2026-03-29T08:32:00Z" },
-      { title: "North Korea conducts engine test for missile capable of striking US mainland", source: "Sky News", url: "https://news.sky.com/story/north-korea-conducts-engine-test-for-missile-capable-of-striking-us-mainland-13525716", time: "2026-03-29T05:54:00Z" },
-      { title: "North Korea tests high-thrust engine for missile capable of striking US mainland", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260329-north-korea-tests-high-thrust-engine-for-missile-capable-of-striking-us-mainland", time: "2026-03-29T05:09:11Z" },
-      { title: "North Korea’s Kim oversees test of high-thrust engine: KCNA", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-koreas-kim-oversees-test-of-high-thrust-engine-kcna", time: "2026-03-29T02:40:00Z" },
-      { title: "I escaped North Korea with my mum. Now I'm terrified she might be sent back", source: "BBC News", url: "https://www.bbc.com/news/articles/c239n93ejm8o?at_medium=RSS&at_campaign=rss", time: "2026-03-27T22:05:42Z" },
-      { title: "North Korea's Kim Jong Un gifted gun by Belarusian leader", source: "France 24", url: "https://www.france24.com/en/video/20260327-belarusian-leader-gifts-gun-to-north-korea-s-kim-jong-un", time: "2026-03-27T15:02:40Z" },
-      { title: "Belarus leader gifts rifle to North Korea's Kim as they sign friendship treaty", source: "BBC News", url: "https://www.bbc.com/news/articles/c8957dxjvkxo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T03:14:10Z" },
-      { title: "North Korea, Belarus sign friendship treaty, KCNA says", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-belarus-sign-friendship-treaty-kcna-says", time: "2026-03-26T22:02:08Z" },
-      { title: "Kim Jong Un gifted gun after Belarus friendship treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/kim-jong-un-gifted-gun-after-belarus-friendship-treaty?traffic_source=rss", time: "2026-03-26T18:03:33Z" },
-      { title: "North Korea and Belarus sign ‘fundamental’ treaty as Lukashenko visits Kim in Pyongyang", source: "The Independent", url: "https://www.independent.co.uk/asia/east-asia/north-korea-belarus-kim-jong-un-alexander-lukashenko-b2945937.html", time: "2026-03-26T17:58:47Z" },
-      { title: "North Korea’s Kim meets Lukashenko, slams ‘pressure ​on Belarus from West’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/north-koreas-kim-meets-lukashenko-slams-pressure-on-belarus-from-west?traffic_source=rss", time: "2026-03-26T12:12:55Z" },
-      { title: "Lukashenko greeted by Kim Jong Un on first visit to North Korea", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260325-lukashenko-greeted-by-kim-jong-un-on-first-visit-to-north-korea", time: "2026-03-25T23:10:47Z" },
-      { title: "Belarus’s Lukashenko makes first visit to North Korea in bid to deepen ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/belaruss-lukashenko-makes-first-visit-to-north-korea-in-bid-to-deepen-ties?traffic_source=rss", time: "2026-03-25T09:23:36Z" },
-      { title: "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia", source: "NBC News", url: "https://www.nbcnews.com/world/asia/cockroaches-surveillance-16-hour-days-life-north-korean-worker-russia-rcna264849", time: "2026-03-25T00:01:40Z" },
-      { title: "Kim Jong Un says North Korea will never give up on nuclear weapons", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/kim-jong-un-says-north-korea-will-never-give-up-on-nuclear-weapons?traffic_source=rss", time: "2026-03-24T18:01:06Z" },
-      { title: "Kim vows to 'irreversibly' cement North Korea's nuclear status", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114945/kim-vows-to-irreversibly-cement-north-koreas-nuclear-status", time: "2026-03-24T11:05:14Z" },
-      { title: "How North Korea’s Kim Jong-un Is Using the Iran War to Justify His Nuclear Arsenal", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/north-korea-kim-iran-nuclear.html", time: "2026-03-24T03:44:06Z" },
-      { title: "North Korea’s Kim Jong Un says nuclear-armed status ‘irreversible’", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260323-north-korea-kim-jong-un-nuclear-armed-status-irreversible", time: "2026-03-23T23:08:05Z" },
-    ]
-  },
-  {
     name: "Seoul", country: "South Korea",
     lat: 37.5665, lng: 126.978,
     category: "diplomacy",
@@ -3759,10 +3737,43 @@ const locations = [
     ]
   },
   {
+    name: "Pyongyang", country: "North Korea",
+    lat: 39.0392, lng: 125.7625,
+    category: "conflict",
+    articles: [
+      { title: "Air China resumes flights to North Korea after six-year pause", source: "France 24", url: "https://www.france24.com/en/video/20260330-air-china-resumes-flights-to-north-korea-after-six-year-pause", time: "2026-03-30T11:10:16Z" },
+      { title: "Smiling Kim Jong Un watches on as troops pummel each other with bricks and axes at military showcase", source: "The Independent", url: "https://www.independent.co.uk/tv/news/kim-jong-un-north-korea-military-parade-video-b2948230.html", time: "2026-03-30T10:55:08Z" },
+      { title: "China steps up North Korea connections as regular Beijing-Pyongyang flights resume", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348370/china-steps-north-korea-connections-regular-beijing-pyongyang-flights-resume?utm_source=rss_feed", time: "2026-03-30T07:09:20Z" },
+      { title: "Air China resumes flights to North Korea after 6-year pause", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/air-china-resumes-flights-to-north-korea-after-6-year-pause", time: "2026-03-29T23:35:00Z" },
+      { title: "North Korea conducts engine test for missile capable of reaching U.S. mainland", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/north-korea-conducts-engine-test-for-missile-capable-of-reaching-u-s-mainland", time: "2026-03-29T22:04:23Z" },
+      { title: "Kim Jong Un oversees powerful missile engine test as North Korea ramps up US strike capability", source: "The Independent", url: "https://www.independent.co.uk/tv/news/kim-jong-un-north-korea-missile-us-b2947924.html", time: "2026-03-29T21:32:22Z" },
+      { title: "North Korea tests missile that it claims can target U.S. mainland", source: "CBS News", url: "https://www.cbsnews.com/news/north-korea-missile-test-united-states-reach-mainland/", time: "2026-03-29T12:28:35Z" },
+      { title: "High hopes at China’s gateway to North Korea as trains resume", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/high-hopes-at-chinas-gateway-to-north-korea-as-trains-resume", time: "2026-03-29T08:32:00Z" },
+      { title: "North Korea conducts engine test for missile capable of striking US mainland", source: "Sky News", url: "https://news.sky.com/story/north-korea-conducts-engine-test-for-missile-capable-of-striking-us-mainland-13525716", time: "2026-03-29T05:54:00Z" },
+      { title: "North Korea tests high-thrust engine for missile capable of striking US mainland", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260329-north-korea-tests-high-thrust-engine-for-missile-capable-of-striking-us-mainland", time: "2026-03-29T05:09:11Z" },
+      { title: "North Korea’s Kim oversees test of high-thrust engine: KCNA", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-koreas-kim-oversees-test-of-high-thrust-engine-kcna", time: "2026-03-29T02:40:00Z" },
+      { title: "I escaped North Korea with my mum. Now I'm terrified she might be sent back", source: "BBC News", url: "https://www.bbc.com/news/articles/c239n93ejm8o?at_medium=RSS&at_campaign=rss", time: "2026-03-27T22:05:42Z" },
+      { title: "North Korea's Kim Jong Un gifted gun by Belarusian leader", source: "France 24", url: "https://www.france24.com/en/video/20260327-belarusian-leader-gifts-gun-to-north-korea-s-kim-jong-un", time: "2026-03-27T15:02:40Z" },
+      { title: "Belarus leader gifts rifle to North Korea's Kim as they sign friendship treaty", source: "BBC News", url: "https://www.bbc.com/news/articles/c8957dxjvkxo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T03:14:10Z" },
+      { title: "North Korea, Belarus sign friendship treaty, KCNA says", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-belarus-sign-friendship-treaty-kcna-says", time: "2026-03-26T22:02:08Z" },
+      { title: "Kim Jong Un gifted gun after Belarus friendship treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/26/kim-jong-un-gifted-gun-after-belarus-friendship-treaty?traffic_source=rss", time: "2026-03-26T18:03:33Z" },
+      { title: "North Korea and Belarus sign ‘fundamental’ treaty as Lukashenko visits Kim in Pyongyang", source: "The Independent", url: "https://www.independent.co.uk/asia/east-asia/north-korea-belarus-kim-jong-un-alexander-lukashenko-b2945937.html", time: "2026-03-26T17:58:47Z" },
+      { title: "North Korea’s Kim meets Lukashenko, slams ‘pressure ​on Belarus from West’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/26/north-koreas-kim-meets-lukashenko-slams-pressure-on-belarus-from-west?traffic_source=rss", time: "2026-03-26T12:12:55Z" },
+      { title: "Lukashenko greeted by Kim Jong Un on first visit to North Korea", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260325-lukashenko-greeted-by-kim-jong-un-on-first-visit-to-north-korea", time: "2026-03-25T23:10:47Z" },
+      { title: "Belarus’s Lukashenko makes first visit to North Korea in bid to deepen ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/25/belaruss-lukashenko-makes-first-visit-to-north-korea-in-bid-to-deepen-ties?traffic_source=rss", time: "2026-03-25T09:23:36Z" },
+      { title: "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia", source: "NBC News", url: "https://www.nbcnews.com/world/asia/cockroaches-surveillance-16-hour-days-life-north-korean-worker-russia-rcna264849", time: "2026-03-25T00:01:40Z" },
+      { title: "Kim Jong Un says North Korea will never give up on nuclear weapons", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/24/kim-jong-un-says-north-korea-will-never-give-up-on-nuclear-weapons?traffic_source=rss", time: "2026-03-24T18:01:06Z" },
+      { title: "Kim vows to 'irreversibly' cement North Korea's nuclear status", source: "NPR", url: "https://www.npr.org/2026/03/24/g-s1-114945/kim-vows-to-irreversibly-cement-north-koreas-nuclear-status", time: "2026-03-24T11:05:14Z" },
+      { title: "How North Korea’s Kim Jong-un Is Using the Iran War to Justify His Nuclear Arsenal", source: "New York Times", url: "https://www.nytimes.com/2026/03/23/world/asia/north-korea-kim-iran-nuclear.html", time: "2026-03-24T03:44:06Z" },
+    ]
+  },
+  {
     name: "Dubai", country: "UAE",
     lat: 25.2048, lng: 55.2708,
     category: "conflict",
     articles: [
+      { title: "Administrative building in Sharjah region targeted by Iranian drone, UAE authorities announce", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891715", time: "2026-03-31T00:19:25Z" },
+      { title: "Middle East crisis live: Kuwait issues oil spill warning after tanker attacked in Dubai port", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/30/iran-war-live-updates-trump-oil-kharg-island-houthis-israel-lebanon-middle-east", time: "2026-03-30T23:34:01Z" },
       { title: "Kyiv useful to US, Gulf at critical time: Drone interceptors 'more effective than Patriot missiles'", source: "France 24", url: "https://www.france24.com/en/kyiv-useful-to-us-gulf-at-critical-time-drone-interceptors-more-effective-than-patriot-missiles", time: "2026-03-30T16:33:38Z" },
       { title: "UAE arrests dozens of British citizens over online posts during Iran war", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/uae-arrests-dozens-british-citizens-over-online-posts-amid-iran-war", time: "2026-03-30T12:52:00Z" },
       { title: "Can the ‘Dubai Dream’ Survive the War? Residents Say Life Goes On.", source: "New York Times", url: "https://www.nytimes.com/2026/03/30/world/middleeast/dubai-dream-war-iran.html", time: "2026-03-30T09:01:33Z" },
@@ -4025,27 +4036,6 @@ const locations = [
     ]
   },
   {
-    name: "Haifa", country: "Israel",
-    lat: 32.794, lng: 34.9896,
-    category: "conflict",
-    articles: [
-      { title: "What we know about attack on key Israeli oil refinery", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/what-we-know-about-attack-on-key-israeli-oil-refinery?traffic_source=rss", time: "2026-03-30T19:19:50Z" },
-      { title: "Fire contained after missile attack on oil refinery in Israel’s Haifa", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/fire-contained-after-missile-attack-on-oil-refinery-in-israels-haifa?traffic_source=rss", time: "2026-03-30T16:25:31Z" },
-      { title: "Trump: U.S. will respond 'shortly' to Iranian attack on Haifa oil refinery", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-03-30/ty-article/.premium/trump-u-s-will-destroy-iranian-energy-infrastructure-if-no-deal-is-reached/0000019d-3f06-defb-a59d-bf8e09900000", time: "2026-03-30T15:19:25Z" },
-      { title: "Haifa refinery said hit in latest Iranian missile barrage", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891624", time: "2026-03-30T11:54:19Z" },
-      { title: "IDF soldier killed in Lebanon; blaze at Haifa refinery after Iran, Hezbollah missile attack", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-solider-killed-in-lebanon-blaze-at-haifa-refinery-after-iran-hezbollah-missile-attack/", time: "2026-03-30T11:43:14Z" },
-      { title: "Israel media reports impact on oil refinery in Haifa", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-media-reports-impact-oil-refinery-haifa", time: "2026-03-30T09:08:58Z" },
-      { title: "4 lions arrive at Haifa zoo amid species conservation efforts", source: "Times of Israel", url: "https://www.timesofisrael.com/4-lions-arrive-at-haifa-zoo-amid-species-conservation-efforts/", time: "2026-03-30T07:03:56Z" },
-      { title: "Hezbollah claims strikes as Israel intercepts missiles, drone", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-claims-strikes-israel-intercepts-missiles-drone", time: "2026-03-30T03:31:57Z" },
-      { title: "Fire breaks out at Haifa oil refinery after Iran, Hezbollah fires missiles at north", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-30-2026/", time: "2026-03-30T01:57:23Z" },
-      { title: "Daily Briefing Mar. 29 – Northerners feel grim amid war but firm on need to defeat Hezbollah", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-mar-29-northerners-feel-grim-amid-war-but-firm-on-need-to-defeat-hezbollah/", time: "2026-03-29T11:20:34Z" },
-      { title: "Iran says Israeli radar centre, airport targeted in strikes", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-israeli-radar-centre-airport-targeted-strikes", time: "2026-03-29T03:42:24Z" },
-      { title: "Israelis rushed to shelters 18 times overnight, local media says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israelis-rushed-shelters-18-times-overnight-local-media-says", time: "2026-03-28T06:28:19Z" },
-      { title: "In mixed Haifa, weary residents face near-constant Iranian and Hezbollah missile fire", source: "Times of Israel", url: "https://www.timesofisrael.com/in-mixed-haifa-weary-residents-face-near-constant-iranian-and-hezbollah-missile-fire/", time: "2026-03-26T11:58:27Z" },
-      { title: "Iranian cluster munition strikes home in suburb of Haifa, no injuries reported", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-24-2026/", time: "2026-03-23T23:11:42Z" },
-    ]
-  },
-  {
     name: "Manila", country: "Philippines",
     lat: 14.5995, lng: 120.9842,
     category: "conflict",
@@ -4130,6 +4120,26 @@ const locations = [
     ]
   },
   {
+    name: "Haifa", country: "Israel",
+    lat: 32.794, lng: 34.9896,
+    category: "conflict",
+    articles: [
+      { title: "What we know about attack on key Israeli oil refinery", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/30/what-we-know-about-attack-on-key-israeli-oil-refinery?traffic_source=rss", time: "2026-03-30T19:19:50Z" },
+      { title: "Fire contained after missile attack on oil refinery in Israel’s Haifa", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/fire-contained-after-missile-attack-on-oil-refinery-in-israels-haifa?traffic_source=rss", time: "2026-03-30T16:25:31Z" },
+      { title: "Trump: U.S. will respond 'shortly' to Iranian attack on Haifa oil refinery", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-03-30/ty-article/.premium/trump-u-s-will-destroy-iranian-energy-infrastructure-if-no-deal-is-reached/0000019d-3f06-defb-a59d-bf8e09900000", time: "2026-03-30T15:19:25Z" },
+      { title: "Haifa refinery said hit in latest Iranian missile barrage", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891624", time: "2026-03-30T11:54:19Z" },
+      { title: "IDF soldier killed in Lebanon; blaze at Haifa refinery after Iran, Hezbollah missile attack", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-solider-killed-in-lebanon-blaze-at-haifa-refinery-after-iran-hezbollah-missile-attack/", time: "2026-03-30T11:43:14Z" },
+      { title: "Israel media reports impact on oil refinery in Haifa", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-media-reports-impact-oil-refinery-haifa", time: "2026-03-30T09:08:58Z" },
+      { title: "4 lions arrive at Haifa zoo amid species conservation efforts", source: "Times of Israel", url: "https://www.timesofisrael.com/4-lions-arrive-at-haifa-zoo-amid-species-conservation-efforts/", time: "2026-03-30T07:03:56Z" },
+      { title: "Hezbollah claims strikes as Israel intercepts missiles, drone", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-claims-strikes-israel-intercepts-missiles-drone", time: "2026-03-30T03:31:57Z" },
+      { title: "Fire breaks out at Haifa oil refinery after Iran, Hezbollah fires missiles at north", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-march-30-2026/", time: "2026-03-30T01:57:23Z" },
+      { title: "Daily Briefing Mar. 29 – Northerners feel grim amid war but firm on need to defeat Hezbollah", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-mar-29-northerners-feel-grim-amid-war-but-firm-on-need-to-defeat-hezbollah/", time: "2026-03-29T11:20:34Z" },
+      { title: "Iran says Israeli radar centre, airport targeted in strikes", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-israeli-radar-centre-airport-targeted-strikes", time: "2026-03-29T03:42:24Z" },
+      { title: "Israelis rushed to shelters 18 times overnight, local media says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israelis-rushed-shelters-18-times-overnight-local-media-says", time: "2026-03-28T06:28:19Z" },
+      { title: "In mixed Haifa, weary residents face near-constant Iranian and Hezbollah missile fire", source: "Times of Israel", url: "https://www.timesofisrael.com/in-mixed-haifa-weary-residents-face-near-constant-iranian-and-hezbollah-missile-fire/", time: "2026-03-26T11:58:27Z" },
+    ]
+  },
+  {
     name: "Accra", country: "Ghana",
     lat: 5.6037, lng: -0.187,
     category: "economic",
@@ -4147,25 +4157,6 @@ const locations = [
       { title: "Ghana and EU sign defence partnership to counter west Africa insecurity", source: "France 24", url: "https://www.france24.com/en/ghana-and-eu-sign-defence-partnership-to-counter-west-africa-insecurity", time: "2026-03-25T14:56:12Z" },
       { title: "Ghana demands compensation for slavery in landmark UN vote", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg06q36052o?at_medium=RSS&at_campaign=rss", time: "2026-03-25T11:22:05Z" },
       { title: "Ghana and EU sign landmark defence deal to combat militant Islamist threat", source: "BBC News", url: "https://www.bbc.com/news/articles/c87w80xe1jro?at_medium=RSS&at_campaign=rss", time: "2026-03-24T16:45:47Z" },
-    ]
-  },
-  {
-    name: "Budapest", country: "Hungary",
-    lat: 47.4979, lng: 19.0402,
-    category: "diplomacy",
-    articles: [
-      { title: "US senators target Hungary with sanctions bill over Russian energy ties and Ukraine obstruction", source: "Euronews", url: "http://www.euronews.com/2026/03/27/us-senators-target-hungary-with-sanctions-bill-over-russian-energy-ties-and-ukraine-obstru", time: "2026-03-27T10:21:48Z" },
-      { title: "Hungary charges journalist following claims minister was in touch with Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/hungary-charges-journalist-szabolcs-panyi-following-claims-minister-was-in-touch-with-moscow", time: "2026-03-26T18:37:32Z" },
-      { title: "Hungary Opens Espionage Case Against Journalist", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/hungary-journalist-election-meddling-espionage.html", time: "2026-03-26T18:14:05Z" },
-      { title: "Orban's Hungarian government accused of mass voter intimidation ahead of election", source: "BBC News", url: "https://www.bbc.com/news/articles/c36r0068xp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:16:06Z" },
-      { title: "Hungarian minister 'Russia leaks' highlight EU weaknesses as information is weaponised", source: "Euronews", url: "http://www.euronews.com/2026/03/26/hungarian-minister-russia-leaks-highlight-eu-weaknesses-as-information-is-weaponised", time: "2026-03-26T16:54:21Z" },
-      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
-      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
-      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
-      { title: "Hungary is 'the Kremlin's biggest agent in the EU', analyst says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260324-hungary-is-the-kremlin-s-biggest-agent-in-the-eu-analyst-says", time: "2026-03-24T22:07:16Z" },
-      { title: "The global authoritarian right loves Orbán – and that could cost him in Hungary’s elections | Gellert Tamas", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/24/viktor-orban-hungary-elections-global-authoritarian-right", time: "2026-03-24T05:00:09Z" },
-      { title: "Ukraine war briefing: Russia setting up long-range drone bases in Belarus, Zelenskyy says", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/ukraine-war-briefing-russia-setting-up-long-range-drone-bases-in-belarus-zelenskyy-says", time: "2026-03-24T04:03:21Z" },
-      { title: "EU 'deeply concerned' by reports Hungary leaked negotiation details to Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260323-eu-concern-hungary-russia-leak-negotiations-ukraine", time: "2026-03-23T22:44:33Z" },
     ]
   },
   {
@@ -4204,6 +4195,24 @@ const locations = [
       { title: "Greetings from Turkey's border with Iran, where Iranians let loose on the dance floor", source: "NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5760830/iranian-disco-turkey-iran", time: "2026-03-25T18:27:54Z" },
       { title: "Pakistan conveyed U.S. proposal, senior Iranian official says", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-pakistan-conveyed-us-proposal-senior-iranian-official-says/", time: "2026-03-25T16:24:40Z" },
       { title: "Trump says peace talks progressing as Iran officials deny negotiations", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/03/24/us-iran-peace-talks-pakistan-turkey-egypt/", time: "2026-03-24T13:30:06Z" },
+    ]
+  },
+  {
+    name: "Budapest", country: "Hungary",
+    lat: 47.4979, lng: 19.0402,
+    category: "diplomacy",
+    articles: [
+      { title: "US senators target Hungary with sanctions bill over Russian energy ties and Ukraine obstruction", source: "Euronews", url: "http://www.euronews.com/2026/03/27/us-senators-target-hungary-with-sanctions-bill-over-russian-energy-ties-and-ukraine-obstru", time: "2026-03-27T10:21:48Z" },
+      { title: "Hungary charges journalist following claims minister was in touch with Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/hungary-charges-journalist-szabolcs-panyi-following-claims-minister-was-in-touch-with-moscow", time: "2026-03-26T18:37:32Z" },
+      { title: "Hungary Opens Espionage Case Against Journalist", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/hungary-journalist-election-meddling-espionage.html", time: "2026-03-26T18:14:05Z" },
+      { title: "Orban's Hungarian government accused of mass voter intimidation ahead of election", source: "BBC News", url: "https://www.bbc.com/news/articles/c36r0068xp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:16:06Z" },
+      { title: "Hungarian minister 'Russia leaks' highlight EU weaknesses as information is weaponised", source: "Euronews", url: "http://www.euronews.com/2026/03/26/hungarian-minister-russia-leaks-highlight-eu-weaknesses-as-information-is-weaponised", time: "2026-03-26T16:54:21Z" },
+      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
+      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
+      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
+      { title: "Hungary is 'the Kremlin's biggest agent in the EU', analyst says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260324-hungary-is-the-kremlin-s-biggest-agent-in-the-eu-analyst-says", time: "2026-03-24T22:07:16Z" },
+      { title: "The global authoritarian right loves Orbán – and that could cost him in Hungary’s elections | Gellert Tamas", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/24/viktor-orban-hungary-elections-global-authoritarian-right", time: "2026-03-24T05:00:09Z" },
+      { title: "Ukraine war briefing: Russia setting up long-range drone bases in Belarus, Zelenskyy says", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/24/ukraine-war-briefing-russia-setting-up-long-range-drone-bases-in-belarus-zelenskyy-says", time: "2026-03-24T04:03:21Z" },
     ]
   },
   {
@@ -4852,6 +4861,16 @@ const locations = [
     ]
   },
   {
+    name: "Nanjing", country: "China",
+    lat: 32.0603, lng: 118.7969,
+    category: "conflict",
+    articles: [
+      { title: "Chinese coffee brands need more than low prices to compete with global players: analysts", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3348412/chinese-coffee-brands-need-more-low-prices-compete-global-players-analysts?utm_source=rss_feed", time: "2026-03-30T23:30:09Z" },
+      { title: "Cambridge top architect Francois Penz relocates to China from UK", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347941/cambridge-top-architect-francois-penz-relocates-china-uk?utm_source=rss_feed", time: "2026-03-28T10:00:13Z" },
+      { title: "Leading Chinese hypersonic aviation scientist Yan Hong dies at 56", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3348183/leading-chinese-hypersonic-aviation-scientist-yan-hong-dies-56?utm_source=rss_feed", time: "2026-03-27T13:00:15Z" },
+    ]
+  },
+  {
     name: "Lagos", country: "Nigeria",
     lat: 6.5244, lng: 3.3792,
     category: "economic",
@@ -5087,15 +5106,6 @@ const locations = [
     ]
   },
   {
-    name: "Nanjing", country: "China",
-    lat: 32.0603, lng: 118.7969,
-    category: "conflict",
-    articles: [
-      { title: "Cambridge top architect Francois Penz relocates to China from UK", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3347941/cambridge-top-architect-francois-penz-relocates-china-uk?utm_source=rss_feed", time: "2026-03-28T10:00:13Z" },
-      { title: "Leading Chinese hypersonic aviation scientist Yan Hong dies at 56", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3348183/leading-chinese-hypersonic-aviation-scientist-yan-hong-dies-56?utm_source=rss_feed", time: "2026-03-27T13:00:15Z" },
-    ]
-  },
-  {
     name: "Cape Town", country: "South Africa",
     lat: -33.9249, lng: 18.4241,
     category: "political",
@@ -5246,15 +5256,6 @@ const locations = [
     articles: [
       { title: "Rina Lazo, the only female muralist in Palacio de Bellas Artes", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/rina-lazo-the-only-female-muralist-in-palacio-de-bellas-artes/", time: "2026-03-27T18:17:33Z" },
       { title: "Parrot egg smugglers caught at airport as chick hatches from hand luggage", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/parrots-smuggling-amsterdam-schiphol-airport-b2946245.html", time: "2026-03-26T14:37:28Z" },
-    ]
-  },
-  {
-    name: "Montreal", country: "Canada",
-    lat: 45.5017, lng: -73.5673,
-    category: "economic",
-    articles: [
-      { title: "Air Canada CEO to step down following ‘lack of compassion’ from English-only speech after crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/air-canada-ceo-michael-rousseau-resign-retired-b2948468.html", time: "2026-03-30T14:52:22Z" },
-      { title: "Two pilots killed after Air Canada jet collision at LaGuardia in New York", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/23/air-canada-plane-collides-with-ground-vehicle-at-new-yorks-laguardia-airport-halting-all-flights", time: "2026-03-23T23:32:32Z" },
     ]
   },
   {
@@ -5487,6 +5488,14 @@ const locations = [
     category: "humanitarian",
     articles: [
       { title: "Myanmar junta chief Min Aung Hlaing nominated in presidential process", source: "The Hindu", url: "https://www.thehindu.com/news/international/myanmar-junta-chief-min-aung-hlaing-nominated-in-presidential-process/article70801720.ece", time: "2026-03-30T04:47:49Z" },
+    ]
+  },
+  {
+    name: "Montreal", country: "Canada",
+    lat: 45.5017, lng: -73.5673,
+    category: "economic",
+    articles: [
+      { title: "Air Canada CEO to step down following ‘lack of compassion’ from English-only speech after crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/air-canada-ceo-michael-rousseau-resign-retired-b2948468.html", time: "2026-03-30T14:52:22Z" },
     ]
   },
   {
