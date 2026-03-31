@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:43 UTC, 31 Mar 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:39 UTC, 31 Mar 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">31 March 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 21:43 UTC, 31 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["WATCH: IDF strikes, dismantles missile launchers in southern Lebanon", "Bennett pledges to restore Israel’s standing, form gov’t with only those who serve - interview", "Hamas urges Hezbollah to kidnap Israeli soldiers in wake of Knesset passing death penalty bill"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Israel-Lebanon tensions escalate amid military strikes and militant coordination</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Japan deploys long-range missiles close to China", "Taiwan stocks outperform South Korea most since 2009 amid war turmoil", "EU opposes use of force in Taiwan Strait: MEP"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Regional security concerns rise with military deployments and geopolitical tensions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Chinese artist on trial for Mao sculptures", "Entombing cremated remains in Chinese apartments banned", "Can Cheng speak for Taiwan?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China enforces cultural and political regulations affecting Taiwan and citizens</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taipei daycare subsidy to rise by NT$3,000", "Standard Chartered Taiwan launches pricing platform", "Taiwan government approves TSMC’s 3nm upgrade for second Japan fab"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Taiwan advances economic policy, technology infrastructure and semiconductor manufacturing</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taiwan wins 2nd Asian Cup Baseball5 title, secures World Cup berth", "China, Pakistan call for Iran peace talks, normal navigation in Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan sports success and Iran regional stability discussions occur</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Approval ratings of Japan’s Takaichi", "Seoul to revise disputed e-arrival card, report says", "Kentucky Gov. Andy Beshear criticizes Gaza ‘genocide’ discourse ‘litmus test’ for Democrats"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Political leadership changes and policy revisions emerge across Asia-Pacific</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:39 UTC, 31 Mar 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["WATCH: IDF strikes, dismantles missile launchers in southern Lebanon", "Israeli strikes kill at least eight in southern Lebanon within an hour"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">IDF conducts multiple strikes dismantling missile launchers in southern Lebanon</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Chinese artist on trial for Mao sculptures", "Entombing cremated remains in Chinese apartments banned"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Chinese authorities enforce restrictions on artistic expression and cremation practices</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taiwan launches new satellite to test IoT tech", "Taiwan government approves TSMC’s 3nm upgrade for second Japan fab"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Taiwan advances semiconductor and satellite technology infrastructure development initiatives</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taiwan wins 2nd Asian Cup Baseball5 title, secures World Cup berth", "Taiwan stocks outperform South Korea most since 2009 amid war turmoil"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan achieves sports victories and stock market outperformance in Asia</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Japan deploys long-range missiles close to China", "EU opposes use of force in Taiwan Strait: MEP"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Japan deploys long-range missiles as international concern over Taiwan Strait rises</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["American journalist Shelly Kittleson kidnapped in Baghdad", "Kentucky Gov. Andy Beshear criticizes Gaza ‘genocide’ discourse ‘litmus test’ for Democrats"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Security crises emerge in Iraq and Gaza affecting global citizens</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,6 +144,7 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Iran ambassador refuses to leave Lebanon despite expulsion order", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/31/iran-ambassador-refuses-to-leave-lebanon-despite-expulsion-order?traffic_source=rss", time: "2026-03-31T21:43:35Z" },
       { title: "Iranians debate whether the war is worth it", source: "NPR", url: "https://www.npr.org/2026/03/31/nx-s1-5759351/iranians-debate-whether-the-war-is-worth-it", time: "2026-03-31T21:33:12Z" },
       { title: "Iran's 'basement' Chinese drone networks spark fears of sleeper cell attacks on US soil", source: "Fox News", url: "https://www.foxnews.com/world/irans-basement-chinese-drone-networks-spark-fears-sleeper-cell-attacks-us-soil", time: "2026-03-31T20:49:50Z" },
       { title: "Confident of Air Supremacy, U.S. Sends B-52 Bombers Over Iran", source: "New York Times", url: "https://www.nytimes.com/2026/03/31/world/middleeast/us-iran-b52-bombers.html", time: "2026-03-31T20:15:41Z" },
@@ -643,7 +644,6 @@ const locations = [
       { title: "Trump says Iran gave U.S. 'a very big present' related to oil and gas", source: "CBS News", url: "https://www.cbsnews.com/video/trump-says-iran-gave-us-a-very-big-present-related-to-oil-and-gas/", time: "2026-03-24T23:31:00Z" },
       { title: "Trump keeps up claims of talks with ‘the right people’ in Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/trump-keeps-up-claims-of-talks-with-the-right-people-in-iran?traffic_source=rss", time: "2026-03-24T23:25:08Z" },
       { title: "U.S. expected to deploy troops from 82nd Airborne to Middle East for Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/u-s-deploy-82nd-airborne-iran-middle-east/", time: "2026-03-24T22:42:48Z" },
-      { title: "Iran Signals Resilience With Volley of Missiles Across Middle East", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/middleeast/iran-missiles-middle-east-trump-deal.html", time: "2026-03-24T21:44:41Z" },
     ]
   },
   {
@@ -652,6 +652,11 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "WATCH: IDF strikes, dismantles missile launchers in southern Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891854", time: "2026-04-01T00:07:43Z" },
+      { title: "Israeli strikes kill at least eight in southern Lebanon within an hour", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-kill-least-eight-southern-lebanon-within-hour", time: "2026-03-31T22:32:06Z" },
+      { title: "Israel says it struck rocket launch sites in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-says-it-struck-rocket-launch-sites-southern-lebanon", time: "2026-03-31T22:13:29Z" },
+      { title: "'We need everyone': IDF pressured reservists with PTSD to serve, some threatened with arrest", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-01/ty-article-magazine/.premium/idf-pressured-reservists-with-ptsd-to-serve-some-threatened-with-arrest/0000019d-386a-da4b-a39d-f86b98cd0000", time: "2026-03-31T22:03:18Z" },
+      { title: "Israel's retired generals must break their silence on the Iran war", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-01/ty-article-opinion/.premium/israels-retired-generals-must-break-their-silence-on-the-iran-war/0000019d-450d-d759-ab9d-7d9d0dd80000", time: "2026-03-31T21:47:35Z" },
+      { title: "In the name of sacred security, Israel seeks to occupy more foreign land", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-01/ty-article-opinion/.premium/in-the-name-of-sacred-security-israel-seeks-to-occupy-more-foreign-land/0000019d-4526-d905-a39d-d5a761240000", time: "2026-03-31T21:45:31Z" },
       { title: "Death is the Netanyahu government's true specialty", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-01/ty-article-opinion/.premium/death-is-the-netanyahu-governments-true-specialty/0000019d-4526-d905-a39d-d5a77f170000", time: "2026-03-31T21:36:19Z" },
       { title: "Five arrested as police violently disperse protest against Israel's new death penalty law", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-01/ty-article/.premium/five-arrested-as-police-violently-disperse-protest-against-new-death-penalty-law/0000019d-4592-d759-ab9d-7d9b57480000", time: "2026-03-31T21:24:29Z" },
       { title: "Netanyahu determined to fast-track Haredi military draft exemption, sources say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-04-01/ty-article/.premium/netanyahu-determined-to-fast-track-haredi-military-draft-exemption-sources-say/0000019d-44d9-d09b-a7fd-5edf38460000", time: "2026-03-31T21:16:19Z" },
@@ -1103,10 +1108,6 @@ const locations = [
       { title: "A new Israeli law expanding the powers of religious courts is a threat to women", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-03-25/ty-article-opinion/a-new-israeli-law-expanding-the-powers-of-religious-courts-is-a-threat-to-women/0000019d-21cf-d62e-addd-23cf3ad50000", time: "2026-03-24T22:53:29Z" },
       { title: "‘Retarded Moroccan’: Senior Netanyahu aide under fire for reported racist tirades", source: "Times of Israel", url: "https://www.timesofisrael.com/retarded-moroccan-senior-netanyahu-aide-under-fire-for-reported-racist-tirades/", time: "2026-03-24T22:44:17Z" },
       { title: "Prince of Tbilisi: Teen Izhak Ashpiz’s impressively stoic rise to Israeli judo royalty", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/sports/article-891093", time: "2026-03-24T22:44:13Z" },
-      { title: "Beyond the Headlines: Protecting body and soul - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891091", time: "2026-03-24T22:24:22Z" },
-      { title: "Israeli citizens are playing Russian roulette against each other", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-03-25/ty-article-opinion/.premium/israeli-citizens-are-playing-russian-roulette-against-each-other/0000019d-216a-d868-a1bd-7beb847e0000", time: "2026-03-24T22:23:49Z" },
-      { title: "The strange case of Dr. Bibi and Mr. Benjamin", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-03-25/ty-article-opinion/.premium/the-strange-case-of-dr-bibi-and-mr-benjamin/0000019d-216a-d77a-a7ff-ffea5e910000", time: "2026-03-24T22:00:36Z" },
-      { title: "From cakeism to crumbs: How will Israel survive when it has devoured all of its credibility and goodwill", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-03-24/ty-article-opinion/.premium/how-will-israel-survive-when-it-has-devoured-all-of-its-credibility-and-goodwill/0000019d-216a-d62e-addd-236abb960000", time: "2026-03-24T21:46:59Z" },
     ]
   },
   {
@@ -1114,6 +1115,8 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Forgoing Oversight of Iran War, G.O.P. Calls Hegseth to Testify on Budget", source: "New York Times", url: "https://www.nytimes.com/2026/03/31/world/middleeast/hegseth-iran-war-testimony.html", time: "2026-03-31T22:25:17Z" },
+      { title: "Here’s What Happened in the War in the Middle East on Tuesday", source: "New York Times", url: "https://www.nytimes.com/2026/03/31/world/middleeast/iran-war-middle-east-recap-tuesday.html", time: "2026-03-31T22:10:03Z" },
       { title: "Trump attempts new mail-in voting crackdown as his party’s standing continues to slide ahead of midterms", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-mail-in-voting-ban-polls-midterms-b2949600.html", time: "2026-03-31T21:31:25Z" },
       { title: "Iranian opposition groups stage show of strength over weekend", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891842", time: "2026-03-31T21:31:05Z" },
       { title: "Republicans turn on their own over shutdown and call on Congress to cancel their spring break", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/thune-senate-dhs-shutdown-vacation-b2949581.html", time: "2026-03-31T21:07:43Z" },
@@ -1378,8 +1381,6 @@ const locations = [
       { title: "Senate Republicans Again Block Bid to Halt Iran War Without Authorization", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/us/politics/senate-iran-war-vote.html", time: "2026-03-24T23:43:42Z" },
       { title: "Knesset advances contentious death penalty for terrorists bill for final vote", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-03-25/ty-article/.premium/far-right-death-penalty-for-terrorists-bill-approved-for-final-knesset-vote/0000019d-21f0-d640-a5fd-e7fe53f70000", time: "2026-03-24T23:16:01Z" },
       { title: "Deal to fund DHS falters amid bipartisan pushback", source: "Axios", url: "https://www.axios.com/2026/03/24/dhs-funding-deal-ice-senate-talks-trump-thune", time: "2026-03-24T23:14:08Z" },
-      { title: "3/24: CBS Evening News", source: "CBS News", url: "https://www.cbsnews.com/video/032426-cbs-evening-news/", time: "2026-03-24T22:30:00Z" },
-      { title: "MKs approve death penalty for terrorists bill for final Knesset plenum votes", source: "Times of Israel", url: "https://www.timesofisrael.com/mks-approve-death-penalty-for-terrorists-bill-for-final-knesset-plenum-votes/", time: "2026-03-24T21:53:34Z" },
     ]
   },
   {
@@ -1626,7 +1627,6 @@ const locations = [
       { title: "Iran tells UN: 'non-hostile' ships can transit Strait of Hormuz", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891097", time: "2026-03-25T01:16:50Z" },
       { title: "US proposes 15-point plan as Iran opens Hormuz to 'non-hostile' oil vessels", source: "France 24", url: "https://www.france24.com/en/middle-east/20260325-us-proposes-15-point-plan-as-iran-opens-hormuz-to-non-hostile-oil-vessels", time: "2026-03-25T00:05:03Z" },
       { title: "US sent Iran 15-point proposal for ending war in Middle East - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891095", time: "2026-03-24T23:30:37Z" },
-      { title: "Middle East source: U.S. presented Iran with 15-point plan for comprehensive deal", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-25/ty-article/.premium/middle-east-source-u-s-presented-15-point-proposal-to-iran-via-pakistan/0000019d-2198-d640-a5fd-e79eee360003", time: "2026-03-24T22:32:11Z" },
     ]
   },
   {
@@ -1816,7 +1816,6 @@ const locations = [
       { title: "No Israel prosecutions for killing Palestinian civilians in occupied West Bank since start of decade", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/no-israel-prosecutions-for-killing-palestinian-civilians-in-occupied-west-bank-since-start-of-decade", time: "2026-03-25T05:00:03Z" },
       { title: "Plan to Disarm Hamas in Gaza Is Detailed at U.N.", source: "New York Times", url: "https://www.nytimes.com/2026/03/24/world/middleeast/gaza-disarm-hamas-israel-board-of-peace.html", time: "2026-03-25T01:50:17Z" },
       { title: "Board of Peace envoy lays out principles of disarmament plan presented to Hamas", source: "Times of Israel", url: "https://www.timesofisrael.com/board-of-peace-envoy-lays-out-principles-of-disarmament-plan-presented-to-hamas/", time: "2026-03-24T23:33:50Z" },
-      { title: "The war is preventing an Iranian uprising. Just look at post-October 7 Israel", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-03-24/ty-article-opinion/.premium/the-war-is-preventing-an-iranian-uprising-just-look-at-post-october-7-israel/0000019d-216a-d77a-a7ff-ffea9d120000", time: "2026-03-24T21:53:35Z" },
     ]
   },
   {
@@ -1826,6 +1825,8 @@ const locations = [
     articles: [
       { title: "Chinese artist on trial for Mao sculptures", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/04/01/2003854838", time: "2026-04-01T00:00:00Z" },
       { title: "Entombing cremated remains in Chinese apartments banned", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/04/01/2003854840", time: "2026-04-01T00:00:00Z" },
+      { title: "China’s science awards system is plagued by shadowy practices. Can reforms fix it?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3345080/chinas-science-awards-system-plagued-shadowy-practices-can-reforms-fix-it?utm_source=rss_feed", time: "2026-03-31T22:00:08Z" },
+      { title: "Couple convicted of stealing trade secrets for China loses US citizenship", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3348592/couple-convicted-stealing-trade-secrets-china-loses-us-citizenship?utm_source=rss_feed", time: "2026-03-31T21:58:41Z" },
       { title: "Trump-Xi summit: US trade chief casts doubt on pre-meeting Beijing visit", source: "South China Morning Post", url: "https://www.scmp.com/news/us/diplomacy/article/3348590/trump-xi-summit-us-trade-chief-casts-doubt-pre-meeting-beijing-visit?utm_source=rss_feed", time: "2026-03-31T20:19:16Z" },
       { title: "Pakistan and China propose five-part peace plan for Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/31/pakistan-china-propose-five-part-peace-plan-middle-east", time: "2026-03-31T15:30:15Z" },
       { title: "China, Pakistan call for Iran peace talks, normal navigation in Strait of Hormuz", source: "Straits Times", url: "https://www.straitstimes.com/asia/china-pakistan-call-for-iran-peace-talks-normal-navigation-in-strait-of-hormuz", time: "2026-03-31T14:48:25Z" },
@@ -2183,6 +2184,9 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Peacekeepers killed by roadside explosion in Lebanon, initial report finds", source: "BBC News", url: "https://www.bbc.com/news/articles/c05d7md899ro?at_medium=RSS&at_campaign=rss", time: "2026-03-31T22:07:26Z" },
+      { title: "U.N. Peacekeepers in Lebanon Were Killed by Roadside Bomb", source: "New York Times", url: "https://www.nytimes.com/2026/03/31/world/middleeast/un-peacekeepers-lebanon-killed-security-council.html", time: "2026-03-31T22:03:05Z" },
+      { title: "Lebanon condemns Israel’s 'clear intention' to impose new occupation of its territory", source: "France 24", url: "https://www.france24.com/en/middle-east/20260331-lebanon-condemns-israel-s-clear-intention-to-impose-new-occupation-of-its-territory", time: "2026-03-31T21:55:56Z" },
       { title: "Hamas urges Hezbollah to kidnap Israeli soldiers in wake of Knesset passing death penalty bill", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891844", time: "2026-03-31T21:38:56Z" },
       { title: "American journalist kidnapped in Baghdad, suspect detained, US says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-journalist-kidnapped-baghdad-suspect-detained", time: "2026-03-31T21:13:13Z" },
       { title: "US journalist Shelly Kittleson kidnapped in Baghdad", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yled478zwo?at_medium=RSS&at_campaign=rss", time: "2026-03-31T21:08:35Z" },
@@ -2315,7 +2319,6 @@ const locations = [
       { title: "'The humanitarian crisis here is worsening by the minute': Israel continues to bomb Lebanon", source: "France 24", url: "https://www.france24.com/en/the-humanitarian-crisis-here-is-worsening-by-the-minute-israel-continues-to-bomb-lebanon", time: "2026-03-25T07:13:52Z" },
       { title: "Talk of annexation in Lebanon risks undermining Israel’s case against Hezbollah - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891090", time: "2026-03-25T05:56:05Z" },
       { title: "Canada 'strongly condemns' Israeli plan to occupy buffer zone in southern Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891101", time: "2026-03-25T03:27:54Z" },
-      { title: "Middle East crisis live: Israeli military issues new evacuation warning for Beirut; Trump reportedly approves sending more troops", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/24/iran-war-live-updates-trump-ursula-von-der-leyen-oil-prices-energy-crisis-israel-strikes", time: "2026-03-24T22:07:26Z" },
     ]
   },
   {
@@ -2448,7 +2451,6 @@ const locations = [
       { title: "Ukraine war briefing: Moldova declares emergency after Russian attack cuts key power line", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/25/ukraine-war-briefing-moldova-declares-emergency-after-russian-attack-cuts-key-power-line", time: "2026-03-25T01:06:32Z" },
       { title: "News Wrap: Mullin sworn in as Homeland Security secretary", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-mullin-sworn-in-as-homeland-security-secretary", time: "2026-03-24T22:45:14Z" },
       { title: "News Wrap: Mullin sworn in as Homeland Security secretary", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-mullin-sworn-in-as-homeland-security-secretary", time: "2026-03-24T22:45:14Z" },
-      { title: "USC cancels gubernatorial debate amid uproar over candidates of color being excluded", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-23/california-leaders-call-to-boycott-debate-if-other-candidates-not-included", time: "2026-03-24T21:51:00Z" },
     ]
   },
   {
@@ -2654,8 +2656,6 @@ const locations = [
       { title: "Like Putin, Trump is a megalomaniac. In Europe, we can shield ourselves, not look for rational motives | Robert Habeck", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/25/like-putin-trump-is-a-megalomaniac-in-europe-we-can-shield-ourselves-not-look-for-rational-motives", time: "2026-03-25T05:00:01Z" },
       { title: "Democrats flip Florida state seat in Trump's backyard", source: "Axios", url: "https://www.axios.com/2026/03/25/democrats-flip-florida-seat-trump-mar-a-lago-emily-gregory", time: "2026-03-25T00:58:18Z" },
       { title: "Cockroaches, surveillance and 16-hour days: The life of a North Korean worker in Russia", source: "NBC News", url: "https://www.nbcnews.com/world/asia/cockroaches-surveillance-16-hour-days-life-north-korean-worker-russia-rcna264849", time: "2026-03-25T00:01:40Z" },
-      { title: "Hungary is 'the Kremlin's biggest agent in the EU', analyst says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260324-hungary-is-the-kremlin-s-biggest-agent-in-the-eu-analyst-says", time: "2026-03-24T22:07:16Z" },
-      { title: "OpenAI will shutter Sora video app", source: "Axios", url: "https://www.axios.com/2026/03/24/openai-discontinue-sora-video-app", time: "2026-03-24T21:44:39Z" },
     ]
   },
   {
@@ -2663,6 +2663,8 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "The Mesoamerican roots of Semana Santa in Iztapalapa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/the-mesoamerican-roots-of-semana-santa-in-iztapalapa/", time: "2026-03-31T22:05:28Z" },
+      { title: "MND Local: Water, new ride-hailing rules and public transit live tracking in Guadalajara", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mnd-local-guadalajara-water-crisis-2026-world-cup/", time: "2026-03-31T22:04:54Z" },
       { title: "What do Mexico’s latest job numbers tell us about the economy?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-job-numbers-economy/", time: "2026-03-31T21:35:23Z" },
       { title: "Anti-drug trafficking operations result in hundreds of arrests", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/anti-drug-trafficking-operations-arrests/", time: "2026-03-31T21:01:52Z" },
       { title: "Yucatán cracks open a new market for mamey with first-ever shipment to UK", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/yucatan-pioneers-mamey-uk/", time: "2026-03-31T20:23:36Z" },
@@ -2751,8 +2753,6 @@ const locations = [
       { title: "New Mexico trial finds Meta chose 'growth and profit over children's safety'", source: "France 24", url: "https://www.france24.com/en/new-mexico-trial-finds-meta-chose-growth-and-profit-over-children-s-safety", time: "2026-03-25T13:51:37Z" },
       { title: "Meta platforms found guilty of harming children's health and safety in US state trial", source: "France 24", url: "https://www.france24.com/en/meta-platforms-found-guilty-of-harming-children-s-health-and-safety-in-us-state-trial", time: "2026-03-25T11:05:46Z" },
       { title: "Meta knowingly harmed children’s mental health and prioritized profits over safety, jury determines", source: "Globe and Mail", url: "https://www.theglobeandmail.com/business/technology/science/article-meta-trial-new-mexico-children-mental-health/", time: "2026-03-25T01:03:05Z" },
-      { title: "New Mexico social media lawsuit ends in $375-million verdict against Meta", source: "LA Times", url: "https://www.latimes.com/california/story/2026-03-24/new-mexico-social-media-harms-lawsuit-375-million-verdict", time: "2026-03-24T22:38:22Z" },
-      { title: "Meta ordered to pay $375 million over child exploitation in landmark verdict", source: "France 24", url: "https://www.france24.com/en/americas/20260324-meta-ordered-to-pay-375-million-over-child-exploitation-in-landmark-verdict", time: "2026-03-24T22:01:17Z" },
     ]
   },
   {
@@ -3310,6 +3310,8 @@ const locations = [
     lat: 13.7563, lng: 100.5018,
     category: "economic",
     articles: [
+      { title: "Stronger baht hurts travel", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3228245/stronger-baht-hurts-travel", time: "2026-03-31T22:08:00Z" },
+      { title: "Private sector urges urgent economic action", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3228205/private-sector-urges-urgent-economic-action", time: "2026-03-31T21:50:00Z" },
       { title: "‘A place where music fills the air’: Bangkok to host Eurovision’s first Asia song contest", source: "The Guardian", url: "https://www.theguardian.com/tv-and-radio/2026/mar/31/eurovision-song-contest-expands-into-asia", time: "2026-03-31T12:33:58Z" },
       { title: "Myanmar junta leader’s family buys B100m Bangkok home", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3227960/myanmar-junta-leaders-family-buys-b100m-bangkok-home", time: "2026-03-31T08:06:00Z" },
       { title: "Diesel price in Thailand surges past key psychological threshold of 40 baht per litre", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/diesel-price-in-thailand-surges-past-key-psychological-threshold-of-40-baht-per-litre", time: "2026-03-31T07:00:00Z" },
@@ -3885,6 +3887,7 @@ const locations = [
     lat: -26.2041, lng: 28.0473,
     category: "economic",
     articles: [
+      { title: "South Africa Sees Maritime Traffic Surge Amid Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/03/31/world/africa/africa-iran-shipping-houthis.html", time: "2026-03-31T22:36:32Z" },
       { title: "South Africa: Minister Enoch Godongwana Cuts Fuel Tax By R3", source: "AllAfrica", url: "https://allafrica.com/stories/202603310384.html", time: "2026-03-31T12:53:24Z" },
       { title: "Caster Semenya pledges to fight against Olympic gender-testing policy", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/31/caster-semenya-pledges-to-fight-against-olympic-gender-testing-policy?traffic_source=rss", time: "2026-03-31T10:06:55Z" },
       { title: "South Africa: Western Cape Taxi Operators Hold Fares Despite Fuel Hike - South African News Briefs - March 31, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202603310094.html", time: "2026-03-31T05:48:23Z" },
@@ -4442,29 +4445,6 @@ const locations = [
     ]
   },
   {
-    name: "Budapest", country: "Hungary",
-    lat: 47.4979, lng: 19.0402,
-    category: "diplomacy",
-    articles: [
-      { title: "Hungarian FM says reports he passed information to Russia are 'foreign interference'", source: "France 24", url: "https://www.france24.com/en/europe/20260331-hungarian-fm-says-reports-he-passed-information-to-russia-are-foreign-interference", time: "2026-03-31T19:47:06Z" },
-      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
-      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
-      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
-      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
-      { title: "EU ministers arrive in Ukraine to mark Bucha massacre anniversary – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/31/europe-ukraine-bucha-eu-russia-hungary-iran-denmark-latest-news-updates", time: "2026-03-31T08:54:21Z" },
-      { title: "Viktor Orbán has the support of both Russia and the US – but that could be a double-edged sword | Péter Krekó", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/31/viktor-orban-us-russian-support-hungary-iran-war-voters", time: "2026-03-31T04:00:31Z" },
-      { title: "US senators target Hungary with sanctions bill over Russian energy ties and Ukraine obstruction", source: "Euronews", url: "http://www.euronews.com/2026/03/27/us-senators-target-hungary-with-sanctions-bill-over-russian-energy-ties-and-ukraine-obstru", time: "2026-03-27T10:21:48Z" },
-      { title: "Hungary charges journalist following claims minister was in touch with Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/hungary-charges-journalist-szabolcs-panyi-following-claims-minister-was-in-touch-with-moscow", time: "2026-03-26T18:37:32Z" },
-      { title: "Hungary Opens Espionage Case Against Journalist", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/hungary-journalist-election-meddling-espionage.html", time: "2026-03-26T18:14:05Z" },
-      { title: "Orban's Hungarian government accused of mass voter intimidation ahead of election", source: "BBC News", url: "https://www.bbc.com/news/articles/c36r0068xp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:16:06Z" },
-      { title: "Hungarian minister 'Russia leaks' highlight EU weaknesses as information is weaponised", source: "Euronews", url: "http://www.euronews.com/2026/03/26/hungarian-minister-russia-leaks-highlight-eu-weaknesses-as-information-is-weaponised", time: "2026-03-26T16:54:21Z" },
-      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
-      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
-      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
-      { title: "Hungary is 'the Kremlin's biggest agent in the EU', analyst says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260324-hungary-is-the-kremlin-s-biggest-agent-in-the-eu-analyst-says", time: "2026-03-24T22:07:16Z" },
-    ]
-  },
-  {
     name: "Kampala", country: "Uganda",
     lat: 0.3476, lng: 32.5825,
     category: "political",
@@ -4485,6 +4465,50 @@ const locations = [
       { title: "Uganda: Kampala Youth Pledge Individual Responsibility in Climate Change Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202603260479.html", time: "2026-03-26T15:19:07Z" },
       { title: "Uganda: Molly Katanga Begins Her Defence, Narrates to Court How She Was Beaten", source: "AllAfrica", url: "https://allafrica.com/stories/202603260478.html", time: "2026-03-26T15:18:38Z" },
       { title: "Uganda: Uganda Military Chief Says Country Would Join War If Israel Faces Defeat", source: "AllAfrica", url: "https://allafrica.com/stories/202603260463.html", time: "2026-03-26T15:11:06Z" },
+    ]
+  },
+  {
+    name: "Baghdad", country: "Iraq",
+    lat: 33.3152, lng: 44.3661,
+    category: "conflict",
+    articles: [
+      { title: "American journalist Shelly Kittleson kidnapped in Baghdad", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/03/31/shelly-kittleson-journalist-kidnapped-baghdad/", time: "2026-03-31T22:29:34Z" },
+      { title: "American journalist kidnapped in Baghdad; Iraq says manhunt underway, one detained", source: "Times of Israel", url: "https://www.timesofisrael.com/american-journalist-kidnapped-in-baghdad-iraq-says-manhunt-underway-one-detained/", time: "2026-03-31T21:33:33Z" },
+      { title: "US journalist kidnapped in Baghdad by suspected Iranian-backed armed group", source: "France 24", url: "https://www.france24.com/en/middle-east/20260331-us-journalist-kidnapped-in-baghdad-by-suspected-iranian-backed-armed-group", time: "2026-03-31T20:49:51Z" },
+      { title: "American journalist kidnapped in Baghdad, Iraqi police officials say", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-31/ty-article/american-journalist-kidnapped-in-baghdad-iraqi-police-officials-say/0000019d-4524-d905-a39d-d5a785380000", time: "2026-03-31T20:49:10Z" },
+      { title: "American journalist Shelly Kittleson kidnapped in Iraq", source: "CBS News", url: "https://www.cbsnews.com/news/american-journalist-shelly-kittleson-kidnapped-iraq/", time: "2026-03-31T20:29:00Z" },
+      { title: "U.S. journalist kidnapped in Baghdad, security forces tracking down captors, Iraqi officials say", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-journalist-kidnapped-in-baghdad-security-forces-tracking-down-captors-iraqi-officials-say", time: "2026-03-31T20:10:08Z" },
+      { title: "Foreign journalist holding US passport kidnapped in Baghdad by unknown parties, police say", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891833", time: "2026-03-31T20:02:43Z" },
+      { title: "Condemnations grow after attack on Kurdistan Regional President", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891662", time: "2026-03-30T15:28:19Z" },
+      { title: "Rocket attack targets Baghdad army base", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rocket-attack-targets-baghdad-army-base", time: "2026-03-30T11:18:06Z" },
+      { title: "Iraq risks Arab ties as Iran-aligned groups strike Gulf nations", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/iraq-risks-arab-ties-as-iran-aligned-groups-strike-gulf-nations?traffic_source=rss", time: "2026-03-30T09:57:31Z" },
+      { title: "Rockets strike US military base near Baghdad, aircraft destroyed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rockets-strike-us-military-base-near-baghdad-aircraft-destroyed", time: "2026-03-30T04:27:26Z" },
+      { title: "Strike kills Iraqi government-linked fighter, wounds six", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/strike-kills-iraqi-government-linked-fighter-wounds-six", time: "2026-03-28T17:21:22Z" },
+      { title: "Al-Sudani deserves political pity", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-al-sudani-deserves-political-pity/", time: "2026-03-25T18:51:46Z" },
+      { title: "US strikes against Iran-backed militias in Iraq reportedly continue as Baghdad warns of 'right to respond'", source: "Fox News", url: "https://www.foxnews.com/world/us-strikes-against-iran-backed-militias-iraq-reportedly-continue-baghdad-warns-right-respond", time: "2026-03-25T15:09:31Z" },
+      { title: "Iraqi factions announce carrying out 23 military operations targeting US bases", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-iraqi-factions-announce-carrying-out-23-military-operations-targeting-us-bases/", time: "2026-03-25T14:24:38Z" },
+    ]
+  },
+  {
+    name: "Budapest", country: "Hungary",
+    lat: 47.4979, lng: 19.0402,
+    category: "diplomacy",
+    articles: [
+      { title: "Hungarian FM says reports he passed information to Russia are 'foreign interference'", source: "France 24", url: "https://www.france24.com/en/europe/20260331-hungarian-fm-says-reports-he-passed-information-to-russia-are-foreign-interference", time: "2026-03-31T19:47:06Z" },
+      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
+      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
+      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
+      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
+      { title: "EU ministers arrive in Ukraine to mark Bucha massacre anniversary – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/31/europe-ukraine-bucha-eu-russia-hungary-iran-denmark-latest-news-updates", time: "2026-03-31T08:54:21Z" },
+      { title: "Viktor Orbán has the support of both Russia and the US – but that could be a double-edged sword | Péter Krekó", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/31/viktor-orban-us-russian-support-hungary-iran-war-voters", time: "2026-03-31T04:00:31Z" },
+      { title: "US senators target Hungary with sanctions bill over Russian energy ties and Ukraine obstruction", source: "Euronews", url: "http://www.euronews.com/2026/03/27/us-senators-target-hungary-with-sanctions-bill-over-russian-energy-ties-and-ukraine-obstru", time: "2026-03-27T10:21:48Z" },
+      { title: "Hungary charges journalist following claims minister was in touch with Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/26/hungary-charges-journalist-szabolcs-panyi-following-claims-minister-was-in-touch-with-moscow", time: "2026-03-26T18:37:32Z" },
+      { title: "Hungary Opens Espionage Case Against Journalist", source: "New York Times", url: "https://www.nytimes.com/2026/03/26/world/europe/hungary-journalist-election-meddling-espionage.html", time: "2026-03-26T18:14:05Z" },
+      { title: "Orban's Hungarian government accused of mass voter intimidation ahead of election", source: "BBC News", url: "https://www.bbc.com/news/articles/c36r0068xp2o?at_medium=RSS&at_campaign=rss", time: "2026-03-26T17:16:06Z" },
+      { title: "Hungarian minister 'Russia leaks' highlight EU weaknesses as information is weaponised", source: "Euronews", url: "http://www.euronews.com/2026/03/26/hungarian-minister-russia-leaks-highlight-eu-weaknesses-as-information-is-weaponised", time: "2026-03-26T16:54:21Z" },
+      { title: "In Hungary, some mayors can reject 'undesirable' residents", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260326-in-hungary-some-mayors-can-reject-undesirable-residents", time: "2026-03-26T12:46:05Z" },
+      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
+      { title: "Intercepted, injected with substance, cash taken: Ukraine bank staff details Hungarian seizure", source: "Euronews", url: "http://www.euronews.com/2026/03/25/intercepted-injected-with-substance-cash-taken-ukraine-bank-staff-details-hungarian-seizur", time: "2026-03-25T09:40:30Z" },
     ]
   },
   {
@@ -4635,26 +4659,6 @@ const locations = [
       { title: "Rain, thunderstorms likely in Karachi, other parts of Sindh tomorrow: PMD", source: "Dawn", url: "https://www.dawn.com/news/1985859/rain-thunderstorms-likely-in-karachi-other-parts-of-sindh-tomorrow-pmd", time: "2026-03-27T07:58:11Z" },
       { title: "In meeting with MQM-P delegation, PM Shehbaz lauds services of ex-Sindh governor Kamran Tessori", source: "Dawn", url: "https://www.dawn.com/news/1985650/in-meeting-with-mqm-p-delegation-pm-shehbaz-lauds-services-of-ex-sindh-governor-kamran-tessori", time: "2026-03-26T20:25:49Z" },
       { title: "‘Someone asked if my book was influenced by Dhurandhar’: author Sarnath Banerjee", source: "The Hindu", url: "https://www.thehindu.com/books/interview-sarnath-banerjee-graphic-novel-absolute-jafar-india-pak-love-story/article70768713.ece", time: "2026-03-25T18:39:46Z" },
-    ]
-  },
-  {
-    name: "Baghdad", country: "Iraq",
-    lat: 33.3152, lng: 44.3661,
-    category: "conflict",
-    articles: [
-      { title: "US journalist kidnapped in Baghdad by suspected Iranian-backed armed group", source: "France 24", url: "https://www.france24.com/en/middle-east/20260331-us-journalist-kidnapped-in-baghdad-by-suspected-iranian-backed-armed-group", time: "2026-03-31T20:49:51Z" },
-      { title: "American journalist kidnapped in Baghdad, Iraqi police officials say", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-31/ty-article/american-journalist-kidnapped-in-baghdad-iraqi-police-officials-say/0000019d-4524-d905-a39d-d5a785380000", time: "2026-03-31T20:49:10Z" },
-      { title: "American journalist Shelly Kittleson kidnapped in Iraq", source: "CBS News", url: "https://www.cbsnews.com/news/american-journalist-shelly-kittleson-kidnapped-iraq/", time: "2026-03-31T20:29:00Z" },
-      { title: "U.S. journalist kidnapped in Baghdad, security forces tracking down captors, Iraqi officials say", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-journalist-kidnapped-in-baghdad-security-forces-tracking-down-captors-iraqi-officials-say", time: "2026-03-31T20:10:08Z" },
-      { title: "Foreign journalist holding US passport kidnapped in Baghdad by unknown parties, police say", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891833", time: "2026-03-31T20:02:43Z" },
-      { title: "Condemnations grow after attack on Kurdistan Regional President", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891662", time: "2026-03-30T15:28:19Z" },
-      { title: "Rocket attack targets Baghdad army base", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rocket-attack-targets-baghdad-army-base", time: "2026-03-30T11:18:06Z" },
-      { title: "Iraq risks Arab ties as Iran-aligned groups strike Gulf nations", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/iraq-risks-arab-ties-as-iran-aligned-groups-strike-gulf-nations?traffic_source=rss", time: "2026-03-30T09:57:31Z" },
-      { title: "Rockets strike US military base near Baghdad, aircraft destroyed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rockets-strike-us-military-base-near-baghdad-aircraft-destroyed", time: "2026-03-30T04:27:26Z" },
-      { title: "Strike kills Iraqi government-linked fighter, wounds six", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/strike-kills-iraqi-government-linked-fighter-wounds-six", time: "2026-03-28T17:21:22Z" },
-      { title: "Al-Sudani deserves political pity", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-al-sudani-deserves-political-pity/", time: "2026-03-25T18:51:46Z" },
-      { title: "US strikes against Iran-backed militias in Iraq reportedly continue as Baghdad warns of 'right to respond'", source: "Fox News", url: "https://www.foxnews.com/world/us-strikes-against-iran-backed-militias-iraq-reportedly-continue-baghdad-warns-right-respond", time: "2026-03-25T15:09:31Z" },
-      { title: "Iraqi factions announce carrying out 23 military operations targeting US bases", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260325-iraqi-factions-announce-carrying-out-23-military-operations-targeting-us-bases/", time: "2026-03-25T14:24:38Z" },
     ]
   },
   {
