@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:39 UTC, 3 Apr 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:39 UTC, 3 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">3 April 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:39 UTC, 3 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["US bill aims to protect Taiwan cables", "Taiwan implementing cybersecurity projects: source", "Taiwan’s failures on migrant labor issues"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Taiwan addresses cybersecurity, infrastructure protection and migrant labor issues</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Defense budget approval urged before China trip", "US, China and Honduras’ stance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan and US strengthen defense ties amid China concerns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Microsoft Corp to invest US$10bn in AI in Japan", "Japan harnesses power of osmosis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Japan advances technology in AI investment and renewable energy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Thai PM blames  stockpilers for a shortage of fuel", "France, S Korea to work together on Strait of Hormuz"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Regional leaders address fuel shortages and maritime security cooperation</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Syria says Israeli tank fire kills man in country&#39;s south", "US-Iran ceasefire talks reach standstill, say mediators - report"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Middle East tensions persist with Israeli strikes and stalled Iran talks</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["China launches an all-day streaming channel for pets", "Two weather fronts are forecast to affect Taiwan", "‘Otaku’ culture features at three-day Taipei festival", "Taiwan’s 1st local H7 flu case identified as H7N7: CDC"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan experiences cultural events, weather patterns and disease surveillance updates</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:39 UTC, 3 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["2 U.S. planes hit in Iran, search on for missing crew member", "Exhaustive search underway in Iran to rescue downed F-15 airman", "GOP senator calls to end Iran operations without formal declaration of war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US military operations in Iran escalate with downed aircraft and crew search</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["US bill aims to protect Taiwan cables", "Taiwan implementing cybersecurity projects: source", "Taiwan’s failures on migrant labor issues"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Taiwan addresses security, infrastructure and labor policy challenges</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Thai PM blames  stockpilers for a shortage of fuel", "Huge loan needed to finance fuel subsidies"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Thailand faces fuel shortage and subsidy financing crisis</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Defense budget approval urged before China trip", "US, China and Honduras’ stance"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Taiwan-US relations strengthen amid China concerns</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Microsoft Corp to invest US$10bn in AI in Japan", "Japan harnesses power of osmosis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Japan advances technology in AI and renewable energy</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["France, S Korea to work together on Strait of Hormuz", "After 16 years in power, can Viktor Orban finally be unseated?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">International diplomatic and political developments reshape regional dynamics</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,6 +144,8 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "2 U.S. planes hit in Iran, search on for missing crew member", source: "CBS News", url: "https://www.cbsnews.com/video/2-us-planes-hit-iran-search-missing-crew-member/", time: "2026-04-03T23:11:19Z" },
+      { title: "Exhaustive search underway in Iran to rescue downed F-15 airman", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/exhaustive-search-underway-in-iran-to-rescue-downed-f-15-airman-260690501771", time: "2026-04-03T23:06:35Z" },
       { title: "US-Iran ceasefire talks reach standstill, say mediators - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-892013", time: "2026-04-03T21:56:13Z" },
       { title: "Iran’s Defenses Have Been Struck, but They Can Still Fire Missiles and Drones", source: "New York Times", url: "https://www.nytimes.com/2026/04/03/world/middleeast/iran-missiles-drones-military.html", time: "2026-04-03T21:53:54Z" },
       { title: "Israel, US can’t bomb regime change, only defections and credible alternatives can - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891899", time: "2026-04-03T21:43:06Z" },
@@ -166,6 +168,7 @@ const locations = [
       { title: "IDF strikes over 70 IRGC targets, including missile launch sites, in western, central Iran", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-892008", time: "2026-04-03T18:55:52Z" },
       { title: "The F-15E Strike Eagle: What to Know", source: "New York Times", url: "https://www.nytimes.com/2026/04/03/world/middleeast/f15e-strike-eagle.html", time: "2026-04-03T18:54:44Z" },
       { title: "US fighter jet downed. Spencer Boyer speaks to France 24", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260403-us-fighter-jet-downed-spencer-boyer-speaks-to-france-24", time: "2026-04-03T18:48:44Z" },
+      { title: "The Iran war may produce a new regional order – less America, more Turkey", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-03/ty-article-opinion/.premium/the-iran-war-may-produce-a-new-regional-order-less-america-more-turkey/0000019d-5366-db3c-a3df-dbe723a70000", time: "2026-04-03T17:58:57Z" },
       { title: "US unemployment rate drops despite economic uncertainty and Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/3/us-unemployment-rate-drops-despite-economic-uncertainty-and-iran-war?traffic_source=rss", time: "2026-04-03T17:35:23Z" },
       { title: "Iran leaders join crowds on Tehran’s streets in show of defiance", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-leaders-join-crowds-on-tehrans-streets-in-show-of-defiance/", time: "2026-04-03T17:29:34Z" },
       { title: "Crew member rescued after US fighter jet downed over Iran, US media reports", source: "BBC News", url: "https://www.bbc.com/news/articles/c3r395l91l3o?at_medium=RSS&at_campaign=rss", time: "2026-04-03T17:16:37Z" },
@@ -641,9 +644,6 @@ const locations = [
       { title: "Trump says US-Israeli war on Iran creating a new Middle East", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/28/trump-says-us-israeli-war-on-iran-creating-a-new-middle-east?traffic_source=rss", time: "2026-03-28T00:05:46Z" },
       { title: "Iran war live: Trump again slams NATO’s lack of support for war on Tehran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/28/iran-war-live-trump-again-slams-natos-lack-of-support-for-war-on-tehran?traffic_source=rss", time: "2026-03-28T00:00:48Z" },
       { title: "U.S. Tomahawks are being used in Iran war faster than stockpile is being refilled", source: "CBS News", url: "https://www.cbsnews.com/news/u-s-tomahawks-iran-war-faster-than-stockpile-refilled/", time: "2026-03-27T23:38:41Z" },
-      { title: "Rescue workers rush to save lives after south Tehran missile strike", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/27/rescue-workers-rush-to-save-lives-after-south-tehran-missile-strike?traffic_source=rss", time: "2026-03-27T23:28:03Z" },
-      { title: "Energy disruptions from Iran war trigger sprawling oil shortages across Asia", source: "NBC News", url: "https://www.nbcnews.com/video/energy-disruptions-from-iran-war-trigger-sprawling-oil-shortages-across-asia-260233797601", time: "2026-03-27T23:04:35Z" },
-      { title: "10 Americans injured in Iranian attack on Saudi airbase", source: "CBS News", url: "https://www.cbsnews.com/news/10-americans-injured-in-iranian-attack-on-saudi-airbase/", time: "2026-03-27T22:46:57Z" },
     ]
   },
   {
@@ -1119,10 +1119,6 @@ const locations = [
       { title: "These pro-Palestine PACs are trying to beat AIPAC at its own game", source: "Times of Israel", url: "https://www.timesofisrael.com/these-pro-palestine-pacs-are-trying-to-beat-aipac-at-its-own-game/", time: "2026-03-28T01:43:32Z" },
       { title: "Israeli strikes target Nabatieh district, Bekaa Valley towns in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-target-nabatieh-district-bekaa-valley-towns-lebanon", time: "2026-03-28T00:56:29Z" },
       { title: "One killed, several injured in Iran missile barrage on southern, central Israel", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891444", time: "2026-03-27T23:53:08Z" },
-      { title: "Inside the U.S.&ndash;Israel alliance and how it led to war with Iran", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/podcasts/compass-points-with-pbs-news/inside-the-u-s-israel-alliance-and-how-it-led-to-war-with-iran", time: "2026-03-27T23:30:48Z" },
-      { title: "Inside the U.S.-Israel alliance and how it led to war with Iran", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/video/compass-points/2026/03/inside-the-u-s-israel-alliance-and-how-it-led-to-war-with-iran", time: "2026-03-27T23:30:07Z" },
-      { title: "NYC Council approval of synagogue protection bill marks a welcome win for centrist Jews", source: "Times of Israel", url: "https://www.timesofisrael.com/nyc-council-approval-of-synagogue-protection-bill-marks-a-welcome-win-for-centrist-jews/", time: "2026-03-27T23:28:27Z" },
-      { title: "One killed in Tel Aviv, two wounded after Iranian cluster missile hits 10 sites", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/one-killed-two-wounded-after-iranian-cluster-missile-hits-tel-aviv-area/0000019d-317a-d868-a1bd-7bfb7eb90000", time: "2026-03-27T23:15:32Z" },
     ]
   },
   {
@@ -1130,6 +1126,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Surcharges hit consumers in economic fallout from war with Iran", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/surcharges-hit-consumers-in-economic-fallout-from-war-with-iran-260689989552", time: "2026-04-03T22:50:46Z" },
+      { title: "Opinion: Iran war: Why US allies are suffering more than its enemies", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opinion-iran-war-why-us-allies-are-suffering-more-its-enemies", time: "2026-04-03T22:44:59Z" },
       { title: "Japanese, French and Omani vessels cross the Strait of Hormuz", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-04-04/ty-article/japanese-french-and-omani-vessels-cross-the-strait-of-hormuz/0000019d-5539-df19-a9bf-fdbf31010000", time: "2026-04-03T21:55:10Z" },
       { title: "Will force be used to reopen Strait of Hormuz?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/3/will-force-be-used-to-reopen-strait-of-hormuz?traffic_source=rss", time: "2026-04-03T20:55:03Z" },
       { title: "Japanese, French and Omani vessels cross the Strait of Hormuz", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-03/ty-article-live/idf-strikes-beirut-tehran-one-wounded-in-northern-israel/0000019d-550d-db3c-a3df-dd8d75ef0000", time: "2026-04-03T20:54:52Z" },
@@ -1411,7 +1409,6 @@ const locations = [
       { title: "Thailand reaches deal with Iran to allow Hormuz oil transit, PM says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/thailand-reaches-iran-deal-allow-hormuz-oil-transit-pm-says", time: "2026-03-28T05:51:23Z" },
       { title: "Pakistan says holding 'detailed discussions' with leaders in Iran and Gulf", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pakistan-says-holding-detailed-discussions-leaders-iran-and-gulf", time: "2026-03-28T05:26:13Z" },
       { title: "UN warns of humanitarian crisis as Hormuz disruptions risk agriculture", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/un-warns-humanitarian-crisis-hormuz-disruptions-risk-agriculture", time: "2026-03-28T04:17:49Z" },
-      { title: "Iran claims Strait of Hormuz is closed as Trump says talks are underway", source: "CBS News", url: "https://www.cbsnews.com/video/iran-claims-strait-of-hormuz-is-closed-as-trump-says-talks-are-underway/", time: "2026-03-27T23:22:00Z" },
     ]
   },
   {
@@ -1419,6 +1416,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "What to know about Trump’s defense budget proposal", source: "The Hill", url: "https://thehill.com/homenews/5815826-what-to-know-about-trumps-defense-budget-proposal/", time: "2026-04-03T23:09:53Z" },
       { title: "Second U.S. aircraft struck by Iranian fire after downed jet, U.S. official says", source: "NBC News", url: "https://www.nbcnews.com/video/second-u-s-aircraft-struck-by-iranian-fire-after-downed-jet-u-s-official-says-260685893649", time: "2026-04-03T21:49:31Z" },
       { title: "Second U.S. aircraft struck by Iranian fire after downed jet, U.S. official says", source: "NBC News", url: "https://www.nbcnews.com/video/second-u-s-aircraft-struck-by-iranian-fire-after-downed-jet-u-s-official-says-260685893649", time: "2026-04-03T21:49:31Z" },
       { title: "Voices from the Arab press: US-Israel Iran war faces political limits", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891758", time: "2026-04-03T21:42:50Z" },
@@ -1663,8 +1661,6 @@ const locations = [
       { title: "Middle East crisis live: US ‘hopeful’ of Iran meetings this week after Rubio claims operation expected to conclude in weeks", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east", time: "2026-03-28T02:16:54Z" },
       { title: "Trump suggests renaming Hormuz - 'Strait of Trump' during speech confirming negotiations with Iran", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-891446", time: "2026-03-28T01:21:00Z" },
       { title: "Here’s What Happened in the War in the Middle East on Friday", source: "New York Times", url: "https://www.nytimes.com/2026/03/27/world/middleeast/iran-war-middle-east-recap.html", time: "2026-03-28T00:02:38Z" },
-      { title: "Israel launches new strikes on Iran as Rubio says war could end 'in a matter of weeks'", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/israel-launches-new-strikes-on-iran-as-rubio-says-war-could-end-in-a-matter-of-weeks", time: "2026-03-27T22:50:41Z" },
-      { title: "Rubio: US can achieve Iran war aims without ground troops, campaign to end in coming weeks", source: "Times of Israel", url: "https://www.timesofisrael.com/rubio-us-can-achieve-iran-war-aims-without-ground-troops-campaign-to-end-in-coming-weeks/", time: "2026-03-27T22:45:18Z" },
     ]
   },
   {
@@ -1672,6 +1668,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "U.S.-Iran cease-fire talks have stalled, WSJ reports", source: "The Hindu", url: "https://www.thehindu.com/news/international/us-iran-cease-fire-talks-have-stalled-wsj-reports/article70821401.ece", time: "2026-04-03T22:59:18Z" },
       { title: "Pakistan to return $3.5bn UAE debt before month end: official", source: "Dawn", url: "https://www.dawn.com/news/1988321/pakistan-to-return-35bn-uae-debt-before-month-end-official", time: "2026-04-03T21:06:48Z" },
       { title: "‘Silence’ stonewalls Pakistan-led US-Iran talks initiative", source: "Dawn", url: "https://www.dawn.com/news/1988294/silence-stonewalls-pakistan-led-us-iran-talks-initiative", time: "2026-04-03T20:02:40Z" },
       { title: "Eight dead after earthquake hits Afghanistan and Pakistan", source: "Sky News", url: "https://news.sky.com/story/at-least-eight-dead-after-earthquake-hits-afghanistan-and-pakistan-13527757", time: "2026-04-03T18:56:00Z" },
@@ -2066,7 +2063,6 @@ const locations = [
       { title: "US senators target Chinese robots in government", source: "Taipei Times", url: "https://www.taipeitimes.com/News/biz/archives/2026/03/28/2003854590", time: "2026-03-28T00:00:00Z" },
       { title: "Chinese anxiety about Trump visit", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/28/2003854594", time: "2026-03-28T00:00:00Z" },
       { title: "China surveys oceans in preparation for submarine battles with the US", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/03/28/2003854598", time: "2026-03-28T00:00:00Z" },
-      { title: "'Memory of a generation': China mourns the sudden death of a controversial education influencer", source: "BBC News", url: "https://www.bbc.com/news/articles/c15dz7ql59yo?at_medium=RSS&at_campaign=rss", time: "2026-03-27T23:19:46Z" },
     ]
   },
   {
@@ -2074,6 +2070,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Palestinians in occupied West Bank face growing violence from Israeli settlers", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/palestinians-in-occupied-west-bank-face-growing-violence-from-israeli-settlers", time: "2026-04-03T22:35:56Z" },
       { title: "Israeli restrictions push Gaza medical supplies to critical shortage: Doctors Without Borders", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260403-israeli-restrictions-push-gaza-medical-supplies-to-critical-shortage-doctors-without-borders/", time: "2026-04-03T20:01:03Z" },
       { title: "How Israel 'is consolidating its control' in Gaza and the West Bank as the world focuses on Iran", source: "Haaretz", url: "https://www.haaretz.com/israel-news/podcasts/2026-04-03/ty-article-podcast/israel-is-consolidating-its-control-in-gaza-and-the-west-bank-amid-iran-war/0000019d-491f-d905-a39d-d99f84e10000", time: "2026-04-03T19:17:00Z" },
       { title: "ICE arrests prominent Palestinian leader suspected of terror funding charges", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-04-03/ty-article/.premium/ice-arrests-prominent-palestinian-leader-suspected-of-terror-funding-charges/0000019d-5412-d613-a1ff-dd9f234f0000", time: "2026-04-03T17:21:16Z" },
@@ -2253,7 +2250,6 @@ const locations = [
       { title: "Gaza peace doubts deepen as attention shifts to Iran", source: "BBC News", url: "https://www.bbc.com/news/articles/crr10v5p7lgo?at_medium=RSS&at_campaign=rss", time: "2026-03-28T06:00:37Z" },
       { title: "IDF arrests 80 wanted individuals, seizes weapons during West Bank operations", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891448", time: "2026-03-28T05:46:19Z" },
       { title: "Yemen's Houthis fire missile at southern Israel in first since Hamas cease-fire", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article-live/.premium/twelve-u-s-troops-wounded-in-iran-strike-on-base-in-saudi-arabia-official-says/0000019d-3225-d8a3-abff-3a25e5aa0000", time: "2026-03-28T02:32:53Z" },
-      { title: "Milwaukee rabbi and son ordered to pay $1,000 for destroying anti-Israel mural", source: "Times of Israel", url: "https://www.timesofisrael.com/milwaukee-rabbi-and-son-ordered-to-pay-1000-for-destroying-anti-israel-mural/", time: "2026-03-27T23:03:01Z" },
     ]
   },
   {
@@ -2261,6 +2257,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "GOP senator calls to end Iran operations without formal declaration of war", source: "The Hill", url: "https://thehill.com/homenews/senate/5815738-john-curtis-opposes-iran-offensive/", time: "2026-04-03T23:00:36Z" },
       { title: "Trump's criticism of NATO raises questions of whether — or how — the U.S. could leave", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5771619/trumps-criticism-of-nato-raises-questions-of-whether-or-how-the-u-s-could-leave", time: "2026-04-03T20:06:59Z" },
       { title: "Russian strikes on Ukraine kill 8 as Kyiv holds door open for Easter truce", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-strikes-on-ukraine-kill-8-as-kyiv-holds-door-open-for-easter-truce", time: "2026-04-03T18:57:51Z" },
       { title: "Crime victims sue State for damages amid delay in introducing new compensation scheme", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/03/crime-victims-sue-state-for-damages-amid-delay-in-introducing-new-compensation-scheme/", time: "2026-04-03T17:32:07Z" },
@@ -2398,7 +2395,6 @@ const locations = [
       { title: "Ukraine signs 10-year defence pact with Qatar, eyes broader Gulf cooperation", source: "France 24", url: "https://www.france24.com/en/europe/20260328-zelensky-agrees-defence-cooperation-with-uae-qatar-on-gulf-tour", time: "2026-03-28T11:51:14Z" },
       { title: "Ukraine-Russia war latest: Rubio denies Zelensky’s claim that Trump wants Kyiv to give up land to Moscow", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-zelensky-putin-oligarchs-economy-b2945082.html", time: "2026-03-28T09:20:38Z" },
       { title: "Iran war live: Trump again slams NATO’s lack of support for war on Tehran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/28/iran-war-live-trump-again-slams-natos-lack-of-support-for-war-on-tehran?traffic_source=rss", time: "2026-03-28T00:00:48Z" },
-      { title: "Idaho expands transgender bathroom ban to private businesses", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5805263-idaho-transgender-bathroom-law/", time: "2026-03-27T23:36:35Z" },
     ]
   },
   {
@@ -2649,6 +2645,7 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "News Wrap: Trump seeking $1.5 trillion for military spending in new budget", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-trump-seeking-1-5-trillion-for-military-spending-in-new-budget", time: "2026-04-03T22:45:31Z" },
       { title: "Russia chose 'Easter escalation' over ceasefire, says Zelensky", source: "BBC News", url: "https://www.bbc.com/news/articles/cew70wjvv9do?at_medium=RSS&at_campaign=rss", time: "2026-04-03T20:43:33Z" },
       { title: "Russian strikes on Ukraine kill 8 as Kyiv holds door open for Easter truce", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-strikes-on-ukraine-kill-8-as-kyiv-holds-door-open-for-easter-truce", time: "2026-04-03T18:57:51Z" },
       { title: "Russian attacks on Ukraine kill 5 people; nearly 20 animals die in fire", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/03/people-animals-killed-russia-ukraine-war/", time: "2026-04-03T17:39:29Z" },
@@ -2739,7 +2736,6 @@ const locations = [
       { title: "Ukraine rejects Iran claim it destroyed anti-drone base", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565635-middle-east/", time: "2026-03-28T08:56:36Z" },
       { title: "Russian attacks kill four in Ukraine, child dies in drone strike on Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260328-strikes-on-ukrainian-cities-kill-three-child-dies-in-drone-attack-on-moscow", time: "2026-03-28T08:17:04Z" },
       { title: "Strikes on Ukrainian cities kill three - authorities", source: "RTE News", url: "https://www.rte.ie/news/2026/0328/1565631-ukraine-russia/", time: "2026-03-28T07:41:35Z" },
-      { title: "Ukraine's drone defense tech reshapes combat as warfare evolves", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/ukraines-drone-defense-tech-reshapes-combat-as-warfare-evolves", time: "2026-03-27T22:40:23Z" },
     ]
   },
   {
@@ -2935,97 +2931,6 @@ const locations = [
     ]
   },
   {
-    name: "Mexico City", country: "Mexico",
-    lat: 19.4326, lng: -99.1332,
-    category: "political",
-    articles: [
-      { title: "Highest housing prices in Mexico? That would be Mexico City, Baja California Sur and Querétaro", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/highest-housing-prices-in-mexico-are-in-mexico-city-baja-california-sur-and-queretaro/", time: "2026-04-03T22:07:37Z" },
-      { title: "Iztapalapa’s 183-year-old annual Passion Play returns with its new UNESCO World Heritage status", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/iztapalapas-183-year-old-annual-passion-play-returns-with-unesco-world-heritage-status/", time: "2026-04-03T21:26:57Z" },
-      { title: "“My favorite city in the world:” Pedro Pascal declares his love for CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/pedro-pascal-mexico-city-de-noche/", time: "2026-04-03T18:39:48Z" },
-      { title: "El Jalapeño: Mexican restaurants assure customers that, technically, everything still counts as fish", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexican-restaurants-assure-customers-that-technically-everything-still-counts-as-fish/", time: "2026-04-03T17:03:40Z" },
-      { title: "Mexico City’s traditional agricultural canals are at risk of disappearing. Meet the activists trying to save them", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/water-in-mexico/mexico-citys-chinampas-restoring-xochilmilco/", time: "2026-04-03T16:27:38Z" },
-      { title: "U.S. returns Chinese drug fugitive in rare extradition, Beijing says", source: "CBS News", url: "https://www.cbsnews.com/news/us-returns-chinese-drug-fugitive-rare-extradition-beijing/", time: "2026-04-03T11:40:40Z" },
-      { title: "A road trip through the oldest coffee route in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/a-road-trip-through-the-oldest-coffee-route-in-mexico/", time: "2026-04-03T09:04:22Z" },
-      { title: "Christians mark Holy Week in the region and other top photos from Latin America and the Caribbean", source: "ABC News", url: "https://abcnews.com/International/wireStory/christians-mark-holy-week-region-top-photos-latin-131677921", time: "2026-04-03T07:31:11Z" },
-      { title: "Sea turtle egg poachers caught on video at Oaxaca sanctuary, prompting federal investigation", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/sea-turtle-egg-theft-poaching-oaxaca-sanctuary/", time: "2026-04-02T23:52:07Z" },
-      { title: "102 arrested, 67 properties seized in bust of fraud network disguised as call centers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/authorities-bust-fraud-and-extorsion-ring-disguised-as-call-centers/", time: "2026-04-02T22:54:14Z" },
-      { title: "US accuses Mexico of shutting out US energy companies in new trade barriers report", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ustr-mexican-energy-policy-trade-barriers-usmca/", time: "2026-04-02T22:45:38Z" },
-      { title: "Your US map could look very different in the future: A Republican wants parts of New Mexico in Texas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/us-map-changes-new-mexico-texas-b2951246.html", time: "2026-04-02T21:31:55Z" },
-      { title: "Los Cabos braces for more than 100,000 spring breakers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/los-cabos-spring-break-2026-visitors/", time: "2026-04-02T21:09:35Z" },
-      { title: "Mexico in Numbers: Fertility rate and the modern Mexican family", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-in-numbers-fertility-rate-average-marriage-age/", time: "2026-04-02T21:01:11Z" },
-      { title: "Finance Ministry forecasts economic rebound of up to 2.8% this year after a sluggish 2025", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-2026-gdp-forecasts-economy-rebound/", time: "2026-04-02T20:28:00Z" },
-      { title: "Mexico seeks solutions to Vulcan Materials mine dispute as US lawmakers threaten sanctions", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/vulcan-materials-dispute-us-sanctions-bill/", time: "2026-04-02T18:46:36Z" },
-      { title: "MND Local: San Miguel de Allende news roundup", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mnd-local-san-miguel-de-allende-news-roundup-3/", time: "2026-04-02T15:31:16Z" },
-      { title: "The origins of Centro Cultural Tijuana, and how it continues to shape the city’s art and culture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/the-origins-of-centro-cultural-tijuana-and-how-it-continues-to-shape-the-citys-art-and-culture/", time: "2026-04-02T06:47:05Z" },
-      { title: "Mexico appoints Roberto Velasco as new foreign minister at critical moment for US ties", source: "ABC News", url: "https://abcnews.com/International/wireStory/mexico-appoints-roberto-velasco-new-foreign-minister-critical-131634248", time: "2026-04-02T06:32:49Z" },
-      { title: "Mexico’s soaring tech exports have taken the lead over the automotive sector", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-tech-exports-auto-sector/", time: "2026-04-02T01:17:26Z" },
-      { title: "Opinion: What might a regional utopia look like? Part 2", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/opinion-what-might-a-regional-utopia-look-like-part-2/", time: "2026-04-02T00:31:18Z" },
-      { title: "Fish fraud on the rise: Over one-third of seafood sold in Mexico isn’t what it claims to be", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/fish-sold-mexico-fraud/", time: "2026-04-02T00:12:31Z" },
-      { title: "Was someone really trying to tan on the National Palace?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/was-someone-really-trying-to-tan-on-the-national-palace-president-confirms/", time: "2026-04-01T23:52:14Z" },
-      { title: "Attention travelers: Truckers and farmers announce mega-blockade on April 6", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/attention-travelers-mega-blockade-april-6/", time: "2026-04-01T23:36:16Z" },
-      { title: "Mexico’s foreign affairs minister steps down", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/mexicos-foreign-affairs-minister-steps-down/", time: "2026-04-01T23:34:43Z" },
-      { title: "Mexico’s air passenger traffic slowed in January-February, with some bright spots", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexican-air-passenger-traffic-slowed/", time: "2026-04-01T22:39:06Z" },
-      { title: "C3ntro Telecom hits halfway mark on US $280M fiber route from Querétaro to Phoenix", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/c3ntro-telecom-sonora-cross-border-fiber-network/", time: "2026-04-01T21:34:54Z" },
-      { title: "Local woman hosts 46 nations, defuses regional conflicts renovates stadium; Still no FIFA peace prize", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/local-woman-hosts-46-nations-defuses-regional-conflicts-renovates-stadium-still-no-fifa-peace-prize/", time: "2026-04-01T18:31:15Z" },
-      { title: "Sheinbaum calls Mexico’s TV critics ‘unpatriotic’: Wednesday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-tv-critics-mananera-wednesday/", time: "2026-04-01T18:17:21Z" },
-      { title: "U.S. commandos in Ecuador for mission targeting alleged narco-terrorists", source: "CBS News", url: "https://www.cbsnews.com/news/us-commandos-ecuador-joint-mission-alleged-narco-terrorists/", time: "2026-04-01T17:41:37Z" },
-      { title: "In Latin America, China’s Silk Road Ark is sunk", source: "The Hill", url: "https://thehill.com/opinion/international/5808636-china-military-tour-latin-america/", time: "2026-04-01T12:30:00Z" },
-      { title: "Which teams are in the FIFA World Cup 2026?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/1/which-teams-are-in-the-fifa-world-cup-2026?traffic_source=rss", time: "2026-04-01T09:33:29Z" },
-      { title: "Procesión del Silencio, the somber Michoacán Holy Week tradition", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/procesion-del-silencio-the-somber-michoacan-holy-week-tradition/", time: "2026-04-01T08:27:45Z" },
-      { title: "MND Local: How Los Cabos is positioning itself as a ‘second stop’ destination for World Cup travelers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/mnd-local-how-los-cabos-is-positioning-itself-as-a-second-stop-destination-for-world-cup-travelers/", time: "2026-04-01T07:59:07Z" },
-      { title: "Environmental groups accuse Mexico of lying about origins of oil spill in the Gulf", source: "ABC News", url: "https://abcnews.com/International/wireStory/environmental-groups-accuse-mexico-lying-origins-oil-spill-131595176", time: "2026-04-01T00:31:46Z" },
-      { title: "Half-blind, elderly dog risks her life fending off bear that broke into New Mexico home: ‘Our little savior’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/old-dog-bear-fight-new-mexico-b2949645.html", time: "2026-04-01T00:26:12Z" },
-      { title: "A new migrant caravan leaves Chiapas for Mexico City seeking visas to work in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/migrant-caravan-leaves-chiapas-for-mexico-city-to-seek-visas/", time: "2026-03-31T23:40:41Z" },
-      { title: "US exempts Gulf of Mexico oil drillers from endangered species protections", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/31/us-exempts-gulf-of-mexico-oil-drillers-from-endangered-species-protections?traffic_source=rss", time: "2026-03-31T23:02:56Z" },
-      { title: "The Mesoamerican roots of Semana Santa in Iztapalapa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/the-mesoamerican-roots-of-semana-santa-in-iztapalapa/", time: "2026-03-31T22:05:28Z" },
-      { title: "MND Local: Water, new ride-hailing rules and public transit live tracking in Guadalajara", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mnd-local-guadalajara-water-crisis-2026-world-cup/", time: "2026-03-31T22:04:54Z" },
-      { title: "What do Mexico’s latest job numbers tell us about the economy?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-job-numbers-economy/", time: "2026-03-31T21:35:23Z" },
-      { title: "Anti-drug trafficking operations result in hundreds of arrests", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/anti-drug-trafficking-operations-arrests/", time: "2026-03-31T21:01:52Z" },
-      { title: "Yucatán cracks open a new market for mamey with first-ever shipment to UK", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/yucatan-pioneers-mamey-uk/", time: "2026-03-31T20:23:36Z" },
-      { title: "Vehicle explodes on highway near Mexico City’s AIFA airport, killing 2", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/vehicle-explodes-aifa/", time: "2026-03-31T19:43:58Z" },
-      { title: "World Cup: Sheinbaum meets with FIFA president following Mexico-Portugal ‘trial’ match", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/world-cup-sheinbaum-meets-with-fifa-president-following-mexico-portugal-trial-match/", time: "2026-03-31T18:00:45Z" },
-      { title: "Police find drug-smuggling tunnel with rail system and cranes in Spain", source: "CBS News", url: "https://www.cbsnews.com/news/drug-smuggling-tunnel-spain-morocco-rail-system-cranes/", time: "2026-03-31T16:41:02Z" },
-      { title: "Trump’s ‘God Squad’ exempts Gulf oil drilling from Endangered Species Act requirements", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5808861-gulf-of-mexico-oil-drilling-esa-god-squad/", time: "2026-03-31T14:23:25Z" },
-      { title: "Elephant breaks free of her enclosure in New Mexico zoo: ‘She had a little night out’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/elephant-alice-new-mexico-zoo-albuquerque-b2949059.html", time: "2026-03-31T12:19:13Z" },
-      { title: "Mexico’s President welcomes FIFA Chief", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/31/mexicos-president-welcomes-fifa-chief?traffic_source=rss", time: "2026-03-31T07:55:13Z" },
-      { title: "Federal 'God squad' poised to exempt oil and gas drilling in the Gulf from endangered species rules", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/gulf-of-mexico-donald-trump-god-doug-burgum-pete-hegseth-b2948827.html", time: "2026-03-31T04:01:39Z" },
-      { title: "Mexico’s eagerly awaited supercomputing program launches", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-eagerly-awaited-supercomputing-program-launches/", time: "2026-03-31T01:42:29Z" },
-      { title: "Manufacturing drives Mexico’s export surge in February, even as production stalls", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/manufacturing-exports-mexico/", time: "2026-03-31T01:05:38Z" },
-      { title: "Skull found 25 years ago leads scientists to identify new species of ancient sea monster", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/new-species-sea-reptile-fossil-mexico/", time: "2026-03-31T00:34:31Z" },
-      { title: "New poll suggests 54% approve of Sheinbaum — her lowest rating yet", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/latam-pulse-poll-mexico-sheinbaum-approval/", time: "2026-03-31T00:16:04Z" },
-      { title: "Mexico demands answers after another migrant dies in ICE custody", source: "BBC News", url: "https://www.bbc.com/news/articles/c15dvdx32v0o?at_medium=RSS&at_campaign=rss", time: "2026-03-30T23:19:55Z" },
-      { title: "1 of 4 trapped miners pulled to safety in Sinaloa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/one-4-miners-sinaloa/", time: "2026-03-30T22:57:32Z" },
-      { title: "25 tonnes of counterfeit World Cup-related products seized in CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/25-tonnes-of-world-cup-related-counterfeit-products-seized-in-mexico-citys-tepito-neighborhood/", time: "2026-03-30T21:51:05Z" },
-      { title: "AZ gun store owner accused of arming 2 Mexican cartels", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/arizona-gun-store-owner-cjng/", time: "2026-03-30T21:49:31Z" },
-      { title: "Sheinbaum’s security strategy has led to a historic increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-historic-prison-population-increase-sheinbaums-security-strategy/", time: "2026-03-30T21:16:44Z" },
-      { title: "Sheinbaum’s security strategy has led to an 11% increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-prison-population-increased-sheinbaum/", time: "2026-03-30T21:16:44Z" },
-      { title: "Sheinbaum makes monetary donation to Cuba: Monday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-donation-cuba-mananera-recapped/", time: "2026-03-30T17:41:36Z" },
-      { title: "ICE announces death of another Mexican detainee in US immigration custody", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/ice-announces-death-of-another-mexican-detainee-in-us-immigration-custody?traffic_source=rss", time: "2026-03-30T17:20:51Z" },
-      { title: "Ernesto Gómez Gallardo: The architect who redefined Mexican furniture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ernesto-gomez-gallardo-arguelles-redefined-mexican-furniture/", time: "2026-03-30T16:24:07Z" },
-      { title: "FIFA World Cup will be held amid ‘human rights crisis’ in the US: Amnesty", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/30/fifa-world-cup-will-be-held-amid-human-rights-crisis-in-the-us-amnesty?traffic_source=rss", time: "2026-03-30T15:58:13Z" },
-      { title: "‘I’m always watching’: A mother’s vigil in Mexico’s cancer system", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/30/im-always-watching-a-mothers-vigil-in-mexicos-cancer-system?traffic_source=rss", time: "2026-03-30T13:32:58Z" },
-      { title: "2026 World Cup: Mexico ramps up security amid threat from cartels", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260330-2026-world-cup-mexico-ramps-up-security-amid-threat-from-cartels", time: "2026-03-30T12:20:20Z" },
-      { title: "These men carry towers of birds through Mexico's streets", source: "ABC News", url: "https://abcnews.com/International/wireStory/men-carry-towers-birds-mexicos-streets-tradition-dying-131529396", time: "2026-03-30T02:28:49Z" },
-      { title: "El Jalapeño: Mexico confirms World Cup visitors will be greeted by construction site, taxi war and National Guard before reaching baggage claim", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexico-confirms-world-cup-visitors-will-be-greeted-by-construction-site-taxi-war-and-national-guard-before-reaching-baggage-claim/", time: "2026-03-29T13:06:25Z" },
-      { title: "The unexpected power of a Fire Horse journey in San Miguel de Allende", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/the-unexpected-power-of-a-fire-horse-journey-in-san-miguel-de-allende/", time: "2026-03-29T12:23:17Z" },
-      { title: "How the 1985 Mexico City earthquake toppled Mexico’s decade-long ruling party", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/how-the-1985-mexico-city-earthquake-toppled-mexicos-decade-long-ruling-party/", time: "2026-03-29T11:57:18Z" },
-      { title: "Belgium thrash USA 5-2; Mexico vs Portugal ends 0-0 in football friendlies", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/29/belgium-thrash-usa-5-2-mexico-vs-portugal-ends-0-0-in-football-friendlies?traffic_source=rss", time: "2026-03-29T07:08:34Z" },
-      { title: "Mexico’s week in review: A surprise rate cut, a sliding peso and an oil spill that’s becoming a political problem", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-week-in-review-rate-cut-peso-oil-spill/", time: "2026-03-28T17:24:02Z" },
-      { title: "MND Tutor | Sagrada Familia", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-tutor/mnd-tutor-sagrada-familia/", time: "2026-03-28T13:37:23Z" },
-      { title: "The MND News Quiz of the Week: March 29th", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/quizzes/the-mnd-news-quiz-of-the-week-march-29th/", time: "2026-03-28T13:36:15Z" },
-      { title: "Mexico is no stranger to hosting World Cup games between nations at war", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/mexico-is-no-stranger-to-hosting-world-cup-games-between-nations-at-war/", time: "2026-03-28T13:33:22Z" },
-      { title: "Rolling with the punches of informality in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/rolling-with-the-punches-of-informality-in-mexico/", time: "2026-03-28T13:32:36Z" },
-      { title: "Nintendo’s PancitoMerge is a video game dedicated to Mexican bread", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/nintendos-pancitomerge-is-a-video-game-dedicated-to-mexican-bread/", time: "2026-03-28T13:21:12Z" },
-      { title: "Is it crazy to move to Mexico with a middle schooler? A new ‘Confidently Wrong’ podcast", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mexico-living/moving-to-mexico-middle-schooler-confidently-wrong-podcast/", time: "2026-03-28T13:06:23Z" },
-      { title: "Are animal spirits returning to the business community in Mexico? A perspective from our CEO", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/animal-spirits-mexico-business-community-ceo-perspective/", time: "2026-03-28T13:00:13Z" },
-      { title: "US embassy in Mexico prompts outrage with AI video promoting ‘self-deportation’", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/28/us-embassy-mexico-outrage-ai-video-self-deportation", time: "2026-03-28T12:00:27Z" },
-      { title: "Xcaret theme park banned from using Maya culture for marketing, for now.", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/xcaret-theme-park-banned-from-using-maya-culture-for-marketing-for-now/", time: "2026-03-28T00:26:34Z" },
-      { title: "FIFA president Infantino attends Guadalajara qualifier, signaling confidence in Mexico as World Cup host", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-bajio/world-cup-qualifiers-guadalajara-fifa-jamaica-win/", time: "2026-03-27T23:58:47Z" },
-      { title: "Signs of life found for 40,000 of Mexico’s 132,000 missing persons", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-missing-persons-crisis-alive/", time: "2026-03-27T23:07:06Z" },
-      { title: "Mexico resumes package delivery to the US after seven-month suspension", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-us-package-delivery-suspension-ends/", time: "2026-03-27T22:41:50Z" },
-    ]
-  },
-  {
     name: "Moscow", country: "Russia",
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
@@ -3113,6 +3018,96 @@ const locations = [
       { title: "From jammed broadcasts to a blocked website: BBC Russian's 80 years of defiance", source: "BBC News", url: "https://www.bbc.com/news/articles/c05dlnd3635o?at_medium=RSS&at_campaign=rss", time: "2026-03-28T01:37:21Z" },
       { title: "Democrats demand answers on sanctioned Russian lawmakers visiting Capitol", source: "The Hill", url: "https://thehill.com/homenews/house/5805300-democrats-question-russian-lawmakers-us-capitol-visit/", time: "2026-03-28T00:31:31Z" },
       { title: "Scoop: Rubio and EU official had heated exchange on Russia at G7 meeting", source: "Axios", url: "https://www.axios.com/2026/03/28/rubio-kallas-ukraine-russia-argument-g7", time: "2026-03-28T00:24:37Z" },
+    ]
+  },
+  {
+    name: "Mexico City", country: "Mexico",
+    lat: 19.4326, lng: -99.1332,
+    category: "political",
+    articles: [
+      { title: "Mexico rejects UN findings that country’s enforced disappearances are crimes against humanity", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/un-report-enforced-disappearances-crimes-against-humanity/", time: "2026-04-03T22:55:12Z" },
+      { title: "Highest housing prices in Mexico? That would be Mexico City, Baja California Sur and Querétaro", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/highest-housing-prices-in-mexico-are-in-mexico-city-baja-california-sur-and-queretaro/", time: "2026-04-03T22:07:37Z" },
+      { title: "Iztapalapa’s 183-year-old annual Passion Play returns with its new UNESCO World Heritage status", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/iztapalapas-183-year-old-annual-passion-play-returns-with-unesco-world-heritage-status/", time: "2026-04-03T21:26:57Z" },
+      { title: "“My favorite city in the world:” Pedro Pascal declares his love for CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/pedro-pascal-mexico-city-de-noche/", time: "2026-04-03T18:39:48Z" },
+      { title: "El Jalapeño: Mexican restaurants assure customers that, technically, everything still counts as fish", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexican-restaurants-assure-customers-that-technically-everything-still-counts-as-fish/", time: "2026-04-03T17:03:40Z" },
+      { title: "Mexico City’s traditional agricultural canals are at risk of disappearing. Meet the activists trying to save them", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/water-in-mexico/mexico-citys-chinampas-restoring-xochilmilco/", time: "2026-04-03T16:27:38Z" },
+      { title: "U.S. returns Chinese drug fugitive in rare extradition, Beijing says", source: "CBS News", url: "https://www.cbsnews.com/news/us-returns-chinese-drug-fugitive-rare-extradition-beijing/", time: "2026-04-03T11:40:40Z" },
+      { title: "A road trip through the oldest coffee route in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/a-road-trip-through-the-oldest-coffee-route-in-mexico/", time: "2026-04-03T09:04:22Z" },
+      { title: "Christians mark Holy Week in the region and other top photos from Latin America and the Caribbean", source: "ABC News", url: "https://abcnews.com/International/wireStory/christians-mark-holy-week-region-top-photos-latin-131677921", time: "2026-04-03T07:31:11Z" },
+      { title: "Sea turtle egg poachers caught on video at Oaxaca sanctuary, prompting federal investigation", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/sea-turtle-egg-theft-poaching-oaxaca-sanctuary/", time: "2026-04-02T23:52:07Z" },
+      { title: "102 arrested, 67 properties seized in bust of fraud network disguised as call centers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/authorities-bust-fraud-and-extorsion-ring-disguised-as-call-centers/", time: "2026-04-02T22:54:14Z" },
+      { title: "US accuses Mexico of shutting out US energy companies in new trade barriers report", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ustr-mexican-energy-policy-trade-barriers-usmca/", time: "2026-04-02T22:45:38Z" },
+      { title: "Your US map could look very different in the future: A Republican wants parts of New Mexico in Texas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/us-map-changes-new-mexico-texas-b2951246.html", time: "2026-04-02T21:31:55Z" },
+      { title: "Los Cabos braces for more than 100,000 spring breakers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/los-cabos-spring-break-2026-visitors/", time: "2026-04-02T21:09:35Z" },
+      { title: "Mexico in Numbers: Fertility rate and the modern Mexican family", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-in-numbers-fertility-rate-average-marriage-age/", time: "2026-04-02T21:01:11Z" },
+      { title: "Finance Ministry forecasts economic rebound of up to 2.8% this year after a sluggish 2025", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-2026-gdp-forecasts-economy-rebound/", time: "2026-04-02T20:28:00Z" },
+      { title: "Mexico seeks solutions to Vulcan Materials mine dispute as US lawmakers threaten sanctions", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/vulcan-materials-dispute-us-sanctions-bill/", time: "2026-04-02T18:46:36Z" },
+      { title: "MND Local: San Miguel de Allende news roundup", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mnd-local-san-miguel-de-allende-news-roundup-3/", time: "2026-04-02T15:31:16Z" },
+      { title: "The origins of Centro Cultural Tijuana, and how it continues to shape the city’s art and culture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/the-origins-of-centro-cultural-tijuana-and-how-it-continues-to-shape-the-citys-art-and-culture/", time: "2026-04-02T06:47:05Z" },
+      { title: "Mexico appoints Roberto Velasco as new foreign minister at critical moment for US ties", source: "ABC News", url: "https://abcnews.com/International/wireStory/mexico-appoints-roberto-velasco-new-foreign-minister-critical-131634248", time: "2026-04-02T06:32:49Z" },
+      { title: "Mexico’s soaring tech exports have taken the lead over the automotive sector", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-tech-exports-auto-sector/", time: "2026-04-02T01:17:26Z" },
+      { title: "Opinion: What might a regional utopia look like? Part 2", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/opinion-what-might-a-regional-utopia-look-like-part-2/", time: "2026-04-02T00:31:18Z" },
+      { title: "Fish fraud on the rise: Over one-third of seafood sold in Mexico isn’t what it claims to be", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/fish-sold-mexico-fraud/", time: "2026-04-02T00:12:31Z" },
+      { title: "Was someone really trying to tan on the National Palace?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/was-someone-really-trying-to-tan-on-the-national-palace-president-confirms/", time: "2026-04-01T23:52:14Z" },
+      { title: "Attention travelers: Truckers and farmers announce mega-blockade on April 6", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/attention-travelers-mega-blockade-april-6/", time: "2026-04-01T23:36:16Z" },
+      { title: "Mexico’s foreign affairs minister steps down", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/mexicos-foreign-affairs-minister-steps-down/", time: "2026-04-01T23:34:43Z" },
+      { title: "Mexico’s air passenger traffic slowed in January-February, with some bright spots", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexican-air-passenger-traffic-slowed/", time: "2026-04-01T22:39:06Z" },
+      { title: "C3ntro Telecom hits halfway mark on US $280M fiber route from Querétaro to Phoenix", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/c3ntro-telecom-sonora-cross-border-fiber-network/", time: "2026-04-01T21:34:54Z" },
+      { title: "Local woman hosts 46 nations, defuses regional conflicts renovates stadium; Still no FIFA peace prize", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/local-woman-hosts-46-nations-defuses-regional-conflicts-renovates-stadium-still-no-fifa-peace-prize/", time: "2026-04-01T18:31:15Z" },
+      { title: "Sheinbaum calls Mexico’s TV critics ‘unpatriotic’: Wednesday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-tv-critics-mananera-wednesday/", time: "2026-04-01T18:17:21Z" },
+      { title: "U.S. commandos in Ecuador for mission targeting alleged narco-terrorists", source: "CBS News", url: "https://www.cbsnews.com/news/us-commandos-ecuador-joint-mission-alleged-narco-terrorists/", time: "2026-04-01T17:41:37Z" },
+      { title: "In Latin America, China’s Silk Road Ark is sunk", source: "The Hill", url: "https://thehill.com/opinion/international/5808636-china-military-tour-latin-america/", time: "2026-04-01T12:30:00Z" },
+      { title: "Which teams are in the FIFA World Cup 2026?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/1/which-teams-are-in-the-fifa-world-cup-2026?traffic_source=rss", time: "2026-04-01T09:33:29Z" },
+      { title: "Procesión del Silencio, the somber Michoacán Holy Week tradition", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/procesion-del-silencio-the-somber-michoacan-holy-week-tradition/", time: "2026-04-01T08:27:45Z" },
+      { title: "MND Local: How Los Cabos is positioning itself as a ‘second stop’ destination for World Cup travelers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/mnd-local-how-los-cabos-is-positioning-itself-as-a-second-stop-destination-for-world-cup-travelers/", time: "2026-04-01T07:59:07Z" },
+      { title: "Environmental groups accuse Mexico of lying about origins of oil spill in the Gulf", source: "ABC News", url: "https://abcnews.com/International/wireStory/environmental-groups-accuse-mexico-lying-origins-oil-spill-131595176", time: "2026-04-01T00:31:46Z" },
+      { title: "Half-blind, elderly dog risks her life fending off bear that broke into New Mexico home: ‘Our little savior’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/old-dog-bear-fight-new-mexico-b2949645.html", time: "2026-04-01T00:26:12Z" },
+      { title: "A new migrant caravan leaves Chiapas for Mexico City seeking visas to work in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/migrant-caravan-leaves-chiapas-for-mexico-city-to-seek-visas/", time: "2026-03-31T23:40:41Z" },
+      { title: "US exempts Gulf of Mexico oil drillers from endangered species protections", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/31/us-exempts-gulf-of-mexico-oil-drillers-from-endangered-species-protections?traffic_source=rss", time: "2026-03-31T23:02:56Z" },
+      { title: "The Mesoamerican roots of Semana Santa in Iztapalapa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/the-mesoamerican-roots-of-semana-santa-in-iztapalapa/", time: "2026-03-31T22:05:28Z" },
+      { title: "MND Local: Water, new ride-hailing rules and public transit live tracking in Guadalajara", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mnd-local-guadalajara-water-crisis-2026-world-cup/", time: "2026-03-31T22:04:54Z" },
+      { title: "What do Mexico’s latest job numbers tell us about the economy?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/mexico-job-numbers-economy/", time: "2026-03-31T21:35:23Z" },
+      { title: "Anti-drug trafficking operations result in hundreds of arrests", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/anti-drug-trafficking-operations-arrests/", time: "2026-03-31T21:01:52Z" },
+      { title: "Yucatán cracks open a new market for mamey with first-ever shipment to UK", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/yucatan-pioneers-mamey-uk/", time: "2026-03-31T20:23:36Z" },
+      { title: "Vehicle explodes on highway near Mexico City’s AIFA airport, killing 2", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/vehicle-explodes-aifa/", time: "2026-03-31T19:43:58Z" },
+      { title: "World Cup: Sheinbaum meets with FIFA president following Mexico-Portugal ‘trial’ match", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/world-cup-sheinbaum-meets-with-fifa-president-following-mexico-portugal-trial-match/", time: "2026-03-31T18:00:45Z" },
+      { title: "Police find drug-smuggling tunnel with rail system and cranes in Spain", source: "CBS News", url: "https://www.cbsnews.com/news/drug-smuggling-tunnel-spain-morocco-rail-system-cranes/", time: "2026-03-31T16:41:02Z" },
+      { title: "Trump’s ‘God Squad’ exempts Gulf oil drilling from Endangered Species Act requirements", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5808861-gulf-of-mexico-oil-drilling-esa-god-squad/", time: "2026-03-31T14:23:25Z" },
+      { title: "Elephant breaks free of her enclosure in New Mexico zoo: ‘She had a little night out’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/elephant-alice-new-mexico-zoo-albuquerque-b2949059.html", time: "2026-03-31T12:19:13Z" },
+      { title: "Mexico’s President welcomes FIFA Chief", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/31/mexicos-president-welcomes-fifa-chief?traffic_source=rss", time: "2026-03-31T07:55:13Z" },
+      { title: "Federal 'God squad' poised to exempt oil and gas drilling in the Gulf from endangered species rules", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/gulf-of-mexico-donald-trump-god-doug-burgum-pete-hegseth-b2948827.html", time: "2026-03-31T04:01:39Z" },
+      { title: "Mexico’s eagerly awaited supercomputing program launches", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-eagerly-awaited-supercomputing-program-launches/", time: "2026-03-31T01:42:29Z" },
+      { title: "Manufacturing drives Mexico’s export surge in February, even as production stalls", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/manufacturing-exports-mexico/", time: "2026-03-31T01:05:38Z" },
+      { title: "Skull found 25 years ago leads scientists to identify new species of ancient sea monster", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/new-species-sea-reptile-fossil-mexico/", time: "2026-03-31T00:34:31Z" },
+      { title: "New poll suggests 54% approve of Sheinbaum — her lowest rating yet", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/latam-pulse-poll-mexico-sheinbaum-approval/", time: "2026-03-31T00:16:04Z" },
+      { title: "Mexico demands answers after another migrant dies in ICE custody", source: "BBC News", url: "https://www.bbc.com/news/articles/c15dvdx32v0o?at_medium=RSS&at_campaign=rss", time: "2026-03-30T23:19:55Z" },
+      { title: "1 of 4 trapped miners pulled to safety in Sinaloa", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/one-4-miners-sinaloa/", time: "2026-03-30T22:57:32Z" },
+      { title: "25 tonnes of counterfeit World Cup-related products seized in CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/25-tonnes-of-world-cup-related-counterfeit-products-seized-in-mexico-citys-tepito-neighborhood/", time: "2026-03-30T21:51:05Z" },
+      { title: "AZ gun store owner accused of arming 2 Mexican cartels", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/arizona-gun-store-owner-cjng/", time: "2026-03-30T21:49:31Z" },
+      { title: "Sheinbaum’s security strategy has led to a historic increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-historic-prison-population-increase-sheinbaums-security-strategy/", time: "2026-03-30T21:16:44Z" },
+      { title: "Sheinbaum’s security strategy has led to an 11% increase in Mexico’s prison population", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexicos-prison-population-increased-sheinbaum/", time: "2026-03-30T21:16:44Z" },
+      { title: "Sheinbaum makes monetary donation to Cuba: Monday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-donation-cuba-mananera-recapped/", time: "2026-03-30T17:41:36Z" },
+      { title: "ICE announces death of another Mexican detainee in US immigration custody", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/ice-announces-death-of-another-mexican-detainee-in-us-immigration-custody?traffic_source=rss", time: "2026-03-30T17:20:51Z" },
+      { title: "Ernesto Gómez Gallardo: The architect who redefined Mexican furniture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ernesto-gomez-gallardo-arguelles-redefined-mexican-furniture/", time: "2026-03-30T16:24:07Z" },
+      { title: "FIFA World Cup will be held amid ‘human rights crisis’ in the US: Amnesty", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/30/fifa-world-cup-will-be-held-amid-human-rights-crisis-in-the-us-amnesty?traffic_source=rss", time: "2026-03-30T15:58:13Z" },
+      { title: "‘I’m always watching’: A mother’s vigil in Mexico’s cancer system", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/30/im-always-watching-a-mothers-vigil-in-mexicos-cancer-system?traffic_source=rss", time: "2026-03-30T13:32:58Z" },
+      { title: "2026 World Cup: Mexico ramps up security amid threat from cartels", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260330-2026-world-cup-mexico-ramps-up-security-amid-threat-from-cartels", time: "2026-03-30T12:20:20Z" },
+      { title: "These men carry towers of birds through Mexico's streets", source: "ABC News", url: "https://abcnews.com/International/wireStory/men-carry-towers-birds-mexicos-streets-tradition-dying-131529396", time: "2026-03-30T02:28:49Z" },
+      { title: "El Jalapeño: Mexico confirms World Cup visitors will be greeted by construction site, taxi war and National Guard before reaching baggage claim", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexico-confirms-world-cup-visitors-will-be-greeted-by-construction-site-taxi-war-and-national-guard-before-reaching-baggage-claim/", time: "2026-03-29T13:06:25Z" },
+      { title: "The unexpected power of a Fire Horse journey in San Miguel de Allende", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/the-unexpected-power-of-a-fire-horse-journey-in-san-miguel-de-allende/", time: "2026-03-29T12:23:17Z" },
+      { title: "How the 1985 Mexico City earthquake toppled Mexico’s decade-long ruling party", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/how-the-1985-mexico-city-earthquake-toppled-mexicos-decade-long-ruling-party/", time: "2026-03-29T11:57:18Z" },
+      { title: "Belgium thrash USA 5-2; Mexico vs Portugal ends 0-0 in football friendlies", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/29/belgium-thrash-usa-5-2-mexico-vs-portugal-ends-0-0-in-football-friendlies?traffic_source=rss", time: "2026-03-29T07:08:34Z" },
+      { title: "Mexico’s week in review: A surprise rate cut, a sliding peso and an oil spill that’s becoming a political problem", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-week-in-review-rate-cut-peso-oil-spill/", time: "2026-03-28T17:24:02Z" },
+      { title: "MND Tutor | Sagrada Familia", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-tutor/mnd-tutor-sagrada-familia/", time: "2026-03-28T13:37:23Z" },
+      { title: "The MND News Quiz of the Week: March 29th", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/quizzes/the-mnd-news-quiz-of-the-week-march-29th/", time: "2026-03-28T13:36:15Z" },
+      { title: "Mexico is no stranger to hosting World Cup games between nations at war", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/mexico-is-no-stranger-to-hosting-world-cup-games-between-nations-at-war/", time: "2026-03-28T13:33:22Z" },
+      { title: "Rolling with the punches of informality in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/opinion/rolling-with-the-punches-of-informality-in-mexico/", time: "2026-03-28T13:32:36Z" },
+      { title: "Nintendo’s PancitoMerge is a video game dedicated to Mexican bread", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/nintendos-pancitomerge-is-a-video-game-dedicated-to-mexican-bread/", time: "2026-03-28T13:21:12Z" },
+      { title: "Is it crazy to move to Mexico with a middle schooler? A new ‘Confidently Wrong’ podcast", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mexico-living/moving-to-mexico-middle-schooler-confidently-wrong-podcast/", time: "2026-03-28T13:06:23Z" },
+      { title: "Are animal spirits returning to the business community in Mexico? A perspective from our CEO", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/animal-spirits-mexico-business-community-ceo-perspective/", time: "2026-03-28T13:00:13Z" },
+      { title: "US embassy in Mexico prompts outrage with AI video promoting ‘self-deportation’", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/28/us-embassy-mexico-outrage-ai-video-self-deportation", time: "2026-03-28T12:00:27Z" },
+      { title: "Xcaret theme park banned from using Maya culture for marketing, for now.", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/xcaret-theme-park-banned-from-using-maya-culture-for-marketing-for-now/", time: "2026-03-28T00:26:34Z" },
+      { title: "FIFA president Infantino attends Guadalajara qualifier, signaling confidence in Mexico as World Cup host", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-bajio/world-cup-qualifiers-guadalajara-fifa-jamaica-win/", time: "2026-03-27T23:58:47Z" },
     ]
   },
   {
@@ -3413,7 +3408,6 @@ const locations = [
       { title: "Yemen's Houthis warn US and Israel against using Red Sea in attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/yemens-houthis-warn-us-and-israel-against-using-red-sea-attacks", time: "2026-03-28T06:05:14Z" },
       { title: "Yemen’s Iran-backed Houthis threaten to join war: ‘Our fingers are on the trigger’", source: "Times of Israel", url: "https://www.timesofisrael.com/yemens-iran-backed-houthis-threaten-to-join-war-our-fingers-are-on-the-trigger/", time: "2026-03-28T03:46:45Z" },
       { title: "Yemen's pro-Iran Houthis confirm they launched the missile on Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article-live/.premium/twelve-u-s-troops-wounded-in-iran-strike-on-base-in-saudi-arabia-official-says/0000019d-3225-d8a3-abff-3a25e5aa0000", time: "2026-03-28T02:32:53Z" },
-      { title: "Houthis warn ‘fingers on the trigger’ as US-Israel war on Iran continues", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/27/houthis-warn-fingers-on-the-trigger-as-us-israeli-war-on-iran-continues?traffic_source=rss", time: "2026-03-27T22:53:23Z" },
     ]
   },
   {
@@ -3489,6 +3483,8 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Thai PM blames  stockpilers for a shortage of fuel", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/04/04/2003855027", time: "2026-04-04T00:00:00Z" },
+      { title: "Huge loan needed to finance fuel subsidies", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3230233/huge-loan-needed-to-finance-fuel-subsidies", time: "2026-04-03T23:11:00Z" },
+      { title: "Ex-MP wants concession  deal probe", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3230288/exmp-wants-concession-deal-probe", time: "2026-04-03T22:32:00Z" },
       { title: "Liquidity pressures rise in Thai bond market", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3230268/liquidity-pressures-rise-in-thai-bond-market", time: "2026-04-03T21:48:00Z" },
       { title: "Why Thailand is reviving its tourist entry fee plan", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/why-thailand-is-reviving-its-tourist-entry-fee-plan", time: "2026-04-03T09:53:00Z" },
       { title: "Human remains found on Thai ship hit in Hormuz; families of 3 missing crew notified", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/human-remains-found-on-thai-ship-hit-in-hormuz-families-of-3-missing-crew-notified", time: "2026-04-03T09:20:00Z" },
@@ -3545,7 +3541,6 @@ const locations = [
       { title: "Why should anyone believe Anutin on fuel?", source: "Bangkok Post", url: "https://www.bangkokpost.com/opinion/opinion/3226033/why-should-anyone-believe-anutin-on-fuel", time: "2026-03-28T04:38:00Z" },
       { title: "‘Cicada’ Covid variant to reach Thailand, but not scary", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3226039/cicada-covid-variant-to-reach-thailand-but-not-scary", time: "2026-03-28T04:28:00Z" },
       { title: "Is the war a threat to subsea cable systems?", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3225934/is-the-war-a-threat-to-subsea-cable-systems", time: "2026-03-28T01:10:00Z" },
-      { title: "SAO collapse remains unresolved", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3225864/sao-collapse-remains-unresolved", time: "2026-03-27T22:53:00Z" },
     ]
   },
   {
@@ -4229,6 +4224,7 @@ const locations = [
     lat: 31.5204, lng: 74.3587,
     category: "political",
     articles: [
+      { title: "‘India is going to face a food crisis’: Farmers panic over fertiliser shortages amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/india-fuel-crisis-fertiliser-shortage-farming", time: "2026-04-03T23:00:06Z" },
       { title: "PSX gains over 6,700 points on hopes of Middle East de-escalation", source: "Dawn", url: "https://www.dawn.com/news/1987473/psx-gains-over-6700-points-on-hopes-of-middle-east-de-escalation", time: "2026-04-01T12:20:19Z" },
       { title: "Schools in Punjab to remain closed on Fridays", source: "Dawn", url: "https://www.dawn.com/news/1987519/schools-in-punjab-to-remain-closed-on-fridays", time: "2026-04-01T12:18:59Z" },
       { title: "Defamation case: Lahore court orders Meesha Shafi to pay Rs5 million in damages to Ali Zafar", source: "Dawn", url: "https://www.dawn.com/news/1987171/defamation-case-lahore-court-orders-meesha-shafi-to-pay-rs5-million-in-damages-to-ali-zafar", time: "2026-03-31T15:20:37Z" },
@@ -4717,6 +4713,7 @@ const locations = [
     lat: 26.0, lng: 52.0,
     category: "economic",
     articles: [
+      { title: "Two U.S. aircraft shot down as war in Iran escalates; at least one crew member is missing", source: "The Hindu", url: "https://www.thehindu.com/news/international/two-us-aircraft-shot-down-as-war-in-iran-escalates-at-least-one-crew-member-is-missing/article70821393.ece", time: "2026-04-03T22:42:02Z" },
       { title: "Iran-US war latest: Trump denies US fighter jet being shot down will impact ceasefire negotiations with Tehran", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-bridge-strait-of-hormuz-b2951331.html", time: "2026-04-03T21:16:01Z" },
       { title: "Iran continues strikes across the Persian Gulf despite Trump's warning", source: "NPR", url: "https://www.npr.org/2026/04/02/nx-s1-5771160/iran-war-trump-speech", time: "2026-04-02T10:14:26Z" },
       { title: "Oil price shock incoming", source: "Dawn", url: "https://www.dawn.com/news/1987693/oil-price-shock-incoming", time: "2026-04-02T04:30:18Z" },
@@ -4731,7 +4728,27 @@ const locations = [
       { title: "Trump mulls seizing Iran's Kharg Island oil terminal even as talks show progress", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/donald-trump-iran-israel-strait-of-hormuz-tehran-b2948154.html", time: "2026-03-30T07:46:58Z" },
       { title: "Why the Iran War May Force Countries to Rely Less on Natural Gas", source: "New York Times", url: "https://www.nytimes.com/2026/03/29/business/energy-environment/iran-war-natural-gas.html", time: "2026-03-29T09:00:54Z" },
       { title: "Will defiant Iran win peace?", source: "Dawn", url: "https://www.dawn.com/news/1986483/will-defiant-iran-win-peace", time: "2026-03-29T03:53:18Z" },
-      { title: "Israel launches new strikes on Iran as Rubio says war could end 'in a matter of weeks'", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/israel-launches-new-strikes-on-iran-as-rubio-says-war-could-end-in-a-matter-of-weeks", time: "2026-03-27T22:50:41Z" },
+    ]
+  },
+  {
+    name: "Budapest", country: "Hungary",
+    lat: 47.4979, lng: 19.0402,
+    category: "diplomacy",
+    articles: [
+      { title: "After 16 years in power, can Viktor Orban finally be unseated?", source: "BBC News", url: "https://www.bbc.com/news/articles/czd7y1n3jyjo?at_medium=RSS&at_campaign=rss", time: "2026-04-03T23:04:24Z" },
+      { title: "Exclusive: Orbán challenger Magyar says election is a 'referendum' on Hungary's place in the world", source: "ABC News", url: "https://abcnews.com/International/wireStory/exclusive-orbn-challenger-magyar-election-referendum-hungarys-place-131682179", time: "2026-04-03T15:04:02Z" },
+      { title: "Hungary elections: what is at stake and who is likely to win?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/hungary-elections-viktor-orban-who-will-win", time: "2026-04-03T04:00:42Z" },
+      { title: "Vance to visit Hungary, meet with Viktor Orbán", source: "The Hill", url: "https://thehill.com/homenews/administration/5813783-vance-visits-hungary-orban/", time: "2026-04-02T20:17:57Z" },
+      { title: "Peter Magyar, the former Orban ally vying for power in Hungary", source: "BBC News", url: "https://www.bbc.com/news/articles/c78l7vyylgqo?at_medium=RSS&at_campaign=rss", time: "2026-04-01T13:43:10Z" },
+      { title: "The far-right Hungarian party that could make or break Victor Orban’s re-election", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-election-orban-mi-hazank-b2950133.html", time: "2026-04-01T13:43:07Z" },
+      { title: "Ukraine war briefing: Ukraine calls Hungary ‘a disgrace’ after leaked calls with Moscow emerge", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/01/ukraine-war-briefing-ukraine-calls-hungary-a-disgrace-after-leaked-calls-with-moscow-emerge", time: "2026-04-01T01:18:10Z" },
+      { title: "Hungarian FM says reports he passed information to Russia are 'foreign interference'", source: "France 24", url: "https://www.france24.com/en/europe/20260331-hungarian-fm-says-reports-he-passed-information-to-russia-are-foreign-interference", time: "2026-03-31T19:47:06Z" },
+      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
+      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
+      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
+      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
+      { title: "EU ministers arrive in Ukraine to mark Bucha massacre anniversary – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/31/europe-ukraine-bucha-eu-russia-hungary-iran-denmark-latest-news-updates", time: "2026-03-31T08:54:21Z" },
+      { title: "Viktor Orbán has the support of both Russia and the US – but that could be a double-edged sword | Péter Krekó", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/31/viktor-orban-us-russian-support-hungary-iran-war-voters", time: "2026-03-31T04:00:31Z" },
     ]
   },
   {
@@ -4752,7 +4769,6 @@ const locations = [
       { title: "Iranian attack on US base in Saudi Arabia wounds troops and damages aircraft", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-attack-us-base-saudi-arabia-wounds-troops-and-damages-aircraft", time: "2026-03-28T23:17:07Z" },
       { title: "Trump says ‘Cuba is next’ target of US military", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/3/28/trump-says-cuba-is-next-target-of-us-military?traffic_source=rss", time: "2026-03-28T04:01:37Z" },
       { title: "Trump pushes Saudi Arabia to join Abraham Accords", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-pushes-saudi-arabia-join-abraham-accords", time: "2026-03-28T02:23:03Z" },
-      { title: "Missile targeting Riyadh region intercepted, Saudi Arabia says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-arabia-says-intercepts-missile-targeting-riyadh-region", time: "2026-03-27T22:39:01Z" },
     ]
   },
   {
@@ -4773,26 +4789,6 @@ const locations = [
       { title: "Syria’s al-Sharaa visits Germany to talk reconstruction, return of refugees", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/syrian-president-in-berlin-for-talks-with-germanys-merz?traffic_source=rss", time: "2026-03-30T10:56:47Z" },
       { title: "Attacks on Syria’s Christian community fuel distrust of Sharaa regime", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891537", time: "2026-03-29T17:52:48Z" },
       { title: "Protests erupt in Syrian Christian city Al-Suqaylabiyah, demand security accountability", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-891502", time: "2026-03-29T11:33:19Z" },
-    ]
-  },
-  {
-    name: "Budapest", country: "Hungary",
-    lat: 47.4979, lng: 19.0402,
-    category: "diplomacy",
-    articles: [
-      { title: "Exclusive: Orbán challenger Magyar says election is a 'referendum' on Hungary's place in the world", source: "ABC News", url: "https://abcnews.com/International/wireStory/exclusive-orbn-challenger-magyar-election-referendum-hungarys-place-131682179", time: "2026-04-03T15:04:02Z" },
-      { title: "Hungary elections: what is at stake and who is likely to win?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/hungary-elections-viktor-orban-who-will-win", time: "2026-04-03T04:00:42Z" },
-      { title: "Vance to visit Hungary, meet with Viktor Orbán", source: "The Hill", url: "https://thehill.com/homenews/administration/5813783-vance-visits-hungary-orban/", time: "2026-04-02T20:17:57Z" },
-      { title: "Peter Magyar, the former Orban ally vying for power in Hungary", source: "BBC News", url: "https://www.bbc.com/news/articles/c78l7vyylgqo?at_medium=RSS&at_campaign=rss", time: "2026-04-01T13:43:10Z" },
-      { title: "The far-right Hungarian party that could make or break Victor Orban’s re-election", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-election-orban-mi-hazank-b2950133.html", time: "2026-04-01T13:43:07Z" },
-      { title: "Ukraine war briefing: Ukraine calls Hungary ‘a disgrace’ after leaked calls with Moscow emerge", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/01/ukraine-war-briefing-ukraine-calls-hungary-a-disgrace-after-leaked-calls-with-moscow-emerge", time: "2026-04-01T01:18:10Z" },
-      { title: "Hungarian FM says reports he passed information to Russia are 'foreign interference'", source: "France 24", url: "https://www.france24.com/en/europe/20260331-hungarian-fm-says-reports-he-passed-information-to-russia-are-foreign-interference", time: "2026-03-31T19:47:06Z" },
-      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
-      { title: "Hungarian FM says leak of Russian calls 'interference'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0331/1566164-peter-szijjarto/", time: "2026-03-31T19:38:40Z" },
-      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
-      { title: "Hungary’s foreign minister discussed lifting EU sanctions with Russia in leaked phone call", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-russia-eu-sanctions-szijjarto-lavrov-b2949365.html", time: "2026-03-31T15:10:09Z" },
-      { title: "EU ministers arrive in Ukraine to mark Bucha massacre anniversary – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/31/europe-ukraine-bucha-eu-russia-hungary-iran-denmark-latest-news-updates", time: "2026-03-31T08:54:21Z" },
-      { title: "Viktor Orbán has the support of both Russia and the US – but that could be a double-edged sword | Péter Krekó", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/mar/31/viktor-orban-us-russian-support-hungary-iran-war-voters", time: "2026-03-31T04:00:31Z" },
     ]
   },
   {
@@ -5879,22 +5875,6 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Why is Iran being singled out while others escape scrutiny: Erase nuclear apartheid", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260330-why-is-iran-being-singled-out-while-others-escape-scrutiny-erase-nuclear-apartheid/", time: "2026-03-30T15:07:16Z" },
-    ]
-  },
-  {
-    name: "Sidon", country: "Lebanon",
-    lat: 33.5633, lng: 35.3697,
-    category: "conflict",
-    articles: [
-      { title: "Israeli forces kill one, injure 17 in south Lebanon: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-kill-one-injure-17-south-lebanon-report", time: "2026-03-27T23:31:43Z" },
-    ]
-  },
-  {
-    name: "Beirut (Dahiyeh)", country: "Lebanon",
-    lat: 33.8547, lng: 35.5022,
-    category: "conflict",
-    articles: [
-      { title: "Israeli air force strikes Hezbollah targets in Beirut for second time on Friday", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891441", time: "2026-03-27T22:45:55Z" },
     ]
   },
   {
