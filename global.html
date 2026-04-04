@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:42 UTC, 4 Apr 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:36 UTC, 4 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">4 April 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 16:42 UTC, 4 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China reported to dictate Cheng-Xi meeting intinerary", "Universities neglect to warn students of China danger: MOE", "Passengers stuck in traffic after robotaxi breakdown in China", "There is method to China’s OpenClaw madness"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China&#x27;s governance and technology face scrutiny amid control concerns</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Netzach Yehuda&#39;s CNN altercation: Why religion is driving Israel toward extremism - opinion", "IDF admits air defense failures after Dimona, Arad missile impacts", "Inside Chiburim: Yaron Shane’s mission to help IDF soldiers find Love After War"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Israel&#x27;s military confronts defense failures and soldier recovery efforts</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["French, Japanese-owned ships make first Hormuz transits", "Japan’s old cherry blossom trees raises safety concerns", "IDF recovers remains of soldier killed in War of Independence after 78 years"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Japan addresses infrastructure safety and historical military matters</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Scientists unearth sea lion fossil first near Taiwan", "Japanese baseball team hosts Taiwan pineapple day"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan celebrates cultural and scientific achievements</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Salmon farming is coming to the end of the world", "Two Argentinas, one set of numbers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Argentina grapples with economic and environmental challenges</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Polymarket apologizes for allowing wagers on fate of U.S. pilots downed in Iran", "UN watchdog voices &#39;deep concern&#39; as Iran reports new attacks on nuclear plant"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Iran nuclear security and international accountability dominate discourse</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:36 UTC, 4 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["IDF announces Sgt. First Class Guy Ludar died while fighting in Lebanon", "IDF admits air defense failures after Dimona, Arad missile impacts", "IDF recovers remains of soldier killed in War of Independence after 78 years", "Inside Chiburim: Yaron Shane’s mission to help IDF soldiers find Love After War"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">IDF addresses soldier casualties and morale amid ongoing conflict</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["China reported to dictate Cheng-Xi meeting intinerary", "Universities neglect to warn students of China danger: MOE", "There is method to China’s OpenClaw madness"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">China exerts control over Taiwan-related diplomatic and academic matters</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Russia evacuating employees from Iran’s Bushehr nuclear power plant in wake of attack", "Rubio revokes visas and green cards of at least four Iranian nationals", "New video reveals moment US-Israeli munitions impact Iranian bridge"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">US and Israel escalate pressure on Iran following attacks</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["French, Japanese-owned ships make first Hormuz transits", "Japan’s old cherry blossom trees raises safety concerns"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Japan faces infrastructure and maritime challenges in regional operations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Japanese baseball team hosts Taiwan pineapple day", "Taiwan’s Chen Nien-chin secures medal in Mongolia"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan celebrates cultural achievements in sports and international events</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Netzach Yehuda&#39;s CNN altercation: Why religion is driving Israel toward extremism - opinion", "Israeli forces destroy UN peacekeeper cameras in south Lebanon"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Israel&#x27;s military conduct raises concerns over extremism and conduct violations</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,8 +144,10 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "New video reveals moment US-Israeli munitions impact Iranian bridge", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/4/new-video-reveals-moment-us-israeli-munitions-impact-iranian-bridge?traffic_source=rss", time: "2026-04-04T17:02:25Z" },
       { title: "Polymarket apologizes for allowing wagers on fate of U.S. pilots downed in Iran", source: "NBC News", url: "https://www.nbcnews.com/news/us-news/polymarket-apologizes-allowing-wagers-fate-us-pilots-downed-iran-rcna266715", time: "2026-04-04T16:29:47Z" },
       { title: "Search for pilot of downed U.S. fighter jet enters second day", source: "NBC News", url: "https://www.nbcnews.com/news/us-news/search-pilot-downed-us-fighter-jet-enters-second-day-rcna266697", time: "2026-04-04T16:15:40Z" },
+      { title: "US arrests relatives of deceased Iranian ​general Qasem ​Soleimani", source: "BBC News", url: "https://www.bbc.com/news/articles/cgqkn4j48qdo?at_medium=RSS&at_campaign=rss", time: "2026-04-04T16:12:15Z" },
       { title: "Iran says US, Israel belong in Stone Age after Tehran university strike", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/4/iran-says-us-israel-belong-in-stone-age-after-tehran-university-strike?traffic_source=rss", time: "2026-04-04T15:49:30Z" },
       { title: "Exiled dissidents say Iran is seizing their family members, friends and property", source: "Times of Israel", url: "https://www.timesofisrael.com/exiled-dissidents-say-iran-is-seizing-their-family-members-friends-and-property/", time: "2026-04-04T14:41:37Z" },
       { title: "Vehicles burn in Israel after being hit with Iranian projectile debris", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/4/vehicles-burn-in-israel-after-being-hit-with-iranian-projectile-debris?traffic_source=rss", time: "2026-04-04T14:40:04Z" },
@@ -642,8 +644,6 @@ const locations = [
       { title: "Russia took satellite images of U.S. airbase in days before Iranian attack, Ukraine's Zelenskyy says", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russia-us-base-american-troops-zelenskyy-rcna265612", time: "2026-03-28T19:17:46Z" },
       { title: "Iran-backed Houthis open third front against Israel as Tehran seeks leverage ahead of talks", source: "Fox News", url: "https://www.foxnews.com/world/iran-backed-houthis-open-third-front-against-israel-tehran-seeks-leverage-ahead-talks", time: "2026-03-28T18:00:32Z" },
       { title: "As war rages, Iranian politicians push for exit from nuclear weapons treaty", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/lawmakers-push-npt-exit-as-us-israel-hit-irans-nuclear-sites-steel-plants?traffic_source=rss", time: "2026-03-28T17:48:55Z" },
-      { title: "Paris cops thwart suspected terrorist bombing near Bank of America", source: "Times of Israel", url: "https://www.timesofisrael.com/paris-cops-thwart-suspected-terrorist-bombing-near-bank-of-america/", time: "2026-03-28T16:54:01Z" },
-      { title: "Lebanon condemns ‘blatant war crime’ after Israel kills three journalists", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/lebanon-condemns-blatant-war-crime-israel-kills-three-journalists", time: "2026-03-28T16:41:04Z" },
     ]
   },
   {
@@ -651,10 +651,14 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "IDF announces Sgt. First Class Guy Ludar died while fighting in Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-892036", time: "2026-04-04T19:56:04Z" },
       { title: "Netzach Yehuda's CNN altercation: Why religion is driving Israel toward extremism - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-891871", time: "2026-04-04T19:19:46Z" },
       { title: "IDF admits air defense failures after Dimona, Arad missile impacts", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-891944", time: "2026-04-04T18:56:23Z" },
       { title: "IDF recovers remains of soldier killed in War of Independence after 78 years", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-892033", time: "2026-04-04T18:21:07Z" },
       { title: "Inside Chiburim: Yaron Shane’s mission to help IDF soldiers find Love After War", source: "Jerusalem Post", url: "https://www.jpost.com/j-spot/article-891801", time: "2026-04-04T17:29:17Z" },
+      { title: "Israeli forces destroy UN peacekeeper cameras in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-destroy-un-peacekeeper-cameras-south-lebanon", time: "2026-04-04T17:22:28Z" },
+      { title: "UAE condemns pro-Palestine protests targeting its embassy in Syria", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/uae-condemns-pro-palestine-protests-syria-targeted-its-embassy-over-israel-ties-0", time: "2026-04-04T16:57:34Z" },
+      { title: "What the Iran-Iraq war can tell us about the US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/4/4/what-the-iran-iraq-war-can-tell-us-about-the-us-israeli-war-on?traffic_source=rss", time: "2026-04-04T16:32:20Z" },
       { title: "UK arrests fourth suspect over arson attack on Jewish ambulances in London", source: "Times of Israel", url: "https://www.timesofisrael.com/uk-arrests-fourth-suspect-over-arson-attack-on-jewish-ambulances-in-london/", time: "2026-04-04T15:29:50Z" },
       { title: "WATCH: Missile fragments land in Ramat Gan after Iranian missile barrage, one person injured", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-892034", time: "2026-04-04T15:22:45Z" },
       { title: "After High Court appeal, anti-war protests to be permitted under strict limitations", source: "Times of Israel", url: "https://www.timesofisrael.com/after-high-court-appeal-anti-war-protests-to-be-permitted-under-strict-limitations/", time: "2026-04-04T13:28:27Z" },
@@ -698,6 +702,7 @@ const locations = [
       { title: "3 UNIFIL peacekeepers hurt in south Lebanon blast; IDF blames Hezbollah rocket", source: "Times of Israel", url: "https://www.timesofisrael.com/3-unifil-peacekeepers-hurt-in-south-lebanon-blast-idf-blames-hezbollah-rocket/", time: "2026-04-03T21:33:25Z" },
       { title: "IDF strikes Hamas terror cell operating near Israeli troops in northern Gaza", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-892012", time: "2026-04-03T21:23:22Z" },
       { title: "Christians in Lebanon observe Good Friday under Israeli attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/3/christians-in-lebanon-observe-good-friday-under-israeli-attacks?traffic_source=rss", time: "2026-04-03T21:05:17Z" },
+      { title: "Israeli soldier killed by IDF fire during raid on Hezbollah in southern Lebanon", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-03/ty-article-live/idf-strikes-beirut-tehran-one-wounded-in-northern-israel/0000019d-550d-db3c-a3df-dd8d75ef0000", time: "2026-04-03T20:54:52Z" },
       { title: "A Wisconsin mosque president was detained by ICE agents. Supporters say he was targeted for speaking out against Israel", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/politics/a-wisconsin-mosque-president-was-detained-by-ice-agents-supporters-say-he-was-targeted-for-speaking-out-against-israel", time: "2026-04-03T20:35:42Z" },
       { title: "IDF suspends reservist who promoted his business using a blindfolded Palestinian", source: "Haaretz", url: "https://www.haaretz.com/west-bank/2026-04-03/ty-article/.premium/idf-suspends-reservist-who-promoted-his-business-using-a-blindfolded-palestinian/0000019d-54ac-db3c-a3df-ddad512f0000", time: "2026-04-03T20:16:36Z" },
       { title: "As Israel’s PTSD crisis deepens, new treatment offers hope for scarred IDF veterans", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/mind-and-spirit/article-891738", time: "2026-04-03T20:04:37Z" },
@@ -1126,10 +1131,6 @@ const locations = [
       { title: "Fitch leaves Israel's rating outlook negative and foresees growth in deficit", source: "Haaretz", url: "https://www.haaretz.com/israel-news/business/economy-finance/2026-03-28/ty-article/.premium/fitch-leaves-israels-rating-outlook-negative-and-foresees-growth-in-deficit/0000019d-3548-d774-afdd-bdce4d650000", time: "2026-03-28T18:43:49Z" },
       { title: "Who says Israeli attacks in Lebanon kill nine paramedics, wound seven", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/who-says-israeli-attacks-lebanon-kill-nine-paramedics-wound-seven", time: "2026-03-28T18:15:42Z" },
       { title: "Three Lebanese journalists killed in Israeli airstrike on car", source: "Sky News", url: "https://news.sky.com/story/three-lebanese-journalists-killed-in-israeli-airstrike-on-car-13525607", time: "2026-03-28T17:56:00Z" },
-      { title: "Israel Court reiterates that state must adequately feed all Palestinian prisoners, not just underweight", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-03-28/ty-article/.premium/israel-court-reiterates-that-state-must-adequately-feed-palestinian-prisoners/0000019d-34bf-dcc3-abdd-3cff5d910000", time: "2026-03-28T17:21:56Z" },
-      { title: "BBC Arabic defended as lone voice in region for giving ‘Israeli perspective’", source: "The Guardian", url: "https://www.theguardian.com/media/2026/mar/28/bbc-arabic-defended-lone-voice-region-israeli-perspective", time: "2026-03-28T17:00:32Z" },
-      { title: "Israelis rally against Iran war; Police violently disperse protesters in Tel Aviv", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-03-28/ty-article/.premium/anti-war-protests-gather-across-country-police-violently-disperse-demonstrators/0000019d-3553-d3e9-adbf-77df542a0000", time: "2026-03-28T16:55:46Z" },
-      { title: "CNN crew say troops assaulted them, detained them, then trumpeted far-right ideology", source: "Times of Israel", url: "https://www.timesofisrael.com/cnn-crew-say-troops-assaulted-them-detained-them-then-trumpeted-far-right-ideology/", time: "2026-03-28T16:45:31Z" },
     ]
   },
   {
@@ -1137,6 +1138,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Trump says Iran has 48 hours to make deal as search for US pilot continues", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/4/trump-says-iran-has-48-hours-to-make-deal-as-search-for-us-pilot-continues?traffic_source=rss", time: "2026-04-04T16:35:27Z" },
       { title: "Trump warns he’ll ‘reign down hell’ on Iran within 48 hours unless Strait of Hormuz is opened and peace deal is made", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-threat-strait-of-hormuz-b2951875.html", time: "2026-04-04T15:29:43Z" },
       { title: "Iran announces new air defence used to down US fighter jet", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/iran-announces-new-air-defence-used-down-us-fighter-jet", time: "2026-04-04T15:06:44Z" },
       { title: "'Iran open to negotiations': Diplomacy shows signs of progress, 'damage to global economy continues'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260404-iran-open-to-negotiations-diplomacy-shows-signs-of-progress-damage-to-global-economy-continues", time: "2026-04-04T14:46:06Z" },
@@ -1438,6 +1440,9 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Rubio revokes visas and green cards of at least four Iranian nationals", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/green-cards-visas-revoked-iran-tehran-marco-rubio-b2951911.html", time: "2026-04-04T17:22:05Z" },
+      { title: "Hegseth’s latest purge of top generals is down to his ‘paranoia’ over fears of losing his own job, report claims", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-driscoll-army-generals-firing-b2951878.html", time: "2026-04-04T16:53:19Z" },
+      { title: "Hegseth’s latest purge of top generals is down to his ‘paranoia’ over fears of losing his own job, report claims", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-driscoll-army-generals-firing-b2951878.html", time: "2026-04-04T16:53:19Z" },
       { title: "Relatives of Qassem Soleimani arrested in the US", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/relatives-qassem-soleimani-arrested-us", time: "2026-04-04T14:56:37Z" },
       { title: "Help: The canine plague is now sweeping Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/gulf-coast/the-canine-plague-sweeping-mexico/", time: "2026-04-04T13:23:12Z" },
       { title: "US Air Force has lost at least 7 aircraft in war with Iran: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-us-air-force-has-lost-at-least-7-aircraft-in-war-with-iran-report/", time: "2026-04-04T11:55:00Z" },
@@ -1672,7 +1677,6 @@ const locations = [
       { title: "Vice President JD Vance tops CPAC’s straw poll to be US president in 2028", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/vice-president-jd-vance-tops-cpacs-straw-poll-to-be-us-president-in-2028?traffic_source=rss", time: "2026-03-28T23:29:34Z" },
       { title: "Mexico’s navy locates two missing sailboats carrying humanitarian aid off coast of Cuba", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-mexico-cuba-humanitarian-aid-missing-sailboats/", time: "2026-03-28T20:37:31Z" },
       { title: "JD Vance responds to Joe Rogan’s takedown of ‘unintelligent’ MAGA voters", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/joe-rogan-podcast-jd-vance-maga-b2947648.html", time: "2026-03-28T18:38:40Z" },
-      { title: "Mexico's navy locates 2 missing sailboats carrying aid off the coast of Cuba", source: "ABC News", url: "https://abcnews.com/International/wireStory/mexicos-navy-locates-2-missing-sailboats-carrying-aid-131503756", time: "2026-03-28T17:05:46Z" },
     ]
   },
   {
@@ -1680,6 +1684,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "UK prosecutors charge 3, including dual Pakistani citizen, in arson attack on Jewish ambulances in London", source: "Fox News", url: "https://www.foxnews.com/world/uk-prosecutors-charge-3-including-dual-pakistani-citizen-arson-attack-jewish-ambulances-london", time: "2026-04-04T16:56:37Z" },
       { title: "FO rejects ‘misleading, unfounded’ commentary regarding financial deposits from UAE", source: "Dawn", url: "https://www.dawn.com/news/1988580/fo-rejects-misleading-unfounded-commentary-regarding-financial-deposits-from-uae", time: "2026-04-04T15:50:36Z" },
       { title: "Pakistani finance worker murdered at his upscale DC building had let his killers in thinking they were fellow tenants: police", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/pakistani-man-murdered-washington-dc-b2951867.html", time: "2026-04-04T15:02:48Z" },
       { title: "Pakistani finance worker murdered at his upscale DC building had let his killers in thinking they were fellow tenants: police", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/pakistani-man-murdered-washington-dc-b2951867.html", time: "2026-04-04T15:02:48Z" },
@@ -1874,7 +1879,6 @@ const locations = [
       { title: "Action plan unveiled to combat drought", source: "Dawn", url: "https://www.dawn.com/news/1986435/action-plan-unveiled-to-combat-drought", time: "2026-03-29T02:06:40Z" },
       { title: "Pakistan secures Iran deal to send 20 ships through Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/pakistan-secures-iran-deal-to-send-20-ships-through-strait-of-hormuz?traffic_source=rss", time: "2026-03-28T21:56:30Z" },
       { title: "DPM Dar says Iran has allowed ‘20 more ships’ under Pakistan flag to cross Strait of Hormuz", source: "Dawn", url: "https://www.dawn.com/news/1986336/dpm-dar-says-iran-has-allowed-20-more-ships-under-pakistan-flag-to-cross-strait-of-hormuz", time: "2026-03-28T19:24:18Z" },
-      { title: "‘Exercise in deflection masquerading as concern’: FO rejects India’s comments on Pakistan’s Shia community", source: "Dawn", url: "https://www.dawn.com/news/1986308/exercise-in-deflection-masquerading-as-concern-fo-rejects-indias-comments-on-pakistans-shia-community", time: "2026-03-28T16:58:15Z" },
     ]
   },
   {
@@ -2075,6 +2079,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Executing with prejudice: Israel’s death penalty law", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-executing-with-prejudice-israels-death-penalty-law/", time: "2026-04-04T17:14:47Z" },
       { title: "No Apologies – Naming Zionism for What It Is", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-no-apologies-naming-zionism-for-what-it-is/", time: "2026-04-04T16:25:23Z" },
       { title: "French boats of Global Sumud Flotilla set to depart Marseille for Gaza aid mission", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-french-boats-of-global-sumud-flotilla-set-to-depart-marseille-for-gaza-aid-mission/", time: "2026-04-04T12:59:10Z" },
       { title: "What Israel’s death penalty reveals when law becomes a boundary of belonging", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-what-israels-death-penalty-reveals-when-law-becomes-a-boundary-of-belonging/", time: "2026-04-04T11:26:42Z" },
@@ -2249,7 +2254,6 @@ const locations = [
       { title: "'The Road to October 7': The long centuries of hatred that led to Hamas’s attack - review", source: "Jerusalem Post", url: "https://www.jpost.com/history/article-891312", time: "2026-03-28T19:08:35Z" },
       { title: "IDF detains CNN journalists in the West Bank, one crew member injured, cameras damaged", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-891464", time: "2026-03-28T19:04:44Z" },
       { title: "Media association condemns ‘violent assault’ on CNN crew by Israeli soldiers", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/israeli-soldiers-cnn-crew-west-bank-foreign-press-association", time: "2026-03-28T18:18:01Z" },
-      { title: "Rights groups call for emergency meeting of parties to the Geneva Conventions regarding the proposed Israeli law to execute Palestinian prisoners", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260328-rights-groups-call-for-emergency-meeting-of-parties-to-the-geneva-conventions-regarding-the-proposed-israeli-law-to-execute-palestinian-prisoners/", time: "2026-03-28T17:11:14Z" },
     ]
   },
   {
@@ -2401,6 +2405,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "Trump threatens Iran with 'hell' if Hormuz strait isn't open in 48 hours", source: "Axios", url: "https://www.axios.com/2026/04/04/trump-iran-hell-threat-deadline", time: "2026-04-04T16:40:50Z" },
       { title: "Stress from Russian bombardment causing premature births in Ukraine, UN warns", source: "The Independent", url: "https://www.independent.co.uk/tv/news/ukraine-russia-war-premature-childbirth-rates-b2951834.html", time: "2026-04-04T12:31:34Z" },
       { title: "European ministers call for profit caps on energy companies as Iran war drives price surge", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/european-commission-european-union-iran-spain-spanish-b2951816.html", time: "2026-04-04T11:01:47Z" },
       { title: "Eight dead in 'massive' Russian attack while Kyiv signals readiness for Easter ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/04/04/eight-dead-in-massive-russian-attack-while-kyiv-signals-readiness-for-easter-ceasefire", time: "2026-04-04T07:53:17Z" },
@@ -2932,8 +2937,6 @@ const locations = [
       { title: "The week in pictures: Massive daytime attack on Ukraine, 'No Kings' and France's adieu to Jospin", source: "France 24", url: "https://www.france24.com/en/europe/20260329-the-week-in-pictures-massive-daytime-attack-on-ukraine-no-kings-and-france-adieu-jospin", time: "2026-03-29T13:26:34Z" },
       { title: "Sugar high(st): more than twelve tons of KitKat’s ‘new chocolate range’ stolen in Italy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/mar/28/kitkat-stolen-italy-f1-bar", time: "2026-03-28T20:38:37Z" },
       { title: "Man in Paris Accused of Attempted Attack on Bank of America", source: "New York Times", url: "https://www.nytimes.com/2026/03/28/world/europe/paris-attack-bank-of-america.html", time: "2026-03-28T18:39:53Z" },
-      { title: "‘Bomb attack’ at Bank of America in Paris thwarted by police", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/bank-of-america-bomb-attack-paris-france-b2947656.html", time: "2026-03-28T16:46:42Z" },
-      { title: "France hosts ‘No Kings’ march as anti-Trump protests spread", source: "Euronews", url: "http://www.euronews.com/video/2026/03/28/france-hosts-no-kings-march-as-anti-trump-protests-spread", time: "2026-03-28T16:42:32Z" },
     ]
   },
   {
@@ -3130,6 +3133,7 @@ const locations = [
       { title: "Dueling skyscrapers: Monterrey’s Torre Rise will soon pass the T.OP Tower 1 as Mexico’s tallest building", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/dueling-skyscrapers-monterreys-torre-rise-will-soon-pass-the-t-op-tower-1-as-mexicos-tallest-building/", time: "2026-04-03T23:45:32Z" },
       { title: "Mexico rejects UN findings that country’s enforced disappearances are crimes against humanity", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/un-report-enforced-disappearances-crimes-against-humanity/", time: "2026-04-03T22:55:12Z" },
       { title: "Highest housing prices in Mexico? That would be Mexico City, Baja California Sur and Querétaro", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/highest-housing-prices-in-mexico-are-in-mexico-city-baja-california-sur-and-queretaro/", time: "2026-04-03T22:07:37Z" },
+      { title: "Highest housing prices in Mexico? That would be Mexico City, Baja California Sur and Querétaro", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/real-estate/highest-housing-prices-in-mexico-are-in-mexico-city-baja-california-sur-and-queretaro/", time: "2026-04-03T22:07:37Z" },
       { title: "Iztapalapa’s 183-year-old annual Passion Play returns with its new UNESCO World Heritage status", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/iztapalapas-183-year-old-annual-passion-play-returns-with-unesco-world-heritage-status/", time: "2026-04-03T21:26:57Z" },
       { title: "“My favorite city in the world:” Pedro Pascal declares his love for CDMX", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/pedro-pascal-mexico-city-de-noche/", time: "2026-04-03T18:39:48Z" },
       { title: "El Jalapeño: Mexican restaurants assure customers that, technically, everything still counts as fish", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexican-restaurants-assure-customers-that-technically-everything-still-counts-as-fish/", time: "2026-04-03T17:03:40Z" },
@@ -3200,7 +3204,6 @@ const locations = [
       { title: "The unexpected power of a Fire Horse journey in San Miguel de Allende", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/the-unexpected-power-of-a-fire-horse-journey-in-san-miguel-de-allende/", time: "2026-03-29T12:23:17Z" },
       { title: "How the 1985 Mexico City earthquake toppled Mexico’s decade-long ruling party", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/how-the-1985-mexico-city-earthquake-toppled-mexicos-decade-long-ruling-party/", time: "2026-03-29T11:57:18Z" },
       { title: "Belgium thrash USA 5-2; Mexico vs Portugal ends 0-0 in football friendlies", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/29/belgium-thrash-usa-5-2-mexico-vs-portugal-ends-0-0-in-football-friendlies?traffic_source=rss", time: "2026-03-29T07:08:34Z" },
-      { title: "Mexico’s week in review: A surprise rate cut, a sliding peso and an oil spill that’s becoming a political problem", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-week-in-review-rate-cut-peso-oil-spill/", time: "2026-03-28T17:24:02Z" },
     ]
   },
   {
@@ -3700,7 +3703,6 @@ const locations = [
       { title: "Houthi missile attack on Israel stokes fears of renewed strikes on Red Sea shipping", source: "Times of Israel", url: "https://www.timesofisrael.com/houthi-missile-attack-on-israel-stokes-fears-of-renewed-strikes-on-red-sea-shipping/", time: "2026-03-28T19:21:27Z" },
       { title: "Potential Houthi threat to Red Sea shipping could further damage global economy", source: "BBC News", url: "https://www.bbc.com/news/articles/cwyvd5z1xjno?at_medium=RSS&at_campaign=rss", time: "2026-03-28T19:08:30Z" },
       { title: "Israel targeted in Yemen’s Houthis first missile strike as US troop deployment raises fears of wider war", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-war-missile-attacks-yemen-houthis-b2947663.html", time: "2026-03-28T18:40:22Z" },
-      { title: "JD Vance on Iran: 'We're taking care of business, we're going to be out of there soon, and gas prices are going to come back down'", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-03-28/ty-article/.premium/vance-on-iran-were-taking-care-of-business-were-going-be-out-of-there-soon/0000019d-34fd-de07-a9fd-b7ff56b10000", time: "2026-03-28T16:57:14Z" },
     ]
   },
   {
@@ -4112,7 +4114,6 @@ const locations = [
       { title: "Rocket attack targets Baghdad army base", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rocket-attack-targets-baghdad-army-base", time: "2026-03-30T11:18:06Z" },
       { title: "Iraq risks Arab ties as Iran-aligned groups strike Gulf nations", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/iraq-risks-arab-ties-as-iran-aligned-groups-strike-gulf-nations?traffic_source=rss", time: "2026-03-30T09:57:31Z" },
       { title: "Rockets strike US military base near Baghdad, aircraft destroyed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rockets-strike-us-military-base-near-baghdad-aircraft-destroyed", time: "2026-03-30T04:27:26Z" },
-      { title: "Strike kills Iraqi government-linked fighter, wounds six", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/strike-kills-iraqi-government-linked-fighter-wounds-six", time: "2026-03-28T17:21:22Z" },
     ]
   },
   {
@@ -4475,6 +4476,34 @@ const locations = [
     ]
   },
   {
+    name: "Kabul", country: "Afghanistan",
+    lat: 34.5553, lng: 69.2075,
+    category: "humanitarian",
+    articles: [
+      { title: "At least 12 persons, including eight of one family, killed in Afghan quake", source: "The Hindu", url: "https://www.thehindu.com/news/international/afghanistan-earthquake-death-toll-updates/article70824426.ece", time: "2026-04-04T16:55:02Z" },
+      { title: "Afghanistan earthquake kills eight members of same refugee family returning from Iran", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/earthquake-afghanistan-kabul-deaths-iran-b2951853.html", time: "2026-04-04T13:14:23Z" },
+      { title: "Afghanistan earthquake kills eight members of same family", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/4/afghanistan-earthquake-kills-eight-members-of-same-family?traffic_source=rss", time: "2026-04-04T07:23:53Z" },
+      { title: "Hide, find water: Ex-airmen detail how to survive being shot down", source: "Dawn", url: "https://www.dawn.com/news/1988485/hide-find-water-ex-airmen-detail-how-to-survive-being-shot-down", time: "2026-04-04T05:13:59Z" },
+      { title: "Shooting down of US jets marks a potential turning point in the war", source: "Dawn", url: "https://www.dawn.com/news/1988480/shooting-down-of-us-jets-marks-a-potential-turning-point-in-the-war", time: "2026-04-04T04:45:39Z" },
+      { title: "5.8 magnitude earthquake hits Afghanistan and Pakistan, killing 8 on outskirts of Kabul", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/5-8-magnitude-earthquake-hits-afghanistan-and-pakistan-killing-8-on-outskirts-of-kabul", time: "2026-04-04T00:03:51Z" },
+      { title: "Eight dead after earthquake of magnitude 5.9 strikes Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/eight-dead-after-earthquake-of-magnitude-5-9-strikes-afghanistan", time: "2026-04-03T18:39:15Z" },
+      { title: "Eight dead after earthquake of magnitude 5.9 strikes Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/eight-dead-after-earthquake-of-magnitude-5-9-strikes-afghanistan", time: "2026-04-03T18:39:15Z" },
+      { title: "China says peace talks between Afghanistan and Pakistan are advancing", source: "The Hindu", url: "https://www.thehindu.com/news/international/china-says-peace-talks-between-afghanistan-and-pakistan-are-advancing/article70820799.ece", time: "2026-04-03T15:58:40Z" },
+      { title: "China says peace talks advance between Afghanistan, Pakistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/china-says-peace-talks-advance-between-afghanistan-pakistan", time: "2026-04-03T08:39:15Z" },
+      { title: "Pakistan says a new round of peace talks with Afghanistan is underway in China", source: "NPR", url: "https://www.npr.org/2026/04/03/g-s1-116299/pakistan-says-a-new-round-of-peace-talks-with-afghanistan-is-underway-in-china", time: "2026-04-03T05:28:16Z" },
+      { title: "‘Devoid of facts’: Info ministry rubbishes claims of barbed wire being removed along Pak-Afghan border", source: "Dawn", url: "https://www.dawn.com/news/1987562/devoid-of-facts-info-ministry-rubbishes-claims-of-barbed-wire-being-removed-along-pak-afghan-border", time: "2026-04-01T15:46:03Z" },
+      { title: "Security forces kill 13 terrorists in 2 separate intelligence-based operations in KP: ISPR", source: "Dawn", url: "https://www.dawn.com/news/1987449/security-forces-kill-13-terrorists-in-2-separate-intelligence-based-operations-in-kp-ispr", time: "2026-04-01T11:23:28Z" },
+      { title: "Pakistan, Afghan Taliban resume talks in China as Beijing seeks ceasefire", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-afghan-taliban-resume-talks-in-china-as-beijing-seeks-ceasefire/article70810772.ece", time: "2026-04-01T10:02:04Z" },
+      { title: "Security forces kill 13 terrorists in two separate intelligence-based operations in KP", source: "Dawn", url: "https://www.dawn.com/news/1987449/security-forces-kill-13-terrorists-in-two-separate-intelligence-based-operations-in-kp", time: "2026-04-01T05:27:17Z" },
+      { title: "Repatriation of Afghans resumes at Torkham as border reopens", source: "Dawn", url: "https://www.dawn.com/news/1987201/repatriation-of-afghans-resumes-at-torkham-as-border-reopens", time: "2026-03-31T15:15:02Z" },
+      { title: "Watch Pete Hegseth take swipe at ‘big bad Royal Navy’ in latest insult to allies over Iran war", source: "The Independent", url: "https://www.independent.co.uk/tv/news/pete-hegseth-royal-navy-iran-war-b2949342.html", time: "2026-03-31T15:10:21Z" },
+      { title: "Security forces kill 10 terrorists after ‘brief school seizure’ in Bara", source: "Dawn", url: "https://www.dawn.com/news/1986982/security-forces-kill-10-terrorists-after-brief-school-seizure-in-bara", time: "2026-03-31T02:50:59Z" },
+      { title: "Security forces retaliate ‘vigorously’ after Afghan Taliban open fire in KP’s Bajaur sector: sources", source: "Dawn", url: "https://www.dawn.com/news/1986795/security-forces-retaliate-vigorously-after-afghan-taliban-open-fire-in-kps-bajaur-sector-sources", time: "2026-03-30T09:10:01Z" },
+      { title: "Heavy rain, floods kill 22 people in Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/heavy-rain-floods-kill-22-people-in-afghanistan", time: "2026-03-30T08:38:10Z" },
+      { title: "Extreme weather in Afghanistan leaves 17 people dead, authorities say", source: "The Hindu", url: "https://www.thehindu.com/news/international/extreme-weather-in-afghanistan-leaves-several-people-dead-authorities-say/article70799312.ece", time: "2026-03-29T11:54:52Z" },
+    ]
+  },
+  {
     name: "Harare", country: "Zimbabwe",
     lat: -17.8252, lng: 31.0335,
     category: "political",
@@ -4499,33 +4528,6 @@ const locations = [
       { title: "Zimbabwe: Three Crushed to Death After Haulage Truck Veers Off the Road", source: "AllAfrica", url: "https://allafrica.com/stories/202603300576.html", time: "2026-03-30T12:38:56Z" },
       { title: "Zimbabwe: Former Minister's Son Faces Court Challenge Over Infant Care", source: "AllAfrica", url: "https://allafrica.com/stories/202603300416.html", time: "2026-03-30T11:32:08Z" },
       { title: "Zimbabwe: Police Heighten Vigilance Ahead of Easter, Independence Holidays", source: "AllAfrica", url: "https://allafrica.com/stories/202603300176.html", time: "2026-03-30T06:36:27Z" },
-    ]
-  },
-  {
-    name: "Kabul", country: "Afghanistan",
-    lat: 34.5553, lng: 69.2075,
-    category: "humanitarian",
-    articles: [
-      { title: "Afghanistan earthquake kills eight members of same refugee family returning from Iran", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/earthquake-afghanistan-kabul-deaths-iran-b2951853.html", time: "2026-04-04T13:14:23Z" },
-      { title: "Afghanistan earthquake kills eight members of same family", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/4/afghanistan-earthquake-kills-eight-members-of-same-family?traffic_source=rss", time: "2026-04-04T07:23:53Z" },
-      { title: "Hide, find water: Ex-airmen detail how to survive being shot down", source: "Dawn", url: "https://www.dawn.com/news/1988485/hide-find-water-ex-airmen-detail-how-to-survive-being-shot-down", time: "2026-04-04T05:13:59Z" },
-      { title: "Shooting down of US jets marks a potential turning point in the war", source: "Dawn", url: "https://www.dawn.com/news/1988480/shooting-down-of-us-jets-marks-a-potential-turning-point-in-the-war", time: "2026-04-04T04:45:39Z" },
-      { title: "5.8 magnitude earthquake hits Afghanistan and Pakistan, killing 8 on outskirts of Kabul", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/5-8-magnitude-earthquake-hits-afghanistan-and-pakistan-killing-8-on-outskirts-of-kabul", time: "2026-04-04T00:03:51Z" },
-      { title: "Eight dead after earthquake of magnitude 5.9 strikes Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/eight-dead-after-earthquake-of-magnitude-5-9-strikes-afghanistan", time: "2026-04-03T18:39:15Z" },
-      { title: "Eight dead after earthquake of magnitude 5.9 strikes Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/eight-dead-after-earthquake-of-magnitude-5-9-strikes-afghanistan", time: "2026-04-03T18:39:15Z" },
-      { title: "China says peace talks between Afghanistan and Pakistan are advancing", source: "The Hindu", url: "https://www.thehindu.com/news/international/china-says-peace-talks-between-afghanistan-and-pakistan-are-advancing/article70820799.ece", time: "2026-04-03T15:58:40Z" },
-      { title: "China says peace talks advance between Afghanistan, Pakistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/china-says-peace-talks-advance-between-afghanistan-pakistan", time: "2026-04-03T08:39:15Z" },
-      { title: "Pakistan says a new round of peace talks with Afghanistan is underway in China", source: "NPR", url: "https://www.npr.org/2026/04/03/g-s1-116299/pakistan-says-a-new-round-of-peace-talks-with-afghanistan-is-underway-in-china", time: "2026-04-03T05:28:16Z" },
-      { title: "‘Devoid of facts’: Info ministry rubbishes claims of barbed wire being removed along Pak-Afghan border", source: "Dawn", url: "https://www.dawn.com/news/1987562/devoid-of-facts-info-ministry-rubbishes-claims-of-barbed-wire-being-removed-along-pak-afghan-border", time: "2026-04-01T15:46:03Z" },
-      { title: "Security forces kill 13 terrorists in 2 separate intelligence-based operations in KP: ISPR", source: "Dawn", url: "https://www.dawn.com/news/1987449/security-forces-kill-13-terrorists-in-2-separate-intelligence-based-operations-in-kp-ispr", time: "2026-04-01T11:23:28Z" },
-      { title: "Pakistan, Afghan Taliban resume talks in China as Beijing seeks ceasefire", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-afghan-taliban-resume-talks-in-china-as-beijing-seeks-ceasefire/article70810772.ece", time: "2026-04-01T10:02:04Z" },
-      { title: "Security forces kill 13 terrorists in two separate intelligence-based operations in KP", source: "Dawn", url: "https://www.dawn.com/news/1987449/security-forces-kill-13-terrorists-in-two-separate-intelligence-based-operations-in-kp", time: "2026-04-01T05:27:17Z" },
-      { title: "Repatriation of Afghans resumes at Torkham as border reopens", source: "Dawn", url: "https://www.dawn.com/news/1987201/repatriation-of-afghans-resumes-at-torkham-as-border-reopens", time: "2026-03-31T15:15:02Z" },
-      { title: "Watch Pete Hegseth take swipe at ‘big bad Royal Navy’ in latest insult to allies over Iran war", source: "The Independent", url: "https://www.independent.co.uk/tv/news/pete-hegseth-royal-navy-iran-war-b2949342.html", time: "2026-03-31T15:10:21Z" },
-      { title: "Security forces kill 10 terrorists after ‘brief school seizure’ in Bara", source: "Dawn", url: "https://www.dawn.com/news/1986982/security-forces-kill-10-terrorists-after-brief-school-seizure-in-bara", time: "2026-03-31T02:50:59Z" },
-      { title: "Security forces retaliate ‘vigorously’ after Afghan Taliban open fire in KP’s Bajaur sector: sources", source: "Dawn", url: "https://www.dawn.com/news/1986795/security-forces-retaliate-vigorously-after-afghan-taliban-open-fire-in-kps-bajaur-sector-sources", time: "2026-03-30T09:10:01Z" },
-      { title: "Heavy rain, floods kill 22 people in Afghanistan", source: "Straits Times", url: "https://www.straitstimes.com/asia/heavy-rain-floods-kill-22-people-in-afghanistan", time: "2026-03-30T08:38:10Z" },
-      { title: "Extreme weather in Afghanistan leaves 17 people dead, authorities say", source: "The Hindu", url: "https://www.thehindu.com/news/international/extreme-weather-in-afghanistan-leaves-several-people-dead-authorities-say/article70799312.ece", time: "2026-03-29T11:54:52Z" },
     ]
   },
   {
@@ -4559,6 +4561,7 @@ const locations = [
     lat: 28.9234, lng: 50.8203,
     category: "economic",
     articles: [
+      { title: "Russia evacuating employees from Iran’s Bushehr nuclear power plant in wake of attack", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-russia-evacuating-employees-from-irans-bushehr-nuclear-power-plant-in-wake-of-attack/", time: "2026-04-04T17:28:58Z" },
       { title: "UN watchdog voices 'deep concern' as Iran reports new attacks on nuclear plant", source: "BBC News", url: "https://www.bbc.com/news/articles/c5y90jl8veyo?at_medium=RSS&at_campaign=rss", time: "2026-04-04T16:19:25Z" },
       { title: "Russia said coordinating with IDF on evacuation of workers from Iran nuclear plant", source: "Times of Israel", url: "https://www.timesofisrael.com/russia-said-coordinating-with-idf-on-evacuation-of-workers-from-iran-nuclear-plant/", time: "2026-04-04T15:24:29Z" },
       { title: "A projectile hit near Iran’s Bushehr nuclear plant, killing a worker.", source: "New York Times", url: "https://www.nytimes.com/live/2026/04/04/world/iran-war-trump-news/a-projectile-hit-near-irans-bushehr-nuclear-plant-killing-a-worker", time: "2026-04-04T14:27:14Z" },
@@ -4898,6 +4901,25 @@ const locations = [
     ]
   },
   {
+    name: "Ankara", country: "Turkey",
+    lat: 39.9334, lng: 32.8597,
+    category: "conflict",
+    articles: [
+      { title: "Trump threatens Iran with 'hell' if Hormuz strait isn't open in 48 hours", source: "Axios", url: "https://www.axios.com/2026/04/04/trump-iran-hell-threat-deadline", time: "2026-04-04T16:40:50Z" },
+      { title: "Second Turkish-owned ship crosses Hormuz strait", source: "RTE News", url: "https://www.rte.ie/news/middle-east/2026/0404/1566704-middle-east-conflict/", time: "2026-04-04T07:47:41Z" },
+      { title: "Iranians are leaving the country just to get internet", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5753859/iranians-are-leaving-the-country-just-to-get-internet", time: "2026-04-03T19:56:42Z" },
+      { title: "A Turkish border town known for its cats - in times of peace", source: "NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5766197/a-turkish-border-town-known-for-its-cats-in-times-of-peace", time: "2026-04-01T19:54:37Z" },
+      { title: "Some Iranians express pessimism over the war and the potential for regime change", source: "NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5768213/some-iranians-express-pessimism-over-the-war-and-the-potential-for-regime-change", time: "2026-04-01T08:41:48Z" },
+      { title: "Migrant boat sinks off holiday resort after high-speed chase, killing 18", source: "Sky News", url: "https://news.sky.com/story/migrant-boat-sinks-off-turkish-coast-after-high-speed-chase-killing-18-13526742", time: "2026-04-01T08:29:00Z" },
+      { title: "Migrant boat sinks off holiday resort after high-speed chase, killing 19", source: "Sky News", url: "https://news.sky.com/story/migrant-boat-sinks-off-turkish-coast-after-high-speed-chase-killing-19-13526742", time: "2026-04-01T08:29:00Z" },
+      { title: "Pakistan says it will host US-Iran talks", source: "The Hill", url: "https://thehill.com/policy/international/5807166-us-iran-peace-talks-pakistan/", time: "2026-03-30T13:17:10Z" },
+      { title: "The rippling effect of the Iran war, seen from the border with Turkey", source: "NPR", url: "https://www.npr.org/2026/03/29/nx-s1-5763014/the-rippling-effect-of-the-iran-war-seen-from-the-border-with-turkey", time: "2026-03-29T21:21:02Z" },
+      { title: "Pakistan holds talks with Turkey, Saudi Arabia, Egypt on Iran war", source: "The Hill", url: "https://thehill.com/policy/international/5806308-pakistan-turkey-saudi-egypt-iran-war-talks/", time: "2026-03-29T12:09:44Z" },
+      { title: "Pakistan hosts diplomatic discussions on ending war", source: "NPR", url: "https://www.npr.org/2026/03/29/nx-s1-5765344/pakistan-diplomatic-discussions-iran-war", time: "2026-03-29T10:08:38Z" },
+      { title: "Pakistan to convene with Saudi, Egypt and Turkey in hopes of de-escalating regional hostilities", source: "Euronews", url: "http://www.euronews.com/2026/03/29/pakistan-to-convene-with-saudi-egypt-and-turkey-in-hopes-of-de-escalating-regional-hostili", time: "2026-03-29T06:52:24Z" },
+    ]
+  },
+  {
     name: "Singapore", country: "Singapore",
     lat: 1.3521, lng: 103.8198,
     category: "economic",
@@ -4931,24 +4953,6 @@ const locations = [
       { title: "‘Guano is far more than just droppings’: scientists uncover the secrets of bat poo in Gorongosa park", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/apr/01/mozambique-wildlife-conservation-gorongosa-bats-guano-dna-wildlife-pests-aoe", time: "2026-04-01T12:00:55Z" },
       { title: "Mozambique: Government Launches Free Birth Registration", source: "AllAfrica", url: "https://allafrica.com/stories/202603310515.html", time: "2026-03-31T15:24:47Z" },
       { title: "Mozambique: World Bank Warns of Social &#x26;amp; 'Economic Instability' Which Could Cven Threaten The Gas Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202603300606.html", time: "2026-03-30T13:01:31Z" },
-    ]
-  },
-  {
-    name: "Ankara", country: "Turkey",
-    lat: 39.9334, lng: 32.8597,
-    category: "conflict",
-    articles: [
-      { title: "Second Turkish-owned ship crosses Hormuz strait", source: "RTE News", url: "https://www.rte.ie/news/middle-east/2026/0404/1566704-middle-east-conflict/", time: "2026-04-04T07:47:41Z" },
-      { title: "Iranians are leaving the country just to get internet", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5753859/iranians-are-leaving-the-country-just-to-get-internet", time: "2026-04-03T19:56:42Z" },
-      { title: "A Turkish border town known for its cats - in times of peace", source: "NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5766197/a-turkish-border-town-known-for-its-cats-in-times-of-peace", time: "2026-04-01T19:54:37Z" },
-      { title: "Some Iranians express pessimism over the war and the potential for regime change", source: "NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5768213/some-iranians-express-pessimism-over-the-war-and-the-potential-for-regime-change", time: "2026-04-01T08:41:48Z" },
-      { title: "Migrant boat sinks off holiday resort after high-speed chase, killing 18", source: "Sky News", url: "https://news.sky.com/story/migrant-boat-sinks-off-turkish-coast-after-high-speed-chase-killing-18-13526742", time: "2026-04-01T08:29:00Z" },
-      { title: "Migrant boat sinks off holiday resort after high-speed chase, killing 19", source: "Sky News", url: "https://news.sky.com/story/migrant-boat-sinks-off-turkish-coast-after-high-speed-chase-killing-19-13526742", time: "2026-04-01T08:29:00Z" },
-      { title: "Pakistan says it will host US-Iran talks", source: "The Hill", url: "https://thehill.com/policy/international/5807166-us-iran-peace-talks-pakistan/", time: "2026-03-30T13:17:10Z" },
-      { title: "The rippling effect of the Iran war, seen from the border with Turkey", source: "NPR", url: "https://www.npr.org/2026/03/29/nx-s1-5763014/the-rippling-effect-of-the-iran-war-seen-from-the-border-with-turkey", time: "2026-03-29T21:21:02Z" },
-      { title: "Pakistan holds talks with Turkey, Saudi Arabia, Egypt on Iran war", source: "The Hill", url: "https://thehill.com/policy/international/5806308-pakistan-turkey-saudi-egypt-iran-war-talks/", time: "2026-03-29T12:09:44Z" },
-      { title: "Pakistan hosts diplomatic discussions on ending war", source: "NPR", url: "https://www.npr.org/2026/03/29/nx-s1-5765344/pakistan-diplomatic-discussions-iran-war", time: "2026-03-29T10:08:38Z" },
-      { title: "Pakistan to convene with Saudi, Egypt and Turkey in hopes of de-escalating regional hostilities", source: "Euronews", url: "http://www.euronews.com/2026/03/29/pakistan-to-convene-with-saudi-egypt-and-turkey-in-hopes-of-de-escalating-regional-hostili", time: "2026-03-29T06:52:24Z" },
     ]
   },
   {
@@ -5084,6 +5088,22 @@ const locations = [
     ]
   },
   {
+    name: "Peshawar", country: "Pakistan",
+    lat: 34.0151, lng: 71.5249,
+    category: "conflict",
+    articles: [
+      { title: "Bilawal stresses political unity amid economic crisis triggered by US-Israeli war on Iran", source: "Dawn", url: "https://www.dawn.com/news/1988572/bilawal-stresses-political-unity-amid-economic-crisis-triggered-by-us-israeli-war-on-iran", time: "2026-04-04T16:46:46Z" },
+      { title: "Investigators identify suspects in Dr Malik attack case", source: "Dawn", url: "https://www.dawn.com/news/1988050/investigators-identify-suspects-in-dr-malik-attack-case", time: "2026-04-03T04:28:21Z" },
+      { title: "Mohmand’s unregulated marble industry raises environmental, safety concerns", source: "Dawn", url: "https://www.dawn.com/news/1987667/mohmands-unregulated-marble-industry-raises-environmental-safety-concerns", time: "2026-04-02T02:02:11Z" },
+      { title: "4 cops among 9 injured in IED blast in KP’s Lakki Marwat", source: "Dawn", url: "https://www.dawn.com/news/1987545/4-cops-among-9-injured-in-ied-blast-in-kps-lakki-marwat", time: "2026-04-01T15:29:15Z" },
+      { title: "4 cops injured in explosion in KP’s Lakki Marwat", source: "Dawn", url: "https://www.dawn.com/news/1987545/4-cops-injured-in-explosion-in-kps-lakki-marwat", time: "2026-04-01T14:27:06Z" },
+      { title: "Renowned Peshawar doctor seriously injured in gun attack", source: "Dawn", url: "https://www.dawn.com/news/1987453/renowned-peshawar-doctor-seriously-injured-in-gun-attack", time: "2026-04-01T07:25:54Z" },
+      { title: "Six killed in Dera Ismail Khan firing; key suspect shot dead in police encounter", source: "Dawn", url: "https://www.dawn.com/news/1987451/six-killed-in-dera-ismail-khan-firing-key-suspect-shot-dead-in-police-encounter", time: "2026-04-01T06:10:19Z" },
+      { title: "Info ministry refutes reports of ‘complete lockdown’ on weekends as part of fuel-saving measures", source: "Dawn", url: "https://www.dawn.com/news/1986556/info-ministry-refutes-reports-of-complete-lockdown-on-weekends-as-part-of-fuel-saving-measures", time: "2026-03-29T11:33:02Z" },
+      { title: "Pak-Afghan peace jirga to meet in Peshawar on Tuesday", source: "Dawn", url: "https://www.dawn.com/news/1986377/pak-afghan-peace-jirga-to-meet-in-peshawar-on-tuesday", time: "2026-03-29T04:55:29Z" },
+    ]
+  },
+  {
     name: "Lima", country: "Peru",
     lat: -12.0464, lng: -77.0428,
     category: "economic",
@@ -5157,21 +5177,6 @@ const locations = [
       { title: "EU ministers arrive in Ukraine to mark Bucha massacre anniversary – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/mar/31/europe-ukraine-bucha-eu-russia-hungary-iran-denmark-latest-news-updates", time: "2026-03-31T08:01:15Z" },
       { title: "​​Being Ola review – a sweet and gentle film about disability, friendship and abandonment", source: "The Guardian", url: "https://www.theguardian.com/film/2026/mar/30/being-ola-review-a-sweet-and-gentle-film-about-disability-friendship-and-abandonment", time: "2026-03-30T10:00:06Z" },
       { title: "They’ve Been Accused of Running a ‘Covert’ Operation in Greenland. It’s No Secret.", source: "New York Times", url: "https://www.nytimes.com/2026/03/30/world/europe/trump-greenland-operation-danish-media.html", time: "2026-03-30T04:01:10Z" },
-    ]
-  },
-  {
-    name: "Peshawar", country: "Pakistan",
-    lat: 34.0151, lng: 71.5249,
-    category: "conflict",
-    articles: [
-      { title: "Investigators identify suspects in Dr Malik attack case", source: "Dawn", url: "https://www.dawn.com/news/1988050/investigators-identify-suspects-in-dr-malik-attack-case", time: "2026-04-03T04:28:21Z" },
-      { title: "Mohmand’s unregulated marble industry raises environmental, safety concerns", source: "Dawn", url: "https://www.dawn.com/news/1987667/mohmands-unregulated-marble-industry-raises-environmental-safety-concerns", time: "2026-04-02T02:02:11Z" },
-      { title: "4 cops among 9 injured in IED blast in KP’s Lakki Marwat", source: "Dawn", url: "https://www.dawn.com/news/1987545/4-cops-among-9-injured-in-ied-blast-in-kps-lakki-marwat", time: "2026-04-01T15:29:15Z" },
-      { title: "4 cops injured in explosion in KP’s Lakki Marwat", source: "Dawn", url: "https://www.dawn.com/news/1987545/4-cops-injured-in-explosion-in-kps-lakki-marwat", time: "2026-04-01T14:27:06Z" },
-      { title: "Renowned Peshawar doctor seriously injured in gun attack", source: "Dawn", url: "https://www.dawn.com/news/1987453/renowned-peshawar-doctor-seriously-injured-in-gun-attack", time: "2026-04-01T07:25:54Z" },
-      { title: "Six killed in Dera Ismail Khan firing; key suspect shot dead in police encounter", source: "Dawn", url: "https://www.dawn.com/news/1987451/six-killed-in-dera-ismail-khan-firing-key-suspect-shot-dead-in-police-encounter", time: "2026-04-01T06:10:19Z" },
-      { title: "Info ministry refutes reports of ‘complete lockdown’ on weekends as part of fuel-saving measures", source: "Dawn", url: "https://www.dawn.com/news/1986556/info-ministry-refutes-reports-of-complete-lockdown-on-weekends-as-part-of-fuel-saving-measures", time: "2026-03-29T11:33:02Z" },
-      { title: "Pak-Afghan peace jirga to meet in Peshawar on Tuesday", source: "Dawn", url: "https://www.dawn.com/news/1986377/pak-afghan-peace-jirga-to-meet-in-peshawar-on-tuesday", time: "2026-03-29T04:55:29Z" },
     ]
   },
   {
@@ -5331,19 +5336,6 @@ const locations = [
     ]
   },
   {
-    name: "Eastern Mediterranean", country: "International",
-    lat: 34.0, lng: 33.0,
-    category: "conflict",
-    articles: [
-      { title: "Israel resumes Leviathan gas field operations after 32-day halt due to war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260403-israel-resumes-leviathan-gas-field-operations-after-32-day-halt-due-to-war/", time: "2026-04-03T17:47:35Z" },
-      { title: "Wake up to the Mediterranean: Tel Aviv apartments steps from the sea - Sponsored Content", source: "Times of Israel", url: "https://toi.li/ZwEfH0", time: "2026-04-03T09:40:00Z" },
-      { title: "Exclusive: Greek ships secretly supplying Israel with oil and military cargo", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/exclusive-greek-ships-secretly-supplying-israel-oil-and-military-cargo", time: "2026-04-02T12:00:08Z" },
-      { title: "‘I can’t listen without feeling rattled’: how Fairuz’s anthem of resilience became a harbinger of strife for Lebanon", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/01/fairuz-bahebak-ya-lebnan-lebanon-beirut", time: "2026-04-01T14:00:03Z" },
-      { title: "At least 19 dead, 20 missing in migrant boat tragedy off Tunisia", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260330-at-least-19-dead-20-missing-in-migrant-boat-tragedy-off-tunisia/", time: "2026-03-30T08:42:45Z" },
-      { title: "Pope Leo XIV urges Monaco residents to use wealth for good, reject 'idolatry of power and money' fueling wars", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-xiv-urges-monaco-residents-to-use-wealth-for-good-reject-idolatry-of-power-and-money-fueling-wars", time: "2026-03-28T16:57:57Z" },
-    ]
-  },
-  {
     name: "Donetsk", country: "Ukraine",
     lat: 48.0159, lng: 37.8029,
     category: "conflict",
@@ -5367,6 +5359,18 @@ const locations = [
       { title: "Report finds there are no safe places for women in Darfur", source: "France 24", url: "https://www.france24.com/en/report-finds-there-are-no-safe-place-for-women-in-darfur", time: "2026-03-31T20:21:29Z" },
       { title: "Sudan: MSF Report Reveals 3,396 Cases of Sexual Violence Documented in Darfur", source: "AllAfrica", url: "https://allafrica.com/stories/202603310299.html", time: "2026-03-31T11:05:49Z" },
       { title: "Sudan: MSF Report Finds No Safe Places for Women and Girls in Darfur", source: "AllAfrica", url: "https://allafrica.com/stories/202603310289.html", time: "2026-03-31T10:47:56Z" },
+    ]
+  },
+  {
+    name: "Eastern Mediterranean", country: "International",
+    lat: 34.0, lng: 33.0,
+    category: "conflict",
+    articles: [
+      { title: "Israel resumes Leviathan gas field operations after 32-day halt due to war", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260403-israel-resumes-leviathan-gas-field-operations-after-32-day-halt-due-to-war/", time: "2026-04-03T17:47:35Z" },
+      { title: "Wake up to the Mediterranean: Tel Aviv apartments steps from the sea - Sponsored Content", source: "Times of Israel", url: "https://toi.li/ZwEfH0", time: "2026-04-03T09:40:00Z" },
+      { title: "Exclusive: Greek ships secretly supplying Israel with oil and military cargo", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/exclusive-greek-ships-secretly-supplying-israel-oil-and-military-cargo", time: "2026-04-02T12:00:08Z" },
+      { title: "‘I can’t listen without feeling rattled’: how Fairuz’s anthem of resilience became a harbinger of strife for Lebanon", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/01/fairuz-bahebak-ya-lebnan-lebanon-beirut", time: "2026-04-01T14:00:03Z" },
+      { title: "At least 19 dead, 20 missing in migrant boat tragedy off Tunisia", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260330-at-least-19-dead-20-missing-in-migrant-boat-tragedy-off-tunisia/", time: "2026-03-30T08:42:45Z" },
     ]
   },
   {
