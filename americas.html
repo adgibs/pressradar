@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:02 UTC, 6 Apr 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:20 UTC, 6 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">6 April 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:03 UTC, 6 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Oil climbs anew on mixed signals about Iran war&#39;s future", "Iran mediators make last-ditch push for 45-day ceasefire", "Pope calls for peace, Trump vows hell for Iran on Easter", "Exclusive: Trump says U.S. feared Iran trap during F-15 crew rescue", "Iran’s World Cup participation depends on relocation from US, minister says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Iran tensions dominate as ceasefire efforts continue amid US military positioning</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Dems eyeing 2028 want huge tax cuts — but big hikes for the rich", "Dems weighing 2028 campaigns run from 2020 positions", "Top general ousted by Pete Hegseth says troops deserve ‘courageous leaders of character’"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">US Democratic 2028 candidates debate tax policy and leadership direction</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Mexico report downplays &#39;disappeared&#39; crisis. Human rights activists call it a cover-up", "The massive economic impact of the global energy crisis"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Mexico faces human rights and energy crisis challenges</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Peru to vote for president amid deep political crisis: here’s what you need to know", "Trump&#39;s &#39;puppet regime&#39;: Home to world’s largest oil reserves, is Venezuela key to US economy?"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Venezuela and Peru grapple with political instability and economic pressures</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Dozens missing after boat carrying migrants capsizes near Libya", "Missouri CEO and mom-of-three killed in horror crash during family vacation in Nicaragua"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Migration and safety incidents claim lives across Americas region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Chilean zoo stages an Easter egg hunt with treats for the animals"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Chilean zoo hosts Easter celebration for animals</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 13:20 UTC, 6 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Improving neighbourly relations: US-Mexico border authorities close the door", "On Canada’s border, Montana’s Blackfeet look for a legal way out of Trump’s tariffs", "Dems eyeing 2028 want huge tax cuts — but big hikes for the rich", "Dems weighing 2028 campaigns run from 2020 positions"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US economic policy and trade tensions dominate Americas political agenda</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Pope calls for peace, Trump vows hell for Iran on Easter", "Exclusive: Trump says U.S. feared Iran trap during F-15 crew rescue", "Iran’s World Cup participation depends on relocation from US, minister says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Iran conflict influences regional security and diplomatic discussions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Two-headed Trump and Netanyahu figure set alight at ‘Burning of Judas’ festival", "Mexico report downplays &#39;disappeared&#39; crisis. Human rights activists call it a cover-up", "Peru to vote for president amid deep political crisis: here’s what you need to know"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Political unrest and human rights concerns span Latin America</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Oil climbs anew on mixed signals about Iran war&#39;s future", "Iran mediators make last-ditch push for 45-day ceasefire"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Oil markets fluctuate amid Middle East geopolitical uncertainty</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Chilean zoo stages an Easter egg hunt with treats for the animals", "Missouri CEO and mom-of-three killed in horror crash during family vacation in Nicaragua"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Isolated incidents reported across the Americas region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Dozens missing after boat carrying migrants capsizes near Libya"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:25%"></div></div><span class="ai-bullet-text">Migrant boat capsizes near Libya with dozens missing</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -116,6 +116,8 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Improving neighbourly relations: US-Mexico border authorities close the door", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260406-improving-neighbourly-relations-us-mexico-border-authorities-close-the-door", time: "2026-04-06T12:39:50Z" },
+      { title: "Two-headed Trump and Netanyahu figure set alight at ‘Burning of Judas’ festival", source: "The Independent", url: "https://www.independent.co.uk/tv/news/trump-netanyahu-devil-mexico-judas-video-b2952353.html", time: "2026-04-06T11:16:08Z" },
       { title: "Mexico report downplays 'disappeared' crisis. Human rights activists call it a cover-up", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-04-06/mexico-says-only-about-one-third-of-130-000-people-listed-as-disappeared-can-be-confirmed-as-missing", time: "2026-04-06T10:00:00Z" },
       { title: "The massive economic impact of the global energy crisis", source: "Axios", url: "https://www.axios.com/2026/04/06/economic-impact-global-energy-crisis", time: "2026-04-06T09:00:04Z" },
       { title: "Iran’s World Cup participation depends on relocation from US, minister says", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/5/irans-world-cup-participation-depends-on-relocation-from-us-minister-says?traffic_source=rss", time: "2026-04-05T15:08:40Z" },
@@ -200,7 +202,6 @@ const locations = [
       { title: "Ernesto Gómez Gallardo: The architect who redefined Mexican furniture", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/ernesto-gomez-gallardo-arguelles-redefined-mexican-furniture/", time: "2026-03-30T16:24:07Z" },
       { title: "FIFA World Cup will be held amid ‘human rights crisis’ in the US: Amnesty", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/3/30/fifa-world-cup-will-be-held-amid-human-rights-crisis-in-the-us-amnesty?traffic_source=rss", time: "2026-03-30T15:58:13Z" },
       { title: "‘I’m always watching’: A mother’s vigil in Mexico’s cancer system", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/3/30/im-always-watching-a-mothers-vigil-in-mexicos-cancer-system?traffic_source=rss", time: "2026-03-30T13:32:58Z" },
-      { title: "2026 World Cup: Mexico ramps up security amid threat from cartels", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260330-2026-world-cup-mexico-ramps-up-security-amid-threat-from-cartels", time: "2026-03-30T12:20:20Z" },
     ]
   },
   {
@@ -413,6 +414,7 @@ const locations = [
     lat: 45.4215, lng: -75.6972,
     category: "political",
     articles: [
+      { title: "On Canada’s border, Montana’s Blackfeet look for a legal way out of Trump’s tariffs", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-on-canadas-border-montanas-blackfeet-look-for-a-legal-way-out-of/", time: "2026-04-06T11:00:00Z" },
       { title: "Canada seized 3.7 tonnes of cocaine at border in nine-month period", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/us-politics/article-canada-seized-37-tonnes-of-cocaine-at-border-in-first-nine-months-of/", time: "2026-04-03T20:01:40Z" },
       { title: "Watch live: NASA outlines Artemis II progress", source: "The Hill", url: "https://thehill.com/video-clips/5815266-watch-live-nasa-outlines-artemis-ii-progress/", time: "2026-04-03T18:30:00Z" },
       { title: "Canada, China sign pledge in Beijing to deepen financial-sector ties", source: "Globe and Mail", url: "https://www.theglobeandmail.com/politics/article-canada-china-sign-pledge-in-beijing-to-deepen-financial-sector-ties/", time: "2026-04-03T13:47:00Z" },
@@ -543,14 +545,6 @@ const locations = [
     articles: [
       { title: "Alleged maple syrup scam in Quebec uncovered by Canadian broadcaster", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/02/maple-syrup-scam-quebec-canada", time: "2026-04-02T19:07:20Z" },
       { title: "Air Canada CEO to step down following ‘lack of compassion’ from English-only speech after crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/air-canada-ceo-michael-rousseau-resign-retired-b2948468.html", time: "2026-03-30T14:52:22Z" },
-    ]
-  },
-  {
-    name: "Toronto", country: "Canada",
-    lat: 43.6532, lng: -79.3832,
-    category: "economic",
-    articles: [
-      { title: "Demand for hydropower surges as Trump clamps down on clean energy", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/mar/30/hydropower-great-lakes-clean-energy", time: "2026-03-30T13:00:11Z" },
     ]
   },
   {
