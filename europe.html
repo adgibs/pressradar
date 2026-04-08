@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:09 UTC, 8 Apr 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:23 UTC, 8 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">8 April 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 17:10 UTC, 8 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Greece announces social media ban for under-15s, citing anxiety and sleep problems", "Greece Plans to Block Social Media for Children Under 15"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Greece announces social media ban for children under 15 years old</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["French former detainees Cécile Kohler and Jacques Paris return home after more than 3 years in Iran", "From Evin Prison to a dash through wartime Iran: How French couple’s four-year ordeal ended"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">French couple released after over three years detained in Iran</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["France to target Russia&#39;s &#39;shadow fleet&#39; with tougher penalties for ships sailing under false flag", "France ramps up rearmament amid Russia threat"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France strengthens military response amid Russia security threats</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["JD Vance claims US is not interfering in Hungary election", "How Orban benefits from Hungary&#39;s tailor-made election system"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Hungary election system benefits Prime Minister Orbán amid US scrutiny</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Trump is expected to meet with Rutte as he muses about pulling out of NATO", "Trump’s NATO threat is strategic illiteracy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Trump&#x27;s NATO withdrawal threats create alliance uncertainty</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Railway track broke day before train accident that killed 46, Spain&#39;s Civil Guard says", "​Twin corruption trials cast a shadow over Spain’s main parties ahead of key elections"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Spain faces railway disaster and political corruption scandals</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 19:24 UTC, 8 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Iran closes Strait of Hormuz over Israeli barrage in Lebanon", "French former detainees Cécile Kohler and Jacques Paris return home after more than 3 years in Iran", "France to target Russia&#39;s &#39;shadow fleet&#39; with tougher penalties for ships sailing under false flag"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">France targets Russian shadow fleet while Iran detainees return home safely</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Greece announces social media ban for under-15s, citing anxiety and sleep problems", "Greece Plans to Block Social Media for Children Under 15", "Digital detox: Offline club events in Netherlands offer screen-free social connection"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Greece bans social media for under-15s; Netherlands promotes offline social events</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Railway track broke day before train accident that killed 46, Spain&#39;s Civil Guard says", "​Twin corruption trials cast a shadow over Spain’s main parties ahead of key elections"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Spain faces train disaster inquiry and corruption trials before elections</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Vance to lead U.S. delegation at peace talks with Iran in Pakistan on Saturday", "JD Vance claims US is not interfering in Hungary election"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">US delegation engages Iran peace talks amid Hungary election scrutiny</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Germany suspends military approval for long stays abroad for men under 45", "Pakistan, Turkey, Egypt and Saudi Arabia appear to be emerging as new regional power bloc"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Germany restricts military approvals; Middle Eastern nations form emerging power bloc</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Turkey puts 11 leaders of LGBTQ+ rights association on trial for &#39;obscenity&#39;", "Abuse and neglect allegations against Dublin foster carers not always properly recorded"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Turkey prosecutes LGBTQ+ leaders; Dublin addresses child welfare recording failures</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -112,82 +112,6 @@ const catLabels = { political: "Politics / governance", economic: "Economic / tr
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "Brussels", country: "Belgium",
-    lat: 50.8503, lng: 4.3517,
-    category: "political",
-    articles: [
-      { title: "Trump is expected to meet with Rutte as he muses about pulling out of NATO", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/trump-is-expected-to-meet-with-rutte-as-he-muses-about-pulling-out-of-nato", time: "2026-04-08T13:50:46Z" },
-      { title: "Trump’s NATO threat is strategic illiteracy", source: "The Hill", url: "https://thehill.com/opinion/national-security/5819576-trumps-nato-threat-is-strategic-illiteracy/", time: "2026-04-08T13:30:00Z" },
-      { title: "Trump to meet NATO chief Rutte as Iran war strains alliance", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-trump-nato-rutte-meeting/", time: "2026-04-08T11:06:21Z" },
-      { title: "Vance praises Orbán on Ukraine during his ‘unprecedented’ Hungary visit – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/08/jd-vance-hungary-viktor-orban-election-nato-europe-latest-news-updates", time: "2026-04-08T10:20:30Z" },
-      { title: "NATO secretary general visits Trump at volatile moment in Iran war", source: "The Hill", url: "https://thehill.com/policy/international/5820265-rutte-trump-nato-iran-meeting/", time: "2026-04-08T10:00:00Z" },
-      { title: "Cyclist killed in collision with cement truck had another traffic incident in recent weeks", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/08/cyclist-killed-in-collision-with-cement-truck-had-another-traffic-incident-in-recent-weeks/", time: "2026-04-08T05:00:01Z" },
-      { title: "Ukraine war briefing: Kyiv lays out how ‘Russian satellites help Iran in war’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/08/ukraine-war-briefing-kyiv-how-russian-satellites-help-iran-in-war", time: "2026-04-08T01:22:14Z" },
-      { title: "Swalwell campaign denies online claims that congressman behaved inappropriately with staffers", source: "LA Times", url: "https://www.latimes.com/california/story/2026-04-07/swalwell-campaign-denies-online-claims-that-congressman-behaved-inappropriately-with-staffers", time: "2026-04-07T22:13:52Z" },
-      { title: "GOP dissenters emerge on Trump's threat against Iranian 'civilization'", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-civilization-republicans", time: "2026-04-07T21:42:03Z" },
-      { title: "'Europe remains committed': Commissioner Síkela announces 'new approach' in global health initiative", source: "France 24", url: "https://www.france24.com/en/video/20260407-europe-remains-committed-commissioner-s%C3%ADkela-announces-new-approach-in-global-health-initiative", time: "2026-04-07T18:10:36Z" },
-      { title: "JD Vance accuses EU of ‘interference’ as he visits Hungary to help Orbán win election", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/07/jd-vance-eu-interference-hungary-election-viktor-orban", time: "2026-04-07T15:43:19Z" },
-      { title: "Vance blasts EU, lauds Orbán in Budapest", source: "The Hill", url: "https://thehill.com/homenews/administration/5819317-vance-praises-orban-budapest/", time: "2026-04-07T14:05:21Z" },
-      { title: "Vance accuses EU of ‘foreign interference’ in upcoming Hungarian election while endorsing Orbán – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/07/jd-vance-budapest-viktor-orban-hungary-election-france-nicolas-sarkozy-denmark-coalition-russia-ukraine-europe-latest-updates-news", time: "2026-04-07T13:33:06Z" },
-      { title: "Russia provided Iran with intelligence on Israeli energy sites, Ukraine says", source: "Euronews", url: "http://www.euronews.com/2026/04/07/russia-provided-iran-with-intelligence-on-israeli-energy-sites-ukraine-says", time: "2026-04-07T12:18:56Z" },
-      { title: "Vance accuses EU of 'disgraceful' meddling in Hungary", source: "RTE News", url: "https://www.rte.ie/news/us/2026/0407/1567023-jd-vance-hungary/", time: "2026-04-07T10:33:28Z" },
-      { title: "Ukraine Ramps Up Attacks on Russian Oil, Aiming to Curb Iran War Windfall", source: "New York Times", url: "https://www.nytimes.com/2026/04/07/world/europe/ukraine-attacks-russian-oil-exports.html", time: "2026-04-07T09:04:31Z" },
-      { title: "JD Vance accuses Brussels of foreign election interference ahead of Hungary’s high-stakes elections", source: "France 24", url: "https://www.france24.com/en/europe/20260407-jd-vance-backs-viktor-orban-ahead-of-high-stakes-hungary-parliamentary-elections", time: "2026-04-07T02:47:51Z" },
-      { title: "MAGA's global model faces existential test in Hungary", source: "Axios", url: "https://www.axios.com/2026/04/07/vance-hungary-election-orban-russia-ukraine", time: "2026-04-07T01:41:57Z" },
-      { title: "Former NATO commander on Iran rejecting ceasefire proposal: ‘They still have cards to play’", source: "The Hill", url: "https://thehill.com/policy/international/5818324-iran-still-holds-cards/", time: "2026-04-06T20:02:54Z" },
-      { title: "David Hogg's PAC leaves some Dem campaigns fuming", source: "Axios", url: "https://www.axios.com/2026/04/06/david-hogg-pac-leaders-we-deserve-robert-peters", time: "2026-04-06T19:50:13Z" },
-      { title: "Ukraine-Russia war latest: Kyiv steps up attacks on Putin’s oil network in defiance of Western allies", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-drones-oil-network-b2945082.html", time: "2026-04-06T07:36:02Z" },
-      { title: "President Trump endorses Steve Hilton in the California governor's race", source: "LA Times", url: "https://www.latimes.com/california/story/2026-04-06/president-trump-endoses-steve-hilton-in-california-governors-race", time: "2026-04-06T07:31:06Z" },
-      { title: "Stacey Abrams on Trump’s mail-in voting order: ‘Patently illegal’", source: "The Hill", url: "https://thehill.com/homenews/administration/5817423-stacey-abrams-trump-mail-in-voting/", time: "2026-04-06T02:14:14Z" },
-      { title: "Dems eyeing 2028 want huge tax cuts — but big hikes for the rich", source: "Axios", url: "https://www.axios.com/2026/04/05/2028-democrats-tax-cuts", time: "2026-04-05T21:45:05Z" },
-      { title: "Dems weighing 2028 campaigns run from 2020 positions", source: "Axios", url: "https://www.axios.com/2026/04/05/dems-weighing-2028-campaigns-run-from-2020-positions", time: "2026-04-05T21:30:04Z" },
-      { title: "Who is Viktor Orban, Hungarian PM fighting to stay in power after 16 years?", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6l3ywpwg2o?at_medium=RSS&at_campaign=rss", time: "2026-04-05T17:04:26Z" },
-      { title: "Trump roils NATO as pressure builds over Strait of Hormuz", source: "The Hill", url: "https://thehill.com/policy/defense/5815848-trump-nato-tensions-rise-withdrawal-threats/", time: "2026-04-05T16:00:00Z" },
-      { title: "Senate Democrat says Trump ‘needs a lot of prayer’", source: "The Hill", url: "https://thehill.com/homenews/senate/5816985-warock-trump-accountability-prayer-easter/", time: "2026-04-05T15:14:28Z" },
-      { title: "Ukraine-Russia war latest: Five killed and 19 injured after Moscow strikes market with drones, says Kyiv", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-drone-attacks-b2945082.html", time: "2026-04-05T08:00:39Z" },
-      { title: "Ukraine war briefing: Slovakia PM calls on EU to lift sanctions on Russian oil and gas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/05/ukraine-war-briefing-slovakia-pm-calls-on-eu-to-lift-sanctions-on-russian-oil-and-gas", time: "2026-04-05T00:03:04Z" },
-      { title: "Stress from Russian bombardment causing premature births in Ukraine, UN warns", source: "The Independent", url: "https://www.independent.co.uk/tv/news/ukraine-russia-war-premature-childbirth-rates-b2951834.html", time: "2026-04-04T12:31:34Z" },
-      { title: "European ministers call for profit caps on energy companies as Iran war drives price surge", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/european-commission-european-union-iran-spain-spanish-b2951816.html", time: "2026-04-04T11:01:47Z" },
-      { title: "Eight dead in 'massive' Russian attack while Kyiv signals readiness for Easter ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/04/04/eight-dead-in-massive-russian-attack-while-kyiv-signals-readiness-for-easter-ceasefire", time: "2026-04-04T07:53:17Z" },
-      { title: "‘The frontline is like Terminator’: fighting robots give Ukraine hope in war with Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/fighting-robots-give-ukraine-hope-in-war-with-russia", time: "2026-04-04T06:00:14Z" },
-      { title: "GOP senator calls to end Iran operations without formal declaration of war", source: "The Hill", url: "https://thehill.com/homenews/senate/5815738-john-curtis-opposes-iran-offensive/", time: "2026-04-03T23:00:36Z" },
-      { title: "Trump's criticism of NATO raises questions of whether — or how — the U.S. could leave", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5771619/trumps-criticism-of-nato-raises-questions-of-whether-or-how-the-u-s-could-leave", time: "2026-04-03T20:06:59Z" },
-      { title: "Russian strikes on Ukraine kill 8 as Kyiv holds door open for Easter truce", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-strikes-on-ukraine-kill-8-as-kyiv-holds-door-open-for-easter-truce", time: "2026-04-03T18:57:51Z" },
-      { title: "Crime victims sue State for damages amid delay in introducing new compensation scheme", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/03/crime-victims-sue-state-for-damages-amid-delay-in-introducing-new-compensation-scheme/", time: "2026-04-03T17:32:07Z" },
-      { title: "The White House ballroom, NATO, and Dem infighting: Join Friday’s Whole Hog", source: "The Hill", url: "https://thehill.com/video-clips/5814596-whole-hog-politics-bill-sammon-chris-stirewalt/", time: "2026-04-03T12:40:39Z" },
-      { title: "Putin’s delusions in Ukraine could rouse him to take on NATO", source: "The Hill", url: "https://thehill.com/opinion/international/5813300-putin-grand-delusions-threat/", time: "2026-04-03T12:30:00Z" },
-      { title: "Putin issues ultimatum to Armenia over closer ties with EU", source: "Euronews", url: "http://www.euronews.com/2026/04/03/putin-issues-ultimatum-to-armenia-over-closer-ties-with-eu", time: "2026-04-03T11:27:21Z" },
-      { title: "3 Greek ministers quit as EU investigates alleged farm subsidy fraud", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/athens-greek-cabinet-european-commission-b2951460.html", time: "2026-04-03T11:07:46Z" },
-      { title: "Kyiv region under 'massive' daytime drone and missile attack by Russia, officials say", source: "Euronews", url: "http://www.euronews.com/2026/04/03/kyiv-region-under-massive-daytime-drone-and-missile-attack-by-russia-officials-say", time: "2026-04-03T10:04:01Z" },
-      { title: "California cements its role as the national testing ground for AI rules", source: "Axios", url: "https://www.axios.com/2026/04/03/california-national-testing-ground-ai-rules", time: "2026-04-03T09:00:07Z" },
-      { title: "Former U.S. ambassador talks about Trump's rhetoric on NATO", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5771558/former-u-s-ambassador-talks-about-trumps-rhetoric-on-nato", time: "2026-04-03T08:43:59Z" },
-      { title: "Belgium turns Easter chocolate into giant edible sculpture", source: "Euronews", url: "http://www.euronews.com/video/2026/04/03/belgium-turns-easter-chocolate-into-giant-edible-sculpture", time: "2026-04-03T07:08:25Z" },
-      { title: "Zelensky accuses Russia of 'Easter escalation'", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0403/1566581-ukraine-russia/", time: "2026-04-03T06:45:28Z" },
-      { title: "Trump gives rare kudos to Paul after commission’s White House ballroom vote", source: "The Hill", url: "https://thehill.com/homenews/administration/5814332-trump-praises-rand-paul/", time: "2026-04-03T00:23:21Z" },
-      { title: "Ukraine war briefing: Zelenskyy offers expertise on keeping waterways open amid Middle East conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/ukraine-war-briefing-zelenskyy-expertise-waterways-open-middle-east-conflict", time: "2026-04-03T00:20:23Z" },
-      { title: "Trump administration announces new tariffs on drugmakers", source: "Axios", url: "https://www.axios.com/2026/04/02/trump-drug-prices-tariffs", time: "2026-04-02T19:50:46Z" },
-      { title: "U.S. bombs Iran's civilian infrastructure for first time after 'stone ages' threat", source: "Axios", url: "https://www.axios.com/2026/04/02/trump-iran-bridge-stone-age", time: "2026-04-02T19:01:41Z" },
-      { title: "It’s over for NATO? Marco Rubio explains why", source: "The Hill", url: "https://thehill.com/opinion/robbys-radar/5813305-trump-rubio-nato-warning/", time: "2026-04-02T17:30:48Z" },
-      { title: "Russia intends to send second oil tanker to Cuba after arrival of Anatoly Kolodkin", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-russia-intends-to-send-second-oil-tanker-to-cuba-after-arrival-of/", time: "2026-04-02T16:41:22Z" },
-      { title: "Trump speech on Iran war, recent remarks on oil, NATO, daycare costs land with a thud", source: "LA Times", url: "https://www.latimes.com/politics/story/2026-04-02/trump-speech-on-iran-war-recent-remarks-on-oil-nato-daycare-costs-land-with-thud", time: "2026-04-02T16:18:14Z" },
-      { title: "Azerbaijan-European Union Relations: Current State and Prospects", source: "Euronews", url: "http://www.euronews.com/2026/04/02/azerbaijan-european-union-relations-current-state-and-prospects", time: "2026-04-02T14:02:13Z" },
-      { title: "Donalds dominates Florida GOP gubernatorial race: Poll", source: "The Hill", url: "https://thehill.com/homenews/5811842-donalds-jolly-hypothetical-matchup/", time: "2026-04-02T10:00:00Z" },
-      { title: "Every Trump Threat to Abandon NATO Hollows It Out", source: "New York Times", url: "https://www.nytimes.com/2026/04/02/world/europe/trump-nato-iran.html", time: "2026-04-02T09:52:45Z" },
-      { title: "Europe Pushes for a Gentler Internet for Children", source: "New York Times", url: "https://www.nytimes.com/2026/04/02/world/europe/european-union-social-media-internet-regulation-children.html", time: "2026-04-02T09:06:33Z" },
-      { title: "Ukraine-Russia war latest: Kyiv rejects Russia’s claim to have taken full control of Luhansk region", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-territory-map-b2945082.html", time: "2026-04-02T04:58:03Z" },
-      { title: "McConnell joins Democrats to defend US NATO membership", source: "The Hill", url: "https://thehill.com/homenews/senate/5812334-mcconnell-joins-democrats-to-defend-us-nato-membership/", time: "2026-04-02T03:09:47Z" },
-      { title: "Mark Warner slams Trump’s NATO threat", source: "The Hill", url: "https://thehill.com/homenews/senate/5812094-warner-slams-trump-nato/", time: "2026-04-01T22:46:24Z" },
-      { title: "NATO’s Rutte schedules Washington trip as Trump reevaluates alliance", source: "The Hill", url: "https://thehill.com/homenews/5812066-natos-rutte-schedules-washington-trip-as-trump-reevaluates-alliance/", time: "2026-04-01T22:36:01Z" },
-      { title: "Oil and gas prices won't immediately return to normal even if the Iran war ends, the EU warns", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/oil-and-gas-prices-wont-immediately-return-to-normal-even-if-the-iran-war-ends-the-eu-warns", time: "2026-04-01T19:57:08Z" },
-      { title: "NATO 'doesn't really exist anymore other than on paper', experts say", source: "France 24", url: "https://www.france24.com/en/nato-doesn-t-really-exist-anymore-other-than-on-paper-experts-say", time: "2026-04-01T19:11:17Z" },
-      { title: "NATO ambassador says Trump ‘reevaluating’ US involvement in alliance", source: "The Hill", url: "https://thehill.com/homenews/administration/5811605-trump-considering-nato-exit/", time: "2026-04-01T19:07:26Z" },
-      { title: "Rubio NATO tweet from 2023 goes viral after Trump threats", source: "The Hill", url: "https://thehill.com/homenews/administration/5811552-rubio-trump-nato-reconsider/", time: "2026-04-01T18:54:15Z" },
-      { title: "The Guardian view on Ukraine’s perilous spring: Europe’s steadfast support is more vital than ever | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/apr/01/the-guardian-view-on-ukraines-perilous-spring-europes-steadfast-support-is-more-vital-than-ever", time: "2026-04-01T18:32:13Z" },
-      { title: "Podcast: Trump on Iran and new threats to leave NATO", source: "RTE News", url: "https://www.rte.ie/news/2026/0401/1566346-podcast-trump-on-iran-and-new-threats-to-leave-nato/", time: "2026-04-01T17:44:39Z" },
-      { title: "Kyiv denies Russian claims of full control over Ukraine's Luhansk region ahead of U.S. envoy talks", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/kyiv-denies-russian-claims-of-full-control-over-ukraines-luhansk-region-ahead-of-u-s-envoy-talks", time: "2026-04-01T17:27:06Z" },
-    ]
-  },
-  {
     name: "Paris", country: "France",
     lat: 48.8566, lng: 2.3522,
     category: "political",
@@ -256,8 +180,76 @@ const locations = [
       { title: "Trump sparks outrage after mocking Macron over video of him being ‘shoved’ by wife Brigitte: ‘He’s still recovering’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/trump-macron-brigitte-shove-video-b2950712.html", time: "2026-04-02T11:35:26Z" },
       { title: "Trump’s threats to withdraw US from Nato ‘look like Putin’s dream plan’, says Tusk – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/02/europe-nato-rutte-trump-criticisms-iran-ukraine-latest-news-updates", time: "2026-04-02T10:45:03Z" },
       { title: "Manga fan Emmanuel Macron strikes Dragon Ball pose with Japanese prime minister", source: "The Independent", url: "https://www.independent.co.uk/tv/news/manga-emmanuel-macron-japan-video-b2950431.html", time: "2026-04-01T21:19:10Z" },
-      { title: "Macron lauds Europe's 'predictability' on visit to Japan in apparent swipe at Trump", source: "Euronews", url: "http://www.euronews.com/2026/04/01/macron-lauds-europes-predictability-on-visit-to-japan-in-apparent-swipe-at-trump", time: "2026-04-01T18:04:30Z" },
-      { title: "Supreme Court casts doubt on Trump's birthright citizenship order", source: "Axios", url: "https://www.axios.com/2026/04/01/trump-supreme-court-birthright-citizenship-hearing", time: "2026-04-01T18:02:53Z" },
+    ]
+  },
+  {
+    name: "Brussels", country: "Belgium",
+    lat: 50.8503, lng: 4.3517,
+    category: "political",
+    articles: [
+      { title: "Trump is expected to meet with Rutte as he muses about pulling out of NATO", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/trump-is-expected-to-meet-with-rutte-as-he-muses-about-pulling-out-of-nato", time: "2026-04-08T13:50:46Z" },
+      { title: "Trump’s NATO threat is strategic illiteracy", source: "The Hill", url: "https://thehill.com/opinion/national-security/5819576-trumps-nato-threat-is-strategic-illiteracy/", time: "2026-04-08T13:30:00Z" },
+      { title: "Trump to meet NATO chief Rutte as Iran war strains alliance", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-trump-nato-rutte-meeting/", time: "2026-04-08T11:06:21Z" },
+      { title: "Vance praises Orbán on Ukraine during his ‘unprecedented’ Hungary visit – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/08/jd-vance-hungary-viktor-orban-election-nato-europe-latest-news-updates", time: "2026-04-08T10:20:30Z" },
+      { title: "NATO secretary general visits Trump at volatile moment in Iran war", source: "The Hill", url: "https://thehill.com/policy/international/5820265-rutte-trump-nato-iran-meeting/", time: "2026-04-08T10:00:00Z" },
+      { title: "Cyclist killed in collision with cement truck had another traffic incident in recent weeks", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/08/cyclist-killed-in-collision-with-cement-truck-had-another-traffic-incident-in-recent-weeks/", time: "2026-04-08T05:00:01Z" },
+      { title: "Ukraine war briefing: Kyiv lays out how ‘Russian satellites help Iran in war’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/08/ukraine-war-briefing-kyiv-how-russian-satellites-help-iran-in-war", time: "2026-04-08T01:22:14Z" },
+      { title: "Swalwell campaign denies online claims that congressman behaved inappropriately with staffers", source: "LA Times", url: "https://www.latimes.com/california/story/2026-04-07/swalwell-campaign-denies-online-claims-that-congressman-behaved-inappropriately-with-staffers", time: "2026-04-07T22:13:52Z" },
+      { title: "GOP dissenters emerge on Trump's threat against Iranian 'civilization'", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-civilization-republicans", time: "2026-04-07T21:42:03Z" },
+      { title: "'Europe remains committed': Commissioner Síkela announces 'new approach' in global health initiative", source: "France 24", url: "https://www.france24.com/en/video/20260407-europe-remains-committed-commissioner-s%C3%ADkela-announces-new-approach-in-global-health-initiative", time: "2026-04-07T18:10:36Z" },
+      { title: "JD Vance accuses EU of ‘interference’ as he visits Hungary to help Orbán win election", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/07/jd-vance-eu-interference-hungary-election-viktor-orban", time: "2026-04-07T15:43:19Z" },
+      { title: "Vance blasts EU, lauds Orbán in Budapest", source: "The Hill", url: "https://thehill.com/homenews/administration/5819317-vance-praises-orban-budapest/", time: "2026-04-07T14:05:21Z" },
+      { title: "Vance accuses EU of ‘foreign interference’ in upcoming Hungarian election while endorsing Orbán – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/07/jd-vance-budapest-viktor-orban-hungary-election-france-nicolas-sarkozy-denmark-coalition-russia-ukraine-europe-latest-updates-news", time: "2026-04-07T13:33:06Z" },
+      { title: "Russia provided Iran with intelligence on Israeli energy sites, Ukraine says", source: "Euronews", url: "http://www.euronews.com/2026/04/07/russia-provided-iran-with-intelligence-on-israeli-energy-sites-ukraine-says", time: "2026-04-07T12:18:56Z" },
+      { title: "Vance accuses EU of 'disgraceful' meddling in Hungary", source: "RTE News", url: "https://www.rte.ie/news/us/2026/0407/1567023-jd-vance-hungary/", time: "2026-04-07T10:33:28Z" },
+      { title: "Ukraine Ramps Up Attacks on Russian Oil, Aiming to Curb Iran War Windfall", source: "New York Times", url: "https://www.nytimes.com/2026/04/07/world/europe/ukraine-attacks-russian-oil-exports.html", time: "2026-04-07T09:04:31Z" },
+      { title: "JD Vance accuses Brussels of foreign election interference ahead of Hungary’s high-stakes elections", source: "France 24", url: "https://www.france24.com/en/europe/20260407-jd-vance-backs-viktor-orban-ahead-of-high-stakes-hungary-parliamentary-elections", time: "2026-04-07T02:47:51Z" },
+      { title: "MAGA's global model faces existential test in Hungary", source: "Axios", url: "https://www.axios.com/2026/04/07/vance-hungary-election-orban-russia-ukraine", time: "2026-04-07T01:41:57Z" },
+      { title: "Former NATO commander on Iran rejecting ceasefire proposal: ‘They still have cards to play’", source: "The Hill", url: "https://thehill.com/policy/international/5818324-iran-still-holds-cards/", time: "2026-04-06T20:02:54Z" },
+      { title: "David Hogg's PAC leaves some Dem campaigns fuming", source: "Axios", url: "https://www.axios.com/2026/04/06/david-hogg-pac-leaders-we-deserve-robert-peters", time: "2026-04-06T19:50:13Z" },
+      { title: "Ukraine-Russia war latest: Kyiv steps up attacks on Putin’s oil network in defiance of Western allies", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-drones-oil-network-b2945082.html", time: "2026-04-06T07:36:02Z" },
+      { title: "President Trump endorses Steve Hilton in the California governor's race", source: "LA Times", url: "https://www.latimes.com/california/story/2026-04-06/president-trump-endoses-steve-hilton-in-california-governors-race", time: "2026-04-06T07:31:06Z" },
+      { title: "Stacey Abrams on Trump’s mail-in voting order: ‘Patently illegal’", source: "The Hill", url: "https://thehill.com/homenews/administration/5817423-stacey-abrams-trump-mail-in-voting/", time: "2026-04-06T02:14:14Z" },
+      { title: "Dems eyeing 2028 want huge tax cuts — but big hikes for the rich", source: "Axios", url: "https://www.axios.com/2026/04/05/2028-democrats-tax-cuts", time: "2026-04-05T21:45:05Z" },
+      { title: "Dems weighing 2028 campaigns run from 2020 positions", source: "Axios", url: "https://www.axios.com/2026/04/05/dems-weighing-2028-campaigns-run-from-2020-positions", time: "2026-04-05T21:30:04Z" },
+      { title: "Who is Viktor Orban, Hungarian PM fighting to stay in power after 16 years?", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6l3ywpwg2o?at_medium=RSS&at_campaign=rss", time: "2026-04-05T17:04:26Z" },
+      { title: "Trump roils NATO as pressure builds over Strait of Hormuz", source: "The Hill", url: "https://thehill.com/policy/defense/5815848-trump-nato-tensions-rise-withdrawal-threats/", time: "2026-04-05T16:00:00Z" },
+      { title: "Senate Democrat says Trump ‘needs a lot of prayer’", source: "The Hill", url: "https://thehill.com/homenews/senate/5816985-warock-trump-accountability-prayer-easter/", time: "2026-04-05T15:14:28Z" },
+      { title: "Ukraine-Russia war latest: Five killed and 19 injured after Moscow strikes market with drones, says Kyiv", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-drone-attacks-b2945082.html", time: "2026-04-05T08:00:39Z" },
+      { title: "Ukraine war briefing: Slovakia PM calls on EU to lift sanctions on Russian oil and gas", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/05/ukraine-war-briefing-slovakia-pm-calls-on-eu-to-lift-sanctions-on-russian-oil-and-gas", time: "2026-04-05T00:03:04Z" },
+      { title: "Stress from Russian bombardment causing premature births in Ukraine, UN warns", source: "The Independent", url: "https://www.independent.co.uk/tv/news/ukraine-russia-war-premature-childbirth-rates-b2951834.html", time: "2026-04-04T12:31:34Z" },
+      { title: "European ministers call for profit caps on energy companies as Iran war drives price surge", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/european-commission-european-union-iran-spain-spanish-b2951816.html", time: "2026-04-04T11:01:47Z" },
+      { title: "Eight dead in 'massive' Russian attack while Kyiv signals readiness for Easter ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/04/04/eight-dead-in-massive-russian-attack-while-kyiv-signals-readiness-for-easter-ceasefire", time: "2026-04-04T07:53:17Z" },
+      { title: "‘The frontline is like Terminator’: fighting robots give Ukraine hope in war with Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/fighting-robots-give-ukraine-hope-in-war-with-russia", time: "2026-04-04T06:00:14Z" },
+      { title: "GOP senator calls to end Iran operations without formal declaration of war", source: "The Hill", url: "https://thehill.com/homenews/senate/5815738-john-curtis-opposes-iran-offensive/", time: "2026-04-03T23:00:36Z" },
+      { title: "Trump's criticism of NATO raises questions of whether — or how — the U.S. could leave", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5771619/trumps-criticism-of-nato-raises-questions-of-whether-or-how-the-u-s-could-leave", time: "2026-04-03T20:06:59Z" },
+      { title: "Russian strikes on Ukraine kill 8 as Kyiv holds door open for Easter truce", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-strikes-on-ukraine-kill-8-as-kyiv-holds-door-open-for-easter-truce", time: "2026-04-03T18:57:51Z" },
+      { title: "Crime victims sue State for damages amid delay in introducing new compensation scheme", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/03/crime-victims-sue-state-for-damages-amid-delay-in-introducing-new-compensation-scheme/", time: "2026-04-03T17:32:07Z" },
+      { title: "The White House ballroom, NATO, and Dem infighting: Join Friday’s Whole Hog", source: "The Hill", url: "https://thehill.com/video-clips/5814596-whole-hog-politics-bill-sammon-chris-stirewalt/", time: "2026-04-03T12:40:39Z" },
+      { title: "Putin’s delusions in Ukraine could rouse him to take on NATO", source: "The Hill", url: "https://thehill.com/opinion/international/5813300-putin-grand-delusions-threat/", time: "2026-04-03T12:30:00Z" },
+      { title: "Putin issues ultimatum to Armenia over closer ties with EU", source: "Euronews", url: "http://www.euronews.com/2026/04/03/putin-issues-ultimatum-to-armenia-over-closer-ties-with-eu", time: "2026-04-03T11:27:21Z" },
+      { title: "3 Greek ministers quit as EU investigates alleged farm subsidy fraud", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/athens-greek-cabinet-european-commission-b2951460.html", time: "2026-04-03T11:07:46Z" },
+      { title: "Kyiv region under 'massive' daytime drone and missile attack by Russia, officials say", source: "Euronews", url: "http://www.euronews.com/2026/04/03/kyiv-region-under-massive-daytime-drone-and-missile-attack-by-russia-officials-say", time: "2026-04-03T10:04:01Z" },
+      { title: "California cements its role as the national testing ground for AI rules", source: "Axios", url: "https://www.axios.com/2026/04/03/california-national-testing-ground-ai-rules", time: "2026-04-03T09:00:07Z" },
+      { title: "Former U.S. ambassador talks about Trump's rhetoric on NATO", source: "NPR", url: "https://www.npr.org/2026/04/03/nx-s1-5771558/former-u-s-ambassador-talks-about-trumps-rhetoric-on-nato", time: "2026-04-03T08:43:59Z" },
+      { title: "Belgium turns Easter chocolate into giant edible sculpture", source: "Euronews", url: "http://www.euronews.com/video/2026/04/03/belgium-turns-easter-chocolate-into-giant-edible-sculpture", time: "2026-04-03T07:08:25Z" },
+      { title: "Zelensky accuses Russia of 'Easter escalation'", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0403/1566581-ukraine-russia/", time: "2026-04-03T06:45:28Z" },
+      { title: "Trump gives rare kudos to Paul after commission’s White House ballroom vote", source: "The Hill", url: "https://thehill.com/homenews/administration/5814332-trump-praises-rand-paul/", time: "2026-04-03T00:23:21Z" },
+      { title: "Ukraine war briefing: Zelenskyy offers expertise on keeping waterways open amid Middle East conflict", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/ukraine-war-briefing-zelenskyy-expertise-waterways-open-middle-east-conflict", time: "2026-04-03T00:20:23Z" },
+      { title: "Trump administration announces new tariffs on drugmakers", source: "Axios", url: "https://www.axios.com/2026/04/02/trump-drug-prices-tariffs", time: "2026-04-02T19:50:46Z" },
+      { title: "U.S. bombs Iran's civilian infrastructure for first time after 'stone ages' threat", source: "Axios", url: "https://www.axios.com/2026/04/02/trump-iran-bridge-stone-age", time: "2026-04-02T19:01:41Z" },
+      { title: "It’s over for NATO? Marco Rubio explains why", source: "The Hill", url: "https://thehill.com/opinion/robbys-radar/5813305-trump-rubio-nato-warning/", time: "2026-04-02T17:30:48Z" },
+      { title: "Russia intends to send second oil tanker to Cuba after arrival of Anatoly Kolodkin", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-russia-intends-to-send-second-oil-tanker-to-cuba-after-arrival-of/", time: "2026-04-02T16:41:22Z" },
+      { title: "Trump speech on Iran war, recent remarks on oil, NATO, daycare costs land with a thud", source: "LA Times", url: "https://www.latimes.com/politics/story/2026-04-02/trump-speech-on-iran-war-recent-remarks-on-oil-nato-daycare-costs-land-with-thud", time: "2026-04-02T16:18:14Z" },
+      { title: "Azerbaijan-European Union Relations: Current State and Prospects", source: "Euronews", url: "http://www.euronews.com/2026/04/02/azerbaijan-european-union-relations-current-state-and-prospects", time: "2026-04-02T14:02:13Z" },
+      { title: "Donalds dominates Florida GOP gubernatorial race: Poll", source: "The Hill", url: "https://thehill.com/homenews/5811842-donalds-jolly-hypothetical-matchup/", time: "2026-04-02T10:00:00Z" },
+      { title: "Every Trump Threat to Abandon NATO Hollows It Out", source: "New York Times", url: "https://www.nytimes.com/2026/04/02/world/europe/trump-nato-iran.html", time: "2026-04-02T09:52:45Z" },
+      { title: "Europe Pushes for a Gentler Internet for Children", source: "New York Times", url: "https://www.nytimes.com/2026/04/02/world/europe/european-union-social-media-internet-regulation-children.html", time: "2026-04-02T09:06:33Z" },
+      { title: "Ukraine-Russia war latest: Kyiv rejects Russia’s claim to have taken full control of Luhansk region", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-territory-map-b2945082.html", time: "2026-04-02T04:58:03Z" },
+      { title: "McConnell joins Democrats to defend US NATO membership", source: "The Hill", url: "https://thehill.com/homenews/senate/5812334-mcconnell-joins-democrats-to-defend-us-nato-membership/", time: "2026-04-02T03:09:47Z" },
+      { title: "Mark Warner slams Trump’s NATO threat", source: "The Hill", url: "https://thehill.com/homenews/senate/5812094-warner-slams-trump-nato/", time: "2026-04-01T22:46:24Z" },
+      { title: "NATO’s Rutte schedules Washington trip as Trump reevaluates alliance", source: "The Hill", url: "https://thehill.com/homenews/5812066-natos-rutte-schedules-washington-trip-as-trump-reevaluates-alliance/", time: "2026-04-01T22:36:01Z" },
+      { title: "Oil and gas prices won't immediately return to normal even if the Iran war ends, the EU warns", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/oil-and-gas-prices-wont-immediately-return-to-normal-even-if-the-iran-war-ends-the-eu-warns", time: "2026-04-01T19:57:08Z" },
     ]
   },
   {
@@ -265,6 +257,9 @@ const locations = [
     lat: 53.3498, lng: -6.2603,
     category: "economic",
     articles: [
+      { title: "New master plan keeps animal welfare culture central at Dublin Zoo", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/08/new-master-plan-keeps-animal-welfare-culture-central-at-dublin-zoo/", time: "2026-04-08T18:43:13Z" },
+      { title: "Netflix documentary on killing of Jason Corbett nominated for Emmy", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/04/08/netflix-documentary-on-killing-of-jason-corbett-nominated-for-emmy/", time: "2026-04-08T18:03:16Z" },
+      { title: "Abuse and neglect allegations against Dublin foster carers not always properly recorded", source: "Irish Times", url: "https://www.irishtimes.com/ireland/social-affairs/2026/04/08/abuse-and-neglect-allegations-against-dublin-foster-carers-not-always-properly-recorded/", time: "2026-04-08T17:51:32Z" },
       { title: "‘You can’t park there’: Dublin commuters hit with gridlock in second day of fuel protests", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/08/you-cant-park-there-dublin-commuters-hit-with-gridlock-in-second-day-of-fuel-protests/", time: "2026-04-08T12:44:17Z" },
       { title: "Bomb squad called to Director of Public Prosecutions office after suspicious package found", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/04/08/bomb-squad-called-to-director-of-public-prosecution-office-after-suspicious-package-found/", time: "2026-04-08T12:31:01Z" },
       { title: "Who are the protesters bringing Dublin traffic to a standstill and how long could it last?", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/07/who-are-the-fuel-protesters-turning-oconnell-street-into-a-car-park/", time: "2026-04-08T11:25:09Z" },
@@ -321,6 +316,7 @@ const locations = [
     lat: 47.4979, lng: 19.0402,
     category: "political",
     articles: [
+      { title: "Vance to lead U.S. delegation at peace talks with Iran in Pakistan on Saturday", source: "Axios", url: "https://www.axios.com/2026/04/08/us-iran-peace-talks-vance-pakistan-saturday", time: "2026-04-08T18:51:37Z" },
       { title: "How Orban benefits from Hungary's tailor-made election system", source: "France 24", url: "https://www.france24.com/en/europe/20260408-how-orban-benefits-from-hungary-tailor-made-election-system", time: "2026-04-08T14:45:46Z" },
       { title: "Carnival celebrations at a Hungarian retirement home: János Bődey’s best photograph", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/apr/08/hungarian-pensioners-carnival-janos-bodeys-best-photograph", time: "2026-04-08T13:26:41Z" },
       { title: "Vance: Iran ceasefire deal ‘a fragile truce’", source: "The Hill", url: "https://thehill.com/homenews/administration/5821392-jd-vance-ceasefire-leverage-iran/", time: "2026-04-08T12:47:43Z" },
@@ -414,7 +410,6 @@ const locations = [
       { title: "Trump says King would have taken ‘different stand’ on Iran war in fresh dig at Starmer", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/trump-king-charles-starmer-iran-war-nato-b2950365.html", time: "2026-04-01T20:37:54Z" },
       { title: "'It's a nightmare for Keir Starmer' as UK PM sees 'special relationship' with US unravel", source: "France 24", url: "https://www.france24.com/en/it-s-a-nightmare-for-keir-starmer-as-uk-pm-sees-special-relationship-with-us-unravel", time: "2026-04-01T19:37:34Z" },
       { title: "'Lives will be lost': How the U.K.'s aid cuts may affect parts of Africa", source: "NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5763752/lives-will-be-lost-how-the-u-k-s-aid-cuts-may-affect-parts-of-africa", time: "2026-04-01T19:31:33Z" },
-      { title: "London police arrest 3 more suspects over arson attack on Jewish-owned ambulances", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/london-police-arrest-3-more-suspects-over-arson-attack-on-jewish-owned-ambulances", time: "2026-04-01T17:13:42Z" },
     ]
   },
   {
@@ -476,7 +471,6 @@ const locations = [
       { title: "New German conscription law: eligible men may now need approval for trips abroad", source: "Euronews", url: "http://www.euronews.com/2026/04/04/conscription-law-men-now-need-approval-for-trips-abroad", time: "2026-04-04T14:57:28Z" },
       { title: "German artist sentenced to prison by Russian court for carnival display mocking Putin", source: "Euronews", url: "http://www.euronews.com/culture/2026/04/02/german-artist-sentenced-to-prison-by-russian-court-for-carnival-display-mocking-putin", time: "2026-04-02T16:20:49Z" },
       { title: "Bettina Köster, a Leading Voice in Berlin’s 1980s Avant-Garde, Dies at 66", source: "New York Times", url: "https://www.nytimes.com/2026/04/01/arts/music/bettina-koster-dead.html", time: "2026-04-01T21:24:26Z" },
-      { title: "Rescuers abandon hope for whale stranded off German island", source: "BBC News", url: "https://www.bbc.com/news/articles/cede246wd59o?at_medium=RSS&at_campaign=rss", time: "2026-04-01T18:26:35Z" },
     ]
   },
   {
@@ -484,6 +478,7 @@ const locations = [
     lat: 37.9838, lng: 23.7275,
     category: "social",
     articles: [
+      { title: "Iran closes Strait of Hormuz over Israeli barrage in Lebanon", source: "The Hill", url: "https://thehill.com/policy/international/5822104-iran-strait-of-hormuz-closure-ceasefire/", time: "2026-04-08T17:15:11Z" },
       { title: "Greece announces social media ban for under-15s, citing anxiety and sleep problems", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/08/greece-proposes-social-media-ban-under-15s-anxiety-sleep-problems", time: "2026-04-08T15:52:33Z" },
       { title: "Greece to ban social media for under 15s from 2027", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0408/1567161-greece-social-media/", time: "2026-04-08T10:34:10Z" },
       { title: "Greece announces social media ban for under-15s", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/greece-social-media-ban-under-15s-b2953594.html", time: "2026-04-08T09:02:39Z" },
@@ -532,6 +527,7 @@ const locations = [
     lat: 39.9334, lng: 32.8597,
     category: "security",
     articles: [
+      { title: "Turkey puts 11 leaders of LGBTQ+ rights association on trial for 'obscenity'", source: "Euronews", url: "http://www.euronews.com/2026/04/08/turkey-puts-11-leaders-of-lgbtq-rights-association-on-trial-for-obscenity", time: "2026-04-08T19:17:40Z" },
       { title: "Pakistan, Turkey, Egypt and Saudi Arabia appear to be emerging as new regional power bloc", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/pakistan-saudi-arabia-egypt-turkey-gulf-allies-power-b2953884.html", time: "2026-04-08T15:12:54Z" },
       { title: "Exclusive: How Iran's supreme leader reached a truce with Trump", source: "Axios", url: "https://www.axios.com/2026/04/08/exclusive-how-irans-supreme-leader-reached-a-truce-with-trump", time: "2026-04-08T04:42:31Z" },
       { title: "Trump's tipping point: Destroy Iran's infrastructure or give talks a chance", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-deadline-bridges-power-plants", time: "2026-04-07T01:49:07Z" },
@@ -623,16 +619,6 @@ const locations = [
     ]
   },
   {
-    name: "Stockholm", country: "Sweden",
-    lat: 59.3293, lng: 18.0686,
-    category: "security",
-    articles: [
-      { title: "Five teens to go on trial in Sweden over attempted murder of Iranian dissident", source: "Euronews", url: "http://www.euronews.com/2026/04/08/five-teens-to-go-on-trial-in-sweden-over-attempted-murder-of-iranian-dissident", time: "2026-04-08T07:16:56Z" },
-      { title: "Sweden announces €800 million investment in air and drone defence systems", source: "Euronews", url: "http://www.euronews.com/2026/04/02/sweden-announces-800-million-investment-in-air-and-drone-defence-systems", time: "2026-04-02T12:04:54Z" },
-      { title: "Swedish PM offers deal that could see far-right allowed into government", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/01/swedish-pm-offers-deal-that-could-see-far-right-allowed-into-government", time: "2026-04-01T18:29:25Z" },
-    ]
-  },
-  {
     name: "The Hague", country: "Netherlands",
     lat: 52.0705, lng: 4.3007,
     category: "political",
@@ -640,6 +626,15 @@ const locations = [
       { title: "Digital detox: Offline club events in Netherlands offer screen-free social connection", source: "Euronews", url: "http://www.euronews.com/video/2026/04/08/digital-detox-offline-club-events-in-netherlands-offer-screen-free-social-connection", time: "2026-04-08T15:20:18Z" },
       { title: "Syrian accused of wartime torture for al-Assad denies charges in Netherlands court", source: "Euronews", url: "http://www.euronews.com/2026/04/08/syrian-accused-of-wartime-torture-for-al-assad-denies-charges-in-netherlands-court", time: "2026-04-08T12:50:23Z" },
       { title: "Ancient golden helmet recovered more than a year after Dutch heist", source: "BBC News", url: "https://www.bbc.com/news/articles/cpvxj4jzvvvo?at_medium=RSS&at_campaign=rss", time: "2026-04-02T14:20:02Z" },
+    ]
+  },
+  {
+    name: "Stockholm", country: "Sweden",
+    lat: 59.3293, lng: 18.0686,
+    category: "security",
+    articles: [
+      { title: "Five teens to go on trial in Sweden over attempted murder of Iranian dissident", source: "Euronews", url: "http://www.euronews.com/2026/04/08/five-teens-to-go-on-trial-in-sweden-over-attempted-murder-of-iranian-dissident", time: "2026-04-08T07:16:56Z" },
+      { title: "Sweden announces €800 million investment in air and drone defence systems", source: "Euronews", url: "http://www.euronews.com/2026/04/02/sweden-announces-800-million-investment-in-air-and-drone-defence-systems", time: "2026-04-02T12:04:54Z" },
     ]
   },
   {
