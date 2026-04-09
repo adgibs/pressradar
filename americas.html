@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:18 UTC, 9 Apr 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:03 UTC, 9 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 April 2026</div>
@@ -38,7 +38,7 @@
 </div>
 
 <div id="container">
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 09:18 UTC, 9 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Argentine MPs approve Milei-backed bill to allow mining in glaciers", "Argentina stops sending DNA kits to identify potential children of dictatorship victims in Europe"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Argentina implements controversial policies affecting mining rights and dictatorship victim identification.</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["Peruvians choosing a president from 35-candidate pool in Sunday&#39;s election", "Zeldin gives keynote address at climate skeptic conference"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Peru hosts major political and climate-related events this week.</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Man rescued after two weeks trapped in collapsed Mexico mine", "National Guard arrests truck driver hauling 66,000 liters of illegal fuel", "A win for whales in their suit against huge vessels in the Gulf of California"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Mexico addresses mining safety, fuel smuggling, and marine conservation issues.</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pete Hegseth snaps at ‘rude’ NBC reporter during Iran war press conference", "Democratic senator: Hegseth ‘blowing smoke’ with claims about Iran war"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">US Defense Secretary Hegseth faces criticism over Iran war statements.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Deloitte report: Mexico’s economic benefits from hosting the World Cup could reach US $2.25 billion", "One country is winning the US-China trade war: Mexico"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Mexico benefits economically from World Cup hosting and US-China trade dynamics.</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["KitKat truck flanked by security convoy after 12-tonne chocolate theft", "Man shot by ICE in California is not gang member, attorney says"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">North American security incidents involve theft and ICE shooting.</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 11:04 UTC, 9 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Argentina passes bill loosening protection of its glaciers", "Argentina MPs approve bill allowing mining in glaciers", "Argentine MPs approve Milei-backed bill to allow mining in glaciers"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Argentina approves mining bill allowing extraction in glacier regions</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Pentagon turf war ramps up between Hegseth and Driscoll", "Pete Hegseth snaps at ‘rude’ NBC reporter during Iran war press conference"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Pentagon officials clash publicly over military strategy and management</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Exclusive: JPMorgan strikes carbon removal deal that doubles as wildfire prevention", "Deloitte report: Mexico’s economic benefits from hosting the World Cup could reach US $2.25 billion"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Mexico sees major economic opportunities from carbon and sports initiatives</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Guatemalan man pleads guilty in federal court in crash that killed over 50 in Mexico", "Man rescued after two weeks trapped in collapsed Mexico mine"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Mining and transportation disasters kill dozens across Central America</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Emperor penguins listed as endangered species", "A win for whales in their suit against huge vessels in the Gulf of California"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Wildlife protection advances for penguins and whales in region</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["‘A dream come true’: Brazil’s blue-and-yellow macaws return to Rio after 200 years", "Carney says Canadians proud of Artemis II mission"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Canada and Brazil celebrate achievements in space and conservation</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -116,6 +116,7 @@ const locations = [
     lat: 38.9072, lng: -77.0369,
     category: "political",
     articles: [
+      { title: "Pentagon turf war ramps up between Hegseth and Driscoll", source: "The Hill", url: "https://thehill.com/policy/defense/5822193-hegseth-driscoll-influence-struggle-pentagon/", time: "2026-04-09T10:00:00Z" },
       { title: "Pete Hegseth snaps at ‘rude’ NBC reporter during Iran war press conference", source: "The Independent", url: "https://www.independent.co.uk/tv/news/pete-hegseth-iran-nbc-reporter-clash-video-b2954256.html", time: "2026-04-09T07:12:34Z" },
       { title: "Jim Whittaker, first American climber to scale Mt. Everest, dies at 97", source: "LA Times", url: "https://www.latimes.com/obituaries/story/2026-04-08/jim-whittaker-dead", time: "2026-04-09T03:46:30Z" },
       { title: "Democratic senator: Hegseth ‘blowing smoke’ with claims about Iran war", source: "The Hill", url: "https://thehill.com/homenews/senate/5822502-van-hollen-accuses-hegseth-blowing-smoke/", time: "2026-04-08T20:25:27Z" },
@@ -202,7 +203,6 @@ const locations = [
       { title: "What in God’s name is Pete Hegseth doing in Iran? Defense secretary ripped for framing war as ‘Jesus vs Muhammad’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pete-hegseth-iran-war-religion-b2951602.html", time: "2026-04-02T13:40:00Z" },
       { title: "Magnitude 4.6 earthquake shakes Central California", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5812548-magnitude-4-6-earthquake-california-central-coast/", time: "2026-04-02T13:29:24Z" },
       { title: "A look at the UK's Royal Navy, which has faced jibe after jibe from Trump and Hegseth", source: "ABC News", url: "https://abcnews.com/International/wireStory/uks-royal-navy-faced-jibe-after-jibe-trump-131643792", time: "2026-04-02T11:31:20Z" },
-      { title: "Hegseth ousts the Army chief of staff as the Iran war rages through Week 5", source: "NPR", url: "https://www.npr.org/2026/04/02/nx-s1-5771160/iran-war-trump-speech", time: "2026-04-02T10:14:26Z" },
     ]
   },
   {
@@ -335,6 +335,8 @@ const locations = [
     lat: -34.6037, lng: -58.3816,
     category: "economic",
     articles: [
+      { title: "Argentina passes bill loosening protection of its glaciers", source: "BBC News", url: "https://www.bbc.com/news/articles/c5y72e6x554o?at_medium=RSS&at_campaign=rss", time: "2026-04-09T10:52:23Z" },
+      { title: "Argentina MPs approve bill allowing mining in glaciers", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/9/argentinas-lawmakers-approve-bill-allowing-mining-in-glaciers?traffic_source=rss", time: "2026-04-09T10:25:09Z" },
       { title: "Argentine MPs approve Milei-backed bill to allow mining in glaciers", source: "France 24", url: "https://www.france24.com/en/americas/20260409-argentine-mps-approve-milei-backed-bill-allow-mining-glaciers", time: "2026-04-09T07:50:30Z" },
       { title: "Argentina stops sending DNA kits to identify potential children of dictatorship victims in Europe", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/human-rights/argentina-stops-sending-dna-kits-to-identify-potential-children-of-dictatorship-victims-in-europe", time: "2026-04-08T19:49:11Z" },
       { title: "Get Out!: French cinema, English-speaking theater and top music shows", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/what-to-do-in-argentina/what-to-do-in-buenos-aires/get-out/get-out-french-cinema-english-speaking-theater-and-top-music-shows", time: "2026-04-08T19:15:12Z" },
@@ -370,6 +372,7 @@ const locations = [
     lat: -12.0464, lng: -77.0428,
     category: "economic",
     articles: [
+      { title: "Emperor penguins listed as endangered species", source: "CBS News", url: "https://www.cbsnews.com/news/emperor-penguins-endangered-species/", time: "2026-04-09T10:09:46Z" },
       { title: "Exclusive: JPMorgan strikes carbon removal deal that doubles as wildfire prevention", source: "Axios", url: "https://www.axios.com/2026/04/09/carbon-removal-wildfire-prevention-jpmorgan", time: "2026-04-09T09:00:05Z" },
       { title: "Peruvians choosing a president from 35-candidate pool in Sunday's election", source: "ABC News", url: "https://abcnews.com/International/wireStory/peruvians-choosing-president-35-candidate-pool-sundays-election-131868230", time: "2026-04-09T08:52:20Z" },
       { title: "Zeldin gives keynote address at climate skeptic conference", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5823061-zeldin-heartland-institute-speech/", time: "2026-04-08T22:56:20Z" },
@@ -393,6 +396,7 @@ const locations = [
     lat: 45.4215, lng: -75.6972,
     category: "political",
     articles: [
+      { title: "Carney says Canadians proud of Artemis II mission", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-carney-says-canadians-proud-of-artemis-ii-mission/", time: "2026-04-09T10:43:56Z" },
       { title: "Fewer in US, Canada say it’s a good time to find a job: Gallup", source: "The Hill", url: "https://thehill.com/business/5822902-us-canada-job-market-2025/", time: "2026-04-08T21:33:56Z" },
       { title: "Canada’s Mark Carney Poised to Secure Liberal Party Majority After Gladu’s Defection", source: "New York Times", url: "https://www.nytimes.com/2026/04/08/world/canada/mark-carney-canada-liberal-party-marilyn-gladu.html", time: "2026-04-08T19:17:59Z" },
       { title: "Canadian Prime Minister Mark Carney attracts yet another Conservative lawmaker to his Liberal Party", source: "ABC News", url: "https://abcnews.com/International/wireStory/canadian-prime-minister-mark-carney-attracts-conservative-lawmaker-131843025", time: "2026-04-08T16:38:34Z" },
@@ -406,23 +410,6 @@ const locations = [
       { title: "Canada, China sign pledge in Beijing to deepen financial-sector ties", source: "Globe and Mail", url: "https://www.theglobeandmail.com/politics/article-canada-china-sign-pledge-in-beijing-to-deepen-financial-sector-ties/", time: "2026-04-03T13:47:00Z" },
       { title: "Ottawa unveils $51-million in additional aid for Ukraine", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/article-ottawa-unveils-51-million-in-additional-aid-for-ukraine/", time: "2026-04-03T13:29:05Z" },
       { title: "UK gathering dozens of countries in push to reopen Strait of Hormuz", source: "The Hill", url: "https://thehill.com/policy/international/5812605-uk-us-allies-strait-of-hormuz-iran-conflict/", time: "2026-04-02T14:24:40Z" },
-      { title: "Canada to join U.K.-hosted talks on reopening Strait of Hormuz", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-iran-war-talks-reopening-strait-of-hormuz/", time: "2026-04-02T10:42:37Z" },
-    ]
-  },
-  {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "The US refinery now processing Venezuelan oil", source: "BBC News", url: "https://www.bbc.com/news/articles/cx24n8eqzgyo?at_medium=RSS&at_campaign=rss", time: "2026-04-07T23:00:31Z" },
-      { title: "Trump's Iran post causes talk of his impeachment, removal to erupt among Hill Democrats", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-impeachment-25th-amendment-war-crimes", time: "2026-04-07T16:36:43Z" },
-      { title: "Venezuela's Delcy Rodríguez remains acting president after her initial 90-day appointment expired", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-delcy-rodrguez-remains-acting-president-after-initial-131775161", time: "2026-04-06T19:07:28Z" },
-      { title: "New video contradicts ICE's original story about North Minneapolis shooting", source: "Axios", url: "https://www.axios.com/local/twin-cities/2026/04/06/ice-video-north-minneapolis-venezuelan", time: "2026-04-06T18:31:51Z" },
-      { title: "Trump's 'puppet regime': Home to world’s largest oil reserves, is Venezuela key to US economy?", source: "France 24", url: "https://www.france24.com/en/trump-s-puppet-regime-home-to-world-s-largest-oil-reserves-is-venezuela-key-to-us-economy", time: "2026-04-05T15:00:28Z" },
-      { title: "No longer so mighty? Iran war tests US strength and resolve", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-debate/20260402-no-longer-so-mighty-iran-war-tests-us-strength-and-resolve", time: "2026-04-02T18:12:54Z" },
-      { title: "Trump administration lifts sanctions on acting Venezuela president", source: "The Hill", url: "https://thehill.com/policy/international/5812863-rodriguez-sanctions-trump-venezuela/", time: "2026-04-02T15:23:37Z" },
-      { title: "US lifts sanctions on Venezuela’s acting president Delcy Rodríguez", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/02/us-lifts-sanctions-on-venezuela-acting-president-delcy-rodriguez", time: "2026-04-02T10:53:26Z" },
-      { title: "US lifts sanctions on Venezuelan interim leader Dely Rodríguez", source: "BBC News", url: "https://www.bbc.com/news/articles/cje4l9de0d1o?at_medium=RSS&at_campaign=rss", time: "2026-04-02T10:47:16Z" },
     ]
   },
   {
@@ -441,17 +428,31 @@ const locations = [
     ]
   },
   {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "The US refinery now processing Venezuelan oil", source: "BBC News", url: "https://www.bbc.com/news/articles/cx24n8eqzgyo?at_medium=RSS&at_campaign=rss", time: "2026-04-07T23:00:31Z" },
+      { title: "Trump's Iran post causes talk of his impeachment, removal to erupt among Hill Democrats", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-impeachment-25th-amendment-war-crimes", time: "2026-04-07T16:36:43Z" },
+      { title: "Venezuela's Delcy Rodríguez remains acting president after her initial 90-day appointment expired", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-delcy-rodrguez-remains-acting-president-after-initial-131775161", time: "2026-04-06T19:07:28Z" },
+      { title: "New video contradicts ICE's original story about North Minneapolis shooting", source: "Axios", url: "https://www.axios.com/local/twin-cities/2026/04/06/ice-video-north-minneapolis-venezuelan", time: "2026-04-06T18:31:51Z" },
+      { title: "Trump's 'puppet regime': Home to world’s largest oil reserves, is Venezuela key to US economy?", source: "France 24", url: "https://www.france24.com/en/trump-s-puppet-regime-home-to-world-s-largest-oil-reserves-is-venezuela-key-to-us-economy", time: "2026-04-05T15:00:28Z" },
+      { title: "No longer so mighty? Iran war tests US strength and resolve", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-debate/20260402-no-longer-so-mighty-iran-war-tests-us-strength-and-resolve", time: "2026-04-02T18:12:54Z" },
+      { title: "Trump administration lifts sanctions on acting Venezuela president", source: "The Hill", url: "https://thehill.com/policy/international/5812863-rodriguez-sanctions-trump-venezuela/", time: "2026-04-02T15:23:37Z" },
+    ]
+  },
+  {
     name: "Brasilia", country: "Brazil",
     lat: -15.7975, lng: -47.8919,
     category: "political",
     articles: [
+      { title: "‘A dream come true’: Brazil’s blue-and-yellow macaws return to Rio after 200 years", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/apr/09/a-dream-come-true-brazils-blue-and-yellow-macaws-return-to-rio-after-200-years", time: "2026-04-09T11:00:48Z" },
       { title: "Brazil's Indigenous leader Raoni backs Lula despite protesting against railway in the Amazon", source: "ABC News", url: "https://abcnews.com/International/wireStory/brazils-indigenous-leader-raoni-backs-lula-despite-protesting-131851398", time: "2026-04-08T19:21:46Z" },
       { title: "Earth is getting ever brighter at night, satellite data shows", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-earth-is-getting-ever-brighter-at-night-satellite-data-shows/", time: "2026-04-08T15:58:28Z" },
       { title: "Carnival fever hits Lagos as locals celebrate Afro-Brazilian heritage", source: "BBC News", url: "https://www.bbc.com/news/articles/cp84ye86ly3o?at_medium=RSS&at_campaign=rss", time: "2026-04-07T14:00:21Z" },
       { title: "Fake Australian, Chinese and Brazilian police stations: BBC goes inside a seized scam compound", source: "BBC News", url: "https://www.bbc.com/news/articles/cjenpy8gx71o?at_medium=RSS&at_campaign=rss", time: "2026-04-06T23:09:23Z" },
       { title: "‘If they pollute our rivers, what will become of us?’: the town divided between hope and fear in Brazil’s Amazon oil rush", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/03/brazil-amazon-oil-rush-indigenous-consultation", time: "2026-04-03T11:00:51Z" },
       { title: "‘It’s not just Flávio’: is surname-dropping son downplaying Bolsonaro connection?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/flavio-is-surname-dropping-son-downplaying-bolsonaro-connection", time: "2026-04-03T10:00:50Z" },
-      { title: "New Brazil law allows separated couples joint custody over pets", source: "BBC News", url: "https://www.bbc.com/news/articles/ce8jzn180x2o?at_medium=RSS&at_campaign=rss", time: "2026-04-02T09:38:08Z" },
     ]
   },
   {
