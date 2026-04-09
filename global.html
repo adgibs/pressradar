@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:47 UTC, 9 Apr 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:41 UTC, 9 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 April 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:47 UTC, 9 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["Canadian delegation, US senator visiting Taiwan", "KMT head calls for peace during trip to Shanghai", "The Middle East war is a stress test for Taiwan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Taiwan receives international delegations amid regional security concerns</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Buses found using Chinese chips", "China oil tankers join line to test Hormuz exit", "Chinese banned from Taiwan over online posts"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China takes strategic actions affecting Taiwan and regional trade</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["‘Sold us illusions’: Opposition accuses Netanyahu of failing war goals, backs Lebanon talks", "With Iran ceasefire set, IDF chief declares Hezbollah main front"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Israeli leadership navigates war strategy and ceasefire negotiations</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Philippines opens base in disputed South China Sea", "Syria, Jordan, Turkey sign deal to launch regional trade corridor"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Southeast Asia and Middle East pursue regional cooperation deals</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Japan battles online abuse of athletes ahead of Games", "Federal judge rules Pentagon violated order restoring press access"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:66%"></div></div><span class="ai-bullet-text">Governments face pressure over athlete welfare and press freedom</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["North Korea: Whoever is at the helm, the regime serves only itself"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">North Korea regime prioritizes self-preservation over leadership changes</span><span class="ai-bullet-count">1</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:41 UTC, 9 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China oil tankers join line to test Hormuz exit", "The Middle East war is a stress test for Taiwan", "Philippines opens base in disputed South China Sea", "How Middle East tensions impact prices in U.S."]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">China tests Hormuz passage amid Middle East tensions affecting global markets</span><span class="ai-bullet-count">4</span></div><div class="ai-bullet" data-titles='["‘Sold us illusions’: Opposition accuses Netanyahu of failing war goals, backs Lebanon talks", "What We Know About the U.S.-Iran Cease-Fire Talks in Pakistan", "Hezbollah fires missile at southern city of Ashdod; debris from interception triggers sirens in Tel Aviv"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Israel-Hezbollah conflict continues as US-Iran ceasefire talks progress in Pakistan</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Buses found using Chinese chips", "Chinese banned from Taiwan over online posts", "Canadian delegation, US senator visiting Taiwan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Taiwan faces Chinese pressure while receiving international diplomatic support visits</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["KMT head calls for peace during trip to Shanghai", "North Korea: Whoever is at the helm, the regime serves only itself", "Japan battles online abuse of athletes ahead of Games"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:75%"></div></div><span class="ai-bullet-text">Regional leaders address security concerns amid online abuse and regime stability</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taiwan Athletics Open canceled due to budget holdup", "Citi Recognized as Best International Bank for Sustainable Finance in Taiwan by The Asset"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Taiwan&#x27;s financial sector and sports sectors experience separate institutional developments</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Uganda: Planned Water Shutdown to Affect Large Parts of Kampala On Friday", "East Africa: Uganda to Launch Two New Satellites to Space - Museveni", "Uganda: France, EU Commit Shs735bn to Rehabilitate Nalubaale and Kiira Dams", "Uganda: Aptech Returns in Uganda With New Future-Ready Tech Campus in Kampala"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:50%"></div></div><span class="ai-bullet-text">Uganda advances infrastructure, technology, and energy projects with international partnerships</span><span class="ai-bullet-count">2</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,8 +144,12 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "How Middle East tensions impact prices in U.S.", source: "CBS News", url: "https://www.cbsnews.com/video/how-middle-east-tensions-impact-prices-us/", time: "2026-04-09T23:20:43Z" },
+      { title: "Iran’s Supreme Leader Mojtaba Khamenei says ‘we seek compensation, not war’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/9/irans-supreme-leader-mojtaba-khamenei-says-we-seek-compensation-not?traffic_source=rss", time: "2026-04-09T23:16:47Z" },
+      { title: "US-Iran ceasefire: Uncertainty over what’s next", source: "Al Jazeera", url: "https://www.aljazeera.com/video/this-is-america/2026/4/9/us-iran-ceasefire-uncertainty-over-whats-next?traffic_source=rss", time: "2026-04-09T22:48:25Z" },
       { title: "Amid Trump’s Threats, NATO Labors to Survive the Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/us/politics/trump-iran-nato-rutte.html", time: "2026-04-09T22:29:16Z" },
       { title: "A mother mourning the son she lost in the Iran war says she told Trump: 'Go get 'em'", source: "NBC News", url: "https://www.nbcnews.com/politics/politics-news/mother-son-killed-iran-war-told-trump-go-get-em-cody-khork-rcna267473", time: "2026-04-09T22:25:00Z" },
+      { title: "Israelis can afford to give up on the Iranian front. We still have all the others", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-10/ty-article-opinion/.premium/israelis-can-afford-to-give-up-on-the-iranian-front-we-have-all-the-others/0000019d-739c-d68a-a39d-73bff4bf0000", time: "2026-04-09T21:43:07Z" },
       { title: "A fragile ceasefire and emboldened Iran", source: "NPR", url: "https://www.npr.org/2026/04/09/nx-s1-5779231/a-fragile-ceasefire-and-emboldened-iran", time: "2026-04-09T21:14:03Z" },
       { title: "'Iran will not forfeit its rights': Statement attributed to Mojtaba Khamenei read on state TV", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-892542", time: "2026-04-09T21:11:46Z" },
       { title: "How Trump's foreign policy is playing in North Carolina", source: "NPR", url: "https://www.npr.org/2026/04/09/nx-s1-5776820/how-trumps-foreign-policy-is-playing-in-north-carolina", time: "2026-04-09T21:07:07Z" },
@@ -640,10 +644,6 @@ const locations = [
       { title: "Iran vows retaliation after deadly US strike on bridge in Karaj", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/3/iran-vows-retaliation-after-deadly-us-strike-on-bridge-in-karaj?traffic_source=rss", time: "2026-04-03T02:11:32Z" },
       { title: "Middle East war live: US and Israel say US fighter jet crew member rescued", source: "France 24", url: "https://www.france24.com/en/middle-east/20260403-middle-east-live-un-security-council-to-vote-on-force-to-protect-hormuz-access", time: "2026-04-03T02:09:14Z" },
       { title: "France bans annual gathering of Muslims in Paris amid terrorism fears, security risks", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-891967", time: "2026-04-03T01:12:06Z" },
-      { title: "Iranians hold a nature festival in the shadow of war.", source: "New York Times", url: "https://www.nytimes.com/live/2026/04/03/world/iran-war-trump-oil/iranians-mark-a-nature-festival-in-the-shadow-of-war", time: "2026-04-02T23:31:25Z" },
-      { title: "Here’s What Happened in the War in the Middle East on Thursday", source: "New York Times", url: "https://www.nytimes.com/2026/04/02/world/middleeast/iran-war-middle-east-recap-thursday.html", time: "2026-04-02T23:26:59Z" },
-      { title: "US intelligence said to assess around half of Iran’s missile launchers are still intact", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-3-2026/", time: "2026-04-02T23:21:49Z" },
-      { title: "Legal experts warn US role in war raises risk of international law violations", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/legal-experts-warn-us-role-war-raises-risk-international-law-violations", time: "2026-04-02T23:03:09Z" },
     ]
   },
   {
@@ -652,7 +652,10 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "‘Sold us illusions’: Opposition accuses Netanyahu of failing war goals, backs Lebanon talks", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-892558", time: "2026-04-09T23:59:12Z" },
+      { title: "Israel's Benjamin Netanyahu says, 'there's no ceasefire in Lebanon'", source: "CBS News", url: "https://www.cbsnews.com/video/israels-benjamin-netanyahu-says-theres-no-ceasefire-lebanon/", time: "2026-04-09T23:19:01Z" },
       { title: "With Iran ceasefire set, IDF chief declares Hezbollah main front", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-892556", time: "2026-04-09T22:50:27Z" },
+      { title: "A new US anti-Zionist PAC endorses candidates who believe Jews were behind 9/11", source: "Times of Israel", url: "https://www.timesofisrael.com/a-new-us-anti-zionist-pac-endorses-candidates-who-believe-jews-were-behind-9-11/", time: "2026-04-09T22:32:39Z" },
+      { title: "In ‘Yes!,’ Israeli director Nadav Lapid skewers the country’s ‘moral abyss’ after Oct. 7", source: "Times of Israel", url: "https://www.timesofisrael.com/in-yes-israeli-director-nadav-lapid-skewers-the-countrys-moral-abyss-after-oct-7/", time: "2026-04-09T22:30:41Z" },
       { title: "For Netanyahu to declare victory, he must negotiate faithfully with Lebanon", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-10/ty-article-opinion/for-netanyahu-to-declare-victory-he-must-negotiate-faithfully-with-lebanon/0000019d-73dd-d759-ab9d-7bdd364c0000", time: "2026-04-09T21:47:36Z" },
       { title: "'Gaming saved me. It gave me a community – and my partner'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/holylandings/2026-04-10/ty-article-magazine/.highlight/gaming-saved-me-it-gave-me-a-community-and-my-partner/0000019d-73fd-d759-ab9d-7bfdf7d40000", time: "2026-04-09T21:15:12Z" },
       { title: "Israeli and Palestinians must escape the prison of fear and the grip of religious hardliners", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-10/ty-article-opinion/.premium/israeli-and-palestinians-must-escape-the-grip-of-religious-hardliners/0000019d-739d-da4e-a5df-7b9f027b0000", time: "2026-04-09T21:14:43Z" },
@@ -1122,6 +1125,9 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Hezbollah fires missile at southern city of Ashdod; debris from interception triggers sirens in Tel Aviv", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-10-2026/", time: "2026-04-09T23:24:21Z" },
+      { title: "Iran ‘doing a very poor job’ of allowing oil through Strait of Hormuz, Trump says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-doing-very-poor-job-allowing-oil-through-strait-hormuz-trump-says", time: "2026-04-09T22:53:47Z" },
+      { title: "What people in Iran are saying about the war and their government", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/what-people-in-iran-are-saying-about-the-war-and-their-government", time: "2026-04-09T22:50:16Z" },
       { title: "Top EU diplomat calls for urgent cessation of hostilities in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/top-eu-diplomat-calls-urgent-cessation-hostilities-lebanon", time: "2026-04-09T21:52:36Z" },
       { title: "Attack on Saudi Arabian pipeline wiped out 10 percent of kingdom's oil export capacity", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/attacks-saudi-arabian-pipeline-wiped-out-10-percent-kingdoms-oil-export-capacity", time: "2026-04-09T21:33:20Z" },
       { title: "Starmer and Trump discuss need for opening Strait of Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/starmer-and-trump-discuss-need-opening-strait-hormuz", time: "2026-04-09T20:55:06Z" },
@@ -1532,8 +1538,6 @@ const locations = [
       { title: "Trump’s Strait of Hormuz Problem", source: "New York Times", url: "https://www.nytimes.com/video/world/middleeast/100000010815863/trumps-strait-of-hormuz-problem.html", time: "2026-04-03T02:17:22Z" },
       { title: "Middle East live: UN Security Council to vote on force to protect Hormuz access", source: "France 24", url: "https://www.france24.com/en/middle-east/20260403-middle-east-live-un-security-council-to-vote-on-force-to-protect-hormuz-access", time: "2026-04-03T02:09:14Z" },
       { title: "UN set to vote on a watered-down proposal to open Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/iran-bahrain-strait-of-hormuz-russia-china-b2951312.html", time: "2026-04-03T00:59:06Z" },
-      { title: "One lightly hurt by cluster bomb impact in Kiryat Ata during Iranian attack on northern Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-3-2026/", time: "2026-04-02T23:21:49Z" },
-      { title: "Macron hits back at Trump as he dismisses military intervention over Strait of Hormuz closure", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/macron-strait-of-hormuz-trump-iran-b2951286.html", time: "2026-04-02T22:50:41Z" },
     ]
   },
   {
@@ -1541,6 +1545,8 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "What We Know About the U.S.-Iran Cease-Fire Talks in Pakistan", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/middleeast/iran-us-ceasefire-talks-negotiations.html", time: "2026-04-09T23:29:56Z" },
+      { title: "Pentagon denies threatening Vatican during January meeting with Holy See’s diplomat", source: "The Hill", url: "https://thehill.com/policy/defense/5824857-pentagon-denies-threats-vatican/", time: "2026-04-09T22:47:30Z" },
       { title: "Federal judge rules Pentagon violated order restoring press access", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pentagon-nyt-lawsuit-press-access-b2954955.html", time: "2026-04-09T22:38:40Z" },
       { title: "Federal judge rules Pentagon violated order restoring press access", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pentagon-nyt-lawsuit-press-access-b2954955.html", time: "2026-04-09T22:38:40Z" },
       { title: "Democrats in US slam Pam Bondi for refusing to appear for Epstein hearing", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/9/democrats-in-us-slam-pam-bondi-for-refusing-to-appear-for-epstein-hearing?traffic_source=rss", time: "2026-04-09T22:02:12Z" },
@@ -1761,7 +1767,6 @@ const locations = [
       { title: "US Defence Secretary Hegseth asks US Army chief to step down as Iran war grinds on", source: "Euronews", url: "http://www.euronews.com/2026/04/03/us-defence-secretary-hegseth-asks-us-army-chief-to-step-down-as-iran-war-grinds-on", time: "2026-04-03T03:33:55Z" },
       { title: "Hegseth fires US Army chief of staff, sources say, shaking up Pentagon amid Iran war", source: "Times of Israel", url: "https://www.timesofisrael.com/hegseth-fires-us-army-chief-of-staff-sources-say-shaking-up-pentagon-amid-iran-war/", time: "2026-04-03T01:33:24Z" },
       { title: "US Army Chief of Staff asked to step down by Defense Secretary Pete Hegseth", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-891966", time: "2026-04-03T00:19:05Z" },
-      { title: "Trump: Israel will ‘do what I tell them,’ will stop attacking Iran ‘when I stop’", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-3-2026/", time: "2026-04-02T23:21:49Z" },
     ]
   },
   {
@@ -1769,10 +1774,12 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "Israel agrees to talks with Lebanon as strikes there threaten fragile U.S.-Iran truce", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/israel-agrees-to-talks-with-lebanon-as-strikes-there-threaten-fragile-u-s-iran-truce", time: "2026-04-09T22:55:17Z" },
       { title: "Pakistan prepares for U.S.-Iran talks with anxiety", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-prepares-for-us-iran-talks-with-anxiety/article70844695.ece", time: "2026-04-09T21:35:54Z" },
       { title: "How did Pakistan bring Iran and the U.S. to the negotiating table?", source: "NPR", url: "https://www.npr.org/2026/04/09/nx-s1-5777753/how-did-pakistan-bring-iran-and-the-u-s-to-the-negotiating-table", time: "2026-04-09T20:42:20Z" },
       { title: "Israel seeks peace talks with Lebanon ‘as soon as possible’ as world condemns Tel Aviv’s bombardment amid US-Iran truce", source: "Dawn", url: "https://www.dawn.com/news/1990283/israel-seeks-peace-talks-with-lebanon-as-soon-as-possible-as-world-condemns-tel-avivs-bombardment-amid-us-iran-truce", time: "2026-04-09T19:06:52Z" },
       { title: "Pakistan's high-stakes Iran peace bid is fraught with risk", source: "Straits Times", url: "https://www.straitstimes.com/asia/pakistans-high-stakes-iran-peace-bid-is-fraught-with-risk", time: "2026-04-09T18:01:20Z" },
+      { title: "Pakistan’s high-stakes Iran peace bid is fraught with risk", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/pakistans-high-stakes-iran-peace-bid-is-fraught-with-risk", time: "2026-04-09T18:01:20Z" },
       { title: "Netanyahu authorises direct talks with Lebanon 'as soon as possible'", source: "The Hindu", url: "https://www.thehindu.com/news/international/netanyahu-authorises-direct-talks-with-lebanon-as-soon-as-possible/article70844250.ece", time: "2026-04-09T16:43:09Z" },
       { title: "‘Nothing short of horrific’: World reacts to Israeli ‘carnage’ in Lebanon", source: "Dawn", url: "https://www.dawn.com/news/1990262/nothing-short-of-horrific-world-reacts-to-israeli-carnage-in-lebanon", time: "2026-04-09T16:33:17Z" },
       { title: "Trump ‘gives European allies ultimatum’ to secure Strait of Hormuz as his Iran ceasefire hangs by a thread", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/trump-iran-netanyahu-ceasefire-israel-lebanon-b2954502.html", time: "2026-04-09T16:18:37Z" },
@@ -1989,6 +1996,7 @@ const locations = [
     articles: [
       { title: "Buses found using Chinese chips", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/04/10/2003855349", time: "2026-04-10T00:00:00Z" },
       { title: "China oil tankers join line to test Hormuz exit", source: "Taipei Times", url: "https://www.taipeitimes.com/News/biz/archives/2026/04/10/2003855323", time: "2026-04-10T00:00:00Z" },
+      { title: "China top diplomat Wang Yi says N. Korea is making strides despite US ‘oppression’", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/chinese-foreign-minister-tells-north-korean-minister-pyongyang-is-making-strides-despite-us", time: "2026-04-09T22:16:24Z" },
       { title: "Will Trump’s Iran war ‘loyalty test’ spell the end of Nato?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3349551/will-trumps-iran-war-loyalty-test-spell-end-nato?utm_source=rss_feed", time: "2026-04-09T22:00:14Z" },
       { title: "Middle East crisis is pushing China to deepen Latin America ties", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3349271/middle-east-crisis-pushing-china-deepen-latin-america-ties?utm_source=rss_feed", time: "2026-04-09T21:30:08Z" },
       { title: "Panama president seeks to calm China tensions", source: "Straits Times", url: "https://www.straitstimes.com/asia/panama-president-seeks-to-calm-china-tensions", time: "2026-04-09T19:56:22Z" },
@@ -2154,7 +2162,6 @@ const locations = [
       { title: "Infiltration case shows systematic approach by China", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/04/03/2003854951", time: "2026-04-03T00:00:00Z" },
       { title: "Nexperia’s China unit nears fully local production of chips: company sources", source: "Taipei Times", url: "https://www.taipeitimes.com/News/biz/archives/2026/04/03/2003854925", time: "2026-04-03T00:00:00Z" },
       { title: "EDITORIAL: China tightening its grip on the KMT", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/04/03/2003854927", time: "2026-04-03T00:00:00Z" },
-      { title: "New Zealand-Cook Islands deal reignites diplomatic spat as Winston Peters responds to China’s comments", source: "NZ Herald", url: "https://www.nzherald.co.nz/nz/new-zealand-cook-islands-deal-reignites-diplomatic-spat-as-winston-peters-responds-to-chinas-comments/EPHMTMAW3ZCRLMQTV6XJBXPVE4/", time: "2026-04-02T23:32:24Z" },
     ]
   },
   {
@@ -2162,6 +2169,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Husband of missing American questioned over her disappearance in the Bahamas", source: "CBS News", url: "https://www.cbsnews.com/video/husband-of-missing-american-questioned-over-disappearance-bahamas/", time: "2026-04-09T23:25:11Z" },
       { title: "Reservist rabbi who called to ‘flatten’ Gaza will be honored at state Independence Day event", source: "Times of Israel", url: "https://www.timesofisrael.com/reservist-rabbi-who-called-to-flatten-gaza-will-be-honored-at-state-independence-day-event/", time: "2026-04-09T22:15:35Z" },
       { title: "DNC rejects resolutions condemning AIPAC 'dark money,' recognizing Gaza genocide", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-04-10/ty-article/.premium/dnc-rejects-resolutions-condemning-aipac-dark-money-recognizing-gaza-genocide/0000019d-740e-de10-afdf-766e5bf70000", time: "2026-04-09T21:53:27Z" },
       { title: "See messages Brian Hooker sent his friend after wife's disappearance", source: "CBS News", url: "https://www.cbsnews.com/news/brian-hooker-lynette-wife-disappearance-bahamas-messages/", time: "2026-04-09T21:31:00Z" },
@@ -2476,6 +2484,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "Trump wants Hormuz pledges from NATO within days, Rutte tells allies", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-trump-wants-hormuz-pledges-from-nato-within-days-rutte-tells-allies/", time: "2026-04-09T23:13:53Z" },
       { title: "Amid Trump’s Threats, NATO Labors to Survive the Iran War", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/us/politics/trump-iran-nato-rutte.html", time: "2026-04-09T22:29:16Z" },
       { title: "Russia's president announces Orthodox Easter ceasefire with Ukraine, Kremlin says", source: "Euronews", url: "http://www.euronews.com/2026/04/09/russias-president-announces-orthodox-easter-ceasefire-with-ukraine-kremlin-says", time: "2026-04-09T19:29:09Z" },
       { title: "Putin announces Orthodox Easter ceasefire in Ukraine after Kyiv proposes same", source: "France 24", url: "https://www.france24.com/en/europe/20260409-putin-announces-orthodox-easter-ceasefire-in-ukraine", time: "2026-04-09T19:22:04Z" },
@@ -2671,6 +2680,8 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Puebla’s airport will spend 420 million pesos on expansion to accommodate 12 new routes", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/puebla-airport-expansion-hotel-bus-station-shopping-center/", time: "2026-04-09T22:55:11Z" },
+      { title: "A Mexican Cartel Leader and Ex-Partner to El Mencho Pleads Guilty in U.S.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/americas/mexico-cartels-el-85-guilty-plea-us.html", time: "2026-04-09T22:50:59Z" },
       { title: "Peso rises for seventh straight day as dollar weakens on US-Iran ceasefire", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/peso-rises-dollar-weakens-iran-ceasefire/", time: "2026-04-09T22:21:46Z" },
       { title: "Chinese car imports drop steeply under Mexico’s new tariffs, even as sales surge", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/chinese-car-imports-mexico-tariffs/", time: "2026-04-09T21:41:37Z" },
       { title: "Sinaloa mine collapse: Second miner rescued, third found dead, fourth still missing", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/sinaloa-mine-collapse-miner-rescued/", time: "2026-04-09T20:17:06Z" },
@@ -2748,7 +2759,6 @@ const locations = [
       { title: "A road trip through the oldest coffee route in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/a-road-trip-through-the-oldest-coffee-route-in-mexico/", time: "2026-04-03T09:04:22Z" },
       { title: "Christians mark Holy Week in the region and other top photos from Latin America and the Caribbean", source: "ABC News", url: "https://abcnews.com/International/wireStory/christians-mark-holy-week-region-top-photos-latin-131677921", time: "2026-04-03T07:31:11Z" },
       { title: "Sea turtle egg poachers caught on video at Oaxaca sanctuary, prompting federal investigation", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/sea-turtle-egg-theft-poaching-oaxaca-sanctuary/", time: "2026-04-02T23:52:07Z" },
-      { title: "102 arrested, 67 properties seized in bust of fraud network disguised as call centers", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/authorities-bust-fraud-and-extorsion-ring-disguised-as-call-centers/", time: "2026-04-02T22:54:14Z" },
     ]
   },
   {
@@ -2832,6 +2842,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
     articles: [
+      { title: "Israelis mark Passover in shadow of war: 'We cannot celebrate together'", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/israelis-mark-passover-in-shadow-of-war-we-cannot-celebrate-together", time: "2026-04-09T22:25:17Z" },
       { title: "Netanyahu orders direct talks with Lebanon amid ongoing strikes", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260409-netanyahu-orders-direct-talks-with-lebanon-amid-ongoing-strikes/", time: "2026-04-09T18:51:04Z" },
       { title: "Israel, Lebanon to begin direct talks on Hezbollah disarmament and peace, Netanyahu declares", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-892516", time: "2026-04-09T18:40:03Z" },
       { title: "Nearly 450 Israeli occupiers storm Al-Aqsa after reopening since Feb. 28", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260409-nearly-450-israeli-occupiers-storm-al-aqsa-after-reopening-since-feb-28/", time: "2026-04-09T18:18:33Z" },
@@ -2905,6 +2916,8 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Ukraine and Russia to cease fire for Orthodox Easter", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0410/1567485-ukraine-russia-easter/", time: "2026-04-09T23:17:53Z" },
+      { title: "Ukraine faces military desertions as Russian invasion grinds through 5th year", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/ukraine-faces-military-desertions-as-russian-invasion-grinds-through-5th-year", time: "2026-04-09T22:30:50Z" },
       { title: "Zelensky Sees Small Window for Peace", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/ukraine-russia-war-peace-talks.html", time: "2026-04-09T19:34:02Z" },
       { title: "Russia's president announces Orthodox Easter ceasefire with Ukraine, Kremlin says", source: "Euronews", url: "http://www.euronews.com/2026/04/09/russias-president-announces-orthodox-easter-ceasefire-with-ukraine-kremlin-says", time: "2026-04-09T19:29:09Z" },
       { title: "Putin announces Orthodox Easter ceasefire in Ukraine after Kyiv proposes same", source: "France 24", url: "https://www.france24.com/en/europe/20260409-putin-announces-orthodox-easter-ceasefire-in-ukraine", time: "2026-04-09T19:22:04Z" },
@@ -3309,7 +3322,6 @@ const locations = [
       { title: "French ship crosses Strait of Hormuz in first Western European transit during Iran war", source: "Euronews", url: "http://www.euronews.com/business/2026/04/03/french-ship-crosses-strait-of-hormuz-in-first-western-european-transit-during-iran-war", time: "2026-04-03T09:29:37Z" },
       { title: "Trump threatens to break NATO's promise over Iran war", source: "Axios", url: "https://www.axios.com/2026/04/03/nato-trump-iran-war", time: "2026-04-03T09:00:06Z" },
       { title: "Iran-US war latest: Trump threatens destruction of bridges and electric power plants in push for Tehran deal", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-bridge-strait-of-hormuz-b2951331.html", time: "2026-04-03T04:25:53Z" },
-      { title: "Macron hits back at Trump as he dismisses military intervention over Strait of Hormuz closure", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/macron-strait-of-hormuz-trump-iran-b2951286.html", time: "2026-04-02T22:50:41Z" },
     ]
   },
   {
@@ -3423,6 +3435,57 @@ const locations = [
     ]
   },
   {
+    name: "Nairobi", country: "Kenya",
+    lat: -1.2921, lng: 36.8219,
+    category: "political",
+    articles: [
+      { title: "East Africa: Uganda to Launch Two New Satellites to Space - Museveni", source: "AllAfrica", url: "https://allafrica.com/stories/202604090704.html", time: "2026-04-09T23:19:58Z" },
+      { title: "Kenya: Oburu Odinga Condemns Attack On Vihiga Senator, Calls for Swift Investigation", source: "AllAfrica", url: "https://allafrica.com/stories/202604090641.html", time: "2026-04-09T16:03:31Z" },
+      { title: "Kenya: Four Sentenced to Death Over 2015 Killing of Former Kabete MP George Muchai", source: "AllAfrica", url: "https://allafrica.com/stories/202604090640.html", time: "2026-04-09T16:03:09Z" },
+      { title: "Kenya: Nigeria's Zenith Bank Acquires Paramount Bank in CBK-Approved Deal", source: "AllAfrica", url: "https://allafrica.com/stories/202604090455.html", time: "2026-04-09T12:25:02Z" },
+      { title: "Kenya: 175 Health Facilities Receive Life-Saving Newborn Equipment in Major Boost to Maternal Care", source: "AllAfrica", url: "https://allafrica.com/stories/202604090454.html", time: "2026-04-09T12:24:44Z" },
+      { title: "Kenya disputes UN report on rape allegations against its Haiti personnel", source: "BBC News", url: "https://www.bbc.com/news/articles/c1d9zrl2z03o?at_medium=RSS&at_campaign=rss", time: "2026-04-09T12:02:28Z" },
+      { title: "Kenya: Seven in 10 Women Face Repeated Sextortion While Seeking Public Services - Study", source: "AllAfrica", url: "https://allafrica.com/stories/202604090371.html", time: "2026-04-09T11:27:55Z" },
+      { title: "Kenya: Police Warn of Traffic Disruptions in CBD As Ruto Plans Day-Long Activities", source: "AllAfrica", url: "https://allafrica.com/stories/202604090124.html", time: "2026-04-09T07:27:36Z" },
+      { title: "Kenya: Rights Group Warns of Mass Action If Govt Fails to Act On Fuel Quality Concerns", source: "AllAfrica", url: "https://Allafrica.com/stories/202604090039.html", time: "2026-04-09T05:01:48Z" },
+      { title: "Kenya: Rights Group Warns of Mass Action If Govt Fails to Act On Fuel Quality Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202604090039.html", time: "2026-04-09T05:01:48Z" },
+      { title: "Kenya: Kenya Reaffirms Neutrality in Middle East Conflict After Iran Criticism", source: "AllAfrica", url: "https://allafrica.com/stories/202604080463.html", time: "2026-04-08T12:22:41Z" },
+      { title: "Kenya: Kenya Protests UN Report On Haiti Mission, Says No Rape Complaints Were Filed", source: "AllAfrica", url: "https://allafrica.com/stories/202604080457.html", time: "2026-04-08T12:21:19Z" },
+      { title: "Kenya: MPs Summons CS Wandayi Amid Calls for His Removal Over Fuel Scandal", source: "AllAfrica", url: "https://allafrica.com/stories/202604080458.html", time: "2026-04-08T12:21:19Z" },
+      { title: "Kenya: Kenya Protests UN Report On Haiti Mission, Says No Rape Complaints Were Filed", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080457.html", time: "2026-04-08T12:21:19Z" },
+      { title: "Kenya: Stateless At Home - Kenyan Somalis Struggle to Reclaim Citizenship From Refugee Records", source: "AllAfrica", url: "https://allafrica.com/stories/202604080442.html", time: "2026-04-08T12:12:13Z" },
+      { title: "Kenya: Stateless At Home - Kenyan Somalis Struggle to Reclaim Citizenship From Refugee Records", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080442.html", time: "2026-04-08T12:12:13Z" },
+      { title: "Kenya: Ruto Signs Budget Unlocking Sh2 Billion for Protest Victims", source: "AllAfrica", url: "https://allafrica.com/stories/202604080162.html", time: "2026-04-08T08:15:30Z" },
+      { title: "Kenya: Ruto Signs Budget Unlocking Sh2 Billion for Protest Victims", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080162.html", time: "2026-04-08T08:15:30Z" },
+      { title: "Kenya: IEBC Secures Sh2.9bn in Supplementary Budget to Pay Pending Bills", source: "AllAfrica", url: "https://allafrica.com/stories/202604080161.html", time: "2026-04-08T08:14:48Z" },
+      { title: "Kenya: IEBC Secures Sh2.9bn in Supplementary Budget to Pay Pending Bills", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080161.html", time: "2026-04-08T08:14:48Z" },
+      { title: "Kenya: The G.O.A.T Returns - Faith Kipyegon to Headline Historic Women's Mile At 2026 Prefontaine Classic", source: "AllAfrica", url: "https://allafrica.com/stories/202604080157.html", time: "2026-04-08T07:31:23Z" },
+      { title: "Kenya: The G.O.A.T Returns - Faith Kipyegon to Headline Historic Women's Mile At 2026 Prefontaine Classic", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080157.html", time: "2026-04-08T07:31:23Z" },
+      { title: "Kenya: Seizure of 2,000 Ants At Nairobi Airport Highlights the Hidden Scale of Insect Trafficking", source: "AllAfrica", url: "https://allafrica.com/stories/202604080036.html", time: "2026-04-08T04:35:43Z" },
+      { title: "Kenya: ODM Expresses 'Outrage' Over Fuel Saga, Urging Impartial Graft Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202604070397.html", time: "2026-04-07T10:59:53Z" },
+      { title: "Kenya: Emmanuel Opati - the Fighter, the Builder, and the Vision Beyond Borders", source: "AllAfrica", url: "https://allafrica.com/stories/202604070394.html", time: "2026-04-07T10:59:11Z" },
+      { title: "Kenya: Matt Baugh Appointed British High Commissioner Following Neil Wigan's Departure Last Year", source: "AllAfrica", url: "https://allafrica.com/stories/202604070390.html", time: "2026-04-07T10:58:11Z" },
+      { title: "Kenya: ODPP Boosts Prosecutors' Capacity to Tackle Terror Financing in Weeklong Training", source: "AllAfrica", url: "https://allafrica.com/stories/202604070249.html", time: "2026-04-07T09:58:18Z" },
+      { title: "Kenya: NEMA Records Gap Raises Compliance Concerns Over Northern Energy Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202604070160.html", time: "2026-04-07T07:58:13Z" },
+      { title: "Kenya: Kenya's Digital Diplomacy Drive Gains Momentum With Thailand Partnership", source: "AllAfrica", url: "https://allafrica.com/stories/202604070159.html", time: "2026-04-07T07:58:12Z" },
+      { title: "Kenya: Appeal Court Defers P&#x26;amp;G, Kimberly-Clark Case Over Bench Constitution", source: "AllAfrica", url: "https://allafrica.com/stories/202604070124.html", time: "2026-04-07T05:23:04Z" },
+      { title: "Kenya: Ngong-Suswa Highway Completion a Game Changer for Regional Connectivity, Says Interior PS Omollo", source: "AllAfrica", url: "https://allafrica.com/stories/202604070123.html", time: "2026-04-07T05:23:03Z" },
+      { title: "Kenya: Kenya Called to Improve Business Climate to Fully Leverage China's Zero-Tariff Offer", source: "AllAfrica", url: "https://allafrica.com/stories/202604060597.html", time: "2026-04-06T15:59:30Z" },
+      { title: "Kenya: Athi Water Announces Five-Day Water Supply Interruption for System Upgrades", source: "AllAfrica", url: "https://allafrica.com/stories/202604060453.html", time: "2026-04-06T12:15:22Z" },
+      { title: "Kenya: Explained - What Off-Spec Fuel Could Do to Your Car", source: "AllAfrica", url: "https://allafrica.com/stories/202604060452.html", time: "2026-04-06T12:14:39Z" },
+      { title: "Kenya: Abdullahi, Kipkorir Call for Private Sector Arrests Amid Probe On Off-Spec Fuel", source: "AllAfrica", url: "https://allafrica.com/stories/202604060450.html", time: "2026-04-06T12:13:54Z" },
+      { title: "‘All we can do now is pray they continue’: Maasai welcome the first rains but know that drought is far from over", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/06/maasai-lands-drought-kenya-extreme-climate-patterns-livestock-deaths-herders-poverty-early-marriage", time: "2026-04-06T12:00:19Z" },
+      { title: "Kenya: Turkana Disarmament - 26 Firearms Surrendered As Community Cooperation Grows", source: "AllAfrica", url: "https://allafrica.com/stories/202604060297.html", time: "2026-04-06T10:58:55Z" },
+      { title: "An American Company Drilled for Oil in Kenya — and Left Behind Soaring Cancer Rates", source: "The Intercept", url: "https://theintercept.com/2026/04/06/amoco-bp-oil-kargi-kenya-cancer/", time: "2026-04-06T09:00:00Z" },
+      { title: "Kenya: Fuel Scandal - Liban, Sang, Bargoria Face 10-Year Jail Risk As Charges Loom", source: "AllAfrica", url: "https://allafrica.com/stories/202604060140.html", time: "2026-04-06T07:32:57Z" },
+      { title: "Kenya: President Ruto Warns No Mercy for Oil Cartels As Fuel Scandal Investigation Deepens", source: "AllAfrica", url: "https://allafrica.com/stories/202604060037.html", time: "2026-04-06T05:07:59Z" },
+      { title: "Kenya: DCI Arrests Top Energy Officials Over Fuel Supply Probe", source: "AllAfrica", url: "https://allafrica.com/stories/202604030527.html", time: "2026-04-03T15:07:41Z" },
+      { title: "Kenya: KNUT Sg Oyuu, Deputy Hesbon Otieno Among Leaders Elected Unopposed in National Polls", source: "AllAfrica", url: "https://allafrica.com/stories/202604030491.html", time: "2026-04-03T14:45:33Z" },
+      { title: "Kenya: Fuel Prices Set to Rise in May Dependent On Global Market Pressures", source: "AllAfrica", url: "https://allafrica.com/stories/202604030225.html", time: "2026-04-03T10:20:00Z" },
+      { title: "Uganda: Uganda Law Society Challenges 'Dehumanising' Deportation of Ugandans From U.S.", source: "AllAfrica", url: "https://allafrica.com/stories/202604030018.html", time: "2026-04-03T05:08:57Z" },
+    ]
+  },
+  {
     name: "Tokyo", country: "Japan",
     lat: 35.6762, lng: 139.6503,
     category: "diplomacy",
@@ -3470,56 +3533,6 @@ const locations = [
       { title: "With an eye on China, Japan looks to kamikaze drones and low-cost missiles", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3348960/eye-china-japan-looks-kamikaze-drones-and-low-cost-missiles?utm_source=rss_feed", time: "2026-04-03T10:00:23Z" },
       { title: "Japan’s order for Tomahawk missiles delayed by US use in Iran", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japans-order-for-tomahawk-missiles-delayed-by-us-use-in-iran", time: "2026-04-03T09:30:00Z" },
       { title: "Geisha spectacle in Japan’s Kyoto celebrates arrival of spring", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/geisha-spectacle-in-japans-kyoto-celebrates-arrival-of-spring", time: "2026-04-03T03:10:00Z" },
-    ]
-  },
-  {
-    name: "Nairobi", country: "Kenya",
-    lat: -1.2921, lng: 36.8219,
-    category: "political",
-    articles: [
-      { title: "Kenya: Oburu Odinga Condemns Attack On Vihiga Senator, Calls for Swift Investigation", source: "AllAfrica", url: "https://allafrica.com/stories/202604090641.html", time: "2026-04-09T16:03:31Z" },
-      { title: "Kenya: Four Sentenced to Death Over 2015 Killing of Former Kabete MP George Muchai", source: "AllAfrica", url: "https://allafrica.com/stories/202604090640.html", time: "2026-04-09T16:03:09Z" },
-      { title: "Kenya: Nigeria's Zenith Bank Acquires Paramount Bank in CBK-Approved Deal", source: "AllAfrica", url: "https://allafrica.com/stories/202604090455.html", time: "2026-04-09T12:25:02Z" },
-      { title: "Kenya: 175 Health Facilities Receive Life-Saving Newborn Equipment in Major Boost to Maternal Care", source: "AllAfrica", url: "https://allafrica.com/stories/202604090454.html", time: "2026-04-09T12:24:44Z" },
-      { title: "Kenya disputes UN report on rape allegations against its Haiti personnel", source: "BBC News", url: "https://www.bbc.com/news/articles/c1d9zrl2z03o?at_medium=RSS&at_campaign=rss", time: "2026-04-09T12:02:28Z" },
-      { title: "Kenya: Seven in 10 Women Face Repeated Sextortion While Seeking Public Services - Study", source: "AllAfrica", url: "https://allafrica.com/stories/202604090371.html", time: "2026-04-09T11:27:55Z" },
-      { title: "Kenya: Police Warn of Traffic Disruptions in CBD As Ruto Plans Day-Long Activities", source: "AllAfrica", url: "https://allafrica.com/stories/202604090124.html", time: "2026-04-09T07:27:36Z" },
-      { title: "Kenya: Rights Group Warns of Mass Action If Govt Fails to Act On Fuel Quality Concerns", source: "AllAfrica", url: "https://Allafrica.com/stories/202604090039.html", time: "2026-04-09T05:01:48Z" },
-      { title: "Kenya: Rights Group Warns of Mass Action If Govt Fails to Act On Fuel Quality Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202604090039.html", time: "2026-04-09T05:01:48Z" },
-      { title: "Kenya: Kenya Reaffirms Neutrality in Middle East Conflict After Iran Criticism", source: "AllAfrica", url: "https://allafrica.com/stories/202604080463.html", time: "2026-04-08T12:22:41Z" },
-      { title: "Kenya: Kenya Protests UN Report On Haiti Mission, Says No Rape Complaints Were Filed", source: "AllAfrica", url: "https://allafrica.com/stories/202604080457.html", time: "2026-04-08T12:21:19Z" },
-      { title: "Kenya: MPs Summons CS Wandayi Amid Calls for His Removal Over Fuel Scandal", source: "AllAfrica", url: "https://allafrica.com/stories/202604080458.html", time: "2026-04-08T12:21:19Z" },
-      { title: "Kenya: Kenya Protests UN Report On Haiti Mission, Says No Rape Complaints Were Filed", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080457.html", time: "2026-04-08T12:21:19Z" },
-      { title: "Kenya: Stateless At Home - Kenyan Somalis Struggle to Reclaim Citizenship From Refugee Records", source: "AllAfrica", url: "https://allafrica.com/stories/202604080442.html", time: "2026-04-08T12:12:13Z" },
-      { title: "Kenya: Stateless At Home - Kenyan Somalis Struggle to Reclaim Citizenship From Refugee Records", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080442.html", time: "2026-04-08T12:12:13Z" },
-      { title: "Kenya: Ruto Signs Budget Unlocking Sh2 Billion for Protest Victims", source: "AllAfrica", url: "https://allafrica.com/stories/202604080162.html", time: "2026-04-08T08:15:30Z" },
-      { title: "Kenya: Ruto Signs Budget Unlocking Sh2 Billion for Protest Victims", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080162.html", time: "2026-04-08T08:15:30Z" },
-      { title: "Kenya: IEBC Secures Sh2.9bn in Supplementary Budget to Pay Pending Bills", source: "AllAfrica", url: "https://allafrica.com/stories/202604080161.html", time: "2026-04-08T08:14:48Z" },
-      { title: "Kenya: IEBC Secures Sh2.9bn in Supplementary Budget to Pay Pending Bills", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080161.html", time: "2026-04-08T08:14:48Z" },
-      { title: "Kenya: The G.O.A.T Returns - Faith Kipyegon to Headline Historic Women's Mile At 2026 Prefontaine Classic", source: "AllAfrica", url: "https://allafrica.com/stories/202604080157.html", time: "2026-04-08T07:31:23Z" },
-      { title: "Kenya: The G.O.A.T Returns - Faith Kipyegon to Headline Historic Women's Mile At 2026 Prefontaine Classic", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080157.html", time: "2026-04-08T07:31:23Z" },
-      { title: "Kenya: Seizure of 2,000 Ants At Nairobi Airport Highlights the Hidden Scale of Insect Trafficking", source: "AllAfrica", url: "https://allafrica.com/stories/202604080036.html", time: "2026-04-08T04:35:43Z" },
-      { title: "Kenya: ODM Expresses 'Outrage' Over Fuel Saga, Urging Impartial Graft Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202604070397.html", time: "2026-04-07T10:59:53Z" },
-      { title: "Kenya: Emmanuel Opati - the Fighter, the Builder, and the Vision Beyond Borders", source: "AllAfrica", url: "https://allafrica.com/stories/202604070394.html", time: "2026-04-07T10:59:11Z" },
-      { title: "Kenya: Matt Baugh Appointed British High Commissioner Following Neil Wigan's Departure Last Year", source: "AllAfrica", url: "https://allafrica.com/stories/202604070390.html", time: "2026-04-07T10:58:11Z" },
-      { title: "Kenya: ODPP Boosts Prosecutors' Capacity to Tackle Terror Financing in Weeklong Training", source: "AllAfrica", url: "https://allafrica.com/stories/202604070249.html", time: "2026-04-07T09:58:18Z" },
-      { title: "Kenya: NEMA Records Gap Raises Compliance Concerns Over Northern Energy Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202604070160.html", time: "2026-04-07T07:58:13Z" },
-      { title: "Kenya: Kenya's Digital Diplomacy Drive Gains Momentum With Thailand Partnership", source: "AllAfrica", url: "https://allafrica.com/stories/202604070159.html", time: "2026-04-07T07:58:12Z" },
-      { title: "Kenya: Appeal Court Defers P&#x26;amp;G, Kimberly-Clark Case Over Bench Constitution", source: "AllAfrica", url: "https://allafrica.com/stories/202604070124.html", time: "2026-04-07T05:23:04Z" },
-      { title: "Kenya: Ngong-Suswa Highway Completion a Game Changer for Regional Connectivity, Says Interior PS Omollo", source: "AllAfrica", url: "https://allafrica.com/stories/202604070123.html", time: "2026-04-07T05:23:03Z" },
-      { title: "Kenya: Kenya Called to Improve Business Climate to Fully Leverage China's Zero-Tariff Offer", source: "AllAfrica", url: "https://allafrica.com/stories/202604060597.html", time: "2026-04-06T15:59:30Z" },
-      { title: "Kenya: Athi Water Announces Five-Day Water Supply Interruption for System Upgrades", source: "AllAfrica", url: "https://allafrica.com/stories/202604060453.html", time: "2026-04-06T12:15:22Z" },
-      { title: "Kenya: Explained - What Off-Spec Fuel Could Do to Your Car", source: "AllAfrica", url: "https://allafrica.com/stories/202604060452.html", time: "2026-04-06T12:14:39Z" },
-      { title: "Kenya: Abdullahi, Kipkorir Call for Private Sector Arrests Amid Probe On Off-Spec Fuel", source: "AllAfrica", url: "https://allafrica.com/stories/202604060450.html", time: "2026-04-06T12:13:54Z" },
-      { title: "‘All we can do now is pray they continue’: Maasai welcome the first rains but know that drought is far from over", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/06/maasai-lands-drought-kenya-extreme-climate-patterns-livestock-deaths-herders-poverty-early-marriage", time: "2026-04-06T12:00:19Z" },
-      { title: "Kenya: Turkana Disarmament - 26 Firearms Surrendered As Community Cooperation Grows", source: "AllAfrica", url: "https://allafrica.com/stories/202604060297.html", time: "2026-04-06T10:58:55Z" },
-      { title: "An American Company Drilled for Oil in Kenya — and Left Behind Soaring Cancer Rates", source: "The Intercept", url: "https://theintercept.com/2026/04/06/amoco-bp-oil-kargi-kenya-cancer/", time: "2026-04-06T09:00:00Z" },
-      { title: "Kenya: Fuel Scandal - Liban, Sang, Bargoria Face 10-Year Jail Risk As Charges Loom", source: "AllAfrica", url: "https://allafrica.com/stories/202604060140.html", time: "2026-04-06T07:32:57Z" },
-      { title: "Kenya: President Ruto Warns No Mercy for Oil Cartels As Fuel Scandal Investigation Deepens", source: "AllAfrica", url: "https://allafrica.com/stories/202604060037.html", time: "2026-04-06T05:07:59Z" },
-      { title: "Kenya: DCI Arrests Top Energy Officials Over Fuel Supply Probe", source: "AllAfrica", url: "https://allafrica.com/stories/202604030527.html", time: "2026-04-03T15:07:41Z" },
-      { title: "Kenya: KNUT Sg Oyuu, Deputy Hesbon Otieno Among Leaders Elected Unopposed in National Polls", source: "AllAfrica", url: "https://allafrica.com/stories/202604030491.html", time: "2026-04-03T14:45:33Z" },
-      { title: "Kenya: Fuel Prices Set to Rise in May Dependent On Global Market Pressures", source: "AllAfrica", url: "https://allafrica.com/stories/202604030225.html", time: "2026-04-03T10:20:00Z" },
-      { title: "Uganda: Uganda Law Society Challenges 'Dehumanising' Deportation of Ugandans From U.S.", source: "AllAfrica", url: "https://allafrica.com/stories/202604030018.html", time: "2026-04-03T05:08:57Z" },
     ]
   },
   {
@@ -3931,6 +3944,35 @@ const locations = [
     ]
   },
   {
+    name: "Kampala", country: "Uganda",
+    lat: 0.3476, lng: 32.5825,
+    category: "political",
+    articles: [
+      { title: "Uganda: Planned Water Shutdown to Affect Large Parts of Kampala On Friday", source: "AllAfrica", url: "https://allafrica.com/stories/202604090706.html", time: "2026-04-09T23:19:59Z" },
+      { title: "Uganda: France, EU Commit Shs735bn to Rehabilitate Nalubaale and Kiira Dams", source: "AllAfrica", url: "https://allafrica.com/stories/202604090705.html", time: "2026-04-09T23:19:58Z" },
+      { title: "Uganda: Aptech Returns in Uganda With New Future-Ready Tech Campus in Kampala", source: "AllAfrica", url: "https://allafrica.com/stories/202604090702.html", time: "2026-04-09T23:19:57Z" },
+      { title: "These Chimps Began the Bloodiest ‘War’ on Record. No One Knows Why.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/science/chimpanzees-war-ngogo-uganda.html", time: "2026-04-09T18:00:09Z" },
+      { title: "Wild chimpanzees recorded waging ‘civil war’ with coordinated attacks between two groups", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/apr/09/civil-war-chimpanzee-group-closer-to-human-condition-aoe", time: "2026-04-09T18:00:02Z" },
+      { title: "Uganda: Butabika Director - Uganda Lacking Secure Forensic Psychiatry Ward", source: "AllAfrica", url: "https://allafrica.com/stories/202604090639.html", time: "2026-04-09T16:01:03Z" },
+      { title: "Uganda: Unicef Condemns Brutal Attack At Ggaba School", source: "AllAfrica", url: "https://allafrica.com/stories/202604090637.html", time: "2026-04-09T15:59:03Z" },
+      { title: "Uganda: Govt Publishes List of Licensed Labour Export Firms", source: "AllAfrica", url: "https://allafrica.com/stories/202604090151.html", time: "2026-04-09T08:56:40Z" },
+      { title: "Uganda: Uganda to Launch Climate Camera Into Space - Musenero", source: "AllAfrica", url: "https://allafrica.com/stories/202604090147.html", time: "2026-04-09T08:54:05Z" },
+      { title: "Uganda: Museveni Set for May 12 Swearing-in", source: "AllAfrica", url: "https://allafrica.com/stories/202604090065.html", time: "2026-04-09T05:22:28Z" },
+      { title: "Uganda: Opposition Unveils Alternative Budget, Warns of 'Illusion' of Economic Growth", source: "AllAfrica", url: "https://allafrica.com/stories/202604070596.html", time: "2026-04-07T14:24:29Z" },
+      { title: "Uganda: Uganda Turns to Homegrown Apps for Faster Services", source: "AllAfrica", url: "https://allafrica.com/stories/202604070265.html", time: "2026-04-07T10:06:58Z" },
+      { title: "Uganda: Ssemogerere Recounts Bishops' Rome Visit, Relays Pope's Call for Peace", source: "AllAfrica", url: "https://allafrica.com/stories/202604060185.html", time: "2026-04-06T09:02:07Z" },
+      { title: "Uganda: Bobi Wine Urges Ugandans On Hope, and Solidarity This Easter", source: "AllAfrica", url: "https://allafrica.com/stories/202604060070.html", time: "2026-04-06T05:18:31Z" },
+      { title: "Uganda: Museveni Sees Off Russian Ambassador, Hails Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202604060058.html", time: "2026-04-06T05:18:25Z" },
+      { title: "Uganda: Museveni Calls for Hope, Renewal in Easter Message", source: "AllAfrica", url: "https://allafrica.com/stories/202604060059.html", time: "2026-04-06T05:18:25Z" },
+      { title: "Uganda: Hellen Seku Underscores Role of Patriotism, Religion in Shaping Responsible Citizens", source: "AllAfrica", url: "https://allafrica.com/stories/202604060057.html", time: "2026-04-06T05:18:06Z" },
+      { title: "Uganda in shock after 4 children killed in kindergarden", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260403-uganda-in-shock-after-4-children-killed-in-kindergarden", time: "2026-04-03T21:48:39Z" },
+      { title: "US deports eight people 'of African origin' to Uganda", source: "BBC News", url: "https://www.bbc.com/news/articles/c8ej43z8yw4o?at_medium=RSS&at_campaign=rss", time: "2026-04-03T16:22:45Z" },
+      { title: "Uganda: Uganda Gets $540 Million Funding for Cities, Municipalities", source: "AllAfrica", url: "https://allafrica.com/stories/202604030311.html", time: "2026-04-03T10:57:43Z" },
+      { title: "Africa: Africa Faces Fuel, Food Price Shock As Hormuz Disruption Deepens", source: "AllAfrica", url: "https://allafrica.com/stories/202604030309.html", time: "2026-04-03T10:56:50Z" },
+      { title: "Uganda: Police Name Four Children Killed in Kampala Daycare Stabbing Attack", source: "AllAfrica", url: "https://allafrica.com/stories/202604030056.html", time: "2026-04-03T05:24:40Z" },
+    ]
+  },
+  {
     name: "Berlin", country: "Germany",
     lat: 52.52, lng: 13.405,
     category: "economic",
@@ -4091,32 +4133,6 @@ const locations = [
       { title: "Indonesian airlines renew call to raise fare cap as jet fuel prices jump 70%", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesian-airlines-renew-call-to-raise-fare-cap-as-jet-fuel-prices-jump-70", time: "2026-04-03T06:39:10Z" },
       { title: "Groups decry delays in case over Indonesian fisher’s death at sea", source: "Taipei Times", url: "https://www.taipeitimes.com/News/taiwan/archives/2026/04/03/2003854962", time: "2026-04-03T00:00:00Z" },
       { title: "Earthquake near Indonesia kills one", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/04/03/2003854967", time: "2026-04-03T00:00:00Z" },
-    ]
-  },
-  {
-    name: "Kampala", country: "Uganda",
-    lat: 0.3476, lng: 32.5825,
-    category: "political",
-    articles: [
-      { title: "These Chimps Began the Bloodiest ‘War’ on Record. No One Knows Why.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/science/chimpanzees-war-ngogo-uganda.html", time: "2026-04-09T18:00:09Z" },
-      { title: "Wild chimpanzees recorded waging ‘civil war’ with coordinated attacks between two groups", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/apr/09/civil-war-chimpanzee-group-closer-to-human-condition-aoe", time: "2026-04-09T18:00:02Z" },
-      { title: "Uganda: Butabika Director - Uganda Lacking Secure Forensic Psychiatry Ward", source: "AllAfrica", url: "https://allafrica.com/stories/202604090639.html", time: "2026-04-09T16:01:03Z" },
-      { title: "Uganda: Unicef Condemns Brutal Attack At Ggaba School", source: "AllAfrica", url: "https://allafrica.com/stories/202604090637.html", time: "2026-04-09T15:59:03Z" },
-      { title: "Uganda: Govt Publishes List of Licensed Labour Export Firms", source: "AllAfrica", url: "https://allafrica.com/stories/202604090151.html", time: "2026-04-09T08:56:40Z" },
-      { title: "Uganda: Uganda to Launch Climate Camera Into Space - Musenero", source: "AllAfrica", url: "https://allafrica.com/stories/202604090147.html", time: "2026-04-09T08:54:05Z" },
-      { title: "Uganda: Museveni Set for May 12 Swearing-in", source: "AllAfrica", url: "https://allafrica.com/stories/202604090065.html", time: "2026-04-09T05:22:28Z" },
-      { title: "Uganda: Opposition Unveils Alternative Budget, Warns of 'Illusion' of Economic Growth", source: "AllAfrica", url: "https://allafrica.com/stories/202604070596.html", time: "2026-04-07T14:24:29Z" },
-      { title: "Uganda: Uganda Turns to Homegrown Apps for Faster Services", source: "AllAfrica", url: "https://allafrica.com/stories/202604070265.html", time: "2026-04-07T10:06:58Z" },
-      { title: "Uganda: Ssemogerere Recounts Bishops' Rome Visit, Relays Pope's Call for Peace", source: "AllAfrica", url: "https://allafrica.com/stories/202604060185.html", time: "2026-04-06T09:02:07Z" },
-      { title: "Uganda: Bobi Wine Urges Ugandans On Hope, and Solidarity This Easter", source: "AllAfrica", url: "https://allafrica.com/stories/202604060070.html", time: "2026-04-06T05:18:31Z" },
-      { title: "Uganda: Museveni Sees Off Russian Ambassador, Hails Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202604060058.html", time: "2026-04-06T05:18:25Z" },
-      { title: "Uganda: Museveni Calls for Hope, Renewal in Easter Message", source: "AllAfrica", url: "https://allafrica.com/stories/202604060059.html", time: "2026-04-06T05:18:25Z" },
-      { title: "Uganda: Hellen Seku Underscores Role of Patriotism, Religion in Shaping Responsible Citizens", source: "AllAfrica", url: "https://allafrica.com/stories/202604060057.html", time: "2026-04-06T05:18:06Z" },
-      { title: "Uganda in shock after 4 children killed in kindergarden", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260403-uganda-in-shock-after-4-children-killed-in-kindergarden", time: "2026-04-03T21:48:39Z" },
-      { title: "US deports eight people 'of African origin' to Uganda", source: "BBC News", url: "https://www.bbc.com/news/articles/c8ej43z8yw4o?at_medium=RSS&at_campaign=rss", time: "2026-04-03T16:22:45Z" },
-      { title: "Uganda: Uganda Gets $540 Million Funding for Cities, Municipalities", source: "AllAfrica", url: "https://allafrica.com/stories/202604030311.html", time: "2026-04-03T10:57:43Z" },
-      { title: "Africa: Africa Faces Fuel, Food Price Shock As Hormuz Disruption Deepens", source: "AllAfrica", url: "https://allafrica.com/stories/202604030309.html", time: "2026-04-03T10:56:50Z" },
-      { title: "Uganda: Police Name Four Children Killed in Kampala Daycare Stabbing Attack", source: "AllAfrica", url: "https://allafrica.com/stories/202604030056.html", time: "2026-04-03T05:24:40Z" },
     ]
   },
   {
@@ -4821,6 +4837,23 @@ const locations = [
     ]
   },
   {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "Police in Venezuela block protesters calling for higher wages, pensions", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/9/police-in-venezuela-block-protesters-calling-for-higher-wages-pensions?traffic_source=rss", time: "2026-04-09T22:50:43Z" },
+      { title: "Three months after Maduro's capture, there's an air of home in Venezuela", source: "NPR", url: "https://www.npr.org/2026/04/09/nx-s1-5759226/three-months-after-maduros-capture-theres-an-air-of-home-in-venezuela", time: "2026-04-09T21:42:30Z" },
+      { title: "Venezuela Approves New Law to Open Mining to Foreign Investors", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/americas/venezuela-mining-us.html", time: "2026-04-09T21:31:59Z" },
+      { title: "Venezuela police tear gas protesters calling for pay and pension rises", source: "France 24", url: "https://www.france24.com/en/americas/20260409-venezuela-police-tear-gas-protesters-calling-for-pay-and-pension-rises", time: "2026-04-09T17:13:21Z" },
+      { title: "Venezuelan acting President Delcy Rodríguez asks workers for patience and promises May wage increase", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelan-acting-president-delcy-rodrguez-asks-workers-patience-131862549", time: "2026-04-09T12:05:37Z" },
+      { title: "The US refinery now processing Venezuelan oil", source: "BBC News", url: "https://www.bbc.com/news/articles/cx24n8eqzgyo?at_medium=RSS&at_campaign=rss", time: "2026-04-07T23:00:31Z" },
+      { title: "Trump's Iran post causes talk of his impeachment, removal to erupt among Hill Democrats", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-impeachment-25th-amendment-war-crimes", time: "2026-04-07T16:36:43Z" },
+      { title: "Venezuela's Delcy Rodríguez remains acting president after her initial 90-day appointment expired", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-delcy-rodrguez-remains-acting-president-after-initial-131775161", time: "2026-04-06T19:07:28Z" },
+      { title: "New video contradicts ICE's original story about North Minneapolis shooting", source: "Axios", url: "https://www.axios.com/local/twin-cities/2026/04/06/ice-video-north-minneapolis-venezuelan", time: "2026-04-06T18:31:51Z" },
+      { title: "Trump's 'puppet regime': Home to world’s largest oil reserves, is Venezuela key to US economy?", source: "France 24", url: "https://www.france24.com/en/trump-s-puppet-regime-home-to-world-s-largest-oil-reserves-is-venezuela-key-to-us-economy", time: "2026-04-05T15:00:28Z" },
+    ]
+  },
+  {
     name: "Windhoek", country: "Namibia",
     lat: -22.5609, lng: 17.0658,
     category: "economic",
@@ -4866,22 +4899,6 @@ const locations = [
       { title: "Fake Australian, Chinese and Brazilian police stations: BBC goes inside a seized scam compound", source: "BBC News", url: "https://www.bbc.com/news/articles/cjenpy8gx71o?at_medium=RSS&at_campaign=rss", time: "2026-04-06T23:09:23Z" },
       { title: "‘If they pollute our rivers, what will become of us?’: the town divided between hope and fear in Brazil’s Amazon oil rush", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/03/brazil-amazon-oil-rush-indigenous-consultation", time: "2026-04-03T11:00:51Z" },
       { title: "‘It’s not just Flávio’: is surname-dropping son downplaying Bolsonaro connection?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/03/flavio-is-surname-dropping-son-downplaying-bolsonaro-connection", time: "2026-04-03T10:00:50Z" },
-    ]
-  },
-  {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "Three months after Maduro's capture, there's an air of home in Venezuela", source: "NPR", url: "https://www.npr.org/2026/04/09/nx-s1-5759226/three-months-after-maduros-capture-theres-an-air-of-home-in-venezuela", time: "2026-04-09T21:42:30Z" },
-      { title: "Venezuela Approves New Law to Open Mining to Foreign Investors", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/americas/venezuela-mining-us.html", time: "2026-04-09T21:31:59Z" },
-      { title: "Venezuela police tear gas protesters calling for pay and pension rises", source: "France 24", url: "https://www.france24.com/en/americas/20260409-venezuela-police-tear-gas-protesters-calling-for-pay-and-pension-rises", time: "2026-04-09T17:13:21Z" },
-      { title: "Venezuelan acting President Delcy Rodríguez asks workers for patience and promises May wage increase", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelan-acting-president-delcy-rodrguez-asks-workers-patience-131862549", time: "2026-04-09T12:05:37Z" },
-      { title: "The US refinery now processing Venezuelan oil", source: "BBC News", url: "https://www.bbc.com/news/articles/cx24n8eqzgyo?at_medium=RSS&at_campaign=rss", time: "2026-04-07T23:00:31Z" },
-      { title: "Trump's Iran post causes talk of his impeachment, removal to erupt among Hill Democrats", source: "Axios", url: "https://www.axios.com/2026/04/07/trump-iran-impeachment-25th-amendment-war-crimes", time: "2026-04-07T16:36:43Z" },
-      { title: "Venezuela's Delcy Rodríguez remains acting president after her initial 90-day appointment expired", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-delcy-rodrguez-remains-acting-president-after-initial-131775161", time: "2026-04-06T19:07:28Z" },
-      { title: "New video contradicts ICE's original story about North Minneapolis shooting", source: "Axios", url: "https://www.axios.com/local/twin-cities/2026/04/06/ice-video-north-minneapolis-venezuelan", time: "2026-04-06T18:31:51Z" },
-      { title: "Trump's 'puppet regime': Home to world’s largest oil reserves, is Venezuela key to US economy?", source: "France 24", url: "https://www.france24.com/en/trump-s-puppet-regime-home-to-world-s-largest-oil-reserves-is-venezuela-key-to-us-economy", time: "2026-04-05T15:00:28Z" },
     ]
   },
   {
