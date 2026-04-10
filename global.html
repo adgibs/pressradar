@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:42 UTC, 10 Apr 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">23:40 UTC, 10 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">10 April 2026</div>
@@ -41,7 +41,7 @@
 <div id="container">
   <div id="map-wrapper" style="position:relative; flex:1; min-height:0;">
   <div id="globe-container" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background:#0a0a2e;"></div>
-  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 22:42 UTC, 10 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["China compromise comes at a cost: Lai", "KMT’s Cheng Li-wun meets Xi Jinping in China", "China steps up military pressure amid Cheng visit", "Donovan’s Deep Dives: A ‘historic’ return to Beijing: Why Cheng Li-wun is betting on the past", "Cheng calls for more space for Taiwan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">Taiwan opposition leader visits China amid military pressure and political debate</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["The Middle East war has brought a silver lining for China’s economy", "Australia, Singapore boost ties on fuel and LNG security", "US team heads to talks with Iran in Pakistan with low expectations"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:60%"></div></div><span class="ai-bullet-text">Middle East tensions and regional security shape economic and diplomatic developments</span><span class="ai-bullet-count">3</span></div><div class="ai-bullet" data-titles='["Taiwan Relations Act affirms Taiwan’s importance: AIT", "Haiti stands with Taiwan in support of freedom: envoy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan seeks international support for democratic values and sovereignty</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Deep Purple thrills Japanese PM Sanae Takaichi with a quick visit in Tokyo", "Macron invites Trump to Palace of Versailles dinner"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">World leaders engage in diplomatic visits and high-level meetings</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["EDITORIAL: Taiwan tackles super-aged isolation", "KMT a threat to Taiwan’s institutions"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Taiwan faces internal political and social challenges</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Minister lays out innovation vision", "Measures aim to spur plastic recycling"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:40%"></div></div><span class="ai-bullet-text">Thailand advances environmental and innovation policy initiatives</span><span class="ai-bullet-count">2</span></div></div></div>
+  <div id="map" style="position:relative;"><div id="ai-summary-box"><div id="ai-summary-title">AI Briefing · 23:40 UTC, 10 Apr 2026</div><div id="ai-summary-text"><div class="ai-bullet" data-titles='["US team heads to talks with Iran in Pakistan with low expectations", "Can the U.S. and Iran turn the temporary ceasefire into long-term peace?", "Vance heads to Pakistan for peace talks as Trump issues new threats against Iran", "Arriving in Pakistan, Iran’s top negotiator demands US accept ‘preconditions’ before talks start", "What the Cease-Fire Means for Iran"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:100%"></div></div><span class="ai-bullet-text">US and Iran pursue ceasefire negotiations in Pakistan with competing demands</span><span class="ai-bullet-count">6</span></div><div class="ai-bullet" data-titles='["KMT’s Cheng Li-wun meets Xi Jinping in China", "China steps up military pressure amid Cheng visit", "Donovan’s Deep Dives: A ‘historic’ return to Beijing: Why Cheng Li-wun is betting on the past", "Cheng calls for more space for Taiwan"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:83%"></div></div><span class="ai-bullet-text">Taiwan opposition leader Cheng meets Xi as China increases military pressure</span><span class="ai-bullet-count">5</span></div><div class="ai-bullet" data-titles='["China compromise comes at a cost: Lai", "The Middle East war has brought a silver lining for China’s economy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">China&#x27;s economy benefits from Middle East conflict amid Taiwan tensions</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Taiwan Relations Act affirms Taiwan’s importance: AIT", "Haiti stands with Taiwan in support of freedom: envoy"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Taiwan strengthens international support through US relations and Haiti backing</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Deep Purple thrills Japanese PM Sanae Takaichi with a quick visit in Tokyo", "Australia, Singapore boost ties on fuel and LNG security"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:33%"></div></div><span class="ai-bullet-text">Japan and Australia deepen regional security partnerships in Indo-Pacific</span><span class="ai-bullet-count">2</span></div><div class="ai-bullet" data-titles='["Another fire breaks out at Pemex’s Dos Bocas refinery on the Gulf Coast"]'><div class="ai-bar-wrap"><div class="ai-bar" style="width:16%"></div></div><span class="ai-bullet-text">Mexico&#x27;s Pemex refinery experiences fire at Dos Bocas Gulf facility</span><span class="ai-bullet-count">1</span></div></div></div>
     <div id="map-style-toggle">
     <button class="style-btn active" id="btn-street" onclick="setMapStyle('street')">Street</button>
     <button class="style-btn" id="btn-satellite" onclick="setMapStyle('satellite')">Satellite</button>
@@ -144,6 +144,9 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "What the Cease-Fire Means for Iran", source: "New York Times", url: "https://www.nytimes.com/video/world/middleeast/100000010831941/what-the-cease-fire-means-for-iran.html", time: "2026-04-10T23:15:05Z" },
+      { title: "U.S. team heads to Iran peace talks with a gulf separating the two sides", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/04/10/us-iran-peace-talks-ceasefire-pakistan/", time: "2026-04-10T22:40:30Z" },
+      { title: "Iran has ‘goodwill but no trust in US’ ahead of ceasefire talks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-has-goodwill-no-trust-us-ahead-ceasefire-talks", time: "2026-04-10T22:15:05Z" },
       { title: "Iranian delegation arrives in Islamabad for talks with US", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/10/iranian-delegation-arrives-in-islamabad-for-talks-with-us?traffic_source=rss", time: "2026-04-10T21:59:21Z" },
       { title: "Islamabad on lockdown ahead of US-Iran talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/10/islamabad-on-lockdown-ahead-of-us-iran-talks?traffic_source=rss", time: "2026-04-10T21:58:14Z" },
       { title: "White House opted against announcing Iran ceasefire on TV, fearing it may not last", source: "Times of Israel", url: "https://www.timesofisrael.com/white-house-opted-against-announcing-iran-ceasefire-on-tv-fearing-it-may-not-last/", time: "2026-04-10T21:55:33Z" },
@@ -273,6 +276,7 @@ const locations = [
       { title: "The victory Iran names, the diplomatic space it unexpectedly opens", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260409-the-victory-iran-names-the-diplomatic-space-it-unexpectedly-opens/", time: "2026-04-09T15:58:15Z" },
       { title: "Israel's war in Lebanon has become a flashpoint for the Iran ceasefire", source: "CBS News", url: "https://www.cbsnews.com/news/iran-war-trump-lebanon-ceasefire-flashpoint-israel/", time: "2026-04-09T15:52:21Z" },
       { title: "Iran sees jihad, the West sees geopolitics - and that gap is dangerous - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/jerusalem-report/article-892432", time: "2026-04-09T15:22:45Z" },
+      { title: "Iran’s ‘jihad of knowledge’ was never about its people - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/jerusalem-report/article-892429", time: "2026-04-09T15:20:42Z" },
       { title: "Inflation was cooling. The Iran war could send it racing higher again.", source: "CBS News", url: "https://www.cbsnews.com/news/inflation-cpi-report-march-iran-war-oil-gas-prices/", time: "2026-04-09T15:15:23Z" },
       { title: "Houthi leader calls ceasefire with US a ‘major victory’ for Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/houthi-leader-calls-ceasefire-us-major-victory-iran", time: "2026-04-09T15:14:05Z" },
       { title: "Iran says coming hours critical for cease-fire as Israel continues to strike Lebanon", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-09/ty-article/iran-says-coming-hours-critical-after-nearly-responding-to-cease-fire-violations/0000019d-72a5-d759-ab9d-7bbdfa7d0000", time: "2026-04-09T14:59:34Z" },
@@ -640,10 +644,6 @@ const locations = [
       { title: "Iran war live: Tehran downs 2 US warplanes; Israel bombs Lebanon bridges", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/4/iran-war-live-tehran-downs-2-us-warplanes-israel-bombs-lebanon-bridges?traffic_source=rss", time: "2026-04-04T00:00:00Z" },
       { title: "Regional effort to broker ceasefire between US and Iran reportedly hits dead end", source: "Times of Israel", url: "https://www.timesofisrael.com/regional-effort-to-broker-ceasefire-between-us-and-iran-reportedly-hits-dead-end/", time: "2026-04-03T23:54:35Z" },
       { title: "Trump said Iran was 'decimated.' Then an American F-15E fighter jet was shot down.", source: "NBC News", url: "https://www.nbcnews.com/politics/white-house/trump-said-iran-was-decimated-american-f-15e-fighter-jet-was-shot-rcna266611", time: "2026-04-03T23:46:46Z" },
-      { title: "Iran reportedly recovering bombed missile bunkers within hours after being struck", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-4-2026/", time: "2026-04-03T23:38:38Z" },
-      { title: "2 U.S. planes hit in Iran, search on for missing crew member", source: "CBS News", url: "https://www.cbsnews.com/video/2-us-planes-hit-iran-search-missing-crew-member/", time: "2026-04-03T23:11:19Z" },
-      { title: "Exhaustive search underway in Iran to rescue downed F-15 airman", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/exhaustive-search-underway-in-iran-to-rescue-downed-f-15-airman-260690501771", time: "2026-04-03T23:06:35Z" },
-      { title: "Hide, find water: Former pilots detail how to survive being shot down", source: "France 24", url: "https://www.france24.com/en/middle-east/20260403-hide-find-water-former-pilots-detail-how-to-survive-after-being-shot-down", time: "2026-04-03T22:55:12Z" },
     ]
   },
   {
@@ -1148,6 +1148,8 @@ const locations = [
     category: "economic",
     articles: [
       { title: "US team heads to talks with Iran in Pakistan with low expectations", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-892608", time: "2026-04-10T23:48:02Z" },
+      { title: "Arriving in Pakistan, Iran’s top negotiator demands US accept ‘preconditions’ before talks start", source: "Times of Israel", url: "https://www.timesofisrael.com/arriving-in-pakistan-irans-top-negotiator-demands-us-accept-preconditions-before-talks-start/", time: "2026-04-10T23:18:02Z" },
+      { title: "Trump: US will have Strait of Hormuz ‘open fairly soon’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-us-will-have-strait-hormuz-open-fairly-soon", time: "2026-04-10T22:41:12Z" },
       { title: "Airports warn of 'systemic' fuel shortages due to Iran war", source: "Sky News", url: "https://news.sky.com/story/airports-council-international-warns-of-fuel-shortages-if-strait-of-hormuz-not-reopened-amid-us-iran-war-talks-13530261", time: "2026-04-10T22:05:00Z" },
       { title: "'Game on’: How Iran can exact a toll in the Strait of Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/game-how-iran-can-exact-toll-strait-hormuz", time: "2026-04-10T22:03:54Z" },
       { title: "'Make or break': What to know about US-Iran talks in Pakistan", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/make-or-break-what-know-about-us-iran-talks-pakistan", time: "2026-04-10T21:19:41Z" },
@@ -1547,8 +1549,6 @@ const locations = [
       { title: "US intelligence warns Iran unlikely to ease Hormuz Strait chokehold soon, sources say", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-892018", time: "2026-04-04T01:03:19Z" },
       { title: "UN to vote on Hormuz resolution as US-Iran tensions rise", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/un-vote-hormuz-resolution-us-iran-tensions-rise", time: "2026-04-04T01:00:45Z" },
       { title: "Iran war live: Trump issues Hormuz deadline, search for US airman continues", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/4/iran-war-live-tehran-downs-2-us-warplanes-israel-bombs-lebanon-bridges?traffic_source=rss", time: "2026-04-04T00:00:00Z" },
-      { title: "Surcharges hit consumers in economic fallout from war with Iran", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/surcharges-hit-consumers-in-economic-fallout-from-war-with-iran-260689989552", time: "2026-04-03T22:50:46Z" },
-      { title: "Opinion: Iran war: Why US allies are suffering more than its enemies", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opinion-iran-war-why-us-allies-are-suffering-more-its-enemies", time: "2026-04-03T22:44:59Z" },
     ]
   },
   {
@@ -1556,6 +1556,9 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "Can the U.S. and Iran turn the temporary ceasefire into long-term peace?", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/video/compass-points/2026/04/can-the-u-s-and-iran-turn-the-temporary-ceasefire-into-long-term-peace", time: "2026-04-10T23:30:20Z" },
+      { title: "Vance heads to Pakistan for talks with Iran to end war", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/vance-heads-to-pakistan-for-talks-with-iran-to-end-war", time: "2026-04-10T22:55:52Z" },
+      { title: "U.S. team heads to Iran peace talks with a gulf separating the two sides", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/04/10/us-iran-peace-talks-ceasefire-pakistan/", time: "2026-04-10T22:40:30Z" },
       { title: "Iranian delegation arrives in Islamabad for talks with US", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/10/iranian-delegation-arrives-in-islamabad-for-talks-with-us?traffic_source=rss", time: "2026-04-10T21:59:21Z" },
       { title: "Islamabad on lockdown ahead of US-Iran talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/10/islamabad-on-lockdown-ahead-of-us-iran-talks?traffic_source=rss", time: "2026-04-10T21:58:14Z" },
       { title: "Vance en route, Iranian delegation touches down for Islamabad talks", source: "Dawn", url: "https://www.dawn.com/news/1990461/vance-en-route-iranian-delegation-touches-down-for-islamabad-talks", time: "2026-04-10T21:04:01Z" },
@@ -1788,7 +1791,6 @@ const locations = [
       { title: "Transporters raise fares by 30pc as ‘subsidy falls short’", source: "Dawn", url: "https://www.dawn.com/news/1988382/transporters-raise-fares-by-30pc-as-subsidy-falls-short", time: "2026-04-04T02:37:48Z" },
       { title: "Petrol price drops to Rs378 as PM cuts levy amid backlash", source: "Dawn", url: "https://www.dawn.com/news/1988380/petrol-price-drops-to-rs378-as-pm-cuts-levy-amid-backlash", time: "2026-04-04T02:32:14Z" },
       { title: "5.8 magnitude earthquake hits Afghanistan and Pakistan, killing 8 on outskirts of Kabul", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/5-8-magnitude-earthquake-hits-afghanistan-and-pakistan-killing-8-on-outskirts-of-kabul", time: "2026-04-04T00:03:51Z" },
-      { title: "U.S.-Iran cease-fire talks have stalled, WSJ reports", source: "The Hindu", url: "https://www.thehindu.com/news/international/us-iran-cease-fire-talks-have-stalled-wsj-reports/article70821401.ece", time: "2026-04-03T22:59:18Z" },
     ]
   },
   {
@@ -1796,6 +1798,9 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Vance heads to Pakistan for peace talks as Trump issues new threats against Iran", source: "CBS News", url: "https://www.cbsnews.com/video/vance-heads-to-pakistan-for-peace-talks-as-trump-issues-new-threats-against-iran/", time: "2026-04-10T23:18:17Z" },
+      { title: "Another fire breaks out at Pemex’s Dos Bocas refinery on the Gulf Coast", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/dos-bocas-refinery-pemex-second-fire/", time: "2026-04-10T23:15:30Z" },
+      { title: "Vance heads to Pakistan for talks with Iran to end war", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/vance-heads-to-pakistan-for-talks-with-iran-to-end-war", time: "2026-04-10T22:55:52Z" },
       { title: "New Evidence Further Implicates U.S. Missiles in Strikes That Killed 21 Civilians in Iran", source: "New York Times", url: "https://www.nytimes.com/2026/04/10/world/middleeast/iran-us-missle-strike-civilians-lamerd.html", time: "2026-04-10T22:34:09Z" },
       { title: "FAA, Pentagon declare antidrone laser system safe after El Paso airport shutdown", source: "The Hill", url: "https://thehill.com/policy/defense/5826483-pentagon-faa-drone-laser-agreement/", time: "2026-04-10T22:06:42Z" },
       { title: "‘We’re loading up the ships’: Trump prepares for more attacks if Iran doesn’t listen in peace talks", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-attack-plan-b2955594.html", time: "2026-04-10T20:49:28Z" },
@@ -2021,7 +2026,6 @@ const locations = [
       { title: "The US Defence Secretary Pete Hegseth’s ‘Deus Vult’", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260404-the-us-defence-secretary-pete-hegseths-deus-vult/", time: "2026-04-04T08:38:47Z" },
       { title: "Divisions grow as US senator sets conditions on war funding", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/divisions-grow-us-senator-sets-conditions-war-funding", time: "2026-04-04T04:46:11Z" },
       { title: "Pentagon: 13 US troops killed, 365 wounded in Iran war", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pentagon-13-us-troops-killed-365-wounded-iran-war", time: "2026-04-04T02:26:12Z" },
-      { title: "What to know about Trump’s defense budget proposal", source: "The Hill", url: "https://thehill.com/homenews/5815826-what-to-know-about-trumps-defense-budget-proposal/", time: "2026-04-03T23:09:53Z" },
     ]
   },
   {
@@ -2214,6 +2218,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Palestinian youths injured in Israeli West Bank raids", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/palestinian-youths-injured-israeli-west-bank-raids", time: "2026-04-10T23:00:39Z" },
       { title: "Trump’s Board of Peace denies reports of funding shortages", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trumps-board-peace-denies-reports-funding-constraints", time: "2026-04-10T22:27:10Z" },
       { title: "Arrested husband of woman who disappeared from boat in Bahamas in an ‘extremely fragile state,’ lawyer says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/brian-hooker-arrest-bahamas-emotional-state-b2955584.html", time: "2026-04-10T20:40:09Z" },
       { title: "EU ‘strongly condemns’ authorisation of record number of new Israeli settlements in West Bank", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/eu-strongly-condemns-israeli-establishment-record-number-new-west-bank", time: "2026-04-10T20:20:58Z" },
@@ -2394,6 +2399,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Hezbollah rocket attack damages 1,500-year-old Israeli church", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/10/hezbollah-rocket-attack-damages-1500-year-old-israeli-church?traffic_source=rss", time: "2026-04-10T22:58:09Z" },
       { title: "US, Lebanon ask Israel to ‘pause’ attacks on Hezbollah", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-lebanon-ask-israel-pause-attacks-hezbollah", time: "2026-04-10T22:00:56Z" },
       { title: "Israel rejects ceasefire talks with Hezbollah but agrees to negotiating with Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-rejects-ceasefire-talks-hezbollah-agrees-negotiating-lebanon", time: "2026-04-10T21:57:02Z" },
       { title: "Hezbollah supporters protest against Israel negotiations", source: "NBC News", url: "https://www.nbcnews.com/video/hezbollah-supporters-protest-against-lebanese-negotiations-with-negotiations-261132357806", time: "2026-04-10T20:41:39Z" },
@@ -2553,7 +2559,6 @@ const locations = [
       { title: "Iraqi group claims 19 attacks on 'enemy bases' in 24 hours", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iraqi-group-claims-19-attacks-enemy-bases-24-hours", time: "2026-04-04T03:06:53Z" },
       { title: "Pakistan announces free public transport after fuel price hike – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/03/middle-east-crisis-live-trump-urges-iran-to-make-deal-after-bridge-strike", time: "2026-04-04T02:33:01Z" },
       { title: "Hezbollah claims rocket attacks as Israel launches strikes in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-claims-rocket-attacks-israel-launches-strikes-lebanon", time: "2026-04-03T23:59:13Z" },
-      { title: "Iranian cluster munitions cause heavy damage to buildings in Bnei Brak and Ramat Gan", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-april-4-2026/", time: "2026-04-03T23:38:38Z" },
     ]
   },
   {
@@ -2673,7 +2678,6 @@ const locations = [
       { title: "European ministers call for profit caps on energy companies as Iran war drives price surge", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/european-commission-european-union-iran-spain-spanish-b2951816.html", time: "2026-04-04T11:01:47Z" },
       { title: "Eight dead in 'massive' Russian attack while Kyiv signals readiness for Easter ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/04/04/eight-dead-in-massive-russian-attack-while-kyiv-signals-readiness-for-easter-ceasefire", time: "2026-04-04T07:53:17Z" },
       { title: "‘The frontline is like Terminator’: fighting robots give Ukraine hope in war with Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/fighting-robots-give-ukraine-hope-in-war-with-russia", time: "2026-04-04T06:00:14Z" },
-      { title: "GOP senator calls to end Iran operations without formal declaration of war", source: "The Hill", url: "https://thehill.com/homenews/senate/5815738-john-curtis-opposes-iran-offensive/", time: "2026-04-03T23:00:36Z" },
     ]
   },
   {
@@ -2681,6 +2685,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Melchor Peredo, the last of Mexico’s great muralists, dies at 99", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/melchor-paredo-last-muralist-dies/", time: "2026-04-10T23:08:21Z" },
       { title: "FAA, Pentagon declare antidrone laser system safe after El Paso airport shutdown", source: "The Hill", url: "https://thehill.com/policy/defense/5826483-pentagon-faa-drone-laser-agreement/", time: "2026-04-10T22:06:42Z" },
       { title: "Mexico launches Universal Health Service registration, starting with elderly", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mexico-living/mexico-universal-health-service-registration/", time: "2026-04-10T21:42:02Z" },
       { title: "Roberto Velasco, Mexico’s new foreign minister, talks security and migration with US counterpart Rubio", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/foreign-minister-velasco-rubio-talk-migration-security/", time: "2026-04-10T20:12:16Z" },
@@ -2760,7 +2765,6 @@ const locations = [
       { title: "The MND News Quiz of the Week: April 4th", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/quizzes/the-mnd-news-quiz-of-the-week-april-4th/", time: "2026-04-04T09:32:38Z" },
       { title: "Holy Week altars keep San Miguel de Allende natives connected in a gentrifying city", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/san-miguel-allende-holy-week-traditions-gentrification/", time: "2026-04-04T01:01:09Z" },
       { title: "Dueling skyscrapers: Monterrey’s Torre Rise will soon pass the T.OP Tower 1 as Mexico’s tallest building", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/dueling-skyscrapers-monterreys-torre-rise-will-soon-pass-the-t-op-tower-1-as-mexicos-tallest-building/", time: "2026-04-03T23:45:32Z" },
-      { title: "Mexico rejects UN findings that country’s enforced disappearances are crimes against humanity", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/un-report-enforced-disappearances-crimes-against-humanity/", time: "2026-04-03T22:55:12Z" },
     ]
   },
   {
@@ -2768,6 +2772,8 @@ const locations = [
     lat: 47.4979, lng: 19.0402,
     category: "diplomacy",
     articles: [
+      { title: "Corruption and pocketbook issues key to Sunday’s election in Hungary", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-hungary-election-tisza-magyar-politics-results-trump-vance/", time: "2026-04-10T22:57:54Z" },
+      { title: "Hungarian election could end Orb&aacute;n's grip on power and alter Europe's political landscape", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/hungarian-election-could-end-orbans-grip-on-power-and-alter-europes-political-landscape", time: "2026-04-10T22:40:47Z" },
       { title: "Orban's opponents targeted by AI-driven disinformation ahead of Hungary's elections", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-observers/20260410-artificial-intelligence-disinformation-orban-opponents-magyar-hungary-elections", time: "2026-04-10T16:56:10Z" },
       { title: "Hungary: Is Viktor Orban Russia's 'Trojan horse' in the EU?", source: "France 24", url: "https://www.france24.com/en/video/20260410-hungary-is-viktor-orban-russia-s-trojan-horse-in-the-eu", time: "2026-04-10T14:58:53Z" },
       { title: "Hungary vote: Rising opposition threatens Orban’s grip on power", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260410-hungary-vote-rising-opposition-threatens-orban-s-grip-on-power", time: "2026-04-10T14:58:26Z" },
@@ -2842,7 +2848,6 @@ const locations = [
       { title: "In Hungary, MAGA ally Orban trails in polls and awaits visit by JD Vance", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/05/vance-hungary-orban-election/", time: "2026-04-05T09:00:38Z" },
       { title: "Why US and Russia are backing Viktor Orbán in Hungary election", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/hungary-election-why-orban-is-a-common-cause-for-us-and-russia", time: "2026-04-04T14:58:24Z" },
       { title: "‘Feels like history is being made’: will young Hungarian voters oust Orbán?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/young-people-hungary-general-election-polls-viktor-orban", time: "2026-04-04T11:00:21Z" },
-      { title: "After 16 years in power, can Viktor Orban finally be unseated?", source: "BBC News", url: "https://www.bbc.com/news/articles/czd7y1n3jyjo?at_medium=RSS&at_campaign=rss", time: "2026-04-03T23:04:24Z" },
     ]
   },
   {
@@ -2850,6 +2855,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
     articles: [
+      { title: "How Palestinian Christians marked Easter against the backdrop of war", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/how-palestinian-christians-marked-easter-against-the-backdrop-of-war", time: "2026-04-10T22:25:16Z" },
       { title: "When comfort is off the table, Israelis find new ways to cope under fire", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/mind-and-spirit/article-892492", time: "2026-04-10T20:00:56Z" },
       { title: "Over 100,000 Muslim worshipers at Al-Aqsa in first Friday prayers after Jerusalem holy sites reopen", source: "Times of Israel", url: "https://www.timesofisrael.com/over-100000-muslim-worshipers-at-al-aqsa-in-first-friday-prayers-after-jerusalem-holy-sites-reopen/", time: "2026-04-10T18:30:08Z" },
       { title: "Israel's toll in 40 days of Iran war: 650 missiles, 24 dead and over 7,000 wounded", source: "Haaretz", url: "https://www.haaretz.com/israel-news/security-aviation/2026-04-10/ty-article-magazine/.premium/israels-toll-in-40-days-of-iran-war-650-missiles-24-dead-over-7-000-hurt/0000019d-7214-d68a-a39d-73375b050000", time: "2026-04-10T17:11:46Z" },
@@ -2919,6 +2925,82 @@ const locations = [
       { title: "Young Israeli voters shifting right, Netanyahu leads as preferred candidate - poll", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-892032", time: "2026-04-04T13:54:14Z" },
       { title: "Israel Police decry online defamation campaign against female officer in Jerusalem", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-892027", time: "2026-04-04T08:39:11Z" },
       { title: "Industrial zone damaged in Negev, falls in Sharon area after Iran fires missiles towards Israel", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-892021", time: "2026-04-04T02:33:39Z" },
+    ]
+  },
+  {
+    name: "Moscow", country: "Russia",
+    lat: 55.7558, lng: 37.6173,
+    category: "conflict",
+    articles: [
+      { title: "Hungarian election could end Orb&aacute;n's grip on power and alter Europe's political landscape", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/hungarian-election-could-end-orbans-grip-on-power-and-alter-europes-political-landscape", time: "2026-04-10T22:40:47Z" },
+      { title: "'Trump harbors an unexplained sympathy for Vladimir Putin', Ukrainian analyst says", source: "France 24", url: "https://www.france24.com/en/trump-harbors-an-unexplained-sympathy-for-vladimir-putin-ukrainian-analyst-says", time: "2026-04-10T16:43:25Z" },
+      { title: "Former Russian deputy defense minister is sentenced to 19 years for corruption", source: "ABC News", url: "https://abcnews.com/International/wireStory/former-russian-deputy-defense-minister-sentenced-19-years-131918683", time: "2026-04-10T15:53:13Z" },
+      { title: "Hungary: Is Viktor Orban Russia's 'Trojan horse' in the EU?", source: "France 24", url: "https://www.france24.com/en/video/20260410-hungary-is-viktor-orban-russia-s-trojan-horse-in-the-eu", time: "2026-04-10T14:58:53Z" },
+      { title: "Hungary vote: Rising opposition threatens Orban’s grip on power", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260410-hungary-vote-rising-opposition-threatens-orban-s-grip-on-power", time: "2026-04-10T14:58:26Z" },
+      { title: "Starmer says he’s ‘fed up’ with actions of Trump, Putin hitting UK energy bills", source: "The Hill", url: "https://thehill.com/policy/international/5825505-trump-keir-starmer-iran-strait-hormuz/", time: "2026-04-10T14:46:19Z" },
+      { title: "Mr Nobody on leaving Russia behind: Oscar-winning director Pavel Talankin talks home truths", source: "Euronews", url: "http://www.euronews.com/culture/2026/04/10/mr-nobody-on-leaving-russia-behind-oscar-winning-director-pavel-talankin-talks-home-truths", time: "2026-04-10T14:28:11Z" },
+      { title: "Trump can't quit NATO alone. But he can hurt it.", source: "Axios", url: "https://www.axios.com/2026/04/10/trump-nato-withdraw-allies-hurt", time: "2026-04-10T13:43:41Z" },
+      { title: "Hungary's election could end Orbán's journey from liberal firebrand to far-right leader", source: "ABC News", url: "https://abcnews.com/International/wireStory/hungarys-election-end-orbns-journey-liberal-firebrand-leader-131911273", time: "2026-04-10T11:58:29Z" },
+      { title: "Russia's Putin declares a ceasefire in Ukraine for Orthodox Easter", source: "ABC News", url: "https://abcnews.com/International/wireStory/russias-putin-declares-ceasefire-ukraine-orthodox-easter-131893091", time: "2026-04-10T11:45:30Z" },
+      { title: "See You in Pyongyang: Russia Pushes Its People to Embrace North Korea", source: "New York Times", url: "https://www.nytimes.com/2026/04/10/world/europe/russia-north-korea.html", time: "2026-04-10T09:05:06Z" },
+      { title: "Starmer says he is ‘fed up’ with Trump and Putin’s impact on UK energy costs", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/apr/10/starmer-fed-up-trump-uk-politics", time: "2026-04-10T07:55:53Z" },
+      { title: "Russia and Ukraine to hold 32-hour ceasefire for Orthodox Easter", source: "Sky News", url: "https://news.sky.com/story/russia-and-ukraine-to-hold-32-hour-ceasefire-for-orthodox-easter-13529916", time: "2026-04-10T07:13:00Z" },
+      { title: "Tyson Fury insists he’s ‘still got it’ ahead of Makhmudov comeback fight", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/10/tyson-fury-insists-ive-still-go-it-ahead-of-makhmudov-comeback-fight?traffic_source=rss", time: "2026-04-10T06:15:37Z" },
+      { title: "Ukraine war briefing: First official ceasefire agreed after Zelenskyy push succeeds", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/10/ukraine-war-briefing-first-official-ceasefire-agreed-after-zelenskyy-push-succeeds", time: "2026-04-10T00:32:09Z" },
+      { title: "Putin declares weekend ceasefire in Russia's war against Ukraine for Orthodox Easter", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/putin-declares-weekend-ceasefire-in-russias-war-against-ukraine-for-orthodox-easter", time: "2026-04-09T23:46:06Z" },
+      { title: "Russia and Ukraine agree to truce for Orthodox Easter", source: "BBC News", url: "https://www.bbc.com/news/articles/cn0wkkwev2vo?at_medium=RSS&at_campaign=rss", time: "2026-04-09T22:33:48Z" },
+      { title: "Putin Calls Brief Easter Truce, but Ukraine Is Skeptical", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-ukraine-cease-fire.html", time: "2026-04-09T21:46:33Z" },
+      { title: "Putin declares 32-hour ceasefire in Ukraine for Orthodox Easter", source: "CBS News", url: "https://www.cbsnews.com/news/russia-putin-ceasefire-ukraine-orthodox-easter/", time: "2026-04-09T20:30:17Z" },
+      { title: "Vladimir Putin announces Orthodox Easter ceasefire with Ukraine", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/vladimir-putin-announces-orthodox-easter-ceasefire-with-ukraine", time: "2026-04-09T20:23:15Z" },
+      { title: "UK says three Russian submarines tracked during ‘covert’ operation", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/9/uk-says-three-russian-submarines-tracked-during-covert-operation?traffic_source=rss", time: "2026-04-09T18:20:57Z" },
+      { title: "A Newspaper Is Raided and a Rights Group Outlawed Amid Kremlin Crackdown", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-newspaper-rights-group-crackdown.html", time: "2026-04-09T18:04:53Z" },
+      { title: "The Guardian view on Hungary’s election: a bellwether contest for the global far right | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/apr/09/the-guardian-view-on-hungary-election-a-bellwether-contest-for-the-global-far-right", time: "2026-04-09T17:30:02Z" },
+      { title: "UK says Russia ran submarine operation over cables and pipelines", source: "BBC News", url: "https://www.bbc.com/news/articles/cre13qn9z7do?at_medium=RSS&at_campaign=rss", time: "2026-04-09T17:09:57Z" },
+      { title: "US is ignoring evidence Russia is helping Iran because it trusts Putin, says Zelensky", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/us-russia-iran-ukraine-zelensky-b2954608.html", time: "2026-04-09T16:22:49Z" },
+      { title: "Her Museum Was Surviving in Russia. Then the Threats Became Too Much.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/arts/design/russia-permm-museum-nailya-allakhverdiyeva.html", time: "2026-04-09T14:45:03Z" },
+      { title: "Her Museum Was Surviving in Russia. Then the Threats Became Too Much.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-permm-museum-nailya-allakhverdiyeva.html", time: "2026-04-09T13:20:07Z" },
+      { title: "3 Russian Submarines Detected Near Britain Were Spying, U.K. Says", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/uk-russia-submarines-cables.html", time: "2026-04-09T12:54:42Z" },
+      { title: "UK says it and Norway led a military operation to deter Russian submarines in the north Atlantic", source: "ABC News", url: "https://abcnews.com/International/wireStory/uk-norway-led-military-operation-deter-russian-submarines-131870911", time: "2026-04-09T12:02:56Z" },
+      { title: "Military operation conducted to deter Russian submarines in North Atlantic", source: "CBS News", url: "https://www.cbsnews.com/news/uk-norway-military-operation-deter-russian-submarines-north-atlantic/", time: "2026-04-09T11:25:53Z" },
+      { title: "UK and Norway foil Russian submarine plot to survey undersea cables in north Atlantic", source: "Euronews", url: "http://www.euronews.com/2026/04/09/uk-and-norway-foil-russian-submarine-plot-to-survey-undersea-cables-in-north-atlantic", time: "2026-04-09T11:06:15Z" },
+      { title: "UK and Norway led military operation to deter Russian submarines in the N. Atlantic", source: "ABC News", url: "https://abcnews.com/International/wireStory/uk-norway-led-military-operation-deter-russian-submarines-131871001", time: "2026-04-09T10:56:32Z" },
+      { title: "UK 'tracked' three Russian submarines for a month", source: "RTE News", url: "https://www.rte.ie/news/uk/2026/0409/1567384-uk-russia-submarines/", time: "2026-04-09T10:40:13Z" },
+      { title: "Russia's internet crackdown leads to a spring of growing discontent", source: "ABC News", url: "https://abcnews.com/International/wireStory/russias-internet-crackdown-leads-spring-growing-discontent-131868212", time: "2026-04-09T07:40:01Z" },
+      { title: "‘I had poked the bear right in the eye’: my fight to renounce my Russian citizenship", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/i-had-poked-the-bear-right-in-the-eye-my-fight-to-renounce-my-russian-citizenship", time: "2026-04-09T04:00:23Z" },
+      { title: "Ukraine war briefing: Kremlin threat to countries over Ukrainian drone transit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/ukraine-war-briefing-kremlin-threat-to-countries-over-ukrainian-drone-transit", time: "2026-04-09T01:52:09Z" },
+      { title: "US ignoring evidence Russia is helping Iran because it trusts Putin, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/us-ignoring-evidence-russia-is-helping-iran-because-it-trusts-putin-says-zelenskyy", time: "2026-04-08T23:00:16Z" },
+      { title: "'Democracy kills': The young military leader strengthening relations with Russia and China", source: "Sky News", url: "https://news.sky.com/story/the-young-military-leader-strengthening-relations-with-russia-and-china-13529478", time: "2026-04-08T20:13:00Z" },
+      { title: "Nobel Prize Committee condemns Russian move to criminalise rights group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/8/nobel-prize-committee-condemns-russian-move-to-criminalise-rights-group?traffic_source=rss", time: "2026-04-08T16:23:25Z" },
+      { title: "Putin adviser calls Strait of Hormuz Iran’s nuclear weapon: ‘Its potential is inexhaustible’", source: "The Hill", url: "https://thehill.com/policy/international/5821680-iran-nuclear-strait-hormuz/", time: "2026-04-08T15:37:19Z" },
+      { title: "France to target Russia's 'shadow fleet' with tougher penalties for ships sailing under false flag", source: "France 24", url: "https://www.france24.com/en/europe/20260408-france-to-target-russia-shadow-fleet-with-tougher-penalties-for-ships-sailing-under-false-flag", time: "2026-04-08T15:06:51Z" },
+      { title: "Russian GRU exploited vulnerable routers worldwide to steal sensitive information, probe reveals", source: "Euronews", url: "http://www.euronews.com/2026/04/08/russian-gru-exploited-vulnerable-routers-worldwide-to-steal-sensitive-information-probe-re", time: "2026-04-08T14:48:08Z" },
+      { title: "France to ramp up drone stocks by 400 percent to face Russia threat", source: "France 24", url: "https://www.france24.com/en/europe/20260408-france-ramps-up-rearmament-amid-russia-threat", time: "2026-04-08T14:43:11Z" },
+      { title: "Ukraine-Russia war latest: Secret Ukrainian unit struck Putin’s shadow fleet from Libya, officials say", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-shadow-fleet-zelensky-news-b2945082.html", time: "2026-04-08T06:51:24Z" },
+      { title: "A Moscow poet highlights the challenges of speaking out against the war in Ukraine", source: "NPR", url: "https://www.npr.org/2026/04/07/nx-s1-5761004/a-moscow-poet-highlights-the-challenges-of-speaking-out-against-the-war-in-ukraine", time: "2026-04-07T21:14:18Z" },
+      { title: "How is the US-Israel war on Iran affecting Russian-Iranian relations?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/7/how-is-the-us-israel-war-on-iran-affecting-russian-iranian-relations?traffic_source=rss", time: "2026-04-07T21:04:58Z" },
+      { title: "Russia and China block UN resolution on Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/7/russia-and-china-block-un-resolution-on-strait-of-hormuz?traffic_source=rss", time: "2026-04-07T20:17:54Z" },
+      { title: "Europe's future on the ballot? Hungary's Orban in tight re-election race", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-debate/20260407-europe-s-future-on-the-ballot-hungary-s-orban-in-tight-re-election-race", time: "2026-04-07T18:18:38Z" },
+      { title: "China, Russia sink UN vote on Strait of Hormuz; 10 countries join US in support", source: "The Hill", url: "https://thehill.com/policy/international/5819889-china-russia-un-vote-strait-of-hormuz/", time: "2026-04-07T17:56:56Z" },
+      { title: "Russia and China veto UN resolution aimed at reopening Hormuz strait as US deadline for deal looms", source: "Euronews", url: "http://www.euronews.com/2026/04/07/russia-and-china-veto-un-resolution-aimed-at-reopening-hormuz-strait-as-us-deadline-for-de", time: "2026-04-07T17:47:54Z" },
+      { title: "Russia and China veto watered-down UN resolution aimed at reopening the Strait of Hormuz", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russia-and-china-veto-watered-down-un-resolution-aimed-at-reopening-the-strait-of-hormuz", time: "2026-04-07T16:18:53Z" },
+      { title: "Orbán offered help to Putin 'in any way that I can,' reports say", source: "Euronews", url: "http://www.euronews.com/2026/04/07/orban-offered-help-to-putin-in-any-way-that-i-can-reports-say", time: "2026-04-07T14:16:29Z" },
+      { title: "‘US-Israel playing Russian roulette with security of the region’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/quotable/2026/4/7/us-israel-playing-russian-roulette-with-security-of-the?traffic_source=rss", time: "2026-04-07T10:15:05Z" },
+      { title: "Why JD Vance is in Hungary backing Putin ally Orban's fight to stay PM", source: "Sky News", url: "https://news.sky.com/story/why-jd-vance-is-in-hungary-backing-putin-ally-orbans-fight-to-stay-pm-13528796", time: "2026-04-07T06:28:00Z" },
+      { title: "Ukraine-Russia war latest: Putin ‘no longer has upper hand’ in war, says ex-CIA chief", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-putin-zelensky-truce-oil-refinery-live-b2945082.html", time: "2026-04-07T06:26:13Z" },
+      { title: "'Vladimir Putin absolutely nervous' about Hungary's election, expert says", source: "France 24", url: "https://www.france24.com/en/vladimir-putin-absolutely-nervous-about-hungary-s-election-expert-says", time: "2026-04-06T19:36:43Z" },
+      { title: "Former CIA director: ‘Russia no longer has the upper hand’ in Ukraine war", source: "The Hill", url: "https://thehill.com/policy/defense/5818227-david-petraeus-ukraine-russia-war/", time: "2026-04-06T19:26:18Z" },
+      { title: "Russia says 'highly likely' that Ukraine planted explosives near gas pipeline", source: "France 24", url: "https://www.france24.com/en/russia-says-highly-likely-that-ukraine-planted-explosives-near-gas-pipeline", time: "2026-04-06T15:22:44Z" },
+      { title: "Putin’s top military commander killed in Russian plane crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/alexander-otroshchenko-russia-plane-crash-b2952378.html", time: "2026-04-06T10:07:46Z" },
+      { title: "A Hidden Russian Hand in Hungary’s Election? Actually, It’s Quite Open.", source: "New York Times", url: "https://www.nytimes.com/2026/04/06/world/europe/viktor-orban-hungary-election-russia.html", time: "2026-04-06T09:04:32Z" },
+      { title: "Ukraine war briefing: Russian oil facilities burn as Zelenskyy tours Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/06/ukraine-war-briefing-russian-oil-facilities-burn-as-zelenskyy-tours-middle-east", time: "2026-04-06T02:05:31Z" },
+      { title: "In tight Hungary election, Trump and Putin are backing Viktor Orban", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/05/vance-hungary-orban-election/", time: "2026-04-05T09:00:38Z" },
+      { title: "Wicker, Shaheen raise concerns about US visit by Russian lawmakers", source: "The Hill", url: "https://thehill.com/homenews/senate/5816118-wickers-shaheen-russian-visit/", time: "2026-04-04T13:38:53Z" },
+      { title: "RFI Investigation: Ukrainian military in Libya and the strike on the Russian gas carrier Arctic Metagaz", source: "Euronews", url: "http://www.euronews.com/2026/04/04/rfi-investigation-ukrainian-military-in-libya-and-the-strike-on-the-russian-gas-carrier-ar", time: "2026-04-04T12:00:16Z" },
+      { title: "Russian drone strike on Ukrainian market kills five, Moscow intensifies attacks", source: "France 24", url: "https://www.france24.com/en/europe/20260404-russian-drone-strike-on-ukraine-market-kills-five-wounds-19", time: "2026-04-04T10:43:11Z" },
+      { title: "Ukraine-Russia war latest: Putin’s forces launch 280-drone assault as Zelensky hits out at ‘Easter escalation’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-trump-zelensky-strikes-peace-talks-b2945082.html", time: "2026-04-04T09:52:27Z" },
+      { title: "Russia warns citizens against travelling to dozens of countries", source: "The Independent", url: "https://www.independent.co.uk/travel/news-and-advice/russia-travel-warning-us-uk-extradition-b2951790.html", time: "2026-04-04T09:06:28Z" },
+      { title: "Ukraine-Russia war latest: Zelensky hits out at Moscow’s ‘Easter escalation’ as strikes kill at least five people", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-trump-zelensky-easter-strikes-b2945082.html", time: "2026-04-04T05:49:31Z" },
+      { title: "Convoy of Russian shadow-fleet tankers monitored off west coast", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/04/convoy-of-russian-shadow-fleet-tankers-monitored-off-west-coast/", time: "2026-04-04T05:00:01Z" },
     ]
   },
   {
@@ -2994,82 +3076,6 @@ const locations = [
       { title: "Russia offers huge payments to students to join its drone forces in Ukraine", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/russia-ukraine-drones-students-soldiers-b2951791.html", time: "2026-04-04T09:08:13Z" },
       { title: "Eight dead in 'massive' Russian attack while Kyiv signals readiness for Easter ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/04/04/eight-dead-in-massive-russian-attack-while-kyiv-signals-readiness-for-easter-ceasefire", time: "2026-04-04T07:53:17Z" },
       { title: "Video shows the moment a Russian drone hit an apartment in Ukraine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/3/video-shows-the-moment-a-russian-drone-hit-an-apartment-in-ukraine?traffic_source=rss", time: "2026-04-03T23:40:08Z" },
-      { title: "News Wrap: Trump seeking $1.5 trillion for military spending in new budget", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-trump-seeking-1-5-trillion-for-military-spending-in-new-budget", time: "2026-04-03T22:45:31Z" },
-    ]
-  },
-  {
-    name: "Moscow", country: "Russia",
-    lat: 55.7558, lng: 37.6173,
-    category: "conflict",
-    articles: [
-      { title: "'Trump harbors an unexplained sympathy for Vladimir Putin', Ukrainian analyst says", source: "France 24", url: "https://www.france24.com/en/trump-harbors-an-unexplained-sympathy-for-vladimir-putin-ukrainian-analyst-says", time: "2026-04-10T16:43:25Z" },
-      { title: "Former Russian deputy defense minister is sentenced to 19 years for corruption", source: "ABC News", url: "https://abcnews.com/International/wireStory/former-russian-deputy-defense-minister-sentenced-19-years-131918683", time: "2026-04-10T15:53:13Z" },
-      { title: "Hungary: Is Viktor Orban Russia's 'Trojan horse' in the EU?", source: "France 24", url: "https://www.france24.com/en/video/20260410-hungary-is-viktor-orban-russia-s-trojan-horse-in-the-eu", time: "2026-04-10T14:58:53Z" },
-      { title: "Hungary vote: Rising opposition threatens Orban’s grip on power", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260410-hungary-vote-rising-opposition-threatens-orban-s-grip-on-power", time: "2026-04-10T14:58:26Z" },
-      { title: "Starmer says he’s ‘fed up’ with actions of Trump, Putin hitting UK energy bills", source: "The Hill", url: "https://thehill.com/policy/international/5825505-trump-keir-starmer-iran-strait-hormuz/", time: "2026-04-10T14:46:19Z" },
-      { title: "Mr Nobody on leaving Russia behind: Oscar-winning director Pavel Talankin talks home truths", source: "Euronews", url: "http://www.euronews.com/culture/2026/04/10/mr-nobody-on-leaving-russia-behind-oscar-winning-director-pavel-talankin-talks-home-truths", time: "2026-04-10T14:28:11Z" },
-      { title: "Trump can't quit NATO alone. But he can hurt it.", source: "Axios", url: "https://www.axios.com/2026/04/10/trump-nato-withdraw-allies-hurt", time: "2026-04-10T13:43:41Z" },
-      { title: "Hungary's election could end Orbán's journey from liberal firebrand to far-right leader", source: "ABC News", url: "https://abcnews.com/International/wireStory/hungarys-election-end-orbns-journey-liberal-firebrand-leader-131911273", time: "2026-04-10T11:58:29Z" },
-      { title: "Russia's Putin declares a ceasefire in Ukraine for Orthodox Easter", source: "ABC News", url: "https://abcnews.com/International/wireStory/russias-putin-declares-ceasefire-ukraine-orthodox-easter-131893091", time: "2026-04-10T11:45:30Z" },
-      { title: "See You in Pyongyang: Russia Pushes Its People to Embrace North Korea", source: "New York Times", url: "https://www.nytimes.com/2026/04/10/world/europe/russia-north-korea.html", time: "2026-04-10T09:05:06Z" },
-      { title: "Starmer says he is ‘fed up’ with Trump and Putin’s impact on UK energy costs", source: "The Guardian", url: "https://www.theguardian.com/politics/2026/apr/10/starmer-fed-up-trump-uk-politics", time: "2026-04-10T07:55:53Z" },
-      { title: "Russia and Ukraine to hold 32-hour ceasefire for Orthodox Easter", source: "Sky News", url: "https://news.sky.com/story/russia-and-ukraine-to-hold-32-hour-ceasefire-for-orthodox-easter-13529916", time: "2026-04-10T07:13:00Z" },
-      { title: "Tyson Fury insists he’s ‘still got it’ ahead of Makhmudov comeback fight", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/10/tyson-fury-insists-ive-still-go-it-ahead-of-makhmudov-comeback-fight?traffic_source=rss", time: "2026-04-10T06:15:37Z" },
-      { title: "Ukraine war briefing: First official ceasefire agreed after Zelenskyy push succeeds", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/10/ukraine-war-briefing-first-official-ceasefire-agreed-after-zelenskyy-push-succeeds", time: "2026-04-10T00:32:09Z" },
-      { title: "Putin declares weekend ceasefire in Russia's war against Ukraine for Orthodox Easter", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/putin-declares-weekend-ceasefire-in-russias-war-against-ukraine-for-orthodox-easter", time: "2026-04-09T23:46:06Z" },
-      { title: "Russia and Ukraine agree to truce for Orthodox Easter", source: "BBC News", url: "https://www.bbc.com/news/articles/cn0wkkwev2vo?at_medium=RSS&at_campaign=rss", time: "2026-04-09T22:33:48Z" },
-      { title: "Putin Calls Brief Easter Truce, but Ukraine Is Skeptical", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-ukraine-cease-fire.html", time: "2026-04-09T21:46:33Z" },
-      { title: "Putin declares 32-hour ceasefire in Ukraine for Orthodox Easter", source: "CBS News", url: "https://www.cbsnews.com/news/russia-putin-ceasefire-ukraine-orthodox-easter/", time: "2026-04-09T20:30:17Z" },
-      { title: "Vladimir Putin announces Orthodox Easter ceasefire with Ukraine", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/vladimir-putin-announces-orthodox-easter-ceasefire-with-ukraine", time: "2026-04-09T20:23:15Z" },
-      { title: "UK says three Russian submarines tracked during ‘covert’ operation", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/9/uk-says-three-russian-submarines-tracked-during-covert-operation?traffic_source=rss", time: "2026-04-09T18:20:57Z" },
-      { title: "A Newspaper Is Raided and a Rights Group Outlawed Amid Kremlin Crackdown", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-newspaper-rights-group-crackdown.html", time: "2026-04-09T18:04:53Z" },
-      { title: "The Guardian view on Hungary’s election: a bellwether contest for the global far right | Editorial", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/apr/09/the-guardian-view-on-hungary-election-a-bellwether-contest-for-the-global-far-right", time: "2026-04-09T17:30:02Z" },
-      { title: "UK says Russia ran submarine operation over cables and pipelines", source: "BBC News", url: "https://www.bbc.com/news/articles/cre13qn9z7do?at_medium=RSS&at_campaign=rss", time: "2026-04-09T17:09:57Z" },
-      { title: "US is ignoring evidence Russia is helping Iran because it trusts Putin, says Zelensky", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/us-russia-iran-ukraine-zelensky-b2954608.html", time: "2026-04-09T16:22:49Z" },
-      { title: "Her Museum Was Surviving in Russia. Then the Threats Became Too Much.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/arts/design/russia-permm-museum-nailya-allakhverdiyeva.html", time: "2026-04-09T14:45:03Z" },
-      { title: "Her Museum Was Surviving in Russia. Then the Threats Became Too Much.", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/russia-permm-museum-nailya-allakhverdiyeva.html", time: "2026-04-09T13:20:07Z" },
-      { title: "3 Russian Submarines Detected Near Britain Were Spying, U.K. Says", source: "New York Times", url: "https://www.nytimes.com/2026/04/09/world/europe/uk-russia-submarines-cables.html", time: "2026-04-09T12:54:42Z" },
-      { title: "UK says it and Norway led a military operation to deter Russian submarines in the north Atlantic", source: "ABC News", url: "https://abcnews.com/International/wireStory/uk-norway-led-military-operation-deter-russian-submarines-131870911", time: "2026-04-09T12:02:56Z" },
-      { title: "Military operation conducted to deter Russian submarines in North Atlantic", source: "CBS News", url: "https://www.cbsnews.com/news/uk-norway-military-operation-deter-russian-submarines-north-atlantic/", time: "2026-04-09T11:25:53Z" },
-      { title: "UK and Norway foil Russian submarine plot to survey undersea cables in north Atlantic", source: "Euronews", url: "http://www.euronews.com/2026/04/09/uk-and-norway-foil-russian-submarine-plot-to-survey-undersea-cables-in-north-atlantic", time: "2026-04-09T11:06:15Z" },
-      { title: "UK and Norway led military operation to deter Russian submarines in the N. Atlantic", source: "ABC News", url: "https://abcnews.com/International/wireStory/uk-norway-led-military-operation-deter-russian-submarines-131871001", time: "2026-04-09T10:56:32Z" },
-      { title: "UK 'tracked' three Russian submarines for a month", source: "RTE News", url: "https://www.rte.ie/news/uk/2026/0409/1567384-uk-russia-submarines/", time: "2026-04-09T10:40:13Z" },
-      { title: "Russia's internet crackdown leads to a spring of growing discontent", source: "ABC News", url: "https://abcnews.com/International/wireStory/russias-internet-crackdown-leads-spring-growing-discontent-131868212", time: "2026-04-09T07:40:01Z" },
-      { title: "‘I had poked the bear right in the eye’: my fight to renounce my Russian citizenship", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/i-had-poked-the-bear-right-in-the-eye-my-fight-to-renounce-my-russian-citizenship", time: "2026-04-09T04:00:23Z" },
-      { title: "Ukraine war briefing: Kremlin threat to countries over Ukrainian drone transit", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/ukraine-war-briefing-kremlin-threat-to-countries-over-ukrainian-drone-transit", time: "2026-04-09T01:52:09Z" },
-      { title: "US ignoring evidence Russia is helping Iran because it trusts Putin, says Zelenskyy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/09/us-ignoring-evidence-russia-is-helping-iran-because-it-trusts-putin-says-zelenskyy", time: "2026-04-08T23:00:16Z" },
-      { title: "'Democracy kills': The young military leader strengthening relations with Russia and China", source: "Sky News", url: "https://news.sky.com/story/the-young-military-leader-strengthening-relations-with-russia-and-china-13529478", time: "2026-04-08T20:13:00Z" },
-      { title: "Nobel Prize Committee condemns Russian move to criminalise rights group", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/8/nobel-prize-committee-condemns-russian-move-to-criminalise-rights-group?traffic_source=rss", time: "2026-04-08T16:23:25Z" },
-      { title: "Putin adviser calls Strait of Hormuz Iran’s nuclear weapon: ‘Its potential is inexhaustible’", source: "The Hill", url: "https://thehill.com/policy/international/5821680-iran-nuclear-strait-hormuz/", time: "2026-04-08T15:37:19Z" },
-      { title: "France to target Russia's 'shadow fleet' with tougher penalties for ships sailing under false flag", source: "France 24", url: "https://www.france24.com/en/europe/20260408-france-to-target-russia-shadow-fleet-with-tougher-penalties-for-ships-sailing-under-false-flag", time: "2026-04-08T15:06:51Z" },
-      { title: "Russian GRU exploited vulnerable routers worldwide to steal sensitive information, probe reveals", source: "Euronews", url: "http://www.euronews.com/2026/04/08/russian-gru-exploited-vulnerable-routers-worldwide-to-steal-sensitive-information-probe-re", time: "2026-04-08T14:48:08Z" },
-      { title: "France to ramp up drone stocks by 400 percent to face Russia threat", source: "France 24", url: "https://www.france24.com/en/europe/20260408-france-ramps-up-rearmament-amid-russia-threat", time: "2026-04-08T14:43:11Z" },
-      { title: "Ukraine-Russia war latest: Secret Ukrainian unit struck Putin’s shadow fleet from Libya, officials say", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-shadow-fleet-zelensky-news-b2945082.html", time: "2026-04-08T06:51:24Z" },
-      { title: "A Moscow poet highlights the challenges of speaking out against the war in Ukraine", source: "NPR", url: "https://www.npr.org/2026/04/07/nx-s1-5761004/a-moscow-poet-highlights-the-challenges-of-speaking-out-against-the-war-in-ukraine", time: "2026-04-07T21:14:18Z" },
-      { title: "How is the US-Israel war on Iran affecting Russian-Iranian relations?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/7/how-is-the-us-israel-war-on-iran-affecting-russian-iranian-relations?traffic_source=rss", time: "2026-04-07T21:04:58Z" },
-      { title: "Russia and China block UN resolution on Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/7/russia-and-china-block-un-resolution-on-strait-of-hormuz?traffic_source=rss", time: "2026-04-07T20:17:54Z" },
-      { title: "Europe's future on the ballot? Hungary's Orban in tight re-election race", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-debate/20260407-europe-s-future-on-the-ballot-hungary-s-orban-in-tight-re-election-race", time: "2026-04-07T18:18:38Z" },
-      { title: "China, Russia sink UN vote on Strait of Hormuz; 10 countries join US in support", source: "The Hill", url: "https://thehill.com/policy/international/5819889-china-russia-un-vote-strait-of-hormuz/", time: "2026-04-07T17:56:56Z" },
-      { title: "Russia and China veto UN resolution aimed at reopening Hormuz strait as US deadline for deal looms", source: "Euronews", url: "http://www.euronews.com/2026/04/07/russia-and-china-veto-un-resolution-aimed-at-reopening-hormuz-strait-as-us-deadline-for-de", time: "2026-04-07T17:47:54Z" },
-      { title: "Russia and China veto watered-down UN resolution aimed at reopening the Strait of Hormuz", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russia-and-china-veto-watered-down-un-resolution-aimed-at-reopening-the-strait-of-hormuz", time: "2026-04-07T16:18:53Z" },
-      { title: "Orbán offered help to Putin 'in any way that I can,' reports say", source: "Euronews", url: "http://www.euronews.com/2026/04/07/orban-offered-help-to-putin-in-any-way-that-i-can-reports-say", time: "2026-04-07T14:16:29Z" },
-      { title: "‘US-Israel playing Russian roulette with security of the region’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/quotable/2026/4/7/us-israel-playing-russian-roulette-with-security-of-the?traffic_source=rss", time: "2026-04-07T10:15:05Z" },
-      { title: "Why JD Vance is in Hungary backing Putin ally Orban's fight to stay PM", source: "Sky News", url: "https://news.sky.com/story/why-jd-vance-is-in-hungary-backing-putin-ally-orbans-fight-to-stay-pm-13528796", time: "2026-04-07T06:28:00Z" },
-      { title: "Ukraine-Russia war latest: Putin ‘no longer has upper hand’ in war, says ex-CIA chief", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-putin-zelensky-truce-oil-refinery-live-b2945082.html", time: "2026-04-07T06:26:13Z" },
-      { title: "'Vladimir Putin absolutely nervous' about Hungary's election, expert says", source: "France 24", url: "https://www.france24.com/en/vladimir-putin-absolutely-nervous-about-hungary-s-election-expert-says", time: "2026-04-06T19:36:43Z" },
-      { title: "Former CIA director: ‘Russia no longer has the upper hand’ in Ukraine war", source: "The Hill", url: "https://thehill.com/policy/defense/5818227-david-petraeus-ukraine-russia-war/", time: "2026-04-06T19:26:18Z" },
-      { title: "Russia says 'highly likely' that Ukraine planted explosives near gas pipeline", source: "France 24", url: "https://www.france24.com/en/russia-says-highly-likely-that-ukraine-planted-explosives-near-gas-pipeline", time: "2026-04-06T15:22:44Z" },
-      { title: "Putin’s top military commander killed in Russian plane crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/alexander-otroshchenko-russia-plane-crash-b2952378.html", time: "2026-04-06T10:07:46Z" },
-      { title: "A Hidden Russian Hand in Hungary’s Election? Actually, It’s Quite Open.", source: "New York Times", url: "https://www.nytimes.com/2026/04/06/world/europe/viktor-orban-hungary-election-russia.html", time: "2026-04-06T09:04:32Z" },
-      { title: "Ukraine war briefing: Russian oil facilities burn as Zelenskyy tours Middle East", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/06/ukraine-war-briefing-russian-oil-facilities-burn-as-zelenskyy-tours-middle-east", time: "2026-04-06T02:05:31Z" },
-      { title: "In tight Hungary election, Trump and Putin are backing Viktor Orban", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/05/vance-hungary-orban-election/", time: "2026-04-05T09:00:38Z" },
-      { title: "Wicker, Shaheen raise concerns about US visit by Russian lawmakers", source: "The Hill", url: "https://thehill.com/homenews/senate/5816118-wickers-shaheen-russian-visit/", time: "2026-04-04T13:38:53Z" },
-      { title: "RFI Investigation: Ukrainian military in Libya and the strike on the Russian gas carrier Arctic Metagaz", source: "Euronews", url: "http://www.euronews.com/2026/04/04/rfi-investigation-ukrainian-military-in-libya-and-the-strike-on-the-russian-gas-carrier-ar", time: "2026-04-04T12:00:16Z" },
-      { title: "Russian drone strike on Ukrainian market kills five, Moscow intensifies attacks", source: "France 24", url: "https://www.france24.com/en/europe/20260404-russian-drone-strike-on-ukraine-market-kills-five-wounds-19", time: "2026-04-04T10:43:11Z" },
-      { title: "Ukraine-Russia war latest: Putin’s forces launch 280-drone assault as Zelensky hits out at ‘Easter escalation’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-trump-zelensky-strikes-peace-talks-b2945082.html", time: "2026-04-04T09:52:27Z" },
-      { title: "Russia warns citizens against travelling to dozens of countries", source: "The Independent", url: "https://www.independent.co.uk/travel/news-and-advice/russia-travel-warning-us-uk-extradition-b2951790.html", time: "2026-04-04T09:06:28Z" },
-      { title: "Ukraine-Russia war latest: Zelensky hits out at Moscow’s ‘Easter escalation’ as strikes kill at least five people", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-trump-zelensky-easter-strikes-b2945082.html", time: "2026-04-04T05:49:31Z" },
-      { title: "Convoy of Russian shadow-fleet tankers monitored off west coast", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/04/convoy-of-russian-shadow-fleet-tankers-monitored-off-west-coast/", time: "2026-04-04T05:00:01Z" },
     ]
   },
   {
@@ -3296,6 +3302,7 @@ const locations = [
     lat: 13.7563, lng: 100.5018,
     category: "economic",
     articles: [
+      { title: "Thai export pain set to continue despite Mideast truce", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3235133/thai-export-pain-set-to-continue-despite-mideast-truce", time: "2026-04-10T22:39:00Z" },
       { title: "Minister lays out innovation vision", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3235063/minister-lays-out-innovation-vision", time: "2026-04-10T22:22:00Z" },
       { title: "Measures aim to spur plastic recycling", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3234978/measures-aim-to-spur-plastic-recycling", time: "2026-04-10T22:12:00Z" },
       { title: "Gulf allays concerns over LNG supplies", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3235038/gulf-allays-concerns-over-lng-supplies", time: "2026-04-10T21:55:00Z" },
@@ -3356,7 +3363,6 @@ const locations = [
       { title: "Klatham plays the waiting game", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3230513/klatham-plays-the-waiting-game", time: "2026-04-04T03:40:00Z" },
       { title: "Middle East markets hit hardest by Iran conflict", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3230303/middle-east-markets-hit-hardest-by-iran-conflict", time: "2026-04-04T01:10:00Z" },
       { title: "Thai PM blames  stockpilers for a shortage of fuel", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/04/04/2003855027", time: "2026-04-04T00:00:00Z" },
-      { title: "Huge loan needed to finance fuel subsidies", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3230233/huge-loan-needed-to-finance-fuel-subsidies", time: "2026-04-03T23:11:00Z" },
     ]
   },
   {
@@ -4043,35 +4049,6 @@ const locations = [
     ]
   },
   {
-    name: "Lahore", country: "Pakistan",
-    lat: 31.5204, lng: 74.3587,
-    category: "political",
-    articles: [
-      { title: "In pictures: Sikh pilgrims arrive in Pakistan from India to celebrate Baisakhi festival", source: "Dawn", url: "https://www.dawn.com/news/1990522/in-pictures-sikh-pilgrims-arrive-in-pakistan-from-india-to-celebrate-baisakhi-festival", time: "2026-04-10T13:42:02Z" },
-      { title: "Lahore-bound Shalimar Express derails near Sheikhupura; rail traffic suspended", source: "Dawn", url: "https://www.dawn.com/news/1990477/lahore-bound-shalimar-express-derails-near-sheikhupura-rail-traffic-suspended", time: "2026-04-10T07:33:21Z" },
-      { title: "CNIC not moveable property; can’t be blocked, impounded or attached: Lahore High Court", source: "Dawn", url: "https://www.dawn.com/news/1990352/cnic-not-moveable-property-cant-be-blocked-impounded-or-attached-lahore-high-court", time: "2026-04-10T03:50:20Z" },
-      { title: "PML-N lawmaker submits resolution in PA, calls for nominating CDF Munir, PM Shehbaz, DPM Dar for Nobel Peace Prize", source: "Dawn", url: "https://www.dawn.com/news/1990285/pml-n-lawmaker-submits-resolution-in-pa-calls-for-nominating-cdf-munir-pm-shehbaz-dpm-dar-for-nobel-peace-prize", time: "2026-04-09T18:49:05Z" },
-      { title: "Bill seeking to raise minimum legal age for Christian marriage submitted to Punjab Assembly committee", source: "Dawn", url: "https://www.dawn.com/news/1990251/bill-seeking-to-raise-minimum-legal-age-for-christian-marriage-submitted-to-punjab-assembly-committee", time: "2026-04-09T18:30:55Z" },
-      { title: "Bill seeking to raise Christians’ marriage age to 18 submitted to Punjab Assembly panel", source: "Dawn", url: "https://www.dawn.com/news/1990251/bill-seeking-to-raise-christians-marriage-age-to-18-submitted-to-punjab-assembly-panel", time: "2026-04-09T15:04:06Z" },
-      { title: "Lahore High Court rules unrelated individuals can’t challenge acquittals", source: "Dawn", url: "https://www.dawn.com/news/1990034/lahore-high-court-rules-unrelated-individuals-cant-challenge-acquittals", time: "2026-04-09T03:20:03Z" },
-      { title: "5 killed, several injured in rain-related incidents in Punjab, KP", source: "Dawn", url: "https://www.dawn.com/news/1989813/5-killed-several-injured-in-rain-related-incidents-in-punjab-kp", time: "2026-04-08T19:48:18Z" },
-      { title: "5 killed, 22 injured in rain-related incidents in Punjab, KP", source: "Dawn", url: "https://www.dawn.com/news/1989813/5-killed-22-injured-in-rain-related-incidents-in-punjab-kp", time: "2026-04-08T14:22:23Z" },
-      { title: "Heavy rains kill 3, injure 17 across Punjab", source: "Dawn", url: "https://www.dawn.com/news/1989813/heavy-rains-kill-3-injure-17-across-punjab", time: "2026-04-08T08:02:13Z" },
-      { title: "Ancient glass beads unearthed at Taxila’s Bhir Mound", source: "Dawn", url: "https://www.dawn.com/news/1989671/ancient-glass-beads-unearthed-at-taxilas-bhir-mound", time: "2026-04-08T00:31:00Z" },
-      { title: "Several people evacuated as rain causes flooding in parts of Peshawar", source: "Dawn", url: "https://www.dawn.com/news/1989513/several-people-evacuated-as-rain-causes-flooding-in-parts-of-peshawar", time: "2026-04-07T14:56:25Z" },
-      { title: "LHC grants post-arrest bail to Canadian scholar in cybercrime case", source: "Dawn", url: "https://www.dawn.com/news/1989439/lhc-grants-post-arrest-bail-to-canadian-scholar-in-cybercrime-case", time: "2026-04-07T10:26:40Z" },
-      { title: "Traders across Punjab want early closure timings for Cantts, DHA too", source: "Dawn", url: "https://www.dawn.com/news/1989314/traders-across-punjab-want-early-closure-timings-for-cantts-dha-too", time: "2026-04-07T04:19:36Z" },
-      { title: "Death toll rises to 11 in Balochistan as rain lashes much of country", source: "Dawn", url: "https://www.dawn.com/news/1989292/death-toll-rises-to-11-in-balochistan-as-rain-lashes-much-of-country", time: "2026-04-07T03:01:31Z" },
-      { title: "Punjab Assembly committee calls for abolishing colonial-era law that ‘criminalises poverty’", source: "Dawn", url: "https://www.dawn.com/news/1989232/punjab-assembly-committee-calls-for-abolishing-colonial-era-law-that-criminalises-poverty", time: "2026-04-06T20:08:04Z" },
-      { title: "Railways fares to remain unchanged for three months after govt subsidy in Punjab", source: "Dawn", url: "https://www.dawn.com/news/1988953/railways-fares-to-remain-unchanged-for-three-months-after-govt-subsidy-in-punjab", time: "2026-04-06T04:20:29Z" },
-      { title: "Pakistan, Turkiye to sign MoU on judicial cooperation", source: "Dawn", url: "https://www.dawn.com/news/1988841/pakistan-turkiye-to-sign-mou-on-judicial-cooperation", time: "2026-04-05T12:51:25Z" },
-      { title: "Pera teams in Lahore accused of enforcing 10pm curbs on exempt sectors", source: "Dawn", url: "https://www.dawn.com/news/1988697/pera-teams-in-lahore-accused-of-enforcing-10pm-curbs-on-exempt-sectors", time: "2026-04-05T04:55:17Z" },
-      { title: "Planning minister advocates for revising market timings to rein in oil import bill", source: "Dawn", url: "https://www.dawn.com/news/1988554/planning-minister-advocates-for-revising-market-timings-to-rein-in-oil-import-bill", time: "2026-04-04T15:04:29Z" },
-      { title: "Rs20 million fine for a deleted tweet: The cost of irreverence?", source: "Dawn", url: "https://www.dawn.com/news/1988511/rs20-million-fine-for-a-deleted-tweet-the-cost-of-irreverence", time: "2026-04-04T08:48:41Z" },
-      { title: "‘India is going to face a food crisis’: Farmers panic over fertiliser shortages amid Iran war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/india-fuel-crisis-fertiliser-shortage-farming", time: "2026-04-03T23:00:06Z" },
-    ]
-  },
-  {
     name: "Lima", country: "Peru",
     lat: -12.0464, lng: -77.0428,
     category: "economic",
@@ -4182,6 +4159,34 @@ const locations = [
       { title: "Fugitive mafia boss wanted for murder arrested at Amalfi coast luxury villa", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/fugitive-mafia-boss-wanted-arrested-roberto-mazzarella", time: "2026-04-04T16:10:50Z" },
       { title: "Pope Leo XIV carries cross through all 14 stations at Rome’s Colosseum", source: "Euronews", url: "http://www.euronews.com/video/2026/04/04/pope-leo-xiv-carries-cross-through-all-14-stations-at-romes-colosseum", time: "2026-04-04T09:09:53Z" },
       { title: "Italian council buys Mussolini’s villa to keep it away from ‘fascist nostalgics’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/04/italian-council-buys-mussolini-villa-riccione-fascist-nostalgics", time: "2026-04-04T08:00:15Z" },
+    ]
+  },
+  {
+    name: "Lahore", country: "Pakistan",
+    lat: 31.5204, lng: 74.3587,
+    category: "political",
+    articles: [
+      { title: "In pictures: Sikh pilgrims arrive in Pakistan from India to celebrate Baisakhi festival", source: "Dawn", url: "https://www.dawn.com/news/1990522/in-pictures-sikh-pilgrims-arrive-in-pakistan-from-india-to-celebrate-baisakhi-festival", time: "2026-04-10T13:42:02Z" },
+      { title: "Lahore-bound Shalimar Express derails near Sheikhupura; rail traffic suspended", source: "Dawn", url: "https://www.dawn.com/news/1990477/lahore-bound-shalimar-express-derails-near-sheikhupura-rail-traffic-suspended", time: "2026-04-10T07:33:21Z" },
+      { title: "CNIC not moveable property; can’t be blocked, impounded or attached: Lahore High Court", source: "Dawn", url: "https://www.dawn.com/news/1990352/cnic-not-moveable-property-cant-be-blocked-impounded-or-attached-lahore-high-court", time: "2026-04-10T03:50:20Z" },
+      { title: "PML-N lawmaker submits resolution in PA, calls for nominating CDF Munir, PM Shehbaz, DPM Dar for Nobel Peace Prize", source: "Dawn", url: "https://www.dawn.com/news/1990285/pml-n-lawmaker-submits-resolution-in-pa-calls-for-nominating-cdf-munir-pm-shehbaz-dpm-dar-for-nobel-peace-prize", time: "2026-04-09T18:49:05Z" },
+      { title: "Bill seeking to raise minimum legal age for Christian marriage submitted to Punjab Assembly committee", source: "Dawn", url: "https://www.dawn.com/news/1990251/bill-seeking-to-raise-minimum-legal-age-for-christian-marriage-submitted-to-punjab-assembly-committee", time: "2026-04-09T18:30:55Z" },
+      { title: "Bill seeking to raise Christians’ marriage age to 18 submitted to Punjab Assembly panel", source: "Dawn", url: "https://www.dawn.com/news/1990251/bill-seeking-to-raise-christians-marriage-age-to-18-submitted-to-punjab-assembly-panel", time: "2026-04-09T15:04:06Z" },
+      { title: "Lahore High Court rules unrelated individuals can’t challenge acquittals", source: "Dawn", url: "https://www.dawn.com/news/1990034/lahore-high-court-rules-unrelated-individuals-cant-challenge-acquittals", time: "2026-04-09T03:20:03Z" },
+      { title: "5 killed, several injured in rain-related incidents in Punjab, KP", source: "Dawn", url: "https://www.dawn.com/news/1989813/5-killed-several-injured-in-rain-related-incidents-in-punjab-kp", time: "2026-04-08T19:48:18Z" },
+      { title: "5 killed, 22 injured in rain-related incidents in Punjab, KP", source: "Dawn", url: "https://www.dawn.com/news/1989813/5-killed-22-injured-in-rain-related-incidents-in-punjab-kp", time: "2026-04-08T14:22:23Z" },
+      { title: "Heavy rains kill 3, injure 17 across Punjab", source: "Dawn", url: "https://www.dawn.com/news/1989813/heavy-rains-kill-3-injure-17-across-punjab", time: "2026-04-08T08:02:13Z" },
+      { title: "Ancient glass beads unearthed at Taxila’s Bhir Mound", source: "Dawn", url: "https://www.dawn.com/news/1989671/ancient-glass-beads-unearthed-at-taxilas-bhir-mound", time: "2026-04-08T00:31:00Z" },
+      { title: "Several people evacuated as rain causes flooding in parts of Peshawar", source: "Dawn", url: "https://www.dawn.com/news/1989513/several-people-evacuated-as-rain-causes-flooding-in-parts-of-peshawar", time: "2026-04-07T14:56:25Z" },
+      { title: "LHC grants post-arrest bail to Canadian scholar in cybercrime case", source: "Dawn", url: "https://www.dawn.com/news/1989439/lhc-grants-post-arrest-bail-to-canadian-scholar-in-cybercrime-case", time: "2026-04-07T10:26:40Z" },
+      { title: "Traders across Punjab want early closure timings for Cantts, DHA too", source: "Dawn", url: "https://www.dawn.com/news/1989314/traders-across-punjab-want-early-closure-timings-for-cantts-dha-too", time: "2026-04-07T04:19:36Z" },
+      { title: "Death toll rises to 11 in Balochistan as rain lashes much of country", source: "Dawn", url: "https://www.dawn.com/news/1989292/death-toll-rises-to-11-in-balochistan-as-rain-lashes-much-of-country", time: "2026-04-07T03:01:31Z" },
+      { title: "Punjab Assembly committee calls for abolishing colonial-era law that ‘criminalises poverty’", source: "Dawn", url: "https://www.dawn.com/news/1989232/punjab-assembly-committee-calls-for-abolishing-colonial-era-law-that-criminalises-poverty", time: "2026-04-06T20:08:04Z" },
+      { title: "Railways fares to remain unchanged for three months after govt subsidy in Punjab", source: "Dawn", url: "https://www.dawn.com/news/1988953/railways-fares-to-remain-unchanged-for-three-months-after-govt-subsidy-in-punjab", time: "2026-04-06T04:20:29Z" },
+      { title: "Pakistan, Turkiye to sign MoU on judicial cooperation", source: "Dawn", url: "https://www.dawn.com/news/1988841/pakistan-turkiye-to-sign-mou-on-judicial-cooperation", time: "2026-04-05T12:51:25Z" },
+      { title: "Pera teams in Lahore accused of enforcing 10pm curbs on exempt sectors", source: "Dawn", url: "https://www.dawn.com/news/1988697/pera-teams-in-lahore-accused-of-enforcing-10pm-curbs-on-exempt-sectors", time: "2026-04-05T04:55:17Z" },
+      { title: "Planning minister advocates for revising market timings to rein in oil import bill", source: "Dawn", url: "https://www.dawn.com/news/1988554/planning-minister-advocates-for-revising-market-timings-to-rein-in-oil-import-bill", time: "2026-04-04T15:04:29Z" },
+      { title: "Rs20 million fine for a deleted tweet: The cost of irreverence?", source: "Dawn", url: "https://www.dawn.com/news/1988511/rs20-million-fine-for-a-deleted-tweet-the-cost-of-irreverence", time: "2026-04-04T08:48:41Z" },
     ]
   },
   {
@@ -4409,6 +4414,29 @@ const locations = [
     ]
   },
   {
+    name: "Ottawa", country: "Canada",
+    lat: 45.4215, lng: -75.6972,
+    category: "political",
+    articles: [
+      { title: "University of Ottawa in Lockdown Amid ‘Violent Incident’", source: "New York Times", url: "https://www.nytimes.com/2026/04/10/world/canada/ottawa-university-campus-lockdown-canada.html", time: "2026-04-10T22:52:29Z" },
+      { title: "North Carolina mayor caught on video walking around town hall pantless with staffer refuses to resign", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/mayor-scandal-mooresville-north-carolina-b2955430.html", time: "2026-04-10T16:47:50Z" },
+      { title: "Canada hit NATO’s 2 percent target — but hold the applause for now", source: "The Hill", url: "https://thehill.com/opinion/international/5823971-canada-nato-defense-spending/", time: "2026-04-10T16:30:05Z" },
+      { title: "Italy’s Eni to take stake in Canada’s Nouveau Monde Graphite in $70-million investment", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-italys-eni-to-take-stake-in-canadas-nouveau-monde-graphite-in-70/", time: "2026-04-10T11:21:26Z" },
+      { title: "Canada’s Cohere, Germany’s Aleph Alpha reportedly in merger talks", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-canadas-cohere-germanys-aleph-alpha-reportedly-in-merger-talks/", time: "2026-04-10T09:48:53Z" },
+      { title: "Carney says Canadians proud of Artemis II mission", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-carney-says-canadians-proud-of-artemis-ii-mission/", time: "2026-04-09T10:43:56Z" },
+      { title: "Want to be a Canadian? It’s never been easier.", source: "Washington Post", url: "https://www.washingtonpost.com/travel/2026/04/09/canada-citizenship-dual/", time: "2026-04-09T09:00:37Z" },
+      { title: "Mark Carney makes a very Canadian call to space", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/science/video-mark-carney-makes-a-very-canadian-call-to-space/", time: "2026-04-09T01:07:06Z" },
+      { title: "Fewer in US, Canada say it’s a good time to find a job: Gallup", source: "The Hill", url: "https://thehill.com/business/5822902-us-canada-job-market-2025/", time: "2026-04-08T21:33:56Z" },
+      { title: "Canada’s Mark Carney Poised to Secure Liberal Party Majority After Gladu’s Defection", source: "New York Times", url: "https://www.nytimes.com/2026/04/08/world/canada/mark-carney-canada-liberal-party-marilyn-gladu.html", time: "2026-04-08T19:17:59Z" },
+      { title: "Canadian Prime Minister Mark Carney attracts yet another Conservative lawmaker to his Liberal Party", source: "ABC News", url: "https://abcnews.com/International/wireStory/canadian-prime-minister-mark-carney-attracts-conservative-lawmaker-131843025", time: "2026-04-08T16:38:34Z" },
+      { title: "‘Dishonourable’: First Nation decries push for Alberta to secede from Canada", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/07/first-nation-decries-alberta-separatist-push-canada", time: "2026-04-07T16:43:13Z" },
+      { title: "ICE says its agents don’t carry guns in Canada as World Cup approaches", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/7/ice-says-its-agents-dont-carry-guns-in-canada-as-world-cup-approaches?traffic_source=rss", time: "2026-04-07T13:32:24Z" },
+      { title: "Food security expert urges Canada to invest in agriculture, not just military capabilities", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-food-security-expert-urges-canada-to-invest-in-agriculture/", time: "2026-04-06T23:28:44Z" },
+      { title: "Stephen Lewis, Leftist Canadian Politician and AIDS Activist, Dies at 88", source: "New York Times", url: "https://www.nytimes.com/2026/04/01/world/canada/stephen-lewis-dead.html", time: "2026-04-06T22:34:00Z" },
+      { title: "On Canada’s border, Montana’s Blackfeet look for a legal way out of Trump’s tariffs", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-on-canadas-border-montanas-blackfeet-look-for-a-legal-way-out-of/", time: "2026-04-06T11:00:00Z" },
+    ]
+  },
+  {
     name: "Erbil", country: "Iraq",
     lat: 36.1901, lng: 44.0091,
     category: "conflict",
@@ -4494,28 +4522,6 @@ const locations = [
       { title: "Sudan: 'Sudan War Has Pushed Women Hundreds of Years Back'", source: "AllAfrica", url: "https://allafrica.com/stories/202604060013.html", time: "2026-04-06T04:54:38Z" },
       { title: "Sudan: 'We Watched Them Die Before Our Eyes' - Sudan Health Workers Helpless Amid Medical Shortages", source: "AllAfrica", url: "https://allafrica.com/stories/202604040171.html", time: "2026-04-04T21:00:40Z" },
       { title: "Sudan: WHO Director-General Dr. Tedros Urges the World Not to Ignore the Sudan Crisi", source: "AllAfrica", url: "https://allafrica.com/stories/202604040170.html", time: "2026-04-04T20:57:12Z" },
-    ]
-  },
-  {
-    name: "Ottawa", country: "Canada",
-    lat: 45.4215, lng: -75.6972,
-    category: "political",
-    articles: [
-      { title: "North Carolina mayor caught on video walking around town hall pantless with staffer refuses to resign", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/mayor-scandal-mooresville-north-carolina-b2955430.html", time: "2026-04-10T16:47:50Z" },
-      { title: "Canada hit NATO’s 2 percent target — but hold the applause for now", source: "The Hill", url: "https://thehill.com/opinion/international/5823971-canada-nato-defense-spending/", time: "2026-04-10T16:30:05Z" },
-      { title: "Italy’s Eni to take stake in Canada’s Nouveau Monde Graphite in $70-million investment", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-italys-eni-to-take-stake-in-canadas-nouveau-monde-graphite-in-70/", time: "2026-04-10T11:21:26Z" },
-      { title: "Canada’s Cohere, Germany’s Aleph Alpha reportedly in merger talks", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-canadas-cohere-germanys-aleph-alpha-reportedly-in-merger-talks/", time: "2026-04-10T09:48:53Z" },
-      { title: "Carney says Canadians proud of Artemis II mission", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-carney-says-canadians-proud-of-artemis-ii-mission/", time: "2026-04-09T10:43:56Z" },
-      { title: "Want to be a Canadian? It’s never been easier.", source: "Washington Post", url: "https://www.washingtonpost.com/travel/2026/04/09/canada-citizenship-dual/", time: "2026-04-09T09:00:37Z" },
-      { title: "Mark Carney makes a very Canadian call to space", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/science/video-mark-carney-makes-a-very-canadian-call-to-space/", time: "2026-04-09T01:07:06Z" },
-      { title: "Fewer in US, Canada say it’s a good time to find a job: Gallup", source: "The Hill", url: "https://thehill.com/business/5822902-us-canada-job-market-2025/", time: "2026-04-08T21:33:56Z" },
-      { title: "Canada’s Mark Carney Poised to Secure Liberal Party Majority After Gladu’s Defection", source: "New York Times", url: "https://www.nytimes.com/2026/04/08/world/canada/mark-carney-canada-liberal-party-marilyn-gladu.html", time: "2026-04-08T19:17:59Z" },
-      { title: "Canadian Prime Minister Mark Carney attracts yet another Conservative lawmaker to his Liberal Party", source: "ABC News", url: "https://abcnews.com/International/wireStory/canadian-prime-minister-mark-carney-attracts-conservative-lawmaker-131843025", time: "2026-04-08T16:38:34Z" },
-      { title: "‘Dishonourable’: First Nation decries push for Alberta to secede from Canada", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/07/first-nation-decries-alberta-separatist-push-canada", time: "2026-04-07T16:43:13Z" },
-      { title: "ICE says its agents don’t carry guns in Canada as World Cup approaches", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/7/ice-says-its-agents-dont-carry-guns-in-canada-as-world-cup-approaches?traffic_source=rss", time: "2026-04-07T13:32:24Z" },
-      { title: "Food security expert urges Canada to invest in agriculture, not just military capabilities", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-food-security-expert-urges-canada-to-invest-in-agriculture/", time: "2026-04-06T23:28:44Z" },
-      { title: "Stephen Lewis, Leftist Canadian Politician and AIDS Activist, Dies at 88", source: "New York Times", url: "https://www.nytimes.com/2026/04/01/world/canada/stephen-lewis-dead.html", time: "2026-04-06T22:34:00Z" },
-      { title: "On Canada’s border, Montana’s Blackfeet look for a legal way out of Trump’s tariffs", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-on-canadas-border-montanas-blackfeet-look-for-a-legal-way-out-of/", time: "2026-04-06T11:00:00Z" },
     ]
   },
   {
@@ -4751,6 +4757,23 @@ const locations = [
     ]
   },
   {
+    name: "Sanaa", country: "Yemen",
+    lat: 15.3694, lng: 44.191,
+    category: "conflict",
+    articles: [
+      { title: "JD Vance dispatched to negotiate Iran peace with few cards to play", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/11/jd-vance-dispatched-to-negotiate-iran-peace-with-few-cards-to-play", time: "2026-04-10T23:05:31Z" },
+      { title: "‘Why my child?’: Yemen’s Taiz mourns sniper’s killing of teen", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/8/why-my-child-yemens-taiz-mourns-snipers-killing-of-teen?traffic_source=rss", time: "2026-04-08T17:34:45Z" },
+      { title: "Exclusive: The Ethiopian army base covertly supporting Sudan’s RSF", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/exclusive-ethiopian-army-base-covertly-supporting-sudans-rsf", time: "2026-04-08T11:57:20Z" },
+      { title: "Yemen’s teachers pushed to the brink as salaries collapse", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/8/yemens-teachers-pushed-to-the-brink-as-salaries-collapse?traffic_source=rss", time: "2026-04-08T07:06:06Z" },
+      { title: "Weakened and Reluctant, Yemen’s Houthis Belatedly Enter War", source: "New York Times", url: "https://www.nytimes.com/2026/04/07/world/middleeast/houthis-iran-yemen-war.html", time: "2026-04-07T08:57:48Z" },
+      { title: "What is driving the Houthis’ decision-making on joining the Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/4/7/what-is-driving-the-houthis-decision-making-on-joining-the-iran-war?traffic_source=rss", time: "2026-04-07T08:07:05Z" },
+      { title: "Houthis decided to attack Israel independently of Iran, to uphold US ceasefire, official tells CNN", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-892234", time: "2026-04-06T17:18:07Z" },
+      { title: "Yemen’s civilians fear fallout after Houthis enter Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/6/yemens-civilians-fear-fallout-after-houthis-enter-iran-war?traffic_source=rss", time: "2026-04-06T09:10:31Z" },
+      { title: "Yemen’s Houthis claim cluster missile attack on Israel’s Ben Gurion airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/5/yemens-houthis-claim-cluster-missile-attack-on-israels-ben-gurion-airport?traffic_source=rss", time: "2026-04-05T07:45:37Z" },
+      { title: "Iran's Ghalibaf raises questions over another global shipping route", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irans-ghalibaf-raises-questions-over-another-global-shipping-route", time: "2026-04-04T04:13:44Z" },
+    ]
+  },
+  {
     name: "Lilongwe", country: "Malawi",
     lat: -13.9626, lng: 33.7741,
     category: "economic",
@@ -4816,22 +4839,6 @@ const locations = [
       { title: "Nepal announces two-day weekends to fight energy crunch", source: "Straits Times", url: "https://www.straitstimes.com/asia/nepal-announces-two-day-weekends-to-fight-energy-crunch", time: "2026-04-05T12:41:00Z" },
       { title: "Nepal, Bangladesh, Morocco, Madagascar: What have the Gen Z protests achieved?", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260405-nepal-bangladesh-morocco-madagascar-what-have-the-gen-z-protests-achieved", time: "2026-04-05T11:16:40Z" },
       { title: "Everest guides accused of poisoning climbers in $20M scam: 32 people charged", source: "France 24", url: "https://www.france24.com/en/everest-guides-accused-of-poisoning-climbers-in-20m-scam-32-people-charged", time: "2026-04-04T09:27:35Z" },
-    ]
-  },
-  {
-    name: "Sanaa", country: "Yemen",
-    lat: 15.3694, lng: 44.191,
-    category: "conflict",
-    articles: [
-      { title: "‘Why my child?’: Yemen’s Taiz mourns sniper’s killing of teen", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/8/why-my-child-yemens-taiz-mourns-snipers-killing-of-teen?traffic_source=rss", time: "2026-04-08T17:34:45Z" },
-      { title: "Exclusive: The Ethiopian army base covertly supporting Sudan’s RSF", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/exclusive-ethiopian-army-base-covertly-supporting-sudans-rsf", time: "2026-04-08T11:57:20Z" },
-      { title: "Yemen’s teachers pushed to the brink as salaries collapse", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/8/yemens-teachers-pushed-to-the-brink-as-salaries-collapse?traffic_source=rss", time: "2026-04-08T07:06:06Z" },
-      { title: "Weakened and Reluctant, Yemen’s Houthis Belatedly Enter War", source: "New York Times", url: "https://www.nytimes.com/2026/04/07/world/middleeast/houthis-iran-yemen-war.html", time: "2026-04-07T08:57:48Z" },
-      { title: "What is driving the Houthis’ decision-making on joining the Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/4/7/what-is-driving-the-houthis-decision-making-on-joining-the-iran-war?traffic_source=rss", time: "2026-04-07T08:07:05Z" },
-      { title: "Houthis decided to attack Israel independently of Iran, to uphold US ceasefire, official tells CNN", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-892234", time: "2026-04-06T17:18:07Z" },
-      { title: "Yemen’s civilians fear fallout after Houthis enter Iran war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/6/yemens-civilians-fear-fallout-after-houthis-enter-iran-war?traffic_source=rss", time: "2026-04-06T09:10:31Z" },
-      { title: "Yemen’s Houthis claim cluster missile attack on Israel’s Ben Gurion airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/5/yemens-houthis-claim-cluster-missile-attack-on-israels-ben-gurion-airport?traffic_source=rss", time: "2026-04-05T07:45:37Z" },
-      { title: "Iran's Ghalibaf raises questions over another global shipping route", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irans-ghalibaf-raises-questions-over-another-global-shipping-route", time: "2026-04-04T04:13:44Z" },
     ]
   },
   {
@@ -5063,6 +5070,20 @@ const locations = [
     ]
   },
   {
+    name: "Pretoria", country: "South Africa",
+    lat: -25.7479, lng: 28.2293,
+    category: "political",
+    articles: [
+      { title: "Africa: United States Welcomes Arrival of Groundbreaking HIV Prevention Medicine in South Africa", source: "AllAfrica", url: "https://allafrica.com/stories/202604100381.html", time: "2026-04-10T12:12:48Z" },
+      { title: "Africa: Ruto Bumps Ramaphosa From France's G7 - or Does He?", source: "AllAfrica", url: "https://allafrica.com/stories/202604100291.html", time: "2026-04-10T10:55:55Z" },
+      { title: "US has let in 4,499 refugees since October - all but three were South African", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g89kkvenqo?at_medium=RSS&at_campaign=rss", time: "2026-04-09T19:31:52Z" },
+      { title: "South Africa: How Social Development Minister Sisisi Tolashe Defied the President", source: "AllAfrica", url: "https://allafrica.com/stories/202604080156.html", time: "2026-04-08T07:26:00Z" },
+      { title: "South Africa: How Social Development Minister Sisisi Tolashe Defied the President", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080156.html", time: "2026-04-08T07:26:00Z" },
+      { title: "South Africa: Ramaphosa Defends Delay in Justice for TRC Victims - South African News Briefs - April 8, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202604080110.html", time: "2026-04-08T05:45:36Z" },
+      { title: "South Africa: Ramaphosa Defends Delay in Justice for Violence Victims - South African News Briefs - April 8, 2026", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080110.html", time: "2026-04-08T05:45:36Z" },
+    ]
+  },
+  {
     name: "Hyderabad", country: "India",
     lat: 17.385, lng: 78.4867,
     category: "economic",
@@ -5101,19 +5122,6 @@ const locations = [
       { title: "Child rescued from rubble after Russia ramps up strikes on Ukraine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/6/child-rescued-from-rubble-after-russia-ramps-up-strikes-on-ukraine?traffic_source=rss", time: "2026-04-06T19:34:14Z" },
       { title: "A Russian attack kills 3 in Odesa while Ukraine targets Russian oil infrastructure, officials say", source: "ABC News", url: "https://abcnews.com/International/wireStory/russian-attack-kills-3-odesa-ukraine-targets-russian-131757459", time: "2026-04-06T10:51:38Z" },
       { title: "Russian strike kills three in south Ukraine", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0406/1566876-ukraine-russia/", time: "2026-04-06T07:16:38Z" },
-    ]
-  },
-  {
-    name: "Pretoria", country: "South Africa",
-    lat: -25.7479, lng: 28.2293,
-    category: "political",
-    articles: [
-      { title: "Africa: Ruto Bumps Ramaphosa From France's G7 - or Does He?", source: "AllAfrica", url: "https://allafrica.com/stories/202604100291.html", time: "2026-04-10T10:55:55Z" },
-      { title: "US has let in 4,499 refugees since October - all but three were South African", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g89kkvenqo?at_medium=RSS&at_campaign=rss", time: "2026-04-09T19:31:52Z" },
-      { title: "South Africa: How Social Development Minister Sisisi Tolashe Defied the President", source: "AllAfrica", url: "https://allafrica.com/stories/202604080156.html", time: "2026-04-08T07:26:00Z" },
-      { title: "South Africa: How Social Development Minister Sisisi Tolashe Defied the President", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080156.html", time: "2026-04-08T07:26:00Z" },
-      { title: "South Africa: Ramaphosa Defends Delay in Justice for TRC Victims - South African News Briefs - April 8, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202604080110.html", time: "2026-04-08T05:45:36Z" },
-      { title: "South Africa: Ramaphosa Defends Delay in Justice for Violence Victims - South African News Briefs - April 8, 2026", source: "AllAfrica", url: "https://Allafrica.com/stories/202604080110.html", time: "2026-04-08T05:45:36Z" },
     ]
   },
   {
