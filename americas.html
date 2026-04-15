@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:04 UTC, 15 Apr 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:47 UTC, 15 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 April 2026</div>
@@ -116,6 +116,9 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Made in Mexico: Charrería", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/made-in-mexico-charreria/", time: "2026-04-15T12:31:59Z" },
+      { title: "Mexico refuses to designate Iran’s proxies as terrorist groups", source: "The Hill", url: "https://thehill.com/opinion/international/5830322-mexico-iran-terrorism-relations/", time: "2026-04-15T12:30:00Z" },
+      { title: "US sanctions 2 casinos and 3 people over alleged links to Mexico's Cartel del Noreste", source: "ABC News", url: "https://abcnews.com/International/wireStory/us-sanctions-2-casinos-3-people-alleged-links-132040060", time: "2026-04-15T12:10:09Z" },
       { title: "U.S. sanctions alleged 'gatekeeper' of cartel human smuggling routes", source: "CBS News", url: "https://www.cbsnews.com/news/us-sanctions-cartel-del-noreste-casinos-human-smuggling-routes/", time: "2026-04-15T10:49:22Z" },
       { title: "They scour the Mexican cartel lands for the missing — and for closure", source: "ABC News", url: "https://abcnews.com/International/wireStory/scour-mexican-cartel-lands-missing-closure-132050918", time: "2026-04-15T10:41:38Z" },
       { title: "The ‘Searching Warriors’ who scour Mexican cartel lands for missing people", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mexico-catrel-missing-people-guerreros-buscadores-b2957897.html", time: "2026-04-15T07:07:50Z" },
@@ -200,9 +203,6 @@ const locations = [
       { title: "Kia to invest US $600M in Nuevo León, boosting EV production", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/kia-600m-nuevo-leon-ev-production/", time: "2026-04-08T18:16:48Z" },
       { title: "Sheinbaum celebrates Iran-US ceasefire deal: Wednesday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-celebrates-iran-us-ceasefire-mananera-recapped/", time: "2026-04-08T17:08:39Z" },
       { title: "Man who co-founded Mexican cartel with drug lord ‘El Mencho’ pleads guilty in U.S. to conspiracy charge", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-man-who-co-founded-mexican-cartel-with-drug-lord-el-mencho-pleads/", time: "2026-04-08T16:14:23Z" },
-      { title: "El Jalapeño: Hot Wheels announces expanded Mexico collection; will include mattress pickup and microbus with functioning saint", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-hot-wheels-announces-expanded-mexico-collection-will-include-mattress-pickup-and-microbus-with-functioning-saint/", time: "2026-04-08T12:30:54Z" },
-      { title: "Made in Mexico: Grupo Herdez", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/food/made-in-mexico-grupo-herdez/", time: "2026-04-08T12:24:59Z" },
-      { title: "MND Local: Safety spotlighted in Los Cabos during high season peaks, plus other news and updates", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/mnd-local-safety-spotlighted-in-los-cabos-during-high-season-peaks-plus-other-news-and-updates/", time: "2026-04-08T12:19:26Z" },
     ]
   },
   {
@@ -210,6 +210,7 @@ const locations = [
     lat: 38.9072, lng: -77.0369,
     category: "political",
     articles: [
+      { title: "House Democrats to file 5 impeachment articles against Hegseth, report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/democrats-pete-hegseth-impeachment-b2958187.html", time: "2026-04-15T13:40:31Z" },
       { title: "Scoop: House Democrats introduce 5 articles of impeachment targeting Pete Hegseth", source: "Axios", url: "https://www.axios.com/2026/04/15/iran-war-pete-hegseth-congress-impeachment-articles-democrats-reflecting-search-interest-order", time: "2026-04-15T09:00:59Z" },
       { title: "Hegseth again skipping meeting of group arming Ukraine", source: "The Hill", url: "https://thehill.com/policy/defense/5831142-hegseth-to-skip-ukraine-defense-group-meeting/", time: "2026-04-14T20:29:44Z" },
       { title: "Appeals court halts Boasberg contempt inquiry over Venezuelan deportation flights", source: "The Hill", url: "https://thehill.com/regulation/court-battles/5830552-trump-administration-james-boasberg-appeals-court-contempt-ruling/", time: "2026-04-14T16:43:41Z" },
@@ -271,13 +272,6 @@ const locations = [
       { title: "WATCH: Hegseth says U.S. military has done its part 'for now' after Trump agrees to 2-week Iran ceasefire", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/watch-hegseth-says-u-s-military-has-done-its-part-for-now-after-trump-agrees-to-2-week-iran-ceasefire", time: "2026-04-08T14:45:46Z" },
       { title: "Iran ceasefire clouded by confusion, contradictions", source: "Axios", url: "https://www.axios.com/2026/04/08/iran-ceasefire-questions-strait-lebanon", time: "2026-04-08T14:41:11Z" },
       { title: "Iran-US war latest: Israel launches massive strikes on Lebanon as Hegseth claims US has won ‘capital V’ victory", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-latest-trump-israel-ceasefire-lebanon-hormuz-b2953817.html", time: "2026-04-08T14:10:49Z" },
-      { title: "Pete Hegseth claims Iran ‘begged’ for ceasefire deal to end onslaught and threats from Trump", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pete-hegseth-trump-iran-ceasefire-deal-b2953749.html", time: "2026-04-08T13:20:50Z" },
-      { title: "Pete Hegseth says 'we'll be hanging around' after Iran ceasefire announcement", source: "CBS News", url: "https://www.cbsnews.com/news/pete-hegseth-dan-caine-briefing-pentagon-trump-iran/", time: "2026-04-08T13:13:00Z" },
-      { title: "Hegseth says military was ‘locked and loaded’ to carry out Trump’s Iran civilization threat", source: "The Hill", url: "https://thehill.com/policy/defense/5821433-trump-threatens-iran-civilization/", time: "2026-04-08T13:03:46Z" },
-      { title: "Iran-US war latest: Hegseth says military will ‘hang around’ to make sure Tehran complies with ceasefire", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-latest-trump-ceasefire-strait-of-hormuz-b2953467.html", time: "2026-04-08T12:59:27Z" },
-      { title: "Hegseth claims ‘historic and overwhelming victory’ after Iran ceasefire", source: "The Hill", url: "https://thehill.com/policy/defense/5821402-us-victory-iran-ceasefire-hegseth/", time: "2026-04-08T12:54:26Z" },
-      { title: "Live updates: Hegseth calls Iran operation an ‘overwhelming victory’ in first hours of ceasefire", source: "The Hill", url: "https://thehill.com/homenews/administration/5819868-live-updates-trump-iran-nato/", time: "2026-04-08T12:09:10Z" },
-      { title: "Watch live: Hegseth, Caine brief reporters on Iran after Trump extends pause on strikes", source: "The Hill", url: "https://thehill.com/video-clips/5821195-watch-live-pentagon-press-briefing-pete-hegseth-dan-caine-iran/", time: "2026-04-08T11:55:51Z" },
     ]
   },
   {
@@ -285,6 +279,7 @@ const locations = [
     lat: -12.0464, lng: -77.0428,
     category: "economic",
     articles: [
+      { title: "As energy costs rise, some states back off ambitious climate goals", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/kathy-hochul-albany-connecticut-california-donald-trump-b2958207.html", time: "2026-04-15T13:32:51Z" },
       { title: "Candidate calls for new election in Peru, claiming fraud without evidence", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/15/candidate-calls-for-new-election-in-peru-claiming-fraud-without-evidence?traffic_source=rss", time: "2026-04-15T05:24:01Z" },
       { title: "Cuba could beat US energy blockade with $8bn investment in renewables, says thinktank", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/15/cuba-beat-us-energy-blockade-investment-renewables", time: "2026-04-14T23:01:52Z" },
       { title: "Peru heads for presidential runoff as election count drags on due to ballot delays", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-peru-presidential-election-runoff/", time: "2026-04-14T20:42:54Z" },
@@ -329,6 +324,7 @@ const locations = [
     lat: -34.6037, lng: -58.3816,
     category: "economic",
     articles: [
+      { title: "‘We took clothes, a blanket and a dog’: the people displaced by a dam 50 years ago, but still fighting for justice", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/15/people-displaced-50-years-ago-ava-guarani-community-itaipu-dam-paraguay-brazil-border", time: "2026-04-15T12:00:27Z" },
       { title: "New trial begins over football legend Maradona’s death", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/15/new-trial-begins-over-football-legend-maradonas-death?traffic_source=rss", time: "2026-04-15T03:44:14Z" },
       { title: "Javier Mascherano unexpectedly resigns as Inter Miami head coach", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/sports/javier-mascherano-unexpectedly-resigns-as-inter-miami-head-coach", time: "2026-04-14T21:20:04Z" },
       { title: "Argentina’s March inflation climbs to 3.4%, the highest of 2026", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/economics/argentinas-march-inflation-climbs-to-3-4-the-highest-of-2026-so-far", time: "2026-04-14T19:29:18Z" },
@@ -371,6 +367,7 @@ const locations = [
     lat: 45.4215, lng: -75.6972,
     category: "political",
     articles: [
+      { title: "Canada pledges $120-million in aid for Sudan crisis as war enters its fourth year", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-canada-aid-sudan-war/", time: "2026-04-15T13:31:47Z" },
       { title: "Exclusive: U.K.-Ukraine duo beats Americans at their own drone game", source: "Axios", url: "https://www.axios.com/2026/04/15/skycutter-ukraine-drone-dominance-pentagon", time: "2026-04-15T09:10:07Z" },
       { title: "Canada faces calls to rescind planned cuts to refugee healthcare scheme", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/14/canada-faces-calls-to-rescind-planned-cuts-to-refugee-healthcare-scheme?traffic_source=rss", time: "2026-04-14T21:02:23Z" },
       { title: "Carney suspends Canada's fuel tax in first act after securing majority government", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/carney-suspends-canadas-fuel-tax-in-first-act-after-securing-majority-government", time: "2026-04-14T20:58:10Z" },
@@ -407,6 +404,7 @@ const locations = [
     lat: 23.1136, lng: -82.3666,
     category: "political",
     articles: [
+      { title: "Russia pledges more oil for Cuba amid shortages", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-cuba-power-oil-shortage-russia/", time: "2026-04-15T11:25:10Z" },
       { title: "Cubans self-medicate as crisis takes toll on mental health: ‘There is no idea to hold on to’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/15/cuba-self-medicate-drugs-mental-health", time: "2026-04-15T11:00:27Z" },
       { title: "Russia vows to keep sending vital oil supplies to energy crisis-hit Cuba", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/cuba-oil-russia-trump-sergei-lavrov-b2958014.html", time: "2026-04-15T09:38:07Z" },
       { title: "Scoop: U.S. suggests Cuba complicit in helping Russia fight Ukraine", source: "Axios", url: "https://www.axios.com/2026/04/14/congress-cuba-russia-trump-administration-congress", time: "2026-04-14T22:20:35Z" },
@@ -489,6 +487,7 @@ const locations = [
     lat: 10.4806, lng: -66.9036,
     category: "political",
     articles: [
+      { title: "US eases sanctions on state-run Venezuelan banks", source: "BBC News", url: "https://www.bbc.com/news/articles/cd6llepv9gqo?at_medium=RSS&at_campaign=rss", time: "2026-04-15T12:24:28Z" },
       { title: "Delcy Rodriguez calls for a ‘Venezuela free of sanctions’ amid US detente", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/14/delcy-rodriguez-calls-for-a-venezuela-free-of-sanctions-amid-us-detente?traffic_source=rss", time: "2026-04-14T23:47:20Z" },
       { title: "Scoop: U.S. eases bank sanctions amid Venezuela's economic woes", source: "Axios", url: "https://www.axios.com/2026/04/14/venezuela-bank-sanctions-protests-delcy-rodriguez", time: "2026-04-14T18:49:59Z" },
       { title: "Chevron executive says Venezuelan crude oil is helping lower prices amid Iran war", source: "CBS News", url: "https://www.cbsnews.com/video/chevron-executive-venezuelan-crude-oil-helping-lower-prices-iran-war/", time: "2026-04-14T16:42:08Z" },
@@ -558,15 +557,6 @@ const locations = [
     ]
   },
   {
-    name: "Santiago", country: "Chile",
-    lat: -33.4489, lng: -70.6693,
-    category: "political",
-    articles: [
-      { title: "Supreme Court’s conversion therapy ruling erases gay, transgender identity", source: "The Hill", url: "https://thehill.com/opinion/judiciary/5818265-supreme-courts-conversion-therapy-ruling-erases-gay-transgender-identity/", time: "2026-04-09T14:00:00Z" },
-      { title: "Chile’s far-right government rips up plan for memorial at Pinochet torture site", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/08/chile-torture-paul-schafer-villa-baviera", time: "2026-04-08T13:00:32Z" },
-    ]
-  },
-  {
     name: "San Jose", country: "Costa Rica",
     lat: 9.9281, lng: -84.0907,
     category: "economic",
@@ -585,11 +575,11 @@ const locations = [
     ]
   },
   {
-    name: "Panama City", country: "Panama",
-    lat: 8.9824, lng: -79.5199,
-    category: "migration",
+    name: "Santiago", country: "Chile",
+    lat: -33.4489, lng: -70.6693,
+    category: "political",
     articles: [
-      { title: "China’s retaliation against Panama has backfires across Latin America", source: "The Hill", url: "https://thehill.com/opinion/international/5819170-beijing-debt-trap-latin-america/", time: "2026-04-08T12:30:00Z" },
+      { title: "Supreme Court’s conversion therapy ruling erases gay, transgender identity", source: "The Hill", url: "https://thehill.com/opinion/judiciary/5818265-supreme-courts-conversion-therapy-ruling-erases-gay-transgender-identity/", time: "2026-04-09T14:00:00Z" },
     ]
   },
   {
