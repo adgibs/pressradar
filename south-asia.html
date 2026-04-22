@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">02:54 UTC, 22 Apr 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:30 UTC, 22 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">22 April 2026</div>
@@ -116,9 +116,17 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "political",
     articles: [
+      { title: "KP’s Maneri residents without water for four days as power cut off", source: "Dawn", url: "https://www.dawn.com/news/1993942/kps-maneri-residents-without-water-for-four-days-as-power-cut-off", time: "2026-04-22T05:26:22Z" },
+      { title: "Iran-US war latest: Trump extends ceasefire but says Strait of Hormuz will stay ‘totally blockaded’", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-ceasefire-deadline-strait-of-hormuz-b2962350.html", time: "2026-04-22T05:15:08Z" },
+      { title: "Lesson interrupted", source: "Dawn", url: "https://www.dawn.com/news/1994011/lesson-interrupted", time: "2026-04-22T04:29:31Z" },
+      { title: "Trumped again?", source: "Dawn", url: "https://www.dawn.com/news/1994010/trumped-again", time: "2026-04-22T04:23:29Z" },
+      { title: "Two more cases registered in  Italian boat capsize incident", source: "Dawn", url: "https://www.dawn.com/news/1993931/two-more-cases-registered-in-italian-boat-capsize-incident", time: "2026-04-22T04:12:58Z" },
+      { title: "Moment of truth", source: "Dawn", url: "https://www.dawn.com/news/1994009/moment-of-truth", time: "2026-04-22T04:05:11Z" },
       { title: "Aleema Khan looks to mend fences, denies seeking party position", source: "Dawn", url: "https://www.dawn.com/news/1993994/aleema-khan-looks-to-mend-fences-denies-seeking-party-position", time: "2026-04-22T02:48:38Z" },
       { title: "World urges restraint as US, Iran stick to guns", source: "Dawn", url: "https://www.dawn.com/news/1993990/world-urges-restraint-as-us-iran-stick-to-guns", time: "2026-04-22T02:38:28Z" },
       { title: "Govt invites bids from financiers as it eyes more borrowing", source: "Dawn", url: "https://www.dawn.com/news/1993992/govt-invites-bids-from-financiers-as-it-eyes-more-borrowing", time: "2026-04-22T02:30:44Z" },
+      { title: "PTCL returns to profit after years", source: "Dawn", url: "https://www.dawn.com/news/1993955/ptcl-returns-to-profit-after-years", time: "2026-04-22T00:38:38Z" },
+      { title: "Supreme Court sets aside dismissal of ministry official", source: "Dawn", url: "https://www.dawn.com/news/1993982/supreme-court-sets-aside-dismissal-of-ministry-official", time: "2026-04-22T00:38:30Z" },
       { title: "Trump extends Iran ceasefire as talks to end war stall", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/trump-extends-iran-ceasefire-as-talks-to-end-war-stall", time: "2026-04-21T22:55:54Z" },
       { title: "‘At the request of CDF Munir, PM Shehbaz’, Trump announces extension in ceasefire until Iran submits proposal", source: "Dawn", url: "https://www.dawn.com/news/1993810/at-the-request-of-cdf-munir-pm-shehbaz-trump-announces-extension-in-ceasefire-until-iran-submits-proposal", time: "2026-04-21T20:55:53Z" },
       { title: "US issues more Iran sanctions on eve of possible talks in Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/us-issues-more-iran-sanctions-on-eve-of-possible-talks-in-pakistan?traffic_source=rss", time: "2026-04-21T20:42:21Z" },
@@ -377,14 +385,6 @@ const locations = [
       { title: "U.S. shuts down Iran's maritime trade despite optimism for more talks", source: "The Hindu", url: "https://www.thehindu.com/news/international/us-shuts-down-irans-maritime-trade-despite-optimism-for-more-talks/article70864097.ece", time: "2026-04-15T06:53:14Z" },
       { title: "PSX gains 4,300 points amid hopes of US-Iran talks reviving", source: "Dawn", url: "https://www.dawn.com/news/1991921/psx-gains-4300-points-amid-hopes-of-us-iran-talks-reviving", time: "2026-04-15T06:38:53Z" },
       { title: "PM Shehbaz to depart today on official visits to Saudi Arabia, Turkiye and Qatar", source: "Dawn", url: "https://www.dawn.com/news/1991908/pm-shehbaz-to-depart-today-on-official-visits-to-saudi-arabia-turkiye-and-qatar", time: "2026-04-15T06:04:12Z" },
-      { title: "PM Shehbaz to depart for Saudi Arabia on official visit today: PMO", source: "Dawn", url: "https://www.dawn.com/news/1991908/pm-shehbaz-to-depart-for-saudi-arabia-on-official-visit-today-pmo", time: "2026-04-15T05:14:43Z" },
-      { title: "Sanctioned tanker turns back to Strait of Hormuz, day after Gulf exit", source: "The Hindu", url: "https://www.thehindu.com/news/international/sanctioned-tanker-turns-back-to-strait-of-hormuz-day-after-gulf-exit/article70863808.ece", time: "2026-04-15T04:52:53Z" },
-      { title: "Saudi Arabia pledges $3bn fresh deposit, extends $5bn facility through 2028", source: "Dawn", url: "https://www.dawn.com/news/1991877/saudi-arabia-pledges-3bn-fresh-deposit-extends-5bn-facility-through-2028", time: "2026-04-15T04:30:47Z" },
-      { title: "Back to the table?", source: "Dawn", url: "https://www.dawn.com/news/1991839/back-to-the-table", time: "2026-04-15T04:26:25Z" },
-      { title: "Sliver of hope", source: "Dawn", url: "https://www.dawn.com/news/1991832/sliver-of-hope", time: "2026-04-15T04:09:38Z" },
-      { title: "Oil prices fall and Asian stocks hit six-week high amid fresh hopes for Iran peace talks", source: "The Independent", url: "https://www.independent.co.uk/news/business/asian-stock-market-brent-crude-trump-us-iran-peace-talks-b2957818.html", time: "2026-04-15T04:02:11Z" },
-      { title: "Anti-encroachment operation triggers violent backlash from villagers in Islamabad", source: "Dawn", url: "https://www.dawn.com/news/1991876/anti-encroachment-operation-triggers-violent-backlash-from-villagers-in-islamabad", time: "2026-04-15T03:51:48Z" },
-      { title: "Jaishankar speaks to Israeli counterpart Gideon Sa'ar over ‘different aspects’ of West Asia crisis", source: "The Hindu", url: "https://www.thehindu.com/news/national/jaishankar-speaks-to-israeli-counterpart-gideon-saar-over-different-aspects-of-west-asia-crisis/article70863682.ece", time: "2026-04-15T03:34:18Z" },
     ]
   },
   {
@@ -392,6 +392,7 @@ const locations = [
     lat: 28.6139, lng: 77.209,
     category: "political",
     articles: [
+      { title: "Millions in India stripped of vote before critical state election, as government seeks to ‘purify’ electoral roll", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/22/india-west-bengal-state-elections-millions-stripped-of-vote", time: "2026-04-22T04:13:05Z" },
       { title: "India strangles final bastion of Maoist revolt as mining opportunities loom", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/india-strangles-final-maoist-bastion-as-mining-looms", time: "2026-04-22T02:00:00Z" },
       { title: "New Zealand minister slammed for ‘butter chicken tsunami’ comments", source: "Straits Times", url: "https://www.straitstimes.com/asia/australianz/new-zealand-minister-slammed-for-butter-chicken-tsunami-comments", time: "2026-04-22T00:24:00Z" },
       { title: "Iran to restart domestic flights; charts phased airspace reopening", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-to-restart-domestic-flights-charts-phased-airspace-reopening/article70889386.ece", time: "2026-04-21T18:34:37Z" },
@@ -471,11 +472,6 @@ const locations = [
       { title: "Watch: Delimitation controversy & Bihar’s first BJP CM | Above the Fold | 15.04.2026", source: "The Hindu", url: "https://www.thehindu.com/videos/watch-delimitation-controversy-bihars-first-bjp-cm-above-the-fold-15042026/article70866454.ece", time: "2026-04-15T17:30:35Z" },
       { title: "Australia books Indian national for alleged sexual assault of woman seated next to him on flight", source: "Dawn", url: "https://www.dawn.com/news/1991935/australia-books-indian-national-for-alleged-sexual-assault-of-woman-seated-next-to-him-on-flight", time: "2026-04-15T08:11:24Z" },
       { title: "Uzbek chess grandmaster Sindarov sets up world title match with Gukesh", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/15/uzbek-chess-grandmaster-sindarov-sets-up-world-title-match-with-gukesh?traffic_source=rss", time: "2026-04-15T07:04:44Z" },
-      { title: "Expanding permanent category with veto critical to real reform of UNSC: India", source: "The Hindu", url: "https://www.thehindu.com/news/national/expanding-permanent-category-with-veto-critical-to-real-reform-of-unsc-india/article70863804.ece", time: "2026-04-15T04:48:48Z" },
-      { title: "Immigrants should think of themselves as Americans first: Vance", source: "The Hindu", url: "https://www.thehindu.com/news/international/immigrants-should-think-of-themselves-as-americans-first-vance/article70863749.ece", time: "2026-04-15T04:01:59Z" },
-      { title: "War Exposes Gaps in India’s Clean Energy Push", source: "New York Times", url: "https://www.nytimes.com/2026/04/15/business/india-solar-energy-problems.html", time: "2026-04-15T04:00:08Z" },
-      { title: "Duo arrested at Malaysia petrol station after filling modified tank with subsidised diesel", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/duo-arrested-at-malaysia-petrol-station-after-filling-modified-tank-with-subsidised-diesel", time: "2026-04-15T03:55:00Z" },
-      { title: "Vedanta plant blast in India’s Chhattisgarh kills 14, injures 20", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/vedanta-plant-blast-in-indias-chhattisgarh-kills-14-injures-20", time: "2026-04-15T02:58:13Z" },
     ]
   },
   {
@@ -483,6 +479,7 @@ const locations = [
     lat: 24.8607, lng: 67.0011,
     category: "security",
     articles: [
+      { title: "Questions raised about BSEK’s conduct of matric exams as cheating cases, irregularities surface in Karachi", source: "Dawn", url: "https://www.dawn.com/news/1993902/questions-raised-about-bseks-conduct-of-matric-exams-as-cheating-cases-irregularities-surface-in-karachi", time: "2026-04-22T04:35:31Z" },
       { title: "4 suspects arrested in Karachi in action against gangs involved in leaking matric exams", source: "Dawn", url: "https://www.dawn.com/news/1993833/4-suspects-arrested-in-karachi-in-action-against-gangs-involved-in-leaking-matric-exams", time: "2026-04-21T16:04:19Z" },
       { title: "Young doctor shot dead near Karachi’s Mehran Hotel", source: "Dawn", url: "https://www.dawn.com/news/1993744/young-doctor-shot-dead-near-karachis-mehran-hotel", time: "2026-04-21T06:59:25Z" },
       { title: "Govt mulls relief for salaried class, says minister Bilal Azhar Kiani", source: "Dawn", url: "https://www.dawn.com/news/1993650/govt-mulls-relief-for-salaried-class-says-minister-bilal-azhar-kiani", time: "2026-04-21T06:02:06Z" },
@@ -518,7 +515,6 @@ const locations = [
       { title: "Pakistan announces power cuts in bid to control energy prices", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/pakistan-announces-power-cuts-in-bid-to-control-energy-prices", time: "2026-04-15T10:03:00Z" },
       { title: "Bilawal to launch Phase-II of Solar Home Systems project today", source: "Dawn", url: "https://www.dawn.com/news/1991775/bilawal-to-launch-phase-ii-of-solar-home-systems-project-today", time: "2026-04-15T06:06:49Z" },
       { title: "CBC gets three months to establish piped water supply system in Karachi’s DHA", source: "Dawn", url: "https://www.dawn.com/news/1991778/cbc-gets-three-months-to-establish-piped-water-supply-system-in-karachis-dha", time: "2026-04-15T05:41:27Z" },
-      { title: "Mpox cases rise to 25 as two more test positive in Sindh", source: "Dawn", url: "https://www.dawn.com/news/1991781/mpox-cases-rise-to-25-as-two-more-test-positive-in-sindh", time: "2026-04-15T03:38:28Z" },
     ]
   },
   {
@@ -557,6 +553,7 @@ const locations = [
     lat: 15.2993, lng: 74.124,
     category: "economic",
     articles: [
+      { title: "Macron vows to help Lebanon prepare  for talks with Israel", source: "Dawn", url: "https://www.dawn.com/news/1993967/macron-vows-to-help-lebanon-prepare-for-talks-with-israel", time: "2026-04-22T02:56:47Z" },
       { title: "Downing Street denies exerting pressure on civil servants to approve Mandelson’s appointment as envoy to US", source: "Dawn", url: "https://www.dawn.com/news/1993798/downing-street-denies-exerting-pressure-on-civil-servants-to-approve-mandelsons-appointment-as-envoy-to-us", time: "2026-04-21T18:43:28Z" },
       { title: "Downing Street exerted pressure to approve Mandelson’s appointment, sacked official tells MPs", source: "Dawn", url: "https://www.dawn.com/news/1993798/downing-street-exerted-pressure-to-approve-mandelsons-appointment-sacked-official-tells-mps", time: "2026-04-21T12:18:03Z" },
       { title: "Japan to train 1,000 specialists annually to create live-action content for global audiences", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-to-train-1000-specialists-annually-to-create-live-action-content-for-global-audiences", time: "2026-04-21T02:10:00Z" },
@@ -599,31 +596,6 @@ const locations = [
       { title: "Hundreds of Iranian sailors return from Sri Lanka weeks after US torpedo sinks warship", source: "The Independent", url: "https://www.independent.co.uk/news/world/asia/iran-sailors-sri-lanka-warship-us-torpedo-b2958342.html", time: "2026-04-15T17:18:53Z" },
       { title: "Sri Lanka repatriates 238 stranded Iranian sailors: Minister", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lanka-repatriates-238-stranded-iranian-sailors-minister/article70863987.ece", time: "2026-04-15T06:08:08Z" },
       { title: "Iranian crew members return home from Sri Lanka", source: "Straits Times", url: "https://www.straitstimes.com/asia/iranian-crew-members-return-home-from-sri-lanka", time: "2026-04-15T05:58:08Z" },
-      { title: "Sri Lanka repatriates 238 stranded Iranian sailors: Minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-repatriates-238-stranded-iranian-sailors-minister", time: "2026-04-15T05:01:00Z" },
-    ]
-  },
-  {
-    name: "Lahore", country: "Pakistan",
-    lat: 31.5204, lng: 74.3587,
-    category: "political",
-    articles: [
-      { title: "Lahore High Court grants bail to Falak Javed in Azma Bokhari video case", source: "Dawn", url: "https://www.dawn.com/news/1993589/lahore-high-court-grants-bail-to-falak-javed-in-azma-bokhari-video-case", time: "2026-04-21T04:59:25Z" },
-      { title: "Punjab Assembly terms revised agriculture tax null and void", source: "Dawn", url: "https://www.dawn.com/news/1993586/punjab-assembly-terms-revised-agriculture-tax-null-and-void", time: "2026-04-21T02:15:17Z" },
-      { title: "The limits of Bushra Bibi’s power", source: "Dawn", url: "https://www.dawn.com/news/1975668/the-limits-of-bushra-bibis-power", time: "2026-04-20T12:32:49Z" },
-      { title: "CM Maryam approves Punjab’s first sky glass bridge in Murree", source: "Dawn", url: "https://www.dawn.com/news/1993292/cm-maryam-approves-punjabs-first-sky-glass-bridge-in-murree", time: "2026-04-20T05:51:24Z" },
-      { title: "Religious scholar Engineer Muhammad Ali Mirza survives attack in Jhelum", source: "Dawn", url: "https://www.dawn.com/news/1993211/religious-scholar-engineer-muhammad-ali-mirza-survives-attack-in-jhelum", time: "2026-04-19T19:59:06Z" },
-      { title: "Rawalpindi’s Ring Road to open without Thalian interchange", source: "Dawn", url: "https://www.dawn.com/news/1993148/rawalpindis-ring-road-to-open-without-thalian-interchange", time: "2026-04-19T05:10:29Z" },
-      { title: "Scooty-riding girl robbery suspect injured in ‘encounter’", source: "Dawn", url: "https://www.dawn.com/news/1993044/scooty-riding-girl-robbery-suspect-injured-in-encounter", time: "2026-04-19T04:46:14Z" },
-      { title: "Sikh pilgrims return home today via Wagah", source: "Dawn", url: "https://www.dawn.com/news/1993072/sikh-pilgrims-return-home-today-via-wagah", time: "2026-04-19T02:21:25Z" },
-      { title: "PM Shehbaz discusses global, regional issues during tri-nation tour", source: "Dawn", url: "https://www.dawn.com/news/1992851/pm-shehbaz-discusses-global-regional-issues-during-tri-nation-tour", time: "2026-04-18T12:33:13Z" },
-      { title: "LHC upholds govt’s policy abolishing free electricity units for power sector employees", source: "Dawn", url: "https://www.dawn.com/news/1992600/lhc-upholds-govts-policy-abolishing-free-electricity-units-for-power-sector-employees", time: "2026-04-17T11:37:46Z" },
-      { title: "Pakistan-based LeT's co-founder injured in attack in Lahore", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-based-lets-co-founder-injured-in-attack-in-lahore/article70872490.ece", time: "2026-04-17T05:56:09Z" },
-      { title: "Prominent lawyer Raza Kazim passes away at 96", source: "Dawn", url: "https://www.dawn.com/news/1992460/prominent-lawyer-raza-kazim-passes-away-at-96", time: "2026-04-17T03:02:43Z" },
-      { title: "Punjab Assembly unanimously adopts resolution recommending Nobel Peace Prize for PM, CDF Munir", source: "Dawn", url: "https://www.dawn.com/news/1992303/punjab-assembly-unanimously-adopts-resolution-recommending-nobel-peace-prize-for-pm-cdf-munir", time: "2026-04-16T14:14:38Z" },
-      { title: "Punjab Assembly unanimously adopts resolution reccomending Nobel Peace Prize for PM, CDF Munir", source: "Dawn", url: "https://www.dawn.com/news/1992303/punjab-assembly-unanimously-adopts-resolution-reccomending-nobel-peace-prize-for-pm-cdf-munir", time: "2026-04-16T13:05:37Z" },
-      { title: "Frequency of power, gas outages surges across Punjab", source: "Dawn", url: "https://www.dawn.com/news/1991864/frequency-of-power-gas-outages-surges-across-punjab", time: "2026-04-15T04:23:26Z" },
-      { title: "Lahore lawyers demand end to Imran’s solitary confinement", source: "Dawn", url: "https://www.dawn.com/news/1991814/lahore-lawyers-demand-end-to-imrans-solitary-confinement", time: "2026-04-15T03:06:36Z" },
-      { title: "Punjab mining bills draw flak for targeting forests", source: "Dawn", url: "https://www.dawn.com/news/1991815/punjab-mining-bills-draw-flak-for-targeting-forests", time: "2026-04-15T03:02:38Z" },
     ]
   },
   {
@@ -651,10 +623,35 @@ const locations = [
     ]
   },
   {
+    name: "Lahore", country: "Pakistan",
+    lat: 31.5204, lng: 74.3587,
+    category: "political",
+    articles: [
+      { title: "Biscuit firm directors, banker booked for tax evasion, fraud in Punjab", source: "Dawn", url: "https://www.dawn.com/news/1993939/biscuit-firm-directors-banker-booked-for-tax-evasion-fraud-in-punjab", time: "2026-04-22T04:07:25Z" },
+      { title: "Punjab Assembly speaker ‘eats his words’ on agricultural income tax within 24 hours", source: "Dawn", url: "https://www.dawn.com/news/1993936/punjab-assembly-speaker-eats-his-words-on-agricultural-income-tax-within-24-hours", time: "2026-04-22T04:06:23Z" },
+      { title: "Lahore High Court grants bail to Falak Javed in Azma Bokhari video case", source: "Dawn", url: "https://www.dawn.com/news/1993589/lahore-high-court-grants-bail-to-falak-javed-in-azma-bokhari-video-case", time: "2026-04-21T04:59:25Z" },
+      { title: "Punjab Assembly terms revised agriculture tax null and void", source: "Dawn", url: "https://www.dawn.com/news/1993586/punjab-assembly-terms-revised-agriculture-tax-null-and-void", time: "2026-04-21T02:15:17Z" },
+      { title: "The limits of Bushra Bibi’s power", source: "Dawn", url: "https://www.dawn.com/news/1975668/the-limits-of-bushra-bibis-power", time: "2026-04-20T12:32:49Z" },
+      { title: "CM Maryam approves Punjab’s first sky glass bridge in Murree", source: "Dawn", url: "https://www.dawn.com/news/1993292/cm-maryam-approves-punjabs-first-sky-glass-bridge-in-murree", time: "2026-04-20T05:51:24Z" },
+      { title: "Religious scholar Engineer Muhammad Ali Mirza survives attack in Jhelum", source: "Dawn", url: "https://www.dawn.com/news/1993211/religious-scholar-engineer-muhammad-ali-mirza-survives-attack-in-jhelum", time: "2026-04-19T19:59:06Z" },
+      { title: "Rawalpindi’s Ring Road to open without Thalian interchange", source: "Dawn", url: "https://www.dawn.com/news/1993148/rawalpindis-ring-road-to-open-without-thalian-interchange", time: "2026-04-19T05:10:29Z" },
+      { title: "Scooty-riding girl robbery suspect injured in ‘encounter’", source: "Dawn", url: "https://www.dawn.com/news/1993044/scooty-riding-girl-robbery-suspect-injured-in-encounter", time: "2026-04-19T04:46:14Z" },
+      { title: "Sikh pilgrims return home today via Wagah", source: "Dawn", url: "https://www.dawn.com/news/1993072/sikh-pilgrims-return-home-today-via-wagah", time: "2026-04-19T02:21:25Z" },
+      { title: "PM Shehbaz discusses global, regional issues during tri-nation tour", source: "Dawn", url: "https://www.dawn.com/news/1992851/pm-shehbaz-discusses-global-regional-issues-during-tri-nation-tour", time: "2026-04-18T12:33:13Z" },
+      { title: "LHC upholds govt’s policy abolishing free electricity units for power sector employees", source: "Dawn", url: "https://www.dawn.com/news/1992600/lhc-upholds-govts-policy-abolishing-free-electricity-units-for-power-sector-employees", time: "2026-04-17T11:37:46Z" },
+      { title: "Pakistan-based LeT's co-founder injured in attack in Lahore", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-based-lets-co-founder-injured-in-attack-in-lahore/article70872490.ece", time: "2026-04-17T05:56:09Z" },
+      { title: "Prominent lawyer Raza Kazim passes away at 96", source: "Dawn", url: "https://www.dawn.com/news/1992460/prominent-lawyer-raza-kazim-passes-away-at-96", time: "2026-04-17T03:02:43Z" },
+      { title: "Punjab Assembly unanimously adopts resolution recommending Nobel Peace Prize for PM, CDF Munir", source: "Dawn", url: "https://www.dawn.com/news/1992303/punjab-assembly-unanimously-adopts-resolution-recommending-nobel-peace-prize-for-pm-cdf-munir", time: "2026-04-16T14:14:38Z" },
+      { title: "Punjab Assembly unanimously adopts resolution reccomending Nobel Peace Prize for PM, CDF Munir", source: "Dawn", url: "https://www.dawn.com/news/1992303/punjab-assembly-unanimously-adopts-resolution-reccomending-nobel-peace-prize-for-pm-cdf-munir", time: "2026-04-16T13:05:37Z" },
+    ]
+  },
+  {
     name: "Kashmir", country: "India/Pakistan",
     lat: 34.0837, lng: 74.7973,
     category: "security",
     articles: [
+      { title: "A Year After Terrorist Attack, a Kashmir Town Longs for Tourists", source: "New York Times", url: "https://www.nytimes.com/2026/04/22/world/asia/kashmir-attacks-kashmir-india.html", time: "2026-04-22T04:00:09Z" },
+      { title: "No woman in race as 666 file papers for GB polls", source: "Dawn", url: "https://www.dawn.com/news/1993963/no-woman-in-race-as-666-file-papers-for-gb-polls", time: "2026-04-22T03:02:42Z" },
       { title: "Nawaz highlights PML-N’s focus on development ahead of GB elections", source: "Dawn", url: "https://www.dawn.com/news/1993801/nawaz-highlights-pml-ns-focus-on-development-ahead-of-gb-elections", time: "2026-04-21T12:59:51Z" },
       { title: "Tourists trickle back to Kashmir, one year after deadly attack", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/tourists-trickle-back-to-kashmir-one-year-after-deadly-attack", time: "2026-04-21T03:52:00Z" },
       { title: "At least 21 killed as bus crashes into Kashmir gorge", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/at-least-21-killed-as-bus-skids-off-kashmir-road-into-gorge?traffic_source=rss", time: "2026-04-20T16:48:44Z" },
@@ -728,22 +725,12 @@ const locations = [
     lat: 34.0151, lng: 71.5249,
     category: "security",
     articles: [
+      { title: "Six terrorists killed in Khyber, Bannu operations", source: "Dawn", url: "https://www.dawn.com/news/1993985/six-terrorists-killed-in-khyber-bannu-operations", time: "2026-04-22T00:38:30Z" },
       { title: "Water worries grip KP farmers amid Indus Treaty concerns", source: "Dawn", url: "https://www.dawn.com/news/1993394/water-worries-grip-kp-farmers-amid-indus-treaty-concerns", time: "2026-04-20T02:59:47Z" },
       { title: "Forces target terrorist positions on Peshawar outskirts", source: "Dawn", url: "https://www.dawn.com/news/1993397/forces-target-terrorist-positions-on-peshawar-outskirts", time: "2026-04-20T02:54:56Z" },
       { title: "8 killed, 11 injured as gas supply line catches fire in KP’s Haripur", source: "Dawn", url: "https://www.dawn.com/news/1992380/8-killed-11-injured-as-gas-supply-line-catches-fire-in-kps-haripur", time: "2026-04-16T18:59:40Z" },
       { title: "Man buried under rubble rescued alive 16 days after mine collapse in KP’s Mardan", source: "Dawn", url: "https://www.dawn.com/news/1992304/man-buried-under-rubble-rescued-alive-16-days-after-mine-collapse-in-kps-mardan", time: "2026-04-16T14:11:31Z" },
       { title: "Pakistan considering buying LNG on spot market to offset supply disruptions caused by Iran war: petroleum minister", source: "Dawn", url: "https://www.dawn.com/news/1992034/pakistan-considering-buying-lng-on-spot-market-to-offset-supply-disruptions-caused-by-iran-war-petroleum-minister", time: "2026-04-15T18:41:54Z" },
-    ]
-  },
-  {
-    name: "Hyderabad", country: "India",
-    lat: 17.385, lng: 78.4867,
-    category: "economic",
-    articles: [
-      { title: "Healers who kill", source: "Dawn", url: "https://www.dawn.com/news/1993111/healers-who-kill", time: "2026-04-19T04:19:03Z" },
-      { title: "Govt admits up to seven hours of power outages", source: "Dawn", url: "https://www.dawn.com/news/1992471/govt-admits-up-to-seven-hours-of-power-outages", time: "2026-04-17T02:28:20Z" },
-      { title: "Power minister reiterates govt’s apology for power cuts arising from ‘out of control’ situation", source: "Dawn", url: "https://www.dawn.com/news/1992295/power-minister-reiterates-govts-apology-for-power-cuts-arising-from-out-of-control-situation", time: "2026-04-16T13:21:50Z" },
-      { title: "Senate panel flags massive smuggling, tax evasion, revenue losses", source: "Dawn", url: "https://www.dawn.com/news/1991818/senate-panel-flags-massive-smuggling-tax-evasion-revenue-losses", time: "2026-04-15T03:14:54Z" },
     ]
   },
   {
@@ -755,6 +742,16 @@ const locations = [
       { title: "U.S. forces board a sanctioned oil tanker 'without incident' in the Indian Ocean, the Pentagon says", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-forces-board-a-sanctioned-oil-tanker-without-incident-in-the-indian-ocean-the-pentagon-says", time: "2026-04-21T14:43:16Z" },
       { title: "U.S. forces board oil tanker previously sanctioned for smuggling Iranian crude oil", source: "The Hindu", url: "https://www.thehindu.com/news/international/us-forces-board-oil-tanker-previously-sanctioned-for-smuggling-iranian-crude-oil/article70888530.ece", time: "2026-04-21T12:47:55Z" },
       { title: "Sri Lanka repatriates survivors of U.S. torpedo attack on Iranian ship", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lanka-repatriates-survivors-of-us-torpedo-attack-on-iranian-ship/article70875078.ece", time: "2026-04-17T16:33:49Z" },
+    ]
+  },
+  {
+    name: "Hyderabad", country: "India",
+    lat: 17.385, lng: 78.4867,
+    category: "economic",
+    articles: [
+      { title: "Healers who kill", source: "Dawn", url: "https://www.dawn.com/news/1993111/healers-who-kill", time: "2026-04-19T04:19:03Z" },
+      { title: "Govt admits up to seven hours of power outages", source: "Dawn", url: "https://www.dawn.com/news/1992471/govt-admits-up-to-seven-hours-of-power-outages", time: "2026-04-17T02:28:20Z" },
+      { title: "Power minister reiterates govt’s apology for power cuts arising from ‘out of control’ situation", source: "Dawn", url: "https://www.dawn.com/news/1992295/power-minister-reiterates-govts-apology-for-power-cuts-arising-from-out-of-control-situation", time: "2026-04-16T13:21:50Z" },
     ]
   },
   {
