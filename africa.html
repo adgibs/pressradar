@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:56 UTC, 25 Apr 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:42 UTC, 25 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">25 April 2026</div>
@@ -118,6 +118,8 @@ const locations = [
     articles: [
       { title: "University to create memorial for people whose remains were stolen and dumped in a well", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/vcu-well-bones-remains-medical-b2964676.html", time: "2026-04-24T20:46:31Z" },
       { title: "Nigeria: N1bn - Yahaya Bello Wins Defamation Suit Against Natasha Akpoti-Uduaghan", source: "AllAfrica", url: "https://allafrica.com/stories/202604240568.html", time: "2026-04-24T15:29:39Z" },
+      { title: "Nigeria: Trending - 'Our Education, English Accent 'Better' Than Nigeria's' - Kenyan President", source: "AllAfrica", url: "https://allafrica.com/stories/202604240562.html", time: "2026-04-24T15:26:44Z" },
+      { title: "Nigeria: Ex-Super Eagles Forward Eneramo Dies After On-Field Collapse", source: "AllAfrica", url: "https://allafrica.com/stories/202604240556.html", time: "2026-04-24T15:24:04Z" },
       { title: "Nigeria: Nigerian Breweries Quarterly Profit Up 26 Percent On Higher Revenue, Lower Finance Costs", source: "AllAfrica", url: "https://allafrica.com/stories/202604240549.html", time: "2026-04-24T15:20:16Z" },
       { title: "Former Nigeria striker Eneramo dies during match", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c05d3zd1npjo?at_medium=RSS&at_campaign=rss", time: "2026-04-24T15:10:01Z" },
       { title: "French foreign minister Barrot voices concern about 'terrorist threat' in the Sahel", source: "France 24", url: "https://www.france24.com/en/africa/20260424-french-foreign-minister-barrot-voices-concern-about-terrorist-threat-in-the-sahel", time: "2026-04-24T14:56:36Z" },
@@ -221,7 +223,10 @@ const locations = [
       { title: "Kenyan Court Strikes Down Ruling Protecting Right to Abortion", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/world/africa/kenya-court-abortion-ruling.html", time: "2026-04-24T23:12:17Z" },
       { title: "Kenya: Kenya's Kcb Volleyball Club Finishes Second At Continental Championship", source: "AllAfrica", url: "https://allafrica.com/stories/202604240576.html", time: "2026-04-24T15:40:50Z" },
       { title: "Kenya: Nairobi Water Confirms Martin Nang'ole As Managing Director", source: "AllAfrica", url: "https://allafrica.com/stories/202604240575.html", time: "2026-04-24T15:39:39Z" },
+      { title: "Kenya: PS Mugambi Lauds Kibiwott's 23,000 Tree Feat, Rallies Public Participation", source: "AllAfrica", url: "https://allafrica.com/stories/202604240567.html", time: "2026-04-24T15:29:03Z" },
+      { title: "Kenya: MP Njeri Maina Questions State House Spending As Education Funding Concerns Grow", source: "AllAfrica", url: "https://allafrica.com/stories/202604240566.html", time: "2026-04-24T15:28:45Z" },
       { title: "Africa: Ruto Urges Africa to Mobilise Domestic Capital, Warns Foreign Funding Delays Infrastructure Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202604240565.html", time: "2026-04-24T15:28:03Z" },
+      { title: "Kenya: Ndunde Investments Files Urgent Court Case Over Alleged Fraudulent Takeover of Paradise Lost Land", source: "AllAfrica", url: "https://allafrica.com/stories/202604240564.html", time: "2026-04-24T15:27:41Z" },
       { title: "Kenya: President Ruto Dismisses Criticism, Vows to Deepen Development Agenda in Central Kenya", source: "AllAfrica", url: "https://allafrica.com/stories/202604240563.html", time: "2026-04-24T15:27:21Z" },
       { title: "Kenya: Kiambu 200-Acre Paradise Lost Land Battle Escalates As Family Claims Long-Term Ownership Since 1929", source: "AllAfrica", url: "https://allafrica.com/stories/202604240531.html", time: "2026-04-24T15:12:23Z" },
       { title: "Kenya: UAE Assures Safety of 30,000 Kenyans As Middle East Tensions Persist", source: "AllAfrica", url: "https://allafrica.com/stories/202604240206.html", time: "2026-04-24T10:07:32Z" },
@@ -336,7 +341,6 @@ const locations = [
       { title: "Liberia: Freeport of Monrovia Holds High-Intensity Port Security Drill", source: "AllAfrica", url: "https://allafrica.com/stories/202604200354.html", time: "2026-04-20T08:55:11Z" },
       { title: "Liberia: Boakai Launches $363.9m Western Corridor Highway Project", source: "AllAfrica", url: "https://allafrica.com/stories/202604200352.html", time: "2026-04-20T08:54:42Z" },
       { title: "Liberia: When the House Defies the Court, Liberia Loses", source: "AllAfrica", url: "https://allafrica.com/stories/202604200351.html", time: "2026-04-20T08:54:27Z" },
-      { title: "In Liberia, concerns are growing over gold mining pollution", source: "France 24", url: "https://www.france24.com/en/in-liberia-concerns-are-growing-over-gold-mining-pollution", time: "2026-04-18T11:37:08Z" },
     ]
   },
   {
@@ -368,32 +372,6 @@ const locations = [
     ]
   },
   {
-    name: "Khartoum", country: "Sudan",
-    lat: 15.5007, lng: 32.5599,
-    category: "conflict",
-    articles: [
-      { title: "Nepal’s home minister resigns, second cabinet exit in one month", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/22/nepals-home-minister-resigns-second-cabinet-exit-in-one-month?traffic_source=rss", time: "2026-04-22T15:19:02Z" },
-      { title: "Sudan: Millions of Desperate Sudanese Return Home Amid Dire Conditions As War Rages", source: "AllAfrica", url: "https://allafrica.com/stories/202604220013.html", time: "2026-04-22T04:36:15Z" },
-      { title: "Sudan: '4m Returnees in Sudan At Risk As Services Collapse' - IOM", source: "AllAfrica", url: "https://allafrica.com/stories/202604220014.html", time: "2026-04-22T04:36:15Z" },
-      { title: "Phone tracking shows how Colombian mercenaries backed Sudan's RSF - report", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4vk13wgwwo?at_medium=RSS&at_campaign=rss", time: "2026-04-22T04:01:50Z" },
-      { title: "Sudan refugees returning home face new ‘struggle for survival’: UN", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/sudan-refugees-returning-home-face-new-struggle-for-survival-un?traffic_source=rss", time: "2026-04-21T20:32:32Z" },
-      { title: "Woman charged in US with trafficking arms to Sudan for Iranian government", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/woman-charged-in-us-with-trafficking-arms-to-sudan-for-iranian-government?traffic_source=rss", time: "2026-04-20T17:46:29Z" },
-      { title: "A top paramilitary commander defects to Sudan's military as war enters 4th year", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/a-top-paramilitary-commander-defects-to-sudans-military-as-war-enters-4th-year", time: "2026-04-20T15:50:23Z" },
-      { title: "Iranian woman arrested in US for allegedly trafficking arms to Sudan", source: "BBC News", url: "https://www.bbc.com/news/articles/ce9m7m1nmdeo?at_medium=RSS&at_campaign=rss", time: "2026-04-20T13:32:58Z" },
-      { title: "Iraq’s ruling Shia bloc races to choose PM as US, Iran watch", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/iraqs-ruling-shia-bloc-races-to-choose-pm-as-us-iran-watch?traffic_source=rss", time: "2026-04-20T12:15:26Z" },
-      { title: "Inside war-hit Sudan’s only functioning hospital curing tropical diseases", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/inside-war-hit-sudans-only-functioning-hospital-curing-tropical-diseases?traffic_source=rss", time: "2026-04-20T09:10:16Z" },
-      { title: "Sudan: 46 Companies Qualified to Bid for Irrigation Canal Maintenance At Gezira Scheme", source: "AllAfrica", url: "https://allafrica.com/stories/202604200207.html", time: "2026-04-20T05:19:43Z" },
-      { title: "Sudan: Health Minister's Advisory Council Discusses 'Defeat Malaria' Initiative and Digital Transformation", source: "AllAfrica", url: "https://allafrica.com/stories/202604200208.html", time: "2026-04-20T05:19:43Z" },
-      { title: "Iranian American woman arrested in Los Angeles for alleged arms trafficking", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/apr/19/woman-arrested-la-arms-trafficking-iran-africa", time: "2026-04-19T21:56:30Z" },
-      { title: "Iranian businesswoman on green card arrested at LAX for allegedly selling arms for the regime", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/iranian-woman-arrested-lax-arms-sales-b2960670.html", time: "2026-04-19T18:19:11Z" },
-      { title: "Sudan: Sudan - Three Quarters of Women Feel Unsafe As War Rages On", source: "AllAfrica", url: "https://allafrica.com/stories/202604190007.html", time: "2026-04-19T00:16:17Z" },
-      { title: "Africa: IGAD Envoy to Sudan - 'Quintet to Convene Meeting for Those Absent From Berlin Conf'", source: "AllAfrica", url: "https://allafrica.com/stories/202604190005.html", time: "2026-04-19T00:15:06Z" },
-      { title: "'The weapons were loud, but there was always music': Sudanese band play on through the war", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2ddjv90v9o?at_medium=RSS&at_campaign=rss", time: "2026-04-18T23:09:49Z" },
-      { title: "Sudanese refugees trapped between borders and bureaucracy in Morocco", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/4/18/sudanese-refugees-trapped-between-borders-and-bureaucracy-in-morocco?traffic_source=rss", time: "2026-04-18T18:51:05Z" },
-      { title: "Sudan war enters fourth year as the humanitarian crisis deepens", source: "France 24", url: "https://www.france24.com/en/sudan-war-enters-fourth-year-as-the-humanitarian-crisis-deepens", time: "2026-04-18T11:39:40Z" },
-    ]
-  },
-  {
     name: "Kinshasa", country: "DR Congo",
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
@@ -417,6 +395,31 @@ const locations = [
       { title: "Congo-Kinshasa: UN Welcomes Progress On Talks Between DR Congo, M23 Armed Group", source: "AllAfrica", url: "https://allafrica.com/stories/202604200663.html", time: "2026-04-20T11:54:54Z" },
       { title: "Congo-Kinshasa: DR Congo - Fresh Attacks Reported After New Round of Peace Talks", source: "AllAfrica", url: "https://allafrica.com/stories/202604200102.html", time: "2026-04-20T04:28:15Z" },
       { title: "Congo-Kinshasa: Joint Statement on Progress Between DR Congo and AFC/M23 on the Ceasefire Meetings in Switzerland", source: "AllAfrica", url: "https://allafrica.com/stories/202604190001.html", time: "2026-04-19T00:04:39Z" },
+    ]
+  },
+  {
+    name: "Khartoum", country: "Sudan",
+    lat: 15.5007, lng: 32.5599,
+    category: "conflict",
+    articles: [
+      { title: "Nepal’s home minister resigns, second cabinet exit in one month", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/22/nepals-home-minister-resigns-second-cabinet-exit-in-one-month?traffic_source=rss", time: "2026-04-22T15:19:02Z" },
+      { title: "Sudan: Millions of Desperate Sudanese Return Home Amid Dire Conditions As War Rages", source: "AllAfrica", url: "https://allafrica.com/stories/202604220013.html", time: "2026-04-22T04:36:15Z" },
+      { title: "Sudan: '4m Returnees in Sudan At Risk As Services Collapse' - IOM", source: "AllAfrica", url: "https://allafrica.com/stories/202604220014.html", time: "2026-04-22T04:36:15Z" },
+      { title: "Phone tracking shows how Colombian mercenaries backed Sudan's RSF - report", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4vk13wgwwo?at_medium=RSS&at_campaign=rss", time: "2026-04-22T04:01:50Z" },
+      { title: "Sudan refugees returning home face new ‘struggle for survival’: UN", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/sudan-refugees-returning-home-face-new-struggle-for-survival-un?traffic_source=rss", time: "2026-04-21T20:32:32Z" },
+      { title: "Woman charged in US with trafficking arms to Sudan for Iranian government", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/woman-charged-in-us-with-trafficking-arms-to-sudan-for-iranian-government?traffic_source=rss", time: "2026-04-20T17:46:29Z" },
+      { title: "A top paramilitary commander defects to Sudan's military as war enters 4th year", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/a-top-paramilitary-commander-defects-to-sudans-military-as-war-enters-4th-year", time: "2026-04-20T15:50:23Z" },
+      { title: "Iranian woman arrested in US for allegedly trafficking arms to Sudan", source: "BBC News", url: "https://www.bbc.com/news/articles/ce9m7m1nmdeo?at_medium=RSS&at_campaign=rss", time: "2026-04-20T13:32:58Z" },
+      { title: "Iraq’s ruling Shia bloc races to choose PM as US, Iran watch", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/iraqs-ruling-shia-bloc-races-to-choose-pm-as-us-iran-watch?traffic_source=rss", time: "2026-04-20T12:15:26Z" },
+      { title: "Inside war-hit Sudan’s only functioning hospital curing tropical diseases", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/inside-war-hit-sudans-only-functioning-hospital-curing-tropical-diseases?traffic_source=rss", time: "2026-04-20T09:10:16Z" },
+      { title: "Sudan: 46 Companies Qualified to Bid for Irrigation Canal Maintenance At Gezira Scheme", source: "AllAfrica", url: "https://allafrica.com/stories/202604200207.html", time: "2026-04-20T05:19:43Z" },
+      { title: "Sudan: Health Minister's Advisory Council Discusses 'Defeat Malaria' Initiative and Digital Transformation", source: "AllAfrica", url: "https://allafrica.com/stories/202604200208.html", time: "2026-04-20T05:19:43Z" },
+      { title: "Iranian American woman arrested in Los Angeles for alleged arms trafficking", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/apr/19/woman-arrested-la-arms-trafficking-iran-africa", time: "2026-04-19T21:56:30Z" },
+      { title: "Iranian businesswoman on green card arrested at LAX for allegedly selling arms for the regime", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/iranian-woman-arrested-lax-arms-sales-b2960670.html", time: "2026-04-19T18:19:11Z" },
+      { title: "Sudan: Sudan - Three Quarters of Women Feel Unsafe As War Rages On", source: "AllAfrica", url: "https://allafrica.com/stories/202604190007.html", time: "2026-04-19T00:16:17Z" },
+      { title: "Africa: IGAD Envoy to Sudan - 'Quintet to Convene Meeting for Those Absent From Berlin Conf'", source: "AllAfrica", url: "https://allafrica.com/stories/202604190005.html", time: "2026-04-19T00:15:06Z" },
+      { title: "'The weapons were loud, but there was always music': Sudanese band play on through the war", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2ddjv90v9o?at_medium=RSS&at_campaign=rss", time: "2026-04-18T23:09:49Z" },
+      { title: "Sudanese refugees trapped between borders and bureaucracy in Morocco", source: "Al Jazeera", url: "https://www.aljazeera.com/features/longform/2026/4/18/sudanese-refugees-trapped-between-borders-and-bureaucracy-in-morocco?traffic_source=rss", time: "2026-04-18T18:51:05Z" },
     ]
   },
   {
@@ -466,6 +469,27 @@ const locations = [
     ]
   },
   {
+    name: "Bamako", country: "Mali",
+    lat: 12.6392, lng: -8.0029,
+    category: "conflict",
+    articles: [
+      { title: "Coordinated attacks hit Bamako and Northern Mali", source: "France 24", url: "https://www.france24.com/en/coordinated-attacks-hit-bamako-and-northern-mali", time: "2026-04-25T11:26:16Z" },
+      { title: "Mali army says armed groups launch coordinated attacks across country", source: "BBC News", url: "https://www.bbc.com/news/articles/clyx7nnrkqdo?at_medium=RSS&at_campaign=rss", time: "2026-04-25T10:33:26Z" },
+      { title: "Gunfire rocks Bamako: 'Too soon to tell' if junta will fall", source: "France 24", url: "https://www.france24.com/en/mali-army-says-fighting-terrorist-groups-amidst-gunfire", time: "2026-04-25T10:29:40Z" },
+      { title: "Terrorists stage simultaneous attacks in Mali, authorities say", source: "Sky News", url: "https://news.sky.com/story/terrorists-stage-simultaneous-attacks-in-mali-authorities-say-13536188", time: "2026-04-25T10:12:00Z" },
+      { title: "Mali attacks live: Gunfire heard near Bamako airport and in several cities", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/25/mali-attacks-live-gunfire-heard-near-bamako-airport-and-in-several-cities?traffic_source=rss", time: "2026-04-25T10:04:58Z" },
+      { title: "Mali live: Army says armed 'terrorist' groups launch attacks on military positions nationwide", source: "France 24", url: "https://www.france24.com/en/africa/20260425-mali-live-army-says-armed-terrorist-groups-launch-attacks-on-military-positions-nationwide", time: "2026-04-25T09:35:38Z" },
+      { title: "Mali army says armed groups launch nationwide attacks; gunfire near airport", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/mali-army-says-armed-groups-launch-nationwide-attacks-gunfire-near-airport?traffic_source=rss", time: "2026-04-25T09:21:24Z" },
+      { title: "Mali army says armed 'terrorist' groups attacked military positions", source: "France 24", url: "https://www.france24.com/en/africa/20260425-mali-army-says-armed-terrorist-groups-attacked-military-positions", time: "2026-04-25T09:06:36Z" },
+      { title: "More than 6 million Somalis face hunger amid climate shocks and conflict", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/23/more-than-6-million-somalis-face-hunger-amid-climate-shocks-and-conflict?traffic_source=rss", time: "2026-04-23T17:45:35Z" },
+      { title: "American adults are back to pregaming as $20 drinks become normalized across bars and venues", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/american-adults-pregaming-expensive-drinks-b2963673.html", time: "2026-04-23T16:38:36Z" },
+      { title: "Gaza’s unseen casualties: A surge in stillbirths and birth defects", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/22/gazas-unseen-casualties-a-surge-in-stillbirths-and-birth-defects?traffic_source=rss", time: "2026-04-22T09:02:55Z" },
+      { title: "MAGA lawmaker calls Somalis a ‘net drain on society’ in interview", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/brandon-gill-somalis-interview-b2961965.html", time: "2026-04-21T15:44:41Z" },
+      { title: "Iran’s World Cup participation depends on team’s safety in the US: Minister", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/21/irans-world-cup-participation-depends-on-teams-safety-in-the-us-minister?traffic_source=rss", time: "2026-04-21T14:02:08Z" },
+      { title: "Kash Patel files $250M defamation lawsuit against The Atlantic over ‘hit piece’ on his FBI leadership", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/kash-patel-fbi-atlantic-lawsuit-b2961177.html", time: "2026-04-20T14:42:14Z" },
+    ]
+  },
+  {
     name: "Kampala", country: "Uganda",
     lat: 0.3476, lng: 32.5825,
     category: "political",
@@ -483,25 +507,6 @@ const locations = [
       { title: "Uganda: Nwsc Flags Leakages As Water Sector Shifts to Efficiency", source: "AllAfrica", url: "https://allafrica.com/stories/202604200853.html", time: "2026-04-20T14:42:50Z" },
       { title: "Uganda: Leaders Mourn Kalangala MP Hellen Nakimuli", source: "AllAfrica", url: "https://allafrica.com/stories/202604200348.html", time: "2026-04-20T08:53:47Z" },
       { title: "Uganda: Veteran Journalist Joe Nam Shot Dead in Kampala", source: "AllAfrica", url: "https://allafrica.com/stories/202604200188.html", time: "2026-04-20T05:13:55Z" },
-    ]
-  },
-  {
-    name: "Bamako", country: "Mali",
-    lat: 12.6392, lng: -8.0029,
-    category: "conflict",
-    articles: [
-      { title: "Mali army says armed groups launch coordinated attacks across country", source: "BBC News", url: "https://www.bbc.com/news/articles/clyx7nnrkqdo?at_medium=RSS&at_campaign=rss", time: "2026-04-25T10:33:26Z" },
-      { title: "Gunfire rocks Bamako: 'Too soon to tell' if junta will fall", source: "France 24", url: "https://www.france24.com/en/mali-army-says-fighting-terrorist-groups-amidst-gunfire", time: "2026-04-25T10:29:40Z" },
-      { title: "Mali attacks live: Gunfire heard near Bamako airport and in several cities", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/25/mali-attacks-live-gunfire-heard-near-bamako-airport-and-in-several-cities?traffic_source=rss", time: "2026-04-25T10:04:58Z" },
-      { title: "Mali live: Army says armed 'terrorist' groups launch attacks on military positions nationwide", source: "France 24", url: "https://www.france24.com/en/africa/20260425-mali-live-army-says-armed-terrorist-groups-launch-attacks-on-military-positions-nationwide", time: "2026-04-25T09:35:38Z" },
-      { title: "Mali army says armed groups launch nationwide attacks; gunfire near airport", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/mali-army-says-armed-groups-launch-nationwide-attacks-gunfire-near-airport?traffic_source=rss", time: "2026-04-25T09:21:24Z" },
-      { title: "Mali army says armed 'terrorist' groups attacked military positions", source: "France 24", url: "https://www.france24.com/en/africa/20260425-mali-army-says-armed-terrorist-groups-attacked-military-positions", time: "2026-04-25T09:06:36Z" },
-      { title: "More than 6 million Somalis face hunger amid climate shocks and conflict", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/23/more-than-6-million-somalis-face-hunger-amid-climate-shocks-and-conflict?traffic_source=rss", time: "2026-04-23T17:45:35Z" },
-      { title: "American adults are back to pregaming as $20 drinks become normalized across bars and venues", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/american-adults-pregaming-expensive-drinks-b2963673.html", time: "2026-04-23T16:38:36Z" },
-      { title: "Gaza’s unseen casualties: A surge in stillbirths and birth defects", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/22/gazas-unseen-casualties-a-surge-in-stillbirths-and-birth-defects?traffic_source=rss", time: "2026-04-22T09:02:55Z" },
-      { title: "MAGA lawmaker calls Somalis a ‘net drain on society’ in interview", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/brandon-gill-somalis-interview-b2961965.html", time: "2026-04-21T15:44:41Z" },
-      { title: "Iran’s World Cup participation depends on team’s safety in the US: Minister", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/21/irans-world-cup-participation-depends-on-teams-safety-in-the-us-minister?traffic_source=rss", time: "2026-04-21T14:02:08Z" },
-      { title: "Kash Patel files $250M defamation lawsuit against The Atlantic over ‘hit piece’ on his FBI leadership", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/kash-patel-fbi-atlantic-lawsuit-b2961177.html", time: "2026-04-20T14:42:14Z" },
     ]
   },
   {
@@ -523,6 +528,40 @@ const locations = [
     ]
   },
   {
+    name: "Abuja", country: "Nigeria",
+    lat: 9.0579, lng: 7.4951,
+    category: "political",
+    articles: [
+      { title: "Nigeria: Court Adjourns Yahaya Bello's Trial Until May 6", source: "AllAfrica", url: "https://allafrica.com/stories/202604240555.html", time: "2026-04-24T15:23:44Z" },
+      { title: "Nigeria: Edun Hands Over to Oyedele", source: "AllAfrica", url: "https://allafrica.com/stories/202604240554.html", time: "2026-04-24T15:23:05Z" },
+      { title: "Nigeria: 12 of 416 Ngoshe Captives Escape From Boko Haram Terrorists", source: "AllAfrica", url: "https://allafrica.com/stories/202604240026.html", time: "2026-04-24T04:48:00Z" },
+      { title: "Nigeria: Nigeria Election Looms - Violence Rises, Sahel Jihadists Make Inroads", source: "AllAfrica", url: "https://allafrica.com/stories/202604230325.html", time: "2026-04-23T11:41:17Z" },
+      { title: "Nigeria: Retired General, Five Others Plead Not Guilty to Coup Charges, Court Adjourns Bail Hearing", source: "AllAfrica", url: "https://allafrica.com/stories/202604230018.html", time: "2026-04-23T05:01:13Z" },
+      { title: "Africa: The Ballot Box Illusion - How Authoritarians Repackaged the African Ballot", source: "AllAfrica", url: "https://allafrica.com/stories/202604220402.html", time: "2026-04-22T11:57:33Z" },
+      { title: "Nigeria: Court Adjourns Chinese Nationals' Illegal Mining Trial for Final Arguments", source: "AllAfrica", url: "https://allafrica.com/stories/202604210466.html", time: "2026-04-21T15:26:29Z" },
+      { title: "Nigeria: No, Nigerian Army Did Not 'Recently' Arrest 488 Boko Haram Members in Abia State", source: "AllAfrica", url: "https://allafrica.com/stories/202604210451.html", time: "2026-04-21T15:18:56Z" },
+      { title: "Nigeria: Ex-PDP Spokesman, Metuh, Appointed Mobilisation Chief for Tinubu's Campaign", source: "AllAfrica", url: "https://allafrica.com/stories/202604200514.html", time: "2026-04-20T10:27:08Z" },
+      { title: "Nigeria: Govt Denies Federation Revenue Diversion", source: "AllAfrica", url: "https://allafrica.com/stories/202604200295.html", time: "2026-04-20T07:26:16Z" },
+    ]
+  },
+  {
+    name: "Luanda", country: "Angola",
+    lat: -8.839, lng: 13.2894,
+    category: "economic",
+    articles: [
+      { title: "Angola: Court of Auditors Approves Opinion On the General State Account for 2024", source: "AllAfrica", url: "https://allafrica.com/stories/202604240561.html", time: "2026-04-24T15:26:24Z" },
+      { title: "Angola: Strengthening Supervision Increases Transparency in the Financial Market", source: "AllAfrica", url: "https://allafrica.com/stories/202604240560.html", time: "2026-04-24T15:25:39Z" },
+      { title: "Angola: Former Cape Verdean President Highlights Historic Cooperation With Angola", source: "AllAfrica", url: "https://allafrica.com/stories/202604240557.html", time: "2026-04-24T15:24:42Z" },
+      { title: "Angola: Namibia Funds N$4 Billion Power Link With Angola", source: "AllAfrica", url: "https://allafrica.com/stories/202604200696.html", time: "2026-04-20T12:20:36Z" },
+      { title: "Pope Leo XIV recalls 'great suffering' at historic slave trade shrine in Angola", source: "France 24", url: "https://www.france24.com/en/africa/20260420-pope-leo-xiv-recalls-great-suffering-at-historic-slave-trade-shrine-in-angola", time: "2026-04-20T00:42:03Z" },
+      { title: "Pope Leo tells Angola during huge Mass to ‘build hope’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/19/pope-leo-tells-angola-during-huge-mass-to-build-hope?traffic_source=rss", time: "2026-04-19T11:45:48Z" },
+      { title: "In Angola, love for an American pope but not for an American president", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/19/pope-leo-africa-angola-trump/", time: "2026-04-19T09:00:31Z" },
+      { title: "Angola: Isaac Dos Anjos Is Undermining Angola's Credibility", source: "AllAfrica", url: "https://allafrica.com/stories/202604190008.html", time: "2026-04-19T00:16:41Z" },
+      { title: "Pope Leo XIV condemns 'logic of extractivism' in Angola visit", source: "France 24", url: "https://www.france24.com/en/africa/20260418-pope-leo-xiv-condemns-logic-of-extractivism-in-angola-visit", time: "2026-04-18T17:18:26Z" },
+      { title: "Pope Leo arrives in Angola, the third stop on his visit to Africa", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-arrives-in-angola-the-third-stop-on-his-visit-to-africa", time: "2026-04-18T14:45:00Z" },
+    ]
+  },
+  {
     name: "Addis Ababa", country: "Ethiopia",
     lat: 9.025, lng: 38.7469,
     category: "conflict",
@@ -539,40 +578,11 @@ const locations = [
     ]
   },
   {
-    name: "Abuja", country: "Nigeria",
-    lat: 9.0579, lng: 7.4951,
-    category: "political",
-    articles: [
-      { title: "Nigeria: Court Adjourns Yahaya Bello's Trial Until May 6", source: "AllAfrica", url: "https://allafrica.com/stories/202604240555.html", time: "2026-04-24T15:23:44Z" },
-      { title: "Nigeria: 12 of 416 Ngoshe Captives Escape From Boko Haram Terrorists", source: "AllAfrica", url: "https://allafrica.com/stories/202604240026.html", time: "2026-04-24T04:48:00Z" },
-      { title: "Nigeria: Nigeria Election Looms - Violence Rises, Sahel Jihadists Make Inroads", source: "AllAfrica", url: "https://allafrica.com/stories/202604230325.html", time: "2026-04-23T11:41:17Z" },
-      { title: "Nigeria: Retired General, Five Others Plead Not Guilty to Coup Charges, Court Adjourns Bail Hearing", source: "AllAfrica", url: "https://allafrica.com/stories/202604230018.html", time: "2026-04-23T05:01:13Z" },
-      { title: "Africa: The Ballot Box Illusion - How Authoritarians Repackaged the African Ballot", source: "AllAfrica", url: "https://allafrica.com/stories/202604220402.html", time: "2026-04-22T11:57:33Z" },
-      { title: "Nigeria: Court Adjourns Chinese Nationals' Illegal Mining Trial for Final Arguments", source: "AllAfrica", url: "https://allafrica.com/stories/202604210466.html", time: "2026-04-21T15:26:29Z" },
-      { title: "Nigeria: No, Nigerian Army Did Not 'Recently' Arrest 488 Boko Haram Members in Abia State", source: "AllAfrica", url: "https://allafrica.com/stories/202604210451.html", time: "2026-04-21T15:18:56Z" },
-      { title: "Nigeria: Ex-PDP Spokesman, Metuh, Appointed Mobilisation Chief for Tinubu's Campaign", source: "AllAfrica", url: "https://allafrica.com/stories/202604200514.html", time: "2026-04-20T10:27:08Z" },
-      { title: "Nigeria: Govt Denies Federation Revenue Diversion", source: "AllAfrica", url: "https://allafrica.com/stories/202604200295.html", time: "2026-04-20T07:26:16Z" },
-    ]
-  },
-  {
-    name: "Luanda", country: "Angola",
-    lat: -8.839, lng: 13.2894,
-    category: "economic",
-    articles: [
-      { title: "Angola: Namibia Funds N$4 Billion Power Link With Angola", source: "AllAfrica", url: "https://allafrica.com/stories/202604200696.html", time: "2026-04-20T12:20:36Z" },
-      { title: "Pope Leo XIV recalls 'great suffering' at historic slave trade shrine in Angola", source: "France 24", url: "https://www.france24.com/en/africa/20260420-pope-leo-xiv-recalls-great-suffering-at-historic-slave-trade-shrine-in-angola", time: "2026-04-20T00:42:03Z" },
-      { title: "Pope Leo tells Angola during huge Mass to ‘build hope’", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/19/pope-leo-tells-angola-during-huge-mass-to-build-hope?traffic_source=rss", time: "2026-04-19T11:45:48Z" },
-      { title: "In Angola, love for an American pope but not for an American president", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/19/pope-leo-africa-angola-trump/", time: "2026-04-19T09:00:31Z" },
-      { title: "Angola: Isaac Dos Anjos Is Undermining Angola's Credibility", source: "AllAfrica", url: "https://allafrica.com/stories/202604190008.html", time: "2026-04-19T00:16:41Z" },
-      { title: "Pope Leo XIV condemns 'logic of extractivism' in Angola visit", source: "France 24", url: "https://www.france24.com/en/africa/20260418-pope-leo-xiv-condemns-logic-of-extractivism-in-angola-visit", time: "2026-04-18T17:18:26Z" },
-      { title: "Pope Leo arrives in Angola, the third stop on his visit to Africa", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-arrives-in-angola-the-third-stop-on-his-visit-to-africa", time: "2026-04-18T14:45:00Z" },
-    ]
-  },
-  {
     name: "Lilongwe", country: "Malawi",
     lat: -13.9626, lng: 33.7741,
     category: "economic",
     articles: [
+      { title: "Malawi: CTS Courier, Journalists Lead Clean-Up Drive At Bwaila Hospital", source: "AllAfrica", url: "https://allafrica.com/stories/202604240553.html", time: "2026-04-24T15:22:24Z" },
       { title: "Malawi: PAC Chairperson Malondera Accuses Acting ACB Director Chembezi of Threats, Influence Peddling in Amaryllis Probe", source: "AllAfrica", url: "https://allafrica.com/stories/202604220568.html", time: "2026-04-22T15:38:34Z" },
       { title: "Malawi: 'I Also Failed to Find Fuel in Zomba' - Govt Spokesperson Namalomba's Personal Ordeal Mirrors a Nation Running On Dry", source: "AllAfrica", url: "https://allafrica.com/stories/202604220253.html", time: "2026-04-22T10:23:24Z" },
       { title: "Malawi: Court Order Ignored? Pregnant Rape Survivors Still Blocked From Safe Abortion Services Despite Landmark Ruling", source: "AllAfrica", url: "https://allafrica.com/stories/202604220251.html", time: "2026-04-22T10:22:05Z" },

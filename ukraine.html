@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:55 UTC, 25 Apr 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:41 UTC, 25 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">25 April 2026</div>
@@ -225,6 +225,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Zelenskyy says he is ready to meet Putin in Azerbaijan", source: "Euronews", url: "http://www.euronews.com/2026/04/25/zelenskyy-says-he-is-ready-to-meet-putin-in-azerbaijan", time: "2026-04-25T10:58:19Z" },
       { title: "RAF Typhoons scrambled in response to Russian drone threat near Nato air space", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/apr/25/raf-typhoons-scrambled-russia-drone-nato-romania-ukraine", time: "2026-04-25T09:57:33Z" },
       { title: "Ukrainians thought they had reduced the risks at Chernobyl. Then Russia invaded", source: "ABC News", url: "https://abcnews.com/International/wireStory/ukrainians-thought-reduced-risks-chernobyl-russia-invaded-132368484", time: "2026-04-25T02:17:18Z" },
       { title: "Venice Biennale Bars Awards for Countries Facing Crimes Against Humanity Charges", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/arts/venice-biennale-russia-israel.html", time: "2026-04-24T19:29:09Z" },
@@ -445,6 +446,19 @@ const locations = [
     ]
   },
   {
+    name: "Dnipro", country: "Ukraine",
+    lat: 48.4647, lng: 35.0462,
+    category: "conflict",
+    articles: [
+      { title: "Seven dead in major Russian attack on Ukraine", source: "BBC News", url: "https://www.bbc.com/news/articles/c0rxk4q0pj0o?at_medium=RSS&at_campaign=rss", time: "2026-04-25T10:24:50Z" },
+      { title: "Russian attacks kill 4 and wound more than 20 in Ukraine's Dnipro; 1 killed in Russia", source: "ABC News", url: "https://abcnews.com/International/wireStory/russian-attacks-kill-4-wound-20-ukraines-dnipro-132372529", time: "2026-04-25T10:24:48Z" },
+      { title: "Overnight Russian attacks on Ukraine kill five, injure 30", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/overnight-russian-attacks-on-ukraine-kill-five-wound-over-30?traffic_source=rss", time: "2026-04-25T08:44:56Z" },
+      { title: "Major Russia drone and missile attack kills several, wounds dozens in Ukraine", source: "France 24", url: "https://www.france24.com/en/europe/20260425-major-russia-drone-and-missile-attack-kills-several-wounds-dozens-in-ukraine", time: "2026-04-25T07:34:43Z" },
+      { title: "Six dead after latest Russian strikes on Ukraine", source: "RTE News", url: "https://www.rte.ie/news/2026/0425/1570123-ukraine-russia/", time: "2026-04-25T06:34:03Z" },
+      { title: "US still delivering weapons to Ukraine despite Iran war, Zelenskyy says", source: "Euronews", url: "http://www.euronews.com/2026/04/23/us-still-delivering-weapons-to-ukraine-despite-iran-war-zelenskyy-says", time: "2026-04-23T16:37:50Z" },
+    ]
+  },
+  {
     name: "Black Sea", country: "International",
     lat: 43.0, lng: 35.0,
     category: "conflict",
@@ -466,18 +480,6 @@ const locations = [
       { title: "Russia strikes Ukraine’s Odesa port, kills railway worker in Zaporizhia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/22/russian-drone-attacks-in-ukraine-strike-odesa-port-and-kill-railway-worker?traffic_source=rss", time: "2026-04-22T09:16:22Z" },
       { title: "Russian drones strike Ukraine's Odesa port", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0422/1569492-ukraine-russia/", time: "2026-04-22T07:20:30Z" },
       { title: "Ukraine war briefing: Quick loan in pipeline as Druzhba reopens", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/22/ukraine-war-briefing-quick-loan-in-pipeline-as-druzhba-reopens", time: "2026-04-22T01:28:38Z" },
-    ]
-  },
-  {
-    name: "Dnipro", country: "Ukraine",
-    lat: 48.4647, lng: 35.0462,
-    category: "conflict",
-    articles: [
-      { title: "Seven dead in major Russian attack on Ukraine", source: "BBC News", url: "https://www.bbc.com/news/articles/c0rxk4q0pj0o?at_medium=RSS&at_campaign=rss", time: "2026-04-25T10:24:50Z" },
-      { title: "Russian attacks kill 4 and wound more than 20 in Ukraine's Dnipro; 1 killed in Russia", source: "ABC News", url: "https://abcnews.com/International/wireStory/russian-attacks-kill-4-wound-20-ukraines-dnipro-132372529", time: "2026-04-25T10:24:48Z" },
-      { title: "Overnight Russian attacks on Ukraine kill five, injure 30", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/overnight-russian-attacks-on-ukraine-kill-five-wound-over-30?traffic_source=rss", time: "2026-04-25T08:44:56Z" },
-      { title: "Major Russia drone and missile attack kills several, wounds dozens in Ukraine", source: "France 24", url: "https://www.france24.com/en/europe/20260425-major-russia-drone-and-missile-attack-kills-several-wounds-dozens-in-ukraine", time: "2026-04-25T07:34:43Z" },
-      { title: "US still delivering weapons to Ukraine despite Iran war, Zelenskyy says", source: "Euronews", url: "http://www.euronews.com/2026/04/23/us-still-delivering-weapons-to-ukraine-despite-iran-war-zelenskyy-says", time: "2026-04-23T16:37:50Z" },
     ]
   },
   {
