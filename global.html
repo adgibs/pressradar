@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:44 UTC, 26 Apr 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:42 UTC, 26 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 April 2026</div>
@@ -144,9 +144,14 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Iran turmoil erupts: Ultra-hardliner who mocked Trump poised to take over nuclear talks", source: "Fox News", url: "https://www.foxnews.com/world/iran-turmoil-erupts-ultra-hardliner-who-mocked-trump-poised-take-over-nuclear-talks", time: "2026-04-26T21:16:42Z" },
+      { title: "Iran’s foreign minister leaves Pakistan, heads to Russia for more talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/26/irans-foreign-minister-leaves-pakistan-en-route-to-russia-for-more-talks?traffic_source=rss", time: "2026-04-26T20:47:44Z" },
+      { title: "Israel deployed Iron Dome system to UAE during Iran war", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-deployed-iron-dome-system-uae-during-iran-war", time: "2026-04-26T20:39:07Z" },
+      { title: "Iran FM to visit Moscow for talks on ceasefire and negotiations", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-hit-evacuation-route-south-lebanon", time: "2026-04-26T20:26:03Z" },
       { title: "Has Iran exposed the limits of what US can achieve by force?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-bottom-line/2026/4/26/has-iran-exposed-the-limits-of-what-us-can-achieve-by-force?traffic_source=rss", time: "2026-04-26T19:55:35Z" },
       { title: "Iran’s top diplomat leaves Pakistan for Russia, Trump says Tehran can talk by phone", source: "France 24", url: "https://www.france24.com/en/middle-east/20260426-iran-top-diplomat-pakistan-russia-oman-trump-says-tehran-talk-phone", time: "2026-04-26T19:32:54Z" },
       { title: "Did Trump save eight Iranian women from execution?", source: "BBC News", url: "https://www.bbc.com/news/videos/cx2e2lg2ny9o?at_medium=RSS&at_campaign=rss", time: "2026-04-26T19:16:58Z" },
+      { title: "Iran minister leaves Pakistan, heads to Russia for more talks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-minister-leaves-pakistan-heads-russia-more-talks", time: "2026-04-26T19:10:12Z" },
       { title: "What to Know About U.S.-Iran Peace Talks", source: "New York Times", url: "https://www.nytimes.com/2026/04/26/world/middleeast/us-iran-peace-talks-pakistan.html", time: "2026-04-26T18:11:12Z" },
       { title: "No headway in Middle East peace efforts as US and Iran refuse to yield", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/26/no-headway-in-middle-east-peace-efforts-as-us-and-iran-refuse-to-yield", time: "2026-04-26T17:50:43Z" },
       { title: "Iran shifts economic focus to essentials during war uncertainty", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/26/iran-shifts-economic-focus-to-essentials-amid-war-uncertainty?traffic_source=rss", time: "2026-04-26T17:00:10Z" },
@@ -159,6 +164,7 @@ const locations = [
       { title: "Trump was likely target of shooting at White House Correspondents' dinner, says U.S. official", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-04-26/ty-article/u-s-official-trump-was-likely-target-of-shooting-at-wh-correspondents-dinner/0000019d-c9c8-d1f9-addd-eddba0830000", time: "2026-04-26T13:46:21Z" },
       { title: "Israel sent Iron Dome and troops to help defend UAE during Iran war – report", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-sent-iron-dome-and-troops-to-help-defend-uae-during-iran-war-report/", time: "2026-04-26T13:28:34Z" },
       { title: "Iran must rollback its nuclear, missile program - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-893807", time: "2026-04-26T13:00:00Z" },
+      { title: "How China is responding to the stalling of talks between the U.S. and Iran", source: "NPR", url: "https://www.npr.org/2026/04/26/nx-s1-5797410/how-china-is-responding-to-the-stalling-of-talks-between-the-u-s-and-iran", time: "2026-04-26T12:08:51Z" },
       { title: "Trump doubts shooter motivated by Iran war as peace talks on hold", source: "NPR", url: "https://www.npr.org/2026/04/26/nx-s1-5800054/iran-talks-on-hold-shooting-talks-pakistan", time: "2026-04-26T11:40:10Z" },
       { title: "Iran didn’t have a nuclear weapon before this war. But you can see why it would want one now | Simon Tisdall", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/apr/26/iran-nuclear-weapon-war-develop-one-now", time: "2026-04-26T10:30:23Z" },
       { title: "Iranian Negotiators Set to Return to Pakistan to Try to Revive Truce Talks", source: "New York Times", url: "https://www.nytimes.com/2026/04/26/world/middleeast/iranian-negotiators-set-to-return-to-pakistan-to-try-to-revive-truce-talks.html", time: "2026-04-26T10:08:49Z" },
@@ -638,12 +644,6 @@ const locations = [
       { title: "U.S. Fires on Iranian Cargo Ship in Arabian Sea", source: "New York Times", url: "https://www.nytimes.com/2026/04/19/us/us-military-iranian-ship.html", time: "2026-04-19T23:29:42Z" },
       { title: "Middle East war live: Iran vows response after US destroyer fires on cargo ship", source: "France 24", url: "https://www.france24.com/en/middle-east/20260419-middle-east-war-live-iran-vows-response-after-us-destroyer-fires-on-cargo-ship", time: "2026-04-19T23:16:20Z" },
       { title: "Can U.S. Blockade Iranian-Linked Ships Anywhere in the World? Yes, But …", source: "New York Times", url: "https://www.nytimes.com/2026/04/19/world/middleeast/us-iran-blockade-expansion.html", time: "2026-04-19T21:52:55Z" },
-      { title: "US intercepts and seizes Iranian-flagged cargo ship, Trump says", source: "BBC News", url: "https://www.bbc.com/news/articles/c239500dx8ro?at_medium=RSS&at_campaign=rss", time: "2026-04-19T21:39:43Z" },
-      { title: "U.S. says it seized an Iranian cargo ship, ceasefire expires soon", source: "NPR", url: "https://www.npr.org/2026/04/19/nx-s1-5790487/u-s-says-it-seized-an-iranian-cargo-ship-ceasefire-expires-soon", time: "2026-04-19T21:01:39Z" },
-      { title: "U.S. Attacks Iranian Cargo Ship as Both Countries Claim Cease-Fire Violations", source: "New York Times", url: "https://www.nytimes.com/2026/04/19/world/middleeast/us-iran-cease-fire-violations-strait-of-hormuz.html", time: "2026-04-19T20:54:46Z" },
-      { title: "Slain Iranian nuclear scientists raises alarm over uranium, expertise reaching black market", source: "Fox News", url: "https://www.foxnews.com/world/slain-iranian-nuclear-scientists-raises-alarm-uranium-expertise-reaching-black-market", time: "2026-04-19T20:46:13Z" },
-      { title: "Tehran has ‘no plans to participate’ in talks with US, state media reports", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/19/trumps-sends-delegation-to-pakistan-for-possible-new-round-of-iran-war-talks", time: "2026-04-19T20:44:42Z" },
-      { title: "Trump says US delegation will travel to Islamabad on Monday, Iran declines talks", source: "France 24", url: "https://www.france24.com/en/middle-east/20260419-trump-says-us-delegation-will-travel-to-islamabad-on-monday-iran-declines-talks", time: "2026-04-19T20:44:23Z" },
     ]
   },
   {
@@ -651,6 +651,9 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "Against the current: Anat Lelior’s fight beyond the waves - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-893805", time: "2026-04-26T22:07:55Z" },
+      { title: "Chinese EV firm Nio accused of exploiting Better Place patents in $250 million suit", source: "Times of Israel", url: "https://www.timesofisrael.com/chinese-ev-firm-nio-accused-of-exploiting-better-place-patents-in-250-million-suit/", time: "2026-04-26T20:50:23Z" },
+      { title: "‘You’re lucky you’re not soap bars’: Jews forced to leave rally marking WWII end in Italy", source: "Times of Israel", url: "https://www.timesofisrael.com/youre-lucky-youre-not-soap-bars-jews-forced-to-leave-rally-marking-wwii-end-in-italy/", time: "2026-04-26T20:35:39Z" },
       { title: "Bennett-Lapid reunion jolts electoral race, but path to unseating Netanyahu elusive as ever", source: "Times of Israel", url: "https://www.timesofisrael.com/bennett-lapid-reunion-jolts-electoral-race-but-path-to-unseating-netanyahu-elusive-as-ever/", time: "2026-04-26T20:28:04Z" },
       { title: "Israeli settler attacks Hebron activist’s home as soldier looks on", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/israeli-settler-attacks-hebron-activists-home-as-soldier-looks-on?traffic_source=rss", time: "2026-04-26T20:27:04Z" },
       { title: "Eisenkot welcomes Bennett-Lapid union but says: To win, we need to bring in more votes", source: "Times of Israel", url: "https://www.timesofisrael.com/eisenkot-welcomes-bennett-lapid-union-but-says-to-win-we-need-to-bring-in-more-votes/", time: "2026-04-26T20:08:39Z" },
@@ -666,6 +669,7 @@ const locations = [
       { title: "IDF Lt. Col. (res.) Ido Frommer killed in civilian parachuting accident", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894128", time: "2026-04-26T18:56:41Z" },
       { title: "IDF soldier killed in south Lebanon drone attack as Israel, Hezbollah trade blame", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-soldier-killed-in-south-lebanon-drone-attack-as-israel-hezbollah-trade-blame/", time: "2026-04-26T18:29:35Z" },
       { title: "Israeli politics shaken as Bennett and Lapid join forces again - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894209", time: "2026-04-26T18:24:47Z" },
+      { title: "Israel High Court demands government enforce draft law, revoke benefits from evaders", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894206", time: "2026-04-26T18:01:49Z" },
       { title: "Israel sent Iron Dome system, dozens of IDF soldiers to UAE during Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894195", time: "2026-04-26T17:02:04Z" },
       { title: "The afterlife of antisemitism – with Flora Cassen - Sponsored Content", source: "Times of Israel", url: "https://www.timesofisrael.com/spotlight/the-afterlife-of-antisemitism-with-flora-cassen/", time: "2026-04-26T16:47:57Z" },
       { title: "Rebuilding Justice For Jews- Adela Cojab - Sponsored Content", source: "Times of Israel", url: "https://toi.li/qJzaST", time: "2026-04-26T16:43:11Z" },
@@ -1147,10 +1151,6 @@ const locations = [
       { title: "IDF says photo of soldier destroying Jesus statue in Lebanon is genuine, vows action", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-says-image-of-soldier-destroying-jesus-statue-in-lebanon-is-real-vows-action/", time: "2026-04-19T21:59:48Z" },
       { title: "President Trump says U.S. struck & seized Iranian tanker", source: "NBC News", url: "https://www.nbcnews.com/video/president-trump-says-u-s-struck-seized-iranian-tanker-261681221686", time: "2026-04-19T21:55:23Z" },
       { title: "IDF to investigate alleged incident of soldier smashing Jesus statue in southern Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893544", time: "2026-04-19T21:49:28Z" },
-      { title: "IDF says it killed 'terrorist' who crossed into Israel-held Lebanon", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-20/ty-article-live/idf-says-it-killed-terrorist-who-crossed-into-israel-held-lebanon/0000019d-a79c-d4a9-adff-b7ddf1420004", time: "2026-04-19T21:29:46Z" },
-      { title: "'Swimming against the tide, but swimming': More Israelis and Palestinians now choose to grieve together", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-04-20/ty-article-magazine/.premium/against-the-tide-more-israelis-and-palestinians-now-choose-to-grieve-together/0000019d-a690-d834-abbd-ffd0143b0000", time: "2026-04-19T21:26:11Z" },
-      { title: "Schools, shops shut in northern Israel to protest the Lebanon ceasefire", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/19/schools-shops-shut-in-northern-israel-to-protest-the-lebanon-ceasefire?traffic_source=rss", time: "2026-04-19T21:21:51Z" },
-      { title: "Israel's top court must make it clear: the justice minister's tricks are unacceptable", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-04-20/ty-article-opinion/.premium/israels-top-court-must-make-it-clear-levins-tricks-are-unacceptable/0000019d-a753-d31c-a1df-af5360ac0000", time: "2026-04-19T21:17:46Z" },
     ]
   },
   {
@@ -1158,6 +1158,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Transavia cancels flights as fuel costs surge amid Iran war", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/transavia-cancels-flights-fuel-costs-surge-amid-iran-war", time: "2026-04-26T21:27:18Z" },
       { title: "Iran sends US message via Pakistan outlining ‘red lines’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-sends-us-message-pakistan-outlining-red-lines", time: "2026-04-26T18:08:40Z" },
       { title: "Strait of Hormuz will not return to pre-war conditions, Iranian MP says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/strait-hormuz-will-not-return-pre-war-conditions-iranian-mp-says", time: "2026-04-26T15:38:37Z" },
       { title: "Russian official says oil market needs months to recover from Hormuz closure", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/russian-official-says-oil-market-needs-months-recover-hormuz-closure", time: "2026-04-26T14:08:05Z" },
@@ -1435,9 +1436,6 @@ const locations = [
       { title: "Oil prices jump amid renewed tensions over the Strait of Hormuz", source: "NBC News", url: "https://www.nbcnews.com/business/markets/oil-prices-jump-renewed-tensions-strait-hormuz-rcna340901", time: "2026-04-19T22:53:27Z" },
       { title: "Iranian ship seized by US Navy after attempting to pass through Strait of Hormuz", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-893549", time: "2026-04-19T22:38:23Z" },
       { title: "US forces attack and seize Iranian ship Touska near Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/19/us-forces-attack-and-seize-iranian-ship-touska-near-strait-of-hormuz?traffic_source=rss", time: "2026-04-19T21:53:29Z" },
-      { title: "Tehran will never cede control of Strait of Hormuz, senior Iranian politician tells BBC", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg4jnn131qo?at_medium=RSS&at_campaign=rss", time: "2026-04-19T21:09:06Z" },
-      { title: "US military seized Iranian-flagged container ship, Trump says", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/apr/19/trump-us-seizes-iran-flagged-cargo-ship", time: "2026-04-19T21:05:01Z" },
-      { title: "US and Israel face tough choices in Iran talks over Hormuz, Lebanon, and nuclear issues - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-893542", time: "2026-04-19T20:50:12Z" },
     ]
   },
   {
@@ -1445,6 +1443,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "Iran’s foreign minister leaves Pakistan, heads to Russia for more talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/26/irans-foreign-minister-leaves-pakistan-en-route-to-russia-for-more-talks?traffic_source=rss", time: "2026-04-26T20:47:44Z" },
       { title: "Iran's Araghchi visits Pakistan for 2nd time in two days; envoy says trip undertaken to discuss regional developments", source: "Dawn", url: "https://www.dawn.com/news/1995258/irans-araghchi-visits-pakistan-for-2nd-time-in-two-days-envoy-says-trip-undertaken-to-discuss-regional-developments", time: "2026-04-26T20:28:59Z" },
       { title: "Traffic restrictions around Islamabad's Red Zone, Serena Hotel lifted: Ishaq Dar", source: "Dawn", url: "https://www.dawn.com/news/1995277/traffic-restrictions-around-islamabads-red-zone-serena-hotel-lifted-ishaq-dar", time: "2026-04-26T19:55:17Z" },
       { title: "'Great respect' for Pakistan and they will stay involved, but we are going to do it by phone: Trump on Iran talks", source: "Dawn", url: "https://www.dawn.com/news/1995275/great-respect-for-pakistan-and-they-will-stay-involved-but-we-are-going-to-do-it-by-phone-trump-on-iran-talks", time: "2026-04-26T19:13:17Z" },
@@ -1723,6 +1722,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Jordan’s king warns against Israeli escalation in Gaza, West Bank", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/transavia-cancels-flights-fuel-costs-surge-amid-iran-war-0", time: "2026-04-26T21:31:36Z" },
       { title: "Palestinian authorities call local elections in a central Gaza community and the occupied West Bank a success", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/palestinian-authorities-call-local-elections-in-a-central-gaza-community-and-the-occupied-west-bank-a-success", time: "2026-04-26T19:59:23Z" },
       { title: "Fatah leading in West Bank municipal elections", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/fatah-leading-west-bank-municipal-elections", time: "2026-04-26T19:28:39Z" },
       { title: "Global Sumud Flotilla embarks from Sicily, aiming to disrupt Gaza blockade", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894210", time: "2026-04-26T18:43:57Z" },
@@ -1968,8 +1968,6 @@ const locations = [
       { title: "Video: Israeli soldier destroys Jesus statue in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/video-israeli-soldier-destroys-jesus-statue-southern-lebanon", time: "2026-04-20T03:10:28Z" },
       { title: "U.S. Senate candidate from Michigan says Israeli government 'evil' like Hamas", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-04-20/ty-article/.premium/u-s-senate-candidate-from-michigan-says-israeli-government-evil-like-hamas/0000019d-a86b-d096-a3df-eeff58e20000", time: "2026-04-20T01:21:53Z" },
       { title: "Israel seeks to replicate the West Bank and Syria model in Lebanon", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-20/ty-article-opinion/.premium/israel-seeks-to-replicate-the-west-bank-and-syria-model-in-lebanon/0000019d-a69f-d096-a3df-eeffd21c0000", time: "2026-04-20T00:16:16Z" },
-      { title: "Protesters defy Berlin rain to call for end to global wars", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/19/protesters-defy-berlin-rain-to-call-for-end-to-global-wars?traffic_source=rss", time: "2026-04-19T21:01:15Z" },
-      { title: "West Bank settlement of Sa-Nur reestablished, 21 years after its evacuation", source: "Times of Israel", url: "https://www.timesofisrael.com/west-bank-settlement-of-sa-nur-reestablished-21-years-after-its-evacuation/", time: "2026-04-19T20:48:18Z" },
     ]
   },
   {
@@ -2219,7 +2217,6 @@ const locations = [
       { title: "Fire destroys 1,000 homes in a Malaysian coastal village on Borneo Island", source: "ABC News", url: "https://abcnews.com/International/wireStory/fire-destroys-1000-homes-malaysian-coastal-village-borneo-132194423", time: "2026-04-20T05:32:34Z" },
       { title: "Israeli soldier filmed smashing Jesus statue in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-soldier-filmed-smashing-jesus-statue-lebanon", time: "2026-04-19T22:38:57Z" },
       { title: "Is he or isn’t he? Trump officials flip-flop on whether Vance is leading Iran talks - or staying home", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vance-iran-pakistan-talks-trump-b2960686.html", time: "2026-04-19T22:15:52Z" },
-      { title: "Source: Iran 'positively' mulls U.S. talks; Report: U.S. VP Vance to land within hours", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-20/ty-article-live/idf-says-it-killed-terrorist-who-crossed-into-israel-held-lebanon/0000019d-a79c-d4a9-adff-b7ddf1420004", time: "2026-04-19T21:29:46Z" },
     ]
   },
   {
@@ -2720,7 +2717,6 @@ const locations = [
       { title: "Israeli forces demolishing towns in Lebanon buffer zone, report says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-demolishing-towns-lebanon-buffer-zone-report-says", time: "2026-04-20T03:19:26Z" },
       { title: "Macron blames Hezbollah for peacekeeper’s klling in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/macron-blames-hezbollah-peacekeepers-klling-lebanon", time: "2026-04-20T01:09:10Z" },
       { title: "Middle East war live: Israeli army urges south Lebanon residents to avoid restricted areas", source: "France 24", url: "https://www.france24.com/en/middle-east/20260419-middle-east-war-live-iran-vows-response-after-us-destroyer-fires-on-cargo-ship", time: "2026-04-19T23:16:20Z" },
-      { title: "Hezbollah ‘human shield’ strategy behind Lebanon ambush, bomb detonation - Macron drawn in", source: "Fox News", url: "https://www.foxnews.com/world/hezbollah-human-shield-strategy-behind-lebanon-ambush-bomb-detonation-macron-drawn", time: "2026-04-19T21:19:46Z" },
     ]
   },
   {
@@ -3073,7 +3069,6 @@ const locations = [
       { title: "Ukraine police chief resigns after officers reportedly fled Kyiv shooting", source: "Sky News", url: "https://news.sky.com/story/ukraine-police-chief-resigns-after-officers-reportedly-fled-kyiv-shooting-13534041", time: "2026-04-20T08:57:00Z" },
       { title: "Ukraine's fast-growing defense tech sector takes center stage in Iran war", source: "NPR", url: "https://www.npr.org/2026/04/20/nx-s1-5788603/ukraines-fast-growing-defense-tech-sector-takes-center-stage-in-iran-war", time: "2026-04-20T08:41:45Z" },
       { title: "Ukraine-Russia war latest: Ukrainian police chief resigns after officers ‘disgracefully’ flee Kyiv shooting", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-kyiv-shooting-soldiers-putin-zelensky-b2960808.html", time: "2026-04-20T05:31:33Z" },
-      { title: "Ukrainian best-selling author, Andrey Kurkov speaks to France 24", source: "France 24", url: "https://www.france24.com/en/ukrainian-author-andrey-kurkov-speaks-to-france-24", time: "2026-04-19T21:26:50Z" },
     ]
   },
   {
@@ -3171,7 +3166,6 @@ const locations = [
       { title: "India’s truckers brace themselves for first diesel price hike in four years", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/indias-truckers-brace-themselves-for-first-diesel-price-hike-in-four-years", time: "2026-04-20T09:30:00Z" },
       { title: "Sri Lanka’s Tamil parties seek sustained Indian push to realise spirit of Indo-Lanka Accord", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lankas-tamil-parties-seek-sustained-indian-push-to-realise-spirit-of-indo-lanka-accord/article70883508.ece", time: "2026-04-20T07:57:15Z" },
       { title: "South Korea's Lee to seek big boost in economic ties in summit with India's Modi", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-koreas-lee-to-seek-big-boost-in-economic-ties-in-summit-with-indias-modi", time: "2026-04-20T02:20:06Z" },
-      { title: "India voter register deletions spark outrage over AI use and poll fairness", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/india-voter-register-deletions-spark-outrage-over-ai-use-and-poll-fairness", time: "2026-04-19T21:00:00Z" },
     ]
   },
   {
@@ -3429,6 +3423,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Iran’s foreign minister leaves Pakistan, heads to Russia for more talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/26/irans-foreign-minister-leaves-pakistan-en-route-to-russia-for-more-talks?traffic_source=rss", time: "2026-04-26T20:47:44Z" },
       { title: "What’s driving attacks against gov’t and Russian forces in Mali?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/26/whats-driving-attacks-against-govt-and-russian-forces-in-mali?traffic_source=rss", time: "2026-04-26T20:26:47Z" },
       { title: "Iranian foreign minister returns to Pakistan before heading to Moscow for meeting with Putin", source: "Euronews", url: "http://www.euronews.com/2026/04/26/iranian-foreign-minister-returns-to-pakistan-before-heading-to-moscow-for-meeting-with-put", time: "2026-04-26T18:27:57Z" },
       { title: "Britain is losing its hybrid war with Russia and is unprepared for conflict, warns top former US aide", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/uk-war-defence-fiona-hill-russia-iran-b2963630.html", time: "2026-04-26T14:21:37Z" },
@@ -3561,8 +3556,6 @@ const locations = [
       { title: "Thousands urge Israeli media to skip state Independence Day ceremony, air civilian alternative", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-893602", time: "2026-04-20T13:58:27Z" },
       { title: "'I feel like we failed' to bring Gaza hostages home, Rachel Goldberg-Polin tells CBS's 60 Minutes", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-893560", time: "2026-04-20T06:12:37Z" },
       { title: "From grief to action: Ensuring the sacrifices of Israel’s fallen are not in vain - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-893546", time: "2026-04-20T05:59:43Z" },
-      { title: "Argentina’s Milei backs US-Israel war on Iran in Jerusalem visit", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/19/argentinas-milei-backs-us-israel-war-on-iran-in-jerusalem-visit?traffic_source=rss", time: "2026-04-19T21:23:19Z" },
-      { title: "The facade of national identity: Israel's Independence Day reflection - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-893475", time: "2026-04-19T21:00:00Z" },
     ]
   },
   {
@@ -3913,7 +3906,6 @@ const locations = [
       { title: "The Trial review – searing record of Argentina’s courtroom reckoning with its brutal ‘dirty war’", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/20/the-trial-review-searing-record-of-argentinas-courtroom-reckoning-with-its-brutal-dirty-war", time: "2026-04-20T10:00:52Z" },
       { title: "Javier Milei Tamed Argentina’s Inflation. Now He Wants to Reshape Its Values.", source: "New York Times", url: "https://www.nytimes.com/2026/04/20/world/americas/argentina-president-milei-inflation-economic-reforms.html", time: "2026-04-20T09:00:12Z" },
       { title: "Olivia review – unhurried, painterly fable about loss aims to expose the meaning of grief", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/20/olivia-review-sofia-petersen-argentina", time: "2026-04-20T06:00:05Z" },
-      { title: "Argentina’s Milei backs US-Israel war on Iran in Jerusalem visit", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/19/argentinas-milei-backs-us-israel-war-on-iran-in-jerusalem-visit?traffic_source=rss", time: "2026-04-19T21:23:19Z" },
     ]
   },
   {
@@ -3962,7 +3954,6 @@ const locations = [
       { title: "WWII bomb destroyed in controlled explosion in Paris", source: "Euronews", url: "http://www.euronews.com/2026/04/20/wwii-bomb-destroyed-in-controlled-explosion-in-paris", time: "2026-04-20T08:38:06Z" },
       { title: "Elon Musk summoned to Paris over X child abuse and deepfake allegations", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/elon-musk-grok-x-france-b2960831.html", time: "2026-04-20T06:50:07Z" },
       { title: "Kanye West’s European tour in doubt as more concerts cancelled in Poland and Switzerland", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/20/kanye-west-european-tour-concerts-cancelled-poland-switzerland", time: "2026-04-20T01:46:29Z" },
-      { title: "Ukrainian best-selling author, Andrey Kurkov speaks to France 24", source: "France 24", url: "https://www.france24.com/en/ukrainian-author-andrey-kurkov-speaks-to-france-24", time: "2026-04-19T21:26:50Z" },
     ]
   },
   {
@@ -4018,6 +4009,7 @@ const locations = [
     lat: 12.6392, lng: -8.0029,
     category: "conflict",
     articles: [
+      { title: "What’s driving attacks against gov’t and Russian forces in Mali?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/26/whats-driving-attacks-against-govt-and-russian-forces-in-mali?traffic_source=rss", time: "2026-04-26T20:26:47Z" },
       { title: "Malian defense minister killed in attack as jihadi and rebel forces seized towns and military bases", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/malian-defense-minister-killed-in-attack-as-jihadi-and-rebel-forces-seized-towns-and-military-bases", time: "2026-04-26T19:14:37Z" },
       { title: "Russian mercenaries to withdraw from Mali city after attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS&at_campaign=rss", time: "2026-04-26T15:23:04Z" },
       { title: "Mali rattled by ongoing armed attacks: What to know", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/26/mali-rattled-by-ongoing-armed-attacks-what-to-know?traffic_source=rss", time: "2026-04-26T13:46:40Z" },
@@ -4518,6 +4510,32 @@ const locations = [
     ]
   },
   {
+    name: "Bogota", country: "Colombia",
+    lat: 4.711, lng: -74.0721,
+    category: "conflict",
+    articles: [
+      { title: "Death toll in Colombia highway bus bomb attack rises to 20", source: "BBC News", url: "https://www.bbc.com/news/articles/ckgx5kyyj8do?at_medium=RSS&at_campaign=rss", time: "2026-04-26T21:33:00Z" },
+      { title: "Bomb attack on Colombia highway kills 19 ahead of election", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/4/26/bomb-attack-on-colombia-highway-kills-19-ahead-of-election?traffic_source=rss", time: "2026-04-26T20:15:29Z" },
+      { title: "An explosive device kills 13 and injures 38 on a bus in southwestern Colombia as violence persists", source: "NBC News", url: "https://www.nbcnews.com/world/south-america/explosive-device-kills-13-southwestern-columbia-rcna342199", time: "2026-04-26T20:04:24Z" },
+      { title: "Colombia bus bombing death toll rises to 20 during a wave of violence", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/colombia-bus-bombing-death-toll-rises-to-20-during-a-wave-of-violence", time: "2026-04-26T19:21:12Z" },
+      { title: "Death toll from bus bombing in southwest Colombia rises to 20 during a wave of violence", source: "ABC News", url: "https://abcnews.com/International/wireStory/death-toll-bus-bombing-southwest-colombia-rises-20-132402270", time: "2026-04-26T18:35:45Z" },
+      { title: "New footage shows moment of deadly bus bombing in Colombia", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/new-footage-shows-moment-of-deadly-bus-bombing-in-colombia?traffic_source=rss", time: "2026-04-26T15:38:20Z" },
+      { title: "Bus blast in Colombia kills 13 amid rising violence", source: "France 24", url: "https://www.france24.com/en/bus-blast-in-colombia-kills-13-amid-rising-violence", time: "2026-04-26T09:45:26Z" },
+      { title: "Several killed in Colombia highway bomb attack ahead of presidential election", source: "France 24", url: "https://www.france24.com/en/americas/20260426-several-killed-in-colombia-highway-bomb-attack-ahead-of-presidential-election", time: "2026-04-26T06:08:16Z" },
+      { title: "Video: Colombia blames dissident FARC rebel for deadly bus bomb", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/video-colombia-blames-dissident-farc-rebel-for-deadly-bus-bomb?traffic_source=rss", time: "2026-04-26T03:37:17Z" },
+      { title: "Explosion in southwest Colombia kills at leat seven, state governor says", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/explosion-in-southwest-colombia-kills-at-leat-seven-state-governor-says?traffic_source=rss", time: "2026-04-25T21:03:51Z" },
+      { title: "Authorities in southwest Colombia are on alert after a spate of violent attacks on infrastructure", source: "ABC News", url: "https://abcnews.com/International/wireStory/authorities-southwest-colombia-alert-after-spate-violent-attacks-132382371", time: "2026-04-25T18:59:35Z" },
+      { title: "Countries meet in Colombia for summit aimed at transitioning away from fossil fuels", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-climate-fossil-fuels-colombia-santa-marta-summit/", time: "2026-04-24T10:53:03Z" },
+      { title: "Migrants struggle back across Latin America after Trump shuts asylum door: ‘It’s hard to know what to do’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/23/latin-america-immigrants-trump-asylum", time: "2026-04-23T12:00:09Z" },
+      { title: "Phone tracking shows how Colombian mercenaries backed Sudan's RSF - report", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4vk13wgwwo?at_medium=RSS&at_campaign=rss", time: "2026-04-22T04:01:50Z" },
+      { title: "Libya fueled war in Sudan with Colombian mercenaries and equipment, UN report finds", source: "ABC News", url: "https://abcnews.com/International/wireStory/libya-fueled-war-sudan-colombian-mercenaries-equipment-report-132235661", time: "2026-04-21T13:37:53Z" },
+      { title: "Six women win 2026 Goldman prize, world’s top environmental award", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/six-women-win-2026-goldman-prize-worlds-top-environmental-award?traffic_source=rss", time: "2026-04-21T00:07:04Z" },
+      { title: "Drone attack kills 3 Colombian soldiers as rebel groups develop new lethal capabilities", source: "ABC News", url: "https://abcnews.com/International/wireStory/drone-attack-kills-3-colombian-soldiers-rebel-groups-132217645", time: "2026-04-20T20:45:25Z" },
+      { title: "US family seeks justice in the death of daughter 7 years ago in Colombia", source: "ABC News", url: "https://abcnews.com/International/wireStory/us-family-seeks-justice-death-daughter-7-years-132213451", time: "2026-04-20T19:25:43Z" },
+      { title: "Colombian President Petro vows a lawsuit after Ecuador's Noboa alleges ties to gang boss 'Fito'", source: "ABC News", url: "https://abcnews.com/International/wireStory/colombian-president-petro-vows-lawsuit-after-ecuadors-noboa-132187803", time: "2026-04-20T05:40:30Z" },
+    ]
+  },
+  {
     name: "Tyre", country: "Lebanon",
     lat: 33.2705, lng: 35.1968,
     category: "conflict",
@@ -4590,31 +4608,6 @@ const locations = [
       { title: "Pope Leo criticizes colonization of minerals, 'lust for power' in Equatorial Guinea", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-criticizes-colonization-of-minerals-lust-for-power-in-equatorial-guinea", time: "2026-04-21T18:08:02Z" },
       { title: "Guinea Bissau's Djabi seriously injured in stabbing", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/ce3drvx6kn4o?at_medium=RSS&at_campaign=rss", time: "2026-04-21T13:50:53Z" },
       { title: "Pope wraps up Africa trip with diplomatic challenge in Equatorial Guinea", source: "France 24", url: "https://www.france24.com/en/africa/20260421-pope-wraps-up-africa-trip-with-diplomatic-challenge-in-equatorial-guinea", time: "2026-04-21T06:03:03Z" },
-    ]
-  },
-  {
-    name: "Bogota", country: "Colombia",
-    lat: 4.711, lng: -74.0721,
-    category: "conflict",
-    articles: [
-      { title: "Bomb attack on Colombia highway kills 19 ahead of election", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/4/26/bomb-attack-on-colombia-highway-kills-19-ahead-of-election?traffic_source=rss", time: "2026-04-26T20:15:29Z" },
-      { title: "An explosive device kills 13 and injures 38 on a bus in southwestern Colombia as violence persists", source: "NBC News", url: "https://www.nbcnews.com/world/south-america/explosive-device-kills-13-southwestern-columbia-rcna342199", time: "2026-04-26T20:04:24Z" },
-      { title: "Colombia bus bombing death toll rises to 20 during a wave of violence", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/colombia-bus-bombing-death-toll-rises-to-20-during-a-wave-of-violence", time: "2026-04-26T19:21:12Z" },
-      { title: "Death toll from bus bombing in southwest Colombia rises to 20 during a wave of violence", source: "ABC News", url: "https://abcnews.com/International/wireStory/death-toll-bus-bombing-southwest-colombia-rises-20-132402270", time: "2026-04-26T18:35:45Z" },
-      { title: "New footage shows moment of deadly bus bombing in Colombia", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/new-footage-shows-moment-of-deadly-bus-bombing-in-colombia?traffic_source=rss", time: "2026-04-26T15:38:20Z" },
-      { title: "Bus blast in Colombia kills 13 amid rising violence", source: "France 24", url: "https://www.france24.com/en/bus-blast-in-colombia-kills-13-amid-rising-violence", time: "2026-04-26T09:45:26Z" },
-      { title: "Several killed in Colombia highway bomb attack ahead of presidential election", source: "France 24", url: "https://www.france24.com/en/americas/20260426-several-killed-in-colombia-highway-bomb-attack-ahead-of-presidential-election", time: "2026-04-26T06:08:16Z" },
-      { title: "Video: Colombia blames dissident FARC rebel for deadly bus bomb", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/video-colombia-blames-dissident-farc-rebel-for-deadly-bus-bomb?traffic_source=rss", time: "2026-04-26T03:37:17Z" },
-      { title: "Explosion in southwest Colombia kills at leat seven, state governor says", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/25/explosion-in-southwest-colombia-kills-at-leat-seven-state-governor-says?traffic_source=rss", time: "2026-04-25T21:03:51Z" },
-      { title: "Authorities in southwest Colombia are on alert after a spate of violent attacks on infrastructure", source: "ABC News", url: "https://abcnews.com/International/wireStory/authorities-southwest-colombia-alert-after-spate-violent-attacks-132382371", time: "2026-04-25T18:59:35Z" },
-      { title: "Countries meet in Colombia for summit aimed at transitioning away from fossil fuels", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-climate-fossil-fuels-colombia-santa-marta-summit/", time: "2026-04-24T10:53:03Z" },
-      { title: "Migrants struggle back across Latin America after Trump shuts asylum door: ‘It’s hard to know what to do’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/23/latin-america-immigrants-trump-asylum", time: "2026-04-23T12:00:09Z" },
-      { title: "Phone tracking shows how Colombian mercenaries backed Sudan's RSF - report", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4vk13wgwwo?at_medium=RSS&at_campaign=rss", time: "2026-04-22T04:01:50Z" },
-      { title: "Libya fueled war in Sudan with Colombian mercenaries and equipment, UN report finds", source: "ABC News", url: "https://abcnews.com/International/wireStory/libya-fueled-war-sudan-colombian-mercenaries-equipment-report-132235661", time: "2026-04-21T13:37:53Z" },
-      { title: "Six women win 2026 Goldman prize, world’s top environmental award", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/six-women-win-2026-goldman-prize-worlds-top-environmental-award?traffic_source=rss", time: "2026-04-21T00:07:04Z" },
-      { title: "Drone attack kills 3 Colombian soldiers as rebel groups develop new lethal capabilities", source: "ABC News", url: "https://abcnews.com/International/wireStory/drone-attack-kills-3-colombian-soldiers-rebel-groups-132217645", time: "2026-04-20T20:45:25Z" },
-      { title: "US family seeks justice in the death of daughter 7 years ago in Colombia", source: "ABC News", url: "https://abcnews.com/International/wireStory/us-family-seeks-justice-death-daughter-7-years-132213451", time: "2026-04-20T19:25:43Z" },
-      { title: "Colombian President Petro vows a lawsuit after Ecuador's Noboa alleges ties to gang boss 'Fito'", source: "ABC News", url: "https://abcnews.com/International/wireStory/colombian-president-petro-vows-lawsuit-after-ecuadors-noboa-132187803", time: "2026-04-20T05:40:30Z" },
     ]
   },
   {
@@ -4705,27 +4698,6 @@ const locations = [
       { title: "Bangladesh fuel crunch forces hours-long wait at the pump", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/bangladesh-fuel-crunch-forces-hours-long-wait-at-the-pump", time: "2026-04-21T12:26:12Z" },
       { title: "Bangladesh faces telecom shutdowns from Middle East fuel crisis", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/bangladesh-faces-telecom-shutdowns-from-middle-east-fuel-crisis", time: "2026-04-20T10:08:00Z" },
       { title: "Bangladesh faces telecom shutdowns from West Asia fuel crisis", source: "The Hindu", url: "https://www.thehindu.com/news/international/bangladesh-faces-telecom-shutdowns-from-west-asia-fuel-crisis/article70883978.ece", time: "2026-04-20T09:48:56Z" },
-    ]
-  },
-  {
-    name: "Hong Kong", country: "China",
-    lat: 22.3193, lng: 114.1694,
-    category: "economic",
-    articles: [
-      { title: "Air NZ plane suffers braking issue on runway, flights to Auckland diverted", source: "NZ Herald", url: "https://www.nzherald.co.nz/nz/air-nz-plane-suffers-braking-issue-on-runway-flights-to-auckland-diverted/MYHCIF5J2NFC3DEEBX5DB3MCPY/", time: "2026-04-25T00:51:53Z" },
-      { title: "Oil prices reach $105 as Iran and US tighten grip on Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/business/brent-crude-prices-today-asian-stocks-iran-war-strait-of-hormuz-b2964086.html", time: "2026-04-24T06:03:06Z" },
-      { title: "Photos, clothes, ashes: Hongkongers pick through fire-ravaged homes", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/photos-clothes-ashes-hongkongers-pick-through-fire-ravaged-homes", time: "2026-04-23T15:48:54Z" },
-      { title: "Hong Kong’s Langham group among first to invest in Beijing’s ‘city of the future’ Xiongan", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3351113/hong-kongs-langham-group-among-first-invest-beijings-city-future-xiongan?utm_source=rss_feed", time: "2026-04-23T09:30:08Z" },
-      { title: "Hong Kong fire victim returns to search for memories of his dog", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/hong-kong-fire-victim-returns-to-search-for-memories-of-his-dog", time: "2026-04-23T09:11:28Z" },
-      { title: "Back home, Hong Kong fire victim gathers memories from the ashes", source: "Straits Times", url: "https://www.straitstimes.com/asia/back-home-hong-kong-fire-victim-gathers-memories-from-the-ashes", time: "2026-04-22T03:20:36Z" },
-      { title: "How Hong Kong can actively shape the foreign policy debate", source: "South China Morning Post", url: "https://www.scmp.com/opinion/hong-kong-opinion/article/3350702/how-hong-kong-can-actively-shape-foreign-policy-debate?utm_source=rss_feed", time: "2026-04-22T01:30:08Z" },
-      { title: "Economist Justin Lin urges West to adopt ‘Eastern wisdom’ as China moves up value chain", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3350885/economist-justin-lin-urges-west-adopt-eastern-wisdom-china-moves-value-chain?utm_source=rss_feed", time: "2026-04-21T13:00:12Z" },
-      { title: "Hong Kong government seeks to seize $16 million from jailed tycoon Jimmy Lai", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/hong-kong-government-seeks-to-seize-16-million-from-jailed-tycoon-jimmy-lai", time: "2026-04-21T10:30:19Z" },
-      { title: "Premium for mainland China shares erodes – or flips – as capital flows to Hong Kong", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3350886/premium-mainland-china-shares-erodes-or-flips-capital-flows-hong-kong?utm_source=rss_feed", time: "2026-04-21T10:30:07Z" },
-      { title: "Chinese circuit-board supplier Victory Giant jumps 57% in Hong Kong share debut", source: "South China Morning Post", url: "https://www.scmp.com/business/banking-finance/article/3350801/chinese-circuit-board-supplier-victory-giant-jumps-hong-kong-share-debut?utm_source=rss_feed", time: "2026-04-21T01:43:39Z" },
-      { title: "‘Nothing left’: Hong Kong fire survivors return to burnt homes", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/20/nothing-left-hong-kong-fire-survivors-return-to-burnt-homes?traffic_source=rss", time: "2026-04-20T17:35:33Z" },
-      { title: "Hong Kong fire victims scour scorched homes for keepsakes", source: "Straits Times", url: "https://www.straitstimes.com/asia/hong-kong-fire-victims-scour-scorched-homes-for-keepsakes", time: "2026-04-20T03:14:52Z" },
-      { title: "Residents return to ravaged homes months after Hong Kong fire", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/residents-return-to-ravaged-homes-months-after-hong-kong-fire", time: "2026-04-19T21:33:34Z" },
     ]
   },
   {
@@ -4829,6 +4801,26 @@ const locations = [
       { title: "Vance to travel to Pakistan on Tuesday for Iran talks, sources say", source: "Axios", url: "https://www.axios.com/2026/04/21/iran-us-war-peace-talks-vance-pakistan", time: "2026-04-21T00:46:27Z" },
       { title: "Turkey rallies global middle powers in Antalya amid Hormuz crisis", source: "Euronews", url: "http://www.euronews.com/2026/04/20/turkey-rallies-global-middle-powers-in-antalya-amid-hormuz-crisis", time: "2026-04-20T11:09:44Z" },
       { title: "In Turkey, Middle Powers Ponder Diplomacy With a Rogue U.S.", source: "New York Times", url: "https://www.nytimes.com/2026/04/20/world/middleeast/turkey-diplomacy-antalya.html", time: "2026-04-20T04:00:06Z" },
+    ]
+  },
+  {
+    name: "Hong Kong", country: "China",
+    lat: 22.3193, lng: 114.1694,
+    category: "economic",
+    articles: [
+      { title: "Air NZ plane suffers braking issue on runway, flights to Auckland diverted", source: "NZ Herald", url: "https://www.nzherald.co.nz/nz/air-nz-plane-suffers-braking-issue-on-runway-flights-to-auckland-diverted/MYHCIF5J2NFC3DEEBX5DB3MCPY/", time: "2026-04-25T00:51:53Z" },
+      { title: "Oil prices reach $105 as Iran and US tighten grip on Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/business/brent-crude-prices-today-asian-stocks-iran-war-strait-of-hormuz-b2964086.html", time: "2026-04-24T06:03:06Z" },
+      { title: "Photos, clothes, ashes: Hongkongers pick through fire-ravaged homes", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/photos-clothes-ashes-hongkongers-pick-through-fire-ravaged-homes", time: "2026-04-23T15:48:54Z" },
+      { title: "Hong Kong’s Langham group among first to invest in Beijing’s ‘city of the future’ Xiongan", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3351113/hong-kongs-langham-group-among-first-invest-beijings-city-future-xiongan?utm_source=rss_feed", time: "2026-04-23T09:30:08Z" },
+      { title: "Hong Kong fire victim returns to search for memories of his dog", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/hong-kong-fire-victim-returns-to-search-for-memories-of-his-dog", time: "2026-04-23T09:11:28Z" },
+      { title: "Back home, Hong Kong fire victim gathers memories from the ashes", source: "Straits Times", url: "https://www.straitstimes.com/asia/back-home-hong-kong-fire-victim-gathers-memories-from-the-ashes", time: "2026-04-22T03:20:36Z" },
+      { title: "How Hong Kong can actively shape the foreign policy debate", source: "South China Morning Post", url: "https://www.scmp.com/opinion/hong-kong-opinion/article/3350702/how-hong-kong-can-actively-shape-foreign-policy-debate?utm_source=rss_feed", time: "2026-04-22T01:30:08Z" },
+      { title: "Economist Justin Lin urges West to adopt ‘Eastern wisdom’ as China moves up value chain", source: "South China Morning Post", url: "https://www.scmp.com/economy/china-economy/article/3350885/economist-justin-lin-urges-west-adopt-eastern-wisdom-china-moves-value-chain?utm_source=rss_feed", time: "2026-04-21T13:00:12Z" },
+      { title: "Hong Kong government seeks to seize $16 million from jailed tycoon Jimmy Lai", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/hong-kong-government-seeks-to-seize-16-million-from-jailed-tycoon-jimmy-lai", time: "2026-04-21T10:30:19Z" },
+      { title: "Premium for mainland China shares erodes – or flips – as capital flows to Hong Kong", source: "South China Morning Post", url: "https://www.scmp.com/business/china-business/article/3350886/premium-mainland-china-shares-erodes-or-flips-capital-flows-hong-kong?utm_source=rss_feed", time: "2026-04-21T10:30:07Z" },
+      { title: "Chinese circuit-board supplier Victory Giant jumps 57% in Hong Kong share debut", source: "South China Morning Post", url: "https://www.scmp.com/business/banking-finance/article/3350801/chinese-circuit-board-supplier-victory-giant-jumps-hong-kong-share-debut?utm_source=rss_feed", time: "2026-04-21T01:43:39Z" },
+      { title: "‘Nothing left’: Hong Kong fire survivors return to burnt homes", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/20/nothing-left-hong-kong-fire-survivors-return-to-burnt-homes?traffic_source=rss", time: "2026-04-20T17:35:33Z" },
+      { title: "Hong Kong fire victims scour scorched homes for keepsakes", source: "Straits Times", url: "https://www.straitstimes.com/asia/hong-kong-fire-victims-scour-scorched-homes-for-keepsakes", time: "2026-04-20T03:14:52Z" },
     ]
   },
   {
@@ -5071,22 +5063,6 @@ const locations = [
     ]
   },
   {
-    name: "Sofia", country: "Bulgaria",
-    lat: 42.6977, lng: 23.3219,
-    category: "political",
-    articles: [
-      { title: "Will Bulgaria’s New Leader Cast His Lot With Europe or Russia?", source: "New York Times", url: "https://www.nytimes.com/2026/04/23/world/europe/bulgaria-radev-election-russia-europe.html", time: "2026-04-23T09:01:52Z" },
-      { title: "Is Bulgaria's next prime minister Moscow-friendly?", source: "RTE News", url: "https://www.rte.ie/news/2026/0422/1569437-bulgaria-analysis/", time: "2026-04-22T06:00:00Z" },
-      { title: "A Decisive Win Raises Bulgarians’ Hopes for Change", source: "New York Times", url: "https://www.nytimes.com/2026/04/20/world/europe/bulgaria-election-result-rumen-radev.html", time: "2026-04-20T14:16:56Z" },
-      { title: "Bulgaria’s Kremlin-friendly ex-president wins election in landslide result that could ​bring shift in foreign policy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/bulgaria-election-results-rumen-radev-b2960944.html", time: "2026-04-20T09:30:11Z" },
-      { title: "Bulgaria's Kremlin-friendly former president Radev wins parliamentary election", source: "France 24", url: "https://www.france24.com/en/europe/20260420-bulgaria-s-kremlin-friendly-former-president-radev-wins-parliamentary-election", time: "2026-04-20T07:46:35Z" },
-      { title: "Bulgaria's Kremlin-friendly Radev set for election win", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0420/1569104-bulgaria-election/", time: "2026-04-20T05:53:36Z" },
-      { title: "Bulgaria's pro-Russian former president takes strong lead", source: "France 24", url: "https://www.france24.com/en/bulgaria-s-pro-russian-former-president-takes-strong-lead", time: "2026-04-19T22:25:58Z" },
-      { title: "Rumen Radev looks set to win Bulgarian Parliamentary election", source: "BBC News", url: "https://www.bbc.com/news/articles/cm2kgm1zpgro?at_medium=RSS&at_campaign=rss", time: "2026-04-19T22:06:39Z" },
-      { title: "Bulgaria’s pro-Russian former president Radev set for landslide election win, exit polls show", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-bulgaria-election-radev-president-eu/", time: "2026-04-19T21:24:45Z" },
-    ]
-  },
-  {
     name: "Quetta", country: "Pakistan",
     lat: 30.1798, lng: 66.975,
     category: "conflict",
@@ -5164,18 +5140,18 @@ const locations = [
     ]
   },
   {
-    name: "Colombo", country: "Sri Lanka",
-    lat: 6.9271, lng: 79.8612,
-    category: "economic",
+    name: "Sofia", country: "Bulgaria",
+    lat: 42.6977, lng: 23.3219,
+    category: "political",
     articles: [
-      { title: "Sri Lanka detains 22 Buddhist monks for drug smuggling", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-detains-22-buddhist-monks-for-drug-smuggling", time: "2026-04-26T11:05:00Z" },
-      { title: "Sri Lanka seeks buyers for airport built with Chinese loans", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-seeks-buyers-for-white-elephant-airport", time: "2026-04-26T09:40:00Z" },
-      { title: "Hackers steal $3.2 million from Sri Lanka’s Finance Ministry", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/hackers-steal-3-2-million-from-sri-lankas-finance-ministry", time: "2026-04-23T12:50:00Z" },
-      { title: "US-based Buddhist monks bring peace walk to Sri Lanka", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/us-based-buddhist-monks-bring-peace-walk-to-sri-lanka", time: "2026-04-22T09:20:00Z" },
-      { title: "UN urges Sri Lanka to deliver results in Easter bombing probe", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/un-urges-sri-lanka-to-deliver-results-in-easter-bombing-probe", time: "2026-04-21T08:16:00Z" },
-      { title: "Sri Lanka Easter bombings victims still seek justice seven years on", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-easter-bombings-victims-still-seek-justice-seven-years-on", time: "2026-04-20T07:09:00Z" },
-      { title: "Indian officials push for regional energy hub in Sri Lanka", source: "Dawn", url: "https://www.dawn.com/news/1993241/indian-officials-push-for-regional-energy-hub-in-sri-lanka", time: "2026-04-20T00:18:51Z" },
-      { title: "India officials push for regional energy hub in Sri Lanka", source: "Dawn", url: "https://www.dawn.com/news/1993241/india-officials-push-for-regional-energy-hub-in-sri-lanka", time: "2026-04-19T21:24:43Z" },
+      { title: "Will Bulgaria’s New Leader Cast His Lot With Europe or Russia?", source: "New York Times", url: "https://www.nytimes.com/2026/04/23/world/europe/bulgaria-radev-election-russia-europe.html", time: "2026-04-23T09:01:52Z" },
+      { title: "Is Bulgaria's next prime minister Moscow-friendly?", source: "RTE News", url: "https://www.rte.ie/news/2026/0422/1569437-bulgaria-analysis/", time: "2026-04-22T06:00:00Z" },
+      { title: "A Decisive Win Raises Bulgarians’ Hopes for Change", source: "New York Times", url: "https://www.nytimes.com/2026/04/20/world/europe/bulgaria-election-result-rumen-radev.html", time: "2026-04-20T14:16:56Z" },
+      { title: "Bulgaria’s Kremlin-friendly ex-president wins election in landslide result that could ​bring shift in foreign policy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/bulgaria-election-results-rumen-radev-b2960944.html", time: "2026-04-20T09:30:11Z" },
+      { title: "Bulgaria's Kremlin-friendly former president Radev wins parliamentary election", source: "France 24", url: "https://www.france24.com/en/europe/20260420-bulgaria-s-kremlin-friendly-former-president-radev-wins-parliamentary-election", time: "2026-04-20T07:46:35Z" },
+      { title: "Bulgaria's Kremlin-friendly Radev set for election win", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0420/1569104-bulgaria-election/", time: "2026-04-20T05:53:36Z" },
+      { title: "Bulgaria's pro-Russian former president takes strong lead", source: "France 24", url: "https://www.france24.com/en/bulgaria-s-pro-russian-former-president-takes-strong-lead", time: "2026-04-19T22:25:58Z" },
+      { title: "Rumen Radev looks set to win Bulgarian Parliamentary election", source: "BBC News", url: "https://www.bbc.com/news/articles/cm2kgm1zpgro?at_medium=RSS&at_campaign=rss", time: "2026-04-19T22:06:39Z" },
     ]
   },
   {
@@ -5207,6 +5183,20 @@ const locations = [
     ]
   },
   {
+    name: "Colombo", country: "Sri Lanka",
+    lat: 6.9271, lng: 79.8612,
+    category: "economic",
+    articles: [
+      { title: "Sri Lanka detains 22 Buddhist monks for drug smuggling", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-detains-22-buddhist-monks-for-drug-smuggling", time: "2026-04-26T11:05:00Z" },
+      { title: "Sri Lanka seeks buyers for airport built with Chinese loans", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-seeks-buyers-for-white-elephant-airport", time: "2026-04-26T09:40:00Z" },
+      { title: "Hackers steal $3.2 million from Sri Lanka’s Finance Ministry", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/hackers-steal-3-2-million-from-sri-lankas-finance-ministry", time: "2026-04-23T12:50:00Z" },
+      { title: "US-based Buddhist monks bring peace walk to Sri Lanka", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/us-based-buddhist-monks-bring-peace-walk-to-sri-lanka", time: "2026-04-22T09:20:00Z" },
+      { title: "UN urges Sri Lanka to deliver results in Easter bombing probe", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/un-urges-sri-lanka-to-deliver-results-in-easter-bombing-probe", time: "2026-04-21T08:16:00Z" },
+      { title: "Sri Lanka Easter bombings victims still seek justice seven years on", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-easter-bombings-victims-still-seek-justice-seven-years-on", time: "2026-04-20T07:09:00Z" },
+      { title: "Indian officials push for regional energy hub in Sri Lanka", source: "Dawn", url: "https://www.dawn.com/news/1993241/indian-officials-push-for-regional-energy-hub-in-sri-lanka", time: "2026-04-20T00:18:51Z" },
+    ]
+  },
+  {
     name: "Baghdad", country: "Iraq",
     lat: 33.3152, lng: 44.3661,
     category: "conflict",
@@ -5230,6 +5220,19 @@ const locations = [
       { title: "Houthi leader warns war likely to continue beyond ceasefire", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/houthi-leader-warns-war-likely-continue-beyond-ceasefire", time: "2026-04-21T19:01:52Z" },
       { title: "Iran talks up its ‘new cards’ to play if war with US and Israel resumes – but what are they?", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-ceasefire-israel-attacks-b2961685.html", time: "2026-04-21T10:52:19Z" },
       { title: "Houthi official threw 13-year-old girl down well, killing her, after marital dispute", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893638", time: "2026-04-20T19:26:11Z" },
+    ]
+  },
+  {
+    name: "Doha", country: "Qatar",
+    lat: 25.2854, lng: 51.531,
+    category: "economic",
+    articles: [
+      { title: "Qatar, Saudi Arabia discuss US-Iran crisis", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/qatars-prime-minister-discusses-us-iran-crisis-saudi-foreign-minister", time: "2026-04-26T21:10:43Z" },
+      { title: "Afghan government urges its citizens stranded in Qatar while awaiting US visas to return home", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-afghan-government-urges-its-citizens-stranded-in-qatar-while-awaiting-us-visas-to-return-home/", time: "2026-04-25T15:14:39Z" },
+      { title: "Qatari emir, Trump discuss Iran ceasefire, regional stability", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-qatari-emir-trump-discuss-iran-ceasefire-regional-stability/", time: "2026-04-25T10:14:45Z" },
+      { title: "Trump considering plan to send Afghan refugees who helped US to Congo - NYT", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-893881", time: "2026-04-23T05:23:42Z" },
+      { title: "US Marine’s family is stuck in Qatar’s Afghan camp. Trump could send them and hundreds other refugees to the Congo, advocates fear", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-afghans-congo-plan-qatar-b2963067.html", time: "2026-04-22T20:57:23Z" },
+      { title: "Qatar facing 'strategic shock' in energy, influence crisis in wake of Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893577", time: "2026-04-20T13:16:19Z" },
     ]
   },
   {
@@ -5269,18 +5272,6 @@ const locations = [
       { title: "Ex-Philippine president Duterte to face trial on crimes against humanity charges", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/ex-philippine-president-duterte-to-face-trial-on-crimes-against-humanity-charges", time: "2026-04-23T16:27:09Z" },
       { title: "Heineken beer sales could be impacted by ‘complex and volatile’ market caused by Iran war", source: "The Independent", url: "https://www.independent.co.uk/news/business/heineken-beer-share-price-iran-war-b2963619.html", time: "2026-04-23T13:59:43Z" },
       { title: "Brewer giant admits Iran war could impact beer sales", source: "The Independent", url: "https://www.independent.co.uk/news/business/heineken-beer-earnings-iran-war-tiger-b2963349.html", time: "2026-04-23T08:39:41Z" },
-    ]
-  },
-  {
-    name: "Doha", country: "Qatar",
-    lat: 25.2854, lng: 51.531,
-    category: "economic",
-    articles: [
-      { title: "Afghan government urges its citizens stranded in Qatar while awaiting US visas to return home", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-afghan-government-urges-its-citizens-stranded-in-qatar-while-awaiting-us-visas-to-return-home/", time: "2026-04-25T15:14:39Z" },
-      { title: "Qatari emir, Trump discuss Iran ceasefire, regional stability", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-qatari-emir-trump-discuss-iran-ceasefire-regional-stability/", time: "2026-04-25T10:14:45Z" },
-      { title: "Trump considering plan to send Afghan refugees who helped US to Congo - NYT", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-893881", time: "2026-04-23T05:23:42Z" },
-      { title: "US Marine’s family is stuck in Qatar’s Afghan camp. Trump could send them and hundreds other refugees to the Congo, advocates fear", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-afghans-congo-plan-qatar-b2963067.html", time: "2026-04-22T20:57:23Z" },
-      { title: "Qatar facing 'strategic shock' in energy, influence crisis in wake of Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893577", time: "2026-04-20T13:16:19Z" },
     ]
   },
   {
@@ -5413,6 +5404,17 @@ const locations = [
     ]
   },
   {
+    name: "Eastern Mediterranean", country: "International",
+    lat: 34.0, lng: 33.0,
+    category: "conflict",
+    articles: [
+      { title: "Flotilla sets sail from Italy to challenge Gaza blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/flotilla-sets-sail-italy-challenge-gaza-blockade", time: "2026-04-26T21:02:48Z" },
+      { title: "Turkish delegation plays key role in Global Sumud Flotilla’s Spring 2026 Mission", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-turkish-delegation-plays-key-role-in-global-sumud-flotillas-spring-2026-mission/", time: "2026-04-25T12:30:00Z" },
+      { title: "Nearly 8,000 migrants died or went missing worldwide in 2025: UN migration agency", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260422-nearly-8000-migrants-died-or-went-missing-worldwide-in-2025-un-migration-agency/", time: "2026-04-22T13:59:54Z" },
+      { title: "Turkey, Syria, Jordan unveil Gulf-Europe rail corridor as Ankara pushes alternative trade routes", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893562", time: "2026-04-20T07:46:49Z" },
+    ]
+  },
+  {
     name: "Minsk", country: "Belarus",
     lat: 53.9045, lng: 27.5615,
     category: "diplomacy",
@@ -5542,16 +5544,6 @@ const locations = [
       { title: "Several injured as fans clash with police in Paraguay’s Superclasico match", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/20/several-injured-as-fans-clash-with-police-in-paraguays-superclasico-match?traffic_source=rss", time: "2026-04-20T11:17:42Z" },
       { title: "Fans fight police at Paraguay football match", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/20/fans-fight-police-at-paraguay-football-match?traffic_source=rss", time: "2026-04-20T09:01:28Z" },
       { title: "Police fire rubber bullets as Paraguay derby abandoned", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c5ylr2zdq78o?at_medium=RSS&at_campaign=rss", time: "2026-04-20T08:55:30Z" },
-    ]
-  },
-  {
-    name: "Eastern Mediterranean", country: "International",
-    lat: 34.0, lng: 33.0,
-    category: "conflict",
-    articles: [
-      { title: "Turkish delegation plays key role in Global Sumud Flotilla’s Spring 2026 Mission", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-turkish-delegation-plays-key-role-in-global-sumud-flotillas-spring-2026-mission/", time: "2026-04-25T12:30:00Z" },
-      { title: "Nearly 8,000 migrants died or went missing worldwide in 2025: UN migration agency", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260422-nearly-8000-migrants-died-or-went-missing-worldwide-in-2025-un-migration-agency/", time: "2026-04-22T13:59:54Z" },
-      { title: "Turkey, Syria, Jordan unveil Gulf-Europe rail corridor as Ankara pushes alternative trade routes", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893562", time: "2026-04-20T07:46:49Z" },
     ]
   },
   {
@@ -6277,6 +6269,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "‘A sudden gap’: poorest to suffer from Trump’s drive to stop Cuba sending doctors to its neighbours", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/26/poorest-to-suffer-trump-drive-to-stop-cuba-sending-doctors-to-its-neighbours", time: "2026-04-26T10:00:11Z" },
+    ]
+  },
+  {
+    name: "Georgetown", country: "Guyana",
+    lat: 6.8013, lng: -58.1551,
+    category: "economic",
+    articles: [
+      { title: "Welcome to Washington's new media landscape", source: "Axios", url: "https://www.axios.com/2026/04/26/washtington-media-white-house-correspondents-dinner", time: "2026-04-26T21:38:23Z" },
     ]
   },
 ];
