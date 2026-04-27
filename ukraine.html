@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:46 UTC, 27 Apr 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">14:02 UTC, 27 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">27 April 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Kim Jong Un speaks at memorial for North Korean soldiers killed fighting for Russia", source: "Sky News", url: "https://news.sky.com/story/kim-jong-un-speaks-at-memorial-for-north-korean-soldiers-killed-fighting-for-russia-13537094", time: "2026-04-27T10:01:00Z" },
       { title: "The Eukrainian review – heroic portrait of the diplomat trying to haul Ukraine into Europe", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/27/the-eukrainian-review-heroic-portrait-of-the-diplomat-trying-to-haul-ukraine-into-europe", time: "2026-04-27T10:00:07Z" },
       { title: "EU leaders back US president after attack", source: "Euronews", url: "http://www.euronews.com/my-europe/2026/04/27/eu-leaders-back-us-president-after-attack", time: "2026-04-27T07:47:25Z" },
       { title: "At least 17 killed in Russia's strikes on Ukraine on Chernobyl anniversary", source: "Euronews", url: "http://www.euronews.com/2026/04/27/at-least-16-killed-across-ukraine-and-russia-in-exhange-of-strikes-on-chernobyl-anniversar", time: "2026-04-27T05:17:50Z" },
@@ -129,11 +130,13 @@ const locations = [
       { title: "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary", source: "CBS News", url: "https://www.cbsnews.com/news/ukraine-russian-attacks-chernobyl-anniversary/", time: "2026-04-26T18:48:42Z" },
       { title: "Strikes kill at least 16 as Chernobyl anniversary highlights nuclear risks of Russia-Ukraine war", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/strikes-kill-at-least-16-as-chernobyl-anniversary-highlights-nuclear-risks-of-russia-ukraine-war", time: "2026-04-26T18:07:41Z" },
       { title: "Strikes in Ukraine and Russia kill at least 16 on Chernobyl's 40th anniversary", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/strikes-in-ukraine-and-russia-kill-at-least-16-on-chernobyls-40th-anniversary", time: "2026-04-26T18:07:41Z" },
+      { title: "Chernobyl: Two takes, then & now. On the ground, 40 years on", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260426-chernobyl-two-takes-then-now-on-the-ground-40-years-on", time: "2026-04-26T17:59:59Z" },
       { title: "Ukraine accuses Russia on 40th anniversary of Chornobyl", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0426/1570298-chernobyl-anniversary/", time: "2026-04-26T14:45:22Z" },
       { title: "On 40th Chernobyl disaster anniversary, Zelenskyy accuses Russia of committing 'nuclear terrorism'", source: "Euronews", url: "http://www.euronews.com/2026/04/26/on-40th-chernobyl-disaster-anniversary-zelenskyy-accuses-russia-of-committing-nuclear-terr", time: "2026-04-26T14:03:36Z" },
       { title: "40 years since the world’s worst nuclear disaster in Ukraine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/26/40-years-since-the-worlds-worst-nuclear-disaster-in-ukraine?traffic_source=rss", time: "2026-04-26T13:45:49Z" },
       { title: "Taoiseach pays tribute to ‘courage and resilience’ of Chernobyl survivors on anniversary", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/26/taoiseach-pays-tribute-to-courage-and-resilience-of-chernobyl-survivors-on-anniversary/", time: "2026-04-26T13:32:44Z" },
       { title: "Chernobyl 40th anniversary: A zone that must be sheltered", source: "France 24", url: "https://www.france24.com/en/chernobyl-40th-anniversary-a-zone-that-must-be-sheltered", time: "2026-04-26T13:07:14Z" },
+      { title: "Chernobyl survivors have paid the ultimate price in the Russia-Ukraine war", source: "NPR", url: "https://www.npr.org/2026/04/26/nx-s1-5793661/chernobyl-survivors-have-paid-the-ultimate-price-in-the-russia-ukraine-war", time: "2026-04-26T12:08:46Z" },
       { title: "40 years since Chernobyl disaster: Soviet Union's 'top-down culture' partly to blame", source: "France 24", url: "https://www.france24.com/en/40-years-since-chernobyl-disaster-soviet-union-s-top-down-culture-partly-to-blame", time: "2026-04-26T12:04:29Z" },
       { title: "Ukraine marks 40th anniversary of the Chernobyl nuclear plant disaster", source: "France 24", url: "https://www.france24.com/en/ukraine-marks-40th-anniversary-of-the-chernobyl-nuclear-plant-disaster", time: "2026-04-26T09:10:08Z" },
       { title: "40 years after Chernobyl, war brings new rounds of disaster and displacement", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/26/chernobyl-40-anniversary-ukraine-russia/", time: "2026-04-26T09:00:20Z" },
@@ -219,6 +222,12 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Trump’s indifference to Iran and Russia’s military collaboration is staggering", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/trump-iran-russia-putin-support-aragchi-b2965568.html", time: "2026-04-27T13:20:33Z" },
+      { title: "U.S. offers no help with Iran war’s fallout, Thai foreign minister says", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/27/thailand-war-iran/", time: "2026-04-27T13:13:42Z" },
+      { title: "Germany suspects Russia is behind Signal phishing that targeted top officials", source: "ABC News", url: "https://abcnews.com/International/wireStory/germany-suspects-russia-signal-phishing-targeted-top-officials-132415352", time: "2026-04-27T12:58:24Z" },
+      { title: "Russian fighters confirm withdrawal from northern Mali city after separatist attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/c3w3wyq4v14o?at_medium=RSS&at_campaign=rss", time: "2026-04-27T12:36:17Z" },
+      { title: "Separatists in Mali say government troops and Russian mercenaries left the northern city of Kidal after rebel attacks", source: "ABC News", url: "https://abcnews.com/International/wireStory/separatists-mali-government-troops-russian-mercenaries-left-northern-132400545", time: "2026-04-27T12:27:11Z" },
+      { title: "'Call us,' Trump tells Iran as Putin hosts Tehran's top diplomat with peace talks stalled", source: "NBC News", url: "https://www.nbcnews.com/world/iran/trump-iran-war-call-us-peace-talks-araghchi-putin-hormuz-rcna342251", time: "2026-04-27T11:56:08Z" },
       { title: "Iran's flurry of diplomacy, as Trump insists U.S. has 'the cards'", source: "NPR", url: "https://www.npr.org/2026/04/27/nx-s1-5800669/iran-middle-east-updates", time: "2026-04-27T11:32:55Z" },
       { title: "Iran’s Foreign Minister Is in Russia for Talks With Putin on Middle East War", source: "New York Times", url: "https://www.nytimes.com/2026/04/27/world/europe/iran-foreign-minister-russia.html", time: "2026-04-27T10:57:18Z" },
       { title: "Russia, Israel and the US will meet to discuss nuclear weapons. Here are two challenges they face", source: "The Independent", url: "https://www.independent.co.uk/news/world/politics/npt-nuclear-weapons-treaty-us-israel-russia-b2965513.html", time: "2026-04-27T10:30:13Z" },
@@ -292,8 +301,6 @@ const locations = [
       { title: "‘Predators’: Amnesty slams Netanyahu, Putin, Trump as human rights decline", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/20/predators-amnesty-slams-netanyahu-putin-trump-as-human-rights-decline?traffic_source=rss", time: "2026-04-20T23:43:01Z" },
       { title: "Ukraine-Russia war latest: Zelensky to bolster air defences against Kremlin attacks with anti-missile system ‘within year’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-kyiv-shooting-soldiers-putin-zelensky-b2960808.html", time: "2026-04-20T21:04:53Z" },
       { title: "Kremlin-friendly ex-president Rumen Radev scores big election win in Bulgaria", source: "NBC News", url: "https://www.nbcnews.com/world/europe/russia-friendly-ex-president-election-win-bulgaria-rcna340947", time: "2026-04-20T19:51:07Z" },
-      { title: "A new foothold for Moscow in Europe after Bulgaria election", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/20/bulgaria-russia-election-victory-radev/", time: "2026-04-20T13:05:35Z" },
-      { title: "Rescuers evacuate hundreds after snowstorm hits Russia’s Far East", source: "Euronews", url: "http://www.euronews.com/video/2026/04/20/rescuers-evacuate-hundreds-after-snowstorm-hits-russias-far-east", time: "2026-04-20T12:43:56Z" },
     ]
   },
   {
@@ -356,8 +363,6 @@ const locations = [
       { title: "Republicans stress over economic whiplash from Iran conflict", source: "The Hill", url: "https://thehill.com/homenews/senate/5840070-republicans-economy-trump-iran/", time: "2026-04-21T10:00:00Z" },
       { title: "Ramaswamy almost tied with Democrat Acton in Ohio governor race: Poll", source: "The Hill", url: "https://thehill.com/homenews/campaign/5839985-ohio-governor-vivek-ramaswamy-amy-acton-poll/", time: "2026-04-20T21:07:13Z" },
       { title: "Senate Democrats press Hegseth over cuts to offices that limit risk to civilian casualties", source: "The Hill", url: "https://thehill.com/policy/defense/5839945-senate-democrats-civilian-harm/", time: "2026-04-20T20:22:36Z" },
-      { title: "Macron meets Tusk to discuss possible Polish role in French nuclear deterrence", source: "France 24", url: "https://www.france24.com/en/europe/20260420-macron-meets-tusk-poland-european-defence-collaboration", time: "2026-04-20T13:58:57Z" },
-      { title: "The Democrats’ Senate votes on Israel highlight a growing challenge", source: "The Hill", url: "https://thehill.com/opinion/campaign/5838411-democrats-shifting-israel-policy/", time: "2026-04-20T12:30:00Z" },
     ]
   },
   {
