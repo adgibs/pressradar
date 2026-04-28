@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:40 UTC, 28 Apr 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:37 UTC, 28 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">28 April 2026</div>
@@ -116,7 +116,11 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Trump approval dips to record low amid Iran war, inflation woes: Poll", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/trump-approval-dips-to-record-low-amid-iran-war-inflation-woes-poll?traffic_source=rss", time: "2026-04-28T19:02:29Z" },
+      { title: "UK summons Iranian ambassador over embassy's 'unacceptable' comments on social media", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894491", time: "2026-04-28T18:43:09Z" },
+      { title: "Iranian regime targets diaspora with propaganda, financial appeals, analyst says - interview", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894490", time: "2026-04-28T18:41:56Z" },
       { title: "Iraq’s Prime Minister-Designate Thrust Into U.S.-Iran Power Struggle", source: "New York Times", url: "https://www.nytimes.com/2026/04/28/world/middleeast/iraq-ali-al-zaidi.html", time: "2026-04-28T17:47:10Z" },
+      { title: "What made an ex-Mossad chief say he's 'ashamed to be a Jew'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/haaretz-today/2026-04-28/ty-article/.highlight/what-made-an-ex-mossad-chief-say-hes-ashamed-to-be-a-jew/0000019d-d4c6-d95a-afbd-f5ce8e160000", time: "2026-04-28T17:36:42Z" },
       { title: "Police open investigation into Golders Green memorial wall arson", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-894484", time: "2026-04-28T17:31:24Z" },
       { title: "IRGC shores up wartime power in Iran, blunting supreme leader’s role", source: "Times of Israel", url: "https://www.timesofisrael.com/irgc-shores-up-wartime-power-in-iran-blunting-supreme-leaders-role/", time: "2026-04-28T17:30:30Z" },
       { title: "Trump claims Iran in 'state of collapse' as Iran expected to submit revised proposal to mediators", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894477", time: "2026-04-28T16:39:57Z" },
@@ -161,6 +165,7 @@ const locations = [
       { title: "Turkey opposed Iran war but now eyeing how to profit from it", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-04-28/ty-article/.premium/turkey-opposed-iran-war-but-now-eyeing-how-to-profit-from-it/0000019d-d12d-d95a-afbd-f16f98600000", time: "2026-04-28T03:00:13Z" },
       { title: "Popular protests may be inevitable, warns Iran's Supreme National Security Council - Iran Intl", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894370", time: "2026-04-28T02:57:15Z" },
       { title: "Iran among dozens selected for vice presidency post at UN non-proliferation confab", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-among-dozens-selected-for-vice-presidency-post-at-un-non-proliferation-confab/", time: "2026-04-28T02:12:56Z" },
+      { title: "Report: Iran to submit revised proposal soon after Trump rejects previous offer", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-28/ty-article-live/trump-unhappy-with-iranian-proposal-u-s-official-says/0000019d-d1cd-dc2f-addf-ffdf5da30000", time: "2026-04-28T02:04:54Z" },
       { title: "Psychological warfare: Israelis receive threatening WhatsApp messages, likely from Iranian hackers", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894368", time: "2026-04-28T01:00:30Z" },
       { title: "US Treasury chief says Iran’s oil industry is 'starting to shut'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-treasury-chief-says-irans-oil-industry-starting-shut", time: "2026-04-28T00:49:14Z" },
       { title: "US threatens sanctions for companies providing services to Iranian airlines", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-threatens-sanctions-companies-providing-servises-iranian-airlines", time: "2026-04-28T00:18:14Z" },
@@ -611,11 +616,6 @@ const locations = [
       { title: "What would happen next if Iran agreed to surrender its highly enriched uranium", source: "NPR", url: "https://www.npr.org/2026/04/21/nx-s1-5788988/what-would-happen-next-if-iran-agreed-to-surrender-its-highly-enriched-uranium", time: "2026-04-21T20:10:42Z" },
       { title: "Nuclear deal between Iran, US illusory if IAEA not involved, Director Grossi says - Telegraph", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-893769", time: "2026-04-21T20:01:43Z" },
       { title: "How does the war in Iran end?", source: "Sky News", url: "https://news.sky.com/story/how-does-the-war-in-iran-end-13534721", time: "2026-04-21T19:55:00Z" },
-      { title: "'No decision' on joining talks with US,  Iranian foreign ministry spokesman tells BBC", source: "BBC News", url: "https://www.bbc.com/news/videos/ckgxwe6ljr7o?at_medium=RSS&at_campaign=rss", time: "2026-04-21T18:59:37Z" },
-      { title: "A timeline of Trump's shifting statements about how long the Iran war will last", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/politics/a-timeline-of-trumps-shifting-statements-about-how-long-the-iran-war-will-last", time: "2026-04-21T18:52:38Z" },
-      { title: "Nicaragua’s president says Trump ‘mentally deranged’ over war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/21/nicaraguas-president-says-trump-mentally-deranged-over-war-on-iran?traffic_source=rss", time: "2026-04-21T18:47:11Z" },
-      { title: "US-Iran talks are in doubt as ceasefire nears an end", source: "France 24", url: "https://www.france24.com/en/us-iran-talks-are-in-doubt-as-ceasefire-nears-an-end", time: "2026-04-21T18:46:20Z" },
-      { title: "US forces detain Iran-linked tanker Tifani with ceasefire talks on edge", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/us-forces-detain-iran-linked-tanker-tifani-with-ceasefire-talks-on-edge?traffic_source=rss", time: "2026-04-21T18:45:32Z" },
     ]
   },
   {
@@ -623,8 +623,12 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "US-Israel talks to end military aid, shift to joint defense partnership", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-894509", time: "2026-04-28T21:47:36Z" },
+      { title: "Netanyahu trial: President’s legal team invites prosecution, defense to preliminary plea-deal talks", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894508", time: "2026-04-28T21:44:03Z" },
       { title: "WATCH: IDF dismantles largest Hezbollah tunnel network in southern Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894497", time: "2026-04-28T20:00:14Z" },
       { title: "Ultra-Orthodox draft protesters block highway, throw rocks at firefighters", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-894492", time: "2026-04-28T19:17:37Z" },
+      { title: "Netanyahu’s first cross-examination in over two months cut short hours early", source: "Times of Israel", url: "https://www.timesofisrael.com/netanyahus-first-cross-examination-in-over-two-months-cut-short-hours-early/", time: "2026-04-28T18:50:21Z" },
+      { title: "Sa’ar scolds Ukraine for doing Twitter diplomacy — but he does just the same, as does everyone else", source: "Times of Israel", url: "https://www.timesofisrael.com/saar-scolds-ukraine-for-doing-twitter-diplomacy-but-he-does-just-the-same-as-does-everyone-else/", time: "2026-04-28T18:42:42Z" },
       { title: "Israeli chef closes Berlin restaurant amid constant threats", source: "Times of Israel", url: "https://www.timesofisrael.com/israeli-chef-closes-berlin-restaurant-amid-constant-threats/", time: "2026-04-28T18:22:39Z" },
       { title: "IDF blows up 2 vast Hezbollah attack tunnels built with ‘direct guidance’ from Iran", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-blows-up-2-vast-hezbollah-attack-tunnels-built-with-direct-guidance-from-iran/", time: "2026-04-28T17:58:13Z" },
       { title: "Religious groups demand action against police officers who detained man for kippa with Palestinian flag", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-04-28/ty-article/.premium/religious-groups-demand-action-against-police-after-man-detained-over-kippa/0000019d-d507-dc2f-addf-ffdf3be60000", time: "2026-04-28T17:57:59Z" },
@@ -1119,10 +1123,6 @@ const locations = [
       { title: "Germany, Italy block bid to suspend EU-Israel trade agreement", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/21/germany-italy-block-bid-to-suspend-eu-israel-trade-agreement?traffic_source=rss", time: "2026-04-21T20:16:19Z" },
       { title: "Four killed in Arab communities as Israel's 2026 homicide toll nears 100", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-04-21/ty-article/four-killed-in-arab-communities-as-israels-2026-homicide-toll-nears-100/0000019d-b08d-dc1b-a5bf-f9ad4ab20000", time: "2026-04-21T20:13:58Z" },
       { title: "WATCH: Israel begins 78th Independence Day with annual torch lighting ceremony at Mount Herzl", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-893770", time: "2026-04-21T20:10:44Z" },
-      { title: "Video: Israeli soldiers sing national anthem on ruins of Lebanese town", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/21/video-israeli-soldiers-sing-national-anthem-on-ruins-of-lebanese-town?traffic_source=rss", time: "2026-04-21T19:36:41Z" },
-      { title: "IDF confirms Hezbollah drone caused sirens in northern Israel in violation of ceasefire", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-893767", time: "2026-04-21T19:26:01Z" },
-      { title: "IDF replaces smashed Jesus statue in Lebanon as involved soldier removed from combat", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-21/ty-article/.premium/idf-replaces-smashed-jesus-statue-in-lebanon-as-soldier-removed-from-combat/0000019d-b102-deab-ab9d-b9f790bc0000", time: "2026-04-21T19:09:24Z" },
-      { title: "Rep. Ro Khanna: Betting against Jews - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-893728", time: "2026-04-21T19:00:00Z" },
     ]
   },
   {
@@ -1130,6 +1130,9 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "UAE taking advantage of long-term global energy needs by leaving OPEC - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894502", time: "2026-04-28T20:28:58Z" },
+      { title: "Decision by the UAE to leave OPEC shakes up alliance that influences oil prices worldwide", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/opec-uae-iran-frankfurt-germany-b2966706.html", time: "2026-04-28T19:18:07Z" },
+      { title: "How the UAE’s decision to leave Opec could recast the Middle East", source: "The Guardian", url: "https://www.theguardian.com/business/2026/apr/28/how-uae-leave-opec-recast-middle-east-saudi-arabia-us", time: "2026-04-28T18:58:59Z" },
       { title: "What are OPEC and OPEC +, and why has the UAE quit?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/what-are-opec-and-opec-and-why-has-the-uae-quit?traffic_source=rss", time: "2026-04-28T18:05:02Z" },
       { title: "The Hormuz digital chokepoint: How does the Iran war threaten subsea cables? - explainer", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894478", time: "2026-04-28T17:37:06Z" },
       { title: "Ryanair CEO warns airlines could fail as fuel prices surge", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/ryanair-ceo-warns-airlines-could-fail-fuel-prices-surge", time: "2026-04-28T17:35:34Z" },
@@ -1439,7 +1442,6 @@ const locations = [
       { title: "Iran war live: IRGC seizes two vessels in Strait of Hormuz amid US blockade", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/22/iran-war-live-trump-says-ceasefire-extended-as-talks-with-tehran-in-limbo?traffic_source=rss", time: "2026-04-22T00:00:00Z" },
       { title: "Trump extends Iran ceasefire with fate of Pakistan talks left uncertain", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/trump-extends-iran-ceasefire-fate-pakistan-talks-left-uncertain", time: "2026-04-21T21:21:54Z" },
       { title: "EU eyes options as Iran conflict threatens jet fuel shortages", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/21/eu-eyes-options-as-iran-conflict-threatens-jet-fuel-shortages?traffic_source=rss", time: "2026-04-21T20:33:13Z" },
-      { title: "Iran-US war latest: Tehran ‘refuses to send negotiators’ to peace talks until Trump lifts blockade on Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strait-hormuz-israel-peace-talks-b2961510.html", time: "2026-04-21T19:07:33Z" },
     ]
   },
   {
@@ -1656,7 +1658,6 @@ const locations = [
       { title: "Settlers torch home in West Bank, infant among injured", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/settlers-torch-home-west-bank-infant-among-injured", time: "2026-04-22T00:35:08Z" },
       { title: "More than $71 billion needed over next decade to rebuild Gaza: UN, EU", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260421-more-than-71-billion-needed-over-next-decade-to-rebuild-gaza-un-eu", time: "2026-04-21T21:05:57Z" },
       { title: "Israeli rabbi who bulldozed Gaza honoured as torchbearer", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/21/israeli-rabbi-who-bulldozed-gaza-honoured-as-torchbearer?traffic_source=rss", time: "2026-04-21T19:43:33Z" },
-      { title: "Two Palestinians Killed in Israeli Shooting Near West Bank School", source: "New York Times", url: "https://www.nytimes.com/2026/04/21/world/middleeast/palestinians-killed-israeli-shooting-west-bank-school.html", time: "2026-04-21T18:54:04Z" },
     ]
   },
   {
@@ -1664,6 +1665,8 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "strikes",
     articles: [
+      { title: "Middle East crisis live: Trump hits back at German chancellor after Merz said Iran was ‘humiliating’ US", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/28/middle-east-crisis-live-iran-us-israel-lebanon-hormuz-nuclear-oil-latest-news-updates", time: "2026-04-28T19:34:18Z" },
+      { title: "Lebanon to enter direct talks with Israel seeking permanent ceasefire", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-enter-direct-talks-israel-seeking-permanent-ceasefire", time: "2026-04-28T19:30:59Z" },
       { title: "Rescuers trapped during operation in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rescuers-trapped-during-operation-south-lebanon", time: "2026-04-28T18:34:19Z" },
       { title: "Beirut promise to disarm Hezbollah ‘only ink on paper,’ Lebanese Hezbollah expert says - interview", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894480", time: "2026-04-28T16:50:05Z" },
       { title: "Hezbollah drone strikes target Israeli soldiers in southern Lebanon", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/28/hezbollah-drone-strikes-target-israeli-soldiers-in-southern-lebanon", time: "2026-04-28T16:20:47Z" },
@@ -1797,8 +1800,6 @@ const locations = [
       { title: "Beirut residents say they hope for peace amid tenuous ceasefire with Israel", source: "NBC News", url: "https://www.nbcnews.com/video/beirut-residents-say-they-hope-for-peace-amid-tenuous-ceasefire-with-israel-261833797827", time: "2026-04-21T20:19:51Z" },
       { title: "Macron says Israeli withdrawal from Lebanon key to stability", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/macron-says-israeli-withdrawal-lebanon-key-stability", time: "2026-04-21T20:09:57Z" },
       { title: "Israel unveils game-changing artillery against Iran-backed Hezbollah amid fragile ceasefire", source: "Fox News", url: "https://www.foxnews.com/world/israel-unveils-game-changing-artillery-against-iran-backed-hezbollah-amid-fragile-ceasefire", time: "2026-04-21T20:06:28Z" },
-      { title: "Lebanon needs €500M to address humanitarian crisis caused by Israeli war, prime minister says", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260421-lebanon-needs-e500m-to-address-humanitarian-crisis-caused-by-israeli-war-prime-minister-says/", time: "2026-04-21T19:00:34Z" },
-      { title: "Lebanese Bury Their Dead Amid a Lull in Fighting", source: "New York Times", url: "https://www.nytimes.com/2026/04/21/world/middleeast/lebanon-villages-funerals.html", time: "2026-04-21T18:46:49Z" },
     ]
   },
   {
@@ -1806,6 +1807,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "strikes",
     articles: [
+      { title: "Why has JD Vance been so quiet? Because he deleted X from his phone for Lent, report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/jd-vance-deletes-x-phone-b2966575.html", time: "2026-04-28T18:41:24Z" },
       { title: "Elbit opens new drone production plant in Romania to expand presence in Europe", source: "Times of Israel", url: "https://www.timesofisrael.com/elbit-opens-new-drone-production-plant-in-romania-to-expand-presence-in-europe/", time: "2026-04-28T16:50:30Z" },
       { title: "Trump welcomes King Charles to Washington, where monarch set to address US Congress", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-welcomes-king-charles-to-washington-where-monarch-set-to-address-us-congress/", time: "2026-04-28T16:45:50Z" },
       { title: "Vance pulls out of TPUSA event with Erika Kirk weeks after she left him alone on a Georgia stage", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vance-tpusa-erika-kirk-iowa-b2966527.html", time: "2026-04-28T16:04:50Z" },
@@ -1926,9 +1928,6 @@ const locations = [
       { title: "Pope Leo says God’s name should not be used to ‘justify death-dealing choices’ as Hegseth’s religious messaging continues", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pope-leo-god-iran-war-hegseth-b2962228.html", time: "2026-04-21T22:26:20Z" },
       { title: "US-Iran ceasefire to be extended until Iranian officials submit 'unified proposal,' Trump announces", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-893776", time: "2026-04-21T22:18:27Z" },
       { title: "Could a judge soon force Trump to testify about Jan 6?", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-testify-jan-6-lawsuit-b2962185.html", time: "2026-04-21T21:12:58Z" },
-      { title: "At 78, Israel’s defense-tech edge is reshaping modern warfare - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-893766", time: "2026-04-21T19:21:01Z" },
-      { title: "Iran undecided on talks as ceasefire enters final hours; Trump: ‘They have to negotiate’", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-undecided-on-talks-as-ceasefire-enters-final-hours-trump-they-have-to-negotiate/", time: "2026-04-21T19:20:55Z" },
-      { title: "Democrat borrows Trump’s ‘witch hunt’ refrain to resign from Congress after House ethics probe", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/cherfilus-mccormick-resigns-congress-ethics-b2962161.html", time: "2026-04-21T19:06:10Z" },
     ]
   },
   {
@@ -1936,6 +1935,8 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "Haredi anti-draft rioters break into Military Police chief’s home with family inside", source: "Times of Israel", url: "https://www.timesofisrael.com/haredi-anti-draft-rioters-break-into-military-police-chiefs-home-with-family-inside/", time: "2026-04-28T19:18:51Z" },
+      { title: "Noam Bettan strolls through Israel's musical history in Eurovision trailer", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-894493", time: "2026-04-28T19:08:26Z" },
       { title: "WATCH: IDF, Border Police investigate dozens of east Jerusalem terror suspects, confiscate weapons", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-894457", time: "2026-04-28T18:43:54Z" },
       { title: "Did Israel risk lives? Debate rages over Israel sending Arrow missiles to Germany mid-Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894471", time: "2026-04-28T15:52:04Z" },
       { title: "Trump unhappy with Iran, IDF takes down over 1,000 Hezbollah sites", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-894441", time: "2026-04-28T12:36:42Z" },
@@ -1996,6 +1997,7 @@ const locations = [
     lat: 33.5138, lng: 36.2765,
     category: "evacuation",
     articles: [
+      { title: "Viral videos believed to show Syria’s Saydnaya prison expose more details of infamous jail", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260428-viral-videos-believed-to-show-syrias-saydnaya-prison-expose-more-details-of-infamous-jail/", time: "2026-04-28T19:28:09Z" },
       { title: "Assad brothers summoned in absentia as Syria opens landmark trial of former security chief", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894489", time: "2026-04-28T19:12:51Z" },
       { title: "From exile to judge: Symbolism in Syria’s trial of Assad, former officials", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/28/from-exile-to-judge-symbolism-in-syrias-trial-of-assad-former-officials?traffic_source=rss", time: "2026-04-28T17:49:59Z" },
       { title: "Syria tries prominent Assad-era security official", source: "France 24", url: "https://www.france24.com/en/video/20260427-syria-tries-prominent-assad-era-security-official", time: "2026-04-27T15:34:05Z" },
@@ -2047,7 +2049,6 @@ const locations = [
       { title: "Priceless 2,500-year-old golden helmet returned to Romania after Dutch museum raid", source: "NPR", url: "https://www.npr.org/2026/04/22/nx-s1-5795403/golden-helmet-romania-recovery", time: "2026-04-22T05:24:08Z" },
       { title: "At least eight involved in UK arsons against Jewish sites released on bail", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-893787", time: "2026-04-22T03:28:57Z" },
       { title: "Gunman at Mexican pyramids carried materials related to 1999 Columbine massacre", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/gunman-at-mexican-pyramids-carried-materials-related-to-1999-columbine-massacre", time: "2026-04-21T22:46:29Z" },
-      { title: "Electric wheelchair bought at a thrift store explodes after woman drags it out of her home", source: "The Independent", url: "https://www.independent.co.uk/tv/news/wheelchair-explosion-lithium-battery-video-b2962098.html", time: "2026-04-21T19:16:35Z" },
     ]
   },
   {
@@ -2055,6 +2056,7 @@ const locations = [
     lat: 33.2705, lng: 35.1968,
     category: "strikes",
     articles: [
+      { title: "Lebanese soldiers wounded in Israeli strike during rescue mission", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanese-soldiers-wounded-israeli-strike-during-rescue-mission", time: "2026-04-28T19:04:30Z" },
       { title: "Displaced Lebanese flee again as strikes hit evacuation route", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/displaced-lebanese-flee-again-strikes-hit-evacuation-route", time: "2026-04-27T03:09:05Z" },
       { title: "Southern Lebanon witnesses widespread displacement due to Israeli strikes after Netanyahu’s escalation order", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260426-southern-lebanon-witnesses-widespread-displacement-due-to-israeli-strikes-after-netanyahus-escalation-order/", time: "2026-04-26T15:21:56Z" },
       { title: "Lebanon state media reports new Israeli strikes in south after Netanyahu order", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-state-media-reports-new-israeli-strikes-south-after-netanyahu", time: "2026-04-25T20:42:37Z" },
@@ -2147,7 +2149,6 @@ const locations = [
       { title: "Yemen’s landmine crisis endures despite truce and de-mining efforts", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/26/yemens-landmine-crisis-endures-despite-truce-and-de-mining-efforts?traffic_source=rss", time: "2026-04-26T09:43:42Z" },
       { title: "US launches air bridge to restock Israeli air force munitions – Hebrew sources", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260423-us-launches-air-bridge-to-restock-israeli-air-force-munitions-hebrew-sources/", time: "2026-04-23T11:19:38Z" },
       { title: "Houthis signal return, warn of broader regional escalation", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893824", time: "2026-04-22T12:53:00Z" },
-      { title: "Houthi leader warns war likely to continue beyond ceasefire", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/houthi-leader-warns-war-likely-continue-beyond-ceasefire", time: "2026-04-21T19:01:52Z" },
     ]
   },
   {
