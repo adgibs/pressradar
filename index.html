@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:47 UTC, 29 Apr 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:41 UTC, 29 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">29 April 2026</div>
@@ -116,7 +116,12 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Tehran's downfall: The ayatollah regime will end by October 2028 - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-894553", time: "2026-04-29T12:21:36Z" },
+      { title: "Trump posts extraordinary picture holding assault rifle in new threat to Iran: ‘No more Mr Nice Guy!’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-war-threat-truth-social-b2967029.html", time: "2026-04-29T10:23:22Z" },
+      { title: "Gas prices hit $4.23 per gallon, a new high for the year", source: "NBC News", url: "https://www.nbcnews.com/business/energy/gas-prices-new-high-iran-war-rcna342578", time: "2026-04-29T10:13:23Z" },
+      { title: "Iran rial hits record low against dollar amid US blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-rial-hits-record-low-against-dollar-amid-us-blockade", time: "2026-04-29T10:07:18Z" },
       { title: "Iran war drives jet fuel surge, disrupts travel routes, testing European airlines", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894542", time: "2026-04-29T10:03:33Z" },
+      { title: "EU chief warns billions could be wasted if energy aid is not well targeted as the Iran war bites", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/iran-ursula-von-der-leyen-russia-european-commission-brussels-b2967098.html", time: "2026-04-29T09:56:00Z" },
       { title: "Trump tells aides to prepare for extended blockade of Iran, WSJ reports", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894537", time: "2026-04-29T09:24:30Z" },
       { title: "Trump says Iran 'better get smart soon'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-better-get-smart-soon-trump", time: "2026-04-29T09:24:28Z" },
       { title: "Iran war left Israeli hotels half-empty as country faces 88 percent drop in foreign tourism since Oct. 7", source: "Haaretz", url: "https://www.haaretz.com/israel-news/business/economy-finance/2026-04-29/ty-article/.premium/iran-war-left-israeli-hotels-half-empty-88-drop-in-tourism-since-oct-7/0000019d-d408-d95a-afbd-f54a57310000", time: "2026-04-29T08:58:17Z" },
@@ -133,6 +138,7 @@ const locations = [
       { title: "UK ambassador says only special relationship US has is 'probably' with Israel", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uk-ambassador-says-only-special-relationship-us-has-probably-israel", time: "2026-04-29T06:48:39Z" },
       { title: "Hosting British king, Trump says Charles agrees Iran cannot have nuclear bomb", source: "Times of Israel", url: "https://www.timesofisrael.com/hosting-british-king-trump-says-charles-agrees-iran-cannot-have-nuclear-bomb/", time: "2026-04-29T06:30:51Z" },
       { title: "Can Russia serve as an economic lifeline for Iran amid the Hormuz blockade?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/29/can-russia-serve-as-an-economic-lifeline-for-iran-amid-the-hormuz-blockade?traffic_source=rss", time: "2026-04-29T06:02:48Z" },
+      { title: "Can Russia serve as an economic lifeline for Iran amid the Hormuz blockade?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/29/can-russia-serve-as-an-economic-lifeline-for-iran-amid-the-hormuz-blockade?traffic_source=rss", time: "2026-04-29T06:02:48Z" },
       { title: "UN aid chief says situation in Somalia worsened by US war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/29/un-aid-chief-says-situation-in-somalia-worsened-by-us-war-on-iran?traffic_source=rss", time: "2026-04-29T04:49:08Z" },
       { title: "Trump’s approval rating sinks to new low as the Iran war drives affordability concerns for Americans", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-approval-rating-iran-war-affordability-b2966859.html", time: "2026-04-29T04:18:31Z" },
       { title: "Gallows Humor Provides Respite From Mideast Wars", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/world/middleeast/mideast-war-humor.html", time: "2026-04-29T04:01:05Z" },
@@ -610,12 +616,6 @@ const locations = [
       { title: "To Iran, Trump Blinked First by Extending the Cease-Fire", source: "New York Times", url: "https://www.nytimes.com/2026/04/22/world/middleeast/iran-trump-ceasefire.html", time: "2026-04-22T11:51:36Z" },
       { title: "Five major issues affecting the FIFA World Cup with 50 days to go", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/22/five-major-issues-affecting-the-fifa-world-cup-with-50-days-to-go?traffic_source=rss", time: "2026-04-22T11:33:41Z" },
       { title: "The US military is spending $1m to shoot down Iran’s $20,000 drones. Here’s why", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-shahed-drone-interceptor-b2962595.html", time: "2026-04-22T10:47:43Z" },
-      { title: "Is China a winner of the Iran war or facing economic risks?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/counting-the-cost/2026/4/22/is-china-a-winner-of-the-iran-war-or-facing-economic-risks?traffic_source=rss", time: "2026-04-22T10:40:38Z" },
-      { title: "Trump says Iran ‘collapsing’ over Hormuz blockade, as ships attacked in key waterway", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-says-iran-collapsing-over-hormuz-blockade-as-ships-attacked-in-key-waterway/", time: "2026-04-22T10:24:31Z" },
-      { title: "Marjorie Taylor Greene says Donald Trump has ‘gone insane’ in his rhetoric towards Iran", source: "The Independent", url: "https://www.independent.co.uk/tv/news/marjorie-taylor-greene-donald-trump-iran-insane-video-b2962466.html", time: "2026-04-22T10:17:33Z" },
-      { title: "Iran seizes two vessels for 'maritime violations', says media", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-seizes-two-vessels-maritime-violations-says-media", time: "2026-04-22T10:14:11Z" },
-      { title: "Trump unleashes furious rant over Wall Street Journal claim that Iran ‘takes him for a sucker’", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/trump-iran-truth-social-wall-street-journal-ceasefire-b2962489.html", time: "2026-04-22T10:08:07Z" },
-      { title: "Drone strikes hit Iranian Kurdish rebels in Iraq, says exiled group", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/drone-strikes-hit-iranian-kurdish-rebels-iraq-says-exiled-group", time: "2026-04-22T09:58:20Z" },
     ]
   },
   {
@@ -1130,6 +1130,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Trump and Iran issue fresh warnings as standoff continues", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-warning-strait-of-hormuz-bab-el-mandeb-threat-oil-prices/", time: "2026-04-29T10:25:35Z" },
+      { title: "Trump warns Iran 'better get smart soon' as he weighs military options over Hormuz", source: "NBC News", url: "https://www.nbcnews.com/world/iran/trump-warns-iran-deal-military-options-strait-hormuz-energy-prices-rcna342631", time: "2026-04-29T10:02:21Z" },
       { title: "Loss of Emirates Further Weakens OPEC’s Influence", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/business/energy-environment/uae-opec-oil-cartel.html", time: "2026-04-29T09:04:21Z" },
       { title: "Will UAE's departure from OPEC affect the oil cartel's future influence?", source: "NPR", url: "https://www.npr.org/2026/04/29/nx-s1-5802933/will-uaes-departure-from-opec-affect-the-oil-cartels-future-influence", time: "2026-04-29T08:36:12Z" },
       { title: "Report: 52 Iranian ships breach US blockade within 72 hours", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260429-report-52-iranian-ships-breach-us-blockade-within-72-hours/", time: "2026-04-29T08:35:04Z" },
@@ -1445,8 +1447,6 @@ const locations = [
       { title: "Ships attacked in Strait of Hormuz after ceasefire extension", source: "NPR", url: "https://www.npr.org/2026/04/22/nx-s1-5795405/iran-middle-east-updates", time: "2026-04-22T10:53:59Z" },
       { title: "Iran attacks ships in Strait of Hormuz after Trump extends ceasefire", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-ceasefire-strait-hormuz-ship-attacked-us-military-buildup/", time: "2026-04-22T10:51:15Z" },
       { title: "Iran says it has seized two ships in Strait of Hormuz after vessels attacked", source: "BBC News", url: "https://www.bbc.com/news/articles/cdxd074kr8go?at_medium=RSS&at_campaign=rss", time: "2026-04-22T10:48:23Z" },
-      { title: "At least 2 ships attacked in Strait of Hormuz as peace talks remain stalled", source: "CBS News", url: "https://www.cbsnews.com/news/us-iran-war-strait-of-hormuz-2-ships-attacked-peace-talks-jeopardize/", time: "2026-04-22T10:29:01Z" },
-      { title: "IRGC gunboat attacks container ship off Oman amid ceasefire extension", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-893803", time: "2026-04-22T09:49:30Z" },
     ]
   },
   {
@@ -1454,6 +1454,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "UN-backed data undercuts viral Gaza famine claims as child malnutrition falls", source: "Fox News", url: "https://www.foxnews.com/world/un-backed-data-undercuts-viral-gaza-famine-claims-child-malnutrition-falls", time: "2026-04-29T10:00:00Z" },
       { title: "Arizona lawmakers back move to replace “West Bank” with “Judea and Samaria” in official use", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260429-arizona-lawmakers-back-move-to-replace-west-bank-with-judea-and-samaria-in-official-use/", time: "2026-04-29T09:29:40Z" },
       { title: "Israeli forces kill five people across Gaza in last 24 hours", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-kill-five-people-across-gaza-last-24-hours", time: "2026-04-29T08:54:28Z" },
       { title: "Two Israeli soldiers wounded in occupied West Bank", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/two-israeli-soldiers-wounded-occupied-west-bank", time: "2026-04-29T07:51:44Z" },
@@ -1674,7 +1675,6 @@ const locations = [
       { title: "Israeli settlers set Palestinian home on fire in occupied West Bank", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/22/israeli-settlers-set-palestinian-home-on-fire-in-occupied-west-bank?traffic_source=rss", time: "2026-04-22T11:30:50Z" },
       { title: "Settler arson attack reportedly wounds 8 Palestinians, including baby; police launch probe", source: "Times of Israel", url: "https://www.timesofisrael.com/settler-arson-attack-reportedly-wounds-8-palestinians-including-baby-police-launch-probe/", time: "2026-04-22T11:22:04Z" },
       { title: "Kyrie Irving changes Instagram photo to show solidarity with Palestine", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/22/kyrie-irving-changes-instagram-photo-to-show-solidarity-with-palestine?traffic_source=rss", time: "2026-04-22T11:20:12Z" },
-      { title: "Daily Briefing April 22: Trump’s muddled messaging complicates talks with Iran", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-april-22-trumps-muddled-messaging-complicates-talks-with-iran/", time: "2026-04-22T09:56:59Z" },
     ]
   },
   {
@@ -1683,6 +1683,8 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "Pentagon faces scrutiny over lack of details on Minab girls' school strike in Iran", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894538", time: "2026-04-29T10:09:37Z" },
+      { title: "Five key takeaways from King Charles’s historic US Congress speech", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/king-charles-congress-speech-us-state-visit-trump-nato-epstein-b2966986.html", time: "2026-04-29T09:58:30Z" },
+      { title: "Palestinian football body appeals FIFA ruling on Israel at top sports court", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/29/palestinian-football-body-appeals-fifa-ruling-on-israel-at-top-sports-court?traffic_source=rss", time: "2026-04-29T09:46:47Z" },
       { title: "Pentagon chief to testify on Iran war", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pentagon-chief-testify-iran-war", time: "2026-04-29T08:21:38Z" },
       { title: "White House calls Trump and Charles ‘Two Kings’ as monarch makes checks and balances plea to Congress", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-king-charles-white-house-kings-b2966993.html", time: "2026-04-29T08:07:33Z" },
       { title: "Pentagon may be understating severity of US missile stockpile shortage - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894527", time: "2026-04-29T05:52:14Z" },
@@ -1967,6 +1969,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "Trump pushes for extended Iran blockade, two IDF soldiers wounded", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-894554", time: "2026-04-29T11:50:59Z" },
       { title: "Jerusalem hills finally recovering from devastating 2025 wildfires", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894523", time: "2026-04-29T02:58:36Z" },
       { title: "Haredi anti-draft rioters break into Military Police chief’s home with family inside", source: "Times of Israel", url: "https://www.timesofisrael.com/haredi-anti-draft-rioters-break-into-military-police-chiefs-home-with-family-inside/", time: "2026-04-28T19:18:51Z" },
       { title: "Noam Bettan strolls through Israel's musical history in Eurovision trailer", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-894493", time: "2026-04-28T19:08:26Z" },
@@ -2142,6 +2145,7 @@ const locations = [
     lat: 30.0444, lng: 31.2357,
     category: "evacuation",
     articles: [
+      { title: "Tourist dies after being bitten at snake-charming show in Egypt", source: "CBS News", url: "https://www.cbsnews.com/news/tourist-dies-snake-bite-show-egypt-hotel/", time: "2026-04-29T10:38:28Z" },
       { title: "German tourist killed after being bitten by cobra during snake charmer show in Egypt", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/german-tourist-cobra-egypt-snake-charmer-b2966283.html", time: "2026-04-28T10:27:11Z" },
       { title: "Egypt's Grand Museum opens after many delays", source: "NPR", url: "https://www.npr.org/2026/04/26/nx-s1-5708771/egypts-grand-museum-opens-after-many-delays", time: "2026-04-26T22:04:13Z" },
       { title: "Will Yamal, Salah and Ekitike miss the World Cup 2026 due to injury?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/26/will-yamal-salah-and-ekitike-miss-the-world-cup-2026-due-to-injury?traffic_source=rss", time: "2026-04-26T15:19:35Z" },
@@ -2151,21 +2155,6 @@ const locations = [
       { title: "Counterrevolution in Egypt: How Sisi broke the dream of a new republic", source: "Middle East Eye", url: "https://www.middleeasteye.net/discover/counterrevolution-egypt-how-sisi-broke-dream-new-republic", time: "2026-04-24T09:50:54Z" },
       { title: "Egypt and Pakistan conclude joint military drills on ‘unconventional threats’", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260424-egypt-and-pakistan-conclude-joint-military-drills-on-unconventional-threats/", time: "2026-04-24T09:14:21Z" },
       { title: "Fragment of Homer's Iliad discovered inside Roman-era mummy during Egypt excavations", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-893851", time: "2026-04-22T17:31:08Z" },
-    ]
-  },
-  {
-    name: "Dubai", country: "UAE",
-    lat: 25.2048, lng: 55.2708,
-    category: "strikes",
-    articles: [
-      { title: "Sudan paramilitary leaders acquired £17.7m property portfolio in Dubai, investigation reveals", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/28/sudan-paramilitary-rsf-leaders-property-portfolio-dubai-uae-investigation", time: "2026-04-28T04:00:39Z" },
-      { title: "UAE criticises 'weak' response to Iran from other Gulf countries", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-criticises-weak-response-iran-other-gulf-countries", time: "2026-04-27T14:01:00Z" },
-      { title: "UAE and India discuss Middle East stability, energy security", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-and-india-discuss-middle-east-stability-energy-security", time: "2026-04-26T00:57:55Z" },
-      { title: "Moscow and Abu Dhabi push for renewed diplomacy", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/moscow-and-abu-dhabi-push-renewed-diplomacy", time: "2026-04-24T23:56:01Z" },
-      { title: "UAE to convert half of government services to AI within 2 years", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260424-uae-to-convert-half-of-government-services-to-ai-within-2-years/", time: "2026-04-24T11:06:58Z" },
-      { title: "US Treasury Secretary Bessent says Gulf, Asian allies request swap lines", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/4/22/us-treasury-secretary-bessent-says-gulf-asian-allies-request-swap-lines?traffic_source=rss", time: "2026-04-22T22:26:23Z" },
-      { title: "Gulf allies have requested financial support, US Treasury Secretary says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260422-gulf-allies-have-requested-financial-support-us-treasury-secretary-says", time: "2026-04-22T21:04:59Z" },
-      { title: "Tui cuts profit forecast as effects of Iran war cost travel group €40m", source: "The Guardian", url: "https://www.theguardian.com/business/2026/apr/22/tui-cuts-profit-forecast-iran-war-cost-travel-group", time: "2026-04-22T10:10:50Z" },
     ]
   },
   {
@@ -2184,6 +2173,35 @@ const locations = [
     ]
   },
   {
+    name: "Eastern Mediterranean", country: "International",
+    lat: 34.0, lng: 33.0,
+    category: "strikes",
+    articles: [
+      { title: "The Global Sumud Flotilla to Gaza — A Cry at Sea to the World’s Dormant Conscience", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260429-the-global-sumud-flotilla-to-gaza-a-cry-at-sea-to-the-worlds-dormant-conscience/", time: "2026-04-29T09:58:07Z" },
+      { title: "The Mediterranean: Warmer, saltier, more acidic, and rising fast — report", source: "Times of Israel", url: "https://www.timesofisrael.com/the-mediterranean-warmer-saltier-more-acidic-and-rising-fast-report/", time: "2026-04-29T03:03:47Z" },
+      { title: "38 migrants die off Libya coast, including Egyptians, Sudanese, and Ethiopians", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260428-38-migrants-die-off-libya-coast-including-egyptians-sudanese-and-ethiopians/", time: "2026-04-28T11:21:32Z" },
+      { title: "European rejection of emergency aid deepens Palestinian Authority financial crisis", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260427-european-rejection-of-emergency-aid-deepens-palestinian-authority-financial-crisis/", time: "2026-04-27T10:17:43Z" },
+      { title: "Global Sumud flotilla sets sail from Sicily to break Gaza blockade", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260427-global-sumud-flotilla-sets-sail-from-sicily-to-break-gaza-blockade/", time: "2026-04-27T07:25:29Z" },
+      { title: "Flotilla sets sail from Italy to challenge Gaza blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/flotilla-sets-sail-italy-challenge-gaza-blockade", time: "2026-04-26T21:02:48Z" },
+      { title: "Turkish delegation plays key role in Global Sumud Flotilla’s Spring 2026 Mission", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-turkish-delegation-plays-key-role-in-global-sumud-flotillas-spring-2026-mission/", time: "2026-04-25T12:30:00Z" },
+      { title: "Nearly 8,000 migrants died or went missing worldwide in 2025: UN migration agency", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260422-nearly-8000-migrants-died-or-went-missing-worldwide-in-2025-un-migration-agency/", time: "2026-04-22T13:59:54Z" },
+    ]
+  },
+  {
+    name: "Dubai", country: "UAE",
+    lat: 25.2048, lng: 55.2708,
+    category: "strikes",
+    articles: [
+      { title: "Sudan paramilitary leaders acquired £17.7m property portfolio in Dubai, investigation reveals", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/apr/28/sudan-paramilitary-rsf-leaders-property-portfolio-dubai-uae-investigation", time: "2026-04-28T04:00:39Z" },
+      { title: "UAE criticises 'weak' response to Iran from other Gulf countries", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-criticises-weak-response-iran-other-gulf-countries", time: "2026-04-27T14:01:00Z" },
+      { title: "UAE and India discuss Middle East stability, energy security", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-and-india-discuss-middle-east-stability-energy-security", time: "2026-04-26T00:57:55Z" },
+      { title: "Moscow and Abu Dhabi push for renewed diplomacy", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/moscow-and-abu-dhabi-push-renewed-diplomacy", time: "2026-04-24T23:56:01Z" },
+      { title: "UAE to convert half of government services to AI within 2 years", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260424-uae-to-convert-half-of-government-services-to-ai-within-2-years/", time: "2026-04-24T11:06:58Z" },
+      { title: "US Treasury Secretary Bessent says Gulf, Asian allies request swap lines", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/4/22/us-treasury-secretary-bessent-says-gulf-asian-allies-request-swap-lines?traffic_source=rss", time: "2026-04-22T22:26:23Z" },
+      { title: "Gulf allies have requested financial support, US Treasury Secretary says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260422-gulf-allies-have-requested-financial-support-us-treasury-secretary-says", time: "2026-04-22T21:04:59Z" },
+    ]
+  },
+  {
     name: "Sanaa", country: "Yemen",
     lat: 15.3694, lng: 44.191,
     category: "strikes",
@@ -2195,20 +2213,6 @@ const locations = [
       { title: "Yemen’s landmine crisis endures despite truce and de-mining efforts", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/4/26/yemens-landmine-crisis-endures-despite-truce-and-de-mining-efforts?traffic_source=rss", time: "2026-04-26T09:43:42Z" },
       { title: "US launches air bridge to restock Israeli air force munitions – Hebrew sources", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260423-us-launches-air-bridge-to-restock-israeli-air-force-munitions-hebrew-sources/", time: "2026-04-23T11:19:38Z" },
       { title: "Houthis signal return, warn of broader regional escalation", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-893824", time: "2026-04-22T12:53:00Z" },
-    ]
-  },
-  {
-    name: "Eastern Mediterranean", country: "International",
-    lat: 34.0, lng: 33.0,
-    category: "strikes",
-    articles: [
-      { title: "The Mediterranean: Warmer, saltier, more acidic, and rising fast — report", source: "Times of Israel", url: "https://www.timesofisrael.com/the-mediterranean-warmer-saltier-more-acidic-and-rising-fast-report/", time: "2026-04-29T03:03:47Z" },
-      { title: "38 migrants die off Libya coast, including Egyptians, Sudanese, and Ethiopians", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260428-38-migrants-die-off-libya-coast-including-egyptians-sudanese-and-ethiopians/", time: "2026-04-28T11:21:32Z" },
-      { title: "European rejection of emergency aid deepens Palestinian Authority financial crisis", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260427-european-rejection-of-emergency-aid-deepens-palestinian-authority-financial-crisis/", time: "2026-04-27T10:17:43Z" },
-      { title: "Global Sumud flotilla sets sail from Sicily to break Gaza blockade", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260427-global-sumud-flotilla-sets-sail-from-sicily-to-break-gaza-blockade/", time: "2026-04-27T07:25:29Z" },
-      { title: "Flotilla sets sail from Italy to challenge Gaza blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/flotilla-sets-sail-italy-challenge-gaza-blockade", time: "2026-04-26T21:02:48Z" },
-      { title: "Turkish delegation plays key role in Global Sumud Flotilla’s Spring 2026 Mission", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260425-turkish-delegation-plays-key-role-in-global-sumud-flotillas-spring-2026-mission/", time: "2026-04-25T12:30:00Z" },
-      { title: "Nearly 8,000 migrants died or went missing worldwide in 2025: UN migration agency", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260422-nearly-8000-migrants-died-or-went-missing-worldwide-in-2025-un-migration-agency/", time: "2026-04-22T13:59:54Z" },
     ]
   },
   {
@@ -2243,6 +2247,7 @@ const locations = [
     lat: 34.5839, lng: 32.988,
     category: "uk",
     articles: [
+      { title: "Russia’s shadow fleet continues passing UK waters despite boarding threat", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894551", time: "2026-04-29T11:32:34Z" },
       { title: "Starmer avoids ethics probe over Mandelson appointment but challenges lie ahead", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/starmer-avoids-ethics-probe-over-mandelson-appointment-but-challenges-lie-ahead", time: "2026-04-28T19:35:13Z" },
       { title: "U.K. Greens' Polanski slams Starmer for 'weaponizing' antisemitism after PM's rebuke", source: "Haaretz", url: "https://www.haaretz.com/world-news/europe/2026-04-25/ty-article/.premium/u-k-greens-polanski-slams-starmer-for-weaponizing-antisemitism-after-rebuke/0000019d-c136-ded5-abdd-f53e1ede0000", time: "2026-04-24T22:51:11Z" },
       { title: "Greta Thunberg, Sally Rooney and Brian Eno defy Palestine Action ban in letter to judges", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/apr/24/scholars-writers-artists-defy-ban-palestine-action-letter-judges", time: "2026-04-24T12:12:01Z" },
