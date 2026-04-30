@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">03:15 UTC, 30 Apr 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:14 UTC, 30 Apr 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">30 April 2026</div>
@@ -116,6 +116,8 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "Alleged transfer of €1.5m by autism body to UK parent charity ‘possibly criminal’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/social-affairs/2026/04/30/alleged-transfer-of-15m-by-autism-charity-to-uk-parent-charity-possibly-criminal/", time: "2026-04-30T05:00:01Z" },
+      { title: "Mamdani encourages Charles to return Indian diamond", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0430/1570985-mamdani-charles/", time: "2026-04-30T03:29:13Z" },
       { title: "NYC mayor Zohran Mamdani says he would ask King Charles to return Kohinoor diamond to India", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/zohran-mamdani-king-charles-kohinoor-diamond-new-york-b2967748.html", time: "2026-04-30T02:42:15Z" },
       { title: "Our time is short. These three didn't waste it on division", source: "Axios", url: "https://www.axios.com/2026/04/30/bipartisanship-america-ben-sasse-buffalo-sabres-king-charles", time: "2026-04-30T01:25:04Z" },
       { title: "British Royals Crisscross Manhattan in Brief Visit Packed With Photo Ops", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/world/europe/king-charles-camilla-royals-nyc-visit.html", time: "2026-04-30T01:06:14Z" },
@@ -130,6 +132,7 @@ const locations = [
       { title: "Watch live: King Charles visits 911 Memorial in New York", source: "The Hill", url: "https://thehill.com/video-clips/5854964-watch-live-king-charles-911-memorial-new-york-city/", time: "2026-04-29T15:24:30Z" },
       { title: "Reliance on Chinese green tech poses ‘serious’ risk for Europe, experts say", source: "The Guardian", url: "https://www.theguardian.com/business/2026/apr/29/reliance-on-chinese-green-tech-poses-serious-risk-europe-economy-security-experts-say", time: "2026-04-29T14:49:48Z" },
       { title: "Britain to create joint naval force with nine European countries as ‘complement’ to Nato", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/apr/29/britain-royal-navy-russia-open-sea-border-europe", time: "2026-04-29T14:32:29Z" },
+      { title: "Inside the base where RAF 'aces' are shooting down Iranian drones", source: "Sky News", url: "https://news.sky.com/story/inside-the-base-where-raf-aces-are-shooting-down-iranian-drones-13538059", time: "2026-04-29T14:29:00Z" },
       { title: "A wave of attacks on Jewish targets in U.K. is being probed for possible links to Iran", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/04/29/london-stabbing-jewish-starmer-investigation/", time: "2026-04-29T13:24:45Z" },
       { title: "Explaining King Charles’ 1814 White House ‘redevelopment’ joke", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/king-charles-1814-white-house-redevelopment-joke-b2967233.html", time: "2026-04-29T13:24:10Z" },
       { title: "Two men stabbed in predominantly Jewish area of London", source: "RTE News", url: "https://www.rte.ie/news/2026/0429/1570857-golders-green/", time: "2026-04-29T12:19:23Z" },
@@ -252,6 +255,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "As a Ukrainian journalist, I’ve covered the US for 20 years. I find it increasingly shocking", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/30/as-a-ukrainian-journalist-ive-covered-the-us-for-20-years-i-find-it-increasingly-shocking", time: "2026-04-30T04:00:07Z" },
       { title: "James leading GOP gubernatorial primary in Michigan: Survey", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5856481-john-james-michigan-gubernatorial-race/", time: "2026-04-30T02:57:53Z" },
       { title: "Hungary's Magyar pushes to unblock EU billions", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0430/1570981-magyar-eu/", time: "2026-04-30T00:52:11Z" },
       { title: "Exclusive: Senators interrogate AI firms on China safeguards", source: "Axios", url: "https://www.axios.com/2026/04/29/ai-firms-china-congress", time: "2026-04-29T23:39:02Z" },
@@ -361,8 +365,6 @@ const locations = [
       { title: "Three GOP senators back Sanders amendment to slash drug prices", source: "The Hill", url: "https://thehill.com/homenews/senate/5844568-sanders-amendment-drug-prices/", time: "2026-04-23T07:16:39Z" },
       { title: "Newsletter: EU leaders weigh a NATO-style common defence clause", source: "Euronews", url: "http://www.euronews.com/my-europe/2026/04/23/newsletter-eu-leaders-weigh-a-nato-style-common-defence-clause", time: "2026-04-23T06:39:02Z" },
       { title: "Four GOP senators vote against adding Save America Act to budget package", source: "The Hill", url: "https://thehill.com/homenews/senate/5844521-save-america-act-budget-package/", time: "2026-04-23T05:56:34Z" },
-      { title: "Three GOP senators break with leaders over addressing insurance companies’ denial of medical care", source: "The Hill", url: "https://thehill.com/homenews/senate/5844464-hawley-collins-sullivan-health-insurance-amendment/", time: "2026-04-23T03:50:04Z" },
-      { title: "Collins, Sullivan break with Senate GOP leaders on amendment to reverse SNAP cuts", source: "The Hill", url: "https://thehill.com/homenews/senate/5844440-collins-sullivan-snap-amendment/", time: "2026-04-23T03:15:43Z" },
     ]
   },
   {
@@ -431,8 +433,6 @@ const locations = [
       { title: "Man (60s) dies after being hit by bus at Dublin Airport", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/04/23/man-60s-dies-after-being-hit-by-bus-at-dublin-airport/", time: "2026-04-23T07:56:15Z" },
       { title: "Man dies after being hit by bus at Dublin Airport", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/dublin-airport-death-police-bus-b2963293.html", time: "2026-04-23T07:07:33Z" },
       { title: "Ireland at risk of ‘lone wolf’ attacks and Islamist terrorism, new security review warns", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/04/23/ireland-at-risk-of-lone-wolf-attacks-and-islamist-terrorism-security-law-review-warns/", time: "2026-04-23T05:34:31Z" },
-      { title: "Billionaire children of Silvio Berlusconi set for Dublin High Court proceedings with Central Bank", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/23/two-berlusconi-children-in-high-court-proceedings-involving-central-bank/", time: "2026-04-23T05:00:01Z" },
-      { title: "‘It doesn’t make sense’: Seasoned drivers treated like learners due to Ireland’s licence rules", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/04/23/it-doesnt-make-sense-seasoned-drivers-treated-like-learners-due-to-licence-exchange-issues/", time: "2026-04-23T05:00:01Z" },
     ]
   },
   {
@@ -440,6 +440,7 @@ const locations = [
     lat: 41.9028, lng: 12.4964,
     category: "political",
     articles: [
+      { title: "Powell to remain as Fed governor, denying Trump a key vacancy", source: "Axios", url: "https://www.axios.com/2026/04/29/fed-powell-trump-warsh", time: "2026-04-29T23:02:01Z" },
       { title: "The Austrian nuns who fled their care home are now in Rome and visited the Vatican", source: "NPR", url: "https://www.npr.org/2026/04/29/g-s1-119191/austria-nuns-vatican-rome", time: "2026-04-29T21:48:17Z" },
       { title: "U.S. and Italy Honor Alliance to Curb Art Looting, Amid Broader Tensions", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/arts/design/us-italy-art-looting.html", time: "2026-04-29T19:16:02Z" },
       { title: "Jerome Powell reveals plan to stay at Fed after term as chair ends", source: "The Hill", url: "https://thehill.com/business/5855705-powell-stays-federal-reserve/", time: "2026-04-29T18:45:35Z" },
@@ -483,55 +484,6 @@ const locations = [
       { title: "Trump envoy admits he’s lobbying FIFA to replace Iran with Italy at this summer’s World Cup", source: "The Independent", url: "https://www.independent.co.uk/sport/us-sport/trump-world-cup-iran-italy-b2963437.html", time: "2026-04-23T10:44:29Z" },
       { title: "No Fifa plans for Iran-Italy swap at World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cy813gy08v2o?at_medium=RSS&at_campaign=rss", time: "2026-04-23T09:41:31Z" },
       { title: "Trump’s envoy pushes for Italy to replace Iran at the World Cup", source: "The Independent", url: "https://www.independent.co.uk/sport/football/world-cup/world-cup-iran-italy-trump-b2963375.html", time: "2026-04-23T08:59:42Z" },
-      { title: "Two Berlusconi children in High Court proceedings involving Central Bank", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/23/two-berlusconi-children-in-high-court-proceedings-involving-central-bank/", time: "2026-04-23T05:00:01Z" },
-    ]
-  },
-  {
-    name: "Paris", country: "France",
-    lat: 48.8566, lng: 2.3522,
-    category: "political",
-    articles: [
-      { title: "Armenia's foreign minister signals new era: Peace, EU ambitions, trade, 'huge' infrastructure plans", source: "France 24", url: "https://www.france24.com/en/armenia-s-fm-hails-peace-embraces-future-eu-elections-neighbours-huge-infrastructure-projects", time: "2026-04-29T18:47:11Z" },
-      { title: "Madagascar detains French national over alleged plot to stir unrest", source: "BBC News", url: "https://www.bbc.com/news/articles/c7v96615e99o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T17:03:16Z" },
-      { title: "Trump’s acting AG defends Comey indictment but dismisses comparisons to others who made similar comments to Biden", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/james-comey-indictment-blanche-posobiec-b2967319.html", time: "2026-04-29T16:04:51Z" },
-      { title: "France investigates reappearance of website linked to Pelicot crimes", source: "BBC News", url: "https://www.bbc.com/news/articles/c0m2ndp2042o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T15:10:55Z" },
-      { title: "Staycations on the rise for French travellers this summer amid geopolitical crisis and inflation", source: "Euronews", url: "http://www.euronews.com/travel/2026/04/29/staycations-on-the-rise-for-french-travellers-this-summer-amid-geopolitical-crisis-and-inf", time: "2026-04-29T12:31:58Z" },
-      { title: "France urges citizens to leave Mali after rebel attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/cp3pdgvpn27o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T10:58:36Z" },
-      { title: "Diplomacy on a plate: Dissecting the menu at the state banquet for King Charles", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/king-charles-state-dinner-menu-trump-b2967127.html", time: "2026-04-29T10:32:38Z" },
-      { title: "In France, American Universities Lose Their Allure in the Trump Era", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/world/europe/france-american-universities-trump-sciences-po.html", time: "2026-04-29T09:51:14Z" },
-      { title: "A record-breaking semi-final - the antidote to modern football?", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cp3pd2kgy76o?at_medium=RSS&at_campaign=rss", time: "2026-04-28T23:33:30Z" },
-      { title: "'Odds of flights cancellations in June and July are increasing every day', expert says", source: "France 24", url: "https://www.france24.com/en/odds-of-flights-cancellations-in-june-and-july-are-increasing-every-day-expert-says", time: "2026-04-28T20:39:26Z" },
-      { title: "'When media freedom goes, the rest is not far behind', campaigner says", source: "France 24", url: "https://www.france24.com/en/when-media-freedom-goes-the-rest-is-not-far-behind-campaigner-says", time: "2026-04-28T19:00:23Z" },
-      { title: "France murder victim identified after 20 years and suspect arrested", source: "BBC News", url: "https://www.bbc.com/news/articles/ckg9g8pwggqo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:52:19Z" },
-      { title: "UAE leaves OPEC to pursue 'accelerated' production", source: "Axios", url: "https://www.axios.com/2026/04/28/uae-leaves-opec", time: "2026-04-28T14:17:20Z" },
-      { title: "Swarm of 10,000 bees settles on bike outside Louvre in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/c70vjx99w2vo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:13:34Z" },
-      { title: "Louis Arnaud, former French hostage in Iran, describes Evin prison as 'the den of evil'", source: "Euronews", url: "http://www.euronews.com/my-europe/2026/04/28/louis-arnaud-former-french-hostage-in-iran-describes-evin-prison-as-the-den-of-evil", time: "2026-04-28T13:07:52Z" },
-      { title: "Wild Foxes review – animal-obsessed fighter at elite sports academy wonders if more to life than boxing", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/28/wild-foxes-review-animal-obsessed-fighter-at-elite-sports-academy-wonders-if-more-to-life-than-boxing", time: "2026-04-28T10:00:07Z" },
-      { title: "Macron expected to back Andorra’s moves to decriminalise abortion during visit - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/28/europe-france-andorra-abortion-macron-ukraine-russia-eu-latest-news-updates", time: "2026-04-28T08:46:54Z" },
-      { title: "More than 100 migrants rescued in Channel less than week after &#163;650m France deal", source: "Sky News", url: "https://news.sky.com/story/more-than-100-migrants-rescued-in-channel-less-than-week-after-163650m-france-deal-13537357", time: "2026-04-27T19:50:00Z" },
-      { title: "French coastguard rescues more than 100 migrants crossing Channel", source: "BBC News", url: "https://www.bbc.com/news/articles/c3v6v4qd7qqo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T16:19:43Z" },
-      { title: "Brigitte Macron says time as French first lady laid bare the ‘wickedness and stupidity’ of the world", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/brigitte-macron-world-stupidity-first-lady-france-b2965480.html", time: "2026-04-27T10:57:31Z" },
-      { title: "Amsterdam becomes world's first capital to ban fossil fuel ads", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260427-amsterdam-becomes-world-s-first-capital-to-ban-fossil-fuel-ads", time: "2026-04-27T10:57:30Z" },
-      { title: "French teen who licked vending machine straw faces jail in Singapore", source: "BBC News", url: "https://www.bbc.com/news/articles/cjw8w849g6go?at_medium=RSS&at_campaign=rss", time: "2026-04-27T06:40:22Z" },
-      { title: "Phantoms of July review – interlocking tales hop across time in funny-quirky fable with a point", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/27/phantoms-of-july-review", time: "2026-04-27T05:00:35Z" },
-      { title: "Chernobyl: Two takes, then & now. On the ground, 40 years on", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260426-chernobyl-two-takes-then-now-on-the-ground-40-years-on", time: "2026-04-26T17:59:59Z" },
-      { title: "Scoop: Israel sent 'Iron Dome' system and troops to UAE during Iran war", source: "Axios", url: "https://www.axios.com/2026/04/26/israel-iron-dome-uae", time: "2026-04-26T11:15:06Z" },
-      { title: "Macron says EU’s mutual defence clause ‘not just words’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/25/macron-says-eus-mutual-defence-clause-not-just-words", time: "2026-04-25T19:10:27Z" },
-      { title: "First small boat arrivals in Dover since UK's &#163;662m deal with France", source: "Sky News", url: "https://news.sky.com/story/first-small-boat-arrives-in-dover-since-uks-163662m-deal-with-france-to-stop-migrant-crossings-13536344", time: "2026-04-25T14:25:00Z" },
-      { title: "The 85-Year-Old Widow Snagged by Trump’s Immigration Crackdown", source: "New York Times", url: "https://www.nytimes.com/2026/04/25/us/french-ross-mahe-ice-detention.html", time: "2026-04-25T04:01:12Z" },
-      { title: "Trader Joe’s customers sue claiming there is not enough caffeine in their coffee", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/trader-joes-lawsuit-coffee-caffeine-b2964746.html", time: "2026-04-25T03:09:31Z" },
-      { title: "Polymarket Bets on Paris Temperature Prompt Investigation After Unusual Spikes", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/world/europe/polymarket-bets-france-paris-temperature-weather.html", time: "2026-04-24T15:31:57Z" },
-      { title: "40 years since the Chernobyl disaster", source: "France 24", url: "https://www.france24.com/en/40-years-since-the-chernobyl-disaster", time: "2026-04-24T15:14:39Z" },
-      { title: "Steve Rosenberg: Kremlin's tightening grip on internet fuels Russian discontent", source: "BBC News", url: "https://www.bbc.com/news/articles/cr510de17jlo?at_medium=RSS&at_campaign=rss", time: "2026-04-24T05:00:29Z" },
-      { title: "Headscarf with a beret: Muslim designers showcase floral dresses and boxy streetwear in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/cx23zmxd2z3o?at_medium=RSS&at_campaign=rss", time: "2026-04-24T00:34:04Z" },
-      { title: "French police probe suspected weather device tampering after odd Polymarket bet", source: "NPR", url: "https://www.npr.org/2026/04/23/nx-s1-5797876/polymarket-paris-weather-bet", time: "2026-04-23T22:22:38Z" },
-      { title: "Man charged with assault causing harm of co-parish priest in front of Ennis Cathedral congregation", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/23/man-charged-with-assault-causing-harm-of-co-parish-priest-in-front-of-ennis-cathedral-congregation/", time: "2026-04-23T19:25:17Z" },
-      { title: "‘Hairdryer or lighter?’ French police look at claim of sensor tampering to win weather bets", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/23/hairdryer-or-lighter-french-police-look-at-claim-of-sensor-tampering-to-win-weather-bets", time: "2026-04-23T17:39:05Z" },
-      { title: "Police investigate after claims ‘hair dryer used to manipulate weather sensor to win $34k bet’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hair-dryer-bet-polymarket-france-police-b2963620.html", time: "2026-04-23T15:06:07Z" },
-      { title: "France holds national tribute for soldier killed in Lebanon", source: "Euronews", url: "http://www.euronews.com/video/2026/04/23/france-holds-national-tribute-for-soldier-killed-in-lebanon", time: "2026-04-23T13:33:59Z" },
-      { title: "Humanitarian worker Mike Penrose on the 'Food from Ukraine' programme", source: "France 24", url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260423-humanitarian-worker-mike-penrose-on-the-food-from-ukraine-programme", time: "2026-04-23T11:47:18Z" },
-      { title: "UK and France strike new £662m small boats deal", source: "BBC News", url: "https://www.bbc.com/news/articles/cz0ev7enk2lo?at_medium=RSS&at_campaign=rss", time: "2026-04-23T10:54:49Z" },
-      { title: "BBC visits migrant camp in northern France as new deal announced", source: "BBC News", url: "https://www.bbc.com/news/videos/cgrl891xkpvo?at_medium=RSS&at_campaign=rss", time: "2026-04-23T09:39:50Z" },
     ]
   },
   {
@@ -539,6 +491,8 @@ const locations = [
     lat: 52.52, lng: 13.405,
     category: "economic",
     articles: [
+      { title: "Trump says he is weighing reducing US troop presence in Germany after Iran feud with Merz", source: "Euronews", url: "http://www.euronews.com/2026/04/30/trump-says-he-is-weighing-reducing-us-troop-presence-in-germany-after-iran-feud-with-merz", time: "2026-04-30T04:11:24Z" },
+      { title: "Trump says US considering reducing troops in Germany amid clash with Merz and Nato allies", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/trump-nato-germany-us-troops-merz-iran-war-b2967763.html", time: "2026-04-30T04:04:57Z" },
       { title: "Trump threatens to withdraw troops from Germany", source: "Sky News", url: "https://news.sky.com/story/trump-threatens-to-withdraw-troops-from-germany-13538254", time: "2026-04-30T02:38:00Z" },
       { title: "Trump considering reduction of US troops in Germany", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0430/1570983-trump-germany/", time: "2026-04-30T02:20:42Z" },
       { title: "Trump threatens to reduce troop numbers in Germany amid growing row with Nato allies", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/30/trump-threatens-to-reduce-troop-numbers-in-germany-amid-growing-row-with-nato-allies", time: "2026-04-29T23:36:22Z" },
@@ -583,10 +537,60 @@ const locations = [
     ]
   },
   {
+    name: "Paris", country: "France",
+    lat: 48.8566, lng: 2.3522,
+    category: "political",
+    articles: [
+      { title: "In France, Trump’s Triumphal Arch Draws Eye Rolls", source: "New York Times", url: "https://www.nytimes.com/2026/04/30/world/europe/trump-triumphal-arch-france.html", time: "2026-04-30T04:01:07Z" },
+      { title: "Armenia's foreign minister signals new era: Peace, EU ambitions, trade, 'huge' infrastructure plans", source: "France 24", url: "https://www.france24.com/en/armenia-s-fm-hails-peace-embraces-future-eu-elections-neighbours-huge-infrastructure-projects", time: "2026-04-29T18:47:11Z" },
+      { title: "Madagascar detains French national over alleged plot to stir unrest", source: "BBC News", url: "https://www.bbc.com/news/articles/c7v96615e99o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T17:03:16Z" },
+      { title: "Trump’s acting AG defends Comey indictment but dismisses comparisons to others who made similar comments to Biden", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/james-comey-indictment-blanche-posobiec-b2967319.html", time: "2026-04-29T16:04:51Z" },
+      { title: "France investigates reappearance of website linked to Pelicot crimes", source: "BBC News", url: "https://www.bbc.com/news/articles/c0m2ndp2042o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T15:10:55Z" },
+      { title: "Staycations on the rise for French travellers this summer amid geopolitical crisis and inflation", source: "Euronews", url: "http://www.euronews.com/travel/2026/04/29/staycations-on-the-rise-for-french-travellers-this-summer-amid-geopolitical-crisis-and-inf", time: "2026-04-29T12:31:58Z" },
+      { title: "France urges citizens to leave Mali after rebel attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/cp3pdgvpn27o?at_medium=RSS&at_campaign=rss", time: "2026-04-29T10:58:36Z" },
+      { title: "Diplomacy on a plate: Dissecting the menu at the state banquet for King Charles", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/king-charles-state-dinner-menu-trump-b2967127.html", time: "2026-04-29T10:32:38Z" },
+      { title: "In France, American Universities Lose Their Allure in the Trump Era", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/world/europe/france-american-universities-trump-sciences-po.html", time: "2026-04-29T09:51:14Z" },
+      { title: "A record-breaking semi-final - the antidote to modern football?", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cp3pd2kgy76o?at_medium=RSS&at_campaign=rss", time: "2026-04-28T23:33:30Z" },
+      { title: "'Odds of flights cancellations in June and July are increasing every day', expert says", source: "France 24", url: "https://www.france24.com/en/odds-of-flights-cancellations-in-june-and-july-are-increasing-every-day-expert-says", time: "2026-04-28T20:39:26Z" },
+      { title: "'When media freedom goes, the rest is not far behind', campaigner says", source: "France 24", url: "https://www.france24.com/en/when-media-freedom-goes-the-rest-is-not-far-behind-campaigner-says", time: "2026-04-28T19:00:23Z" },
+      { title: "France murder victim identified after 20 years and suspect arrested", source: "BBC News", url: "https://www.bbc.com/news/articles/ckg9g8pwggqo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:52:19Z" },
+      { title: "UAE leaves OPEC to pursue 'accelerated' production", source: "Axios", url: "https://www.axios.com/2026/04/28/uae-leaves-opec", time: "2026-04-28T14:17:20Z" },
+      { title: "Swarm of 10,000 bees settles on bike outside Louvre in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/c70vjx99w2vo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:13:34Z" },
+      { title: "Louis Arnaud, former French hostage in Iran, describes Evin prison as 'the den of evil'", source: "Euronews", url: "http://www.euronews.com/my-europe/2026/04/28/louis-arnaud-former-french-hostage-in-iran-describes-evin-prison-as-the-den-of-evil", time: "2026-04-28T13:07:52Z" },
+      { title: "Wild Foxes review – animal-obsessed fighter at elite sports academy wonders if more to life than boxing", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/28/wild-foxes-review-animal-obsessed-fighter-at-elite-sports-academy-wonders-if-more-to-life-than-boxing", time: "2026-04-28T10:00:07Z" },
+      { title: "Macron expected to back Andorra’s moves to decriminalise abortion during visit - Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/28/europe-france-andorra-abortion-macron-ukraine-russia-eu-latest-news-updates", time: "2026-04-28T08:46:54Z" },
+      { title: "More than 100 migrants rescued in Channel less than week after &#163;650m France deal", source: "Sky News", url: "https://news.sky.com/story/more-than-100-migrants-rescued-in-channel-less-than-week-after-163650m-france-deal-13537357", time: "2026-04-27T19:50:00Z" },
+      { title: "French coastguard rescues more than 100 migrants crossing Channel", source: "BBC News", url: "https://www.bbc.com/news/articles/c3v6v4qd7qqo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T16:19:43Z" },
+      { title: "Brigitte Macron says time as French first lady laid bare the ‘wickedness and stupidity’ of the world", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/brigitte-macron-world-stupidity-first-lady-france-b2965480.html", time: "2026-04-27T10:57:31Z" },
+      { title: "Amsterdam becomes world's first capital to ban fossil fuel ads", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260427-amsterdam-becomes-world-s-first-capital-to-ban-fossil-fuel-ads", time: "2026-04-27T10:57:30Z" },
+      { title: "French teen who licked vending machine straw faces jail in Singapore", source: "BBC News", url: "https://www.bbc.com/news/articles/cjw8w849g6go?at_medium=RSS&at_campaign=rss", time: "2026-04-27T06:40:22Z" },
+      { title: "Phantoms of July review – interlocking tales hop across time in funny-quirky fable with a point", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/27/phantoms-of-july-review", time: "2026-04-27T05:00:35Z" },
+      { title: "Chernobyl: Two takes, then & now. On the ground, 40 years on", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260426-chernobyl-two-takes-then-now-on-the-ground-40-years-on", time: "2026-04-26T17:59:59Z" },
+      { title: "Scoop: Israel sent 'Iron Dome' system and troops to UAE during Iran war", source: "Axios", url: "https://www.axios.com/2026/04/26/israel-iron-dome-uae", time: "2026-04-26T11:15:06Z" },
+      { title: "Macron says EU’s mutual defence clause ‘not just words’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/25/macron-says-eus-mutual-defence-clause-not-just-words", time: "2026-04-25T19:10:27Z" },
+      { title: "First small boat arrivals in Dover since UK's &#163;662m deal with France", source: "Sky News", url: "https://news.sky.com/story/first-small-boat-arrives-in-dover-since-uks-163662m-deal-with-france-to-stop-migrant-crossings-13536344", time: "2026-04-25T14:25:00Z" },
+      { title: "The 85-Year-Old Widow Snagged by Trump’s Immigration Crackdown", source: "New York Times", url: "https://www.nytimes.com/2026/04/25/us/french-ross-mahe-ice-detention.html", time: "2026-04-25T04:01:12Z" },
+      { title: "Trader Joe’s customers sue claiming there is not enough caffeine in their coffee", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/trader-joes-lawsuit-coffee-caffeine-b2964746.html", time: "2026-04-25T03:09:31Z" },
+      { title: "Polymarket Bets on Paris Temperature Prompt Investigation After Unusual Spikes", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/world/europe/polymarket-bets-france-paris-temperature-weather.html", time: "2026-04-24T15:31:57Z" },
+      { title: "40 years since the Chernobyl disaster", source: "France 24", url: "https://www.france24.com/en/40-years-since-the-chernobyl-disaster", time: "2026-04-24T15:14:39Z" },
+      { title: "Steve Rosenberg: Kremlin's tightening grip on internet fuels Russian discontent", source: "BBC News", url: "https://www.bbc.com/news/articles/cr510de17jlo?at_medium=RSS&at_campaign=rss", time: "2026-04-24T05:00:29Z" },
+      { title: "Headscarf with a beret: Muslim designers showcase floral dresses and boxy streetwear in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/cx23zmxd2z3o?at_medium=RSS&at_campaign=rss", time: "2026-04-24T00:34:04Z" },
+      { title: "French police probe suspected weather device tampering after odd Polymarket bet", source: "NPR", url: "https://www.npr.org/2026/04/23/nx-s1-5797876/polymarket-paris-weather-bet", time: "2026-04-23T22:22:38Z" },
+      { title: "Man charged with assault causing harm of co-parish priest in front of Ennis Cathedral congregation", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/04/23/man-charged-with-assault-causing-harm-of-co-parish-priest-in-front-of-ennis-cathedral-congregation/", time: "2026-04-23T19:25:17Z" },
+      { title: "‘Hairdryer or lighter?’ French police look at claim of sensor tampering to win weather bets", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/23/hairdryer-or-lighter-french-police-look-at-claim-of-sensor-tampering-to-win-weather-bets", time: "2026-04-23T17:39:05Z" },
+      { title: "Police investigate after claims ‘hair dryer used to manipulate weather sensor to win $34k bet’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hair-dryer-bet-polymarket-france-police-b2963620.html", time: "2026-04-23T15:06:07Z" },
+      { title: "France holds national tribute for soldier killed in Lebanon", source: "Euronews", url: "http://www.euronews.com/video/2026/04/23/france-holds-national-tribute-for-soldier-killed-in-lebanon", time: "2026-04-23T13:33:59Z" },
+      { title: "Humanitarian worker Mike Penrose on the 'Food from Ukraine' programme", source: "France 24", url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260423-humanitarian-worker-mike-penrose-on-the-food-from-ukraine-programme", time: "2026-04-23T11:47:18Z" },
+      { title: "UK and France strike new £662m small boats deal", source: "BBC News", url: "https://www.bbc.com/news/articles/cz0ev7enk2lo?at_medium=RSS&at_campaign=rss", time: "2026-04-23T10:54:49Z" },
+      { title: "BBC visits migrant camp in northern France as new deal announced", source: "BBC News", url: "https://www.bbc.com/news/videos/cgrl891xkpvo?at_medium=RSS&at_campaign=rss", time: "2026-04-23T09:39:50Z" },
+    ]
+  },
+  {
     name: "Madrid", country: "Spain",
     lat: 40.4168, lng: -3.7038,
     category: "political",
     articles: [
+      { title: "Return of Aparicio painting to Prado exemplifies trajectory of human taste", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/apr/30/return-aparicio-painting-prado-year-famine-madrid-spain-exhibition", time: "2026-04-30T04:00:07Z" },
       { title: "Veteran goalkeeper, 70, to return to pitch for official game in Spain", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/29/veteran-goalkeeper-70-to-return-to-pitch-for-official-game-in-spain", time: "2026-04-29T17:17:42Z" },
       { title: "Can Griezmann end his Atletico love story in style?", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c202l6yxvmxo?at_medium=RSS&at_campaign=rss", time: "2026-04-29T05:07:15Z" },
       { title: "Spanish authorities freeze Gerry Hutch’s property assets as part of money-laundering investigation", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/04/29/spanish-authorities-freeze-gerry-hutchs-property-assets-as-part-of-money-laundering-investigation/", time: "2026-04-29T05:00:01Z" },
@@ -709,6 +713,7 @@ const locations = [
     lat: 59.3293, lng: 18.0686,
     category: "security",
     articles: [
+      { title: "I took an algorithm to court in Sweden. The algorithm won | Charlotta Kronblad", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/apr/30/i-took-an-algorithm-to-court-in-sweden-the-algorithm-won", time: "2026-04-30T04:00:07Z" },
       { title: "Sweden to fine social media sites over 'murder adverts'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0429/1570922-sweden-social-media/", time: "2026-04-29T16:26:00Z" },
       { title: "Nordic heatwave part of record year that saw temperatures scorch most of Europe, report finds", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/apr/29/nordic-extreme-heat-environment-europe-report", time: "2026-04-29T02:00:41Z" },
       { title: "'Unique' 16th century wreck found off Sweden", source: "RTE News", url: "https://www.rte.ie/news/newslens/2026/0428/1570679-ship-wreck-sweden/", time: "2026-04-28T15:38:31Z" },
@@ -726,7 +731,6 @@ const locations = [
       { title: "Turkey Passes Legislation to Bar Children Under 15 From Social Media", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/world/europe/turkey-ban-children-social-media.html", time: "2026-04-24T18:34:10Z" },
       { title: "Turkey to return to F1 calendar in 2027", source: "BBC News", url: "https://www.bbc.com/sport/formula1/articles/c17v4g1nq7ko?at_medium=RSS&at_campaign=rss", time: "2026-04-24T12:00:35Z" },
       { title: "Iran war sparks push to transform Syria into global energy corridor", source: "Euronews", url: "http://www.euronews.com/business/2026/04/24/iran-war-sparks-push-to-transform-syria-into-global-energy-corridor", time: "2026-04-24T05:00:02Z" },
-      { title: "Has the world grown weary of art biennials? In search of an antidote, a Portuguese festival turns to anarchism", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/apr/23/has-the-world-grown-weary-of-art-biennials-in-search-of-an-antidote-a-portuguese-festival-turns-to-anarchism", time: "2026-04-23T05:00:00Z" },
     ]
   },
   {
@@ -803,14 +807,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "Will Bulgaria’s New Leader Cast His Lot With Europe or Russia?", source: "New York Times", url: "https://www.nytimes.com/2026/04/23/world/europe/bulgaria-radev-election-russia-europe.html", time: "2026-04-23T09:01:52Z" },
-    ]
-  },
-  {
-    name: "Prague", country: "Czech Republic",
-    lat: 50.0755, lng: 14.4378,
-    category: "political",
-    articles: [
-      { title: "Czech journalists threaten to strike over plan to scrap licence fees", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/23/czech-journalists-threaten-to-strike-over-plan-to-scrap-licence-fees", time: "2026-04-23T04:00:45Z" },
     ]
   },
   {
