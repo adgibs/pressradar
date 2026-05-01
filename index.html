@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">00:57 UTC, 1 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">01:43 UTC, 1 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">1 May 2026</div>
@@ -123,6 +123,7 @@ const locations = [
       { title: "Anti-Israel oysterman in Maine poised to become Democratic nominee for US Senate", source: "Times of Israel", url: "https://www.timesofisrael.com/anti-israel-oysterman-in-maine-poised-to-become-democratic-nominee-for-us-senate/", time: "2026-04-30T22:20:25Z" },
       { title: "JTS ‘breaks mold,’ names campus innovator Rabbi Mike Uram as next chancellor", source: "Times of Israel", url: "https://www.timesofisrael.com/jts-breaks-mold-names-campus-innovator-rabbi-mike-uram-as-next-chancellor/", time: "2026-04-30T22:19:27Z" },
       { title: "LA police investigating attack on Jewish teacher outside synagogue as hate crime", source: "Times of Israel", url: "https://www.timesofisrael.com/la-police-investigating-attack-on-jewish-teacher-outside-synagogue-as-hate-crime/", time: "2026-04-30T21:49:04Z" },
+      { title: "US embassy in Beirut says Lebanon is at ‘crossroads’, calls for meeting with Netanyahu", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-embassy-beirut-says-lebanon-crossroads-calls-meeting-netanyahu", time: "2026-04-30T21:46:43Z" },
       { title: "Nothing new under the Zionist sun: the 'message of change' is a copy-paste of Netanyahu", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-01/ty-article/.premium/bennett-and-lapids-message-of-change-is-a-copy-paste-of-netanyahu/0000019d-dfd9-d0b2-a3bf-dff9973b0000", time: "2026-04-30T21:41:56Z" },
       { title: "I stand before a bulldozer that is leveling my mother's home, and wonder why it flies an Israeli flag", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-01/ty-article-opinion/.premium/why-is-there-an-israeli-flag-on-the-bulldozer-razing-my-mothers-home/0000019d-dfd9-db36-a1fd-ffdfce8f0000", time: "2026-04-30T21:39:30Z" },
       { title: "Only 22% of Israeli 9th graders met English requirements in latest tests, sparking alarm", source: "Times of Israel", url: "https://www.timesofisrael.com/only-22-of-israeli-9th-graders-met-english-requirements-in-latest-tests-sparking-alarm/", time: "2026-04-30T21:33:44Z" },
@@ -133,6 +134,7 @@ const locations = [
       { title: "Flotilla activist: Israel’s ‘brutal attack’ will not deter us", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/flotilla-activist-israels-brutal-attack-will-not-deter-us?traffic_source=rss", time: "2026-04-30T21:05:11Z" },
       { title: "Israel halts artillery fire, reduces strikes in Gaza following U.S. pressure", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-01/ty-article/.premium/israel-halts-artillery-fire-in-gaza-reduces-strikes-following-u-s-pressure/0000019d-dfc1-d709-ad9f-ffd349d60000", time: "2026-04-30T21:03:50Z" },
       { title: "Why Israel must cancel the appointment of Netanyahu's aide as its U.K. envoy", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-01/ty-article-opinion/why-israel-must-cancel-the-appointment-of-netanyahus-aide-to-be-its-u-k-envoy/0000019d-e008-d9bc-a5bf-ee3b3fcb0000", time: "2026-04-30T21:00:31Z" },
+      { title: "Why Israel must cancel the appointment of Netanyahu's aide as its U.K. envoy", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-05-01/ty-article-opinion/why-israel-must-cancel-the-appointment-of-netanyahus-aide-to-be-its-u-k-envoy/0000019d-e008-d9bc-a5bf-ee3b3fcb0000", time: "2026-04-30T21:00:31Z" },
       { title: "Deadly Israeli strikes on southern Lebanon despite ceasefire", source: "BBC News", url: "https://www.bbc.com/news/articles/cq5pepj21g8o?at_medium=RSS&at_campaign=rss", time: "2026-04-30T20:14:48Z" },
       { title: "Israel's president Herzog: Death penalty law for Palestinians charged with terrorism 'problematic'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-04-30/ty-article/.premium/israels-president-death-penalty-law-for-palestinian-terrorists-problematic/0000019d-dfad-d9db-a19d-ffadb5e00000", time: "2026-04-30T19:54:32Z" },
       { title: "Jury of Italy’s Venice Biennale resigns after demanding Israel, Russia be excluded", source: "Times of Israel", url: "https://www.timesofisrael.com/jury-of-italys-venice-biennale-resigns-after-demanding-israel-russia-be-excluded/", time: "2026-04-30T19:28:47Z" },
@@ -614,8 +616,6 @@ const locations = [
       { title: "Couple discovers Lebanon home destroyed by Israel from satellite image", source: "BBC News", url: "https://www.bbc.com/news/articles/cvg30jkvklno?at_medium=RSS&at_campaign=rss", time: "2026-04-24T02:58:42Z" },
       { title: "Report: Israel has killed 15 people in Lebanon since cease-fire began last week", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-24/ty-article-live/trump-says-wont-be-rushed-to-end-iran-war-tehran-must-stop-funding-hezbollah/0000019d-bd3a-ded5-abdd-bd3ada0e0000", time: "2026-04-24T02:18:32Z" },
       { title: "Jewish groups protest as California sends out antisemitic conspiracies in voter guide", source: "Times of Israel", url: "https://www.timesofisrael.com/jewish-groups-protest-as-california-sends-out-antisemitic-conspiracies-in-voter-guide/", time: "2026-04-24T02:18:26Z" },
-      { title: "Middle East war live: Israel-Lebanon ceasefire continues as Trump hopes for peace deal", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
-      { title: "Group of over 250 Bnei Menashe immigrants from India lands in Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/group-of-over-250-bnei-menashe-immigrants-from-india-lands-in-israel/", time: "2026-04-24T01:26:21Z" },
     ]
   },
   {
@@ -623,6 +623,7 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "What to know about May Day demonstrations as workers face rising energy costs due to Iran war", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/donald-trump-iran-paris-france-middle-east-b2968552.html", time: "2026-05-01T01:05:03Z" },
       { title: "US suffered 'disgraceful defeat', Iran’s Supreme Leader says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-suffered-disgraceful-defeat-irans-supreme-leader-says", time: "2026-05-01T00:43:06Z" },
       { title: "Iran war live: Tehran says US ports siege ‘intolerable’; Trump mulls action", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/5/1/iran-war-live-tehran-says-us-ports-siege-intolerable-trump-mulls-action?traffic_source=rss", time: "2026-05-01T00:00:00Z" },
       { title: "Evening update", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/evening-update-31", time: "2026-04-30T22:59:48Z" },
@@ -1080,7 +1081,6 @@ const locations = [
       { title: "‘Useful idiot’: Knives out for Tony Dokoupil at CBS Evening News as report captures scathing comments from colleagues", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/cbs-news-tony-dokoupil-anchor-weiss-b2964026.html", time: "2026-04-24T03:28:43Z" },
       { title: "Iranian cargo ship reaches port safely despite US efforts to seize it", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-cargo-ship-reaches-port-safely-despite-us-efforts-seize-it", time: "2026-04-24T03:11:27Z" },
       { title: "Trump says he won't be rushed to end Iran war, Tehran must stop funding Hezbollah", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-24/ty-article-live/trump-says-wont-be-rushed-to-end-iran-war-tehran-must-stop-funding-hezbollah/0000019d-bd3a-ded5-abdd-bd3ada0e0000", time: "2026-04-24T02:18:32Z" },
-      { title: "Trump sending Witkoff and Kushner to Pakistan for talks with Iranian FM", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
     ]
   },
   {
@@ -1088,6 +1088,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Global famine fears rise as Hormuz crisis threatens ‘eight-year' Suez-scale disruption", source: "Fox News", url: "https://www.foxnews.com/world/global-famine-fears-rise-hormuz-crisis-threatens-eight-year-suez-scale-disruption-", time: "2026-05-01T01:16:06Z" },
+      { title: "Trump, Fox News praise UAE decision to leave Opec", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-fox-news-praise-uae-decision-leave-opec", time: "2026-05-01T01:12:16Z" },
       { title: "No gas price relief in sight as Strait of Hormuz stands still", source: "CBS News", url: "https://www.cbsnews.com/video/no-gas-price-relief-sight-strait-of-hormuz-stands-still/", time: "2026-04-30T23:39:34Z" },
       { title: "Oil prices surge again as Trump weighs options to end Iran war and Hegseth faces lawmakers", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/oil-prices-surge-again-as-trump-weighs-options-to-end-iran-war-and-hegseth-faces-lawmakers", time: "2026-04-30T22:50:24Z" },
       { title: "20,000 civilian sailors are stuck in the gulf that opens to the Strait of Hormuz", source: "NPR", url: "https://www.npr.org/2026/04/30/nx-s1-5802991/20-000-civilian-sailors-are-stuck-in-the-gulf-that-opens-to-the-strait-of-hormuz", time: "2026-04-30T21:53:24Z" },
@@ -1382,8 +1384,6 @@ const locations = [
       { title: "Businesses dole out up to $4 million to cross Panama Canal during Strait of Hormuz chokehold", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/panama-canal-strait-of-hormuz-panama-city-ships-iran-b2964077.html", time: "2026-04-24T05:05:36Z" },
       { title: "Iran uses fast boats to seize container ships in Strait of Hormuz, challenging US blockade", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894036", time: "2026-04-24T03:32:15Z" },
       { title: "Oil rises above $106 per barrel as US, Iran deadlocked in Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/4/24/oil-rises-above-106-per-barrel-as-us-iran-deadlocked-in-strait-of-hormuz?traffic_source=rss", time: "2026-04-24T02:50:04Z" },
-      { title: "Middle East war live: Oil prices jump as tensions remain high in Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
-      { title: "4/23: The Takeout with Major Garrett", source: "CBS News", url: "https://www.cbsnews.com/video/042326-the-takeout-with-major-garrett/", time: "2026-04-24T01:05:47Z" },
     ]
   },
   {
@@ -1818,8 +1818,6 @@ const locations = [
       { title: "Rubio Says Iran’s Soccer Team Can Attend World Cup", source: "New York Times", url: "https://www.nytimes.com/2026/04/24/us/politics/trump-rubio-iran-world-cup.html", time: "2026-04-24T05:38:26Z" },
       { title: "Ukraine says it is in ‘strongest frontline position in a year’ as Russian advance grinds to a halt", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-frontline-war-update-russia-putin-drones-b2964067.html", time: "2026-04-24T04:54:35Z" },
       { title: "Report: Iran War 'drained' essential US ammunition supplies", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/report-iran-war-drained-essential-us-ammunition-supplies", time: "2026-04-24T01:58:58Z" },
-      { title: "Middle East war live: Iran FM Araghchi to travel to Pakistan for renewed talks", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
-      { title: "Iran War Has Drained U.S. Supplies of Critical, Costly Weapons", source: "New York Times", url: "https://www.nytimes.com/2026/04/23/us/politics/iran-war-cost-military.html", time: "2026-04-24T01:04:32Z" },
     ]
   },
   {
@@ -1940,7 +1938,6 @@ const locations = [
       { title: "Disgrace in Debel: A single incident undermines Israel’s reputation for tolerance - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-894017", time: "2026-04-24T05:59:23Z" },
       { title: "Israel, Lebanon extend ceasefire as Trump says ‘great chance’ for peace deal", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-israel-lebanon-extend-ceasefire-as-trump-says-great-chance-for-peace-deal", time: "2026-04-24T05:52:49Z" },
       { title: "Ceasefire with Lebanon 'not 100 percent', Israel’s ambassador to the UN says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/ceasefire-lebanon-not-100-percent-israels-ambassador-un-says", time: "2026-04-24T03:06:37Z" },
-      { title: "Middle East war live: UN peacekeeper dies of wounds suffered in Lebanon", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
     ]
   },
   {
@@ -1948,6 +1945,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "US urges Lebanese president to meet Netanyahu, suggests sit-down could lead to IDF pullout", source: "Times of Israel", url: "https://www.timesofisrael.com/us-urges-lebanese-president-to-meet-netanyahu-suggests-sit-down-could-lead-to-idf-pullout/", time: "2026-05-01T00:47:49Z" },
       { title: "Elections Committee head Orly Ades steps down after 16 years, half a year before Knesset elections", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894800", time: "2026-04-30T22:47:25Z" },
       { title: "Rachel Goldberg-Polin’s memoir about her son's murder tops NYT bestseller list", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-894791", time: "2026-04-30T21:50:55Z" },
       { title: "Eyal Golan once again accused of sex crimes, state attorney calls for renewed investigation", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-894788", time: "2026-04-30T21:49:43Z" },
@@ -2175,7 +2173,6 @@ const locations = [
       { title: "U.K. Greens' Polanski slams Starmer for 'weaponizing' antisemitism after PM's rebuke", source: "Haaretz", url: "https://www.haaretz.com/world-news/europe/2026-04-25/ty-article/.premium/u-k-greens-polanski-slams-starmer-for-weaponizing-antisemitism-after-rebuke/0000019d-c136-ded5-abdd-f53e1ede0000", time: "2026-04-24T22:51:11Z" },
       { title: "Greta Thunberg, Sally Rooney and Brian Eno defy Palestine Action ban in letter to judges", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/apr/24/scholars-writers-artists-defy-ban-palestine-action-letter-judges", time: "2026-04-24T12:12:01Z" },
       { title: "Polish PM questions US loyalty in case of Russian attack, warns EU must be 'real alliance' - FT", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894061", time: "2026-04-24T11:05:18Z" },
-      { title: "Middle East war live: EU must ‘step up efforts’ to restore stability, Macron says", source: "France 24", url: "https://www.france24.com/en/middle-east/20260424-middle-east-war-live-israel-lebanon-ceasefire-continues-as-trump-hopes-for-peace-deal", time: "2026-04-24T01:38:23Z" },
     ]
   },
   {
