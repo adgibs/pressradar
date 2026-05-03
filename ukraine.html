@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">00:55 UTC, 3 May 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">01:40 UTC, 3 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">3 May 2026</div>
@@ -396,6 +396,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "diplomacy",
     articles: [
+      { title: "Germany says U.S. troop withdrawal 'anticipated', Spain and Italy could be next", source: "NPR", url: "https://www.npr.org/2026/05/02/nx-s1-5808891/europe-allies-germany-troop-withdrawal-us", time: "2026-05-03T00:57:59Z" },
       { title: "U.S. to withdraw 5,000 troops from Germany in next 6 to12 months", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-to-withdraw-5000-troops-from-germany-in-next-6-to12-months", time: "2026-05-02T15:36:36Z" },
       { title: "Europe rattled by 'disastrous trend' as Trump pulls 5,000 troops out of Germany", source: "NBC News", url: "https://www.nbcnews.com/world/europe/europe-rattled-disastrous-trend-trump-pulls-5000-troops-germany-rcna343189", time: "2026-05-02T14:20:09Z" },
       { title: "Iran-US war latest: Germany responds to Trump’s decision to withdraw 5,000 troops as dispute deepens", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-germany-israel-strait-hormuz-b2969401.html", time: "2026-05-02T11:09:23Z" },
@@ -472,6 +473,20 @@ const locations = [
     ]
   },
   {
+    name: "Odesa", country: "Ukraine",
+    lat: 46.4825, lng: 30.7233,
+    category: "conflict",
+    articles: [
+      { title: "Ukraine war briefing: Russia tries for a foothold in Ukraine’s eastern ‘fortress belt’, continues attacks on civilians", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/ukraine-war-briefing-russia-tries-for-a-foothold-in-ukraines-eastern-fortress-belt-continues-attacks-on-civilians", time: "2026-05-03T00:56:25Z" },
+      { title: "Ukraine battlefield: Advanced Ukrainian drones raise concerns among Russian forces", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260502-ukraine-battlefield-advanced-ukrainian-drones-raise-concerns-among-russian-forces", time: "2026-05-02T19:11:46Z" },
+      { title: "Ukraine war briefing: Russian oil hub of Tuapse hit for fourth time as environmental disaster mounts", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/02/ukraine-war-briefing-russian-oil-hub-of-tuapse-hit-for-fourth-time-as-environmental-disaster-mounts", time: "2026-05-02T02:50:43Z" },
+      { title: "Russian drone attack wounds 14 in Odesa, while Ukrainian drones kill 2 in Russian-held Kherson", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-drone-attack-wounds-14-in-odesa-while-ukrainian-drones-kill-2-in-russian-held-kherson", time: "2026-04-27T16:49:04Z" },
+      { title: "A predawn Russian drone strike hits Ukraine's Odesa, wounding 14; 2 killed in Russian-held Kherson", source: "ABC News", url: "https://abcnews.com/International/wireStory/predawn-russian-drone-strike-hits-ukraines-odesa-wounding-132412382", time: "2026-04-27T10:59:59Z" },
+      { title: "Russian drone attack on Odesa wounds 10, officials say", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0427/1570373-ukraine-russia-conflict/", time: "2026-04-27T09:26:23Z" },
+      { title: "Odesa bears brunt of latest Russian attacks on Ukraine – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/27/europe-ukraine-russia-poland-germany-eu-latest-news-updates", time: "2026-04-27T09:18:32Z" },
+    ]
+  },
+  {
     name: "Black Sea", country: "International",
     lat: 43.0, lng: 35.0,
     category: "conflict",
@@ -482,19 +497,6 @@ const locations = [
       { title: "Russia hammers targets across Ukraine overnight", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/1/russia-hammers-targets-across-ukraine-overnight?traffic_source=rss", time: "2026-05-01T06:42:10Z" },
       { title: "How Ukraine's demining robots could help U.S. open the Strait of Hormuz", source: "CBS News", url: "https://www.cbsnews.com/news/how-ukraines-demining-robots-could-help-u-s-open-the-strait-of-hormuz/", time: "2026-04-29T20:53:00Z" },
       { title: "Ukrainian drones strike Russia’s Tuapse refinery for third time", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/28/ukrainian-drones-strike-russias-tuapse-refinery-for-third-time?traffic_source=rss", time: "2026-04-28T16:48:19Z" },
-    ]
-  },
-  {
-    name: "Odesa", country: "Ukraine",
-    lat: 46.4825, lng: 30.7233,
-    category: "conflict",
-    articles: [
-      { title: "Ukraine battlefield: Advanced Ukrainian drones raise concerns among Russian forces", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260502-ukraine-battlefield-advanced-ukrainian-drones-raise-concerns-among-russian-forces", time: "2026-05-02T19:11:46Z" },
-      { title: "Ukraine war briefing: Russian oil hub of Tuapse hit for fourth time as environmental disaster mounts", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/02/ukraine-war-briefing-russian-oil-hub-of-tuapse-hit-for-fourth-time-as-environmental-disaster-mounts", time: "2026-05-02T02:50:43Z" },
-      { title: "Russian drone attack wounds 14 in Odesa, while Ukrainian drones kill 2 in Russian-held Kherson", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-drone-attack-wounds-14-in-odesa-while-ukrainian-drones-kill-2-in-russian-held-kherson", time: "2026-04-27T16:49:04Z" },
-      { title: "A predawn Russian drone strike hits Ukraine's Odesa, wounding 14; 2 killed in Russian-held Kherson", source: "ABC News", url: "https://abcnews.com/International/wireStory/predawn-russian-drone-strike-hits-ukraines-odesa-wounding-132412382", time: "2026-04-27T10:59:59Z" },
-      { title: "Russian drone attack on Odesa wounds 10, officials say", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0427/1570373-ukraine-russia-conflict/", time: "2026-04-27T09:26:23Z" },
-      { title: "Odesa bears brunt of latest Russian attacks on Ukraine – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/apr/27/europe-ukraine-russia-poland-germany-eu-latest-news-updates", time: "2026-04-27T09:18:32Z" },
     ]
   },
   {
