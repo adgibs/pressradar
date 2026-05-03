@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:21 UTC, 3 May 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:21 UTC, 3 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">3 May 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "Two killed, three injured after explosion at house in UK", source: "RTE News", url: "https://www.rte.ie/news/uk/2026/0503/1571565-explosion-bristol-england/", time: "2026-05-03T15:48:55Z" },
       { title: "Two women die on a small migrant boat trying to reach the UK", source: "France 24", url: "https://www.france24.com/en/europe/20260503-two-women-die-on-a-small-migrant-boat-trying-to-reach-the-uk", time: "2026-05-03T09:01:13Z" },
       { title: "Banksy confirms new statue installed in central London is his work", source: "NPR", url: "https://www.npr.org/2026/05/02/nx-s1-5808871/banksy-statue-london", time: "2026-05-02T17:25:40Z" },
       { title: "Flight with 275 passengers diverts to Dublin Airport after engine issue over Atlantic", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/05/02/flight-diverted-to-dublin-airport-after-crew-reports-engine-issue-over-north-atlantic/", time: "2026-05-02T16:30:38Z" },
@@ -262,6 +263,7 @@ const locations = [
     lat: 52.52, lng: 13.405,
     category: "economic",
     articles: [
+      { title: "Marco Rubio heading to Italy to speak with Pope Leo amid rising tensions with Trump admin", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pope-leo-marco-rubio-feud-trump-vatican-b2969755.html", time: "2026-05-03T15:30:41Z" },
       { title: "Republicans ‘concerned’ after Trump threatens to withdraw more US troops from Germany", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/may/03/trump-threats-withdraw-troops-from-germany", time: "2026-05-03T13:39:03Z" },
       { title: "Trump’s war of words with Friedrich Merz takes toll on US-German relationship", source: "The Hill", url: "https://thehill.com/homenews/administration/5860224-trump-merz-iran-war-feud/", time: "2026-05-03T10:00:00Z" },
       { title: "Germany troop cuts send wrong signal to Russia, say two top US Republicans", source: "BBC News", url: "https://www.bbc.com/news/articles/cewpx5yvwyxo?at_medium=RSS&at_campaign=rss", time: "2026-05-03T08:41:23Z" },
@@ -647,8 +649,29 @@ const locations = [
       { title: "Italy extradites alleged Chinese hacker to US accused of spying for Beijing during COVID-19 pandemic", source: "Euronews", url: "http://www.euronews.com/my-europe/2026/04/27/italy-extradites-alleged-chinese-hacker-to-us-accused-of-spying-for-beijing-during-covid-1", time: "2026-04-27T16:42:53Z" },
       { title: "Venice opera house fires government-linked music director after months of protests", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/27/venice-opera-house-fires-incoming-music-director-who-made-nepotism-claims", time: "2026-04-27T12:19:15Z" },
       { title: "Archbishop of Canterbury joins Pope Leo for ‘moment of prayer’ during historic Vatican visit", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/pope-leo-xiv-archbishop-of-canterbury-vatican-sarah-mullally-b2965501.html", time: "2026-04-27T09:33:23Z" },
-      { title: "Tillis will support Warsh, clearing way for Trump's Fed pick", source: "Axios", url: "https://www.axios.com/2026/04/26/tillis-warsh-trump-fed-pick", time: "2026-04-26T15:50:09Z" },
-      { title: "GOP backs controversial White House ballroom after shooting", source: "Axios", url: "https://www.axios.com/2026/04/26/gop-support-trump-ballroom-shooting-security", time: "2026-04-26T15:23:57Z" },
+    ]
+  },
+  {
+    name: "Vienna", country: "Austria",
+    lat: 48.2082, lng: 16.3738,
+    category: "political",
+    articles: [
+      { title: "Austrian police arrest suspect in supermarket baby food poisoning case", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/austrian-police-arrest-suspect-in-supermarket-baby-food-poisoning-case", time: "2026-05-03T16:02:19Z" },
+      { title: "Austrian police detain suspect over rat poison found in Hipp baby food jars", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-austria-hipp-baby-food-rat-poison/", time: "2026-05-03T15:46:13Z" },
+      { title: "‘War relic’ explodes under campfire in Austria sending five children to hospital", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/austria-war-relic-explosion-children-injured-world-war-two-b2969747.html", time: "2026-05-03T14:58:43Z" },
+      { title: "‘Wartime Relic’ Explodes Under Campfire in Austria, Injuring Five Children", source: "New York Times", url: "https://www.nytimes.com/2026/05/03/world/europe/austria-explosion-campfire.html", time: "2026-05-03T13:38:58Z" },
+      { title: "‘War Relic’ Explodes Under Campfire in Austria, Injuring Five Children", source: "New York Times", url: "https://www.nytimes.com/2026/05/03/world/europe/03xp-austria-explosion-campfire.html", time: "2026-05-03T13:33:30Z" },
+      { title: "Man arrested in Austria after rat poison found in baby food jars", source: "Sky News", url: "https://news.sky.com/story/man-arrested-in-austria-after-rat-poison-found-in-baby-food-jars-13539676", time: "2026-05-03T13:12:00Z" },
+      { title: "Arrest in Austria after rat poison found in jars of baby food", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/austria-baby-food-poison-arrest-hipp-b2969647.html", time: "2026-05-03T07:38:55Z" },
+      { title: "Defendant pleads guilty to plotting attack on Taylor Swift concert in Vienna", source: "Globe and Mail", url: "https://www.theglobeandmail.com/culture/music/article-taylor-swift-concert-vienna-attack-plot-guilty/", time: "2026-04-28T17:40:44Z" },
+      { title: "Man Pleads Guilty to Planning Attack at Taylor Swift Concert in Vienna", source: "New York Times", url: "https://www.nytimes.com/2026/04/28/world/europe/taylor-swift-austria-guilty-plea.html", time: "2026-04-28T15:48:31Z" },
+      { title: "Man on trial accused of Taylor Swift concert attack plot", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0428/1570577-taylor-swift-trial/", time: "2026-04-28T10:00:27Z" },
+      { title: "Man pleads guilty over terror plot to attack Taylor Swift concert - reports", source: "Sky News", url: "https://news.sky.com/story/man-pleads-guilty-over-terror-plot-to-attack-taylor-swift-concert-reports-13537498", time: "2026-04-28T09:49:00Z" },
+      { title: "Austrian man goes on trial for 2024 Taylor Swift concert terror plot", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/28/austrian-man-goes-on-trial-for-2024-taylor-swift-concert-terror-plot", time: "2026-04-28T08:50:41Z" },
+      { title: "Alleged Islamic State terrorist goes on trial charged with Taylor Swift Vienna concert plot", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/taylor-swift-eras-tour-vienna-court-b2966222.html", time: "2026-04-28T08:36:40Z" },
+      { title: "Austrian goes on trial accused of plotting attack on Taylor Swift concert", source: "BBC News", url: "https://www.bbc.com/news/articles/c05d5qgprjzo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T07:32:35Z" },
+      { title: "Trial of Austrian man accused of plotting to attack a Taylor Swift concert set to begin", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/vienna-taylor-swift-swifties-islamic-state-saudi-arabia-b2966119.html", time: "2026-04-28T05:03:49Z" },
+      { title: "Orbán associates rush to move wealth out of Hungary after election defeat", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/26/viktor-orban-associates-wealth-hungary-election", time: "2026-04-26T16:42:21Z" },
     ]
   },
   {
@@ -671,27 +694,6 @@ const locations = [
       { title: "Police hunt 89-year-old gunman after several wounded in Athens shooting", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/greece-shooting-athens-police-manhunt-b2966359.html", time: "2026-04-28T11:18:34Z" },
       { title: "Gunman opens fire in Athens - several people wounded", source: "Sky News", url: "https://news.sky.com/story/gunman-opens-fire-in-athens-several-people-wounded-13535677", time: "2026-04-28T09:13:00Z" },
       { title: "Man, 89, arrested after shootings leave several wounded in Athens", source: "Sky News", url: "https://news.sky.com/story/man-89-arrested-after-shootings-leave-several-wounded-in-athens-13535677", time: "2026-04-28T09:13:00Z" },
-    ]
-  },
-  {
-    name: "Vienna", country: "Austria",
-    lat: 48.2082, lng: 16.3738,
-    category: "political",
-    articles: [
-      { title: "‘War relic’ explodes under campfire in Austria sending five children to hospital", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/austria-war-relic-explosion-children-injured-world-war-two-b2969747.html", time: "2026-05-03T14:58:43Z" },
-      { title: "‘Wartime Relic’ Explodes Under Campfire in Austria, Injuring Five Children", source: "New York Times", url: "https://www.nytimes.com/2026/05/03/world/europe/austria-explosion-campfire.html", time: "2026-05-03T13:38:58Z" },
-      { title: "‘War Relic’ Explodes Under Campfire in Austria, Injuring Five Children", source: "New York Times", url: "https://www.nytimes.com/2026/05/03/world/europe/03xp-austria-explosion-campfire.html", time: "2026-05-03T13:33:30Z" },
-      { title: "Man arrested in Austria after rat poison found in baby food jars", source: "Sky News", url: "https://news.sky.com/story/man-arrested-in-austria-after-rat-poison-found-in-baby-food-jars-13539676", time: "2026-05-03T13:12:00Z" },
-      { title: "Arrest in Austria after rat poison found in jars of baby food", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/austria-baby-food-poison-arrest-hipp-b2969647.html", time: "2026-05-03T07:38:55Z" },
-      { title: "Defendant pleads guilty to plotting attack on Taylor Swift concert in Vienna", source: "Globe and Mail", url: "https://www.theglobeandmail.com/culture/music/article-taylor-swift-concert-vienna-attack-plot-guilty/", time: "2026-04-28T17:40:44Z" },
-      { title: "Man Pleads Guilty to Planning Attack at Taylor Swift Concert in Vienna", source: "New York Times", url: "https://www.nytimes.com/2026/04/28/world/europe/taylor-swift-austria-guilty-plea.html", time: "2026-04-28T15:48:31Z" },
-      { title: "Man on trial accused of Taylor Swift concert attack plot", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0428/1570577-taylor-swift-trial/", time: "2026-04-28T10:00:27Z" },
-      { title: "Man pleads guilty over terror plot to attack Taylor Swift concert - reports", source: "Sky News", url: "https://news.sky.com/story/man-pleads-guilty-over-terror-plot-to-attack-taylor-swift-concert-reports-13537498", time: "2026-04-28T09:49:00Z" },
-      { title: "Austrian man goes on trial for 2024 Taylor Swift concert terror plot", source: "The Guardian", url: "https://www.theguardian.com/music/2026/apr/28/austrian-man-goes-on-trial-for-2024-taylor-swift-concert-terror-plot", time: "2026-04-28T08:50:41Z" },
-      { title: "Alleged Islamic State terrorist goes on trial charged with Taylor Swift Vienna concert plot", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/taylor-swift-eras-tour-vienna-court-b2966222.html", time: "2026-04-28T08:36:40Z" },
-      { title: "Austrian goes on trial accused of plotting attack on Taylor Swift concert", source: "BBC News", url: "https://www.bbc.com/news/articles/c05d5qgprjzo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T07:32:35Z" },
-      { title: "Trial of Austrian man accused of plotting to attack a Taylor Swift concert set to begin", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/vienna-taylor-swift-swifties-islamic-state-saudi-arabia-b2966119.html", time: "2026-04-28T05:03:49Z" },
-      { title: "Orbán associates rush to move wealth out of Hungary after election defeat", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/26/viktor-orban-associates-wealth-hungary-election", time: "2026-04-26T16:42:21Z" },
     ]
   },
   {
@@ -790,6 +792,16 @@ const locations = [
     ]
   },
   {
+    name: "Tallinn", country: "Estonia",
+    lat: 59.437, lng: 24.7536,
+    category: "security",
+    articles: [
+      { title: "Ukrainian drones strike Russia's Primorsk oil port", source: "France 24", url: "https://www.france24.com/en/europe/20260503-ukrainian-drones-strike-russia-baltic-sea-port-primorsk", time: "2026-05-03T14:26:35Z" },
+      { title: "Ukrainian drones hit Russian port, oil tankers and ships", source: "RTE News", url: "https://www.rte.ie/news/2026/0503/1571530-ukraine-russia/", time: "2026-05-03T09:35:22Z" },
+      { title: "Timmy the humpback whale begins journey back home on barge to the North Sea", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/timmy-whale-rescue-germany-humpback-b2967239.html", time: "2026-04-29T12:45:10Z" },
+    ]
+  },
+  {
     name: "The Hague", country: "Netherlands",
     lat: 52.0705, lng: 4.3007,
     category: "political",
@@ -850,15 +862,6 @@ const locations = [
     articles: [
       { title: "America is overlooking one of its strongest global alliances", source: "The Hill", url: "https://thehill.com/opinion/international/5860265-restructuring-foreign-aid-strategy/", time: "2026-05-03T13:00:00Z" },
       { title: "Final talks begin on missing piece for pandemic treaty", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0427/1570394-pandemic-treaty/", time: "2026-04-27T10:06:11Z" },
-    ]
-  },
-  {
-    name: "Tallinn", country: "Estonia",
-    lat: 59.437, lng: 24.7536,
-    category: "security",
-    articles: [
-      { title: "Ukrainian drones strike Russia's Primorsk oil port", source: "France 24", url: "https://www.france24.com/en/europe/20260503-ukrainian-drones-strike-russia-baltic-sea-port-primorsk", time: "2026-05-03T14:26:35Z" },
-      { title: "Timmy the humpback whale begins journey back home on barge to the North Sea", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/timmy-whale-rescue-germany-humpback-b2967239.html", time: "2026-04-29T12:45:10Z" },
     ]
   },
   {
