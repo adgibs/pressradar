@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:34 UTC, 4 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:28 UTC, 4 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">4 May 2026</div>
@@ -119,8 +119,12 @@ const locations = [
       { title: "Suspected drunk driver wounds multiple pedestrians at Beersheba Lag Ba'Omer celebration", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-895121", time: "2026-05-04T21:49:30Z" },
       { title: "A century since Dreyfus's wrongful conviction, a family member is promoted in the IDF", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-895120", time: "2026-05-04T21:46:08Z" },
       { title: "Police disperse hundreds of civilians from Mount Meron attempting to light fires for Lag Ba'omer", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-895115", time: "2026-05-04T21:15:42Z" },
+      { title: "Israel's military supremacy has become a trap, not a solution", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-05/ty-article-opinion/.premium/israels-military-supremacy-has-become-a-trap-not-a-solution/0000019d-f455-df01-a3dd-f7fd8d000000", time: "2026-05-04T21:06:03Z" },
+      { title: "Noose cakes and death-cult politics in Ben-Gvir's Israel", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-05/ty-article-opinion/.premium/noose-cakes-and-death-cult-politics-in-ben-gvirs-israel/0000019d-f455-d369-a19d-f77fb52d0000", time: "2026-05-04T21:04:35Z" },
       { title: "Maccabi Tel Aviv pulls away from Hapoel Jerusalem for overtime win", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/sports/article-895119", time: "2026-05-04T21:03:37Z" },
+      { title: "Is Israel’s interception of the Global Sumud Flotilla legal?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/5/4/is-israels-interception-of-the-global-sumud-flotilla-legal?traffic_source=rss", time: "2026-05-04T21:00:23Z" },
       { title: "Israeli TV Academy Awards present their 2025 prizes, and honor the late Alon Aboutboul", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-895116", time: "2026-05-04T20:54:58Z" },
+      { title: "In world first, Israeli scientists map digital atlas of healthy human liver", source: "Times of Israel", url: "https://www.timesofisrael.com/in-world-first-israeli-scientists-map-digital-atlas-of-healthy-human-liver/", time: "2026-05-04T20:45:43Z" },
       { title: "Ukrainian Ambassador to Israel warns 'Post' about country's 'growing frustration' - interview", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895110", time: "2026-05-04T20:25:11Z" },
       { title: "Senior IDF official: No change in home front rules despite Iran attack on UAE, Oman", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-895113", time: "2026-05-04T20:21:14Z" },
       { title: "Israeli fintech startup partners with Elon Musk’s X to gauge market sentiment", source: "Times of Israel", url: "https://www.timesofisrael.com/israeli-fintech-startup-partners-with-elon-musks-x-to-gauge-market-sentiment/", time: "2026-05-04T20:17:23Z" },
@@ -137,6 +141,7 @@ const locations = [
       { title: "Lebanon Latest", source: "Al Jazeera", url: "https://www.aljazeera.com/video/2026/5/4/lebanon-latest?traffic_source=rss", time: "2026-05-04T16:05:40Z" },
       { title: "British Gaza flotilla activists say they needed hospital care after Israeli forces’ abuse", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/04/gaza-flotilla-britons-say-they-needed-hospital-care-after-israeli-forces-abuse", time: "2026-05-04T16:00:27Z" },
       { title: "Sharon Sharabi, brother of former hostages Eli and Yossi, joins Yisrael Beytenu", source: "Times of Israel", url: "https://www.timesofisrael.com/sharon-sharabi-brother-of-former-hostages-eli-and-yossi-joins-yisrael-beytenu/", time: "2026-05-04T15:10:24Z" },
+      { title: "From Eichmann to 'new Nazis': Israel's death penalty debate takes a turn", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-04/ty-article-opinion/.premium/from-eichmann-to-new-nazis-israels-death-penalty-debate-takes-a-turn/0000019d-dda5-de83-a7ff-dff59a310000", time: "2026-05-04T15:02:00Z" },
       { title: "Negotiate or fragment: Lebanon’s survival may depend on a deal with Israel - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895027", time: "2026-05-04T15:00:00Z" },
       { title: "Fearing it would cause hostility, Sydney cancels controversial ‘Globalize the intifada’ forum", source: "Times of Israel", url: "https://www.timesofisrael.com/fearing-hostilities-sydney-cancels-controversial-globalize-the-intifada-forum/", time: "2026-05-04T14:10:39Z" },
       { title: "Lebanon’s Hezbollah-allied parliament speaker: No talks with Israel until war ends", source: "Times of Israel", url: "https://www.timesofisrael.com/lebanons-hezbollah-allied-parliament-speaker-no-talks-with-israel-until-war-ends/", time: "2026-05-04T13:59:04Z" },
@@ -611,11 +616,6 @@ const locations = [
       { title: "Sanctions are inevitable, despite Israelis' obliviousness", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-28/ty-article-opinion/.premium/sanctions-are-inevitable-despite-israelis-obliviousness/0000019d-d01b-d623-ad9f-fedbc0500000", time: "2026-04-27T21:45:18Z" },
       { title: "A garbage truck full of hunger and shame – and the Israeli system that drives it", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-28/ty-article-opinion/.premium/a-garbage-truck-full-of-hunger-and-shame-and-the-israeli-system-that-drives-it/0000019d-d01b-d0b7-abdf-f61b81020000", time: "2026-04-27T21:40:29Z" },
       { title: "A moral stain: IDF chief can no longer turn a blind eye to army's dire discipline problems", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-28/ty-article/.premium/a-moral-stain-zamir-can-no-longer-turn-a-blind-eye-to-idfs-discipline-problems/0000019d-d096-d0b7-abdf-f697519b0000", time: "2026-04-27T21:38:06Z" },
-      { title: "First polls after Bennett-Lapid merger show no majority for anti-Netanyahu bloc without Arab parties", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-04-28/ty-article/.premium/first-polls-after-lapid-bennett-merger-show-no-majority-for-anti-netanyahu-bloc/0000019d-d02e-d942-a5bf-f76e475b0000", time: "2026-04-27T21:18:47Z" },
-      { title: "‘A truly good kid’: Independence Day murder victim’s family prays for justice", source: "Times of Israel", url: "https://www.timesofisrael.com/a-truly-good-kid-independence-day-murder-victims-family-prays-for-justice/", time: "2026-04-27T21:13:15Z" },
-      { title: "Will vote make a difference to Palestinians under Israeli occupation?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/4/27/will-vote-make-a-difference-to-palestinians-under-israeli-occupation?traffic_source=rss", time: "2026-04-27T21:07:36Z" },
-      { title: "Ben-Gvir appoints former Netanyahu adviser as Otzma Yehudit campaign strategist", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894350", time: "2026-04-27T20:48:19Z" },
-      { title: "Israel's opposition would do well to remember: There is no democracy without Arabs", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-04-27/ty-article-opinion/israeli-opposition-must-remember-there-is-no-democracy-without-arabs/0000019d-d077-d0b7-abdf-f6779bee0000", time: "2026-04-27T20:47:43Z" },
     ]
   },
   {
@@ -1118,9 +1118,6 @@ const locations = [
       { title: "King Charles and Queen Camilla arrive in Washington to meet with President Trump and First Lady", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/king-charles-and-queen-camilla-arrive-in-washington-to-meet-with-president-trump-and-first-lady-262202949732", time: "2026-04-27T23:12:32Z" },
       { title: "Iraq Taps Businessman, Ali al-Zaidi, to Form New Government", source: "New York Times", url: "https://www.nytimes.com/2026/04/27/world/middleeast/iraq-prime-minister.html", time: "2026-04-27T23:04:42Z" },
       { title: "Bahrain strips 69 people of citizenship over Iran support", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/bahrain-strips-69-people-of-citizenship-over-iran-support?traffic_source=rss", time: "2026-04-27T21:51:37Z" },
-      { title: "Who holds the cards in Iran-US talks?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/27/who-holds-the-cards-in-iran-us-talks?traffic_source=rss", time: "2026-04-27T21:00:18Z" },
-      { title: "Iran FM in Russia says US has offered new round of talks", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/27/iran-fm-in-russia-says-us-has-offered-new-round-of-talks?traffic_source=rss", time: "2026-04-27T20:59:56Z" },
-      { title: "Iran rebukes EU stance on sanctions relief", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-rebukes-eu-stance-sanctions-relief", time: "2026-04-27T20:36:39Z" },
     ]
   },
   {
@@ -1128,6 +1125,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Opaque nature of US-Iran shadow war: Are they 'dancing their way out of a minefield' toward a deal?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260504-opaque-nature-of-us-iran-shadow-war-are-they-dancing-their-way-out-of-a-minefield-toward-a-deal", time: "2026-05-04T20:49:56Z" },
+      { title: "US president offers no clear answer on truce status with Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-president-offers-no-clear-answer-truce-status-iran", time: "2026-05-04T20:44:28Z" },
       { title: "OPEC+ set raises output as Strait of Hormuz blockade disrupt oil flows", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opec-set-raises-output-strait-hormuz-blockade-disrupt-oil-flows", time: "2026-05-04T20:33:21Z" },
       { title: "'It's an elite matter': UAE confirms it's in talks for swap line loan with US", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/its-elite-matter-uae-confirms-its-talks-swap-line-loan-us", time: "2026-05-04T20:03:55Z" },
       { title: "Iran denies plan to target UAE, blames US for 'adventurism'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-denies-plan-target-uae-blames-us-adventurism", time: "2026-05-04T19:57:28Z" },
@@ -1457,6 +1456,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/colorado-gaza-boulder-associated-press-police-b2970295.html", time: "2026-05-04T20:43:54Z" },
       { title: "Jewish political groups withhold support from Graham Platner after he emerged as Maine Democratic frontrunner", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-04/ty-article/.premium/jewish-groups-withhold-support-as-platner-becomes-maine-frontrunner/0000019d-f412-de15-a7df-f67ba8b30000", time: "2026-05-04T20:11:04Z" },
       { title: "EU, PA announce program to support Palestinians facing settler violence in West Bank", source: "Times of Israel", url: "https://www.timesofisrael.com/eu-pa-announce-program-to-support-palestinians-facing-settler-violence-in-west-bank/", time: "2026-05-04T20:02:40Z" },
       { title: "Bennett says Netanyahu gov't 'boycotting' West Bank settlements amid Carrefour subsidy deal", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-05-04/ty-article/.premium/bennett-says-govt-boycotting-west-bank-settlements-amid-carrefour-deal/0000019d-f415-d22e-a9ff-feff6b400000", time: "2026-05-04T19:59:05Z" },
@@ -1730,7 +1730,6 @@ const locations = [
       { title: "'Collective punishment': MSF says Israel is weaponising water access in Gaza", source: "France 24", url: "https://www.france24.com/en/middle-east/20260428-collective-punishment-msf-says-israel-weaponising-water-access-gaza", time: "2026-04-28T07:23:11Z" },
       { title: "Israeli settlers attack Palestinians and set house on fire", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/27/israeli-settlers-attack-palestinians-and-set-house-on-fire?traffic_source=rss", time: "2026-04-27T23:58:10Z" },
       { title: "Rats, fleas and endless queues: Inside the daily misery of Gaza's tent camps", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-28/ty-article-opinion/.premium/rats-fleas-and-endless-queues-inside-the-daily-misery-of-gazas-tent-camps/0000019d-c99d-d69c-a9df-dfff86cc0000", time: "2026-04-27T23:57:09Z" },
-      { title: "WHO evacuates 189 Palestinians from Gaza for medical treatment", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/who-evacuates-189-palestinians-gaza-medical-treatment", time: "2026-04-27T20:56:43Z" },
     ]
   },
   {
@@ -1936,8 +1935,6 @@ const locations = [
       { title: "Man charged with attempted assassination of Trump for correspondents’ dinner shooting", source: "Times of Israel", url: "https://www.timesofisrael.com/man-charged-with-attempted-assassination-of-trump-for-correspondents-dinner-shooting/", time: "2026-04-27T23:26:19Z" },
       { title: "Kid Rock was a guest on a US military helicopter ‘joyride’ with Pentagon chief Pete Hegseth, report claims", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/kid-rock-pete-hegseth-apache-joyride-b2966040.html", time: "2026-04-27T23:19:17Z" },
       { title: "Iran eyes revenge for Soleimani as WHCA Dinner shooting exposes security ‘vulnerability,’ expert warns", source: "Fox News", url: "https://www.foxnews.com/world/iran-eyes-revenge-soleimani-whca-dinner-shooting-exposes-security-vulnerability-expert-warns", time: "2026-04-27T22:41:04Z" },
-      { title: "Orban’s allies move assets abroad, seek US visas following Hungary election defeat - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894327", time: "2026-04-27T21:25:15Z" },
-      { title: "US considering sending stranded Afghans in Qatar to the Congo, advocacy group says", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/us-considering-sending-stranded-afghans-qatar-congo-advocacy-group-says", time: "2026-04-27T20:54:51Z" },
     ]
   },
   {
@@ -1945,6 +1942,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "strikes",
     articles: [
+      { title: "Lebanon needs its own Marshall Plan – otherwise 'nothing will be resolved'", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-05/ty-article-opinion/.premium/lebanon-needs-its-own-marshall-plan-otherwise-nothing-will-be-resolved/0000019d-f456-de15-a7df-f67f44f40000", time: "2026-05-04T21:01:10Z" },
       { title: "Hezbollah said it attacked Israeli soldiers in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-said-it-attacked-israeli-soldiers-southern-lebanon", time: "2026-05-04T13:47:45Z" },
       { title: "Hezbollah deploys hard-to-jam fibre optic drones, shifting battlefield tactics", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260504-hezbollah-deploys-hard-to-jam-fibre-optic-drones-shifting-battlefield-tactics", time: "2026-05-04T12:00:46Z" },
       { title: "Winning peace in Lebanon is harder than winning war", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/5/4/winning-peace-in-lebanon-is-harder-than-winning-war?traffic_source=rss", time: "2026-05-04T11:18:12Z" },
@@ -2097,7 +2095,6 @@ const locations = [
       { title: "US former official: Iran war is direct extension of ‘Greater Israel’ project", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260428-us-former-official-iran-war-is-direct-extension-of-greater-israel-project/", time: "2026-04-28T12:34:34Z" },
       { title: "Compensation to be given to employers of reserve soldiers, Knesset plenum decides", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894371", time: "2026-04-28T04:11:28Z" },
       { title: "Isaac Herzog will visit Panama in May, Panamanian president confirms", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894359", time: "2026-04-27T22:21:33Z" },
-      { title: "A-G: Levin’s partial plan to convene judge selection panel does not end High Court case", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894354", time: "2026-04-27T21:07:32Z" },
     ]
   },
   {
@@ -2261,24 +2258,6 @@ const locations = [
     ]
   },
   {
-    name: "Haifa", country: "Israel",
-    lat: 32.794, lng: 34.9896,
-    category: "strikes",
-    articles: [
-      { title: "Israel–Iran energy infrastructure war signals a dangerous new escalation - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-894736", time: "2026-05-03T10:41:12Z" },
-      { title: "New US shipment of 6,500 tons of military aid arrives in Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260430-new-us-shipment-of-6500-tons-of-military-aid-arrives-in-israel/", time: "2026-04-30T19:54:01Z" },
-      { title: "US ships 6,500 tons of munitions, equipment to Israel in 24 hours", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-894754", time: "2026-04-30T18:07:10Z" },
-      { title: "Under Ukraine pressure, Israel blocks suspect Russian grain ship", source: "Jerusalem Post", url: "https://www.jpost.com/international/internationalrussia-ukraine-war/article-894677", time: "2026-04-30T10:29:47Z" },
-      { title: "The Israeli importer of allegedly stolen Ukrainian grain awaiting unloading in Haifa", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-29/ty-article/.premium/the-israeli-importer-of-allegedly-stolen-ukraine-grain-awaiting-haifa-unloading/0000019d-d9b1-d153-a3df-f9bf664e0000", time: "2026-04-29T15:35:57Z" },
-      { title: "Zelensky warns of sanctions over Israeli purchases of grain taken from Ukraine", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260429-zelensky-warns-of-sanctions-over-israeli-purchases-of-grain-taken-from-ukraine/", time: "2026-04-29T08:29:48Z" },
-      { title: "Israel says no proof Russian grain shipment ‘stolen,’ as Ukraine threatens sanctions", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-says-no-proof-russian-grain-shipment-stolen-as-ukraine-threatens-sanctions/", time: "2026-04-28T16:05:14Z" },
-      { title: "Ukraine accuses Israel of receiving shipments of grain 'stolen' by Russia", source: "BBC News", url: "https://www.bbc.com/news/articles/cqjplqgd1r2o?at_medium=RSS&at_campaign=rss", time: "2026-04-28T12:18:18Z" },
-      { title: "Zelenskyy says Israel broke own law by buying stolen Ukrainian wheat from Russia, vows sanctions", source: "Haaretz", url: "https://www.haaretz.com/israel-news/security-aviation/2026-04-28/ty-article/.premium/zelenskyy-says-israel-broke-own-law-by-buying-stolen-ukrainian-wheat-from-russia/0000019d-d389-d623-ad9f-ffdb6ded0000", time: "2026-04-28T10:22:05Z" },
-      { title: "Kyiv summons Israeli envoy, EU warns of sanctions after 2nd ‘stolen’ grain ship incident", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-tells-ukraine-too-late-to-seize-russian-grain-ship-as-it-left-haifa-report-2/", time: "2026-04-28T01:46:08Z" },
-      { title: "Ukraine summons Israeli envoy in protest of Russian vessel's arrival in Haifa", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-894352", time: "2026-04-27T20:56:52Z" },
-    ]
-  },
-  {
     name: "Sanaa", country: "Yemen",
     lat: 15.3694, lng: 44.191,
     category: "strikes",
@@ -2294,6 +2273,23 @@ const locations = [
       { title: "Instead of indirectly insulting Yemen, Prabowo should be building relations with it", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260501-instead-of-indirectly-insulting-yemen-prabowo-should-be-building-relations-with-it/", time: "2026-05-01T07:25:22Z" },
       { title: "Amnesty calls for US strike on Yemen to be investigated as war crime", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/amnesty-calls-for-us-strike-on-yemen-to-be-investigated-as-war-crime?traffic_source=rss", time: "2026-04-28T11:27:06Z" },
       { title: "Egypt’s dangerous pressure game against Israel - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894382", time: "2026-04-28T08:40:03Z" },
+    ]
+  },
+  {
+    name: "Haifa", country: "Israel",
+    lat: 32.794, lng: 34.9896,
+    category: "strikes",
+    articles: [
+      { title: "Israel–Iran energy infrastructure war signals a dangerous new escalation - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-894736", time: "2026-05-03T10:41:12Z" },
+      { title: "New US shipment of 6,500 tons of military aid arrives in Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260430-new-us-shipment-of-6500-tons-of-military-aid-arrives-in-israel/", time: "2026-04-30T19:54:01Z" },
+      { title: "US ships 6,500 tons of munitions, equipment to Israel in 24 hours", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-894754", time: "2026-04-30T18:07:10Z" },
+      { title: "Under Ukraine pressure, Israel blocks suspect Russian grain ship", source: "Jerusalem Post", url: "https://www.jpost.com/international/internationalrussia-ukraine-war/article-894677", time: "2026-04-30T10:29:47Z" },
+      { title: "The Israeli importer of allegedly stolen Ukrainian grain awaiting unloading in Haifa", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-29/ty-article/.premium/the-israeli-importer-of-allegedly-stolen-ukraine-grain-awaiting-haifa-unloading/0000019d-d9b1-d153-a3df-f9bf664e0000", time: "2026-04-29T15:35:57Z" },
+      { title: "Zelensky warns of sanctions over Israeli purchases of grain taken from Ukraine", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260429-zelensky-warns-of-sanctions-over-israeli-purchases-of-grain-taken-from-ukraine/", time: "2026-04-29T08:29:48Z" },
+      { title: "Israel says no proof Russian grain shipment ‘stolen,’ as Ukraine threatens sanctions", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-says-no-proof-russian-grain-shipment-stolen-as-ukraine-threatens-sanctions/", time: "2026-04-28T16:05:14Z" },
+      { title: "Ukraine accuses Israel of receiving shipments of grain 'stolen' by Russia", source: "BBC News", url: "https://www.bbc.com/news/articles/cqjplqgd1r2o?at_medium=RSS&at_campaign=rss", time: "2026-04-28T12:18:18Z" },
+      { title: "Zelenskyy says Israel broke own law by buying stolen Ukrainian wheat from Russia, vows sanctions", source: "Haaretz", url: "https://www.haaretz.com/israel-news/security-aviation/2026-04-28/ty-article/.premium/zelenskyy-says-israel-broke-own-law-by-buying-stolen-ukrainian-wheat-from-russia/0000019d-d389-d623-ad9f-ffdb6ded0000", time: "2026-04-28T10:22:05Z" },
+      { title: "Kyiv summons Israeli envoy, EU warns of sanctions after 2nd ‘stolen’ grain ship incident", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-tells-ukraine-too-late-to-seize-russian-grain-ship-as-it-left-haifa-report-2/", time: "2026-04-28T01:46:08Z" },
     ]
   },
   {
@@ -2354,6 +2350,18 @@ const locations = [
     ]
   },
   {
+    name: "Riyadh", country: "Saudi Arabia",
+    lat: 24.7136, lng: 46.6753,
+    category: "energy",
+    articles: [
+      { title: "Saudi crown prince condemns Iran attacks in call with UAE president", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-crown-prince-condemns-iran-attacks-call-uae-president", time: "2026-05-04T21:25:02Z" },
+      { title: "Howe says Saudi owners’ desire for success at Newcastle remains unchanged", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/1/howe-says-saudi-owners-desire-for-success-at-newcastle-remains-unchanged?traffic_source=rss", time: "2026-05-01T13:36:24Z" },
+      { title: "Saudi Big Spending Changed Sports and More. So Will the End of That Era.", source: "New York Times", url: "https://www.nytimes.com/2026/05/01/world/middleeast/saudi-arabia-spending-sports-liv-golf.html", time: "2026-05-01T09:10:34Z" },
+      { title: "Saudi Arabia to end LIV Golf funding, while league appoints new chairman", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/30/liv-golf-has-a-new-chairman-and-seeks-to-new-funding-without-saudi-backing?traffic_source=rss", time: "2026-04-30T14:59:09Z" },
+      { title: "Saudi Arabia to withdraw LIV Golf funding", source: "Sky News", url: "https://news.sky.com/story/saudi-arabias-public-investment-fund-to-withdraw-funding-for-liv-golf-after-1631bn-loss-13538285", time: "2026-04-30T06:56:00Z" },
+    ]
+  },
+  {
     name: "Cairo", country: "Egypt",
     lat: 30.0444, lng: 31.2357,
     category: "evacuation",
@@ -2373,17 +2381,6 @@ const locations = [
       { title: "UN nuclear chief: Iran’s highly enriched uranium likely still buried at Isfahan site", source: "Times of Israel", url: "https://www.timesofisrael.com/un-nuclear-chief-irans-highly-enriched-uranium-likely-still-buried-at-isfahan-site/", time: "2026-04-30T07:48:27Z" },
       { title: "Iran's highly enriched uranium likely is still at the Isfahan site, UN nuclear chief tells AP", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/iran-international-atomic-energy-agency-isfahan-donald-trump-israeli-b2967632.html", time: "2026-04-29T21:08:36Z" },
       { title: "IAEA chief says Iran’s enriched uranium likely remains at Isfahan", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iaea-chief-says-irans-enriched-uranium-likely-remains-isfahan", time: "2026-04-29T16:18:08Z" },
-    ]
-  },
-  {
-    name: "Riyadh", country: "Saudi Arabia",
-    lat: 24.7136, lng: 46.6753,
-    category: "energy",
-    articles: [
-      { title: "Howe says Saudi owners’ desire for success at Newcastle remains unchanged", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/1/howe-says-saudi-owners-desire-for-success-at-newcastle-remains-unchanged?traffic_source=rss", time: "2026-05-01T13:36:24Z" },
-      { title: "Saudi Big Spending Changed Sports and More. So Will the End of That Era.", source: "New York Times", url: "https://www.nytimes.com/2026/05/01/world/middleeast/saudi-arabia-spending-sports-liv-golf.html", time: "2026-05-01T09:10:34Z" },
-      { title: "Saudi Arabia to end LIV Golf funding, while league appoints new chairman", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/30/liv-golf-has-a-new-chairman-and-seeks-to-new-funding-without-saudi-backing?traffic_source=rss", time: "2026-04-30T14:59:09Z" },
-      { title: "Saudi Arabia to withdraw LIV Golf funding", source: "Sky News", url: "https://news.sky.com/story/saudi-arabias-public-investment-fund-to-withdraw-funding-for-liv-golf-after-1631bn-loss-13538285", time: "2026-04-30T06:56:00Z" },
     ]
   },
   {
