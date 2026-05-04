@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:12 UTC, 4 May 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">08:57 UTC, 4 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">4 May 2026</div>
@@ -112,10 +112,89 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Sahel Region", country: "West Africa",
+    lat: 15.0, lng: 0.0,
+    category: "conflict",
+    articles: [
+      { title: "Nigeria: Reactions As Obi, Kwankwaso Join NDC", source: "AllAfrica", url: "https://allafrica.com/stories/202605040135.html", time: "2026-05-04T07:51:42Z" },
+      { title: "Nigeria: Atiku to Visit Us Over Nigeria's Insecurity, Others - Aide", source: "AllAfrica", url: "https://allafrica.com/stories/202605040136.html", time: "2026-05-04T07:51:42Z" },
+      { title: "Nigeria: Terrorists Burn Down Military Camp, Vehicles in Zamfara", source: "AllAfrica", url: "https://allafrica.com/stories/202605040126.html", time: "2026-05-04T07:17:40Z" },
+      { title: "Nigeria: PDP Convenes Emergency National Executive Committee Meeting Monday", source: "AllAfrica", url: "https://allafrica.com/stories/202605040116.html", time: "2026-05-04T07:13:53Z" },
+      { title: "Nigeria: Obi, Kwankwaso Formally Declare for NDC, Set Stage for 2027 Presidential Battle", source: "AllAfrica", url: "https://allafrica.com/stories/202605040096.html", time: "2026-05-04T06:41:02Z" },
+      { title: "Nigeria: Peter Obi Dumps ADC, Gives Reasons", source: "AllAfrica", url: "https://allafrica.com/stories/202605040068.html", time: "2026-05-04T05:30:16Z" },
+      { title: "Nigeria: Nigeria Summons South African Ambassador Over Xenophobic Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040067.html", time: "2026-05-04T05:24:36Z" },
+      { title: "Nigeria: Nigerian Army Defends Arrest of Activist Amid Allegations of Abuse", source: "AllAfrica", url: "https://allafrica.com/stories/202605040061.html", time: "2026-05-04T05:24:33Z" },
+      { title: "Nigeria: Team Nigeria Secures More Tickets to 2027 World Athletics Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605040024.html", time: "2026-05-04T05:00:26Z" },
+      { title: "Nigeria: EU, Unicef Launch &#x20ac;1m Drive to Return 20,000 Conflict-Hit Sokoto Children to School", source: "AllAfrica", url: "https://allafrica.com/stories/202605040023.html", time: "2026-05-04T05:00:25Z" },
+      { title: "Nigeria summons South African envoy over attacks on its nationals", source: "BBC News", url: "https://www.bbc.com/news/articles/c78q6e98878o?at_medium=RSS&at_campaign=rss", time: "2026-05-03T10:16:01Z" },
+      { title: "Nigeria: Manufacturing Sector's Tax Contribution Rises to N1.17trn, Spurs Demand for Fiscal Support", source: "AllAfrica", url: "https://allafrica.com/stories/202605010410.html", time: "2026-05-01T13:15:50Z" },
+      { title: "Nigeria: Anglican Church Suspends Anambra Priest Over Alleged Staged Miracles", source: "AllAfrica", url: "https://allafrica.com/stories/202605010288.html", time: "2026-05-01T11:02:11Z" },
+      { title: "Nigeria: 2027 - Kano APC Endorses Tinubu, Gov Yusuf, Rejects Automatic Ticket for Lawmakers", source: "AllAfrica", url: "https://allafrica.com/stories/202605010284.html", time: "2026-05-01T10:59:43Z" },
+      { title: "Nigeria: Oil Workers Face Mounting Pressure As NUPENG Promises Lifeline On May Day", source: "AllAfrica", url: "https://allafrica.com/stories/202605010272.html", time: "2026-05-01T10:52:44Z" },
+      { title: "Nigeria: When Even Water Needs a Second Look - Nigeria's Dangerous Dance With Fake Products", source: "AllAfrica", url: "https://allafrica.com/stories/202605010108.html", time: "2026-05-01T07:39:12Z" },
+      { title: "'Military force unable to solve Mali crisis': Is political solution only 'viable path forward'?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260501-military-force-unable-to-solve-mali-crisis-is-political-solution-only-viable-path-forward", time: "2026-05-01T06:36:40Z" },
+      { title: "Nigeria: 150 Displaced Persons Died in Military Detention Camp in Kwara - Amnesty International", source: "AllAfrica", url: "https://allafrica.com/stories/202605010052.html", time: "2026-05-01T05:16:15Z" },
+      { title: "Nigerian Military Runs a Fulani ‘Concentration Camp,’ Group Says", source: "New York Times", url: "https://www.nytimes.com/2026/04/30/world/africa/nigeria-fulani-camp-amnesty.html", time: "2026-04-30T22:30:06Z" },
+      { title: "Russia’s role in Mali questioned as rebels push for exit", source: "France 24", url: "https://www.france24.com/en/russia-s-role-in-mali-questioned-as-rebels-push-for-exit", time: "2026-04-30T13:08:55Z" },
+      { title: "Mauritania sees gold rush in Sahara desert", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260430-mauritania-sees-gold-rush-in-sahara-desert", time: "2026-04-30T12:40:51Z" },
+      { title: "Nigeria: 'My Enemies Want Me Out Using Insecurity' - Tinubu", source: "AllAfrica", url: "https://allafrica.com/stories/202604300323.html", time: "2026-04-30T12:28:16Z" },
+      { title: "Women sexually assaulted during Nigerian fertility festival", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-observers/20260430-women-sexually-assaulted-nigeria-fertility-festival", time: "2026-04-30T10:14:52Z" },
+      { title: "Nigeria: Tinubu Names Bianca Odumegwu-Ojukwu As Foreign Affairs Minister, Appoints Minister of State", source: "AllAfrica", url: "https://allafrica.com/stories/202604300073.html", time: "2026-04-30T06:52:27Z" },
+      { title: "Nigeria: Court to Shield Prosecution Witness As Coup Trial of Army General, Others Begins", source: "AllAfrica", url: "https://allafrica.com/stories/202604300051.html", time: "2026-04-30T05:52:46Z" },
+      { title: "Nigeria: Nigeria, 9 Others Account for Majority of Global Hepatitis Deaths - WHO", source: "AllAfrica", url: "https://allafrica.com/stories/202604300016.html", time: "2026-04-30T05:06:42Z" },
+      { title: "Tuareg rebels urge Russian forces to leave Mali", source: "France 24", url: "https://www.france24.com/en/tuareg-rebels-urge-russian-forces-to-leave-mali", time: "2026-04-29T18:15:59Z" },
+      { title: "Nigeria: I Was Never Married to Rosy Meurer' - Olakunle Churchill Debunks Divorce Rumours", source: "AllAfrica", url: "https://allafrica.com/stories/202604290536.html", time: "2026-04-29T15:22:39Z" },
+      { title: "What role has Russia played in Mali’s security and the Sahel region?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/29/what-role-has-russia-played-in-malis-security-and-the-sahel-region?traffic_source=rss", time: "2026-04-29T12:12:58Z" },
+      { title: "Africa: China's Zero-Tariff for African Products Takes Effect May 1 - Envoy", source: "AllAfrica", url: "https://allafrica.com/stories/202604290363.html", time: "2026-04-29T12:01:15Z" },
+      { title: "Nigeria: Mercedes Benz Sues Osimhen for Alleged &#x20a6;142m Debt", source: "AllAfrica", url: "https://allafrica.com/stories/202604290242.html", time: "2026-04-29T10:59:58Z" },
+      { title: "Nigeria: Peter Obi's Running Mate to Quit Labour Party Today, Joins PRP", source: "AllAfrica", url: "https://allafrica.com/stories/202604290194.html", time: "2026-04-29T10:35:19Z" },
+      { title: "Nigeria: Gunmen Invade Ekiti Church, Kill Pastor, Kidnap Worshippers", source: "AllAfrica", url: "https://allafrica.com/stories/202604290193.html", time: "2026-04-29T10:34:39Z" },
+      { title: "'Over-dependence on military solutions: Mali struggling in its effort to regain peace and security'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260429-over-dependence-on-military-solutions-mali-struggling-in-its-effort-to-regain-peace-and-security", time: "2026-04-29T06:51:43Z" },
+      { title: "Nigeria: Lawmakers Approve Tinubu's $516m Loan Request for Road Project", source: "AllAfrica", url: "https://allafrica.com/stories/202604290068.html", time: "2026-04-29T05:54:21Z" },
+      { title: "Nigeria: UAE Withdraws From Opec, Opec+", source: "AllAfrica", url: "https://allafrica.com/stories/202604290065.html", time: "2026-04-29T05:54:19Z" },
+      { title: "Nigeria: Suspected Meningitis Outbreak Kills Several People in Sokoto Village", source: "AllAfrica", url: "https://allafrica.com/stories/202604290058.html", time: "2026-04-29T05:49:47Z" },
+      { title: "Burkina Faso: Burkina Faso's Dubious Military Reserve Plan", source: "AllAfrica", url: "https://allafrica.com/stories/202604290042.html", time: "2026-04-29T05:23:57Z" },
+      { title: "Mali leader says situation under control", source: "France 24", url: "https://www.france24.com/en/mali-leader-says-situation-under-control", time: "2026-04-28T21:20:00Z" },
+      { title: "Oil tycoons deny paying bribes to former Nigerian minister", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21lpd3wdwo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T21:13:26Z" },
+      { title: "Insurgents reshaping Mali: Tuaregs seek autonomy, jihadists pursue caliphate across Sahel", source: "France 24", url: "https://www.france24.com/en/video/20260428-insurgents-reshaping-mali-tuaregs-seek-autonomy-jihadists-pursue-caliphate-across-sahel-1", time: "2026-04-28T18:12:33Z" },
+      { title: "Russia claims its Africa Corps group prevented coup in Mali after rebels seize towns", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/28/russia-claims-its-africa-corps-group-prevented-coup-in-mali-after-rebels-seize-towns", time: "2026-04-28T17:07:27Z" },
+      { title: "Nigeria: Nigeria Faces Public Health Physician Shortage - Aphpn President", source: "AllAfrica", url: "https://allafrica.com/stories/202604280478.html", time: "2026-04-28T15:45:50Z" },
+      { title: "Nigeria: Police, EFCC Rescue 14 Abducted On Calabar-Oron Waterways", source: "AllAfrica", url: "https://allafrica.com/stories/202604280476.html", time: "2026-04-28T15:44:49Z" },
+      { title: "Kenya's leader backtracks after comments mocking Nigerians' English", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21e97l31jo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:41:20Z" },
+      { title: "Nigeria: 'I Was Misquoted' - Kenyan President Backtracks On Comments About Nigerians' English-Speaking Proficiency", source: "AllAfrica", url: "https://allafrica.com/stories/202604280439.html", time: "2026-04-28T14:40:32Z" },
+      { title: "Nigeria: In Borno, Cash Transfers Are Helping Families Treat Malnutrition Beyond the Clinic", source: "AllAfrica", url: "https://allafrica.com/stories/202604280337.html", time: "2026-04-28T12:11:15Z" },
+      { title: "Nigeria: Court Rejects Ex-Minister's Bid to Join Election Result Forgery Suit", source: "AllAfrica", url: "https://allafrica.com/stories/202604280180.html", time: "2026-04-28T09:53:49Z" },
+      { title: "Gunmen kill at least 29 in northeast Nigeria after targeting young people at football pitch", source: "France 24", url: "https://www.france24.com/en/africa/20260428-gunmen-kill-at-least-29-northeast-nigeria-after-targeting-young-people-football-pitch", time: "2026-04-28T08:08:56Z" },
+      { title: "Nigeria: Diezani Tells London Court She Had No Control Over Luxury Transactions", source: "AllAfrica", url: "https://allafrica.com/stories/202604280111.html", time: "2026-04-28T07:03:22Z" },
+      { title: "Africa: Two Nigerians Killed in South Africa in Xenophobic Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202604280094.html", time: "2026-04-28T07:00:20Z" },
+      { title: "Taking power in Mali might be a stretch but insurgents can force hand of weakened regime", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/28/taking-power-in-mali-might-be-a-stretch-but-insurgents-can-force-hand-of-weakened-regime", time: "2026-04-28T06:00:42Z" },
+      { title: "Gunmen kill at least 29 in Nigeria’s northeast Adamawa State", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/gunmen-kill-at-least-29-in-nigerias-northeast-adamawa-state?traffic_source=rss", time: "2026-04-28T04:43:05Z" },
+      { title: "IS claims responsibility for Nigeria attack that killed 29 people", source: "BBC News", url: "https://www.bbc.com/news/articles/c62d43vdgmmo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T03:28:48Z" },
+      { title: "Gunmen kill at least 29 at football pitch in north-east Nigeria, governor says", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/gunmen-kill-at-least-29-at-football-pitch-in-north-east-nigeria-governor-says", time: "2026-04-27T22:50:31Z" },
+      { title: "Mali Rebels Strike Major Blow Against Junta and Russia’s Africa Corps", source: "New York Times", url: "https://www.nytimes.com/2026/04/27/world/africa/mali-jnim-violence-russia.html", time: "2026-04-27T21:44:04Z" },
+      { title: "Tuareg rebels in control of Kidal", source: "France 24", url: "https://www.france24.com/en/tuareg-rebels-in-control-of-kidal", time: "2026-04-27T21:21:06Z" },
+      { title: "Mali's tale of two insurgencies: 'Jihadists seek caliphate while Tuareg rebels pursue autonomy'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260427-mali-s-tale-of-two-insurgencies-jihadists-seek-caliphate-while-tuareg-rebels-pursue-autonomy", time: "2026-04-27T20:30:47Z" },
+      { title: "Nigeria: The Political Education of Peter Obi", source: "AllAfrica", url: "https://allafrica.com/stories/202604270856.html", time: "2026-04-27T19:55:23Z" },
+      { title: "West Africa: Central Sahel - Millions of Children in Humanitarian Need, Unicef Official Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202604270854.html", time: "2026-04-27T19:51:53Z" },
+      { title: "West Africa: BVRM Main Index Rebounds As Industrial, Banking Stocks Lead Gains", source: "AllAfrica", url: "https://allafrica.com/stories/202604270850.html", time: "2026-04-27T19:14:54Z" },
+      { title: "Gunmen kidnap 23 children from Nigerian orphanage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/gunmen-kidnap-23-pupils-from-nigerian-orphanage?traffic_source=rss", time: "2026-04-27T17:20:09Z" },
+      { title: "Gunmen raid Nigerian orphanage and kidnap children", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd8dmx41vko?at_medium=RSS&at_campaign=rss", time: "2026-04-27T15:39:29Z" },
+      { title: "Mali’s militant attacks expose limits of Putin’s power in Africa", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/mali-militant-attacks-putin-russia-africa", time: "2026-04-27T14:35:47Z" },
+      { title: "Nigeria: Terrorists Attack Katsina Community, Kill 10, Injure Several Others", source: "AllAfrica", url: "https://allafrica.com/stories/202604270630.html", time: "2026-04-27T13:18:30Z" },
+      { title: "Nigeria: Court Martial Over Coup Plot to Resume May 8 - Dhq", source: "AllAfrica", url: "https://allafrica.com/stories/202604270512.html", time: "2026-04-27T12:00:44Z" },
+      { title: "Fighting over access to water in Chad kills at least 42, army intervenes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/chad-clashes-over-water-resources-kill-at-least-42-in-eastern-province?traffic_source=rss", time: "2026-04-27T11:46:03Z" },
+      { title: "Mali in turmoil after insurgents seize towns and kill defence minister", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/mali-attacks-insurgents-seize-towns-kill-defence-minister", time: "2026-04-27T11:44:31Z" },
+      { title: "Africa: Africa Faces Mounting Risks Just As Growth Gains Take Hold", source: "AllAfrica", url: "https://allafrica.com/stories/202604270307.html", time: "2026-04-27T10:43:18Z" },
+      { title: "At least 42 killed in Chad after water well dispute escalates", source: "BBC News", url: "https://www.bbc.com/news/articles/cr717plvxvgo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T09:20:50Z" },
+      { title: "Nigeria: Gov Mutfwang Says Plateau Will Remain Haven Amid Renewed Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202604270194.html", time: "2026-04-27T09:07:49Z" },
+    ]
+  },
+  {
     name: "Nairobi", country: "Kenya",
     lat: -1.2921, lng: 36.8219,
     category: "political",
     articles: [
+      { title: "Kenya: Finance Bill 2026 Ends KQ Tax Relief, Widens Digital Tax Net", source: "AllAfrica", url: "https://allafrica.com/stories/202605040137.html", time: "2026-05-04T07:51:43Z" },
       { title: "Kenya: KEMRI Launches Study On Aflatoxin Risks to Children", source: "AllAfrica", url: "https://allafrica.com/stories/202605040115.html", time: "2026-05-04T07:10:00Z" },
       { title: "Kenya: Four Arrested After Failed Attempt to Steal Jet Fuel At Wilson Airport", source: "AllAfrica", url: "https://allafrica.com/stories/202605040114.html", time: "2026-05-04T07:09:08Z" },
       { title: "Kenya: Ruto Presides Over Swearing-in of 37 Judges", source: "AllAfrica", url: "https://allafrica.com/stories/202605040108.html", time: "2026-05-04T06:47:36Z" },
@@ -184,84 +263,6 @@ const locations = [
       { title: "East Africa redefines marathon limits as Sabastian Sawe leads historic charge", source: "NPR", url: "https://www.npr.org/2026/04/27/nx-s1-5800113/kenya-sabastian-sawe-east-africa-london-marathon-2-hour-barrier", time: "2026-04-27T10:55:25Z" },
       { title: "From super shoes to bread with honey - the man who made London Marathon history", source: "Sky News", url: "https://news.sky.com/story/from-super-shoes-to-bread-with-honey-the-man-who-made-london-marathon-history-13537103", time: "2026-04-27T10:17:00Z" },
       { title: "Kenya: Muite Says Gachagua Was Removed 'At Lightning Speed' in Impeachment Case", source: "AllAfrica", url: "https://allafrica.com/stories/202604270193.html", time: "2026-04-27T09:07:17Z" },
-      { title: "Kenya: Maasai Mara Tourist Dispute Raises Investor Confidence Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202604270177.html", time: "2026-04-27T08:24:46Z" },
-      { title: "Kenya: Gachagua Seeks Salary and Benefits in Renewed Bid to Challenge Impeachment", source: "AllAfrica", url: "https://allafrica.com/stories/202604270174.html", time: "2026-04-27T08:18:13Z" },
-    ]
-  },
-  {
-    name: "Sahel Region", country: "West Africa",
-    lat: 15.0, lng: 0.0,
-    category: "conflict",
-    articles: [
-      { title: "Nigeria: Obi, Kwankwaso Formally Declare for NDC, Set Stage for 2027 Presidential Battle", source: "AllAfrica", url: "https://allafrica.com/stories/202605040096.html", time: "2026-05-04T06:41:02Z" },
-      { title: "Nigeria: Peter Obi Dumps ADC, Gives Reasons", source: "AllAfrica", url: "https://allafrica.com/stories/202605040068.html", time: "2026-05-04T05:30:16Z" },
-      { title: "Nigeria: Nigeria Summons South African Ambassador Over Xenophobic Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040067.html", time: "2026-05-04T05:24:36Z" },
-      { title: "Nigeria: Nigerian Army Defends Arrest of Activist Amid Allegations of Abuse", source: "AllAfrica", url: "https://allafrica.com/stories/202605040061.html", time: "2026-05-04T05:24:33Z" },
-      { title: "Nigeria: Team Nigeria Secures More Tickets to 2027 World Athletics Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605040024.html", time: "2026-05-04T05:00:26Z" },
-      { title: "Nigeria: EU, Unicef Launch &#x20ac;1m Drive to Return 20,000 Conflict-Hit Sokoto Children to School", source: "AllAfrica", url: "https://allafrica.com/stories/202605040023.html", time: "2026-05-04T05:00:25Z" },
-      { title: "Nigeria summons South African envoy over attacks on its nationals", source: "BBC News", url: "https://www.bbc.com/news/articles/c78q6e98878o?at_medium=RSS&at_campaign=rss", time: "2026-05-03T10:16:01Z" },
-      { title: "Nigeria: Manufacturing Sector's Tax Contribution Rises to N1.17trn, Spurs Demand for Fiscal Support", source: "AllAfrica", url: "https://allafrica.com/stories/202605010410.html", time: "2026-05-01T13:15:50Z" },
-      { title: "Nigeria: Anglican Church Suspends Anambra Priest Over Alleged Staged Miracles", source: "AllAfrica", url: "https://allafrica.com/stories/202605010288.html", time: "2026-05-01T11:02:11Z" },
-      { title: "Nigeria: 2027 - Kano APC Endorses Tinubu, Gov Yusuf, Rejects Automatic Ticket for Lawmakers", source: "AllAfrica", url: "https://allafrica.com/stories/202605010284.html", time: "2026-05-01T10:59:43Z" },
-      { title: "Nigeria: Oil Workers Face Mounting Pressure As NUPENG Promises Lifeline On May Day", source: "AllAfrica", url: "https://allafrica.com/stories/202605010272.html", time: "2026-05-01T10:52:44Z" },
-      { title: "Nigeria: When Even Water Needs a Second Look - Nigeria's Dangerous Dance With Fake Products", source: "AllAfrica", url: "https://allafrica.com/stories/202605010108.html", time: "2026-05-01T07:39:12Z" },
-      { title: "'Military force unable to solve Mali crisis': Is political solution only 'viable path forward'?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260501-military-force-unable-to-solve-mali-crisis-is-political-solution-only-viable-path-forward", time: "2026-05-01T06:36:40Z" },
-      { title: "Nigeria: 150 Displaced Persons Died in Military Detention Camp in Kwara - Amnesty International", source: "AllAfrica", url: "https://allafrica.com/stories/202605010052.html", time: "2026-05-01T05:16:15Z" },
-      { title: "Nigerian Military Runs a Fulani ‘Concentration Camp,’ Group Says", source: "New York Times", url: "https://www.nytimes.com/2026/04/30/world/africa/nigeria-fulani-camp-amnesty.html", time: "2026-04-30T22:30:06Z" },
-      { title: "Russia’s role in Mali questioned as rebels push for exit", source: "France 24", url: "https://www.france24.com/en/russia-s-role-in-mali-questioned-as-rebels-push-for-exit", time: "2026-04-30T13:08:55Z" },
-      { title: "Mauritania sees gold rush in Sahara desert", source: "France 24", url: "https://www.france24.com/en/tv-shows/focus/20260430-mauritania-sees-gold-rush-in-sahara-desert", time: "2026-04-30T12:40:51Z" },
-      { title: "Nigeria: 'My Enemies Want Me Out Using Insecurity' - Tinubu", source: "AllAfrica", url: "https://allafrica.com/stories/202604300323.html", time: "2026-04-30T12:28:16Z" },
-      { title: "Women sexually assaulted during Nigerian fertility festival", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-observers/20260430-women-sexually-assaulted-nigeria-fertility-festival", time: "2026-04-30T10:14:52Z" },
-      { title: "Nigeria: Tinubu Names Bianca Odumegwu-Ojukwu As Foreign Affairs Minister, Appoints Minister of State", source: "AllAfrica", url: "https://allafrica.com/stories/202604300073.html", time: "2026-04-30T06:52:27Z" },
-      { title: "Nigeria: Court to Shield Prosecution Witness As Coup Trial of Army General, Others Begins", source: "AllAfrica", url: "https://allafrica.com/stories/202604300051.html", time: "2026-04-30T05:52:46Z" },
-      { title: "Nigeria: Nigeria, 9 Others Account for Majority of Global Hepatitis Deaths - WHO", source: "AllAfrica", url: "https://allafrica.com/stories/202604300016.html", time: "2026-04-30T05:06:42Z" },
-      { title: "Tuareg rebels urge Russian forces to leave Mali", source: "France 24", url: "https://www.france24.com/en/tuareg-rebels-urge-russian-forces-to-leave-mali", time: "2026-04-29T18:15:59Z" },
-      { title: "Nigeria: I Was Never Married to Rosy Meurer' - Olakunle Churchill Debunks Divorce Rumours", source: "AllAfrica", url: "https://allafrica.com/stories/202604290536.html", time: "2026-04-29T15:22:39Z" },
-      { title: "What role has Russia played in Mali’s security and the Sahel region?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/29/what-role-has-russia-played-in-malis-security-and-the-sahel-region?traffic_source=rss", time: "2026-04-29T12:12:58Z" },
-      { title: "Africa: China's Zero-Tariff for African Products Takes Effect May 1 - Envoy", source: "AllAfrica", url: "https://allafrica.com/stories/202604290363.html", time: "2026-04-29T12:01:15Z" },
-      { title: "Nigeria: Mercedes Benz Sues Osimhen for Alleged &#x20a6;142m Debt", source: "AllAfrica", url: "https://allafrica.com/stories/202604290242.html", time: "2026-04-29T10:59:58Z" },
-      { title: "Nigeria: Peter Obi's Running Mate to Quit Labour Party Today, Joins PRP", source: "AllAfrica", url: "https://allafrica.com/stories/202604290194.html", time: "2026-04-29T10:35:19Z" },
-      { title: "Nigeria: Gunmen Invade Ekiti Church, Kill Pastor, Kidnap Worshippers", source: "AllAfrica", url: "https://allafrica.com/stories/202604290193.html", time: "2026-04-29T10:34:39Z" },
-      { title: "'Over-dependence on military solutions: Mali struggling in its effort to regain peace and security'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260429-over-dependence-on-military-solutions-mali-struggling-in-its-effort-to-regain-peace-and-security", time: "2026-04-29T06:51:43Z" },
-      { title: "Nigeria: Lawmakers Approve Tinubu's $516m Loan Request for Road Project", source: "AllAfrica", url: "https://allafrica.com/stories/202604290068.html", time: "2026-04-29T05:54:21Z" },
-      { title: "Nigeria: UAE Withdraws From Opec, Opec+", source: "AllAfrica", url: "https://allafrica.com/stories/202604290065.html", time: "2026-04-29T05:54:19Z" },
-      { title: "Nigeria: Suspected Meningitis Outbreak Kills Several People in Sokoto Village", source: "AllAfrica", url: "https://allafrica.com/stories/202604290058.html", time: "2026-04-29T05:49:47Z" },
-      { title: "Burkina Faso: Burkina Faso's Dubious Military Reserve Plan", source: "AllAfrica", url: "https://allafrica.com/stories/202604290042.html", time: "2026-04-29T05:23:57Z" },
-      { title: "Mali leader says situation under control", source: "France 24", url: "https://www.france24.com/en/mali-leader-says-situation-under-control", time: "2026-04-28T21:20:00Z" },
-      { title: "Oil tycoons deny paying bribes to former Nigerian minister", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21lpd3wdwo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T21:13:26Z" },
-      { title: "Insurgents reshaping Mali: Tuaregs seek autonomy, jihadists pursue caliphate across Sahel", source: "France 24", url: "https://www.france24.com/en/video/20260428-insurgents-reshaping-mali-tuaregs-seek-autonomy-jihadists-pursue-caliphate-across-sahel-1", time: "2026-04-28T18:12:33Z" },
-      { title: "Russia claims its Africa Corps group prevented coup in Mali after rebels seize towns", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/28/russia-claims-its-africa-corps-group-prevented-coup-in-mali-after-rebels-seize-towns", time: "2026-04-28T17:07:27Z" },
-      { title: "Nigeria: Nigeria Faces Public Health Physician Shortage - Aphpn President", source: "AllAfrica", url: "https://allafrica.com/stories/202604280478.html", time: "2026-04-28T15:45:50Z" },
-      { title: "Nigeria: Police, EFCC Rescue 14 Abducted On Calabar-Oron Waterways", source: "AllAfrica", url: "https://allafrica.com/stories/202604280476.html", time: "2026-04-28T15:44:49Z" },
-      { title: "Kenya's leader backtracks after comments mocking Nigerians' English", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21e97l31jo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T14:41:20Z" },
-      { title: "Nigeria: 'I Was Misquoted' - Kenyan President Backtracks On Comments About Nigerians' English-Speaking Proficiency", source: "AllAfrica", url: "https://allafrica.com/stories/202604280439.html", time: "2026-04-28T14:40:32Z" },
-      { title: "Nigeria: In Borno, Cash Transfers Are Helping Families Treat Malnutrition Beyond the Clinic", source: "AllAfrica", url: "https://allafrica.com/stories/202604280337.html", time: "2026-04-28T12:11:15Z" },
-      { title: "Nigeria: Court Rejects Ex-Minister's Bid to Join Election Result Forgery Suit", source: "AllAfrica", url: "https://allafrica.com/stories/202604280180.html", time: "2026-04-28T09:53:49Z" },
-      { title: "Gunmen kill at least 29 in northeast Nigeria after targeting young people at football pitch", source: "France 24", url: "https://www.france24.com/en/africa/20260428-gunmen-kill-at-least-29-northeast-nigeria-after-targeting-young-people-football-pitch", time: "2026-04-28T08:08:56Z" },
-      { title: "Nigeria: Diezani Tells London Court She Had No Control Over Luxury Transactions", source: "AllAfrica", url: "https://allafrica.com/stories/202604280111.html", time: "2026-04-28T07:03:22Z" },
-      { title: "Africa: Two Nigerians Killed in South Africa in Xenophobic Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202604280094.html", time: "2026-04-28T07:00:20Z" },
-      { title: "Taking power in Mali might be a stretch but insurgents can force hand of weakened regime", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/28/taking-power-in-mali-might-be-a-stretch-but-insurgents-can-force-hand-of-weakened-regime", time: "2026-04-28T06:00:42Z" },
-      { title: "Gunmen kill at least 29 in Nigeria’s northeast Adamawa State", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/gunmen-kill-at-least-29-in-nigerias-northeast-adamawa-state?traffic_source=rss", time: "2026-04-28T04:43:05Z" },
-      { title: "IS claims responsibility for Nigeria attack that killed 29 people", source: "BBC News", url: "https://www.bbc.com/news/articles/c62d43vdgmmo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T03:28:48Z" },
-      { title: "Gunmen kill at least 29 at football pitch in north-east Nigeria, governor says", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/gunmen-kill-at-least-29-at-football-pitch-in-north-east-nigeria-governor-says", time: "2026-04-27T22:50:31Z" },
-      { title: "Mali Rebels Strike Major Blow Against Junta and Russia’s Africa Corps", source: "New York Times", url: "https://www.nytimes.com/2026/04/27/world/africa/mali-jnim-violence-russia.html", time: "2026-04-27T21:44:04Z" },
-      { title: "Tuareg rebels in control of Kidal", source: "France 24", url: "https://www.france24.com/en/tuareg-rebels-in-control-of-kidal", time: "2026-04-27T21:21:06Z" },
-      { title: "Mali's tale of two insurgencies: 'Jihadists seek caliphate while Tuareg rebels pursue autonomy'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260427-mali-s-tale-of-two-insurgencies-jihadists-seek-caliphate-while-tuareg-rebels-pursue-autonomy", time: "2026-04-27T20:30:47Z" },
-      { title: "Nigeria: The Political Education of Peter Obi", source: "AllAfrica", url: "https://allafrica.com/stories/202604270856.html", time: "2026-04-27T19:55:23Z" },
-      { title: "West Africa: Central Sahel - Millions of Children in Humanitarian Need, Unicef Official Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202604270854.html", time: "2026-04-27T19:51:53Z" },
-      { title: "West Africa: BVRM Main Index Rebounds As Industrial, Banking Stocks Lead Gains", source: "AllAfrica", url: "https://allafrica.com/stories/202604270850.html", time: "2026-04-27T19:14:54Z" },
-      { title: "Gunmen kidnap 23 children from Nigerian orphanage", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/gunmen-kidnap-23-pupils-from-nigerian-orphanage?traffic_source=rss", time: "2026-04-27T17:20:09Z" },
-      { title: "Gunmen raid Nigerian orphanage and kidnap children", source: "BBC News", url: "https://www.bbc.com/news/articles/cjd8dmx41vko?at_medium=RSS&at_campaign=rss", time: "2026-04-27T15:39:29Z" },
-      { title: "Mali’s militant attacks expose limits of Putin’s power in Africa", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/mali-militant-attacks-putin-russia-africa", time: "2026-04-27T14:35:47Z" },
-      { title: "Nigeria: Terrorists Attack Katsina Community, Kill 10, Injure Several Others", source: "AllAfrica", url: "https://allafrica.com/stories/202604270630.html", time: "2026-04-27T13:18:30Z" },
-      { title: "Nigeria: Court Martial Over Coup Plot to Resume May 8 - Dhq", source: "AllAfrica", url: "https://allafrica.com/stories/202604270512.html", time: "2026-04-27T12:00:44Z" },
-      { title: "Fighting over access to water in Chad kills at least 42, army intervenes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/chad-clashes-over-water-resources-kill-at-least-42-in-eastern-province?traffic_source=rss", time: "2026-04-27T11:46:03Z" },
-      { title: "Mali in turmoil after insurgents seize towns and kill defence minister", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/27/mali-attacks-insurgents-seize-towns-kill-defence-minister", time: "2026-04-27T11:44:31Z" },
-      { title: "Africa: Africa Faces Mounting Risks Just As Growth Gains Take Hold", source: "AllAfrica", url: "https://allafrica.com/stories/202604270307.html", time: "2026-04-27T10:43:18Z" },
-      { title: "At least 42 killed in Chad after water well dispute escalates", source: "BBC News", url: "https://www.bbc.com/news/articles/cr717plvxvgo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T09:20:50Z" },
-      { title: "Nigeria: Gov Mutfwang Says Plateau Will Remain Haven Amid Renewed Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202604270194.html", time: "2026-04-27T09:07:49Z" },
-      { title: "Nigeria: Troops Rescue Kidnap Victim, Recover N8m Ransom in Plateau - Official", source: "AllAfrica", url: "https://allafrica.com/stories/202604270176.html", time: "2026-04-27T08:24:45Z" },
-      { title: "'Unable to cope': Malian army, Wagner 'overstretched' by Tuareg separatists and jihadist militants", source: "France 24", url: "https://www.france24.com/en/unable-to-cope-malian-army-wagner-overstretched-by-tuareg-separatists-and-jihadist-militants", time: "2026-04-27T08:10:06Z" },
     ]
   },
   {
@@ -320,8 +321,6 @@ const locations = [
       { title: "Street battles and withdrawal of Russian mercenaries: Inside the 48-hour fall of Mali’s Kidal", source: "France 24", url: "https://www.france24.com/en/africa/20260427-street-battles-withdrawal-russian-mercenaries-inside-48-hour-fall-mali-kidal", time: "2026-04-27T14:09:04Z" },
       { title: "Russian fighters confirm withdrawal from northern Mali city after separatist attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/c3w3wyq4v14o?at_medium=RSS&at_campaign=rss", time: "2026-04-27T12:36:17Z" },
       { title: "Mali’s Defense Minister Killed in Attacks by Islamist Insurgents", source: "New York Times", url: "https://www.nytimes.com/2026/04/27/world/africa/mali-defense-minster-killed.html", time: "2026-04-27T09:03:23Z" },
-      { title: "Mali: Mali's Defence Minister Camara Killed in Rebel Assault On Residential Compound", source: "AllAfrica", url: "https://allafrica.com/stories/202604270175.html", time: "2026-04-27T08:24:31Z" },
-      { title: "Mali defence minister Sadio Camara killed as Al-Qaeda linked insurgents launch coordinated attacks", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/mali-sadio-camara-death-b2965437.html", time: "2026-04-27T08:19:02Z" },
     ]
   },
   {
@@ -367,7 +366,6 @@ const locations = [
       { title: "South Africa: Why Young South Africans Won't Vote", source: "AllAfrica", url: "https://allafrica.com/stories/202604270634.html", time: "2026-04-27T13:22:35Z" },
       { title: "South Africa: Dry Tap Reality - the Growing Water Infrastructure Crisis in SA", source: "AllAfrica", url: "https://allafrica.com/stories/202604270372.html", time: "2026-04-27T11:08:52Z" },
       { title: "South Africa: In Celebration of Freedom - an A to Z of Why I Love South Africa", source: "AllAfrica", url: "https://allafrica.com/stories/202604270220.html", time: "2026-04-27T09:35:34Z" },
-      { title: "South Africa: Freedom Means Living Without Fear of Crime", source: "AllAfrica", url: "https://allafrica.com/stories/202604270172.html", time: "2026-04-27T07:46:57Z" },
     ]
   },
   {
@@ -393,7 +391,6 @@ const locations = [
       { title: "Liberia: IMF Approves $266 Million for Liberia As Economy Grows At Fastest Pace in Years", source: "AllAfrica", url: "https://allafrica.com/stories/202604290047.html", time: "2026-04-29T05:23:59Z" },
       { title: "Liberia: Tweah - Investigators Lack Understanding of Govt Operations in U.S.$6.2m Case", source: "AllAfrica", url: "https://allafrica.com/stories/202604270374.html", time: "2026-04-27T11:09:27Z" },
       { title: "Liberia: Rare Gathering of Opposition Leaders Sparks Public Discussion", source: "AllAfrica", url: "https://allafrica.com/stories/202604270338.html", time: "2026-04-27T10:54:44Z" },
-      { title: "Liberia: Tweah Fires Back in Court", source: "AllAfrica", url: "https://allafrica.com/stories/202604270188.html", time: "2026-04-27T08:56:58Z" },
     ]
   },
   {
@@ -443,7 +440,6 @@ const locations = [
       { title: "Uganda: 23 Feared Dead in River Nguse Boat Accident", source: "AllAfrica", url: "https://allafrica.com/stories/202604300032.html", time: "2026-04-30T05:16:26Z" },
       { title: "Uganda: Govt Unveils New Petroleum Policy As Industry Shifts to Production Phase", source: "AllAfrica", url: "https://allafrica.com/stories/202604290529.html", time: "2026-04-29T15:18:23Z" },
       { title: "Uganda: Oil Companies Deny Govt Claims of Fuel Hoarding, Hiking Prices", source: "AllAfrica", url: "https://allafrica.com/stories/202604270200.html", time: "2026-04-27T09:19:22Z" },
-      { title: "Uganda: Tororo Authorities Replace Contractor On Delayed Aturukuku Seed School Project", source: "AllAfrica", url: "https://allafrica.com/stories/202604270187.html", time: "2026-04-27T08:56:57Z" },
     ]
   },
   {
@@ -451,6 +447,7 @@ const locations = [
     lat: -6.7924, lng: 39.2083,
     category: "economic",
     articles: [
+      { title: "Tanzania: EU Reaffirms Commitment to 265bn/ - Sasa Programme", source: "AllAfrica", url: "https://allafrica.com/stories/202605040125.html", time: "2026-05-04T07:17:12Z" },
       { title: "Rwanda: Tanzania, Rwanda Advance Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040093.html", time: "2026-05-04T06:41:00Z" },
       { title: "Rwanda: Kagame Hails 'Brotherly' Ties With Tanzania, Pledges Deeper Cooperation", source: "AllAfrica", url: "https://allafrica.com/stories/202605040021.html", time: "2026-05-04T05:00:23Z" },
       { title: "Tanzania: Kagame's Tanzania Visit Underscores Strategic Weight of Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040020.html", time: "2026-05-04T05:00:22Z" },
@@ -515,7 +512,6 @@ const locations = [
       { title: "Sudan: 17 Sudanese Refugees Drown Off Tobruk, Libya", source: "AllAfrica", url: "https://allafrica.com/stories/202605010007.html", time: "2026-05-01T04:44:45Z" },
       { title: "Families forced into displacement by famine in Sudan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/28/families-forced-into-displacement-by-famine-in-sudan?traffic_source=rss", time: "2026-04-28T19:14:47Z" },
       { title: "Thousands held by paramilitary RSF in Sudan’s el-Fasher: NGO", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/thousands-reportedly-held-by-paramilitary-rsf-in-sudans-el-fasher?traffic_source=rss", time: "2026-04-27T19:35:55Z" },
-      { title: "Hero surgeon lifts lid on battle to save lives in Sudan war hospital", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/sudan-war-hospital-khartoum-omdurman-b2965415.html", time: "2026-04-27T07:47:44Z" },
     ]
   },
   {
@@ -532,7 +528,6 @@ const locations = [
       { title: "Zimbabwe: Illegal Vendors Undermine Harare Cleanup Efforts, Parliament Told", source: "AllAfrica", url: "https://allafrica.com/stories/202604290016.html", time: "2026-04-29T05:12:57Z" },
       { title: "Zimbabwe: Teachers Threaten Strike Over Low Salaries, Issue 14-Day Ultimatum", source: "AllAfrica", url: "https://allafrica.com/stories/202604280093.html", time: "2026-04-28T07:00:17Z" },
       { title: "Zimbabwe: Marian Marinica Resigns As Warriors Head Coach", source: "AllAfrica", url: "https://allafrica.com/stories/202604280026.html", time: "2026-04-28T05:01:17Z" },
-      { title: "Zimbabwe: Chivayo, Coltart Clash Over ZITF Presidential Tour", source: "AllAfrica", url: "https://allafrica.com/stories/202604270173.html", time: "2026-04-27T07:48:12Z" },
     ]
   },
   {
@@ -582,20 +577,6 @@ const locations = [
     ]
   },
   {
-    name: "Darfur", country: "Sudan",
-    lat: 13.5, lng: 25.0,
-    category: "conflict",
-    articles: [
-      { title: "Sudan: Health Minister Urges Vaccination Take-Up As Dengue, Malaria Spread Across Sudan", source: "AllAfrica", url: "https://allafrica.com/stories/202604300005.html", time: "2026-04-30T04:57:37Z" },
-      { title: "Sudan: Funding Shortfall Means Aid to Sudan Could Be Cut in Weeks As Famine Deepens - WFP", source: "AllAfrica", url: "https://allafrica.com/stories/202604300006.html", time: "2026-04-30T04:57:37Z" },
-      { title: "Sudan: Remembering El Fasher and Those Still Detained", source: "AllAfrica", url: "https://allafrica.com/stories/202604290032.html", time: "2026-04-29T05:17:51Z" },
-      { title: "Sudan: Unicef Warns of Catastrophe Facing Darfur's Children 20 Years After Crisis First Shocked World", source: "AllAfrica", url: "https://allafrica.com/stories/202604290001.html", time: "2026-04-29T04:56:48Z" },
-      { title: "Sudan: Darfur - Two Decades On, a New Generation of Children Faces 'Horrific Violence'", source: "AllAfrica", url: "https://allafrica.com/stories/202604280256.html", time: "2026-04-28T10:25:33Z" },
-      { title: "Sudan: At Least 7 Dead, UNHCR Aid Vehicle Destroyed in Kordofan and North Darfur Drone Strikes", source: "AllAfrica", url: "https://allafrica.com/stories/202604280006.html", time: "2026-04-28T04:57:35Z" },
-      { title: "War and neglect fuel deadly measles epidemic in Sudan’s Darfur", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/war-and-neglect-fuel-deadly-measles-epidemic-in-sudans-darfur?traffic_source=rss", time: "2026-04-27T08:04:35Z" },
-    ]
-  },
-  {
     name: "Kinshasa", country: "DR Congo",
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
@@ -607,6 +588,19 @@ const locations = [
       { title: "Tuareg rebels vow Mali junta will fall", source: "France 24", url: "https://www.france24.com/en/tuareg-rebels-vow-mali-junta-will-fall", time: "2026-04-29T20:33:17Z" },
       { title: "'We don't know what will happen to us': U.S. deportees in limbo in DRC", source: "NPR", url: "https://www.npr.org/2026/04/28/nx-s1-5798775/drc-latin-america-deportees-asylum-migration", time: "2026-04-28T10:00:00Z" },
       { title: "DR Congo to establish US-backed paramilitary guard for mines", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/27/dr-congo-to-establish-us-uae-backed-paramilitary-guard-for-mines?traffic_source=rss", time: "2026-04-27T16:08:37Z" },
+    ]
+  },
+  {
+    name: "Darfur", country: "Sudan",
+    lat: 13.5, lng: 25.0,
+    category: "conflict",
+    articles: [
+      { title: "Sudan: Health Minister Urges Vaccination Take-Up As Dengue, Malaria Spread Across Sudan", source: "AllAfrica", url: "https://allafrica.com/stories/202604300005.html", time: "2026-04-30T04:57:37Z" },
+      { title: "Sudan: Funding Shortfall Means Aid to Sudan Could Be Cut in Weeks As Famine Deepens - WFP", source: "AllAfrica", url: "https://allafrica.com/stories/202604300006.html", time: "2026-04-30T04:57:37Z" },
+      { title: "Sudan: Remembering El Fasher and Those Still Detained", source: "AllAfrica", url: "https://allafrica.com/stories/202604290032.html", time: "2026-04-29T05:17:51Z" },
+      { title: "Sudan: Unicef Warns of Catastrophe Facing Darfur's Children 20 Years After Crisis First Shocked World", source: "AllAfrica", url: "https://allafrica.com/stories/202604290001.html", time: "2026-04-29T04:56:48Z" },
+      { title: "Sudan: Darfur - Two Decades On, a New Generation of Children Faces 'Horrific Violence'", source: "AllAfrica", url: "https://allafrica.com/stories/202604280256.html", time: "2026-04-28T10:25:33Z" },
+      { title: "Sudan: At Least 7 Dead, UNHCR Aid Vehicle Destroyed in Kordofan and North Darfur Drone Strikes", source: "AllAfrica", url: "https://allafrica.com/stories/202604280006.html", time: "2026-04-28T04:57:35Z" },
     ]
   },
   {
@@ -644,17 +638,6 @@ const locations = [
       { title: "Ethiopia: Strategic Policies Shield Ethiopia From Global Fuel Crisis, Sustain Aviation Operations - PM Abiy", source: "AllAfrica", url: "https://allafrica.com/stories/202604300013.html", time: "2026-04-30T05:06:40Z" },
       { title: "Eritrea: Sovereignty Vs. Hegemonic Ambition - Ethiopia's Expansionist Quest for Outlet to the Sea", source: "AllAfrica", url: "https://allafrica.com/stories/202604290528.html", time: "2026-04-29T15:17:49Z" },
       { title: "Ethiopia: Ethiopia Restores Diesel Supply to Pre-Crisis Levels", source: "AllAfrica", url: "https://allafrica.com/stories/202604290244.html", time: "2026-04-29T11:00:50Z" },
-    ]
-  },
-  {
-    name: "Maputo", country: "Mozambique",
-    lat: -25.9692, lng: 32.5732,
-    category: "conflict",
-    articles: [
-      { title: "Mozambique: Small Increase in Minimum Wage, But No Hikes for Health, Govt Workers", source: "AllAfrica", url: "https://allafrica.com/stories/202605010076.html", time: "2026-05-01T06:56:23Z" },
-      { title: "Mozambique: Mozambique and U.S. Sign Agreement Valued At Over 500 Million Dollars", source: "AllAfrica", url: "https://allafrica.com/stories/202605010033.html", time: "2026-05-01T05:05:23Z" },
-      { title: "Mozambique: Four Killed By Jihadists in Mocimboa DA Praia", source: "AllAfrica", url: "https://allafrica.com/stories/202604280484.html", time: "2026-04-28T15:50:14Z" },
-      { title: "The Nights Still Smell of Gunpowder review – excavating the memories of civil war in Mozambique", source: "The Guardian", url: "https://www.theguardian.com/film/2026/apr/27/the-nights-still-smell-of-gunpowder-review-excavating-the-memories-of-civil-war-in-mozambique", time: "2026-04-27T08:00:37Z" },
     ]
   },
   {
@@ -702,6 +685,16 @@ const locations = [
     ]
   },
   {
+    name: "Maputo", country: "Mozambique",
+    lat: -25.9692, lng: 32.5732,
+    category: "conflict",
+    articles: [
+      { title: "Mozambique: Small Increase in Minimum Wage, But No Hikes for Health, Govt Workers", source: "AllAfrica", url: "https://allafrica.com/stories/202605010076.html", time: "2026-05-01T06:56:23Z" },
+      { title: "Mozambique: Mozambique and U.S. Sign Agreement Valued At Over 500 Million Dollars", source: "AllAfrica", url: "https://allafrica.com/stories/202605010033.html", time: "2026-05-01T05:05:23Z" },
+      { title: "Mozambique: Four Killed By Jihadists in Mocimboa DA Praia", source: "AllAfrica", url: "https://allafrica.com/stories/202604280484.html", time: "2026-04-28T15:50:14Z" },
+    ]
+  },
+  {
     name: "Dakar", country: "Senegal",
     lat: 14.7167, lng: -17.4677,
     category: "political",
@@ -742,21 +735,22 @@ const locations = [
     ]
   },
   {
+    name: "Gaborone", country: "Botswana",
+    lat: -24.6282, lng: 25.9231,
+    category: "economic",
+    articles: [
+      { title: "Botswana: Botswana Takes Gold", source: "AllAfrica", url: "https://allafrica.com/stories/202605040133.html", time: "2026-05-04T07:29:28Z" },
+      { title: "African athletes need support and protection - Kebinatshipi", source: "BBC News", url: "https://www.bbc.com/sport/athletics/articles/cjw8wvznejdo?at_medium=RSS&at_campaign=rss", time: "2026-04-29T16:44:26Z" },
+      { title: "Museum announces return of artefacts to Botswana", source: "BBC News", url: "https://www.bbc.com/news/articles/ckgwg4j2gzlo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T12:43:06Z" },
+    ]
+  },
+  {
     name: "Abuja", country: "Nigeria",
     lat: 9.0579, lng: 7.4951,
     category: "political",
     articles: [
       { title: "Nigeria: Boko Haram Kills 29 in Adamawa", source: "AllAfrica", url: "https://allafrica.com/stories/202604280118.html", time: "2026-04-28T07:07:44Z" },
       { title: "Nigeria: Family Counters Army's Account, Alleges Unlawful Killing of Corps Member in Abuja", source: "AllAfrica", url: "https://allafrica.com/stories/202604270631.html", time: "2026-04-27T13:19:03Z" },
-    ]
-  },
-  {
-    name: "Gaborone", country: "Botswana",
-    lat: -24.6282, lng: 25.9231,
-    category: "economic",
-    articles: [
-      { title: "African athletes need support and protection - Kebinatshipi", source: "BBC News", url: "https://www.bbc.com/sport/athletics/articles/cjw8wvznejdo?at_medium=RSS&at_campaign=rss", time: "2026-04-29T16:44:26Z" },
-      { title: "Museum announces return of artefacts to Botswana", source: "BBC News", url: "https://www.bbc.com/news/articles/ckgwg4j2gzlo?at_medium=RSS&at_campaign=rss", time: "2026-04-27T12:43:06Z" },
     ]
   },
   {
