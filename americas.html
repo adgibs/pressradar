@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:35 UTC, 5 May 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:42 UTC, 5 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">5 May 2026</div>
@@ -116,6 +116,14 @@ const locations = [
     lat: 38.9072, lng: -77.0369,
     category: "political",
     articles: [
+      { title: "U.S. mission to reopen Strait of Hormuz will be temporary, Hegseth says", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/05/hegseth-briefing-iran-strait-hormuz-ceasefire/", time: "2026-05-05T13:39:50Z" },
+      { title: "Hegseth: US has set up a ‘red, white and blue dome’ over Strait of Hormuz", source: "The Hill", url: "https://thehill.com/policy/defense/5863662-us-military-dome-strait-hormuz/", time: "2026-05-05T13:27:06Z" },
+      { title: "U.S.-Iran ceasefire tested as U.S. guides ships through Strait of Hormuz", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-strait-of-hormuz-ships-uae-attacked/", time: "2026-05-05T13:23:31Z" },
+      { title: "The Latest: Hegseth and Caine say ceasefire between the US and Iran is not over", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/strait-of-hormuz-iran-marco-rubio-pete-hegseth-trump-b2970720.html", time: "2026-05-05T13:23:05Z" },
+      { title: "Hegseth and Caine pressed on ‘kamikaze dolphins’ in Iran waters report: ‘Like sharks with laser beams?’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-iran-war-briefing-kamikaze-dolphins-b2970698.html", time: "2026-05-05T13:16:41Z" },
+      { title: "Hegseth says US blockade on Iran ‘gift to the world’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/5/hegseth-says-us-blockade-on-iran-gift-to-the?traffic_source=rss", time: "2026-05-05T13:12:43Z" },
+      { title: "Hegseth says ceasefire is not over, Project Freedom ‘churn’ was expected", source: "The Hill", url: "https://thehill.com/policy/defense/5863622-us-iran-ceasefire-strait-hormuz/", time: "2026-05-05T13:08:40Z" },
+      { title: "Hegseth says 'ceasefire is not over' after Strait of Hormuz exchange of fire", source: "CBS News", url: "https://www.cbsnews.com/news/pete-hegseth-dan-caine-iran-war-update-strait-of-hormuz-pentagon/", time: "2026-05-05T12:55:00Z" },
       { title: "Iran-US war latest: Hegseth says ‘we aren’t looking for a fight’ in Hormuz but threatens to retaliate against attacks", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strait-of-hormuz-missiles-uae-b2970388.html", time: "2026-05-05T12:26:46Z" },
       { title: "Hegseth claims Strait of Hormuz actions are ‘separate and distinct’ from Iran war", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-war-hormuz-hegseth-b2970677.html", time: "2026-05-05T12:24:46Z" },
       { title: "WATCH LIVE: Hegseth and Caine hold briefing a day after new U.S. effort in Strait of Hormuz begins", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/watch-live-hegseth-and-caine-hold-briefing-a-day-after-new-u-s-effort-in-strait-of-hormuz-begins", time: "2026-05-05T11:55:04Z" },
@@ -229,6 +237,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "US strikes another alleged drug boat, killing 2", source: "The Hill", url: "https://thehill.com/policy/defense/5863583-us-drug-boat-strike-caribbean/", time: "2026-05-05T12:55:57Z" },
       { title: "Ineos boss Jim Ratcliffe criticises UK and Europe amid new US oil and gas investment with Shell", source: "The Independent", url: "https://www.independent.co.uk/news/business/jim-ratcliffe-ineos-shell-oil-trump-b2970614.html", time: "2026-05-05T11:05:02Z" },
       { title: "Strong security presence in Mexico’s Sinaloa state amid cartel violence", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/5/strong-security-presence-in-mexicos-sinaloa-state-amid-cartel-violence?traffic_source=rss", time: "2026-05-05T03:10:20Z" },
       { title: "Don’t miss Mexico’s amazing aqueducts", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/dont-miss-mexicos-amazing-aqueducts/", time: "2026-05-05T00:38:18Z" },
@@ -332,8 +341,6 @@ const locations = [
       { title: "United Arab Emirates says it will permanently leave OPEC on May 1", source: "CBS News", url: "https://www.cbsnews.com/news/uae-leaving-opec-oil-may-1/", time: "2026-04-28T14:47:20Z" },
       { title: "Mexico captures top Jalisco leader ‘El Jardinero’ in another blow to the cartel", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-mexico-jalisco-cartel-leader-capture/", time: "2026-04-28T14:10:40Z" },
       { title: "The United Arab Emirates is quitting OPEC oil cartel after nearly 60 years", source: "NPR", url: "https://www.npr.org/2026/04/28/nx-s1-5802735/uae-leaves-opec-oil", time: "2026-04-28T14:09:53Z" },
-      { title: "Fresh oil shock as UAE exits Saudi-controlled cartels", source: "Sky News", url: "https://news.sky.com/story/uae-exits-saudi-controlled-opec-cartels-in-fresh-oil-market-shock-13537642", time: "2026-04-28T13:21:00Z" },
-      { title: "Will Mexico City's airport be ready for the World Cup?", source: "BBC News", url: "https://www.bbc.com/news/videos/cz7231qx88qo?at_medium=RSS&at_campaign=rss", time: "2026-04-28T12:57:13Z" },
     ]
   },
   {
@@ -341,6 +348,7 @@ const locations = [
     lat: -34.6037, lng: -58.3816,
     category: "economic",
     articles: [
+      { title: "Released Flotilla activists describe‘torture’ in Israeli prison", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/5/released-flotilla-activists-describetorture-in-israeli-prison?traffic_source=rss", time: "2026-05-05T13:11:23Z" },
       { title: "Can Javier Milei’s Deregulatory Frenzy Buoy the Global Right?", source: "New York Times", url: "https://www.nytimes.com/2026/05/05/magazine/argentina-president-javier-milei-maga.html", time: "2026-05-05T09:01:16Z" },
       { title: "Squeezed at both ends: young Argentines drop out of work as retirees go back", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/squeezed-at-both-ends-young-argentines-drop-out-of-work-as-retirees-go-back", time: "2026-05-04T22:09:02Z" },
       { title: "The disappeared: What we knew and what we still don’t", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/op-ed/the-disappeared-what-we-knew-and-what-we-still-dont", time: "2026-05-04T21:09:24Z" },
@@ -549,7 +557,6 @@ const locations = [
       { title: "Could this conference be a 'turning point' for the world's use of fossil fuels?", source: "NPR", url: "https://www.npr.org/2026/04/29/nx-s1-5786914/colombia-conference-fossil-fuels", time: "2026-04-29T09:00:00Z" },
       { title: "Indian billionaire’s son offers to house Pablo Escobar’s hippos at his private zoo", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/29/indian-billionaire-son-anant-ambani-offers-house-pablo-escobar-hippos", time: "2026-04-29T07:00:48Z" },
       { title: "Tycoon's son offers home for 'cocaine hippos' slated to be killed", source: "CBS News", url: "https://www.cbsnews.com/news/cocaine-hippos-billionaire-son-offers-home-animals-facing-euthanasia/", time: "2026-04-28T15:36:06Z" },
-      { title: "Colombia offers record bounty for man accused of ordering bomb attack", source: "CBS News", url: "https://www.cbsnews.com/news/colombia-record-bounty-for-bomb-attack/", time: "2026-04-28T13:41:08Z" },
     ]
   },
   {
