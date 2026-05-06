@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:48 UTC, 6 May 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:42 UTC, 6 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">6 May 2026</div>
@@ -116,6 +116,8 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "political",
     articles: [
+      { title: "Heatwave conditions expected across Pakistan from May 7-11: PMD", source: "Dawn", url: "https://www.dawn.com/news/1998074/heatwave-conditions-expected-across-pakistan-from-may-7-11-pmd", time: "2026-05-06T13:29:55Z" },
+      { title: "Dar says Pakistan's focus is now on making US-Iran ceasefire permanent", source: "Dawn", url: "https://www.dawn.com/news/1998066/dar-says-pakistans-focus-is-now-on-making-us-iran-ceasefire-permanent", time: "2026-05-06T13:05:02Z" },
       { title: "Has the US accepted Iran’s demand to settle Hormuz first, nuclear later?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/has-the-us-accepted-irans-demand-to-settle-hormuz-first-nuclear-later?traffic_source=rss", time: "2026-05-06T12:00:10Z" },
       { title: "Counsel for Imran, Bushra seeks adjournment of May 7 hearing, says he is not authorised to argue main appeals in £190m case", source: "Dawn", url: "https://www.dawn.com/news/1998040/counsel-for-imran-bushra-seeks-adjournment-of-may-7-hearing-says-he-is-not-authorised-to-argue-main-appeals-in-ps190m-case", time: "2026-05-06T11:57:38Z" },
       { title: "SC, FCC operate as coordinate courts, exercising clearly demarcated jurisdictions: CJP Afridi", source: "Dawn", url: "https://www.dawn.com/news/1998038/sc-fcc-operate-as-coordinate-courts-exercising-clearly-demarcated-jurisdictions-cjp-afridi", time: "2026-05-06T10:23:04Z" },
@@ -288,8 +290,6 @@ const locations = [
       { title: "PMDC directs institutions to implement mental health screening protocols amid uptick in suicide cases", source: "Dawn", url: "https://www.dawn.com/news/1996106/pmdc-directs-institutions-to-implement-mental-health-screening-protocols-amid-uptick-in-suicide-cases", time: "2026-04-29T15:22:55Z" },
       { title: "Law ministry notifies transfer of 3 IHC judges to other high courts", source: "Dawn", url: "https://www.dawn.com/news/1996098/law-ministry-notifies-transfer-of-3-ihc-judges-to-other-high-courts", time: "2026-04-29T14:50:56Z" },
       { title: "Minister calls for national consensus on ensuring water security", source: "Dawn", url: "https://www.dawn.com/news/1996086/minister-calls-for-national-consensus-on-ensuring-water-security", time: "2026-04-29T14:02:48Z" },
-      { title: "IHC to hear Imran, Bushra's pleas against conviction in £190m corruption reference on April 30", source: "Dawn", url: "https://www.dawn.com/news/1996081/ihc-to-hear-imran-bushras-pleas-against-conviction-in-ps190m-corruption-reference-on-april-30", time: "2026-04-29T13:36:47Z" },
-      { title: "SC emphasises impartiality of electoral officers, says any deviation imperils democratic order itself", source: "Dawn", url: "https://www.dawn.com/news/1996084/court-emphasizes-impartiality-electoral-officers-democratic-order", time: "2026-04-29T13:22:54Z" },
     ]
   },
   {
@@ -600,17 +600,6 @@ const locations = [
     ]
   },
   {
-    name: "Colombo", country: "Sri Lanka",
-    lat: 6.9271, lng: 79.8612,
-    category: "economic",
-    articles: [
-      { title: "Watch: How was Vijay’s spectacular win covered in Sri Lanka?", source: "The Hindu", url: "https://www.thehindu.com/videos/watch-how-was-vijays-spectacular-win-covered-in-sri-lanka/article70944323.ece", time: "2026-05-05T16:40:04Z" },
-      { title: "Sri Lanka’s media spotlight Vijay’s big win in Tamil Nadu", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lankas-media-spotlight-vijays-big-win-in-tamil-nadu/article70941562.ece", time: "2026-05-05T06:44:15Z" },
-      { title: "Sri Lanka arrests 37 Chinese at suspected scam centre: Police", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-arrests-37-chinese-at-suspected-scam-centre-police", time: "2026-05-03T07:55:00Z" },
-      { title: "Sri Lanka mass grave excavation in Chemmani to resume under diplomatic presence", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lanka-mass-grave-excavation-in-chemmani-to-resume-under-diplomatic-presence/article70920749.ece", time: "2026-04-29T13:24:54Z" },
-    ]
-  },
-  {
     name: "Kabul", country: "Afghanistan",
     lat: 34.5553, lng: 69.2075,
     category: "humanitarian",
@@ -641,6 +630,16 @@ const locations = [
       { title: "Clashes break out in Miranshah following killing of tribal elder", source: "Dawn", url: "https://www.dawn.com/news/1996648/clashes-break-out-in-miranshah-following-killing-of-tribal-elder", time: "2026-05-01T09:44:53Z" },
       { title: "Shelling from across Afghan border injures 5 in KP's South Waziristan: security sources", source: "Dawn", url: "https://www.dawn.com/news/1996135/shelling-from-across-afghan-border-injures-5-in-kps-south-waziristan-security-sources", time: "2026-04-30T04:21:24Z" },
       { title: "Firing from across Afghan border injures 5 in KP's South Waziristan: security sources", source: "Dawn", url: "https://www.dawn.com/news/1996135/firing-from-across-afghan-border-injures-5-in-kps-south-waziristan-security-sources", time: "2026-04-29T18:03:15Z" },
+    ]
+  },
+  {
+    name: "Colombo", country: "Sri Lanka",
+    lat: 6.9271, lng: 79.8612,
+    category: "economic",
+    articles: [
+      { title: "Watch: How was Vijay’s spectacular win covered in Sri Lanka?", source: "The Hindu", url: "https://www.thehindu.com/videos/watch-how-was-vijays-spectacular-win-covered-in-sri-lanka/article70944323.ece", time: "2026-05-05T16:40:04Z" },
+      { title: "Sri Lanka’s media spotlight Vijay’s big win in Tamil Nadu", source: "The Hindu", url: "https://www.thehindu.com/news/international/sri-lankas-media-spotlight-vijays-big-win-in-tamil-nadu/article70941562.ece", time: "2026-05-05T06:44:15Z" },
+      { title: "Sri Lanka arrests 37 Chinese at suspected scam centre: Police", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/sri-lanka-arrests-37-chinese-at-suspected-scam-centre-police", time: "2026-05-03T07:55:00Z" },
     ]
   },
   {
