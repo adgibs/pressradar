@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:47 UTC, 7 May 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:40 UTC, 7 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 May 2026</div>
@@ -112,6 +112,70 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Johannesburg", country: "South Africa",
+    lat: -26.2041, lng: 28.0473,
+    category: "economic",
+    articles: [
+      { title: "South Africa condemns 'fake videos' of alleged xenophobic attacks", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21g3vl63zo?at_medium=RSS&at_campaign=rss", time: "2026-05-07T13:25:14Z" },
+      { title: "African nations warn citizens in South Africa to stay indoors after reports of xenophobic attacks", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/south-africa-attacks-ghana-video-b2972263.html", time: "2026-05-07T12:44:11Z" },
+      { title: "South Africa: Kouga Dam Floods Force Gamtoos Valley Residents Out of Their Homes", source: "AllAfrica", url: "https://allafrica.com/stories/202605070382.html", time: "2026-05-07T12:16:52Z" },
+      { title: "South Africa: Nelson Mandela Bay Issues Flood Warning Amid Hazardous Conditions", source: "AllAfrica", url: "https://allafrica.com/stories/202605070283.html", time: "2026-05-07T11:26:05Z" },
+      { title: "Africa: With SAPS Under Scrutiny, What Should SA Interim Police Chief Prioritise?", source: "AllAfrica", url: "https://allafrica.com/stories/202605070255.html", time: "2026-05-07T11:15:44Z" },
+      { title: "Zimbabwe: Zimbabwe Ranked Better Than South Africa On Misery Index", source: "AllAfrica", url: "https://allafrica.com/stories/202605070232.html", time: "2026-05-07T11:10:27Z" },
+      { title: "South Africa: Floods Smash Gqeberha As 2,000 Flee to Shelters", source: "AllAfrica", url: "https://allafrica.com/stories/202605070109.html", time: "2026-05-07T09:44:40Z" },
+      { title: "South Africa: Response to Hantavirus Case Was Swift - Contact Tracing Began Within Hours", source: "AllAfrica", url: "https://allafrica.com/stories/202605070055.html", time: "2026-05-07T07:12:33Z" },
+      { title: "South Africa: Shops Shut As Anti-Immigrant Protesters March Through Durban", source: "AllAfrica", url: "https://allafrica.com/stories/202605070049.html", time: "2026-05-07T07:07:29Z" },
+      { title: "South Africa: Five Years Later, Ennerdale Library Reopening in Doubt", source: "AllAfrica", url: "https://allafrica.com/stories/202605070045.html", time: "2026-05-07T07:03:32Z" },
+      { title: "South Africa: City of Joburg's Financial Turmoil Imperils National Economy, Warns Finance Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605070037.html", time: "2026-05-07T06:56:40Z" },
+      { title: "South Africa: When Good Writing Becomes Bad Ethics - - the Voyeuristic Gaze in Sex Work Reporting", source: "AllAfrica", url: "https://allafrica.com/stories/202605070034.html", time: "2026-05-07T06:54:31Z" },
+      { title: "It’s time for mass non-violent protests against Israel, says Palestinian ambassador to UK", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/palestine-israel-protests-uk-ambassador-husam-zomlot-hamas-b2968823.html", time: "2026-05-07T05:00:00Z" },
+      { title: "South Africa: Schools, Businesses Close in Nelson Mandela Bay Floods", source: "AllAfrica", url: "https://allafrica.com/stories/202605060598.html", time: "2026-05-06T15:54:03Z" },
+      { title: "South Africa: Finance Minister Warns Joburg Is in 'Severe Financial Distress' in Letter to Mayor Morero", source: "AllAfrica", url: "https://allafrica.com/stories/202605060485.html", time: "2026-05-06T13:56:59Z" },
+      { title: "South Africa: Weather Conditions Expected to Start Clearing", source: "AllAfrica", url: "https://allafrica.com/stories/202605060376.html", time: "2026-05-06T11:45:22Z" },
+      { title: "Burna Boy, Wizkid, Tyla and more took African pop global. So why don’t they tour Africa itself?", source: "The Guardian", url: "https://www.theguardian.com/music/2026/may/06/afrobeats-stars-africa-venues-burna-boy-wizkid-tems-tyla", time: "2026-05-06T10:54:30Z" },
+      { title: "Extraordinary pictures show police airlifting massive crocodile suspected of eating man in South African bush", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/south-africa-police-crocodile-resident-b2971297.html", time: "2026-05-06T10:22:38Z" },
+      { title: "South Africa: Deadly Storms Trap Thousands and Force Schools to Shut Doors", source: "AllAfrica", url: "https://allafrica.com/stories/202605060139.html", time: "2026-05-06T09:05:00Z" },
+      { title: "Malawi: More Than 200 Malawians Cry for Help As Fear and Violence Spread in South Africa", source: "AllAfrica", url: "https://allafrica.com/stories/202605060089.html", time: "2026-05-06T07:01:13Z" },
+      { title: "South Africa: Elders Urged to Speak Out About Abuse", source: "AllAfrica", url: "https://allafrica.com/stories/202605060076.html", time: "2026-05-06T06:57:49Z" },
+      { title: "South Africa: Here's How Much Money UCT Needs to Rebuild Its Historic Library", source: "AllAfrica", url: "https://allafrica.com/stories/202605060075.html", time: "2026-05-06T06:57:24Z" },
+      { title: "South Africa: Minister Calls for Calm During Hantavirus Probe - South African News Briefs - May 6, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605060032.html", time: "2026-05-06T05:56:26Z" },
+      { title: "South Africa: Public Urged to Exercise Caution Amid Severe Weather Warnings", source: "AllAfrica", url: "https://allafrica.com/stories/202605050423.html", time: "2026-05-05T12:05:23Z" },
+      { title: "South Africa: Committee Calls for Ongoing Public Engagement On Hantavirus Case in SA", source: "AllAfrica", url: "https://allafrica.com/stories/202605050422.html", time: "2026-05-05T12:04:28Z" },
+      { title: "South Africa: No Interruptions to NSFAS Funding and Allowance - Manamela", source: "AllAfrica", url: "https://allafrica.com/stories/202605050421.html", time: "2026-05-05T12:03:57Z" },
+      { title: "South Africa: IFP Statement On Alleged Call Recording Involving Ifpyb KZN Chairperson and Others", source: "AllAfrica", url: "https://allafrica.com/stories/202605050280.html", time: "2026-05-05T10:30:56Z" },
+      { title: "South Africa: 'We Were Promised Houses, but We Are Still Living in Mud'", source: "AllAfrica", url: "https://allafrica.com/stories/202605050261.html", time: "2026-05-05T10:25:39Z" },
+      { title: "South Africa: Sassa Shuts Down Grant Panic After Post Office Cuts", source: "AllAfrica", url: "https://allafrica.com/stories/202605050146.html", time: "2026-05-05T09:05:51Z" },
+      { title: "South Africa: Student Aid Scheme Placed Under Administration", source: "AllAfrica", url: "https://allafrica.com/stories/202605050086.html", time: "2026-05-05T05:58:04Z" },
+      { title: "Southern Africa: South Africa, Namibia Lead As Tanzania, Zimbabwe Slip in Press Freedom Rankings", source: "AllAfrica", url: "https://allafrica.com/stories/202605050077.html", time: "2026-05-05T05:58:00Z" },
+      { title: "South Africa: 12 Killed in Two Eastern Cape Crashes - South African News Briefs - May 5, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605050059.html", time: "2026-05-05T05:45:33Z" },
+      { title: "Zimbabwe: Zimbabwe Crisis Driving Migration Says Chamisa", source: "AllAfrica", url: "https://allafrica.com/stories/202605050036.html", time: "2026-05-05T05:10:48Z" },
+      { title: "The man who blew up a nuclear power station and disappeared", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/the-man-who-blew-up-a-nuclear-power-station-koeberg-south-africa", time: "2026-05-05T04:00:42Z" },
+      { title: "Dutch couple and German dead in suspected hantavirus outbreak on cruise ship as Briton fights for life – latest", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hantavirus-outbreak-atlantic-cruise-ship-live-updates-b2969914.html", time: "2026-05-04T12:29:56Z" },
+      { title: "Zimbabwe: Sikhala Explosives Case Delayed As Defence Alleges Political Plot", source: "AllAfrica", url: "https://allafrica.com/stories/202605040465.html", time: "2026-05-04T12:13:35Z" },
+      { title: "South Africa: South Africa's Road Rage Problem Goes Deeper Than Bad Drivers", source: "AllAfrica", url: "https://allafrica.com/stories/202605040463.html", time: "2026-05-04T12:05:47Z" },
+      { title: "South Africa: New Sassa System Piloted in Bellville Office", source: "AllAfrica", url: "https://allafrica.com/stories/202605040392.html", time: "2026-05-04T11:38:25Z" },
+      { title: "South Africa: Price of Petrol and Diesel to Increase From Wednesday", source: "AllAfrica", url: "https://allafrica.com/stories/202605040386.html", time: "2026-05-04T11:36:58Z" },
+      { title: "South Africa: Call for Calm As Hantavirus Case Confirmed", source: "AllAfrica", url: "https://allafrica.com/stories/202605040380.html", time: "2026-05-04T11:36:57Z" },
+      { title: "Africa: What Is Hantavirus, the Disease That Has Killed 3 Cruise Ship Passengers?", source: "AllAfrica", url: "https://allafrica.com/stories/202605040184.html", time: "2026-05-04T09:52:40Z" },
+      { title: "South Africa: A Life in Pain - Soghra Walton's Story", source: "AllAfrica", url: "https://allafrica.com/stories/202605040110.html", time: "2026-05-04T06:49:14Z" },
+      { title: "South Africa: South Africa's Giant Pain Problem", source: "AllAfrica", url: "https://allafrica.com/stories/202605040109.html", time: "2026-05-04T06:48:51Z" },
+      { title: "South Africa: Energy and Water Seta Blew R58m in Public Funds On Building That Was Never Used", source: "AllAfrica", url: "https://allafrica.com/stories/202605040085.html", time: "2026-05-04T06:34:12Z" },
+      { title: "South Africa: No Arrests Yet in Kubheka Kidnapping Case - South African News Briefs - May 4, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605040084.html", time: "2026-05-04T05:59:03Z" },
+      { title: "Three dead and British national in intensive care after virus outbreak on Atlantic cruise ship", source: "The Independent", url: "https://www.independent.co.uk/travel/news-and-advice/cruise-ship-deaths-virus-atlantic-ocean-mv-hondius-b2969838.html", time: "2026-05-03T20:56:17Z" },
+      { title: "Three dead in suspected hantavirus outbreak aboard cruise ship in the Atlantic Ocean, WHO says", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/three-dead-in-suspected-hantavirus-outbreak-aboard-cruise-ship-in-the-atlantic-ocean-who-says", time: "2026-05-03T20:46:13Z" },
+      { title: "Three die on Atlantic cruise ship as virus breaks out", source: "The Independent", url: "https://www.independent.co.uk/news/world/cruise-ship-deaths-virus-atlantic-ocean-mv-hondius-b2969838.html", time: "2026-05-03T20:11:06Z" },
+      { title: "Three passengers dead after suspected hantavirus outbreak on cruise ship", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/three-passengers-dead-after-suspected-hantavirus-outbreak-on-cruise-ship", time: "2026-05-03T19:52:38Z" },
+      { title: "South African police officer lowered into crocodile-infested river to recover human remains", source: "BBC News", url: "https://www.bbc.com/news/articles/cz92gk18xn4o?at_medium=RSS&at_campaign=rss", time: "2026-05-03T15:47:59Z" },
+      { title: "New Netflix documentary reexamines Winnie Mandela's divisive legacy", source: "NPR", url: "https://www.npr.org/2026/05/02/nx-s1-5800681/netflix-winnie-mandela", time: "2026-05-02T10:00:00Z" },
+      { title: "South Africa: Home Affairs Suspends Two for Fake AI Policy Research", source: "AllAfrica", url: "https://allafrica.com/stories/202605010434.html", time: "2026-05-01T13:56:36Z" },
+      { title: "South Africa: Govt Pays Tribute to Workers Across the Nation", source: "AllAfrica", url: "https://allafrica.com/stories/202605010304.html", time: "2026-05-01T11:11:59Z" },
+      { title: "South Africa: IEC Ramps Up Preparations After Local Elections Date Confirmed", source: "AllAfrica", url: "https://allafrica.com/stories/202605010303.html", time: "2026-05-01T11:11:25Z" },
+      { title: "South Africa: Workers the 'Heartbeat of the Economy'", source: "AllAfrica", url: "https://allafrica.com/stories/202605010291.html", time: "2026-05-01T11:09:56Z" },
+      { title: "Africa: AU Chair Welcomes Election of Pan-African Parliament Bureau", source: "AllAfrica", url: "https://allafrica.com/stories/202605010261.html", time: "2026-05-01T10:45:23Z" },
+      { title: "South Africa: Two Dead, Multiple Injured in Eastern Cape Crash - South African News Briefs - May 1, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605010071.html", time: "2026-05-01T05:41:04Z" },
+    ]
+  },
+  {
     name: "Nairobi", country: "Kenya",
     lat: -1.2921, lng: 36.8219,
     category: "political",
@@ -172,73 +236,6 @@ const locations = [
       { title: "Kenya: Govt Eases Fuel Standards for Six Months Amid Supply Disruptions", source: "AllAfrica", url: "https://allafrica.com/stories/202605010019.html", time: "2026-05-01T04:59:03Z" },
       { title: "Kenya’s Sawe hailed at State House after historic marathon", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/kenyas-sawe-hailed-at-state-house-after-historic-marathon?traffic_source=rss", time: "2026-04-30T21:17:20Z" },
       { title: "Mali pays tribute to Defence Minister Sadio Camara", source: "France 24", url: "https://www.france24.com/en/tv-shows/eye-on-africa/20260430-mali-pays-tribute-to-defence-minister-sadio-camara", time: "2026-04-30T20:50:50Z" },
-      { title: "Kenya: State Funding to Public Universities Drops By Sh13bn", source: "AllAfrica", url: "https://allafrica.com/stories/202604300385.html", time: "2026-04-30T13:35:27Z" },
-      { title: "Kenya: Atwoli Says All Is Set for Labour Day Fete in Vihiga", source: "AllAfrica", url: "https://allafrica.com/stories/202604300384.html", time: "2026-04-30T13:35:03Z" },
-      { title: "Kenya gives hero’s welcome to marathon record-breaker Sabastian Sawe", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/30/kenya-gives-heros-welcome-to-marathon-record-breaker-sabastian-sawe?traffic_source=rss", time: "2026-04-30T12:50:07Z" },
-      { title: "Kenya: Global Oil Prices Rise and Fall, but Kenya's Pump Prices Stay High? the Data Says, Mostly Yes", source: "AllAfrica", url: "https://allafrica.com/stories/202604300348.html", time: "2026-04-30T12:47:58Z" },
-    ]
-  },
-  {
-    name: "Johannesburg", country: "South Africa",
-    lat: -26.2041, lng: 28.0473,
-    category: "economic",
-    articles: [
-      { title: "South Africa: Kouga Dam Floods Force Gamtoos Valley Residents Out of Their Homes", source: "AllAfrica", url: "https://allafrica.com/stories/202605070382.html", time: "2026-05-07T12:16:52Z" },
-      { title: "South Africa: Nelson Mandela Bay Issues Flood Warning Amid Hazardous Conditions", source: "AllAfrica", url: "https://allafrica.com/stories/202605070283.html", time: "2026-05-07T11:26:05Z" },
-      { title: "Africa: With SAPS Under Scrutiny, What Should SA Interim Police Chief Prioritise?", source: "AllAfrica", url: "https://allafrica.com/stories/202605070255.html", time: "2026-05-07T11:15:44Z" },
-      { title: "Zimbabwe: Zimbabwe Ranked Better Than South Africa On Misery Index", source: "AllAfrica", url: "https://allafrica.com/stories/202605070232.html", time: "2026-05-07T11:10:27Z" },
-      { title: "South Africa: Floods Smash Gqeberha As 2,000 Flee to Shelters", source: "AllAfrica", url: "https://allafrica.com/stories/202605070109.html", time: "2026-05-07T09:44:40Z" },
-      { title: "South Africa: Response to Hantavirus Case Was Swift - Contact Tracing Began Within Hours", source: "AllAfrica", url: "https://allafrica.com/stories/202605070055.html", time: "2026-05-07T07:12:33Z" },
-      { title: "South Africa: Shops Shut As Anti-Immigrant Protesters March Through Durban", source: "AllAfrica", url: "https://allafrica.com/stories/202605070049.html", time: "2026-05-07T07:07:29Z" },
-      { title: "South Africa: Five Years Later, Ennerdale Library Reopening in Doubt", source: "AllAfrica", url: "https://allafrica.com/stories/202605070045.html", time: "2026-05-07T07:03:32Z" },
-      { title: "South Africa: City of Joburg's Financial Turmoil Imperils National Economy, Warns Finance Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605070037.html", time: "2026-05-07T06:56:40Z" },
-      { title: "South Africa: When Good Writing Becomes Bad Ethics - - the Voyeuristic Gaze in Sex Work Reporting", source: "AllAfrica", url: "https://allafrica.com/stories/202605070034.html", time: "2026-05-07T06:54:31Z" },
-      { title: "It’s time for mass non-violent protests against Israel, says Palestinian ambassador to UK", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/palestine-israel-protests-uk-ambassador-husam-zomlot-hamas-b2968823.html", time: "2026-05-07T05:00:00Z" },
-      { title: "South Africa: Schools, Businesses Close in Nelson Mandela Bay Floods", source: "AllAfrica", url: "https://allafrica.com/stories/202605060598.html", time: "2026-05-06T15:54:03Z" },
-      { title: "South Africa: Finance Minister Warns Joburg Is in 'Severe Financial Distress' in Letter to Mayor Morero", source: "AllAfrica", url: "https://allafrica.com/stories/202605060485.html", time: "2026-05-06T13:56:59Z" },
-      { title: "South Africa: Weather Conditions Expected to Start Clearing", source: "AllAfrica", url: "https://allafrica.com/stories/202605060376.html", time: "2026-05-06T11:45:22Z" },
-      { title: "Burna Boy, Wizkid, Tyla and more took African pop global. So why don’t they tour Africa itself?", source: "The Guardian", url: "https://www.theguardian.com/music/2026/may/06/afrobeats-stars-africa-venues-burna-boy-wizkid-tems-tyla", time: "2026-05-06T10:54:30Z" },
-      { title: "Extraordinary pictures show police airlifting massive crocodile suspected of eating man in South African bush", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/south-africa-police-crocodile-resident-b2971297.html", time: "2026-05-06T10:22:38Z" },
-      { title: "South Africa: Deadly Storms Trap Thousands and Force Schools to Shut Doors", source: "AllAfrica", url: "https://allafrica.com/stories/202605060139.html", time: "2026-05-06T09:05:00Z" },
-      { title: "Malawi: More Than 200 Malawians Cry for Help As Fear and Violence Spread in South Africa", source: "AllAfrica", url: "https://allafrica.com/stories/202605060089.html", time: "2026-05-06T07:01:13Z" },
-      { title: "South Africa: Elders Urged to Speak Out About Abuse", source: "AllAfrica", url: "https://allafrica.com/stories/202605060076.html", time: "2026-05-06T06:57:49Z" },
-      { title: "South Africa: Here's How Much Money UCT Needs to Rebuild Its Historic Library", source: "AllAfrica", url: "https://allafrica.com/stories/202605060075.html", time: "2026-05-06T06:57:24Z" },
-      { title: "South Africa: Minister Calls for Calm During Hantavirus Probe - South African News Briefs - May 6, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605060032.html", time: "2026-05-06T05:56:26Z" },
-      { title: "South Africa: Public Urged to Exercise Caution Amid Severe Weather Warnings", source: "AllAfrica", url: "https://allafrica.com/stories/202605050423.html", time: "2026-05-05T12:05:23Z" },
-      { title: "South Africa: Committee Calls for Ongoing Public Engagement On Hantavirus Case in SA", source: "AllAfrica", url: "https://allafrica.com/stories/202605050422.html", time: "2026-05-05T12:04:28Z" },
-      { title: "South Africa: No Interruptions to NSFAS Funding and Allowance - Manamela", source: "AllAfrica", url: "https://allafrica.com/stories/202605050421.html", time: "2026-05-05T12:03:57Z" },
-      { title: "South Africa: IFP Statement On Alleged Call Recording Involving Ifpyb KZN Chairperson and Others", source: "AllAfrica", url: "https://allafrica.com/stories/202605050280.html", time: "2026-05-05T10:30:56Z" },
-      { title: "South Africa: 'We Were Promised Houses, but We Are Still Living in Mud'", source: "AllAfrica", url: "https://allafrica.com/stories/202605050261.html", time: "2026-05-05T10:25:39Z" },
-      { title: "South Africa: Sassa Shuts Down Grant Panic After Post Office Cuts", source: "AllAfrica", url: "https://allafrica.com/stories/202605050146.html", time: "2026-05-05T09:05:51Z" },
-      { title: "South Africa: Student Aid Scheme Placed Under Administration", source: "AllAfrica", url: "https://allafrica.com/stories/202605050086.html", time: "2026-05-05T05:58:04Z" },
-      { title: "Southern Africa: South Africa, Namibia Lead As Tanzania, Zimbabwe Slip in Press Freedom Rankings", source: "AllAfrica", url: "https://allafrica.com/stories/202605050077.html", time: "2026-05-05T05:58:00Z" },
-      { title: "South Africa: 12 Killed in Two Eastern Cape Crashes - South African News Briefs - May 5, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605050059.html", time: "2026-05-05T05:45:33Z" },
-      { title: "Zimbabwe: Zimbabwe Crisis Driving Migration Says Chamisa", source: "AllAfrica", url: "https://allafrica.com/stories/202605050036.html", time: "2026-05-05T05:10:48Z" },
-      { title: "The man who blew up a nuclear power station and disappeared", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/the-man-who-blew-up-a-nuclear-power-station-koeberg-south-africa", time: "2026-05-05T04:00:42Z" },
-      { title: "Dutch couple and German dead in suspected hantavirus outbreak on cruise ship as Briton fights for life – latest", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hantavirus-outbreak-atlantic-cruise-ship-live-updates-b2969914.html", time: "2026-05-04T12:29:56Z" },
-      { title: "Zimbabwe: Sikhala Explosives Case Delayed As Defence Alleges Political Plot", source: "AllAfrica", url: "https://allafrica.com/stories/202605040465.html", time: "2026-05-04T12:13:35Z" },
-      { title: "South Africa: South Africa's Road Rage Problem Goes Deeper Than Bad Drivers", source: "AllAfrica", url: "https://allafrica.com/stories/202605040463.html", time: "2026-05-04T12:05:47Z" },
-      { title: "South Africa: New Sassa System Piloted in Bellville Office", source: "AllAfrica", url: "https://allafrica.com/stories/202605040392.html", time: "2026-05-04T11:38:25Z" },
-      { title: "South Africa: Price of Petrol and Diesel to Increase From Wednesday", source: "AllAfrica", url: "https://allafrica.com/stories/202605040386.html", time: "2026-05-04T11:36:58Z" },
-      { title: "South Africa: Call for Calm As Hantavirus Case Confirmed", source: "AllAfrica", url: "https://allafrica.com/stories/202605040380.html", time: "2026-05-04T11:36:57Z" },
-      { title: "Africa: What Is Hantavirus, the Disease That Has Killed 3 Cruise Ship Passengers?", source: "AllAfrica", url: "https://allafrica.com/stories/202605040184.html", time: "2026-05-04T09:52:40Z" },
-      { title: "South Africa: A Life in Pain - Soghra Walton's Story", source: "AllAfrica", url: "https://allafrica.com/stories/202605040110.html", time: "2026-05-04T06:49:14Z" },
-      { title: "South Africa: South Africa's Giant Pain Problem", source: "AllAfrica", url: "https://allafrica.com/stories/202605040109.html", time: "2026-05-04T06:48:51Z" },
-      { title: "South Africa: Energy and Water Seta Blew R58m in Public Funds On Building That Was Never Used", source: "AllAfrica", url: "https://allafrica.com/stories/202605040085.html", time: "2026-05-04T06:34:12Z" },
-      { title: "South Africa: No Arrests Yet in Kubheka Kidnapping Case - South African News Briefs - May 4, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605040084.html", time: "2026-05-04T05:59:03Z" },
-      { title: "Three dead and British national in intensive care after virus outbreak on Atlantic cruise ship", source: "The Independent", url: "https://www.independent.co.uk/travel/news-and-advice/cruise-ship-deaths-virus-atlantic-ocean-mv-hondius-b2969838.html", time: "2026-05-03T20:56:17Z" },
-      { title: "Three dead in suspected hantavirus outbreak aboard cruise ship in the Atlantic Ocean, WHO says", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/three-dead-in-suspected-hantavirus-outbreak-aboard-cruise-ship-in-the-atlantic-ocean-who-says", time: "2026-05-03T20:46:13Z" },
-      { title: "Three die on Atlantic cruise ship as virus breaks out", source: "The Independent", url: "https://www.independent.co.uk/news/world/cruise-ship-deaths-virus-atlantic-ocean-mv-hondius-b2969838.html", time: "2026-05-03T20:11:06Z" },
-      { title: "Three passengers dead after suspected hantavirus outbreak on cruise ship", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/three-passengers-dead-after-suspected-hantavirus-outbreak-on-cruise-ship", time: "2026-05-03T19:52:38Z" },
-      { title: "South African police officer lowered into crocodile-infested river to recover human remains", source: "BBC News", url: "https://www.bbc.com/news/articles/cz92gk18xn4o?at_medium=RSS&at_campaign=rss", time: "2026-05-03T15:47:59Z" },
-      { title: "New Netflix documentary reexamines Winnie Mandela's divisive legacy", source: "NPR", url: "https://www.npr.org/2026/05/02/nx-s1-5800681/netflix-winnie-mandela", time: "2026-05-02T10:00:00Z" },
-      { title: "South Africa: Home Affairs Suspends Two for Fake AI Policy Research", source: "AllAfrica", url: "https://allafrica.com/stories/202605010434.html", time: "2026-05-01T13:56:36Z" },
-      { title: "South Africa: Govt Pays Tribute to Workers Across the Nation", source: "AllAfrica", url: "https://allafrica.com/stories/202605010304.html", time: "2026-05-01T11:11:59Z" },
-      { title: "South Africa: IEC Ramps Up Preparations After Local Elections Date Confirmed", source: "AllAfrica", url: "https://allafrica.com/stories/202605010303.html", time: "2026-05-01T11:11:25Z" },
-      { title: "South Africa: Workers the 'Heartbeat of the Economy'", source: "AllAfrica", url: "https://allafrica.com/stories/202605010291.html", time: "2026-05-01T11:09:56Z" },
-      { title: "Africa: AU Chair Welcomes Election of Pan-African Parliament Bureau", source: "AllAfrica", url: "https://allafrica.com/stories/202605010261.html", time: "2026-05-01T10:45:23Z" },
-      { title: "South Africa: Two Dead, Multiple Injured in Eastern Cape Crash - South African News Briefs - May 1, 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605010071.html", time: "2026-05-01T05:41:04Z" },
-      { title: "Anti-immigrant attacks and protests in South Africa", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/anti-immigrant-attacks-and-protests-in-south-africa?traffic_source=rss", time: "2026-04-30T13:24:34Z" },
     ]
   },
   {
@@ -292,7 +289,6 @@ const locations = [
       { title: "'Military force unable to solve Mali crisis': Is political solution only 'viable path forward'?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260501-military-force-unable-to-solve-mali-crisis-is-political-solution-only-viable-path-forward", time: "2026-05-01T06:36:40Z" },
       { title: "Nigeria: 150 Displaced Persons Died in Military Detention Camp in Kwara - Amnesty International", source: "AllAfrica", url: "https://allafrica.com/stories/202605010052.html", time: "2026-05-01T05:16:15Z" },
       { title: "Nigerian Military Runs a Fulani ‘Concentration Camp,’ Group Says", source: "New York Times", url: "https://www.nytimes.com/2026/04/30/world/africa/nigeria-fulani-camp-amnesty.html", time: "2026-04-30T22:30:06Z" },
-      { title: "Russia’s role in Mali questioned as rebels push for exit", source: "France 24", url: "https://www.france24.com/en/russia-s-role-in-mali-questioned-as-rebels-push-for-exit", time: "2026-04-30T13:08:55Z" },
     ]
   },
   {
@@ -333,7 +329,6 @@ const locations = [
       { title: "How rebels teamed up to shake Mali and the Kremlin’s grip", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-take-2/2026/4/30/how-rebels-teamed-up-to-shake-mali-and-the-kremlins-grip?traffic_source=rss", time: "2026-04-30T17:11:58Z" },
       { title: "Mali holds tribute for assassinated defence minister under tight security", source: "France 24", url: "https://www.france24.com/en/africa/20260430-mali-holds-tribute-for-assassinated-defence-minister-under-tight-security", time: "2026-04-30T14:07:51Z" },
       { title: "Curfews, conspiracy theories … and a cancelled concert: Mali’s capital tries to shrug off violence on its doorstep", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/30/mali-bamako-violence", time: "2026-04-30T13:43:50Z" },
-      { title: "Mali crisis: Who are the key leaders to know about?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/30/mali-crisis-who-are-the-key-leaders-to-know-about?traffic_source=rss", time: "2026-04-30T13:29:26Z" },
     ]
   },
   {
@@ -442,7 +437,6 @@ const locations = [
       { title: "Somali piracy resurfaces in the lightly-protected waters", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/1/somali-piracy-resurfaces-in-the-lightly-protected-waters?traffic_source=rss", time: "2026-05-01T20:16:03Z" },
       { title: "Why is piracy rising off Somalia again — and is the Iran war responsible?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/1/why-is-piracy-rising-off-somalia-again-and-is-the-iran-war?traffic_source=rss", time: "2026-05-01T06:10:45Z" },
       { title: "Piracy rises off Somalia as US-Israeli war on Iran diverts naval forces", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/piracy-rises-off-somalia-as-us-israeli-war-on-iran-diverts-naval-forces?traffic_source=rss", time: "2026-04-30T18:59:13Z" },
-      { title: "Deadly migration route leaves Horn of Africa migrants stranded", source: "France 24", url: "https://www.france24.com/en/deadly-migration-route-leaves-horn-of-africa-migrants-stranded", time: "2026-04-30T13:06:48Z" },
     ]
   },
   {
@@ -469,22 +463,6 @@ const locations = [
     ]
   },
   {
-    name: "Harare", country: "Zimbabwe",
-    lat: -17.8252, lng: 31.0335,
-    category: "political",
-    articles: [
-      { title: "Zimbabwe: New National Health Strategy 'Key to Transforming Health Sector'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070042.html", time: "2026-05-07T07:00:48Z" },
-      { title: "Zimbabwe: Govt Reduces Mining Fees to Boost Investment", source: "AllAfrica", url: "https://allafrica.com/stories/202605060394.html", time: "2026-05-06T11:50:39Z" },
-      { title: "Zimbabwe: Fatal Bus Accident On Harare-Nyamapanda Road Claims 14 Lives", source: "AllAfrica", url: "https://allafrica.com/stories/202605060051.html", time: "2026-05-06T06:39:08Z" },
-      { title: "Zimbabwe: 67 Percent of Zimbabweans Buying Counterfeit Goods - New Study Reveals", source: "AllAfrica", url: "https://allafrica.com/stories/202605050190.html", time: "2026-05-05T09:42:26Z" },
-      { title: "Africa: African Countries Up Efforts to Tax High-Income Individuals", source: "AllAfrica", url: "https://allafrica.com/stories/202605040281.html", time: "2026-05-04T10:37:11Z" },
-      { title: "Zimbabwe: Support Mnangagwa's Constitutional Amendment Bill or Resign - Attorney General Tells Chiwenga", source: "AllAfrica", url: "https://allafrica.com/stories/202605040088.html", time: "2026-05-04T06:36:20Z" },
-      { title: "Zimbabwe: Govt Declares ZIMSEC Mandatory for All Schools From 2027", source: "AllAfrica", url: "https://allafrica.com/stories/202605040064.html", time: "2026-05-04T05:24:35Z" },
-      { title: "Zimbabwe: Proposed Medical Aid Reforms Spark Fears of Healthcare Crisis in Zimbabwe", source: "AllAfrica", url: "https://allafrica.com/stories/202605010435.html", time: "2026-05-01T13:56:59Z" },
-      { title: "Zimbabwe: Loyalty for Sale - - How Patronage Networks Captured the Zimbabwean State", source: "AllAfrica", url: "https://allafrica.com/stories/202604300386.html", time: "2026-04-30T13:36:55Z" },
-    ]
-  },
-  {
     name: "Rabat", country: "Morocco",
     lat: 34.0209, lng: -6.8416,
     category: "political",
@@ -501,6 +479,21 @@ const locations = [
     ]
   },
   {
+    name: "Harare", country: "Zimbabwe",
+    lat: -17.8252, lng: 31.0335,
+    category: "political",
+    articles: [
+      { title: "Zimbabwe: New National Health Strategy 'Key to Transforming Health Sector'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070042.html", time: "2026-05-07T07:00:48Z" },
+      { title: "Zimbabwe: Govt Reduces Mining Fees to Boost Investment", source: "AllAfrica", url: "https://allafrica.com/stories/202605060394.html", time: "2026-05-06T11:50:39Z" },
+      { title: "Zimbabwe: Fatal Bus Accident On Harare-Nyamapanda Road Claims 14 Lives", source: "AllAfrica", url: "https://allafrica.com/stories/202605060051.html", time: "2026-05-06T06:39:08Z" },
+      { title: "Zimbabwe: 67 Percent of Zimbabweans Buying Counterfeit Goods - New Study Reveals", source: "AllAfrica", url: "https://allafrica.com/stories/202605050190.html", time: "2026-05-05T09:42:26Z" },
+      { title: "Africa: African Countries Up Efforts to Tax High-Income Individuals", source: "AllAfrica", url: "https://allafrica.com/stories/202605040281.html", time: "2026-05-04T10:37:11Z" },
+      { title: "Zimbabwe: Support Mnangagwa's Constitutional Amendment Bill or Resign - Attorney General Tells Chiwenga", source: "AllAfrica", url: "https://allafrica.com/stories/202605040088.html", time: "2026-05-04T06:36:20Z" },
+      { title: "Zimbabwe: Govt Declares ZIMSEC Mandatory for All Schools From 2027", source: "AllAfrica", url: "https://allafrica.com/stories/202605040064.html", time: "2026-05-04T05:24:35Z" },
+      { title: "Zimbabwe: Proposed Medical Aid Reforms Spark Fears of Healthcare Crisis in Zimbabwe", source: "AllAfrica", url: "https://allafrica.com/stories/202605010435.html", time: "2026-05-01T13:56:59Z" },
+    ]
+  },
+  {
     name: "Kinshasa", country: "DR Congo",
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
@@ -513,23 +506,6 @@ const locations = [
       { title: "Africa: DRC's Rise to Africa's Top Five - A Moment Built on Minerals and Momentum", source: "AllAfrica", url: "https://allafrica.com/stories/202605030012.html", time: "2026-05-03T10:57:41Z" },
       { title: "US imposes sanctions on DR Congo ex-President Kabila alleging rebel support", source: "BBC News", url: "https://www.bbc.com/news/articles/clyprzx10w2o?at_medium=RSS&at_campaign=rss", time: "2026-05-01T09:37:26Z" },
       { title: "Congo-Kinshasa: Over 80 Congolese Soldiers Face Trial for Fleeing Battles Against Rebels", source: "AllAfrica", url: "https://allafrica.com/stories/202605010109.html", time: "2026-05-01T07:39:56Z" },
-      { title: "DR Congo creates paramilitary mining guard", source: "France 24", url: "https://www.france24.com/en/dr-congo-creates-paramilitary-mining-guard", time: "2026-04-30T12:59:06Z" },
-    ]
-  },
-  {
-    name: "Windhoek", country: "Namibia",
-    lat: -22.5609, lng: 17.0658,
-    category: "economic",
-    articles: [
-      { title: "Namibia: State Secrets Leak Sparks Security Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202605070419.html", time: "2026-05-07T12:37:21Z" },
-      { title: "Namibia: Fishrot Case Appeal Attempt Fails", source: "AllAfrica", url: "https://allafrica.com/stories/202605070043.html", time: "2026-05-07T07:01:32Z" },
-      { title: "Namibia: Education Ministry Backs School's Hostel Food Ban As Parents Raise Hunger Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202605060372.html", time: "2026-05-06T11:44:30Z" },
-      { title: "Namibia: President Removes Shikongo As Police Chief", source: "AllAfrica", url: "https://allafrica.com/stories/202605060067.html", time: "2026-05-06T06:48:42Z" },
-      { title: "Namibia: Planned Power Outage to Hit Kavango Regions", source: "AllAfrica", url: "https://allafrica.com/stories/202605040461.html", time: "2026-05-04T12:03:50Z" },
-      { title: "Namibia: Honouring the Hands That Build Namibia", source: "AllAfrica", url: "https://allafrica.com/stories/202605040145.html", time: "2026-05-04T08:54:06Z" },
-      { title: "Namibia: Workers' Day - a Call to Reflect On Dignity", source: "AllAfrica", url: "https://allafrica.com/stories/202604300391.html", time: "2026-04-30T13:39:59Z" },
-      { title: "Namibia: Traut Tackles Crime Through Collaboration", source: "AllAfrica", url: "https://allafrica.com/stories/202604300389.html", time: "2026-04-30T13:39:08Z" },
-      { title: "Namibia: May Day Takes Tripartite Turn ... Govt, Unions and Employers Join Forces for Opuwo Event", source: "AllAfrica", url: "https://allafrica.com/stories/202604300388.html", time: "2026-04-30T13:38:35Z" },
     ]
   },
   {
@@ -573,6 +549,19 @@ const locations = [
       { title: "Malawi: MEDF Recovers K8bn Out of K240bn - Inside the Weak Recovery, K232bn Still Unpaid and the Legal Fight Ahead", source: "AllAfrica", url: "https://allafrica.com/stories/202605040089.html", time: "2026-05-04T06:38:49Z" },
       { title: "Malawi: Exposed - How Mapeto Tyres Landed a K8 Billion Single-Supplier Deal At Escom Amid Oversupply Fears and Procedural Breaches", source: "AllAfrica", url: "https://allafrica.com/stories/202605040090.html", time: "2026-05-04T06:38:49Z" },
       { title: "Malawi: The Tech Project Bringing Some of Malawi's Remotest Schools Into the Digital Age", source: "AllAfrica", url: "https://allafrica.com/stories/202605040004.html", time: "2026-05-04T04:48:02Z" },
+    ]
+  },
+  {
+    name: "Windhoek", country: "Namibia",
+    lat: -22.5609, lng: 17.0658,
+    category: "economic",
+    articles: [
+      { title: "Namibia: State Secrets Leak Sparks Security Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202605070419.html", time: "2026-05-07T12:37:21Z" },
+      { title: "Namibia: Fishrot Case Appeal Attempt Fails", source: "AllAfrica", url: "https://allafrica.com/stories/202605070043.html", time: "2026-05-07T07:01:32Z" },
+      { title: "Namibia: Education Ministry Backs School's Hostel Food Ban As Parents Raise Hunger Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202605060372.html", time: "2026-05-06T11:44:30Z" },
+      { title: "Namibia: President Removes Shikongo As Police Chief", source: "AllAfrica", url: "https://allafrica.com/stories/202605060067.html", time: "2026-05-06T06:48:42Z" },
+      { title: "Namibia: Planned Power Outage to Hit Kavango Regions", source: "AllAfrica", url: "https://allafrica.com/stories/202605040461.html", time: "2026-05-04T12:03:50Z" },
+      { title: "Namibia: Honouring the Hands That Build Namibia", source: "AllAfrica", url: "https://allafrica.com/stories/202605040145.html", time: "2026-05-04T08:54:06Z" },
     ]
   },
   {
@@ -677,15 +666,6 @@ const locations = [
     ]
   },
   {
-    name: "Tunis", country: "Tunisia",
-    lat: 36.8065, lng: 10.1815,
-    category: "political",
-    articles: [
-      { title: "South Africa: Fuel and Fertiliser Costs Drive Up the Price of a Basic Food Basket", source: "AllAfrica", url: "https://allafrica.com/stories/202605040192.html", time: "2026-05-04T09:54:49Z" },
-      { title: "Tunisia’s jailed opposition leader Ghannouchi rushed to hospital", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/30/tunisias-jailed-opposition-leader-ghannouchi-rushed-to-hospital?traffic_source=rss", time: "2026-04-30T12:48:29Z" },
-    ]
-  },
-  {
     name: "Cape Town", country: "South Africa",
     lat: -33.9249, lng: 18.4241,
     category: "political",
@@ -704,6 +684,23 @@ const locations = [
     ]
   },
   {
+    name: "Abidjan", country: "Ivory Coast",
+    lat: 5.36, lng: -4.0083,
+    category: "economic",
+    articles: [
+      { title: "Ivory Coast dissolves electoral body amid criticism", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/7/ivory-coast-dissolves-electoral-body-amid-criticism?traffic_source=rss", time: "2026-05-07T13:09:35Z" },
+      { title: "Tessalit army base taken by rebels", source: "France 24", url: "https://www.france24.com/en/tessalit-army-base-taken-by-rebels", time: "2026-05-01T21:18:31Z" },
+    ]
+  },
+  {
+    name: "Tunis", country: "Tunisia",
+    lat: 36.8065, lng: 10.1815,
+    category: "political",
+    articles: [
+      { title: "South Africa: Fuel and Fertiliser Costs Drive Up the Price of a Basic Food Basket", source: "AllAfrica", url: "https://allafrica.com/stories/202605040192.html", time: "2026-05-04T09:54:49Z" },
+    ]
+  },
+  {
     name: "Lagos", country: "Nigeria",
     lat: 6.5244, lng: 3.3792,
     category: "economic",
@@ -717,14 +714,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "Mohamed Salah ‘deserves big send-off’, says Liverpool boss Slot", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/1/mohamed-salah-deserves-big-send-off-says-liverpool-boss-slot?traffic_source=rss", time: "2026-05-01T09:51:33Z" },
-    ]
-  },
-  {
-    name: "Abidjan", country: "Ivory Coast",
-    lat: 5.36, lng: -4.0083,
-    category: "economic",
-    articles: [
-      { title: "Tessalit army base taken by rebels", source: "France 24", url: "https://www.france24.com/en/tessalit-army-base-taken-by-rebels", time: "2026-05-01T21:18:31Z" },
     ]
   },
   {
