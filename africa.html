@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:48 UTC, 7 May 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:39 UTC, 7 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 May 2026</div>
@@ -116,6 +116,8 @@ const locations = [
     lat: -1.2921, lng: 36.8219,
     category: "political",
     articles: [
+      { title: "Kenya: Parliament Announces Public Hearings On Sh4.78 Trillion Budget Policy Paper", source: "AllAfrica", url: "https://allafrica.com/stories/202605070273.html", time: "2026-05-07T11:21:11Z" },
+      { title: "Africa: Delegates Gather in Nairobi for Africa Forward Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605070199.html", time: "2026-05-07T10:58:13Z" },
       { title: "Kenya: Ignore Doctored Image of Kenyan Presidential Aspirant Fred Matiang'i 'Sleeping' During TV Interview", source: "AllAfrica", url: "https://allafrica.com/stories/202605070171.html", time: "2026-05-07T10:46:32Z" },
       { title: "Kenya: Waiguru Backs Ruto, Launches Fierce Attack On Opposition Leaders", source: "AllAfrica", url: "https://allafrica.com/stories/202605070013.html", time: "2026-05-07T06:41:53Z" },
       { title: "Kenya: Deaths Drop At Jootrh As Investments in Specialized Care Pay Off", source: "AllAfrica", url: "https://allafrica.com/stories/202605060565.html", time: "2026-05-06T15:42:43Z" },
@@ -179,6 +181,9 @@ const locations = [
     lat: -26.2041, lng: 28.0473,
     category: "economic",
     articles: [
+      { title: "South Africa: Nelson Mandela Bay Issues Flood Warning Amid Hazardous Conditions", source: "AllAfrica", url: "https://allafrica.com/stories/202605070283.html", time: "2026-05-07T11:26:05Z" },
+      { title: "Africa: With SAPS Under Scrutiny, What Should SA Interim Police Chief Prioritise?", source: "AllAfrica", url: "https://allafrica.com/stories/202605070255.html", time: "2026-05-07T11:15:44Z" },
+      { title: "Zimbabwe: Zimbabwe Ranked Better Than South Africa On Misery Index", source: "AllAfrica", url: "https://allafrica.com/stories/202605070232.html", time: "2026-05-07T11:10:27Z" },
       { title: "South Africa: Floods Smash Gqeberha As 2,000 Flee to Shelters", source: "AllAfrica", url: "https://allafrica.com/stories/202605070109.html", time: "2026-05-07T09:44:40Z" },
       { title: "South Africa: Response to Hantavirus Case Was Swift - Contact Tracing Began Within Hours", source: "AllAfrica", url: "https://allafrica.com/stories/202605070055.html", time: "2026-05-07T07:12:33Z" },
       { title: "South Africa: Shops Shut As Anti-Immigrant Protesters March Through Durban", source: "AllAfrica", url: "https://allafrica.com/stories/202605070049.html", time: "2026-05-07T07:07:29Z" },
@@ -330,7 +335,6 @@ const locations = [
       { title: "Mali crisis: Who are the key leaders to know about?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/30/mali-crisis-who-are-the-key-leaders-to-know-about?traffic_source=rss", time: "2026-04-30T13:29:26Z" },
       { title: "Mali: Mali Junta Leader to Attend Funeral of Defence Minister Killed in Rebel Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202604300334.html", time: "2026-04-30T12:33:24Z" },
       { title: "'How are we going to get back home?' Islamist group tightens blockade on Mali capital", source: "BBC News", url: "https://www.bbc.com/news/articles/cg4pq3zxnpqo?at_medium=RSS&at_campaign=rss", time: "2026-04-30T12:24:12Z" },
-      { title: "Mali crisis deepens as separatists and jihadists step up attacks", source: "France 24", url: "https://www.france24.com/en/mali-crisis-deepens-as-separatists-and-jihadists-step-up-attacks", time: "2026-04-30T11:04:16Z" },
     ]
   },
   {
@@ -338,6 +342,7 @@ const locations = [
     lat: 0.3476, lng: 32.5825,
     category: "political",
     articles: [
+      { title: "Uganda: Uganda's Sickle Cell Patients At Risk As Asthma Goes Undetected", source: "AllAfrica", url: "https://allafrica.com/stories/202605070278.html", time: "2026-05-07T11:24:16Z" },
       { title: "Uganda: Prosecution Accuses Besigye, Co-Accused of Threatening Witnesses", source: "AllAfrica", url: "https://allafrica.com/stories/202605070160.html", time: "2026-05-07T10:43:13Z" },
       { title: "Uganda: Museveni Hails Passage of Sovereignty Bill", source: "AllAfrica", url: "https://allafrica.com/stories/202605070040.html", time: "2026-05-07T06:58:04Z" },
       { title: "Uganda: 'We Are Going to Die' - the Frontline Costs of Uganda's New US Health Agreement", source: "AllAfrica", url: "https://allafrica.com/stories/202605070008.html", time: "2026-05-07T06:38:32Z" },
@@ -389,34 +394,12 @@ const locations = [
     ]
   },
   {
-    name: "Mogadishu", country: "Somalia",
-    lat: 2.0469, lng: 45.3182,
-    category: "conflict",
-    articles: [
-      { title: "Woman jailed in Somalia for peaceful protest ‘stripped, kicked and beaten’", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/may/07/sadia-moalim-ali-woman-somalia-jail-peaceful-protest", time: "2026-05-07T09:00:45Z" },
-      { title: "Somalia: Somali Police Arrest Two SMN Journalists in Mogadishu, Media Outlet Condemns Move", source: "AllAfrica", url: "https://allafrica.com/stories/202605070048.html", time: "2026-05-07T07:07:06Z" },
-      { title: "Somalia: Somali PM Replaces Information Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605060597.html", time: "2026-05-06T15:51:35Z" },
-      { title: "Somalia: Somalia PM, WFP Discuss Lasting Solutions to Food Insecurity", source: "AllAfrica", url: "https://allafrica.com/stories/202605060595.html", time: "2026-05-06T15:50:00Z" },
-      { title: "Somalia: Somali Forces Kill 13 Al-Shabaab Fighters in Central Operation", source: "AllAfrica", url: "https://allafrica.com/stories/202605060594.html", time: "2026-05-06T15:49:08Z" },
-      { title: "Somalia: Somalia Denies Expulsion of UAE Ambassador, Warns Against Misinformation", source: "AllAfrica", url: "https://allafrica.com/stories/202605050251.html", time: "2026-05-05T10:17:04Z" },
-      { title: "‘What comes next?’: Fear grips Pakistani families of Somali piracy victims", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/5/what-comes-next-fear-grips-pakistani-families-of-somali-piracy-victims?traffic_source=rss", time: "2026-05-05T06:39:17Z" },
-      { title: "Somalia: Somalia, UN Discuss Strengthening Media Cooperation On Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040247.html", time: "2026-05-04T10:11:59Z" },
-      { title: "Somalia: Somalia, UNDP Step Up Cooperation On Elections, Development and Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040246.html", time: "2026-05-04T10:11:58Z" },
-      { title: "Somalia: Somali Pirates Hijack Oil Tanker in Gulf of Aden, Second Strike in Weeks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040063.html", time: "2026-05-04T05:24:34Z" },
-      { title: "Africa: India's Horn of Africa Strategy Has Shifted - What It's Trying to Do and How It Could Work", source: "AllAfrica", url: "https://allafrica.com/stories/202605040015.html", time: "2026-05-04T04:54:16Z" },
-      { title: "Oil tanker hijacked off coast of Yemen and taken towards Somalia", source: "BBC News", url: "https://www.bbc.com/news/articles/cpwprl0v2npo?at_medium=RSS&at_campaign=rss", time: "2026-05-02T17:53:07Z" },
-      { title: "Yemen reports hijacked oil tanker headed for Somalia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/2/yemen-reports-hijacked-oil-tanker-headed-for-somalia?traffic_source=rss", time: "2026-05-02T17:10:29Z" },
-      { title: "Somali piracy resurfaces in the lightly-protected waters", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/1/somali-piracy-resurfaces-in-the-lightly-protected-waters?traffic_source=rss", time: "2026-05-01T20:16:03Z" },
-      { title: "Why is piracy rising off Somalia again — and is the Iran war responsible?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/1/why-is-piracy-rising-off-somalia-again-and-is-the-iran-war?traffic_source=rss", time: "2026-05-01T06:10:45Z" },
-      { title: "Piracy rises off Somalia as US-Israeli war on Iran diverts naval forces", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/piracy-rises-off-somalia-as-us-israeli-war-on-iran-diverts-naval-forces?traffic_source=rss", time: "2026-04-30T18:59:13Z" },
-      { title: "Deadly migration route leaves Horn of Africa migrants stranded", source: "France 24", url: "https://www.france24.com/en/deadly-migration-route-leaves-horn-of-africa-migrants-stranded", time: "2026-04-30T13:06:48Z" },
-    ]
-  },
-  {
     name: "Dar es Salaam", country: "Tanzania",
     lat: -6.7924, lng: 39.2083,
     category: "economic",
     articles: [
+      { title: "Tanzania: Why Tanzania Needed Commission of Inquiry After the 2025 Election", source: "AllAfrica", url: "https://allafrica.com/stories/202605070270.html", time: "2026-05-07T11:20:57Z" },
+      { title: "Tanzania: Government Steps in As Fuel Prices Soar", source: "AllAfrica", url: "https://allafrica.com/stories/202605070243.html", time: "2026-05-07T11:12:29Z" },
       { title: "Tanzania: Met Gala 2026 Showcases Rare Tanzanite Necklace Worth U.S.$15m", source: "AllAfrica", url: "https://allafrica.com/stories/202605060519.html", time: "2026-05-06T14:10:53Z" },
       { title: "Tanzania: Missed Opportunity On Tanzania Election Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605060065.html", time: "2026-05-06T06:48:41Z" },
       { title: "Tanzania: Presidents Sign MOUs to Broaden the Tanzania-Kenya Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605060035.html", time: "2026-05-06T06:34:42Z" },
@@ -434,6 +417,31 @@ const locations = [
       { title: "Tanzania: Lake Crash Kills Two, Infant Rescued", source: "AllAfrica", url: "https://allafrica.com/stories/202605010263.html", time: "2026-05-01T10:46:14Z" },
       { title: "Tanzania: Mbeya Electrification Project Nears Completion", source: "AllAfrica", url: "https://allafrica.com/stories/202605010242.html", time: "2026-05-01T10:36:10Z" },
       { title: "Tanzania: Regional Oil Refinery - Why It Matters for Tanzania", source: "AllAfrica", url: "https://allafrica.com/stories/202605010239.html", time: "2026-05-01T10:35:28Z" },
+    ]
+  },
+  {
+    name: "Mogadishu", country: "Somalia",
+    lat: 2.0469, lng: 45.3182,
+    category: "conflict",
+    articles: [
+      { title: "Somalia: Racing to Reverse the Hunger Tide", source: "AllAfrica", url: "https://allafrica.com/stories/202605070186.html", time: "2026-05-07T10:51:41Z" },
+      { title: "Woman jailed in Somalia for peaceful protest ‘stripped, kicked and beaten’", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/may/07/sadia-moalim-ali-woman-somalia-jail-peaceful-protest", time: "2026-05-07T09:00:45Z" },
+      { title: "Somalia: Somali Police Arrest Two SMN Journalists in Mogadishu, Media Outlet Condemns Move", source: "AllAfrica", url: "https://allafrica.com/stories/202605070048.html", time: "2026-05-07T07:07:06Z" },
+      { title: "Somalia: Somali PM Replaces Information Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605060597.html", time: "2026-05-06T15:51:35Z" },
+      { title: "Somalia: Somalia PM, WFP Discuss Lasting Solutions to Food Insecurity", source: "AllAfrica", url: "https://allafrica.com/stories/202605060595.html", time: "2026-05-06T15:50:00Z" },
+      { title: "Somalia: Somali Forces Kill 13 Al-Shabaab Fighters in Central Operation", source: "AllAfrica", url: "https://allafrica.com/stories/202605060594.html", time: "2026-05-06T15:49:08Z" },
+      { title: "Somalia: Somalia Denies Expulsion of UAE Ambassador, Warns Against Misinformation", source: "AllAfrica", url: "https://allafrica.com/stories/202605050251.html", time: "2026-05-05T10:17:04Z" },
+      { title: "‘What comes next?’: Fear grips Pakistani families of Somali piracy victims", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/5/what-comes-next-fear-grips-pakistani-families-of-somali-piracy-victims?traffic_source=rss", time: "2026-05-05T06:39:17Z" },
+      { title: "Somalia: Somalia, UN Discuss Strengthening Media Cooperation On Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040247.html", time: "2026-05-04T10:11:59Z" },
+      { title: "Somalia: Somalia, UNDP Step Up Cooperation On Elections, Development and Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040246.html", time: "2026-05-04T10:11:58Z" },
+      { title: "Somalia: Somali Pirates Hijack Oil Tanker in Gulf of Aden, Second Strike in Weeks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040063.html", time: "2026-05-04T05:24:34Z" },
+      { title: "Africa: India's Horn of Africa Strategy Has Shifted - What It's Trying to Do and How It Could Work", source: "AllAfrica", url: "https://allafrica.com/stories/202605040015.html", time: "2026-05-04T04:54:16Z" },
+      { title: "Oil tanker hijacked off coast of Yemen and taken towards Somalia", source: "BBC News", url: "https://www.bbc.com/news/articles/cpwprl0v2npo?at_medium=RSS&at_campaign=rss", time: "2026-05-02T17:53:07Z" },
+      { title: "Yemen reports hijacked oil tanker headed for Somalia", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/2/yemen-reports-hijacked-oil-tanker-headed-for-somalia?traffic_source=rss", time: "2026-05-02T17:10:29Z" },
+      { title: "Somali piracy resurfaces in the lightly-protected waters", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/1/somali-piracy-resurfaces-in-the-lightly-protected-waters?traffic_source=rss", time: "2026-05-01T20:16:03Z" },
+      { title: "Why is piracy rising off Somalia again — and is the Iran war responsible?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/1/why-is-piracy-rising-off-somalia-again-and-is-the-iran-war?traffic_source=rss", time: "2026-05-01T06:10:45Z" },
+      { title: "Piracy rises off Somalia as US-Israeli war on Iran diverts naval forces", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/piracy-rises-off-somalia-as-us-israeli-war-on-iran-diverts-naval-forces?traffic_source=rss", time: "2026-04-30T18:59:13Z" },
+      { title: "Deadly migration route leaves Horn of Africa migrants stranded", source: "France 24", url: "https://www.france24.com/en/deadly-migration-route-leaves-horn-of-africa-migrants-stranded", time: "2026-04-30T13:06:48Z" },
     ]
   },
   {
@@ -528,6 +536,7 @@ const locations = [
     lat: -1.9403, lng: 29.8739,
     category: "political",
     articles: [
+      { title: "Rwanda: Kagame Congratulates PSG On Reaching Champions League Final", source: "AllAfrica", url: "https://allafrica.com/stories/202605070228.html", time: "2026-05-07T11:08:30Z" },
       { title: "Rwanda: Rwanda's Naming Traditions Explained", source: "AllAfrica", url: "https://allafrica.com/stories/202605070011.html", time: "2026-05-07T06:40:53Z" },
       { title: "Amputee football grows in Rwanda, fostering unity and resilience", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/6/amputee-football-grows-in-rwanda-fostering-unity-and-resilience?traffic_source=rss", time: "2026-05-06T15:57:18Z" },
       { title: "Rwanda: Experts Warn Decline in Hand Hygiene May Increase Infection Risks", source: "AllAfrica", url: "https://allafrica.com/stories/202605060543.html", time: "2026-05-06T15:35:07Z" },
@@ -568,6 +577,20 @@ const locations = [
     ]
   },
   {
+    name: "Pretoria", country: "South Africa",
+    lat: -25.7479, lng: 28.2293,
+    category: "political",
+    articles: [
+      { title: "South Africa: South Africans Are Not a Xenophobic People - Presidential Spokesperson", source: "AllAfrica", url: "https://allafrica.com/stories/202605070281.html", time: "2026-05-07T11:25:39Z" },
+      { title: "Kenya: PLO Lumumba Condemns Xenophobic Attacks On Africans in Letter to Ramaphosa", source: "AllAfrica", url: "https://allafrica.com/stories/202605070192.html", time: "2026-05-07T10:54:02Z" },
+      { title: "South Africa: Ramaphosa Didn't Know He Was Meeting Wealthy Zimbabwean Wanted in SA - - Spokesperson", source: "AllAfrica", url: "https://allafrica.com/stories/202605070032.html", time: "2026-05-07T06:52:57Z" },
+      { title: "Zimbabwe: Ramaphosa Told Mnangagwa to Stop Constitutional Amendment Bill - Report", source: "AllAfrica", url: "https://allafrica.com/stories/202605060028.html", time: "2026-05-06T05:27:35Z" },
+      { title: "Africa: More Nations Plan to Call Out South Africa Govt Over Xenophobic Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605050375.html", time: "2026-05-05T11:33:28Z" },
+      { title: "Zimbabwe: South Africa President Ramaphosa Sneaks Into Zimbabwe On Private Visit to Mnangagwa's Precabe Farm", source: "AllAfrica", url: "https://allafrica.com/stories/202605040018.html", time: "2026-05-04T04:58:54Z" },
+      { title: "South Africa: Ramaphosa Picks 4 November for Local Government Elections", source: "AllAfrica", url: "https://allafrica.com/stories/202604300325.html", time: "2026-04-30T12:29:21Z" },
+    ]
+  },
+  {
     name: "Mbabane", country: "Eswatini",
     lat: -26.3054, lng: 31.1367,
     category: "political",
@@ -590,18 +613,6 @@ const locations = [
       { title: "Baby clothes, razor blades and water buckets: Exposing the reality of global inequalities in maternal care", source: "The Independent", url: "https://www.independent.co.uk/news/health/women-pregnancy-labour-maternity-water-b2970628.html", time: "2026-05-05T11:46:39Z" },
       { title: "Africa: Ethiopian Airlines Named Africa's Best Airline 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605050043.html", time: "2026-05-05T05:13:16Z" },
       { title: "Africa: AU Agenda 2063 Diplomatic Mission Chief Explains How Africa Can Become One of World's Most Competitive Economic Blocs", source: "AllAfrica", url: "https://allafrica.com/stories/202605040042.html", time: "2026-05-04T05:11:53Z" },
-    ]
-  },
-  {
-    name: "Pretoria", country: "South Africa",
-    lat: -25.7479, lng: 28.2293,
-    category: "political",
-    articles: [
-      { title: "South Africa: Ramaphosa Didn't Know He Was Meeting Wealthy Zimbabwean Wanted in SA - - Spokesperson", source: "AllAfrica", url: "https://allafrica.com/stories/202605070032.html", time: "2026-05-07T06:52:57Z" },
-      { title: "Zimbabwe: Ramaphosa Told Mnangagwa to Stop Constitutional Amendment Bill - Report", source: "AllAfrica", url: "https://allafrica.com/stories/202605060028.html", time: "2026-05-06T05:27:35Z" },
-      { title: "Africa: More Nations Plan to Call Out South Africa Govt Over Xenophobic Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605050375.html", time: "2026-05-05T11:33:28Z" },
-      { title: "Zimbabwe: South Africa President Ramaphosa Sneaks Into Zimbabwe On Private Visit to Mnangagwa's Precabe Farm", source: "AllAfrica", url: "https://allafrica.com/stories/202605040018.html", time: "2026-05-04T04:58:54Z" },
-      { title: "South Africa: Ramaphosa Picks 4 November for Local Government Elections", source: "AllAfrica", url: "https://allafrica.com/stories/202604300325.html", time: "2026-04-30T12:29:21Z" },
     ]
   },
   {
@@ -658,6 +669,16 @@ const locations = [
     ]
   },
   {
+    name: "Abuja", country: "Nigeria",
+    lat: 9.0579, lng: 7.4951,
+    category: "political",
+    articles: [
+      { title: "Nigeria: Court Convicts Former Minister of Fraud", source: "AllAfrica", url: "https://allafrica.com/stories/202605070275.html", time: "2026-05-07T11:22:55Z" },
+      { title: "Boko Haram attack kills 23 soldiers in Chad’s Lake Chad region", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/boko-haram-attack-kills-23-soldiers-in-chads-lake-chad-region?traffic_source=rss", time: "2026-05-05T15:47:31Z" },
+      { title: "Africa: Turkey Raises Residence Permit Fee By 930 Percent for Nigerians, 36 Other African Countries", source: "AllAfrica", url: "https://allafrica.com/stories/202605040444.html", time: "2026-05-04T11:55:10Z" },
+    ]
+  },
+  {
     name: "Tunis", country: "Tunisia",
     lat: 36.8065, lng: 10.1815,
     category: "political",
@@ -682,15 +703,6 @@ const locations = [
     articles: [
       { title: "Mozambique: Small Increase in Minimum Wage, But No Hikes for Health, Govt Workers", source: "AllAfrica", url: "https://allafrica.com/stories/202605010076.html", time: "2026-05-01T06:56:23Z" },
       { title: "Mozambique: Mozambique and U.S. Sign Agreement Valued At Over 500 Million Dollars", source: "AllAfrica", url: "https://allafrica.com/stories/202605010033.html", time: "2026-05-01T05:05:23Z" },
-    ]
-  },
-  {
-    name: "Abuja", country: "Nigeria",
-    lat: 9.0579, lng: 7.4951,
-    category: "political",
-    articles: [
-      { title: "Boko Haram attack kills 23 soldiers in Chad’s Lake Chad region", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/boko-haram-attack-kills-23-soldiers-in-chads-lake-chad-region?traffic_source=rss", time: "2026-05-05T15:47:31Z" },
-      { title: "Africa: Turkey Raises Residence Permit Fee By 930 Percent for Nigerians, 36 Other African Countries", source: "AllAfrica", url: "https://allafrica.com/stories/202605040444.html", time: "2026-05-04T11:55:10Z" },
     ]
   },
   {
