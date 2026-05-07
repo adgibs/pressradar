@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">00:55 UTC, 7 May 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">01:43 UTC, 7 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">7 May 2026</div>
@@ -144,10 +144,12 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "Fighting for attention, podcasters are stoking outrage against Israel and Jews", source: "Times of Israel", url: "https://www.timesofisrael.com/fighting-for-attention-podcasters-are-stoking-outrage-against-israel-and-jews/", time: "2026-05-07T00:59:49Z" },
       { title: "Brussels cathedral installs plaques apologizing for medieval pogrom depicted in stained glass", source: "Times of Israel", url: "https://www.timesofisrael.com/brussels-cathedral-installs-plaques-apologizing-for-medieval-pogrom-depicted-in-stained-glass/", time: "2026-05-07T00:08:44Z" },
       { title: "Police officer receives promotion after Ben Gvir drops opposition", source: "Times of Israel", url: "https://www.timesofisrael.com/police-officer-receives-promotion-after-ben-gvir-drops-opposition/", time: "2026-05-06T23:12:32Z" },
       { title: "Stand up to the Israeli government's assault on academic freedom", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-05-07/ty-article-opinion/stand-up-to-the-israeli-governments-assault-on-academic-freedom/0000019d-fee3-df19-af9d-fffbf31c0000", time: "2026-05-06T21:22:16Z" },
       { title: "Netanyahu's pet Mossad boss runs cover on Qatargate", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-07/ty-article-opinion/.premium/netanyahus-pet-mossad-boss-runs-cover-on-qatargate/0000019d-fea0-dd9c-a39f-fee07cea0000", time: "2026-05-06T21:17:49Z" },
+      { title: "Israeli strikes in Lebanon kill 16, wound 21, damage school despite ceasefire", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260506-israeli-strikes-in-lebanon-kill-16-wound-21-damage-school-despite-ceasefire/", time: "2026-05-06T21:11:56Z" },
       { title: "Commencement of Venice Biennale previews marred by protests over Israeli, Russian presence", source: "Times of Israel", url: "https://www.timesofisrael.com/commencement-of-venice-biennale-previews-marred-by-protests-over-israeli-russian-presence/", time: "2026-05-06T20:51:49Z" },
       { title: "Ex-spy Jonathan Pollard joins politics, calls to annex Gaza Strip", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895378", time: "2026-05-06T20:38:48Z" },
       { title: "Israel competition watchdog declares top banks an oligopoly, targets deposits", source: "Times of Israel", url: "https://www.timesofisrael.com/israel-competition-watchdog-declares-top-banks-an-oligopoly-targets-deposits/", time: "2026-05-06T20:11:09Z" },
@@ -185,6 +187,7 @@ const locations = [
       { title: "We’re not in the 1930s… yet", source: "Times of Israel", url: "https://www.timesofisrael.com/were-not-in-the-1930s-yet/", time: "2026-05-06T14:03:26Z" },
       { title: "London Jews celebrate Lag B’Omer amid fear and uncertainty over spate of attacks", source: "Times of Israel", url: "https://www.timesofisrael.com/london-jews-celebrate-lag-bomer-amid-fear-and-uncertainty-over-spate-of-attacks/", time: "2026-05-06T14:01:32Z" },
       { title: "Anti-Zionism in America and the shifting debate over support for Israel - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895166", time: "2026-05-06T14:00:00Z" },
+      { title: "Latin American anger grows over Israel’s detention of Thiago Ávila", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260506-latin-american-anger-grows-over-israels-detention-of-thiago-avila/", time: "2026-05-06T13:52:45Z" },
       { title: "Four U.K. pro-Palestine activists found guilty of criminal damage at Israeli defense firm facility", source: "Haaretz", url: "https://www.haaretz.com/world-news/2026-05-06/ty-article/four-u-k-pro-palestine-activists-convicted-over-raid-at-israeli-defense-firm/0000019d-fd45-deaa-a99f-fd6da9410000", time: "2026-05-06T13:44:33Z" },
       { title: "Report: Next round of Israel-Lebanon talks set for next week", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/report-next-round-israel-lebanon-talks-set-next-week", time: "2026-05-06T13:35:31Z" },
       { title: "Netanyahu spars with prosecution over 2015 Walla interview, Election Day video, in trial hearing", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895302", time: "2026-05-06T13:33:54Z" },
@@ -641,9 +644,6 @@ const locations = [
       { title: "IDF soldier killed by drone blast in southern Lebanon", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-04-30/ty-article-live/israeli-defense-officials-confirm-ongoing-seizure-of-gaza-bound-flotilla-vessels/0000019d-dc8d-d473-a1bf-fded8e920000", time: "2026-04-30T04:07:29Z" },
       { title: "Inquiry finds that days before Bondi massacre, Jewish group warned Aussie cops attack was ‘likely’", source: "Times of Israel", url: "https://www.timesofisrael.com/inquiry-finds-that-days-before-bondi-shooting-jewish-group-warned-aussie-cops-attack-was-likely/", time: "2026-04-30T03:44:40Z" },
       { title: "New maps provided to aid groups show expanded zone of IDF control in Gaza", source: "Times of Israel", url: "https://www.timesofisrael.com/new-maps-provided-to-aid-groups-show-expanded-zone-of-idf-control-in-gaza/", time: "2026-04-30T02:53:26Z" },
-      { title: "The IDF's discipline crisis needs more than Zamir's words", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-30/ty-article-opinion/.premium/the-idfs-discipline-crisis-needs-more-than-zamirs-words/0000019d-da7d-dc1a-a3fd-dbffd4240000", time: "2026-04-30T01:37:56Z" },
-      { title: "Hundreds of Ultra-Orthodox Jews protest Israel’s military draft", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/hundreds-of-ultra-orthodox-jews-protest-israels-military-draft?traffic_source=rss", time: "2026-04-30T01:16:18Z" },
-      { title: "Buying stolen Ukrainian wheat, Israel continues a legacy of exceptionalism", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-30/ty-article/.premium/buying-stolen-ukrainian-wheat-israel-continues-a-legacy-of-exceptionalism/0000019d-dad7-dae0-a79f-fef72a2e0000", time: "2026-04-30T01:14:18Z" },
     ]
   },
   {
@@ -651,6 +651,7 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "5/6: CBS Evening News", source: "CBS News", url: "https://www.cbsnews.com/video/050626-cbs-evening-news/", time: "2026-05-07T03:00:00Z" },
       { title: "Macron says ‘all parties must lift the blockades’ – as it happened", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/06/trump-iran-hormuz-us-project-freedom-live-updates-middle-east-crisis", time: "2026-05-07T00:35:12Z" },
       { title: "Iran war live: Trump says deal with Tehran ‘possible’; Israel bombs Beirut", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/5/7/iran-war-live-trump-says-deal-with-tehran-possible-israel-bombs-beirut?traffic_source=rss", time: "2026-05-07T00:00:00Z" },
       { title: "What are China’s surprise gains in the war on Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/6/what-are-chinas-surprise-gains-in-the-war-on-iran?traffic_source=rss", time: "2026-05-06T23:43:00Z" },
@@ -1150,7 +1151,6 @@ const locations = [
       { title: "Iranian officials denied entry into Canada for FIFA meeting weeks before World Cup", source: "Sky News", url: "https://news.sky.com/story/iranian-officials-denied-entry-into-canada-for-fifa-meeting-just-weeks-before-start-of-world-cup-13538253", time: "2026-04-30T02:18:00Z" },
       { title: "Iran’s wartime executions - podcast", source: "The Guardian", url: "https://www.theguardian.com/news/audio/2026/apr/30/irans-wartime-executions-podcast", time: "2026-04-30T02:00:04Z" },
       { title: "Iran condemns Bahrain for stripping dozens of citizenship", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-condemns-bahrain-stripping-dozens-citizenship", time: "2026-04-30T01:43:41Z" },
-      { title: "Pro-government rally in Tehran demands end to US threats", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/pro-government-rally-in-tehran-demands-end-to-us-threats?traffic_source=rss", time: "2026-04-30T01:37:51Z" },
     ]
   },
   {
@@ -1799,7 +1799,6 @@ const locations = [
       { title: "Israeli army kills Palestinian teen during raid in West Bank", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-kills-palestinian-teen-during-raid-west-bank", time: "2026-04-30T04:04:50Z" },
       { title: "Middle East war live: Israel detains 15 French nationals in Gaza flotilla raid", source: "France 24", url: "https://www.france24.com/en/middle-east/20260430-middle-east-war-live-trump-says-us-may-cut-troops-in-germany-as-iran-row-rages", time: "2026-04-30T02:49:58Z" },
       { title: "Israel seizes Global Sumud Flotilla boats 1,000km away from Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/4/30/israel-seizes-global-sumud-flotilla-boats-1000km-away-from-gaza?traffic_source=rss", time: "2026-04-30T02:10:26Z" },
-      { title: "The IDF's moral and discipline collapse is a recipe for defeat on the battlefield", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-04-30/ty-article-opinion/.premium/the-idfs-discipline-crisis-needs-more-than-zamirs-words/0000019d-da7d-dc1a-a3fd-dbffd4240000", time: "2026-04-30T01:37:56Z" },
     ]
   },
   {
@@ -2090,7 +2089,9 @@ const locations = [
     lat: 39.9042, lng: 116.4074,
     category: "conflict",
     articles: [
+      { title: "Has ‘the Beast’ arrived in Beijing? Trump’s motorcade SUVs spotted before visit", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352682/has-beast-arrived-beijing-trumps-motorcade-suvs-spotted-visit?utm_source=rss_feed", time: "2026-05-07T01:28:33Z" },
       { title: "Chinese exporters ‘numb’ to US threats as Trump set to visit", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/chinese-exporters-numb-to-us-threats-as-trump-set-to-visit", time: "2026-05-07T00:36:00Z" },
+      { title: "Hoteliers call for subsidies as Pattaya demand weakens sharply", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3251003/hoteliers-call-for-subsidies-as-pattaya-demand-weakens-sharply", time: "2026-05-07T00:26:00Z" },
       { title: "Stable Strait in US’, China’s best interests: Rubio", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/05/07/2003856893", time: "2026-05-07T00:00:00Z" },
       { title: "Former news host faces China espionage charges", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/05/07/2003856894", time: "2026-05-07T00:00:00Z" },
       { title: "Iran conflict not deterring China", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/05/07/2003856882", time: "2026-05-07T00:00:00Z" },
@@ -2463,6 +2464,8 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "EU negotiator says 'some way to go' on US trade deal", source: "RTE News", url: "https://www.rte.ie/news/europe/2026/0507/1572079-eu-us-tariffs/", time: "2026-05-07T01:27:16Z" },
+      { title: "Ukraine war briefing: Putin threat to foreign embassies in Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/07/ukraine-war-briefing-putin-threat-foreign-embassies-kyiv", time: "2026-05-07T01:05:09Z" },
       { title: "Russia warns foreign diplomats to leave Kyiv in case of strike", source: "France 24", url: "https://www.france24.com/en/europe/20260506-russia-warns-foreign-diplomats-to-leave-kyiv-in-case-of-strike", time: "2026-05-06T22:29:46Z" },
       { title: "Porter: If Trump is going to attack California, ‘F him’", source: "The Hill", url: "https://thehill.com/homenews/campaign/5866608-rep-katie-porter-trump-attack/", time: "2026-05-06T21:19:15Z" },
       { title: "Russia warns diplomatic missions to evacuate staff from Kyiv ahead of Victory Day", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-russia-warns-diplomatic-missions-to-evacuate-staff-from-kyiv-ahead-of/", time: "2026-05-06T19:35:05Z" },
@@ -2597,7 +2600,6 @@ const locations = [
       { title: "US reviewing potential reduction of troops in Germany, says Trump", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894653", time: "2026-04-30T03:30:08Z" },
       { title: "James leading GOP gubernatorial primary in Michigan: Survey", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5856481-john-james-michigan-gubernatorial-race/", time: "2026-04-30T02:57:53Z" },
       { title: "Trump considering reduction of US troops in Germany", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0430/1570983-trump-germany/", time: "2026-04-30T02:20:42Z" },
-      { title: "Our time is short. These three didn't waste it on division", source: "Axios", url: "https://www.axios.com/2026/04/30/bipartisanship-america-ben-sasse-buffalo-sabres-king-charles", time: "2026-04-30T01:25:04Z" },
     ]
   },
   {
@@ -2731,6 +2733,7 @@ const locations = [
     lat: 28.6139, lng: 77.209,
     category: "political",
     articles: [
+      { title: "Hoteliers call for subsidies as Pattaya demand weakens sharply", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3251003/hoteliers-call-for-subsidies-as-pattaya-demand-weakens-sharply", time: "2026-05-07T00:26:00Z" },
       { title: "Rubio to visit India for bilateral talks; Quad Foreign Ministers’ meeting May-end", source: "The Hindu", url: "https://www.thehindu.com/news/national/rubio-to-visit-india-for-bilateral-talks-quad-foreign-ministers-meeting-may-end/article70948359.ece", time: "2026-05-06T20:58:48Z" },
       { title: "What does the BJP’s victory in West Bengal mean for India’s democracy?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/5/6/what-does-the-bjps-victory-in-west-bengal-mean-for-indias-democracy?traffic_source=rss", time: "2026-05-06T19:34:35Z" },
       { title: "Trump’s revenge tour is just beginning. Here’s who’s next on his list", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-republican-primaries-indiana-louisiana-b2971647.html", time: "2026-05-06T19:25:09Z" },
@@ -2843,8 +2846,10 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "France moves aircraft carrier group toward Strait of Hormuz for possible defensive mission", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-france-moves-aircraft-carrier-group-toward-strait-of-hormuz-for/", time: "2026-05-07T01:33:16Z" },
       { title: "Lower speed limits could help stop Iran war damaging UK economy, think tank says", source: "The Independent", url: "https://www.independent.co.uk/news/uk/politics/iran-us-war-speed-limit-labour-ippr-b2971724.html", time: "2026-05-06T23:01:00Z" },
       { title: "Local elections could hasten exit of embattled British Prime Minister Starmer", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/local-elections-could-hasten-exit-of-embattled-british-prime-minister-starmer", time: "2026-05-06T21:56:05Z" },
+      { title: "Antisemitism is a campaign issue in UK regional vote", source: "NPR", url: "https://www.npr.org/2026/05/06/nx-s1-5812457/antisemitism-is-a-campaign-issue-in-uk-regional-vote", time: "2026-05-06T20:42:30Z" },
       { title: "Hantavirus-hit cruise ship leaves Cape Verde after three evacuated", source: "BBC News", url: "https://www.bbc.com/news/articles/c5y093d5n9ko?at_medium=RSS&at_campaign=rss", time: "2026-05-06T19:49:12Z" },
       { title: "British doctor airlifted from hantavirus-hit cruise ship as cases rise onboard", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/hantavirus-outbreak-cruise-ship-cape-verde-b2971732.html", time: "2026-05-06T18:08:06Z" },
       { title: "Vienna’s public transport is the envy of the world – so why can’t it ditch cars?", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/06/vienna-public-transport-tram-network-ditch-cars", time: "2026-05-06T15:00:23Z" },
@@ -2936,8 +2941,6 @@ const locations = [
       { title: "Mamdani encourages Charles to return Indian diamond", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0430/1570985-mamdani-charles/", time: "2026-04-30T03:29:13Z" },
       { title: "Mamdani encourages Charles to return Indian diamond", source: "RTE News", url: "https://www.rte.ie/news/uk/2026/0430/1570985-mamdani-charles/", time: "2026-04-30T03:29:13Z" },
       { title: "NYC mayor Zohran Mamdani says he would ask King Charles to return Kohinoor diamond to India", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/zohran-mamdani-king-charles-kohinoor-diamond-new-york-b2967748.html", time: "2026-04-30T02:42:15Z" },
-      { title: "Our time is short. These three didn't waste it on division", source: "Axios", url: "https://www.axios.com/2026/04/30/bipartisanship-america-ben-sasse-buffalo-sabres-king-charles", time: "2026-04-30T01:25:04Z" },
-      { title: "British Royals Crisscross Manhattan in Brief Visit Packed With Photo Ops", source: "New York Times", url: "https://www.nytimes.com/2026/04/29/world/europe/king-charles-camilla-royals-nyc-visit.html", time: "2026-04-30T01:06:14Z" },
     ]
   },
   {
@@ -2945,6 +2948,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "US says migration has made Europe an ‘incubator’ for terrorism in new counter-terrorism strategy", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/may/07/new-trump-counterterrorism-strategy-targets-europe-terrorism-migration", time: "2026-05-07T00:55:36Z" },
       { title: "With US $64 million in April, digital bank Revolut has invested US $167 million in Mexico in less than half a year", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/data-bank-revolut-us-167m-invested-fhalf-year-us-60m-april/", time: "2026-05-06T23:19:24Z" },
       { title: "With US $64M in April, digital bank Revolut has invested $167M in Mexico in less than half a year", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/revolut-us-167m-invested-half-year-60m-april/", time: "2026-05-06T23:19:24Z" },
       { title: "Mexico is a world leader in running popularity, with 1 in 4 participating", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/mexico-iworld-leader-running-popularity-1-in-4-participate/", time: "2026-05-06T22:03:45Z" },
@@ -3043,6 +3047,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Israel struck Lebanese capital in the first attack since April ceasefire", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-struck-lebanese-capital-first-attack-april-ceasefire", time: "2026-05-07T01:40:59Z" },
       { title: "Israeli assault across Lebanon kills 16 people, wounds over a dozen more", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-assault-across-lebanon-kills-16-people-wounds-over-dozen-more", time: "2026-05-07T00:01:53Z" },
       { title: "Al-Hayya's son seriously injured in Gaza, military says 'no interest in targeting him' - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895388", time: "2026-05-06T22:51:01Z" },
       { title: "Hezbollah says it carried out 17 attacks on Israeli forces in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-says-it-carried-out-17-attacks-israeli-forces-lebanon", time: "2026-05-06T22:47:04Z" },
@@ -3123,6 +3128,7 @@ const locations = [
     lat: 50.4501, lng: 30.5234,
     category: "conflict",
     articles: [
+      { title: "Ukraine war briefing: Putin threat to foreign embassies in Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/07/ukraine-war-briefing-putin-threat-foreign-embassies-kyiv", time: "2026-05-07T01:05:09Z" },
       { title: "Russia warns foreign diplomats to leave Kyiv in case of strike", source: "France 24", url: "https://www.france24.com/en/europe/20260506-russia-warns-foreign-diplomats-to-leave-kyiv-in-case-of-strike", time: "2026-05-06T22:29:46Z" },
       { title: "Russia tells diplomats to leave Kyiv in case Moscow launches mass strikes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/russia-tells-diplomats-to-leave-kyiv-in-case-moscow-launches-mass-strikes?traffic_source=rss", time: "2026-05-06T21:30:05Z" },
       { title: "’Ukraine will respond in kind’, Zelenskyy says after Russia breaks Kyiv’s ceasefire", source: "Euronews", url: "http://www.euronews.com/2026/05/06/ukraine-will-respond-in-kind-zelenskyy-says-after-russia-breaks-kyivs-ceasefire", time: "2026-05-06T19:34:48Z" },
@@ -4109,39 +4115,6 @@ const locations = [
     ]
   },
   {
-    name: "Kuala Lumpur", country: "Malaysia",
-    lat: 3.139, lng: 101.6869,
-    category: "economic",
-    articles: [
-      { title: "Heavy rain causes flash floods in parts of Petaling Jaya and Kuala Lumpur", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/heavy-rain-causes-flash-floods-in-parts-of-petaling-jaya-and-kuala-lumpur", time: "2026-05-06T13:05:00Z" },
-      { title: "Malaysia to impose new rules on imports of electric vehicles assembled overseas from July", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/update-1-malaysia-to-impose-new-rules-on-imports-of-electric-vehicles-assembled-overseas-from-july", time: "2026-05-06T10:30:00Z" },
-      { title: "Malaysia’s anti-graft agency vows to recover more high-value art bought with 1MDB scandal funds", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-anti-graft-agency-vows-to-recover-more-high-value-art-bought-with-1mdb-scandal-funds", time: "2026-05-06T05:05:00Z" },
-      { title: "Malaysian minister calls for update on ‘corporate mafia’ probe", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-minister-calls-for-update-on-corporate-mafia-probe", time: "2026-05-05T07:12:00Z" },
-      { title: "Knife-wielding woman at KL water music festival charged, to undergo mental health check", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/knife-wielding-woman-at-kl-water-music-festival-charged-to-undergo-mental-health-check", time: "2026-05-04T09:00:00Z" },
-      { title: "Malaysia’s anti-graft agency to quiz ex-minister Rafizi Ramli over deal with British chip giant Arm", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-anti-graft-agency-to-quiz-ex-minister-rafizi-ramli-over-deal-with-british-chip-giant-arm", time: "2026-05-04T00:20:00Z" },
-      { title: "Malaysia’s East Coast rail promises bigger economic pie for Pahang, but questions remain", source: "Straits Times", url: "https://www.straitstimes.com/asia/malaysias-east-coast-rail-promises-bigger-economic-pie-for-pahang-but-questions-remain", time: "2026-05-03T10:01:00Z" },
-      { title: "Malaysia’s food supply stable, but cost pressures may push prices higher, says minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-food-supply-stable-but-cost-pressures-may-push-prices-higher-says-minister", time: "2026-05-03T05:41:00Z" },
-      { title: "2 deaths, 56 heat-related cases reported in Malaysia since start of 2026: Health Ministry", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/2-deaths-56-heat-related-cases-reported-in-malaysia-since-start-of-2026-health-ministry", time: "2026-05-03T05:24:00Z" },
-      { title: "Penang records first heat stroke death of 2026", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/penang-records-first-heat-stroke-death-of-2026", time: "2026-05-03T02:23:00Z" },
-      { title: "Woman jumps out of moving car in Malaysia after allegedly feeling uncomfortable with driver", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/woman-jumps-out-of-moving-car-in-malaysia-after-allegedly-feeling-uncomfortable-with-driver", time: "2026-05-02T13:39:00Z" },
-      { title: "KL tried to throw a water party like Songkran. Malaysians threw a wet blanket instead", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/kl-tried-to-throw-a-water-party-like-songkran-malaysians-threw-a-wet-blanket-instead", time: "2026-05-02T12:30:00Z" },
-      { title: "Monkey malaria cases rising in Sabah; 1 person dead: Malaysian health minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/monkey-malaria-cases-rising-in-sabah-1-person-dead-malaysian-health-minister", time: "2026-05-02T07:55:00Z" },
-      { title: "Malaysian man dies after collapsing while on pilgrimage in Saudi Arabia", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-man-dies-after-collapsing-while-on-pilgrimage-in-saudi-arabia", time: "2026-05-02T05:10:00Z" },
-      { title: "‘The store looked almost identical’: Pharmacies in Malaysia warn of fake websites that impersonate them", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/the-store-looked-almost-identical-pharmacies-in-malaysia-warn-of-fake-websites-that-impersonate-them", time: "2026-05-02T02:54:00Z" },
-      { title: "Former Malaysian minister Rafizi expects to be charged amid probe into govt deal with chip giant", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/former-malaysian-minister-rafizi-expects-to-be-charged-amid-probe-into-govt-deal-with-chip-giant", time: "2026-05-01T11:46:50Z" },
-      { title: "Former Malaysian spy Blossom Wong, who sported cheongsams on missions, dies at 87", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/former-malaysian-spy-blossom-wong-who-sported-cheongsams-on-missions-dies-at-87", time: "2026-05-01T11:25:00Z" },
-      { title: "Why solar generators, hand-crank lamps are selling like hotcakes in Malaysia", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/why-solar-generators-hand-crank-lamps-are-selling-like-hotcakes-in-malaysia", time: "2026-05-01T10:00:00Z" },
-      { title: "Civil servants among 69 Malaysians nabbed in international online child exploitation crackdown", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/civil-servants-among-69-malaysians-nabbed-in-international-online-child-exploitation-crackdown", time: "2026-04-30T09:50:00Z" },
-      { title: "Cows flex their ‘lembu-gini’ power on Malaysian highway", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/cows-flex-their-lembu-gini-power-on-malaysian-highway", time: "2026-04-30T09:45:00Z" },
-      { title: "Military officer in Malaysia charged with murder over fatal drink driving crash", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/military-officer-in-malaysia-charged-with-murder-over-fatal-drink-driving-crash", time: "2026-04-30T06:54:00Z" },
-      { title: "Fire razes five houses in Kuala Lumpur, killing one", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/fire-razes-five-houses-in-kuala-lumpur-killing-one", time: "2026-04-30T03:00:00Z" },
-      { title: "Malaysia’s vehicle workshops steering into scams", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-vehicle-workshops-steering-into-scams", time: "2026-04-30T02:50:00Z" },
-      { title: "Malaysia civil servants’ sick days drop by 30% after work-from-home policy rolls out", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysia-civil-servants-sick-days-drop-by-30-after-work-from-home-policy-rolls-out", time: "2026-04-30T02:41:00Z" },
-      { title: "‘It’s the vehicle plate, not the nationality’: Official says foreigners can still pump RON95", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/its-the-vehicle-plate-not-the-nationality-official-says-foreigners-can-still-pump-ron95", time: "2026-04-30T01:55:00Z" },
-      { title: "Ant International serves 150m merchants, 2b consumers, bets on AI commerce infrastructure", source: "South China Morning Post", url: "https://www.scmp.com/tech/big-tech/article/3351926/ant-international-serves-150m-merchants-2b-consumers-bets-ai-commerce-infrastructure?utm_source=rss_feed", time: "2026-04-30T01:31:25Z" },
-    ]
-  },
-  {
     name: "Karachi", country: "Pakistan",
     lat: 24.8607, lng: 67.0011,
     category: "conflict",
@@ -4175,10 +4148,43 @@ const locations = [
     ]
   },
   {
+    name: "Kuala Lumpur", country: "Malaysia",
+    lat: 3.139, lng: 101.6869,
+    category: "economic",
+    articles: [
+      { title: "Heavy rain causes flash floods in parts of Petaling Jaya and Kuala Lumpur", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/heavy-rain-causes-flash-floods-in-parts-of-petaling-jaya-and-kuala-lumpur", time: "2026-05-06T13:05:00Z" },
+      { title: "Malaysia to impose new rules on imports of electric vehicles assembled overseas from July", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/update-1-malaysia-to-impose-new-rules-on-imports-of-electric-vehicles-assembled-overseas-from-july", time: "2026-05-06T10:30:00Z" },
+      { title: "Malaysia’s anti-graft agency vows to recover more high-value art bought with 1MDB scandal funds", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-anti-graft-agency-vows-to-recover-more-high-value-art-bought-with-1mdb-scandal-funds", time: "2026-05-06T05:05:00Z" },
+      { title: "Malaysian minister calls for update on ‘corporate mafia’ probe", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-minister-calls-for-update-on-corporate-mafia-probe", time: "2026-05-05T07:12:00Z" },
+      { title: "Knife-wielding woman at KL water music festival charged, to undergo mental health check", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/knife-wielding-woman-at-kl-water-music-festival-charged-to-undergo-mental-health-check", time: "2026-05-04T09:00:00Z" },
+      { title: "Malaysia’s anti-graft agency to quiz ex-minister Rafizi Ramli over deal with British chip giant Arm", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-anti-graft-agency-to-quiz-ex-minister-rafizi-ramli-over-deal-with-british-chip-giant-arm", time: "2026-05-04T00:20:00Z" },
+      { title: "Malaysia’s East Coast rail promises bigger economic pie for Pahang, but questions remain", source: "Straits Times", url: "https://www.straitstimes.com/asia/malaysias-east-coast-rail-promises-bigger-economic-pie-for-pahang-but-questions-remain", time: "2026-05-03T10:01:00Z" },
+      { title: "Malaysia’s food supply stable, but cost pressures may push prices higher, says minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysias-food-supply-stable-but-cost-pressures-may-push-prices-higher-says-minister", time: "2026-05-03T05:41:00Z" },
+      { title: "2 deaths, 56 heat-related cases reported in Malaysia since start of 2026: Health Ministry", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/2-deaths-56-heat-related-cases-reported-in-malaysia-since-start-of-2026-health-ministry", time: "2026-05-03T05:24:00Z" },
+      { title: "Penang records first heat stroke death of 2026", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/penang-records-first-heat-stroke-death-of-2026", time: "2026-05-03T02:23:00Z" },
+      { title: "Woman jumps out of moving car in Malaysia after allegedly feeling uncomfortable with driver", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/woman-jumps-out-of-moving-car-in-malaysia-after-allegedly-feeling-uncomfortable-with-driver", time: "2026-05-02T13:39:00Z" },
+      { title: "KL tried to throw a water party like Songkran. Malaysians threw a wet blanket instead", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/kl-tried-to-throw-a-water-party-like-songkran-malaysians-threw-a-wet-blanket-instead", time: "2026-05-02T12:30:00Z" },
+      { title: "Monkey malaria cases rising in Sabah; 1 person dead: Malaysian health minister", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/monkey-malaria-cases-rising-in-sabah-1-person-dead-malaysian-health-minister", time: "2026-05-02T07:55:00Z" },
+      { title: "Malaysian man dies after collapsing while on pilgrimage in Saudi Arabia", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-man-dies-after-collapsing-while-on-pilgrimage-in-saudi-arabia", time: "2026-05-02T05:10:00Z" },
+      { title: "‘The store looked almost identical’: Pharmacies in Malaysia warn of fake websites that impersonate them", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/the-store-looked-almost-identical-pharmacies-in-malaysia-warn-of-fake-websites-that-impersonate-them", time: "2026-05-02T02:54:00Z" },
+      { title: "Former Malaysian minister Rafizi expects to be charged amid probe into govt deal with chip giant", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/former-malaysian-minister-rafizi-expects-to-be-charged-amid-probe-into-govt-deal-with-chip-giant", time: "2026-05-01T11:46:50Z" },
+      { title: "Former Malaysian spy Blossom Wong, who sported cheongsams on missions, dies at 87", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/former-malaysian-spy-blossom-wong-who-sported-cheongsams-on-missions-dies-at-87", time: "2026-05-01T11:25:00Z" },
+      { title: "Why solar generators, hand-crank lamps are selling like hotcakes in Malaysia", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/why-solar-generators-hand-crank-lamps-are-selling-like-hotcakes-in-malaysia", time: "2026-05-01T10:00:00Z" },
+      { title: "Civil servants among 69 Malaysians nabbed in international online child exploitation crackdown", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/civil-servants-among-69-malaysians-nabbed-in-international-online-child-exploitation-crackdown", time: "2026-04-30T09:50:00Z" },
+      { title: "Cows flex their ‘lembu-gini’ power on Malaysian highway", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/cows-flex-their-lembu-gini-power-on-malaysian-highway", time: "2026-04-30T09:45:00Z" },
+      { title: "Military officer in Malaysia charged with murder over fatal drink driving crash", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/military-officer-in-malaysia-charged-with-murder-over-fatal-drink-driving-crash", time: "2026-04-30T06:54:00Z" },
+      { title: "Fire razes five houses in Kuala Lumpur, killing one", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/fire-razes-five-houses-in-kuala-lumpur-killing-one", time: "2026-04-30T03:00:00Z" },
+      { title: "Malaysia’s vehicle workshops steering into scams", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-vehicle-workshops-steering-into-scams", time: "2026-04-30T02:50:00Z" },
+      { title: "Malaysia civil servants’ sick days drop by 30% after work-from-home policy rolls out", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysia-civil-servants-sick-days-drop-by-30-after-work-from-home-policy-rolls-out", time: "2026-04-30T02:41:00Z" },
+      { title: "‘It’s the vehicle plate, not the nationality’: Official says foreigners can still pump RON95", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/its-the-vehicle-plate-not-the-nationality-official-says-foreigners-can-still-pump-ron95", time: "2026-04-30T01:55:00Z" },
+    ]
+  },
+  {
     name: "Jakarta", country: "Indonesia",
     lat: -6.2088, lng: 106.8456,
     category: "economic",
     articles: [
+      { title: "Fuel shortages in Indonesia spread from Riau to several cities in Kalimantan", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/fuel-shortages-in-indonesia-spread-from-riau-to-several-cities-in-kalimantan", time: "2026-05-07T01:36:00Z" },
       { title: "‘I feel so stupid’: How young Indonesians get stuck on the debt treadmill", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/i-feel-so-stupid-how-young-indonesians-get-stuck-on-the-debt-treadmill", time: "2026-05-06T21:00:00Z" },
       { title: "Greetings from a sea village in Indonesia, where Indigenous fishing gets help from mangroves", source: "NPR", url: "https://www.npr.org/2026/05/06/g-s1-119852/indonesia-mangrove-conservation-fishing-sulawesi-bajau", time: "2026-05-06T14:38:43Z" },
       { title: "16 killed in bus-oil tanker crash in Sumatra: Indonesian official", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/16-killed-in-bus-oil-tanker-crash-in-sumatra-indonesian-official", time: "2026-05-06T10:35:00Z" },
@@ -4203,36 +4209,6 @@ const locations = [
       { title: "Indonesia’s Riau, South Sumatra brace themselves for forest fires as El Nino looms", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesias-riau-south-sumatra-brace-themselves-for-forest-fires-as-el-nino-looms", time: "2026-04-30T03:10:00Z" },
       { title: "Indonesia fatal train crash: Accidents mount as crossings left unchecked", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-fatal-train-crash-accidents-mount-as-crossings-left-unchecked", time: "2026-04-30T02:58:00Z" },
       { title: "Acid attack on activist was premeditated, says Indonesian military prosecutor at trial", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/acid-attack-on-activist-was-premeditated-says-indonesian-military-prosecutor-at-trial", time: "2026-04-30T01:55:00Z" },
-    ]
-  },
-  {
-    name: "Ottawa", country: "Canada",
-    lat: 45.4215, lng: -75.6972,
-    category: "political",
-    articles: [
-      { title: "Reclaiming the Name of the Black Hero Who Inspired ‘Uncle Tom’s Cabin’", source: "New York Times", url: "https://www.nytimes.com/2026/05/06/world/canada/uncle-toms-cabin-ontario-josiah-henson.html", time: "2026-05-06T09:00:26Z" },
-      { title: "Search called off for Australian hiker missing in rugged Canadian national park", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/06/missing-hiker-canada-search-called-off-denise-williams", time: "2026-05-06T01:00:06Z" },
-      { title: "Louise Arbour Named as Canada’s Governor General", source: "New York Times", url: "https://www.nytimes.com/2026/05/05/world/canada/canada-louis-arbour-governor-general.html", time: "2026-05-05T21:57:32Z" },
-      { title: "Alberta separatists submit 300,000 signatures to push independence referendum", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/canada-voting-data-breach-separatists", time: "2026-05-05T17:49:26Z" },
-      { title: "Carney appoints former supreme court judge as Canada’s new governor general", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/carney-appoints-louise-arbor-canada-governor-general", time: "2026-05-05T16:23:50Z" },
-      { title: "Canadian prime minister says Europe will anchor world order", source: "NPR", url: "https://www.npr.org/2026/05/05/nx-s1-5810533/canadian-prime-minister-says-europe-will-anchor-world-order", time: "2026-05-05T10:49:43Z" },
-      { title: "Deaths rising in aftermath of Western aid cuts, relief agencies say", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-deaths-rising-in-aftermath-of-western-aid-cuts-relief-agencies-say/", time: "2026-05-05T08:45:00Z" },
-      { title: "Separatist group tries to trigger referendum on province leaving Canada", source: "Sky News", url: "https://news.sky.com/story/separatist-group-tries-to-trigger-referendum-on-province-leaving-canada-13540307", time: "2026-05-05T08:28:00Z" },
-      { title: "Alberta separatist group says it has enough signatures to trigger referendum on leaving Canada", source: "ABC News", url: "https://abcnews.com/International/wireStory/alberta-separatist-group-signatures-trigger-referendum-leaving-canada-132648409", time: "2026-05-05T05:46:56Z" },
-      { title: "‘Dangerous escalation’: World condemns Iran after attacks on UAE", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/dangerous-escalation-world-condemns-iran-after-attacks-on-uae?traffic_source=rss", time: "2026-05-05T03:38:53Z" },
-      { title: "Mark Carney Meets With European Leaders in Yerevan, Armenia", source: "New York Times", url: "https://www.nytimes.com/2026/05/04/world/canada/carney-europe-trump.html", time: "2026-05-04T15:45:03Z" },
-      { title: "‘Far beyond’ EU and NATO: Armenia hosts EPC summit cast as ‘gateway’ in shifting diplomatic order", source: "France 24", url: "https://www.france24.com/en/video/20260504-far-beyond-eu-and-nato-armenia-hosts-epc-summit-cast-as-gateway-in-shifting-diplomatic-order-1", time: "2026-05-04T12:57:34Z" },
-      { title: "Canada to be first non-European nation at EPC summit as Carney seeks allies", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/canada-first-non-european-nation-epc-summit-mark-carney-allies-trump", time: "2026-05-03T14:23:18Z" },
-      { title: "Planning a World Cup Watch Party at a Bar? The ‘FIFA Police’ Are Lurking.", source: "New York Times", url: "https://www.nytimes.com/2026/05/02/world/canada/fifa-world-cup-copyright.html", time: "2026-05-02T20:13:08Z" },
-      { title: "Most Canadians Support MAID. But the Issue of Access for People With Mental Illness Is Fraught.", source: "New York Times", url: "https://www.nytimes.com/2026/05/02/world/canada/assisted-death-mental-illness-canada.html", time: "2026-05-02T10:00:02Z" },
-      { title: "After Canada loosens citizenship requirements, thousands of people apply", source: "NPR", url: "https://www.npr.org/2026/05/01/nx-s1-5804529/after-canada-loosens-citizenship-requirements-thousands-of-people-apply", time: "2026-05-01T20:26:11Z" },
-      { title: "In Canada, Alberta's 'Maple MAGA' dream of independence", source: "France 24", url: "https://www.france24.com/en/tv-shows/reporters/20260501-canada-alberta-separatism-maple-maga-dream-of-independence", time: "2026-05-01T11:39:04Z" },
-      { title: "Palestine FA chief hits out at Israel federation VP at FIFA Congress", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/30/palestine-fa-chief-hits-out-at-israel-federation-vp-at-fifa-congress?traffic_source=rss", time: "2026-04-30T21:53:27Z" },
-      { title: "Trump gives go-ahead to major new Canada-US oil pipeline", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/donald-trump-wyoming-montana-joe-biden-canada-b2968478.html", time: "2026-04-30T21:19:34Z" },
-      { title: "Canada to create powerful financial crimes agency as US weakens its approach", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/30/canada-financial-crimes-agency-us-weakens-approach-cryptocurrency-atms-money-laundering", time: "2026-04-30T12:07:16Z" },
-      { title: "Canada will be the headquarters for a future NATO-linked financial institution, official says", source: "ABC News", url: "https://abcnews.com/International/wireStory/canada-headquarters-future-nato-linked-financial-institution-official-132516379", time: "2026-04-30T05:38:57Z" },
-      { title: "Iranian officials denied entry into Canada for FIFA meeting weeks before World Cup", source: "Sky News", url: "https://news.sky.com/story/iranian-officials-denied-entry-into-canada-for-fifa-meeting-just-weeks-before-start-of-world-cup-13538253", time: "2026-04-30T02:18:00Z" },
-      { title: "Our time is short. These three didn't waste it on division", source: "Axios", url: "https://www.axios.com/2026/04/30/bipartisanship-america-ben-sasse-buffalo-sabres-king-charles", time: "2026-04-30T01:25:04Z" },
     ]
   },
   {
@@ -4292,6 +4268,35 @@ const locations = [
       { title: "From railways to energy — five strategic projects linking Gulf states", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/4/30/from-railways-to-energy-five-strategic-projects-linking-gulf?traffic_source=rss", time: "2026-04-30T14:50:54Z" },
       { title: "Sudanese commander accuses UAE of leading war plan to divide country", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260430-sudanese-commander-accuses-uae-of-leading-war-plan-to-divide-country/", time: "2026-04-30T12:02:00Z" },
       { title: "Drug kingpin jailed after extradition from Dubai", source: "Sky News", url: "https://news.sky.com/story/key-gangster-in-drug-operation-jailed-after-extradition-to-scotland-from-dubai-13538408", time: "2026-04-30T11:06:00Z" },
+    ]
+  },
+  {
+    name: "Ottawa", country: "Canada",
+    lat: 45.4215, lng: -75.6972,
+    category: "political",
+    articles: [
+      { title: "Reclaiming the Name of the Black Hero Who Inspired ‘Uncle Tom’s Cabin’", source: "New York Times", url: "https://www.nytimes.com/2026/05/06/world/canada/uncle-toms-cabin-ontario-josiah-henson.html", time: "2026-05-06T09:00:26Z" },
+      { title: "Search called off for Australian hiker missing in rugged Canadian national park", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/06/missing-hiker-canada-search-called-off-denise-williams", time: "2026-05-06T01:00:06Z" },
+      { title: "Louise Arbour Named as Canada’s Governor General", source: "New York Times", url: "https://www.nytimes.com/2026/05/05/world/canada/canada-louis-arbour-governor-general.html", time: "2026-05-05T21:57:32Z" },
+      { title: "Alberta separatists submit 300,000 signatures to push independence referendum", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/canada-voting-data-breach-separatists", time: "2026-05-05T17:49:26Z" },
+      { title: "Carney appoints former supreme court judge as Canada’s new governor general", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/05/carney-appoints-louise-arbor-canada-governor-general", time: "2026-05-05T16:23:50Z" },
+      { title: "Canadian prime minister says Europe will anchor world order", source: "NPR", url: "https://www.npr.org/2026/05/05/nx-s1-5810533/canadian-prime-minister-says-europe-will-anchor-world-order", time: "2026-05-05T10:49:43Z" },
+      { title: "Deaths rising in aftermath of Western aid cuts, relief agencies say", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-deaths-rising-in-aftermath-of-western-aid-cuts-relief-agencies-say/", time: "2026-05-05T08:45:00Z" },
+      { title: "Separatist group tries to trigger referendum on province leaving Canada", source: "Sky News", url: "https://news.sky.com/story/separatist-group-tries-to-trigger-referendum-on-province-leaving-canada-13540307", time: "2026-05-05T08:28:00Z" },
+      { title: "Alberta separatist group says it has enough signatures to trigger referendum on leaving Canada", source: "ABC News", url: "https://abcnews.com/International/wireStory/alberta-separatist-group-signatures-trigger-referendum-leaving-canada-132648409", time: "2026-05-05T05:46:56Z" },
+      { title: "‘Dangerous escalation’: World condemns Iran after attacks on UAE", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/dangerous-escalation-world-condemns-iran-after-attacks-on-uae?traffic_source=rss", time: "2026-05-05T03:38:53Z" },
+      { title: "Mark Carney Meets With European Leaders in Yerevan, Armenia", source: "New York Times", url: "https://www.nytimes.com/2026/05/04/world/canada/carney-europe-trump.html", time: "2026-05-04T15:45:03Z" },
+      { title: "‘Far beyond’ EU and NATO: Armenia hosts EPC summit cast as ‘gateway’ in shifting diplomatic order", source: "France 24", url: "https://www.france24.com/en/video/20260504-far-beyond-eu-and-nato-armenia-hosts-epc-summit-cast-as-gateway-in-shifting-diplomatic-order-1", time: "2026-05-04T12:57:34Z" },
+      { title: "Canada to be first non-European nation at EPC summit as Carney seeks allies", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/canada-first-non-european-nation-epc-summit-mark-carney-allies-trump", time: "2026-05-03T14:23:18Z" },
+      { title: "Planning a World Cup Watch Party at a Bar? The ‘FIFA Police’ Are Lurking.", source: "New York Times", url: "https://www.nytimes.com/2026/05/02/world/canada/fifa-world-cup-copyright.html", time: "2026-05-02T20:13:08Z" },
+      { title: "Most Canadians Support MAID. But the Issue of Access for People With Mental Illness Is Fraught.", source: "New York Times", url: "https://www.nytimes.com/2026/05/02/world/canada/assisted-death-mental-illness-canada.html", time: "2026-05-02T10:00:02Z" },
+      { title: "After Canada loosens citizenship requirements, thousands of people apply", source: "NPR", url: "https://www.npr.org/2026/05/01/nx-s1-5804529/after-canada-loosens-citizenship-requirements-thousands-of-people-apply", time: "2026-05-01T20:26:11Z" },
+      { title: "In Canada, Alberta's 'Maple MAGA' dream of independence", source: "France 24", url: "https://www.france24.com/en/tv-shows/reporters/20260501-canada-alberta-separatism-maple-maga-dream-of-independence", time: "2026-05-01T11:39:04Z" },
+      { title: "Palestine FA chief hits out at Israel federation VP at FIFA Congress", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/4/30/palestine-fa-chief-hits-out-at-israel-federation-vp-at-fifa-congress?traffic_source=rss", time: "2026-04-30T21:53:27Z" },
+      { title: "Trump gives go-ahead to major new Canada-US oil pipeline", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/donald-trump-wyoming-montana-joe-biden-canada-b2968478.html", time: "2026-04-30T21:19:34Z" },
+      { title: "Canada to create powerful financial crimes agency as US weakens its approach", source: "The Guardian", url: "https://www.theguardian.com/world/2026/apr/30/canada-financial-crimes-agency-us-weakens-approach-cryptocurrency-atms-money-laundering", time: "2026-04-30T12:07:16Z" },
+      { title: "Canada will be the headquarters for a future NATO-linked financial institution, official says", source: "ABC News", url: "https://abcnews.com/International/wireStory/canada-headquarters-future-nato-linked-financial-institution-official-132516379", time: "2026-04-30T05:38:57Z" },
+      { title: "Iranian officials denied entry into Canada for FIFA meeting weeks before World Cup", source: "Sky News", url: "https://news.sky.com/story/iranian-officials-denied-entry-into-canada-for-fifa-meeting-just-weeks-before-start-of-world-cup-13538253", time: "2026-04-30T02:18:00Z" },
     ]
   },
   {
@@ -4378,6 +4383,33 @@ const locations = [
     ]
   },
   {
+    name: "Pyongyang", country: "North Korea",
+    lat: 39.0392, lng: 125.7625,
+    category: "conflict",
+    articles: [
+      { title: "North Korea not bound to any treaty on non-proliferation of nuclear weapons, KCNA reports", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-not-bound-to-any-treaty-on-non-proliferation-of-nuclear-weapons-kcna-reports", time: "2026-05-07T01:35:42Z" },
+      { title: "North Korea says it is not bound by any treaty on nuclear non-proliferation", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/7/north-korea-says-it-is-not-bound-by-any-treaty-on-nuclear-non-proliferation?traffic_source=rss", time: "2026-05-07T00:55:08Z" },
+      { title: "North Korea says it is not bound by nuclear non-proliferation treaty", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-says-it-is-not-bound-by-nuclear-non-proliferation-treaty", time: "2026-05-06T23:47:00Z" },
+      { title: "North Korea revises constitution to drop references to unification of Korean Peninsula", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-revises-constitution-to-drop-references-to-unification-of-korean-peninsula", time: "2026-05-06T06:40:37Z" },
+      { title: "North Korea drops references to unification from Constitution", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-drops-references-to-unification-from-constitution", time: "2026-05-06T06:40:00Z" },
+      { title: "What do a teenager's clothes tell us about North Korea's future?", source: "BBC News", url: "https://www.bbc.com/news/videos/c072k1x1rylo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T23:58:58Z" },
+      { title: "Dressed for succession: What Kim Ju Ae's outfits tell us about North Korea", source: "BBC News", url: "https://www.bbc.com/news/articles/cy82x9wve2xo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T22:44:35Z" },
+      { title: "Trump’s latest threat to ‘blow away’ Iran shows how few options he really has", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/trump-iran-threat-nuclear-war-russia-iran-b2970596.html", time: "2026-05-05T13:07:25Z" },
+      { title: "Pyongyang calling: North Korea shows off own-brand phones", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/pyongyang-calling-north-korea-shows-off-own-brand-phones", time: "2026-05-05T10:12:00Z" },
+      { title: "North Korean women’s club to play rare football match in the South", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/4/north-korean-womens-club-to-play-rare-football-match-in-the-south?traffic_source=rss", time: "2026-05-04T06:27:48Z" },
+      { title: "Why a 5-year defence pact between North Korea and Russia could make China uneasy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3352265/why-5-year-defence-pact-between-north-korea-and-russia-could-make-china-uneasy?utm_source=rss_feed", time: "2026-05-03T14:00:08Z" },
+      { title: "North Korea calls US cyber threat claims a fabrication, warns of countermeasures", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-calls-us-cyber-threat-claims-a-fabrication-warns-of-countermeasures", time: "2026-05-02T22:59:04Z" },
+      { title: "North Korea calls US cyber threat claims a fabrication, warns of countermeasures", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-calls-us-cyber-threat-claims-a-fabrication-warns-of-countermeasures", time: "2026-05-02T22:59:04Z" },
+      { title: "North Korea's Kim casts youth as vanguard of state goals amid Russia war", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-koreas-kim-casts-youth-as-vanguard-of-state-goals-amid-russia-war", time: "2026-05-02T22:29:10Z" },
+      { title: "North Korea’s Kim casts youth as vanguard of state goals amid Russia war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-koreas-kim-casts-youth-as-vanguard-of-state-goals-amid-russia-war", time: "2026-05-02T22:29:10Z" },
+      { title: "From life in North Korea to pink hair dye: K-pop band 1VERSE spills all", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260501-from-life-in-north-korea-to-pink-hair-dye-k-pop-band-1verse-spills-all", time: "2026-05-01T12:08:26Z" },
+      { title: "North Korea faces a ‘severe’ drought, state media reports", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/05/01/2003856580", time: "2026-05-01T00:00:00Z" },
+      { title: "How North Korea is supporting Putin’s war in Ukraine", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/how-north-korea-is-supporting-putins-war-in-ukraine", time: "2026-04-30T15:04:00Z" },
+      { title: "At least 358 executed under North Korean leader Kim Jong Un: Rights group", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/at-least-358-executed-under-north-korean-leader-kim-jong-un-rights-group", time: "2026-04-30T09:52:00Z" },
+      { title: "North Korea faces severe drought: State media", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-faces-severe-drought-state-media", time: "2026-04-30T02:30:00Z" },
+    ]
+  },
+  {
     name: "Kampala", country: "Uganda",
     lat: 0.3476, lng: 32.5825,
     category: "political",
@@ -4452,31 +4484,6 @@ const locations = [
       { title: "Israeli navy intercepts Gaza aid flotilla amid reported interference near Greece", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260430-israeli-navy-intercepts-gaza-aid-flotilla-amid-reported-interference-near-greece/", time: "2026-04-30T07:49:17Z" },
       { title: "A synagogue helped Palestinians raise money for Gaza, and found common ground over falafel", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-894652", time: "2026-04-30T03:05:41Z" },
       { title: "Libya says 17 migrants perish at sea, nine missing feared dead", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894651", time: "2026-04-30T02:26:26Z" },
-    ]
-  },
-  {
-    name: "Pyongyang", country: "North Korea",
-    lat: 39.0392, lng: 125.7625,
-    category: "conflict",
-    articles: [
-      { title: "North Korea says it is not bound by nuclear non-proliferation treaty", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-says-it-is-not-bound-by-nuclear-non-proliferation-treaty", time: "2026-05-06T23:47:00Z" },
-      { title: "North Korea revises constitution to drop references to unification of Korean Peninsula", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-revises-constitution-to-drop-references-to-unification-of-korean-peninsula", time: "2026-05-06T06:40:37Z" },
-      { title: "North Korea drops references to unification from Constitution", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-drops-references-to-unification-from-constitution", time: "2026-05-06T06:40:00Z" },
-      { title: "What do a teenager's clothes tell us about North Korea's future?", source: "BBC News", url: "https://www.bbc.com/news/videos/c072k1x1rylo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T23:58:58Z" },
-      { title: "Dressed for succession: What Kim Ju Ae's outfits tell us about North Korea", source: "BBC News", url: "https://www.bbc.com/news/articles/cy82x9wve2xo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T22:44:35Z" },
-      { title: "Trump’s latest threat to ‘blow away’ Iran shows how few options he really has", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/trump-iran-threat-nuclear-war-russia-iran-b2970596.html", time: "2026-05-05T13:07:25Z" },
-      { title: "Pyongyang calling: North Korea shows off own-brand phones", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/pyongyang-calling-north-korea-shows-off-own-brand-phones", time: "2026-05-05T10:12:00Z" },
-      { title: "North Korean women’s club to play rare football match in the South", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/4/north-korean-womens-club-to-play-rare-football-match-in-the-south?traffic_source=rss", time: "2026-05-04T06:27:48Z" },
-      { title: "Why a 5-year defence pact between North Korea and Russia could make China uneasy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3352265/why-5-year-defence-pact-between-north-korea-and-russia-could-make-china-uneasy?utm_source=rss_feed", time: "2026-05-03T14:00:08Z" },
-      { title: "North Korea calls US cyber threat claims a fabrication, warns of countermeasures", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-korea-calls-us-cyber-threat-claims-a-fabrication-warns-of-countermeasures", time: "2026-05-02T22:59:04Z" },
-      { title: "North Korea calls US cyber threat claims a fabrication, warns of countermeasures", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-calls-us-cyber-threat-claims-a-fabrication-warns-of-countermeasures", time: "2026-05-02T22:59:04Z" },
-      { title: "North Korea's Kim casts youth as vanguard of state goals amid Russia war", source: "Straits Times", url: "https://www.straitstimes.com/asia/north-koreas-kim-casts-youth-as-vanguard-of-state-goals-amid-russia-war", time: "2026-05-02T22:29:10Z" },
-      { title: "North Korea’s Kim casts youth as vanguard of state goals amid Russia war", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-koreas-kim-casts-youth-as-vanguard-of-state-goals-amid-russia-war", time: "2026-05-02T22:29:10Z" },
-      { title: "From life in North Korea to pink hair dye: K-pop band 1VERSE spills all", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260501-from-life-in-north-korea-to-pink-hair-dye-k-pop-band-1verse-spills-all", time: "2026-05-01T12:08:26Z" },
-      { title: "North Korea faces a ‘severe’ drought, state media reports", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/05/01/2003856580", time: "2026-05-01T00:00:00Z" },
-      { title: "How North Korea is supporting Putin’s war in Ukraine", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/how-north-korea-is-supporting-putins-war-in-ukraine", time: "2026-04-30T15:04:00Z" },
-      { title: "At least 358 executed under North Korean leader Kim Jong Un: Rights group", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/at-least-358-executed-under-north-korean-leader-kim-jong-un-rights-group", time: "2026-04-30T09:52:00Z" },
-      { title: "North Korea faces severe drought: State media", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-faces-severe-drought-state-media", time: "2026-04-30T02:30:00Z" },
     ]
   },
   {
