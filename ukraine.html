@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:36 UTC, 9 May 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:27 UTC, 9 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 May 2026</div>
@@ -116,6 +116,8 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Scaled-back Victory Day parade held in Moscow", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/9/scaled-back-victory-day-parade-held-in-moscow?traffic_source=rss", time: "2026-05-09T10:04:45Z" },
+      { title: "Russia will always be victorious, says Putin at scaled-back Victory Day parade", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/09/russia-putin-moscow-victory-day-parade-scaled-back", time: "2026-05-09T09:55:24Z" },
       { title: "Russia Has Lost More Than 350,000 Soldiers, New Estimate Finds", source: "New York Times", url: "https://www.nytimes.com/2026/05/09/world/europe/russia-ukraine-war-death-toll.html", time: "2026-05-09T09:27:48Z" },
       { title: "Moscow marks Victory Day with a Red Square parade under tight security", source: "NPR", url: "https://www.npr.org/2026/05/09/nx-s1-5816876/russia-victory-day", time: "2026-05-09T09:24:45Z" },
       { title: "Venice Biennale art exhibition jury quits over Israeli and Russian participation", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/venice-biennale-art-jury-resigns-israel-russia-b2973486.html", time: "2026-05-09T09:17:42Z" },
@@ -361,7 +363,6 @@ const locations = [
       { title: "Germany says US troop withdrawal 'foreseeable' as Nato seeks clarification", source: "BBC News", url: "https://www.bbc.com/news/articles/cd9pn541jjlo?at_medium=RSS&at_campaign=rss", time: "2026-05-02T16:35:18Z" },
       { title: "Berlin urges stronger European defence", source: "France 24", url: "https://www.france24.com/en/berlin-urges-stronger-european-defence", time: "2026-05-02T14:37:33Z" },
       { title: "NATO assessing details of US troop withdrawal from Germany", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/2/nato-assessing-details-of-us-troop-withdrawal-from-germany?traffic_source=rss", time: "2026-05-02T11:34:23Z" },
-      { title: "Trump to downsize U.S. military presence in Germany", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/05/01/us-troops-germany-trump-merz/", time: "2026-05-02T09:55:07Z" },
     ]
   },
   {
@@ -404,7 +405,6 @@ const locations = [
       { title: "U.S. to withdraw 5,000 troops from Germany in next 6 to12 months", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-to-withdraw-5000-troops-from-germany-in-next-6-to12-months", time: "2026-05-02T15:36:36Z" },
       { title: "Europe rattled by 'disastrous trend' as Trump pulls 5,000 troops out of Germany", source: "NBC News", url: "https://www.nbcnews.com/world/europe/europe-rattled-disastrous-trend-trump-pulls-5000-troops-germany-rcna343189", time: "2026-05-02T14:20:09Z" },
       { title: "Iran-US war latest: Germany responds to Trump’s decision to withdraw 5,000 troops as dispute deepens", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-germany-israel-strait-hormuz-b2969401.html", time: "2026-05-02T11:09:23Z" },
-      { title: "Pentagon says it will downsize U.S. military presence in Germany", source: "Washington Post", url: "https://www.washingtonpost.com/national-security/2026/05/01/us-troops-germany-trump-merz/", time: "2026-05-02T09:55:07Z" },
     ]
   },
   {
@@ -471,21 +471,22 @@ const locations = [
     ]
   },
   {
+    name: "Donetsk", country: "Ukraine",
+    lat: 48.0159, lng: 37.8029,
+    category: "conflict",
+    articles: [
+      { title: "Three-day Russia-Ukraine ceasefire begins as Moscow holds Victory Day parade – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/09/peter-magyar-hungary-russia-ukraine-ceasefire-moscow-victory-day-parade-europe-latest-news-updates", time: "2026-05-09T10:21:37Z" },
+      { title: "Ukrainian general’s rise from far-right wing agitator to war hero", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-war-general-andrii-biletskyi-far-right-russia-putin-b2950126.html", time: "2026-05-03T07:53:52Z" },
+      { title: "Ukraine-Russia war latest: Fighting escalates around key Ukrainian city as Putin’s troops push for new foothold", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-conflict-map-b2969614.html", time: "2026-05-03T06:49:21Z" },
+    ]
+  },
+  {
     name: "Black Sea", country: "International",
     lat: 43.0, lng: 35.0,
     category: "conflict",
     articles: [
       { title: "Poisonous black rain falls in Russia as Ukraine strikes oil facilities", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/04/russia-ukraine-strikes-oil-disaster/", time: "2026-05-04T09:00:00Z" },
       { title: "The world needs a Hormuz fertilizer initiative now", source: "The Hill", url: "https://thehill.com/opinion/international/5859661-hormuz-blockade-food-crisis/", time: "2026-05-02T12:00:00Z" },
-    ]
-  },
-  {
-    name: "Donetsk", country: "Ukraine",
-    lat: 48.0159, lng: 37.8029,
-    category: "conflict",
-    articles: [
-      { title: "Ukrainian general’s rise from far-right wing agitator to war hero", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-war-general-andrii-biletskyi-far-right-russia-putin-b2950126.html", time: "2026-05-03T07:53:52Z" },
-      { title: "Ukraine-Russia war latest: Fighting escalates around key Ukrainian city as Putin’s troops push for new foothold", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-conflict-map-b2969614.html", time: "2026-05-03T06:49:21Z" },
     ]
   },
   {
