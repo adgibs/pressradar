@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:27 UTC, 10 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:35 UTC, 10 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">10 May 2026</div>
@@ -116,7 +116,12 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Can Asian economies cope with the fallout from the Iran war?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/counting-the-cost/2026/5/10/can-asian-economies-cope-with-the-fallout-from-the-iran-war?traffic_source=rss", time: "2026-05-10T13:11:10Z" },
       { title: "Iranian regime relying on foreign militias to bolster security efforts, suppress protests - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-895664", time: "2026-05-10T13:07:02Z" },
+      { title: "Iran sends response to US proposal to end war via mediator Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/iran-sends-response-to-us-proposal-to-end-war-via-mediator-pakistan?traffic_source=rss", time: "2026-05-10T12:40:50Z" },
+      { title: "Iran sends response to US proposal via Pakistan, states agency says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-sends-response-us-proposal", time: "2026-05-10T12:38:39Z" },
+      { title: "Iran warns against complying with US sanctions as Gulf attacks reported", source: "BBC News", url: "https://www.bbc.com/news/articles/clypgz9e5pmo?at_medium=RSS&at_campaign=rss", time: "2026-05-10T12:22:06Z" },
+      { title: "US-Iran ceasefire under strain as Gulf states report drone attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/us-iran-ceasefire-under-strain-as-gulf-states-report-drone-attacks?traffic_source=rss", time: "2026-05-10T12:16:51Z" },
       { title: "UAE says it intercepted two Iranian drones", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-intercepts-iranian-drones", time: "2026-05-10T11:15:36Z" },
       { title: "China's free ride: How Beijing turned the Middle East war into a military laboratory - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-895656", time: "2026-05-10T11:02:20Z" },
       { title: "Saudi Aramco profits jump despite conflict in Middle East", source: "The Guardian", url: "https://www.theguardian.com/business/2026/may/10/saudi-aramco-profits-jump-despite-conflict-middle-east", time: "2026-05-10T11:01:36Z" },
@@ -145,6 +150,7 @@ const locations = [
       { title: "IRGC warns against interference with Iranian commercial vessels", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-warns-against-interference-iranian-commercial-vessels", time: "2026-05-10T04:48:30Z" },
       { title: "Iran-US war latest: Tehran warns of ‘heavy assault’ if ships attacked as Trump awaits response to peace proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strait-of-hormuz-ceasefire-b2973713.html", time: "2026-05-10T04:20:54Z" },
       { title: "The Iran war has made jet fuel twice as expensive. Should we be flying with cooking oil instead?", source: "The Independent", url: "https://www.independent.co.uk/climate-change/news/jet-fuel-shortage-sustainale-aviation-cooking-oil-iran-war-b2972736.html", time: "2026-05-10T03:30:36Z" },
+      { title: "Iran's response to U.S. proposal to end war sent via Pakistan, state media says", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-10/ty-article-live/36-killed-in-lebanon-by-israeli-airstrikes-over-past-day-health-ministry-says/0000019e-0fd8-db10-a3bf-ffdb07a80004", time: "2026-05-10T03:14:40Z" },
       { title: "Trump collides with reality in latest Iran standoff", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-10/ty-article/.premium/reality-lags-behind-trumps-diplomatic-claims-on-iran-talks/0000019e-0e5f-d222-a19f-5fdf778d0000", time: "2026-05-10T03:00:39Z" },
       { title: "Iran-US war latest: Tehran warns of ‘heavy assault’ if ships attacked as Trump awaits response to peace proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-ceasefire-oil-strait-of-hormuz-b2973463.html", time: "2026-05-10T02:32:14Z" },
       { title: "IRGC navy threatens ‘heavy attack’ on US assets if oil tankers come under fire", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-10-2026/", time: "2026-05-10T02:19:01Z" },
@@ -602,11 +608,6 @@ const locations = [
       { title: "Concern for jailed Iranian Nobel laureate as brother fears she is dying", source: "BBC News", url: "https://www.bbc.com/news/articles/c362pd8epw9o?at_medium=RSS&at_campaign=rss", time: "2026-05-03T14:44:04Z" },
       { title: "Trump: Iran has 'not yet paid a big enough price'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-iran-has-not-yet-paid-big-enough-price", time: "2026-05-03T13:43:30Z" },
       { title: "US to cut troops in Germany as Iran war spat deepens", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/3/us-to-cut-troops-in-germany-as-iran-war-spat-deepens?traffic_source=rss", time: "2026-05-03T13:38:56Z" },
-      { title: "Israel’s inevitable failure to disarm Hezbollah", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-israels-inevitable-failure-to-disarm-hezbollah/", time: "2026-05-03T13:18:07Z" },
-      { title: "Iran executes man convicted of killing security officer during 2022 protests - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894941", time: "2026-05-03T13:06:27Z" },
-      { title: "Was the Iran war the final blow in the collapse of Spirit Airlines?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/3/was-the-iran-war-the-final-blow-in-the-collapse-of-spirit-airlines?traffic_source=rss", time: "2026-05-03T13:03:59Z" },
-      { title: "Washington must not fall for Iran’s ceasefire and nuclear delay tactics - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-894749", time: "2026-05-03T13:00:00Z" },
-      { title: "Iran hangs man accused of killing security forces volunteer during 2022 protests", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-hangs-man-accused-of-killing-security-forces-volunteer-during-2022-protests/", time: "2026-05-03T12:38:39Z" },
     ]
   },
   {
@@ -615,6 +616,7 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "'Historic, unprecedented': IDF, US ran covert rescue operations from Iraq during Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-895673", time: "2026-05-10T13:31:41Z" },
+      { title: "AG says High Court should strike down Gofman’s appointment as next Mossad director", source: "Times of Israel", url: "https://www.timesofisrael.com/ag-says-high-court-should-strike-down-gofmans-appointment-as-next-mossad-director/", time: "2026-05-10T13:01:55Z" },
       { title: "The Manhattan bookstore that wouldn't host her: Lihi Lapid on what October 7 did to Israeli authors", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-podcast/article-895662", time: "2026-05-10T12:23:56Z" },
       { title: "Israel kills two paramedics in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/two-paramedics-killed-israeli-strikes-southern-lebanon", time: "2026-05-10T11:53:25Z" },
       { title: "Passengers on hantavirus-hit cruise ship begin to disembark on Spain’s Canary Islands", source: "Times of Israel", url: "https://www.timesofisrael.com/passengers-on-hantavirus-hit-cruise-ship-begin-to-disembark-on-spains-canary-islands/", time: "2026-05-10T11:46:29Z" },
@@ -1097,13 +1099,6 @@ const locations = [
       { title: "A note to our readers regarding The Times of Israel’s guidelines on AI", source: "Times of Israel", url: "https://www.timesofisrael.com/a-note-to-our-readers-regarding-the-times-of-israels-guidelines-on-ai/", time: "2026-05-03T14:35:50Z" },
       { title: "IDF fire kills Palestinian, wounds four in Nablus, Ramallah officials say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-03/ty-article/.premium/idf-fire-kills-palestinian-wounds-four-in-nablus-ramallah-officials-say/0000019d-ede3-d7ce-a7dd-fff7893d0000", time: "2026-05-03T14:14:13Z" },
       { title: "High Court cites ‘rampant’ crime in face of Levin’s refusal to appoint judges", source: "Times of Israel", url: "https://www.timesofisrael.com/high-court-cites-rampant-crime-in-face-of-levins-refusal-to-appoint-judges/", time: "2026-05-03T13:59:49Z" },
-      { title: "It does not make sense to invest more Arab resources in a US alliance", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/5/3/it-does-not-make-sense-to-invest-more-arab-resources-in-a-us-alliance?traffic_source=rss", time: "2026-05-03T13:31:34Z" },
-      { title: "Exclusive: US and Israel reject joint Palestinian proposal for Gaza after meetings", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/exclusive-us-israel-reject-joint-palestinian-proposal-gaza-after-meetings", time: "2026-05-03T13:30:31Z" },
-      { title: "Netanyahu boasts of Israel’s billion-dollar military investments", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/3/netanyahu-boasts-of-israels-billion-dollar-military-investments?traffic_source=rss", time: "2026-05-03T13:27:42Z" },
-      { title: "Netanyahu says project to counter drone threat underway, but ‘will take time’", source: "Times of Israel", url: "https://www.timesofisrael.com/netanyahu-says-project-to-counter-drone-threat-underway-but-will-take-time/", time: "2026-05-03T13:25:37Z" },
-      { title: "Police block roads around Meron ahead of Lag B’Omer as pilgrimage canceled", source: "Times of Israel", url: "https://www.timesofisrael.com/police-block-roads-around-meron-ahead-of-lag-bomer-as-pilgrimage-canceled/", time: "2026-05-03T13:03:07Z" },
-      { title: "Israel's airline industry left in limbo amid fragile cease-fire with Iran", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-03/ty-article/.premium/israels-airline-industry-left-in-limbo-amid-fragile-cease-fire-with-iran/0000019d-ec91-dd9a-a79d-ecf9a7d10000", time: "2026-05-03T12:51:38Z" },
-      { title: "Israel approves purchase of fighter jets from the US", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/3/israel-approves-purchase-of-fighter-jets-from-the-us?traffic_source=rss", time: "2026-05-03T12:36:48Z" },
     ]
   },
   {
@@ -1501,9 +1496,6 @@ const locations = [
       { title: "Germany urges Iran to reopen Hormuz, says nothing about US blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/germany-urges-iran-reopen-hormuz-says-nothing-about-us-blockade", time: "2026-05-03T16:08:26Z" },
       { title: "Iran sets one-month deadline for US to end naval blockade, wars in Iran, Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-iran-sets-one-month-deadline-for-us-to-end-naval-blockade-wars-in-iran-lebanon/", time: "2026-05-03T15:32:04Z" },
       { title: "Kuwait says it is increasing oil production", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kuwait-says-it-increasing-oil-production", time: "2026-05-03T14:27:32Z" },
-      { title: "Iran-US war latest: Tehran offers Trump one-month deadline to end conflict and open Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-ceasefire-germany-strait-of-hormuz-b2969604.html", time: "2026-05-03T13:28:58Z" },
-      { title: "Apple… The Digital Strait of Hormuz", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-apple-the-digital-strait-of-hormuz/", time: "2026-05-03T13:24:26Z" },
-      { title: "OPEC+ announces symbolic oil output rise during Strait of Hormuz closure", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/3/opec-announces-symbolic-oil-output-rise-during-strait-of-hormuz-closure?traffic_source=rss", time: "2026-05-03T12:59:12Z" },
     ]
   },
   {
@@ -1815,10 +1807,6 @@ const locations = [
       { title: "Spain demands release of Gaza flotilla activists ‘held illegally’ by Israel", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/03/gaza-flotilla-activists-spain-brazil-appear-israel-court", time: "2026-05-03T14:18:42Z" },
       { title: "Court extends detention of 2 Gaza flotilla activists accused of Hamas links", source: "Times of Israel", url: "https://www.timesofisrael.com/court-extends-detention-of-2-gaza-flotilla-activists-accused-of-hamas-links/", time: "2026-05-03T14:12:26Z" },
       { title: "Who are the two Gaza flotilla activists abducted by Israel?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/3/who-are-the-two-gaza-flotilla-activists-abducted-by-israel?traffic_source=rss", time: "2026-05-03T14:00:03Z" },
-      { title: "High Court presses Justice Minister's lawyer over failure to fill judicial vacancies", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894945", time: "2026-05-03T13:29:59Z" },
-      { title: "Palestinians mark World Press Freedom Day in Gaza", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-palestinians-mark-world-press-freedom-day-in-gaza/", time: "2026-05-03T13:05:38Z" },
-      { title: "Fresh Israeli attacks in occupied West Bank kill 1 Palestinian, injure several others", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-fresh-israeli-attacks-in-occupied-west-bank-kill-1-palestinian-injure-several-others/", time: "2026-05-03T12:49:40Z" },
-      { title: "Israel extends detention of Gaza flotilla activists as Spain and Brazil call detention illegal", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/global-sumud-flotilla-israel-arrests-b2969715.html", time: "2026-05-03T12:31:57Z" },
     ]
   },
   {
@@ -1951,7 +1939,6 @@ const locations = [
       { title: "Rubio expected to meet with Leo amid pope’s standoff with Trump on Iran", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/03/rubio-pope-trump-vatican/", time: "2026-05-03T19:36:02Z" },
       { title: "Marco Rubio heading to Italy to speak with Pope Leo amid rising tensions with Trump admin", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pope-leo-marco-rubio-feud-trump-vatican-b2969755.html", time: "2026-05-03T15:30:41Z" },
       { title: "Trump reviewing Iran peace proposal as congressional deadline passes", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-strait-of-hormuz-israel-lebanon-ceasefire/", time: "2026-05-03T14:14:39Z" },
-      { title: "US DoD, tech giants bid to make armed forces 'AI-first'", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-894940", time: "2026-05-03T12:47:46Z" },
     ]
   },
   {
@@ -2049,6 +2036,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "IDF chief pushes Knesset to help draft ultra-Orthodox as manpower concerns grow", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895689", time: "2026-05-10T15:37:49Z" },
       { title: "Attorney-General calls to disqualify Roman Gofman from serving as next Mossad head", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895674", time: "2026-05-10T13:48:55Z" },
       { title: "Qatari ship struck, ISIS claims responsibility for Shi'ite cleric assasination", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-895671", time: "2026-05-10T13:20:55Z" },
       { title: "What's Israel’s role in Judaism? Zionists' duty is to know - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895310", time: "2026-05-10T09:40:06Z" },
@@ -2109,8 +2097,6 @@ const locations = [
       { title: "Four Palestinians charged for planning ISIS-inspired attacks across Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/four-palestinians-charged-for-planning-isis-inspired-attacks-across-israel/", time: "2026-05-03T16:52:29Z" },
       { title: "Man, 36, to be charged for assaulting French nun in Jerusalem", source: "Times of Israel", url: "https://www.timesofisrael.com/man-36-to-be-charged-for-assaulting-french-nun-in-jerusalem/", time: "2026-05-03T16:52:26Z" },
       { title: "More UNWRA ties to Hamas, Global Sumud Flotilla details emerge", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-894951", time: "2026-05-03T14:20:20Z" },
-      { title: "Israel Hofsheet petitions High Court over state benefits it says favor haredi sector", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-894943", time: "2026-05-03T13:27:49Z" },
-      { title: "Twenty-one detained as police thwart attempt to bring Passover sacrifice to Temple Mount", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-894938", time: "2026-05-03T12:48:57Z" },
     ]
   },
   {
@@ -2118,6 +2104,7 @@ const locations = [
     lat: 25.2048, lng: 55.2708,
     category: "strikes",
     articles: [
+      { title: "UAE intercepts two drones from Iran, Qatari PM warns Iran against using Hormuz as 'pressure tool'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895692", time: "2026-05-10T15:48:11Z" },
       { title: "Qatar says cargo ship hit by drone off its coast", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/cargo-vessel-qatari-waters-set-fire-drone", time: "2026-05-10T10:22:51Z" },
       { title: "UAE and Turkey leaders discuss regional issues in phone call", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-turkey-discuss-regional-issues-phone-call-1", time: "2026-05-09T15:03:48Z" },
       { title: "The myth of Gulf exceptionalism and US protection is over", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/myth-gulf-exceptionalism-and-us-protection-over", time: "2026-05-08T19:33:19Z" },
@@ -2183,6 +2170,8 @@ const locations = [
     lat: 34.5839, lng: 32.988,
     category: "uk",
     articles: [
+      { title: "Antisemitism a major or significant problem in UK, six out of every 10 Britons assert", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-895683", time: "2026-05-10T14:38:30Z" },
+      { title: "Keir Starmer's party lost big in U.K. local elections. Here's what comes next.", source: "NPR", url: "https://www.npr.org/2026/05/10/nx-s1-5817491/uk-elections-keir-starmer-resign-reform-green", time: "2026-05-10T12:27:36Z" },
       { title: "Why so many politicians hesitate to defend Jews against antisemitism - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895486", time: "2026-05-10T03:26:08Z" },
       { title: "Labour MP puts Cabinet 'on notice,' threatens to trigger leadership challenge against Starmer by Monday", source: "Fox News", url: "https://www.foxnews.com/world/labour-mp-puts-cabinet-notice-threatens-trigger-leadership-challenge-starmer-monday", time: "2026-05-10T02:02:37Z" },
       { title: "Australia’s antisemitism inquiry should alarm every Jew - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895413", time: "2026-05-09T18:03:09Z" },
@@ -2204,6 +2193,34 @@ const locations = [
       { title: "British PM Starmer to host Downing Street summit to address antisemitism", source: "Haaretz", url: "https://www.haaretz.com/jewish/2026-05-05/ty-article/british-pm-starmer-to-host-downing-street-summit-to-address-antisemitism/0000019d-f5a4-df01-a3dd-f7ad909a0000", time: "2026-05-05T01:09:27Z" },
       { title: "Ukraine-Russia war latest: Zelensky meets Starmer as UK to enter talks to join £78bn EU loan scheme for Kyiv", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-eu-loan-b2969929.html", time: "2026-05-04T04:46:56Z" },
       { title: "UK on verge of joining EU's &#163;78bn loan for Ukraine as Starmer seeks reset with Brussels", source: "Sky News", url: "https://news.sky.com/story/uk-on-verge-of-joining-eus-16378bn-loan-for-ukraine-as-starmer-seeks-reset-with-brussels-13539984", time: "2026-05-04T02:33:00Z" },
+    ]
+  },
+  {
+    name: "Damascus", country: "Syria",
+    lat: 33.5138, lng: 36.2765,
+    category: "evacuation",
+    articles: [
+      { title: "Syria appoints new cabinet as government settles into power", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895686", time: "2026-05-10T15:22:03Z" },
+      { title: "Petty clashes over a sign in Syria risk snowballing into real conflict", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895679", time: "2026-05-10T14:20:58Z" },
+      { title: "Atef Najib faces at least 10 charges in landmark Syria trial", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/atef-najib-faces-at-least-10-charges-in-landmark-syria-trial?traffic_source=rss", time: "2026-05-10T12:45:42Z" },
+      { title: "Syria sees first government reshuffle since al-Assad’s ouster: State media", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/syria-sees-first-government-reshuffle-since-al-assads-ouster-state-media?traffic_source=rss", time: "2026-05-10T08:55:12Z" },
+      { title: "Syrian President Ahmed al-Sharaa announces first cabinet reshuffle since Assad ouster - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895638", time: "2026-05-10T07:30:08Z" },
+      { title: "Syria and Lebanon make ‘significant progress’ at talks on joint interests", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/9/syria-and-lebanon-make-significant-progress-at-talks-on-joint-interests?traffic_source=rss", time: "2026-05-09T17:50:18Z" },
+      { title: "Lebanese premier, Syrian president make ‘significant progress’ on issues in Damascus meeting", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260509-lebanese-premier-syrian-president-make-significant-progress-on-issues-in-damascus-meeting/", time: "2026-05-09T17:23:36Z" },
+      { title: "Syrian president discusses security with Lebanon PM", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/syrian-president-discusses-security-lebanon-pm", time: "2026-05-09T15:47:42Z" },
+      { title: "Australian women linked to ISIS arrested, accused of slavery after Syrian return", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895469", time: "2026-05-07T15:14:52Z" },
+      { title: "Former Tunisian justice minister sentenced to 20 years in prison", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260507-former-tunisian-justice-minister-sentenced-to-20-years-in-prison/", time: "2026-05-07T11:01:55Z" },
+      { title: "A group of 13 women and children with alleged IS links has returned to Australia", source: "Sky News", url: "https://news.sky.com/story/a-group-of-13-women-and-children-with-alleged-is-links-has-returned-to-australia-13540973", time: "2026-05-07T08:01:00Z" },
+      { title: "Three women with alleged links to ISIS set to be charged after arriving in Australia", source: "Sky News", url: "https://news.sky.com/story/women-to-be-charged-with-crimes-against-humanity-and-terrorism-offences-after-return-to-australia-from-islamic-state-linked-camp-in-syria-13540973", time: "2026-05-07T08:01:00Z" },
+      { title: "Christian persecution in the Middle East, the fight over genocide claims - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895162", time: "2026-05-06T19:00:00Z" },
+      { title: "Australia says it’s ready to handle return of Isis-linked families from Syria", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/isis-family-australia-syria-brides-children-arrests-b2971431.html", time: "2026-05-06T12:32:41Z" },
+      { title: "Australian women with alleged ISIL ties returning from Syria, minister says", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/australian-women-with-alleged-isil-ties-returning-from-syria-minister-says?traffic_source=rss", time: "2026-05-06T08:21:26Z" },
+      { title: "Syria’s Suwayda: A new hub for the multibillion-dollar Captagon trade?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/syrias-suwayda-a-new-hub-for-the-multi-billion-dollar-captagon-trade?traffic_source=rss", time: "2026-05-06T07:16:17Z" },
+      { title: "Police say Australian women with alleged IS ties face charges on return from Syria", source: "NPR", url: "https://www.npr.org/2026/05/06/g-s1-120373/australian-women-return-syria", time: "2026-05-06T06:07:37Z" },
+      { title: "Australia says Islamic State-linked citizens in Syria camp plan to return home", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895244", time: "2026-05-06T05:13:31Z" },
+      { title: "IS families in Syria have booked tickets home to Australia, minister says", source: "BBC News", url: "https://www.bbc.com/news/articles/cn0pyny6jk0o?at_medium=RSS&at_campaign=rss", time: "2026-05-06T01:47:48Z" },
+      { title: "Charges flagged as women and children from IS-linked families set to fly from Syria to Australia", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/may/06/women-children-syria-families-australia-return-ntwnfb", time: "2026-05-06T01:33:32Z" },
+      { title: "Brief alcohol ban in Damascus sparks concerns about President al-Sharaa's vision for Syria", source: "Fox News", url: "https://www.foxnews.com/world/brief-alcohol-ban-damascus-sparks-concerns-about-president-al-sharaas-vision-syria", time: "2026-05-04T18:23:02Z" },
     ]
   },
   {
@@ -2229,31 +2246,6 @@ const locations = [
       { title: "Two IDF soldiers wounded in clash with Hezbollah; Israeli fire kills 17 in Lebanon over past day, officials say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-04/ty-article/.premium/two-idf-soldiers-wounded-in-clash-with-hezbollah-17-lebanese-killed-in-past-day/0000019d-f2f4-d22e-a9ff-fafe98990000", time: "2026-05-04T15:49:55Z" },
       { title: "Two killed in Israeli attack on southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/two-killed-israeli-attack-southern-lebanon", time: "2026-05-04T09:32:28Z" },
       { title: "New Israeli attacks kill at least 7 in southern Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260503-new-israeli-attacks-kill-at-least-7-in-southern-lebanon/", time: "2026-05-03T15:07:44Z" },
-    ]
-  },
-  {
-    name: "Damascus", country: "Syria",
-    lat: 33.5138, lng: 36.2765,
-    category: "evacuation",
-    articles: [
-      { title: "Syria sees first government reshuffle since al-Assad’s ouster: State media", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/syria-sees-first-government-reshuffle-since-al-assads-ouster-state-media?traffic_source=rss", time: "2026-05-10T08:55:12Z" },
-      { title: "Syrian President Ahmed al-Sharaa announces first cabinet reshuffle since Assad ouster - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-895638", time: "2026-05-10T07:30:08Z" },
-      { title: "Syria and Lebanon make ‘significant progress’ at talks on joint interests", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/9/syria-and-lebanon-make-significant-progress-at-talks-on-joint-interests?traffic_source=rss", time: "2026-05-09T17:50:18Z" },
-      { title: "Lebanese premier, Syrian president make ‘significant progress’ on issues in Damascus meeting", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260509-lebanese-premier-syrian-president-make-significant-progress-on-issues-in-damascus-meeting/", time: "2026-05-09T17:23:36Z" },
-      { title: "Syrian president discusses security with Lebanon PM", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/syrian-president-discusses-security-lebanon-pm", time: "2026-05-09T15:47:42Z" },
-      { title: "Australian women linked to ISIS arrested, accused of slavery after Syrian return", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895469", time: "2026-05-07T15:14:52Z" },
-      { title: "Former Tunisian justice minister sentenced to 20 years in prison", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260507-former-tunisian-justice-minister-sentenced-to-20-years-in-prison/", time: "2026-05-07T11:01:55Z" },
-      { title: "A group of 13 women and children with alleged IS links has returned to Australia", source: "Sky News", url: "https://news.sky.com/story/a-group-of-13-women-and-children-with-alleged-is-links-has-returned-to-australia-13540973", time: "2026-05-07T08:01:00Z" },
-      { title: "Three women with alleged links to ISIS set to be charged after arriving in Australia", source: "Sky News", url: "https://news.sky.com/story/women-to-be-charged-with-crimes-against-humanity-and-terrorism-offences-after-return-to-australia-from-islamic-state-linked-camp-in-syria-13540973", time: "2026-05-07T08:01:00Z" },
-      { title: "Christian persecution in the Middle East, the fight over genocide claims - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895162", time: "2026-05-06T19:00:00Z" },
-      { title: "Australia says it’s ready to handle return of Isis-linked families from Syria", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/isis-family-australia-syria-brides-children-arrests-b2971431.html", time: "2026-05-06T12:32:41Z" },
-      { title: "Australian women with alleged ISIL ties returning from Syria, minister says", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/australian-women-with-alleged-isil-ties-returning-from-syria-minister-says?traffic_source=rss", time: "2026-05-06T08:21:26Z" },
-      { title: "Syria’s Suwayda: A new hub for the multibillion-dollar Captagon trade?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/6/syrias-suwayda-a-new-hub-for-the-multi-billion-dollar-captagon-trade?traffic_source=rss", time: "2026-05-06T07:16:17Z" },
-      { title: "Police say Australian women with alleged IS ties face charges on return from Syria", source: "NPR", url: "https://www.npr.org/2026/05/06/g-s1-120373/australian-women-return-syria", time: "2026-05-06T06:07:37Z" },
-      { title: "Australia says Islamic State-linked citizens in Syria camp plan to return home", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895244", time: "2026-05-06T05:13:31Z" },
-      { title: "IS families in Syria have booked tickets home to Australia, minister says", source: "BBC News", url: "https://www.bbc.com/news/articles/cn0pyny6jk0o?at_medium=RSS&at_campaign=rss", time: "2026-05-06T01:47:48Z" },
-      { title: "Charges flagged as women and children from IS-linked families set to fly from Syria to Australia", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/may/06/women-children-syria-families-australia-return-ntwnfb", time: "2026-05-06T01:33:32Z" },
-      { title: "Brief alcohol ban in Damascus sparks concerns about President al-Sharaa's vision for Syria", source: "Fox News", url: "https://www.foxnews.com/world/brief-alcohol-ban-damascus-sparks-concerns-about-president-al-sharaas-vision-syria", time: "2026-05-04T18:23:02Z" },
     ]
   },
   {
@@ -2299,6 +2291,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "evacuation",
     articles: [
+      { title: "Suicide bombing leaves 14 police dead in Pakistan", source: "Sky News", url: "https://news.sky.com/story/suicide-bombing-leaves-14-police-dead-in-pakistan-13542249", time: "2026-05-10T10:36:00Z" },
       { title: "Deadly car bomb attack hits checkpoint in northwest Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/10/deadly-car-bomb-attack-hits-checkpoint-in-northwest-pakistan?traffic_source=rss", time: "2026-05-10T08:21:02Z" },
       { title: "Twelve Pakistani police officers killed in car bombing, ambush in Bannu", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895639", time: "2026-05-10T07:59:10Z" },
       { title: "Two wins, two losses: What India, Pakistan have learned a year after war", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/two-wins-two-losses-what-india-pakistan-have-learned-a-year-after-war?traffic_source=rss", time: "2026-05-10T05:11:43Z" },
@@ -2487,6 +2480,16 @@ const locations = [
     ]
   },
   {
+    name: "Homs", country: "Syria",
+    lat: 34.7324, lng: 36.7137,
+    category: "strikes",
+    articles: [
+      { title: "Syria president shuffles government officials and ministers, boots brother from key post", source: "Times of Israel", url: "https://www.timesofisrael.com/syria-president-shuffles-government-officials-and-ministers-boots-brother-from-key-post/", time: "2026-05-10T13:01:47Z" },
+      { title: "French professor facing probe for creating fake Nobel-style prize - only to award it to himself", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/nobel-fraud-linguist-france-noam-chomsky-b2972353.html", time: "2026-05-07T15:12:34Z" },
+      { title: "Security or justice? Syria faces post-Assad reckoning after string of arrests", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/04/syria-justice-assad-regime-arrests-2013-tadamon-massacres", time: "2026-05-04T04:30:15Z" },
+    ]
+  },
+  {
     name: "Haifa", country: "Israel",
     lat: 32.794, lng: 34.9896,
     category: "strikes",
@@ -2511,15 +2514,6 @@ const locations = [
     articles: [
       { title: "Middle East crisis live: Iran reviewing peace proposal as Trump says a deal ‘very possible’", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/07/middle-east-crisis-iran-trump-us-negotiations-deal-war-peace-proposal-hormuz-latest-news-updates", time: "2026-05-07T11:11:12Z" },
       { title: "IDF confirms killing of Hezbollah Radwan commander in Beirut in first attack on capital in weeks", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-895380", time: "2026-05-06T20:44:32Z" },
-    ]
-  },
-  {
-    name: "Homs", country: "Syria",
-    lat: 34.7324, lng: 36.7137,
-    category: "strikes",
-    articles: [
-      { title: "French professor facing probe for creating fake Nobel-style prize - only to award it to himself", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/nobel-fraud-linguist-france-noam-chomsky-b2972353.html", time: "2026-05-07T15:12:34Z" },
-      { title: "Security or justice? Syria faces post-Assad reckoning after string of arrests", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/04/syria-justice-assad-regime-arrests-2013-tadamon-massacres", time: "2026-05-04T04:30:15Z" },
     ]
   },
   {
