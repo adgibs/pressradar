@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:26 UTC, 10 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:28 UTC, 10 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">10 May 2026</div>
@@ -118,6 +118,7 @@ const locations = [
     articles: [
       { title: "Iran's enriched uranium under US surveillance, will be extracted 'at some point', Trump says", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-895715", time: "2026-05-10T19:42:13Z" },
       { title: "Two arrested in connection to arson against former synagogue in London", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-895712", time: "2026-05-10T18:51:00Z" },
+      { title: "Iran’s two navies and the fate of its “Midget Submarines”", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260510-iran-s-two-navies-and-the-fate-of-its-midget-submarines", time: "2026-05-10T17:46:05Z" },
       { title: "Iran may ‘give assurances on the use of nuclear facilities’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/10/iran-may-give-assurances-on-the-use-of-nuclear?traffic_source=rss", time: "2026-05-10T17:29:35Z" },
       { title: "Trump says US will not allow Iran to reach enriched uranium", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/trump-says-us-will-not-allow-iran-to-reach-enriched-uranium?traffic_source=rss", time: "2026-05-10T17:22:18Z" },
       { title: "Iran responds to US proposal as drones hit Gulf nations and Netanyahu warns war ‘not over’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/10/iran-us-peace-proposal-pakistan-reported-drone-strikes-strain-ceasefire", time: "2026-05-10T17:02:10Z" },
@@ -126,6 +127,7 @@ const locations = [
       { title: "Drones target Gulf nations as Iran responds to ceasefire proposal", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/drones-target-gulf-nations-as-iran-responds-to-ceasefire-proposal", time: "2026-05-10T16:13:05Z" },
       { title: "Iran submitted response to US ceasefire proposal to Pakistani mediators, state media says", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-895690", time: "2026-05-10T15:40:09Z" },
       { title: "Iran sends response to US ceasefire proposal via Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/10/iran-sends-response-to-us-ceasefire-proposal-via-pakistan?traffic_source=rss", time: "2026-05-10T15:39:50Z" },
+      { title: "5/10: Face The Nation", source: "CBS News", url: "https://www.cbsnews.com/video/051026-face-the-nation/", time: "2026-05-10T15:30:00Z" },
       { title: "Trump faces tense China visit as Iran war overshadows key summit", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-xi-jinping-china-visit-iran-war-b2973852.html", time: "2026-05-10T15:15:46Z" },
       { title: "If Europe wants to help with Iran, it can target its proxies - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-895659", time: "2026-05-10T15:00:00Z" },
       { title: "Iran has responded to U.S. proposal in peace talks, state media reports", source: "NBC News", url: "https://www.nbcnews.com/world/iran/iran-responded-us-proposal-peace-talks-state-media-reports-rcna344404", time: "2026-05-10T14:48:48Z" },
@@ -614,8 +616,6 @@ const locations = [
       { title: "Trump’s approval ratings plummet amid Iran war and sky-high gas prices, poll finds", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-economy-gas-prices-poll-b2969836.html", time: "2026-05-03T20:43:05Z" },
       { title: "Nobel laureate Mohammadi remains in critical condition in Iran, foundation says", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-03/ty-article/nobel-laureate-mohammadi-remains-in-critical-condition-in-iran-foundation-says/0000019d-ef1e-d8c4-a9df-ff9ef72c0000", time: "2026-05-03T19:59:49Z" },
       { title: "Germany’s Merz downplays rift with Washington despite US troop drawdown", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/3/germanys-merz-downplays-rift-with-washington-despite-us-troop-drawdown?traffic_source=rss", time: "2026-05-03T19:42:55Z" },
-      { title: "Tehran on the brink: Iran’s healthcare system nears collapse amid war", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-894986", time: "2026-05-03T18:41:03Z" },
-      { title: "Report: Iran's truce offer consists of three stages, freeze on uranium enrichment for up to 15 years", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-03/ty-article/report-irans-truce-offer-includes-15-year-freeze-on-uranium-enrichment/0000019d-ee97-de32-a1df-ffdfc5fa0000", time: "2026-05-03T18:40:59Z" },
     ]
   },
   {
@@ -623,10 +623,12 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Hezbollah strikes Iron Dome battery with FPV drone", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-895734", time: "2026-05-10T22:02:48Z" },
       { title: "Israel’s Eurovision contestant Noam Bettan greeted by cheering fans on turquoise carpet", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-895722", time: "2026-05-10T20:16:24Z" },
       { title: "Former ADL national director Abraham Foxman passes away aged 86", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-895720", time: "2026-05-10T20:07:43Z" },
       { title: "A campaign by Eurovision fans calls out the EBU for unfairly targeting Israel", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-895716", time: "2026-05-10T19:19:32Z" },
       { title: "Culture Minister Miki Zohar claims Hamas plotted Oct. 7 attacks during Bennett-Lapid gov't", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895711", time: "2026-05-10T18:37:57Z" },
+      { title: "Iran sends response to latest US peace proposal as Netanyahu insists war ‘not over’", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-sends-response-to-latest-us-peace-proposal-as-netanyahu-insists-war-not-over/", time: "2026-05-10T18:23:01Z" },
       { title: "Ministers back bills giving government ‘sole discretion’ over senior appointments", source: "Times of Israel", url: "https://www.timesofisrael.com/ministers-back-bills-giving-government-sole-discretion-over-senior-appointments/", time: "2026-05-10T18:01:07Z" },
       { title: "Trump-Netanyahu bond fraying as Iran conflict continues without resolution - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-895702", time: "2026-05-10T17:48:28Z" },
       { title: "Facing ‘epidemic of hate,’ UK Jews hold Downing Street rally decrying antisemitism", source: "Times of Israel", url: "https://www.timesofisrael.com/facing-epidemic-of-hate-uk-jews-hold-downing-street-rally-decrying-antisemitism/", time: "2026-05-10T17:41:07Z" },
@@ -1104,10 +1106,6 @@ const locations = [
       { title: "Heeding Herzog’s invitation, AG says she’s willing to discuss plea deal in Netanyahu trial", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-4-2026/", time: "2026-05-03T21:50:22Z" },
       { title: "‘They see naked women’: Haredi leaders urge boycott of Tiberias mall over bikini ads", source: "Times of Israel", url: "https://www.timesofisrael.com/they-see-naked-women-haredi-leaders-urge-boycott-of-tiberias-mall-over-bikini-ads/", time: "2026-05-03T21:08:43Z" },
       { title: "Israel’s strategy of ‘permanent war’: A race against time?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-bottom-line/2026/5/3/israels-strategy-of-permanent-war-a-race-against-time?traffic_source=rss", time: "2026-05-03T19:36:54Z" },
-      { title: "High Court freezes TV regulatory body’s activities over controversial appointments", source: "Times of Israel", url: "https://www.timesofisrael.com/high-court-freezes-tv-regulatory-bodys-activities-over-controversial-appointments/", time: "2026-05-03T19:14:42Z" },
-      { title: "Trump rejects Iran proposal, urges pardon for Netanyahu from corruption charges", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-rejects-iran-proposal-urges-pardon-netanyahu-corruption-charges", time: "2026-05-03T19:11:14Z" },
-      { title: "Annual Meron Lag Ba'omer celebration cancelled on Netanyahu's orders amid security concerns, police say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-05-03/ty-article/.premium/meron-lag-baomer-celebration-cancelled-on-pms-orders-amid-security-concerns/0000019d-ee08-d62c-affd-ef99f1990000", time: "2026-05-03T19:03:06Z" },
-      { title: "São Paulo creates Brazil-Israel Parliamentary Front, forming strategic alliance", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-894989", time: "2026-05-03T18:51:22Z" },
     ]
   },
   {
@@ -1115,6 +1113,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Saudi Arabia condemns Gulf attacks, urges protection of Hormuz shipping", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-arabia-condemns-gulf-attacks-urges-protection-hormuz-shipping", time: "2026-05-10T19:21:06Z" },
+      { title: "Iran warns British warships deployed to the Strait of Hormuz will be met with ‘decisive response’", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-war-trump-strait-of-hormuz-hms-dragon-b2973894.html", time: "2026-05-10T19:17:32Z" },
       { title: "Macron says France 'never considered' Hormuz deployment, backs Iran coordination", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/macron-says-france-never-considered-hormuz-deployment-backs-iran", time: "2026-05-10T17:07:32Z" },
       { title: "South Korean ship in Strait of Hormuz damaged by unidentified objects, ministry says", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/strait-of-hormuz-south-korea-hmm-ship-b2973833.html", time: "2026-05-10T16:34:15Z" },
       { title: "Iran Responds to Latest U.S. Plan to End War", source: "New York Times", url: "https://www.nytimes.com/2026/05/10/us/politics/iran-war-us-peace-proposal-response.html", time: "2026-05-10T16:10:23Z" },
@@ -1505,7 +1505,6 @@ const locations = [
       { title: "Trump says ships blocked in Hormuz to be freed on Monday", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-ships-blocked-hormuz-be-freed-monday", time: "2026-05-03T21:28:59Z" },
       { title: "Iran lawmaker says Strait of Hormuz will not return to pre‑war state", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/3/iran-lawmaker-says-strait-of-hormuz-will-not-return-to-pre%e2%80%91war-state?traffic_source=rss", time: "2026-05-03T20:51:57Z" },
       { title: "The longer the Iran war goes on, the greater the impact on inflation, the US central bank warns", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/longer-iran-war-goes-greater-impact-inflation-us-central-bank-warns", time: "2026-05-03T20:22:06Z" },
-      { title: "Trump said to nix Iran plan that aimed to end war in month, defer nuclear issue", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-said-to-nix-iran-plan-that-aimed-to-end-war-in-month-defer-nuclear-issue/", time: "2026-05-03T19:13:11Z" },
     ]
   },
   {
@@ -1513,6 +1512,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "CNN accuses IDF of detaining Palestinian reporter for a year without probing terror charges", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-895732", time: "2026-05-10T21:36:49Z" },
       { title: "Bill to prosecute October 7 terrorists set for vote as Knesset returns from recess", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895729", time: "2026-05-10T21:08:18Z" },
       { title: "Israeli soldiers say orders were to kill any man encountered in Gaza", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-soldiers-say-orders-were-kill-any-man-encountered-gaza", time: "2026-05-10T16:34:14Z" },
       { title: "Israeli forces raided Palestinian women prisoners’ section 10 times in 2 months, group says", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260510-israeli-forces-raided-palestinian-women-prisoners-section-10-times-in-2-months-group-says/", time: "2026-05-10T15:17:59Z" },
@@ -1809,8 +1809,6 @@ const locations = [
       { title: "World Press Freedom Day marked in Gaza as journalist death toll rises", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/3/world-press-freedom-day-marked-in-gaza-as-journalist-death-toll-rises?traffic_source=rss", time: "2026-05-03T20:07:00Z" },
       { title: "Is Israel expanding into Gaza despite ceasefire?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/upfront/2026/5/3/is-israel-expanding-into-gaza-despite-ceasefire?traffic_source=rss", time: "2026-05-03T19:55:02Z" },
       { title: "Report: Shin Bet chief David Zini freezes all security agency's appointments", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-03/ty-article/report-shin-bet-chief-david-zini-freezes-all-security-agencys-appointments/0000019d-ef37-d4e1-a1dd-ef3fd6440000", time: "2026-05-03T19:36:03Z" },
-      { title: "Israel intercepts Gaza 'condom' flotilla, detaining nearly 200 activists, sparking backlash", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-894991", time: "2026-05-03T19:08:38Z" },
-      { title: "Israel extends detention of 'tortured' Gaza flotilla activists", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-extends-detention-tortured-gaza-flotilla-activists", time: "2026-05-03T18:52:38Z" },
     ]
   },
   {
@@ -1818,6 +1816,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "strikes",
     articles: [
+      { title: "Marco or JD? Donald Trump is fueling a debate over his next successor inside Mar-a-Lago", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-jd-vance-trump-2028-b2973868.html", time: "2026-05-10T18:28:35Z" },
       { title: "Levin-backed appointments bill advances despite warning from A-G it would politicize civil service", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895698", time: "2026-05-10T17:01:32Z" },
       { title: "Israeli envoy takes rare swipe at US Jewish groups for cosponsoring Spanish exhibit", source: "Times of Israel", url: "https://www.timesofisrael.com/israeli-envoy-takes-rare-swipe-at-us-jewish-groups-for-cosponsoring-spanish-exhibit/", time: "2026-05-10T13:35:24Z" },
       { title: "Google Finance, an AI investment tool, comes to Israel", source: "Jerusalem Post", url: "https://www.jpost.com/science/ai-news/article-895667", time: "2026-05-10T13:05:42Z" },
@@ -2031,9 +2030,6 @@ const locations = [
       { title: "Hezbollah says it will not abide by negotiations, vows to confront “any conspiracy”", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260504-hezbollah-says-it-will-not-abide-by-negotiations-vows-to-confront-any-conspiracy/", time: "2026-05-04T08:56:53Z" },
       { title: "Lebanon's food security crisis and displacement 'going to have a lasting effect'", source: "France 24", url: "https://www.france24.com/en/lebanon-s-food-security-crisis-and-displacement-going-to-have-a-lasting-effect", time: "2026-05-04T08:51:26Z" },
       { title: "Israeli strikes intensify in southern Lebanon, casualties reported", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-intensify-southern-lebanon-casualties-reported", time: "2026-05-04T00:53:15Z" },
-      { title: "Protests erupt in Lebanon after displaced Shia community refuses to leave private school grounds", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-894992", time: "2026-05-03T19:14:29Z" },
-      { title: "Israel deploys net-launching interceptor against Hezbollah fiber-optic-guided drones", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-03/ty-article/.premium/israel-deploys-net-launching-interceptor-against-hezbollahs-fiber-optic-drones/0000019d-ee9d-d4e1-a1dd-ee9dbcca0000", time: "2026-05-03T18:40:15Z" },
-      { title: "Israel deploys net-launching drones to intercept Hezbollah's attack drones", source: "Haaretz", url: "https://www.haaretz.com/israel-news/security-aviation/2026-05-03/ty-article/.premium/israel-deploys-net-launching-interceptor-against-hezbollahs-fiber-optic-drones/0000019d-ee9d-d4e1-a1dd-ee9dbcca0000", time: "2026-05-03T18:40:15Z" },
     ]
   },
   {
@@ -2041,6 +2037,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "Trump warns Iran will 'be laughing no longer', condemns behavior of past 47 years", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-895731", time: "2026-05-10T21:41:39Z" },
       { title: "High Court questions comptroller’s authority to probe core Oct. 7 failures", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895705", time: "2026-05-10T17:40:44Z" },
       { title: "State asks High Court for more time in body-retention petition, families oppose", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-895695", time: "2026-05-10T16:17:42Z" },
       { title: "WhatsApp co-founder gives Shaare Zedek $200m in record Israeli hospital donation", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-895694", time: "2026-05-10T16:04:05Z" },
@@ -2143,6 +2140,7 @@ const locations = [
     lat: 23.588, lng: 58.3829,
     category: "evacuation",
     articles: [
+      { title: "London man charged for assault on three Jewish residents", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-895730", time: "2026-05-10T21:23:43Z" },
       { title: "Woman who spent 7 years in Chinese prison describes torture, surveillance and loss of her husband", source: "Fox News", url: "https://www.foxnews.com/world/woman-who-spent-7-years-chinese-prison-describes-torture-surveillance-loss-her-husband", time: "2026-05-10T14:16:54Z" },
       { title: "She fled genital mutilation in Togo. The U.S. deported her.", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/10/trump-third-country-deportations-ghana-togo/", time: "2026-05-10T09:00:53Z" },
       { title: "Rescuers find 1 body after volcano eruption in Indonesia as search continues for 2 more", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/rescuers-find-1-body-after-volcano-eruption-in-indonesia-as-search-continues-for-2-more", time: "2026-05-09T16:48:06Z" },
