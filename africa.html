@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">03:17 UTC, 11 May 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">05:26 UTC, 11 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">11 May 2026</div>
@@ -112,78 +112,6 @@ const catLabels = { conflict: "Armed conflict", humanitarian: "Humanitarian cris
 // Location data (injected by fetch_news.py)
 const locations = [
   {
-    name: "Nairobi", country: "Kenya",
-    lat: -1.2921, lng: 36.8219,
-    category: "political",
-    articles: [
-      { title: "Macron heads to Kenya to push new France-Africa partnership", source: "France 24", url: "https://www.france24.com/en/macron-heads-to-kenya-to-push-new-france-africa-partnership", time: "2026-05-10T12:54:06Z" },
-      { title: "Macron tours East Africa amid push to redefine France’s role in Africa", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/macron-tours-east-africa-amid-push-to-redefine-frances-role-in-africa?traffic_source=rss", time: "2026-05-10T05:38:12Z" },
-      { title: "Training For a Marathon in Kenya", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010844833/training-for-a-marathon-in-kenya.html", time: "2026-05-09T09:00:22Z" },
-      { title: "Rwanda: Rwandan Youtuber Dies of Alleged Overdose On Day of Release From Prison", source: "AllAfrica", url: "https://allafrica.com/stories/202605080515.html", time: "2026-05-08T16:32:35Z" },
-      { title: "Africa: Kenya Positions Itself As Africa's Digital Innovation Hub Ahead of Africa Forward Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605080513.html", time: "2026-05-08T16:27:06Z" },
-      { title: "Kenya: No, Kenyan MP Kimani Ichung'wah Has Not Defected to Rival Party", source: "AllAfrica", url: "https://allafrica.com/stories/202605080509.html", time: "2026-05-08T16:24:33Z" },
-      { title: "Kenya: No, Kenya Hate Speech Suspect Bare Sahara Ahmed Not Freed Immediately After Arrest, Despite Viral Claims", source: "AllAfrica", url: "https://allafrica.com/stories/202605080508.html", time: "2026-05-08T16:23:53Z" },
-      { title: "Kenya cancer cluster sparks ‘environmental genocide’ claims over oil waste", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/8/kenya-cancer-cluster-sparks-environmental-genocide-claims-over-oil-waste?traffic_source=rss", time: "2026-05-08T14:11:49Z" },
-      { title: "Kenya: Title Race On a Knife's Edge! Police Bullets and Ulinzi Starlets in Final Sprint for FKF Wpl Glory", source: "AllAfrica", url: "https://allafrica.com/stories/202605080432.html", time: "2026-05-08T12:55:39Z" },
-      { title: "Kenya: Why Mt. Kenya Politics Makes Gachagua's Kalonzo Endorsement Unbelievable", source: "AllAfrica", url: "https://allafrica.com/stories/202605080427.html", time: "2026-05-08T12:53:36Z" },
-      { title: "Kenya: Oburu Resurfaces, Dismisses Rumours Amid Health Speculation", source: "AllAfrica", url: "https://allafrica.com/stories/202605080426.html", time: "2026-05-08T12:53:15Z" },
-      { title: "East Africa: Karugu Highlights Isebania-Sirari Osbp As Key Gateway to EAC Trade Growth", source: "AllAfrica", url: "https://allafrica.com/stories/202605080425.html", time: "2026-05-08T12:52:59Z" },
-      { title: "Kenya: Gachagua Demands Police Action Over Killing of Pcea Reverend Julius Ndumia", source: "AllAfrica", url: "https://allafrica.com/stories/202605080411.html", time: "2026-05-08T12:51:42Z" },
-      { title: "Kenya: CJ Koome Launches Inaugural Judges' Book Fair in Nairobi to Boost Judicial Scholarship", source: "AllAfrica", url: "https://allafrica.com/stories/202605080407.html", time: "2026-05-08T12:49:11Z" },
-      { title: "Kenya: Rescue Operations Intensify After 15 People Killed in West Pokot Gold Mine Collapse", source: "AllAfrica", url: "https://allafrica.com/stories/202605080364.html", time: "2026-05-08T12:02:53Z" },
-      { title: "Ahead of Nairobi summit, France highlights youth, innovation and 'huge diaspora' investing in Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260508-ahead-of-nairobi-summit-france-highlights-youth-innovation-and-huge-diaspora-investing-in-africa", time: "2026-05-08T10:48:23Z" },
-      { title: "Rwanda: Govt Critic Dies in Prison On Release Day", source: "AllAfrica", url: "https://allafrica.com/stories/202605080005.html", time: "2026-05-08T06:58:34Z" },
-      { title: "Kenya: Caution Urged As MET Agency Projects Intensified Rains Amid Deadly Murang'a Landslides", source: "AllAfrica", url: "https://allafrica.com/stories/202605080001.html", time: "2026-05-08T06:54:58Z" },
-      { title: "Kenyan villagers sue BP over pollution from 1980s oil exploration", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/7/kenyan-villagers-sue-bp-over-pollution-from-1980s-oil-exploration?traffic_source=rss", time: "2026-05-07T20:22:54Z" },
-      { title: "Tanzania: Concerns Grow Over Civic Space Restrictions After Tanzania-Kenya Summit Remarks", source: "AllAfrica", url: "https://allafrica.com/stories/202605070539.html", time: "2026-05-07T15:43:38Z" },
-      { title: "Kenya: Heavy Rainfall to Hit Nairobi and 30 Counties", source: "AllAfrica", url: "https://allafrica.com/stories/202605070538.html", time: "2026-05-07T15:42:40Z" },
-      { title: "Kenya: EACC Arrests Kenya Power Official Over Alleged Sh20,000 Bribery", source: "AllAfrica", url: "https://allafrica.com/stories/202605070536.html", time: "2026-05-07T15:40:52Z" },
-      { title: "Africa: $340 Million UN Nairobi Expansion 'Signals Global Shift Toward Africa'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070493.html", time: "2026-05-07T13:57:29Z" },
-      { title: "Kenya: Petition Questions Healthcare Financing Framework in Kenya", source: "AllAfrica", url: "https://allafrica.com/stories/202605070491.html", time: "2026-05-07T13:55:28Z" },
-      { title: "Kenya: CS Ruku's Dawn Spot Check in Garissa Reveals Widespread Absenteeism At Govt Offices", source: "AllAfrica", url: "https://allafrica.com/stories/202605070375.html", time: "2026-05-07T12:13:47Z" },
-      { title: "Kenya: Mudavadi - 19 Kenyans Killed in Russia-Ukraine War, 42 Missing", source: "AllAfrica", url: "https://allafrica.com/stories/202605070368.html", time: "2026-05-07T12:12:21Z" },
-      { title: "Kenya: Court Battle Intensifies As Gachagua Challenges Senate Impeachment Procedure", source: "AllAfrica", url: "https://allafrica.com/stories/202605070365.html", time: "2026-05-07T12:09:48Z" },
-      { title: "Kenya: Parliament Announces Public Hearings On Sh4.78 Trillion Budget Policy Paper", source: "AllAfrica", url: "https://allafrica.com/stories/202605070273.html", time: "2026-05-07T11:21:11Z" },
-      { title: "Africa: Delegates Gather in Nairobi for Africa Forward Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605070199.html", time: "2026-05-07T10:58:13Z" },
-      { title: "Kenya: Ignore Doctored Image of Kenyan Presidential Aspirant Fred Matiang'i 'Sleeping' During TV Interview", source: "AllAfrica", url: "https://allafrica.com/stories/202605070171.html", time: "2026-05-07T10:46:32Z" },
-      { title: "Kenya: Waiguru Backs Ruto, Launches Fierce Attack On Opposition Leaders", source: "AllAfrica", url: "https://allafrica.com/stories/202605070013.html", time: "2026-05-07T06:41:53Z" },
-      { title: "Kenya: Deaths Drop At Jootrh As Investments in Specialized Care Pay Off", source: "AllAfrica", url: "https://allafrica.com/stories/202605060565.html", time: "2026-05-06T15:42:43Z" },
-      { title: "Africa: Africa Forward Summit, Signalling a New Era of Africa-France Partnership", source: "AllAfrica", url: "https://allafrica.com/stories/202605060513.html", time: "2026-05-06T14:10:39Z" },
-      { title: "Kenya: Explainer - Why Fuel Is So Expensive in Kenya - and Where Your Money Goes", source: "AllAfrica", url: "https://allafrica.com/stories/202605060487.html", time: "2026-05-06T13:58:32Z" },
-      { title: "Africa: Kenya's Sarah Mose Makes Huge Splash On Opening Day of Africa Swimming Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605060483.html", time: "2026-05-06T13:55:33Z" },
-      { title: "Orphaned baby hippo to be hand-reared by keepers at Kenya sanctuary", source: "BBC News", url: "https://www.bbc.com/news/articles/c1e2zev6754o?at_medium=RSS&at_campaign=rss", time: "2026-05-06T12:35:15Z" },
-      { title: "Kenya: Fuel Shortage - Technical Hitch Cited", source: "AllAfrica", url: "https://allafrica.com/stories/202605060136.html", time: "2026-05-06T09:02:49Z" },
-      { title: "Africa: Uhuru Kenyatta Warns Trust Deficit Is Africa's Biggest Threat to Peace", source: "AllAfrica", url: "https://allafrica.com/stories/202605060040.html", time: "2026-05-06T06:34:45Z" },
-      { title: "Kenya: Tanzania MPs Pray for Ruto's 2027 Re-Election in Rare Parliamentary Gesture", source: "AllAfrica", url: "https://allafrica.com/stories/202605050666.html", time: "2026-05-05T16:06:27Z" },
-      { title: "Tanzania: Ruto Calls for Stronger Kenya-Tanzania Unity, Warns Against Regional Rivalry in Dodoma Address", source: "AllAfrica", url: "https://allafrica.com/stories/202605050656.html", time: "2026-05-05T16:05:18Z" },
-      { title: "Kenya: Petition Filed Against Parliament Over Kenyatta Benefits Review", source: "AllAfrica", url: "https://allafrica.com/stories/202605050570.html", time: "2026-05-05T13:53:56Z" },
-      { title: "East Africa: IGAD Unveils Regional Youth Coalition to Shape Climate Policy, Drive Climate-Resilient Agriculture", source: "AllAfrica", url: "https://allafrica.com/stories/202605050568.html", time: "2026-05-05T13:53:03Z" },
-      { title: "Kenya: Nairobi Hospital Board Member Job Obwaka Died of Cardiac Arrest - - Autopsy", source: "AllAfrica", url: "https://allafrica.com/stories/202605050470.html", time: "2026-05-05T12:40:37Z" },
-      { title: "Kenya: Former Kenya Women's 7s and 15s Coach Oloo Is Dead", source: "AllAfrica", url: "https://allafrica.com/stories/202605050427.html", time: "2026-05-05T12:07:04Z" },
-      { title: "Kenya: Govt Blames Payroll Mix-Up for Housing Interns Pay Delays", source: "AllAfrica", url: "https://allafrica.com/stories/202605050131.html", time: "2026-05-05T08:57:59Z" },
-      { title: "Kenya: Senate Debates Withdrawal of Former President Kenyatta's Benefits", source: "AllAfrica", url: "https://allafrica.com/stories/202605050129.html", time: "2026-05-05T08:57:42Z" },
-      { title: "Kenya: President Ruto Explains Tanga Refinery Plan After Samia Suluhu Hassan Says She Was Not Informed", source: "AllAfrica", url: "https://allafrica.com/stories/202605050061.html", time: "2026-05-05T05:57:15Z" },
-      { title: "Kenya: Social Media Overtakes TV, Radio As Top News Source in Kenya", source: "AllAfrica", url: "https://allafrica.com/stories/202605040437.html", time: "2026-05-04T11:51:02Z" },
-      { title: "Kenya: How Electoral Violence Continues to Disrupt Kenyan Businesses", source: "AllAfrica", url: "https://allafrica.com/stories/202605040227.html", time: "2026-05-04T10:05:41Z" },
-      { title: "Kenya: Duale Backs Kenya-Somalia Border Reopening to Boost Trade", source: "AllAfrica", url: "https://allafrica.com/stories/202605040188.html", time: "2026-05-04T09:54:02Z" },
-      { title: "Kenya: Ruto Challenges New Judges to Choose Right Over Easy", source: "AllAfrica", url: "https://allafrica.com/stories/202605040177.html", time: "2026-05-04T09:43:08Z" },
-      { title: "Kenya: Finance Bill 2026 Ends KQ Tax Relief, Widens Digital Tax Net", source: "AllAfrica", url: "https://allafrica.com/stories/202605040137.html", time: "2026-05-04T07:51:43Z" },
-      { title: "Kenya: KEMRI Launches Study On Aflatoxin Risks to Children", source: "AllAfrica", url: "https://allafrica.com/stories/202605040115.html", time: "2026-05-04T07:10:00Z" },
-      { title: "Kenya: Four Arrested After Failed Attempt to Steal Jet Fuel At Wilson Airport", source: "AllAfrica", url: "https://allafrica.com/stories/202605040114.html", time: "2026-05-04T07:09:08Z" },
-      { title: "Kenya: Ruto Presides Over Swearing-in of 37 Judges", source: "AllAfrica", url: "https://allafrica.com/stories/202605040108.html", time: "2026-05-04T06:47:36Z" },
-      { title: "Kenya: Ole Kina Urges Treasury to Stop Off-Budget Spending Under Article 223", source: "AllAfrica", url: "https://allafrica.com/stories/202605040100.html", time: "2026-05-04T06:43:51Z" },
-      { title: "Kenya: Ruto Woos Japanese Investors As Kenya Deepens Economic Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040094.html", time: "2026-05-04T06:41:01Z" },
-      { title: "Kenya: Govt Proposes 5% Tax On Mitumba Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202605040092.html", time: "2026-05-04T06:41:00Z" },
-      { title: "Flaws in Kenya’s AI-driven health reforms driving up costs for the poorest", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/may/04/kenya-ai-healthcare-reforms-driving-up-costs-for-poor", time: "2026-05-04T06:00:16Z" },
-      { title: "Kenya: Police Intercept Nairobi-Bound Bus Ferrying Ammunition and Government Stores Along Thika-Garissa Highway", source: "AllAfrica", url: "https://allafrica.com/stories/202605040040.html", time: "2026-05-04T05:11:52Z" },
-      { title: "Madagascar: Govt Maps 59 Flood-Prone Areas in Tana River As Flood Risk Escalates Nationwide", source: "AllAfrica", url: "https://allafrica.com/stories/202605040035.html", time: "2026-05-04T05:08:39Z" },
-      { title: "Kenya: Death Toll From Floods Climbs to 18, With Eastern Region Worst Hit", source: "AllAfrica", url: "https://allafrica.com/stories/202605040034.html", time: "2026-05-04T05:08:38Z" },
-      { title: "Kenya: Finally! Ruto Congratulates Kenyan Skater After Clinching Gold in African Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605040031.html", time: "2026-05-04T05:08:37Z" },
-      { title: "Kenya: Flower Chemicals Fuel Surge in ENT Infections in Naivasha", source: "AllAfrica", url: "https://allafrica.com/stories/202605040029.html", time: "2026-05-04T05:08:36Z" },
-      { title: "Kenya: Lighting the Way to Protect Kenya's Lions and the Livestock They Prey On", source: "AllAfrica", url: "https://allafrica.com/stories/202605040005.html", time: "2026-05-04T04:48:03Z" },
-    ]
-  },
-  {
     name: "Johannesburg", country: "South Africa",
     lat: -26.2041, lng: 28.0473,
     category: "economic",
@@ -256,6 +184,74 @@ const locations = [
     ]
   },
   {
+    name: "Nairobi", country: "Kenya",
+    lat: -1.2921, lng: 36.8219,
+    category: "political",
+    articles: [
+      { title: "Africa: Macron Arrives in Kenya Ahead of Africa Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605110055.html", time: "2026-05-11T05:23:19Z" },
+      { title: "Risks and rewards in France-Kenya partnership", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/11/risks-and-rewards-in-france-kenya-partnership?traffic_source=rss", time: "2026-05-11T04:45:57Z" },
+      { title: "Macron heads to Kenya to push new France-Africa partnership", source: "France 24", url: "https://www.france24.com/en/macron-heads-to-kenya-to-push-new-france-africa-partnership", time: "2026-05-10T12:54:06Z" },
+      { title: "Macron tours East Africa amid push to redefine France’s role in Africa", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/10/macron-tours-east-africa-amid-push-to-redefine-frances-role-in-africa?traffic_source=rss", time: "2026-05-10T05:38:12Z" },
+      { title: "Training For a Marathon in Kenya", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010844833/training-for-a-marathon-in-kenya.html", time: "2026-05-09T09:00:22Z" },
+      { title: "Rwanda: Rwandan Youtuber Dies of Alleged Overdose On Day of Release From Prison", source: "AllAfrica", url: "https://allafrica.com/stories/202605080515.html", time: "2026-05-08T16:32:35Z" },
+      { title: "Africa: Kenya Positions Itself As Africa's Digital Innovation Hub Ahead of Africa Forward Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605080513.html", time: "2026-05-08T16:27:06Z" },
+      { title: "Kenya: No, Kenyan MP Kimani Ichung'wah Has Not Defected to Rival Party", source: "AllAfrica", url: "https://allafrica.com/stories/202605080509.html", time: "2026-05-08T16:24:33Z" },
+      { title: "Kenya: No, Kenya Hate Speech Suspect Bare Sahara Ahmed Not Freed Immediately After Arrest, Despite Viral Claims", source: "AllAfrica", url: "https://allafrica.com/stories/202605080508.html", time: "2026-05-08T16:23:53Z" },
+      { title: "Kenya cancer cluster sparks ‘environmental genocide’ claims over oil waste", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/8/kenya-cancer-cluster-sparks-environmental-genocide-claims-over-oil-waste?traffic_source=rss", time: "2026-05-08T14:11:49Z" },
+      { title: "Kenya: Title Race On a Knife's Edge! Police Bullets and Ulinzi Starlets in Final Sprint for FKF Wpl Glory", source: "AllAfrica", url: "https://allafrica.com/stories/202605080432.html", time: "2026-05-08T12:55:39Z" },
+      { title: "Kenya: Why Mt. Kenya Politics Makes Gachagua's Kalonzo Endorsement Unbelievable", source: "AllAfrica", url: "https://allafrica.com/stories/202605080427.html", time: "2026-05-08T12:53:36Z" },
+      { title: "Kenya: Oburu Resurfaces, Dismisses Rumours Amid Health Speculation", source: "AllAfrica", url: "https://allafrica.com/stories/202605080426.html", time: "2026-05-08T12:53:15Z" },
+      { title: "East Africa: Karugu Highlights Isebania-Sirari Osbp As Key Gateway to EAC Trade Growth", source: "AllAfrica", url: "https://allafrica.com/stories/202605080425.html", time: "2026-05-08T12:52:59Z" },
+      { title: "Kenya: Gachagua Demands Police Action Over Killing of Pcea Reverend Julius Ndumia", source: "AllAfrica", url: "https://allafrica.com/stories/202605080411.html", time: "2026-05-08T12:51:42Z" },
+      { title: "Kenya: CJ Koome Launches Inaugural Judges' Book Fair in Nairobi to Boost Judicial Scholarship", source: "AllAfrica", url: "https://allafrica.com/stories/202605080407.html", time: "2026-05-08T12:49:11Z" },
+      { title: "Kenya: Rescue Operations Intensify After 15 People Killed in West Pokot Gold Mine Collapse", source: "AllAfrica", url: "https://allafrica.com/stories/202605080364.html", time: "2026-05-08T12:02:53Z" },
+      { title: "Ahead of Nairobi summit, France highlights youth, innovation and 'huge diaspora' investing in Africa", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260508-ahead-of-nairobi-summit-france-highlights-youth-innovation-and-huge-diaspora-investing-in-africa", time: "2026-05-08T10:48:23Z" },
+      { title: "Rwanda: Govt Critic Dies in Prison On Release Day", source: "AllAfrica", url: "https://allafrica.com/stories/202605080005.html", time: "2026-05-08T06:58:34Z" },
+      { title: "Kenya: Caution Urged As MET Agency Projects Intensified Rains Amid Deadly Murang'a Landslides", source: "AllAfrica", url: "https://allafrica.com/stories/202605080001.html", time: "2026-05-08T06:54:58Z" },
+      { title: "Kenyan villagers sue BP over pollution from 1980s oil exploration", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/7/kenyan-villagers-sue-bp-over-pollution-from-1980s-oil-exploration?traffic_source=rss", time: "2026-05-07T20:22:54Z" },
+      { title: "Tanzania: Concerns Grow Over Civic Space Restrictions After Tanzania-Kenya Summit Remarks", source: "AllAfrica", url: "https://allafrica.com/stories/202605070539.html", time: "2026-05-07T15:43:38Z" },
+      { title: "Kenya: Heavy Rainfall to Hit Nairobi and 30 Counties", source: "AllAfrica", url: "https://allafrica.com/stories/202605070538.html", time: "2026-05-07T15:42:40Z" },
+      { title: "Kenya: EACC Arrests Kenya Power Official Over Alleged Sh20,000 Bribery", source: "AllAfrica", url: "https://allafrica.com/stories/202605070536.html", time: "2026-05-07T15:40:52Z" },
+      { title: "Africa: $340 Million UN Nairobi Expansion 'Signals Global Shift Toward Africa'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070493.html", time: "2026-05-07T13:57:29Z" },
+      { title: "Kenya: Petition Questions Healthcare Financing Framework in Kenya", source: "AllAfrica", url: "https://allafrica.com/stories/202605070491.html", time: "2026-05-07T13:55:28Z" },
+      { title: "Kenya: CS Ruku's Dawn Spot Check in Garissa Reveals Widespread Absenteeism At Govt Offices", source: "AllAfrica", url: "https://allafrica.com/stories/202605070375.html", time: "2026-05-07T12:13:47Z" },
+      { title: "Kenya: Mudavadi - 19 Kenyans Killed in Russia-Ukraine War, 42 Missing", source: "AllAfrica", url: "https://allafrica.com/stories/202605070368.html", time: "2026-05-07T12:12:21Z" },
+      { title: "Kenya: Court Battle Intensifies As Gachagua Challenges Senate Impeachment Procedure", source: "AllAfrica", url: "https://allafrica.com/stories/202605070365.html", time: "2026-05-07T12:09:48Z" },
+      { title: "Kenya: Parliament Announces Public Hearings On Sh4.78 Trillion Budget Policy Paper", source: "AllAfrica", url: "https://allafrica.com/stories/202605070273.html", time: "2026-05-07T11:21:11Z" },
+      { title: "Africa: Delegates Gather in Nairobi for Africa Forward Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605070199.html", time: "2026-05-07T10:58:13Z" },
+      { title: "Kenya: Ignore Doctored Image of Kenyan Presidential Aspirant Fred Matiang'i 'Sleeping' During TV Interview", source: "AllAfrica", url: "https://allafrica.com/stories/202605070171.html", time: "2026-05-07T10:46:32Z" },
+      { title: "Kenya: Waiguru Backs Ruto, Launches Fierce Attack On Opposition Leaders", source: "AllAfrica", url: "https://allafrica.com/stories/202605070013.html", time: "2026-05-07T06:41:53Z" },
+      { title: "Kenya: Deaths Drop At Jootrh As Investments in Specialized Care Pay Off", source: "AllAfrica", url: "https://allafrica.com/stories/202605060565.html", time: "2026-05-06T15:42:43Z" },
+      { title: "Africa: Africa Forward Summit, Signalling a New Era of Africa-France Partnership", source: "AllAfrica", url: "https://allafrica.com/stories/202605060513.html", time: "2026-05-06T14:10:39Z" },
+      { title: "Kenya: Explainer - Why Fuel Is So Expensive in Kenya - and Where Your Money Goes", source: "AllAfrica", url: "https://allafrica.com/stories/202605060487.html", time: "2026-05-06T13:58:32Z" },
+      { title: "Africa: Kenya's Sarah Mose Makes Huge Splash On Opening Day of Africa Swimming Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605060483.html", time: "2026-05-06T13:55:33Z" },
+      { title: "Orphaned baby hippo to be hand-reared by keepers at Kenya sanctuary", source: "BBC News", url: "https://www.bbc.com/news/articles/c1e2zev6754o?at_medium=RSS&at_campaign=rss", time: "2026-05-06T12:35:15Z" },
+      { title: "Kenya: Fuel Shortage - Technical Hitch Cited", source: "AllAfrica", url: "https://allafrica.com/stories/202605060136.html", time: "2026-05-06T09:02:49Z" },
+      { title: "Africa: Uhuru Kenyatta Warns Trust Deficit Is Africa's Biggest Threat to Peace", source: "AllAfrica", url: "https://allafrica.com/stories/202605060040.html", time: "2026-05-06T06:34:45Z" },
+      { title: "Kenya: Tanzania MPs Pray for Ruto's 2027 Re-Election in Rare Parliamentary Gesture", source: "AllAfrica", url: "https://allafrica.com/stories/202605050666.html", time: "2026-05-05T16:06:27Z" },
+      { title: "Tanzania: Ruto Calls for Stronger Kenya-Tanzania Unity, Warns Against Regional Rivalry in Dodoma Address", source: "AllAfrica", url: "https://allafrica.com/stories/202605050656.html", time: "2026-05-05T16:05:18Z" },
+      { title: "Kenya: Petition Filed Against Parliament Over Kenyatta Benefits Review", source: "AllAfrica", url: "https://allafrica.com/stories/202605050570.html", time: "2026-05-05T13:53:56Z" },
+      { title: "East Africa: IGAD Unveils Regional Youth Coalition to Shape Climate Policy, Drive Climate-Resilient Agriculture", source: "AllAfrica", url: "https://allafrica.com/stories/202605050568.html", time: "2026-05-05T13:53:03Z" },
+      { title: "Kenya: Nairobi Hospital Board Member Job Obwaka Died of Cardiac Arrest - - Autopsy", source: "AllAfrica", url: "https://allafrica.com/stories/202605050470.html", time: "2026-05-05T12:40:37Z" },
+      { title: "Kenya: Former Kenya Women's 7s and 15s Coach Oloo Is Dead", source: "AllAfrica", url: "https://allafrica.com/stories/202605050427.html", time: "2026-05-05T12:07:04Z" },
+      { title: "Kenya: Govt Blames Payroll Mix-Up for Housing Interns Pay Delays", source: "AllAfrica", url: "https://allafrica.com/stories/202605050131.html", time: "2026-05-05T08:57:59Z" },
+      { title: "Kenya: Senate Debates Withdrawal of Former President Kenyatta's Benefits", source: "AllAfrica", url: "https://allafrica.com/stories/202605050129.html", time: "2026-05-05T08:57:42Z" },
+      { title: "Kenya: President Ruto Explains Tanga Refinery Plan After Samia Suluhu Hassan Says She Was Not Informed", source: "AllAfrica", url: "https://allafrica.com/stories/202605050061.html", time: "2026-05-05T05:57:15Z" },
+      { title: "Kenya: Social Media Overtakes TV, Radio As Top News Source in Kenya", source: "AllAfrica", url: "https://allafrica.com/stories/202605040437.html", time: "2026-05-04T11:51:02Z" },
+      { title: "Kenya: How Electoral Violence Continues to Disrupt Kenyan Businesses", source: "AllAfrica", url: "https://allafrica.com/stories/202605040227.html", time: "2026-05-04T10:05:41Z" },
+      { title: "Kenya: Duale Backs Kenya-Somalia Border Reopening to Boost Trade", source: "AllAfrica", url: "https://allafrica.com/stories/202605040188.html", time: "2026-05-04T09:54:02Z" },
+      { title: "Kenya: Ruto Challenges New Judges to Choose Right Over Easy", source: "AllAfrica", url: "https://allafrica.com/stories/202605040177.html", time: "2026-05-04T09:43:08Z" },
+      { title: "Kenya: Finance Bill 2026 Ends KQ Tax Relief, Widens Digital Tax Net", source: "AllAfrica", url: "https://allafrica.com/stories/202605040137.html", time: "2026-05-04T07:51:43Z" },
+      { title: "Kenya: KEMRI Launches Study On Aflatoxin Risks to Children", source: "AllAfrica", url: "https://allafrica.com/stories/202605040115.html", time: "2026-05-04T07:10:00Z" },
+      { title: "Kenya: Four Arrested After Failed Attempt to Steal Jet Fuel At Wilson Airport", source: "AllAfrica", url: "https://allafrica.com/stories/202605040114.html", time: "2026-05-04T07:09:08Z" },
+      { title: "Kenya: Ruto Presides Over Swearing-in of 37 Judges", source: "AllAfrica", url: "https://allafrica.com/stories/202605040108.html", time: "2026-05-04T06:47:36Z" },
+      { title: "Kenya: Ole Kina Urges Treasury to Stop Off-Budget Spending Under Article 223", source: "AllAfrica", url: "https://allafrica.com/stories/202605040100.html", time: "2026-05-04T06:43:51Z" },
+      { title: "Kenya: Ruto Woos Japanese Investors As Kenya Deepens Economic Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040094.html", time: "2026-05-04T06:41:01Z" },
+      { title: "Kenya: Govt Proposes 5% Tax On Mitumba Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202605040092.html", time: "2026-05-04T06:41:00Z" },
+      { title: "Flaws in Kenya’s AI-driven health reforms driving up costs for the poorest", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/may/04/kenya-ai-healthcare-reforms-driving-up-costs-for-poor", time: "2026-05-04T06:00:16Z" },
+    ]
+  },
+  {
     name: "Sahel Region", country: "West Africa",
     lat: 15.0, lng: 0.0,
     category: "conflict",
@@ -308,10 +304,6 @@ const locations = [
       { title: "Nigeria: PDP Convenes Emergency National Executive Committee Meeting Monday", source: "AllAfrica", url: "https://allafrica.com/stories/202605040116.html", time: "2026-05-04T07:13:53Z" },
       { title: "Nigeria: Obi, Kwankwaso Formally Declare for NDC, Set Stage for 2027 Presidential Battle", source: "AllAfrica", url: "https://allafrica.com/stories/202605040096.html", time: "2026-05-04T06:41:02Z" },
       { title: "Nigeria: Peter Obi Dumps ADC, Gives Reasons", source: "AllAfrica", url: "https://allafrica.com/stories/202605040068.html", time: "2026-05-04T05:30:16Z" },
-      { title: "Nigeria: Nigeria Summons South African Ambassador Over Xenophobic Attacks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040067.html", time: "2026-05-04T05:24:36Z" },
-      { title: "Nigeria: Nigerian Army Defends Arrest of Activist Amid Allegations of Abuse", source: "AllAfrica", url: "https://allafrica.com/stories/202605040061.html", time: "2026-05-04T05:24:33Z" },
-      { title: "Nigeria: Team Nigeria Secures More Tickets to 2027 World Athletics Championships", source: "AllAfrica", url: "https://allafrica.com/stories/202605040024.html", time: "2026-05-04T05:00:26Z" },
-      { title: "Nigeria: EU, Unicef Launch &#x20ac;1m Drive to Return 20,000 Conflict-Hit Sokoto Children to School", source: "AllAfrica", url: "https://allafrica.com/stories/202605040023.html", time: "2026-05-04T05:00:25Z" },
     ]
   },
   {
@@ -319,6 +311,7 @@ const locations = [
     lat: 12.6392, lng: -8.0029,
     category: "conflict",
     articles: [
+      { title: "Mali: Malian Filmmaker Captures Disappearing Tuareg Culture and Traditions", source: "AllAfrica", url: "https://allafrica.com/stories/202605110052.html", time: "2026-05-11T05:23:19Z" },
       { title: "JNIM and Tuareg fighters join forces", source: "Al Jazeera", url: "https://www.aljazeera.com/video/project-force-2/2026/5/10/jnim-and-tuareg-fighters-join-forces?traffic_source=rss", time: "2026-05-10T08:32:42Z" },
       { title: "Dozens killed in jihadist attacks in central Mali", source: "France 24", url: "https://www.france24.com/en/africa/20260510-dozens-killed-in-jihadist-attacks-in-central-mali", time: "2026-05-10T06:02:45Z" },
       { title: "Deadly new ‘fake fentanyl’ overdose took her teen’s life. Now this mom is fighting back", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/fake-fentanyl-new-drug-cychlorphine-b2973266.html", time: "2026-05-08T17:32:33Z" },
@@ -345,39 +338,11 @@ const locations = [
     ]
   },
   {
-    name: "Kampala", country: "Uganda",
-    lat: 0.3476, lng: 32.5825,
-    category: "political",
-    articles: [
-      { title: "Newborns to silverbacks: counting mountain gorillas in Uganda – in pictures", source: "The Guardian", url: "https://www.theguardian.com/environment/gallery/2026/may/10/gorillas-census-counting-numbers-uganda-bwindi-impenetrable-national-park-aoe", time: "2026-05-10T06:00:18Z" },
-      { title: "Uganda: Health Fears Rise As Heaps of Garbage Seal Off Soroti Main Market Street", source: "AllAfrica", url: "https://allafrica.com/stories/202605080408.html", time: "2026-05-08T12:50:02Z" },
-      { title: "Uganda: Abandoned Health Centre Turned Into Busy Tomato Market", source: "AllAfrica", url: "https://allafrica.com/stories/202605080401.html", time: "2026-05-08T12:22:32Z" },
-      { title: "Uganda: Uganda Hosts German Coffee Buyers in Drive to Expand Specialty Market", source: "AllAfrica", url: "https://allafrica.com/stories/202605080153.html", time: "2026-05-08T09:57:47Z" },
-      { title: "Uganda: Women Leaders Warn of Persistent Political Intimidation After January Elections", source: "AllAfrica", url: "https://allafrica.com/stories/202605080019.html", time: "2026-05-08T07:16:36Z" },
-      { title: "Uganda: Kabale Leaders Clash Over Sovereignty Law As Fears Grow Over Civil Liberties", source: "AllAfrica", url: "https://allafrica.com/stories/202605070406.html", time: "2026-05-07T12:32:20Z" },
-      { title: "Uganda: Explainer - What Parliament Changed in Sovereignty Bill Before Passing It", source: "AllAfrica", url: "https://allafrica.com/stories/202605070389.html", time: "2026-05-07T12:20:10Z" },
-      { title: "Uganda: Uganda's Sickle Cell Patients At Risk As Asthma Goes Undetected", source: "AllAfrica", url: "https://allafrica.com/stories/202605070278.html", time: "2026-05-07T11:24:16Z" },
-      { title: "Uganda: Prosecution Accuses Besigye, Co-Accused of Threatening Witnesses", source: "AllAfrica", url: "https://allafrica.com/stories/202605070160.html", time: "2026-05-07T10:43:13Z" },
-      { title: "Uganda: Museveni Hails Passage of Sovereignty Bill", source: "AllAfrica", url: "https://allafrica.com/stories/202605070040.html", time: "2026-05-07T06:58:04Z" },
-      { title: "Uganda: 'We Are Going to Die' - the Frontline Costs of Uganda's New US Health Agreement", source: "AllAfrica", url: "https://allafrica.com/stories/202605070008.html", time: "2026-05-07T06:38:32Z" },
-      { title: "Uganda: EACOP Grievance System Boosts Community Trust As Uganda Nears First Oil", source: "AllAfrica", url: "https://allafrica.com/stories/202605060147.html", time: "2026-05-06T09:09:46Z" },
-      { title: "Uganda: Taxi Operators Bemoan Exclusion From Kampala Transport Reforms", source: "AllAfrica", url: "https://allafrica.com/stories/202605060099.html", time: "2026-05-06T07:02:32Z" },
-      { title: "Uganda: May 12 Declared a Public Holiday for Museveni Swearing-in", source: "AllAfrica", url: "https://allafrica.com/stories/202605060060.html", time: "2026-05-06T06:48:39Z" },
-      { title: "Uganda: Heartbreak Driving Surge in Cardiac Cases As Ugandan Experts Raise Alarm", source: "AllAfrica", url: "https://allafrica.com/stories/202605050075.html", time: "2026-05-05T05:57:59Z" },
-      { title: "Uganda: Uganda's Bobi Wine On the Books (And Songs) That Shape His Politics", source: "AllAfrica", url: "https://allafrica.com/stories/202605050012.html", time: "2026-05-05T04:55:13Z" },
-      { title: "Uganda: Govt Proposes Pre-Internship Exams, Delays Medical Graduation", source: "AllAfrica", url: "https://allafrica.com/stories/202605040041.html", time: "2026-05-04T05:11:53Z" },
-      { title: "Uganda: Survivors Recount Horror of River Nkuse Boat Tragedy", source: "AllAfrica", url: "https://allafrica.com/stories/202605040030.html", time: "2026-05-04T05:08:36Z" },
-      { title: "Uganda: Kabbyanga Defends Sovereignty Bill, Says Uganda Will Not Allow Foreign Interference", source: "AllAfrica", url: "https://allafrica.com/stories/202605040028.html", time: "2026-05-04T05:00:30Z" },
-      { title: "Uganda: Munyagwa Dismisses Sovereignty Bill As 'Unnecessary,' Urges Amendment of Existing Law", source: "AllAfrica", url: "https://allafrica.com/stories/202605040027.html", time: "2026-05-04T05:00:29Z" },
-      { title: "Uganda: 28 Arrested in Kisoro Illegal Mining Crackdown, 25 Rwandan Nationals Among Suspects", source: "AllAfrica", url: "https://allafrica.com/stories/202605040026.html", time: "2026-05-04T05:00:28Z" },
-      { title: "Uganda: Cabinet Meets Today to Finalise Sovereignty Bill Ahead of Crucial Parliamentary Readings", source: "AllAfrica", url: "https://allafrica.com/stories/202605040025.html", time: "2026-05-04T05:00:26Z" },
-    ]
-  },
-  {
     name: "Mogadishu", country: "Somalia",
     lat: 2.0469, lng: 45.3182,
     category: "conflict",
     articles: [
+      { title: "‘It’s like we went bankrupt overnight’: poorest Somalis suffer as piles of worthless shillings mount up", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/11/poorest-somalis-hit-hardest-currency-shillings-mobile-money", time: "2026-05-11T05:00:46Z" },
       { title: "Somalis rally against government-ordered evictions in Mogadishu", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/11/somalis-rally-against-government-ordered-evictions-in-mogadishu?traffic_source=rss", time: "2026-05-11T00:13:43Z" },
       { title: "Somalia: Somalia Teeters On the Brink of Catastrophe As Hunger Crisis Deepens", source: "AllAfrica", url: "https://allafrica.com/stories/202605100159.html", time: "2026-05-10T20:00:47Z" },
       { title: "Guardian reporter and colleagues detained and beaten by Somali police", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/may/09/guardian-reporter-and-colleagues-detained-and-beaten-by-somali-police", time: "2026-05-09T12:27:59Z" },
@@ -395,32 +360,30 @@ const locations = [
       { title: "‘What comes next?’: Fear grips Pakistani families of Somali piracy victims", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/5/what-comes-next-fear-grips-pakistani-families-of-somali-piracy-victims?traffic_source=rss", time: "2026-05-05T06:39:17Z" },
       { title: "Somalia: Somalia, UN Discuss Strengthening Media Cooperation On Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040247.html", time: "2026-05-04T10:11:59Z" },
       { title: "Somalia: Somalia, UNDP Step Up Cooperation On Elections, Development and Humanitarian Response", source: "AllAfrica", url: "https://allafrica.com/stories/202605040246.html", time: "2026-05-04T10:11:58Z" },
-      { title: "Somalia: Somali Pirates Hijack Oil Tanker in Gulf of Aden, Second Strike in Weeks", source: "AllAfrica", url: "https://allafrica.com/stories/202605040063.html", time: "2026-05-04T05:24:34Z" },
-      { title: "Africa: India's Horn of Africa Strategy Has Shifted - What It's Trying to Do and How It Could Work", source: "AllAfrica", url: "https://allafrica.com/stories/202605040015.html", time: "2026-05-04T04:54:16Z" },
     ]
   },
   {
-    name: "Khartoum", country: "Sudan",
-    lat: 15.5007, lng: 32.5599,
-    category: "conflict",
+    name: "Kampala", country: "Uganda",
+    lat: 0.3476, lng: 32.5825,
+    category: "political",
     articles: [
-      { title: "What would prolonged war mean for Sudan?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/8/what-would-prolonged-war-mean-for-sudan?traffic_source=rss", time: "2026-05-08T13:57:10Z" },
-      { title: "Sudan: 'Flights From Khartoum Airport Suspended for the Third Day Following Drone Attack'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070006.html", time: "2026-05-07T06:37:43Z" },
-      { title: "Sudan: WFP - Sudan Aid Ops Not Impacted By Khartoum Airport Drone Strike", source: "AllAfrica", url: "https://allafrica.com/stories/202605070005.html", time: "2026-05-07T06:37:03Z" },
-      { title: "Sudan: Drone Strike On Khartoum Airport 'First in 7 Months' - Aid Ops Not Affected", source: "AllAfrica", url: "https://allafrica.com/stories/202605060017.html", time: "2026-05-06T05:18:14Z" },
-      { title: "Sudan: Education or Food? Funding Shortfalls Force Sudanese Refugees in Egypt to 'Make Very Difficult Decisions'", source: "AllAfrica", url: "https://allafrica.com/stories/202605060003.html", time: "2026-05-06T04:46:58Z" },
-      { title: "Nigeria to evacuate citizens from South Africa after attacks", source: "France 24", url: "https://www.france24.com/en/2026-05-05-21-41-eye-on-africa", time: "2026-05-05T20:20:56Z" },
-      { title: "Sudan recalls Ethiopia ambassador after strikes on Khartoum", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/5/sudan-recalls-ethiopia-ambassador-after-strikes-on-khartoum?traffic_source=rss", time: "2026-05-05T18:57:58Z" },
-      { title: "Ethiopia: Ethiopia Accuses Sudanese Military of Backing TPLF, Territorial Violations", source: "AllAfrica", url: "https://allafrica.com/stories/202605050674.html", time: "2026-05-05T16:09:58Z" },
-      { title: "Sudan accuses Ethiopia, UAE of being behind recent drone attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/sudan-accuses-ethiopia-uae-of-being-behind-recent-drone-attacks?traffic_source=rss", time: "2026-05-05T15:23:17Z" },
-      { title: "Sudan accuses Ethiopia and UAE of orchestrating drone attacks on airport", source: "BBC News", url: "https://www.bbc.com/news/articles/clype712r3qo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T11:47:30Z" },
-      { title: "Sudan: How Child Soldiers in Sudan Become Influencers on TikTok", source: "AllAfrica", url: "https://allafrica.com/stories/202605050096.html", time: "2026-05-05T06:32:26Z" },
-      { title: "Sudan: Dozens Killed or Displaced As Drone Strikes, Fighting Escalate Across Sudan's War Zones", source: "AllAfrica", url: "https://allafrica.com/stories/202605050017.html", time: "2026-05-05T04:57:51Z" },
-      { title: "Satellite imagery reveals how Sudan’s war scorched its ‘breadbasket’", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/4/satellite-imagery-reveals-how-sudans-war-scorched-its-breadbasket?traffic_source=rss", time: "2026-05-04T15:03:46Z" },
-      { title: "Sudan: Cabinet Underscores Combating Corruption, Smuggling, and Narcotics", source: "AllAfrica", url: "https://allafrica.com/stories/202605040440.html", time: "2026-05-04T11:52:25Z" },
-      { title: "Sudan: Sudan Media Forum On World Press Freedom Day - Sounding the Alarm Over Horrific Violations Against Journalists and the Absence of Media Freedoms in Sudan", source: "AllAfrica", url: "https://allafrica.com/stories/202605040009.html", time: "2026-05-04T04:48:46Z" },
-      { title: "Sudan: Sudan's Media Mark World Press Freedom Day", source: "AllAfrica", url: "https://allafrica.com/stories/202605040007.html", time: "2026-05-04T04:48:45Z" },
-      { title: "Sudan: 'RSF Shelling Devastates Health Services in South Kordofan' - Sudan Doctors Network", source: "AllAfrica", url: "https://allafrica.com/stories/202605040008.html", time: "2026-05-04T04:48:45Z" },
+      { title: "Uganda: Inside the Chimpanzee 'Civil War' That Has Locked a Ugandan Forest in Conflict", source: "AllAfrica", url: "https://allafrica.com/stories/202605110054.html", time: "2026-05-11T05:23:19Z" },
+      { title: "Newborns to silverbacks: counting mountain gorillas in Uganda – in pictures", source: "The Guardian", url: "https://www.theguardian.com/environment/gallery/2026/may/10/gorillas-census-counting-numbers-uganda-bwindi-impenetrable-national-park-aoe", time: "2026-05-10T06:00:18Z" },
+      { title: "Uganda: Health Fears Rise As Heaps of Garbage Seal Off Soroti Main Market Street", source: "AllAfrica", url: "https://allafrica.com/stories/202605080408.html", time: "2026-05-08T12:50:02Z" },
+      { title: "Uganda: Abandoned Health Centre Turned Into Busy Tomato Market", source: "AllAfrica", url: "https://allafrica.com/stories/202605080401.html", time: "2026-05-08T12:22:32Z" },
+      { title: "Uganda: Uganda Hosts German Coffee Buyers in Drive to Expand Specialty Market", source: "AllAfrica", url: "https://allafrica.com/stories/202605080153.html", time: "2026-05-08T09:57:47Z" },
+      { title: "Uganda: Women Leaders Warn of Persistent Political Intimidation After January Elections", source: "AllAfrica", url: "https://allafrica.com/stories/202605080019.html", time: "2026-05-08T07:16:36Z" },
+      { title: "Uganda: Kabale Leaders Clash Over Sovereignty Law As Fears Grow Over Civil Liberties", source: "AllAfrica", url: "https://allafrica.com/stories/202605070406.html", time: "2026-05-07T12:32:20Z" },
+      { title: "Uganda: Explainer - What Parliament Changed in Sovereignty Bill Before Passing It", source: "AllAfrica", url: "https://allafrica.com/stories/202605070389.html", time: "2026-05-07T12:20:10Z" },
+      { title: "Uganda: Uganda's Sickle Cell Patients At Risk As Asthma Goes Undetected", source: "AllAfrica", url: "https://allafrica.com/stories/202605070278.html", time: "2026-05-07T11:24:16Z" },
+      { title: "Uganda: Prosecution Accuses Besigye, Co-Accused of Threatening Witnesses", source: "AllAfrica", url: "https://allafrica.com/stories/202605070160.html", time: "2026-05-07T10:43:13Z" },
+      { title: "Uganda: Museveni Hails Passage of Sovereignty Bill", source: "AllAfrica", url: "https://allafrica.com/stories/202605070040.html", time: "2026-05-07T06:58:04Z" },
+      { title: "Uganda: 'We Are Going to Die' - the Frontline Costs of Uganda's New US Health Agreement", source: "AllAfrica", url: "https://allafrica.com/stories/202605070008.html", time: "2026-05-07T06:38:32Z" },
+      { title: "Uganda: EACOP Grievance System Boosts Community Trust As Uganda Nears First Oil", source: "AllAfrica", url: "https://allafrica.com/stories/202605060147.html", time: "2026-05-06T09:09:46Z" },
+      { title: "Uganda: Taxi Operators Bemoan Exclusion From Kampala Transport Reforms", source: "AllAfrica", url: "https://allafrica.com/stories/202605060099.html", time: "2026-05-06T07:02:32Z" },
+      { title: "Uganda: May 12 Declared a Public Holiday for Museveni Swearing-in", source: "AllAfrica", url: "https://allafrica.com/stories/202605060060.html", time: "2026-05-06T06:48:39Z" },
+      { title: "Uganda: Heartbreak Driving Surge in Cardiac Cases As Ugandan Experts Raise Alarm", source: "AllAfrica", url: "https://allafrica.com/stories/202605050075.html", time: "2026-05-05T05:57:59Z" },
+      { title: "Uganda: Uganda's Bobi Wine On the Books (And Songs) That Shape His Politics", source: "AllAfrica", url: "https://allafrica.com/stories/202605050012.html", time: "2026-05-05T04:55:13Z" },
     ]
   },
   {
@@ -443,7 +406,27 @@ const locations = [
       { title: "South Africa: Ramaphosa Didn't Know He Was Meeting Wealthy Zimbabwean Wanted in SA - - Spokesperson", source: "AllAfrica", url: "https://allafrica.com/stories/202605070032.html", time: "2026-05-07T06:52:57Z" },
       { title: "Zimbabwe: Ramaphosa Told Mnangagwa to Stop Constitutional Amendment Bill - Report", source: "AllAfrica", url: "https://allafrica.com/stories/202605060028.html", time: "2026-05-06T05:27:35Z" },
       { title: "Africa: More Nations Plan to Call Out South Africa Govt Over Xenophobic Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605050375.html", time: "2026-05-05T11:33:28Z" },
-      { title: "Zimbabwe: South Africa President Ramaphosa Sneaks Into Zimbabwe On Private Visit to Mnangagwa's Precabe Farm", source: "AllAfrica", url: "https://allafrica.com/stories/202605040018.html", time: "2026-05-04T04:58:54Z" },
+    ]
+  },
+  {
+    name: "Khartoum", country: "Sudan",
+    lat: 15.5007, lng: 32.5599,
+    category: "conflict",
+    articles: [
+      { title: "What would prolonged war mean for Sudan?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/8/what-would-prolonged-war-mean-for-sudan?traffic_source=rss", time: "2026-05-08T13:57:10Z" },
+      { title: "Sudan: 'Flights From Khartoum Airport Suspended for the Third Day Following Drone Attack'", source: "AllAfrica", url: "https://allafrica.com/stories/202605070006.html", time: "2026-05-07T06:37:43Z" },
+      { title: "Sudan: WFP - Sudan Aid Ops Not Impacted By Khartoum Airport Drone Strike", source: "AllAfrica", url: "https://allafrica.com/stories/202605070005.html", time: "2026-05-07T06:37:03Z" },
+      { title: "Sudan: Drone Strike On Khartoum Airport 'First in 7 Months' - Aid Ops Not Affected", source: "AllAfrica", url: "https://allafrica.com/stories/202605060017.html", time: "2026-05-06T05:18:14Z" },
+      { title: "Sudan: Education or Food? Funding Shortfalls Force Sudanese Refugees in Egypt to 'Make Very Difficult Decisions'", source: "AllAfrica", url: "https://allafrica.com/stories/202605060003.html", time: "2026-05-06T04:46:58Z" },
+      { title: "Nigeria to evacuate citizens from South Africa after attacks", source: "France 24", url: "https://www.france24.com/en/2026-05-05-21-41-eye-on-africa", time: "2026-05-05T20:20:56Z" },
+      { title: "Sudan recalls Ethiopia ambassador after strikes on Khartoum", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/5/sudan-recalls-ethiopia-ambassador-after-strikes-on-khartoum?traffic_source=rss", time: "2026-05-05T18:57:58Z" },
+      { title: "Ethiopia: Ethiopia Accuses Sudanese Military of Backing TPLF, Territorial Violations", source: "AllAfrica", url: "https://allafrica.com/stories/202605050674.html", time: "2026-05-05T16:09:58Z" },
+      { title: "Sudan accuses Ethiopia, UAE of being behind recent drone attacks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/5/sudan-accuses-ethiopia-uae-of-being-behind-recent-drone-attacks?traffic_source=rss", time: "2026-05-05T15:23:17Z" },
+      { title: "Sudan accuses Ethiopia and UAE of orchestrating drone attacks on airport", source: "BBC News", url: "https://www.bbc.com/news/articles/clype712r3qo?at_medium=RSS&at_campaign=rss", time: "2026-05-05T11:47:30Z" },
+      { title: "Sudan: How Child Soldiers in Sudan Become Influencers on TikTok", source: "AllAfrica", url: "https://allafrica.com/stories/202605050096.html", time: "2026-05-05T06:32:26Z" },
+      { title: "Sudan: Dozens Killed or Displaced As Drone Strikes, Fighting Escalate Across Sudan's War Zones", source: "AllAfrica", url: "https://allafrica.com/stories/202605050017.html", time: "2026-05-05T04:57:51Z" },
+      { title: "Satellite imagery reveals how Sudan’s war scorched its ‘breadbasket’", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/4/satellite-imagery-reveals-how-sudans-war-scorched-its-breadbasket?traffic_source=rss", time: "2026-05-04T15:03:46Z" },
+      { title: "Sudan: Cabinet Underscores Combating Corruption, Smuggling, and Narcotics", source: "AllAfrica", url: "https://allafrica.com/stories/202605040440.html", time: "2026-05-04T11:52:25Z" },
     ]
   },
   {
@@ -465,28 +448,6 @@ const locations = [
       { title: "Ethiopia: Ethiopia Marks Scientific Breakthrough With Successful Marburg Vaccine Trial - Ministry", source: "AllAfrica", url: "https://allafrica.com/stories/202605050474.html", time: "2026-05-05T12:42:39Z" },
       { title: "Baby clothes, razor blades and water buckets: Exposing the reality of global inequalities in maternal care", source: "The Independent", url: "https://www.independent.co.uk/news/health/women-pregnancy-labour-maternity-water-b2970628.html", time: "2026-05-05T11:46:39Z" },
       { title: "Africa: Ethiopian Airlines Named Africa's Best Airline 2026", source: "AllAfrica", url: "https://allafrica.com/stories/202605050043.html", time: "2026-05-05T05:13:16Z" },
-      { title: "Africa: AU Agenda 2063 Diplomatic Mission Chief Explains How Africa Can Become One of World's Most Competitive Economic Blocs", source: "AllAfrica", url: "https://allafrica.com/stories/202605040042.html", time: "2026-05-04T05:11:53Z" },
-    ]
-  },
-  {
-    name: "Dar es Salaam", country: "Tanzania",
-    lat: -6.7924, lng: 39.2083,
-    category: "economic",
-    articles: [
-      { title: "Tanzania: Why Tanzania Needed Commission of Inquiry After the 2025 Election", source: "AllAfrica", url: "https://allafrica.com/stories/202605070270.html", time: "2026-05-07T11:20:57Z" },
-      { title: "Tanzania: Government Steps in As Fuel Prices Soar", source: "AllAfrica", url: "https://allafrica.com/stories/202605070243.html", time: "2026-05-07T11:12:29Z" },
-      { title: "Tanzania: Met Gala 2026 Showcases Rare Tanzanite Necklace Worth U.S.$15m", source: "AllAfrica", url: "https://allafrica.com/stories/202605060519.html", time: "2026-05-06T14:10:53Z" },
-      { title: "Tanzania: Missed Opportunity On Tanzania Election Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605060065.html", time: "2026-05-06T06:48:41Z" },
-      { title: "Tanzania: Presidents Sign MOUs to Broaden the Tanzania-Kenya Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605060035.html", time: "2026-05-06T06:34:42Z" },
-      { title: "East Africa: Kenya, Tanzania Set May 2026 Deadline to Eliminate Trade Barriers", source: "AllAfrica", url: "https://allafrica.com/stories/202605050413.html", time: "2026-05-05T12:01:13Z" },
-      { title: "Tanzania: Tanzania Orders Hospitals to Provide Healthcare Service Without Barriers", source: "AllAfrica", url: "https://allafrica.com/stories/202605050033.html", time: "2026-05-05T05:10:45Z" },
-      { title: "Tanzania: Kagame - Tanzania Our Key Partner, Strategic Link", source: "AllAfrica", url: "https://allafrica.com/stories/202605040374.html", time: "2026-05-04T11:35:16Z" },
-      { title: "Tanzania: Public Servants Urged to Uphold Integrity, Protect State Resources", source: "AllAfrica", url: "https://allafrica.com/stories/202605040372.html", time: "2026-05-04T11:33:50Z" },
-      { title: "Tanzania: Tanga Port Instructs Users to Fully Utilize Its Free Cargo Storage Facility and Clear Their Goods On Time", source: "AllAfrica", url: "https://allafrica.com/stories/202605040365.html", time: "2026-05-04T11:30:31Z" },
-      { title: "Tanzania: EU Reaffirms Commitment to 265bn/ - Sasa Programme", source: "AllAfrica", url: "https://allafrica.com/stories/202605040125.html", time: "2026-05-04T07:17:12Z" },
-      { title: "Rwanda: Tanzania, Rwanda Advance Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040093.html", time: "2026-05-04T06:41:00Z" },
-      { title: "Rwanda: Kagame Hails 'Brotherly' Ties With Tanzania, Pledges Deeper Cooperation", source: "AllAfrica", url: "https://allafrica.com/stories/202605040021.html", time: "2026-05-04T05:00:23Z" },
-      { title: "Tanzania: Kagame's Tanzania Visit Underscores Strategic Weight of Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040020.html", time: "2026-05-04T05:00:22Z" },
     ]
   },
   {
@@ -511,6 +472,25 @@ const locations = [
     ]
   },
   {
+    name: "Dar es Salaam", country: "Tanzania",
+    lat: -6.7924, lng: 39.2083,
+    category: "economic",
+    articles: [
+      { title: "Tanzania: Why Tanzania Needed Commission of Inquiry After the 2025 Election", source: "AllAfrica", url: "https://allafrica.com/stories/202605070270.html", time: "2026-05-07T11:20:57Z" },
+      { title: "Tanzania: Government Steps in As Fuel Prices Soar", source: "AllAfrica", url: "https://allafrica.com/stories/202605070243.html", time: "2026-05-07T11:12:29Z" },
+      { title: "Tanzania: Met Gala 2026 Showcases Rare Tanzanite Necklace Worth U.S.$15m", source: "AllAfrica", url: "https://allafrica.com/stories/202605060519.html", time: "2026-05-06T14:10:53Z" },
+      { title: "Tanzania: Missed Opportunity On Tanzania Election Violence", source: "AllAfrica", url: "https://allafrica.com/stories/202605060065.html", time: "2026-05-06T06:48:41Z" },
+      { title: "Tanzania: Presidents Sign MOUs to Broaden the Tanzania-Kenya Bilateral Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605060035.html", time: "2026-05-06T06:34:42Z" },
+      { title: "East Africa: Kenya, Tanzania Set May 2026 Deadline to Eliminate Trade Barriers", source: "AllAfrica", url: "https://allafrica.com/stories/202605050413.html", time: "2026-05-05T12:01:13Z" },
+      { title: "Tanzania: Tanzania Orders Hospitals to Provide Healthcare Service Without Barriers", source: "AllAfrica", url: "https://allafrica.com/stories/202605050033.html", time: "2026-05-05T05:10:45Z" },
+      { title: "Tanzania: Kagame - Tanzania Our Key Partner, Strategic Link", source: "AllAfrica", url: "https://allafrica.com/stories/202605040374.html", time: "2026-05-04T11:35:16Z" },
+      { title: "Tanzania: Public Servants Urged to Uphold Integrity, Protect State Resources", source: "AllAfrica", url: "https://allafrica.com/stories/202605040372.html", time: "2026-05-04T11:33:50Z" },
+      { title: "Tanzania: Tanga Port Instructs Users to Fully Utilize Its Free Cargo Storage Facility and Clear Their Goods On Time", source: "AllAfrica", url: "https://allafrica.com/stories/202605040365.html", time: "2026-05-04T11:30:31Z" },
+      { title: "Tanzania: EU Reaffirms Commitment to 265bn/ - Sasa Programme", source: "AllAfrica", url: "https://allafrica.com/stories/202605040125.html", time: "2026-05-04T07:17:12Z" },
+      { title: "Rwanda: Tanzania, Rwanda Advance Ties", source: "AllAfrica", url: "https://allafrica.com/stories/202605040093.html", time: "2026-05-04T06:41:00Z" },
+    ]
+  },
+  {
     name: "Harare", country: "Zimbabwe",
     lat: -17.8252, lng: 31.0335,
     category: "political",
@@ -525,41 +505,6 @@ const locations = [
       { title: "Zimbabwe: 67 Percent of Zimbabweans Buying Counterfeit Goods - New Study Reveals", source: "AllAfrica", url: "https://allafrica.com/stories/202605050190.html", time: "2026-05-05T09:42:26Z" },
       { title: "Africa: African Countries Up Efforts to Tax High-Income Individuals", source: "AllAfrica", url: "https://allafrica.com/stories/202605040281.html", time: "2026-05-04T10:37:11Z" },
       { title: "Zimbabwe: Support Mnangagwa's Constitutional Amendment Bill or Resign - Attorney General Tells Chiwenga", source: "AllAfrica", url: "https://allafrica.com/stories/202605040088.html", time: "2026-05-04T06:36:20Z" },
-      { title: "Zimbabwe: Govt Declares ZIMSEC Mandatory for All Schools From 2027", source: "AllAfrica", url: "https://allafrica.com/stories/202605040064.html", time: "2026-05-04T05:24:35Z" },
-    ]
-  },
-  {
-    name: "Kigali", country: "Rwanda",
-    lat: -1.9403, lng: 29.8739,
-    category: "political",
-    articles: [
-      { title: "Rwanda: Rwanda Explores Partnership With Leading U.S. Clinic", source: "AllAfrica", url: "https://allafrica.com/stories/202605080358.html", time: "2026-05-08T11:59:08Z" },
-      { title: "Rwandan singer dies as he was being released from prison", source: "BBC News", url: "https://www.bbc.com/news/articles/cevpxn0ddp9o?at_medium=RSS&at_campaign=rss", time: "2026-05-07T16:12:50Z" },
-      { title: "Rwanda: Kagame Congratulates PSG On Reaching Champions League Final", source: "AllAfrica", url: "https://allafrica.com/stories/202605070228.html", time: "2026-05-07T11:08:30Z" },
-      { title: "Rwanda: Rwanda's Naming Traditions Explained", source: "AllAfrica", url: "https://allafrica.com/stories/202605070011.html", time: "2026-05-07T06:40:53Z" },
-      { title: "Amputee football grows in Rwanda, fostering unity and resilience", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/6/amputee-football-grows-in-rwanda-fostering-unity-and-resilience?traffic_source=rss", time: "2026-05-06T15:57:18Z" },
-      { title: "Rwanda: Experts Warn Decline in Hand Hygiene May Increase Infection Risks", source: "AllAfrica", url: "https://allafrica.com/stories/202605060543.html", time: "2026-05-06T15:35:07Z" },
-      { title: "Rwanda: French Court to Rule On Rwanda Genocide Case Against Agathe Habyarimana", source: "AllAfrica", url: "https://allafrica.com/stories/202605060168.html", time: "2026-05-06T09:23:32Z" },
-      { title: "Rwanda: Sugar Imports Fall 36 Percent Amid Rising Local Production", source: "AllAfrica", url: "https://allafrica.com/stories/202605040111.html", time: "2026-05-04T06:53:20Z" },
-      { title: "Rwanda: Govt Launches Centre to Boost Financing for Women-Led MSMEs", source: "AllAfrica", url: "https://allafrica.com/stories/202605040022.html", time: "2026-05-04T05:00:24Z" },
-      { title: "Rwanda: Restricting Social Media Use for Minors Is a Timely Move", source: "AllAfrica", url: "https://allafrica.com/stories/202605040019.html", time: "2026-05-04T05:00:22Z" },
-    ]
-  },
-  {
-    name: "Lilongwe", country: "Malawi",
-    lat: -13.9626, lng: 33.7741,
-    category: "economic",
-    articles: [
-      { title: "Malawi: Court Declares Agro Light Sole Keenbooster Distributor As Chipanga Traders Blocked, Mra Barred From Processing Rival Fertilizer Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202605080511.html", time: "2026-05-08T16:25:39Z" },
-      { title: "Malawi: Panic in Ngabu As Men Claim Private Parts Are Mysteriously Disappearing", source: "AllAfrica", url: "https://allafrica.com/stories/202605080149.html", time: "2026-05-08T09:56:47Z" },
-      { title: "Malawi: Malawians Mock Fuel Price Cut As 'Cosmetic' Amid Soaring Cost of Living", source: "AllAfrica", url: "https://allafrica.com/stories/202605080004.html", time: "2026-05-08T06:57:30Z" },
-      { title: "Malawi: Malawi Fuel Crisis Deepens As Oil Shortages Spread", source: "AllAfrica", url: "https://allafrica.com/stories/202605060033.html", time: "2026-05-06T06:30:40Z" },
-      { title: "Malawi: 'We Are Not Refusing Tax--We Are Fighting for Survival' - Traders Shut Shops Nationwide Over MRA's New System", source: "AllAfrica", url: "https://allafrica.com/stories/202605050321.html", time: "2026-05-05T11:01:48Z" },
-      { title: "Malawi: PAC Tightens Grip On Amaryllis Deal - MRA Summoned Over Missing K90 Billion Tax Clearance", source: "AllAfrica", url: "https://allafrica.com/stories/202605040098.html", time: "2026-05-04T06:41:03Z" },
-      { title: "Malawi: Aid Cuts Hit Malawi Hard - IMF Warns of Rising Debt Pressure and Urgent Need for Reforms", source: "AllAfrica", url: "https://allafrica.com/stories/202605040097.html", time: "2026-05-04T06:41:02Z" },
-      { title: "Malawi: MEDF Recovers K8bn Out of K240bn - Inside the Weak Recovery, K232bn Still Unpaid and the Legal Fight Ahead", source: "AllAfrica", url: "https://allafrica.com/stories/202605040089.html", time: "2026-05-04T06:38:49Z" },
-      { title: "Malawi: Exposed - How Mapeto Tyres Landed a K8 Billion Single-Supplier Deal At Escom Amid Oversupply Fears and Procedural Breaches", source: "AllAfrica", url: "https://allafrica.com/stories/202605040090.html", time: "2026-05-04T06:38:49Z" },
-      { title: "Malawi: The Tech Project Bringing Some of Malawi's Remotest Schools Into the Digital Age", source: "AllAfrica", url: "https://allafrica.com/stories/202605040004.html", time: "2026-05-04T04:48:02Z" },
     ]
   },
   {
@@ -577,6 +522,37 @@ const locations = [
       { title: "Botswana: Kagame Arrives in Botswana for State Visit", source: "AllAfrica", url: "https://allafrica.com/stories/202605060540.html", time: "2026-05-06T15:31:58Z" },
       { title: "Botswana: Foot and Mouth Disease Crisis Threatens Nation Livelihoods", source: "AllAfrica", url: "https://allafrica.com/stories/202605050034.html", time: "2026-05-05T05:10:46Z" },
       { title: "Botswana: Botswana Takes Gold", source: "AllAfrica", url: "https://allafrica.com/stories/202605040133.html", time: "2026-05-04T07:29:28Z" },
+    ]
+  },
+  {
+    name: "Lilongwe", country: "Malawi",
+    lat: -13.9626, lng: 33.7741,
+    category: "economic",
+    articles: [
+      { title: "Malawi: Court Declares Agro Light Sole Keenbooster Distributor As Chipanga Traders Blocked, Mra Barred From Processing Rival Fertilizer Imports", source: "AllAfrica", url: "https://allafrica.com/stories/202605080511.html", time: "2026-05-08T16:25:39Z" },
+      { title: "Malawi: Panic in Ngabu As Men Claim Private Parts Are Mysteriously Disappearing", source: "AllAfrica", url: "https://allafrica.com/stories/202605080149.html", time: "2026-05-08T09:56:47Z" },
+      { title: "Malawi: Malawians Mock Fuel Price Cut As 'Cosmetic' Amid Soaring Cost of Living", source: "AllAfrica", url: "https://allafrica.com/stories/202605080004.html", time: "2026-05-08T06:57:30Z" },
+      { title: "Malawi: Malawi Fuel Crisis Deepens As Oil Shortages Spread", source: "AllAfrica", url: "https://allafrica.com/stories/202605060033.html", time: "2026-05-06T06:30:40Z" },
+      { title: "Malawi: 'We Are Not Refusing Tax--We Are Fighting for Survival' - Traders Shut Shops Nationwide Over MRA's New System", source: "AllAfrica", url: "https://allafrica.com/stories/202605050321.html", time: "2026-05-05T11:01:48Z" },
+      { title: "Malawi: PAC Tightens Grip On Amaryllis Deal - MRA Summoned Over Missing K90 Billion Tax Clearance", source: "AllAfrica", url: "https://allafrica.com/stories/202605040098.html", time: "2026-05-04T06:41:03Z" },
+      { title: "Malawi: Aid Cuts Hit Malawi Hard - IMF Warns of Rising Debt Pressure and Urgent Need for Reforms", source: "AllAfrica", url: "https://allafrica.com/stories/202605040097.html", time: "2026-05-04T06:41:02Z" },
+      { title: "Malawi: MEDF Recovers K8bn Out of K240bn - Inside the Weak Recovery, K232bn Still Unpaid and the Legal Fight Ahead", source: "AllAfrica", url: "https://allafrica.com/stories/202605040089.html", time: "2026-05-04T06:38:49Z" },
+      { title: "Malawi: Exposed - How Mapeto Tyres Landed a K8 Billion Single-Supplier Deal At Escom Amid Oversupply Fears and Procedural Breaches", source: "AllAfrica", url: "https://allafrica.com/stories/202605040090.html", time: "2026-05-04T06:38:49Z" },
+    ]
+  },
+  {
+    name: "Kigali", country: "Rwanda",
+    lat: -1.9403, lng: 29.8739,
+    category: "political",
+    articles: [
+      { title: "Rwanda: Rwanda Explores Partnership With Leading U.S. Clinic", source: "AllAfrica", url: "https://allafrica.com/stories/202605080358.html", time: "2026-05-08T11:59:08Z" },
+      { title: "Rwandan singer dies as he was being released from prison", source: "BBC News", url: "https://www.bbc.com/news/articles/cevpxn0ddp9o?at_medium=RSS&at_campaign=rss", time: "2026-05-07T16:12:50Z" },
+      { title: "Rwanda: Kagame Congratulates PSG On Reaching Champions League Final", source: "AllAfrica", url: "https://allafrica.com/stories/202605070228.html", time: "2026-05-07T11:08:30Z" },
+      { title: "Rwanda: Rwanda's Naming Traditions Explained", source: "AllAfrica", url: "https://allafrica.com/stories/202605070011.html", time: "2026-05-07T06:40:53Z" },
+      { title: "Amputee football grows in Rwanda, fostering unity and resilience", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/6/amputee-football-grows-in-rwanda-fostering-unity-and-resilience?traffic_source=rss", time: "2026-05-06T15:57:18Z" },
+      { title: "Rwanda: Experts Warn Decline in Hand Hygiene May Increase Infection Risks", source: "AllAfrica", url: "https://allafrica.com/stories/202605060543.html", time: "2026-05-06T15:35:07Z" },
+      { title: "Rwanda: French Court to Rule On Rwanda Genocide Case Against Agathe Habyarimana", source: "AllAfrica", url: "https://allafrica.com/stories/202605060168.html", time: "2026-05-06T09:23:32Z" },
+      { title: "Rwanda: Sugar Imports Fall 36 Percent Amid Rising Local Production", source: "AllAfrica", url: "https://allafrica.com/stories/202605040111.html", time: "2026-05-04T06:53:20Z" },
     ]
   },
   {
@@ -633,18 +609,6 @@ const locations = [
     ]
   },
   {
-    name: "Algiers", country: "Algeria",
-    lat: 36.7538, lng: 3.0588,
-    category: "political",
-    articles: [
-      { title: "French ambassador returns to Algeria in bid to ease Paris-Algier tensions", source: "France 24", url: "https://www.france24.com/en/africa/20260508-french-ambassador-returns-to-algeria-in-bid-to-ease-paris-algier-tensions", time: "2026-05-08T14:03:51Z" },
-      { title: "Algeria: 'Economic Diplomacy' Key in Algeria, French Employers' Union Chief Tells Rfi", source: "AllAfrica", url: "https://allafrica.com/stories/202605060251.html", time: "2026-05-06T10:41:52Z" },
-      { title: "Jailed French sports journalist drops Algeria appeal in hopes of presidential pardon", source: "France 24", url: "https://www.france24.com/en/africa/20260505-jailed-french-sports-journalist-drops-algeria-appeal-in-hopes-of-presidential-pardon", time: "2026-05-05T09:42:23Z" },
-      { title: "Algeria: Free Speech Guaranteed With Due Respect for Republic Laws - President Tebboune", source: "AllAfrica", url: "https://allafrica.com/stories/202605040039.html", time: "2026-05-04T05:11:52Z" },
-      { title: "Algeria: All Conditions in Place to Ensure Electoral Process Integrity, President Tebboune Says", source: "AllAfrica", url: "https://allafrica.com/stories/202605040038.html", time: "2026-05-04T05:11:51Z" },
-    ]
-  },
-  {
     name: "Lusaka", country: "Zambia",
     lat: -15.3875, lng: 28.3228,
     category: "economic",
@@ -665,6 +629,16 @@ const locations = [
       { title: "South Africa: Why Rail Matters for Cape Town's Traffic Congestion", source: "AllAfrica", url: "https://allafrica.com/stories/202605080003.html", time: "2026-05-08T06:56:37Z" },
       { title: "South Africa: Cape Town Taxi Bosses Promise End to Violence Over Routes", source: "AllAfrica", url: "https://allafrica.com/stories/202605050050.html", time: "2026-05-05T05:19:14Z" },
       { title: "What a Bike Ride in Cape Town Taught Me About Apartheid", source: "New York Times", url: "https://www.nytimes.com/2026/05/05/world/africa/cape-town-apartheid-bike-ride.html", time: "2026-05-05T04:01:15Z" },
+    ]
+  },
+  {
+    name: "Algiers", country: "Algeria",
+    lat: 36.7538, lng: 3.0588,
+    category: "political",
+    articles: [
+      { title: "French ambassador returns to Algeria in bid to ease Paris-Algier tensions", source: "France 24", url: "https://www.france24.com/en/africa/20260508-french-ambassador-returns-to-algeria-in-bid-to-ease-paris-algier-tensions", time: "2026-05-08T14:03:51Z" },
+      { title: "Algeria: 'Economic Diplomacy' Key in Algeria, French Employers' Union Chief Tells Rfi", source: "AllAfrica", url: "https://allafrica.com/stories/202605060251.html", time: "2026-05-06T10:41:52Z" },
+      { title: "Jailed French sports journalist drops Algeria appeal in hopes of presidential pardon", source: "France 24", url: "https://www.france24.com/en/africa/20260505-jailed-french-sports-journalist-drops-algeria-appeal-in-hopes-of-presidential-pardon", time: "2026-05-05T09:42:23Z" },
     ]
   },
   {
@@ -732,6 +706,24 @@ const locations = [
     ]
   },
   {
+    name: "Cairo", country: "Egypt",
+    lat: 30.0444, lng: 31.2357,
+    category: "political",
+    articles: [
+      { title: "Egypt: Macron Boosts Egypt Ties During Alexandria Visit Ahead of Africa-France Summit", source: "AllAfrica", url: "https://allafrica.com/stories/202605110051.html", time: "2026-05-11T05:23:18Z" },
+      { title: "Cash-strapped Egyptians Zamalek eye record CAF Cup prize money", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/8/cash-strapped-egyptians-zamalek-eye-record-caf-cup-prize-money?traffic_source=rss", time: "2026-05-08T13:57:47Z" },
+    ]
+  },
+  {
+    name: "Lome", country: "Togo",
+    lat: 6.1256, lng: 1.2254,
+    category: "political",
+    articles: [
+      { title: "Togo: Togo's Fight Against Centuries-Old Map Revives Debate Over African Representation", source: "AllAfrica", url: "https://allafrica.com/stories/202605110053.html", time: "2026-05-11T05:23:19Z" },
+      { title: "She fled genital mutilation in Togo. The U.S. deported her.", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/10/trump-third-country-deportations-ghana-togo/", time: "2026-05-10T09:00:53Z" },
+    ]
+  },
+  {
     name: "Abidjan", country: "Ivory Coast",
     lat: 5.36, lng: -4.0083,
     category: "economic",
@@ -785,22 +777,6 @@ const locations = [
     category: "political",
     articles: [
       { title: "Cameroon: Online Posts Falsely Claim Cameroon Leader Paul Biya Appointed His Son As Vice President", source: "AllAfrica", url: "https://allafrica.com/stories/202605080444.html", time: "2026-05-08T13:07:11Z" },
-    ]
-  },
-  {
-    name: "Cairo", country: "Egypt",
-    lat: 30.0444, lng: 31.2357,
-    category: "political",
-    articles: [
-      { title: "Cash-strapped Egyptians Zamalek eye record CAF Cup prize money", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/8/cash-strapped-egyptians-zamalek-eye-record-caf-cup-prize-money?traffic_source=rss", time: "2026-05-08T13:57:47Z" },
-    ]
-  },
-  {
-    name: "Lome", country: "Togo",
-    lat: 6.1256, lng: 1.2254,
-    category: "political",
-    articles: [
-      { title: "She fled genital mutilation in Togo. The U.S. deported her.", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/10/trump-third-country-deportations-ghana-togo/", time: "2026-05-10T09:00:53Z" },
     ]
   },
 ];
