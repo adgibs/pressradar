@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">16:47 UTC, 14 May 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:40 UTC, 14 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">14 May 2026</div>
@@ -119,6 +119,10 @@ const locations = [
       { title: "U.S. Taiwan policy unchanged after Trump-Xi summit in Beijing: Rubio", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/05/15/2003857362", time: "2026-05-15T00:00:00Z" },
       { title: "US, Chinese presidents discuss business ties", source: "Taipei Times", url: "https://www.taipeitimes.com/News/front/archives/2026/05/15/2003857363", time: "2026-05-15T00:00:00Z" },
       { title: "Nvidia looks for breakthrough in China on chip deal after US buying clearance", source: "Taipei Times", url: "https://www.taipeitimes.com/News/biz/archives/2026/05/15/2003857347", time: "2026-05-15T00:00:00Z" },
+      { title: "Trump says Xi offered help on Iran as China seeks to keep Hormuz open", source: "South China Morning Post", url: "https://www.scmp.com/news/china/article/3353610/trump-says-xi-offered-help-iran-china-seeks-keep-hormuz-open?utm_source=rss_feed", time: "2026-05-14T17:28:41Z" },
+      { title: "Spies, Sanctions, Cyberattacks: China and the U.S. Clash Behind the Scenes", source: "New York Times", url: "https://www.nytimes.com/2026/05/14/us/politics/china-us-sanctions-ai-cybersecurity.html", time: "2026-05-14T17:27:55Z" },
+      { title: "China pays tribute to Trump in one of his favorite ways: closing state banquet with YMCA", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/china-trump-ymca-state-banquet-b2976800.html", time: "2026-05-14T17:05:42Z" },
+      { title: "NYC man convicted of running secret police station linked to Chinese government", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/nyc-police-station-china-lu-jianwang-b2976700.html", time: "2026-05-14T16:47:11Z" },
       { title: "Not a burger in sight: The menu for Trump’s state banquet in China as Beijing rolls out the red carpet", source: "The Independent", url: "https://www.independent.co.uk/news/world/asia/trump-state-banquet-menu-china-xi-b2976646.html", time: "2026-05-14T16:33:16Z" },
       { title: "Families of Americans imprisoned in China appeal to Trump for help", source: "NBC News", url: "https://www.nbcnews.com/world/asia/americans-imprisoned-china-families-appeal-to-trump-help-rcna345120", time: "2026-05-14T16:30:51Z" },
       { title: "Bret Baier complains about Fox News film crew getting ticket in China – while walking down the middle of a bike lane", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/bret-baier-beijing-fox-news-ticket-b2976697.html", time: "2026-05-14T16:29:46Z" },
@@ -159,6 +163,7 @@ const locations = [
       { title: "Elon Musk flew to China with Trump despite OpenAI trial judge’s recall warning", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/elon-musk-china-trump-sam-altman-b2976420.html", time: "2026-05-14T11:26:41Z" },
       { title: "China agreed with U.S. on Strait of Hormuz when Trump discussed Iran war with Xi, Rubio says", source: "NBC News", url: "https://www.nbcnews.com/world/asia/rubio-trump-xi-china-us-agree-hormuz-iran-nuclear-rcna345079", time: "2026-05-14T11:16:12Z" },
       { title: "Richard Haass talks about accounts from U.S. and China on Trump-Xi meeting", source: "NPR", url: "https://www.npr.org/2026/05/14/nx-s1-5822225/richard-haass-talks-about-accounts-from-u-s-and-china-on-trump-xi-meeting", time: "2026-05-14T11:15:06Z" },
+      { title: "Cordial Trump-Xi meeting is a 'good sign,' says longtime U.S. diplomat", source: "NPR", url: "https://www.npr.org/2026/05/14/nx-s1-5822225/richard-haass-trump-xi-meeting-china-summit", time: "2026-05-14T11:15:06Z" },
       { title: "Who are the US CEOs in China with Trump, and what’s in it for them?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/14/who-are-the-us-ceos-in-china-with-trump-and-whats-in-it-for-them?traffic_source=rss", time: "2026-05-14T11:09:32Z" },
       { title: "The Latest: Xi and Trump summit focuses on business links as Chinese leader issues Taiwan warning", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/xi-jinping-chinese-taiwan-beijing-iran-b2976520.html", time: "2026-05-14T11:05:02Z" },
       { title: "Iran allowing transit of Chinese vessels in Strait of Hormuz, Fars news reports", source: "Straits Times", url: "https://www.straitstimes.com/asia/iran-allowing-transit-of-chinese-vessels-in-strait-of-hormuz-fars-news-reports", time: "2026-05-14T10:47:42Z" },
@@ -544,7 +549,6 @@ const locations = [
       { title: "Can China help end the Iran war?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/5/7/can-china-help-end-the-iran-war?traffic_source=rss", time: "2026-05-07T19:02:17Z" },
       { title: "US-proposed Iran resolution at UN faces likely vetoes from China, Russia", source: "Straits Times", url: "https://www.straitstimes.com/asia/us-proposed-iran-resolution-at-un-faces-likely-vetoes-from-china-russia", time: "2026-05-07T18:35:58Z" },
       { title: "US targets Cuba nickel operation in move with implications for China-linked supply chains", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352815/us-targets-cuba-nickel-operation-move-implications-china-linked-supply-chains?utm_source=rss_feed", time: "2026-05-07T18:15:08Z" },
-      { title: "Norwegian police arrest Chinese woman on spying allegations", source: "South China Morning Post", url: "https://www.scmp.com/news/world/europe/article/3352810/norwegian-police-arrest-chinese-woman-spying-allegations?utm_source=rss_feed", time: "2026-05-07T16:56:03Z" },
     ]
   },
   {
@@ -664,6 +668,7 @@ const locations = [
     lat: 13.7563, lng: 100.5018,
     category: "trade",
     articles: [
+      { title: "Giant new dinosaur identified from fossils in Thailand", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21pk5g20ro?at_medium=RSS&at_campaign=rss", time: "2026-05-14T17:28:56Z" },
       { title: "Scientists dig up Southeast Asia's largest dinosaur in Thailand", source: "Straits Times", url: "https://www.straitstimes.com/asia/scientists-dig-up-southeast-asias-largest-dinosaur-in-thailand", time: "2026-05-14T12:17:34Z" },
       { title: "Scientists dig up South-east Asia’s largest dinosaur in Thailand", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/scientists-dig-up-southeast-asias-largest-dinosaur-in-thailand", time: "2026-05-14T12:17:34Z" },
       { title: "In Thailand, Buddhism Is Twinned With Political Power", source: "New York Times", url: "https://www.nytimes.com/2026/05/14/t-magazine/buddhism-thailand-religion-politics.html", time: "2026-05-14T09:01:43Z" },
@@ -987,7 +992,6 @@ const locations = [
       { title: "US imposes sanctions on 10 individuals, companies for aiding Iran's weapons sector", source: "Straits Times", url: "https://www.straitstimes.com/asia/us-imposes-sanctions-on-10-individuals-companies-for-aiding-irans-weapons-sector", time: "2026-05-08T22:01:07Z" },
       { title: "Hong Kong dissident Nathan Law on China spies in UK: ‘We’re not surprised’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/08/hong-kong-dissident-nathan-law-china-spies-spying-uk", time: "2026-05-08T09:00:41Z" },
       { title: "Former China Eastern Airlines chairman indicted on bribery charges", source: "Straits Times", url: "https://www.straitstimes.com/asia/former-china-eastern-airlines-chairman-indicted-on-bribery-charges", time: "2026-05-08T04:46:32Z" },
-      { title: "UK to summon Chinese Ambassador after spying convictions", source: "Straits Times", url: "https://www.straitstimes.com/asia/uk-to-summon-chinese-ambassador-after-spying-convictions", time: "2026-05-07T16:50:56Z" },
     ]
   },
   {
@@ -1079,21 +1083,20 @@ const locations = [
     ]
   },
   {
-    name: "Taiwan Strait", country: "International",
-    lat: 24.0, lng: 119.0,
-    category: "territorial",
-    articles: [
-      { title: "Opposing Taiwan independence is in America’s own interest", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3353217/opposing-taiwan-independence-americas-own-interest?utm_source=rss_feed", time: "2026-05-12T12:30:07Z" },
-      { title: "China’s use of propaganda may outwit US if Taiwan conflict arises, experts warn", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352811/chinas-use-propaganda-may-outwit-us-if-taiwan-conflict-arises-experts-warn?utm_source=rss_feed", time: "2026-05-07T17:00:29Z" },
-    ]
-  },
-  {
     name: "Hangzhou", country: "China",
     lat: 30.2741, lng: 120.1551,
     category: "trade",
     articles: [
       { title: "Chinese court awards compensation to sacked worker replaced by AI", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/13/china-court-awards-compensation-sacked-worker-replaced-by-ai", time: "2026-05-13T14:58:57Z" },
       { title: "Chinese company that tracked US bombers over Iran wears sanctions with pride", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3353282/chinese-company-tracked-us-bombers-over-iran-wears-sanctions-pride?utm_source=rss_feed", time: "2026-05-13T04:00:05Z" },
+    ]
+  },
+  {
+    name: "Taiwan Strait", country: "International",
+    lat: 24.0, lng: 119.0,
+    category: "territorial",
+    articles: [
+      { title: "Opposing Taiwan independence is in America’s own interest", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3353217/opposing-taiwan-independence-americas-own-interest?utm_source=rss_feed", time: "2026-05-12T12:30:07Z" },
     ]
   },
   {
