@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:46 UTC, 15 May 2026</span></div>
+    <div class="subtitle">East Asia & Indo-Pacific news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:40 UTC, 15 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">15 May 2026</div>
@@ -116,6 +116,9 @@ const locations = [
     lat: 39.9042, lng: 116.4074,
     category: "military",
     articles: [
+      { title: "What was actually achieved at Trump and Xi’s ‘stalemate summit’ in Beijing?", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/may/15/what-was-achieved-trump-xi-summit-beijing", time: "2026-05-15T13:37:46Z" },
+      { title: "Trump's silence on Taiwan during summit with Xi comes as relief for island nation", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260515-trump-s-silence-on-taiwan-during-summit-with-xi-comes-as-relief-for-island-nation", time: "2026-05-15T13:19:18Z" },
+      { title: "Despite Tensions, China Greets Trump With Pomp and Pageantry", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/world/asia/trump-xi-china-meeting-beijing-reception.html", time: "2026-05-15T13:18:38Z" },
       { title: "What did American allies make of Trump’s trip to China to meet Xi?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3353757/what-did-american-allies-make-trumps-trip-china-meet-xi?utm_source=rss_feed", time: "2026-05-15T12:42:11Z" },
       { title: "Eye on the tiger: how Elon Musk’s son’s bag became a hit with Chinese public", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3353755/eye-tiger-how-elon-musks-sons-bag-became-hit-chinese-public?utm_source=rss_feed", time: "2026-05-15T12:34:39Z" },
       { title: "Beijing had already won before the Trump-Xi summit even started", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3353547/beijing-had-already-won-trump-xi-summit-even-started?utm_source=rss_feed", time: "2026-05-15T12:30:05Z" },
@@ -129,6 +132,7 @@ const locations = [
       { title: "Inside Zhongnanhai: Xi welcomes Trump into China’s hidden heart before bidding goodbye", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3353733/inside-zhongnanhai-xi-welcomes-trump-chinas-secluded-heart-bidding-goodbye?utm_source=rss_feed", time: "2026-05-15T11:17:45Z" },
       { title: "Elon Musk’s Awkward Selfie Moment With a Chinese Billionaire in Beijing", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/business/musk-lei-jun-xiaomi.html", time: "2026-05-15T11:15:20Z" },
       { title: "Trump returns to the U.S. after 2-day trip to China", source: "NPR", url: "https://www.npr.org/2026/05/15/nx-s1-5822512/trump-returns-to-the-u-s-after-2-day-trip-to-china", time: "2026-05-15T11:00:16Z" },
+      { title: "Key takeaways from Trump's China trip", source: "NPR", url: "https://www.npr.org/2026/05/15/nx-s1-5822512/trump-china-xi-summit-takeaways", time: "2026-05-15T11:00:16Z" },
       { title: "China economist shares takeaways from the Trump-Xi summit", source: "NPR", url: "https://www.npr.org/2026/05/15/nx-s1-5822445/china-economist-shares-takeaways-from-the-trump-xi-summit", time: "2026-05-15T11:00:05Z" },
       { title: "Trump-Xi accord on Iran elusive as US president’s China trip winds down", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/15/trump-china-visit-iran-agreement-xi-jinping-elusive", time: "2026-05-15T10:24:20Z" },
       { title: "What to Know About Day 2 of Trump and Xi’s Beijing Summit", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/world/asia/trump-china-xi-meeting-what-happened.html", time: "2026-05-15T10:20:08Z" },
@@ -612,10 +616,6 @@ const locations = [
       { title: "Trump trade chief says US wants balanced trade, not change to China’s system", source: "South China Morning Post", url: "https://www.scmp.com/news/us/diplomacy/article/3352961/trump-trade-chief-says-us-wants-balanced-trade-not-change-chinas-system?utm_source=rss_feed", time: "2026-05-08T18:57:54Z" },
       { title: "Xia De-hong, 94, Dies; Persecuted in China, She Starred in Daughter’s Memoir", source: "New York Times", url: "https://www.nytimes.com/2026/05/08/world/asia/xia-de-hong-dead.html", time: "2026-05-08T18:46:13Z" },
       { title: "China and US in AI revolution race as tech rivals battle for global supremacy", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352950/china-and-us-ai-revolution-race-tech-rivals-battle-global-supremacy?utm_source=rss_feed", time: "2026-05-08T14:01:56Z" },
-      { title: "Iran war hangs over Trump's Beijing visit", source: "France 24", url: "https://www.france24.com/en/tv-shows/access-asia/20260508-iran-war-hangs-over-trump-s-beijing-visit", time: "2026-05-08T13:29:58Z" },
-      { title: "Norway police hold Chinese woman in custody over suspected espionage", source: "Straits Times", url: "https://www.straitstimes.com/asia/norway-police-hold-chinese-woman-in-custody-over-suspected-espionage", time: "2026-05-08T13:01:26Z" },
-      { title: "Why Iran’s ambassador to China thinks the US can’t turn Beijing against it", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352940/why-irans-ambassador-china-thinks-us-cant-turn-beijing-against-it?utm_source=rss_feed", time: "2026-05-08T13:00:11Z" },
-      { title: "Chinese health authority says no need to worry about latest hantavirus outbreak", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3352944/chinese-health-authority-says-no-need-worry-about-latest-hantavirus-outbreak?utm_source=rss_feed", time: "2026-05-08T12:47:07Z" },
     ]
   },
   {
@@ -623,6 +623,7 @@ const locations = [
     lat: 25.033, lng: 121.5654,
     category: "territorial",
     articles: [
+      { title: "Trump to decide soon on Taiwan arms sale, non-committal to China’s Xi", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/trump-says-he-discussed-taiwan-arms-sales-with-xi-jinping-decision-soon", time: "2026-05-15T11:42:38Z" },
       { title: "Trump-China visit live: US president says he gave Xi ‘no commitment’ on Taiwan but ‘we’re not looking to have wars’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-china-visit-xi-jinping-summit-taiwan-iran-live-updates-b2977048.html", time: "2026-05-15T11:05:47Z" },
       { title: "Trump touts business wins as China airs Iran, Taiwan concerns", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/trump-touts-business-wins-as-china-airs-iran-taiwan-concerns", time: "2026-05-15T05:48:00Z" },
       { title: "Taiwan coast guard unveils last of its new ships that can carry missiles in war time", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/taiwan-coast-guard-unveils-last-of-its-new-ships-that-can-carry-missiles-in-war-time", time: "2026-05-15T04:12:34Z" },
@@ -811,6 +812,8 @@ const locations = [
     lat: 14.5995, lng: 120.9842,
     category: "territorial",
     articles: [
+      { title: "Philippines vows to hand fugitive senator to ICC following shootout", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/15/philippines-vows-to-hand-fugitive-senator-to-icc-following-shootout?traffic_source=rss", time: "2026-05-15T13:09:36Z" },
+      { title: "How a Philippine war crimes suspect thwarted arrest (for now)", source: "Straits Times", url: "https://www.straitstimes.com/asia/how-a-philippine-war-crimes-suspect-thwarted-arrest-for-now", time: "2026-05-15T12:47:41Z" },
       { title: "Philippines will 'definitely' comply with ICC request to arrest senator, minister says", source: "Straits Times", url: "https://www.straitstimes.com/asia/philippines-will-definitely-comply-with-icc-request-to-arrest-senator-minister-says", time: "2026-05-15T10:32:38Z" },
       { title: "Power cuts hit millions in the Philippines", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/power-cuts-hit-millions-in-the-philippines", time: "2026-05-15T08:20:00Z" },
       { title: "Philippines suspends Senate security chief after shootout, ‘escape’ of politician wanted by ICC", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/philippines-suspends-senate-security-chief-after-shootout-escape-of-politician-wanted-by-icc", time: "2026-05-15T07:47:36Z" },
@@ -860,6 +863,7 @@ const locations = [
     lat: 35.6762, lng: 139.6503,
     category: "diplomacy",
     articles: [
+      { title: "Lukaku included in Belgium’s World Cup squad despite injury-plagued season", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/15/lukaku-included-in-belgiums-world-cup-squad-despite-injury-plagued-season?traffic_source=rss", time: "2026-05-15T12:45:18Z" },
       { title: "Trump reaffirmed 'ironclad' US-Japan alliance after China trip, Japan's Takaichi says", source: "Straits Times", url: "https://www.straitstimes.com/asia/trump-reaffirmed-ironclad-us-japan-alliance-after-china-trip-japans-takaichi-says", time: "2026-05-15T11:57:39Z" },
       { title: "Magnitude 6.3 earthquake hits northern Japan, no tsunami warning issued", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/magnitude-6-3-earthquake-hits-northern-japan-no-tsunami-warning-issued", time: "2026-05-15T11:38:59Z" },
       { title: "Mitoma fails to make Japan’s 2026 World Cup squad due to hamstring injury", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/15/mitoma-fails-to-make-japans-2026-world-cup-squad-due-to-hamstring-injury?traffic_source=rss", time: "2026-05-15T06:38:24Z" },
@@ -984,6 +988,7 @@ const locations = [
     lat: 3.139, lng: 101.6869,
     category: "trade",
     articles: [
+      { title: "Iran allows Malaysian energy giant’s ship to sail through Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-war-malaysia-sapura-1200-b2977336.html", time: "2026-05-15T12:55:12Z" },
       { title: "PM Anwar says Malaysia not opposed to fugitive financier Jho Low’s bid for pardon", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysia-pm-anwar-says-not-opposed-to-fugitive-financier-jho-lows-bid-for-pardon", time: "2026-05-15T05:39:00Z" },
       { title: "Traditional Malay houses get second life as resorts and even the set for horror flicks", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/traditional-malay-houses-get-second-life-as-resorts-and-sets-for-horror-flicks", time: "2026-05-14T21:00:00Z" },
       { title: "Malaysian singer Namewee acquitted of drug-related charges", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/malaysian-singer-namewee-acquitted-of-drug-related-charges", time: "2026-05-14T13:45:00Z" },
