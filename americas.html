@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:38 UTC, 16 May 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:33 UTC, 16 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">16 May 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "How a Times Reporter Found Cartel Gold at the Royal Canadian Mint", source: "New York Times", url: "https://www.nytimes.com/2026/05/16/world/canada/cartel-gold-royal-canadian-mint.html", time: "2026-05-16T10:00:02Z" },
       { title: "Víctor Rodríguez resigns as Pemex director after a month of troubles", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/victor-rodriguez-resigns-pemex-director-troubled-month/", time: "2026-05-16T00:09:54Z" },
       { title: "Opinion: Sheinbaum, Meloni and Takaichi — a comparison worth exploring", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/opinion-sheinbaum-meloni-and-takaichi-a-comparison-worth-questioning/", time: "2026-05-15T23:51:20Z" },
       { title: "FIFA takes over Azteca Stadium, now ‘Mexico City Stadium,’ for World Cup", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/fifa-azteca-stadium-mexico-city-stadium/", time: "2026-05-15T23:28:54Z" },
@@ -218,7 +219,6 @@ const locations = [
       { title: "Tlaxcala’s magical Puppet Museum reveals Mexico’s rich history", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/travel/the-national-puppet-museum-in-huamantla-reveals-mexicos-rich-puppet-history/", time: "2026-05-09T15:08:35Z" },
       { title: "Two dead as US military strike alleged drug trafficking vessel in the eastern Pacific", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/us-military-pacific-ocean-drug-vessel-b2973556.html", time: "2026-05-09T13:57:46Z" },
       { title: "The airplane landing from hell that left me inspired: A perspective from our CEO", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/ceo-corner/flight-from-hell-ceo-perspective/", time: "2026-05-09T13:00:18Z" },
-      { title: "BTS came to Mexico and these fans will never be the same", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-05-09/bts-mexico-kpop-sheinbaum", time: "2026-05-09T10:00:00Z" },
     ]
   },
   {
@@ -226,6 +226,7 @@ const locations = [
     lat: 38.9072, lng: -77.0369,
     category: "political",
     articles: [
+      { title: "Man killed in shark attack off Western Australia coast", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/shark-attack-australia-rottnest-island-b2977846.html", time: "2026-05-16T10:08:46Z" },
       { title: "Internal Pentagon Report Reveals Hegseth Is Willfully Putting Civilians in Danger", source: "The Intercept", url: "https://theintercept.com/2026/05/15/pentagon-civilian-harm-casualties-war-hegseth/", time: "2026-05-15T21:33:25Z" },
       { title: "A sunken Japanese ship adds to the reef system off the Tamaulipas coast", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/sunken-japanese-ship-artiificial-reef-tamaulipas-coast/", time: "2026-05-15T20:24:12Z" },
       { title: "Breakfast taco order sparks a Texas-sized debate about rising Democratic star: ‘White bread with mayo’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/james-talarico-breakfast-order-texas-debate-b2977500.html", time: "2026-05-15T18:48:13Z" },
@@ -439,6 +440,26 @@ const locations = [
     ]
   },
   {
+    name: "Lima", country: "Peru",
+    lat: -12.0464, lng: -77.0428,
+    category: "economic",
+    articles: [
+      { title: "How the climate crisis brutally compromises aid to Tanzania: ‘It impacts everything’", source: "The Independent", url: "https://www.independent.co.uk/climate-change/uk-aid-climate-crisis-tanzania-africa-b2976542.html", time: "2026-05-16T10:24:33Z" },
+      { title: "Trump aims to defy gravity with Beijing friendship summit", source: "Axios", url: "https://www.axios.com/2026/05/15/trump-xi-china-summit", time: "2026-05-15T05:00:08Z" },
+      { title: "Chance of a ‘super’ El Niño grows — and it’s just around the corner", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5878328-chance-of-a-super-el-nino-grows-and-its-just-around-the-corner/", time: "2026-05-14T17:13:00Z" },
+      { title: "Somalia is in a deadly drought again. Most humanitarian aid isn't there this time", source: "ABC News", url: "https://abcnews.com/International/wireStory/somalia-deadly-drought-humanitarian-aid-time-132950058", time: "2026-05-14T09:17:11Z" },
+      { title: "Peru leftist Roberto Sanchez advances to runoff in presidential race", source: "France 24", url: "https://www.france24.com/en/americas/20260514-peru-leftist-roberto-sanchez-advances-to-runoff-in-presidential-race-election", time: "2026-05-14T00:38:40Z" },
+      { title: "America can’t afford year-round E15 fuel — Congress must reject it", source: "The Hill", url: "https://thehill.com/opinion/energy-environment/5873925-year-round-e15-gasoline-debate/", time: "2026-05-13T12:00:00Z" },
+      { title: "Peru presidential candidate Roberto Sanchez charged with financial crimes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/13/peru-presidential-candidate-roberto-sanchez-charged-with-financial-crimes?traffic_source=rss", time: "2026-05-13T01:05:33Z" },
+      { title: "Fujimori and Sanchez lead Peru's presidential runoff as count enters final stretch", source: "France 24", url: "https://www.france24.com/en/americas/20260512-conservative-fujimori-and-leftist-sanchez-lead-first-round-of-peru-disrupted-presidential-poll", time: "2026-05-12T15:35:41Z" },
+      { title: "Drones now key to fighting malaria as the climate crisis fuels ‘catastrophic’ rise in cases", source: "The Independent", url: "https://www.independent.co.uk/climate-change/malaria-climate-crisis-africa-floods-tanzania-b2972378.html", time: "2026-05-12T11:36:51Z" },
+      { title: "A super El Niño wiped out millions of people in 1877. Are we better prepared now?", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/05/12/super-el-nino-1877-population-impacts/", time: "2026-05-12T09:00:39Z" },
+      { title: "Trump weighs military action against Iran with ceasefire 'on life support'", source: "Axios", url: "https://www.axios.com/2026/05/11/trump-iran-ceasefile-military-action", time: "2026-05-12T01:33:50Z" },
+      { title: "Trump to Axios: 'I don't like' Iran's peace plan response", source: "Axios", url: "https://www.axios.com/2026/05/10/trump-iran-war-us-peace-plan-tehran-response-inappropriate", time: "2026-05-10T23:43:31Z" },
+      { title: "Trump official opens door to gas tax suspension", source: "Axios", url: "https://www.axios.com/2026/05/10/trump-gas-tax-suspension-wright", time: "2026-05-10T16:56:36Z" },
+    ]
+  },
+  {
     name: "Brasilia", country: "Brazil",
     lat: -15.7975, lng: -47.8919,
     category: "political",
@@ -458,25 +479,6 @@ const locations = [
     ]
   },
   {
-    name: "Lima", country: "Peru",
-    lat: -12.0464, lng: -77.0428,
-    category: "economic",
-    articles: [
-      { title: "Trump aims to defy gravity with Beijing friendship summit", source: "Axios", url: "https://www.axios.com/2026/05/15/trump-xi-china-summit", time: "2026-05-15T05:00:08Z" },
-      { title: "Chance of a ‘super’ El Niño grows — and it’s just around the corner", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5878328-chance-of-a-super-el-nino-grows-and-its-just-around-the-corner/", time: "2026-05-14T17:13:00Z" },
-      { title: "Somalia is in a deadly drought again. Most humanitarian aid isn't there this time", source: "ABC News", url: "https://abcnews.com/International/wireStory/somalia-deadly-drought-humanitarian-aid-time-132950058", time: "2026-05-14T09:17:11Z" },
-      { title: "Peru leftist Roberto Sanchez advances to runoff in presidential race", source: "France 24", url: "https://www.france24.com/en/americas/20260514-peru-leftist-roberto-sanchez-advances-to-runoff-in-presidential-race-election", time: "2026-05-14T00:38:40Z" },
-      { title: "America can’t afford year-round E15 fuel — Congress must reject it", source: "The Hill", url: "https://thehill.com/opinion/energy-environment/5873925-year-round-e15-gasoline-debate/", time: "2026-05-13T12:00:00Z" },
-      { title: "Peru presidential candidate Roberto Sanchez charged with financial crimes", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/13/peru-presidential-candidate-roberto-sanchez-charged-with-financial-crimes?traffic_source=rss", time: "2026-05-13T01:05:33Z" },
-      { title: "Fujimori and Sanchez lead Peru's presidential runoff as count enters final stretch", source: "France 24", url: "https://www.france24.com/en/americas/20260512-conservative-fujimori-and-leftist-sanchez-lead-first-round-of-peru-disrupted-presidential-poll", time: "2026-05-12T15:35:41Z" },
-      { title: "Drones now key to fighting malaria as the climate crisis fuels ‘catastrophic’ rise in cases", source: "The Independent", url: "https://www.independent.co.uk/climate-change/malaria-climate-crisis-africa-floods-tanzania-b2972378.html", time: "2026-05-12T11:36:51Z" },
-      { title: "A super El Niño wiped out millions of people in 1877. Are we better prepared now?", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/05/12/super-el-nino-1877-population-impacts/", time: "2026-05-12T09:00:39Z" },
-      { title: "Trump weighs military action against Iran with ceasefire 'on life support'", source: "Axios", url: "https://www.axios.com/2026/05/11/trump-iran-ceasefile-military-action", time: "2026-05-12T01:33:50Z" },
-      { title: "Trump to Axios: 'I don't like' Iran's peace plan response", source: "Axios", url: "https://www.axios.com/2026/05/10/trump-iran-war-us-peace-plan-tehran-response-inappropriate", time: "2026-05-10T23:43:31Z" },
-      { title: "Trump official opens door to gas tax suspension", source: "Axios", url: "https://www.axios.com/2026/05/10/trump-gas-tax-suspension-wright", time: "2026-05-10T16:56:36Z" },
-    ]
-  },
-  {
     name: "Ottawa", country: "Canada",
     lat: 45.4215, lng: -75.6972,
     category: "political",
@@ -492,7 +494,6 @@ const locations = [
       { title: "Sharp drop in ‘forever chemicals’ in seabird eggs hailed as win for regulation", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/11/pfas-seabird-eggs-forever-chemicals", time: "2026-05-11T12:00:54Z" },
       { title: "‘Truly terrifying’: Alberta voter data breach raises fears for Canada’s electoral integrity", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/11/alberta-voter-data-breach-separatists-referendum", time: "2026-05-11T11:00:53Z" },
       { title: "Spanish passengers from hantavirus-stricken cruise ship depart by plane for Madrid", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-hantavirus-cruise-ship-canary-islands-evacuation-may-10/", time: "2026-05-10T11:24:23Z" },
-      { title: "Canada and the European Union Are in Love. Where Can It Lead?", source: "New York Times", url: "https://www.nytimes.com/2026/05/09/world/canada/carney-canada-european-union-trade-trump.html", time: "2026-05-09T10:00:02Z" },
     ]
   },
   {
