@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:33 UTC, 18 May 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:27 UTC, 18 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">18 May 2026</div>
@@ -145,6 +145,8 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Israeli soldiers in Lebanon complain of risky, pointless missions in broad daylight", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-19/ty-article/.premium/idf-soldiers-in-lebanon-complain-of-risky-pointless-missions-in-broad-daylight/0000019e-3cbe-df7e-a5be-3eff1fef0000", time: "2026-05-18T21:22:14Z" },
+      { title: "Iraq launches desert sweep after reports of secret Israeli bases", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/iraq-launches-desert-sweep-after-reports-of-secret-israeli-bases?traffic_source=rss", time: "2026-05-18T21:09:26Z" },
+      { title: "Croatian president rejects new Israeli ambassador", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/18/croatian-president-rejects-new-israeli-ambassador?traffic_source=rss", time: "2026-05-18T21:03:49Z" },
       { title: "At least 11 injured after bus crashes into tree, electric pole on Tel Aviv’s Dizengoff Street", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-896605", time: "2026-05-18T20:56:05Z" },
       { title: "Noam Bettan meets with President Isaac Herzog after winning second place at Eurovision", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-896601", time: "2026-05-18T20:02:19Z" },
       { title: "Lapid warns Likud MKs backing haredi draft bill from Netanyahu pressure will ‘not fall under radar'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-896599", time: "2026-05-18T19:48:15Z" },
@@ -176,6 +178,9 @@ const locations = [
       { title: "'We have to remove Islam': Social media reacts to racist speeches at Unite the Kingdom rally", source: "Middle East Eye", url: "https://www.middleeasteye.net/trending/we-have-remove-islam-social-media-reacts-racist-speeches-unite-kingdom-rally", time: "2026-05-18T14:25:10Z" },
       { title: "US bases in Germany allegedly used for large-scale arms shipments to Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-us-bases-in-germany-allegedly-used-for-large-scale-arms-shipments-to-israel/", time: "2026-05-18T13:54:39Z" },
       { title: "Netanyahu testimony canceled again at last minute for security-diplomatic reasons", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-896562", time: "2026-05-18T13:47:43Z" },
+      { title: "‘Build and keep a wall’: Pro-Israel donors openly target Massie as warning to Israel critics", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-build-and-keep-a-wall-pro-israel-donors-openly-target-massie-as-warning-to-israel-critics/", time: "2026-05-18T13:34:11Z" },
+      { title: "Maariv: Hezbollah drone attacks raise concerns in Israeli army", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-maariv-hezbollah-drone-attacks-raise-concerns-in-israeli-army/", time: "2026-05-18T13:00:30Z" },
+      { title: "ICC denies issuing new arrest warrants against Israeli officials", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-icc-denies-issuing-new-arrest-warrants-against-israeli-officials/", time: "2026-05-18T12:37:06Z" },
       { title: "Israeli attacks in Gaza have stepped up since halt in bombing in Iran", source: "France 24", url: "https://www.france24.com/en/israeli-attacks-in-gaza-have-stepped-up-since-halt-in-bombing-in-iran", time: "2026-05-18T12:34:07Z" },
       { title: "Ultra-Orthodox parties push Knesset dissolution: 'We don't believe Netanyahu's promises'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-05-18/ty-article/.premium/haredi-parties-dont-believe-netanyahus-promises-over-draft-dodge-bill/0000019e-3a78-def8-a3ff-3ffa45790000", time: "2026-05-18T12:25:23Z" },
       { title: "IDF struggles to throttle endless feed of soldiers posting misdeeds on social media", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-struggles-to-throttle-endless-feed-of-soldiers-posting-misdeeds-on-social-media/", time: "2026-05-18T12:15:03Z" },
@@ -185,9 +190,11 @@ const locations = [
       { title: "‘I don’t know what would have happened if we’d won,’ says Israel’s Eurovision chief", source: "Times of Israel", url: "https://www.jewishnews.co.uk/i-dont-know-what-would-have-happened-if-wed-won-says-israels-eurovision-chief/", time: "2026-05-18T11:18:32Z" },
       { title: "IDF seizes over 20 Gaza-bound flotilla boats in international waters, organizers say", source: "Haaretz", url: "https://www.haaretz.com/gaza/2026-05-18/ty-article/.premium/idf-seizes-15-gaza-bound-flotilla-boats-in-international-waters/0000019e-3a46-d104-abde-fbcec96c0000", time: "2026-05-18T11:05:20Z" },
       { title: "Daily Briefing May 18: As personnel crisis looms, IDF needs Knesset legislation", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-may-18-as-personnel-crisis-looms-idf-needs-knesset-legislation/", time: "2026-05-18T11:01:46Z" },
+      { title: "Israel economy shrinks 3.3% due to war with Iran", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-israel-economy-shrinks-3-3-due-to-war-with-iran/", time: "2026-05-18T10:58:07Z" },
       { title: "Somaliland’s first ambassador in country’s history presents credentials to Herzog", source: "Times of Israel", url: "https://www.timesofisrael.com/somalilands-first-ambassador-in-countrys-history-presents-credentials-to-herzog/", time: "2026-05-18T10:33:38Z" },
       { title: "America loves Israel. Until business gets in the way", source: "Haaretz", url: "https://www.haaretz.com/israel-news/business/2026-05-18/ty-article/.premium/america-loves-israel-until-business-gets-in-the-way/0000019e-35ea-d5a9-a5bf-75ff17840000", time: "2026-05-18T10:11:41Z" },
       { title: "Israeli Navy intercepts vessels in Gaza-bound flotilla off Cyprus coast", source: "Times of Israel", url: "https://www.timesofisrael.com/israeli-navy-begins-to-intercept-vessels-in-gaza-bound-flotilla-off-cyprus-coast/", time: "2026-05-18T10:06:52Z" },
+      { title: "Netanyahu says Israeli army nearing completion of Gaza mission, signals readiness for all Iran scenarios", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260518-netanyahu-says-israeli-army-nearing-completion-of-gaza-mission-signals-readiness-for-all-iran-scenarios/", time: "2026-05-18T09:51:01Z" },
       { title: "Nova exhibit banner in London taken down over police’s fear of attacks — report", source: "Times of Israel", url: "https://www.timesofisrael.com/nova-exhibit-banner-in-london-taken-down-over-polices-fear-of-attacks-report/", time: "2026-05-18T09:13:59Z" },
       { title: "IDF kills Islamic Jihad commander in Lebanon, Lebanese media says", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-18/ty-article/.premium/idf-kills-islamic-jihad-commander-in-lebanon-lebanese-media-says/0000019e-39ef-d104-abde-f9eff4d10000", time: "2026-05-18T09:04:19Z" },
       { title: "Bennett’s UAE plans prompted Netanyahu office to reveal secret wartime visit - report", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-896513", time: "2026-05-18T08:46:21Z" },
@@ -637,13 +644,6 @@ const locations = [
       { title: "Divisive bill barring non-Orthodox practices at Western Wall back on Knesset agenda", source: "Times of Israel", url: "https://www.timesofisrael.com/divisive-bill-barring-non-orthodox-practices-at-western-wall-back-on-knesset-agenda/", time: "2026-05-11T23:23:31Z" },
       { title: "IDF carried out week-long raid beyond Lebanon’s Litani River to target Hezbollah sites", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-12-2026/", time: "2026-05-11T22:35:44Z" },
       { title: "Yair Golan is the best choice for Israel", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-12/ty-article-opinion/.premium/israel-is-not-yet-ready-for-a-leader-like-yair-golan/0000019e-1849-d907-ad9e-1effd7aa0000", time: "2026-05-11T22:34:17Z" },
-      { title: "Trump and Netanyahu's amateurish plan has left Iran weaker but more of a threat", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-12/ty-article-opinion/.premium/trump-and-netanyahus-amateurish-plan-has-left-iran-weaker-but-more-of-a-threat/0000019e-1849-dfca-a7df-bb59c88c0000", time: "2026-05-11T22:19:54Z" },
-      { title: "Supporting the 'nation-state law' means ceding Israel to Ben-Gvir and his ilk", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-12/ty-article/.premium/supporting-the-nation-state-law-means-ceding-israel-to-ben-gvir-and-his-ilk/0000019e-1849-d14f-abfe-1bcdb8520000", time: "2026-05-11T22:07:19Z" },
-      { title: "Supporting the 'nation-state law' means ceding Israel to Ben-Gvir and his ilk", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-12/ty-article-opinion/.premium/supporting-the-nation-state-law-means-ceding-israel-to-ben-gvir-and-his-ilk/0000019e-1849-d14f-abfe-1bcdb8520000", time: "2026-05-11T22:07:19Z" },
-      { title: "Docaviv 2026 reveals the Israeli film lineup", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-895836", time: "2026-05-11T22:01:45Z" },
-      { title: "Ukraine’s envoy laments Israel’s lack of ‘interest’ in Kyiv drone expertise", source: "Times of Israel", url: "https://www.timesofisrael.com/ukraines-envoy-laments-israels-lack-of-interest-in-kyiv-drone-expertise/", time: "2026-05-11T21:52:33Z" },
-      { title: "How architecture can help solve Israel's youth-violence epidemic", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-12/ty-article-opinion/.premium/how-architecture-can-help-solve-israels-youth-violence-epidemic/0000019e-1849-dfbd-affe-3c5ba4a90000", time: "2026-05-11T21:49:36Z" },
-      { title: "Former Hostage Calls on All of Israel’s Government to Resign", source: "New York Times", url: "https://www.nytimes.com/2026/05/11/world/middleeast/israel-hostage-demands-government-resign.html", time: "2026-05-11T21:37:13Z" },
     ]
   },
   {
@@ -655,9 +655,11 @@ const locations = [
       { title: "Leadtek keeping eye on changes to China AI exports", source: "Taipei Times", url: "https://www.taipeitimes.com/News/biz/archives/2026/05/19/2003857559", time: "2026-05-19T00:00:00Z" },
       { title: "Melenchon cheerleads for Beijing", source: "Taipei Times", url: "https://www.taipeitimes.com/News/editorials/archives/2026/05/19/2003857564", time: "2026-05-19T00:00:00Z" },
       { title: "輕鬆華語GO: EASY CHINESE GO", source: "Taipei Times", url: "https://www.taipeitimes.com/News/lang/archives/2026/05/19/2003857554", time: "2026-05-19T00:00:00Z" },
+      { title: "Milei guts China currency lifeline after Trump ultimatum on financial ties: reports", source: "South China Morning Post", url: "https://www.scmp.com/news/us/article/3354026/milei-guts-china-currency-lifeline-after-trump-ultimatum-financial-ties-reports?utm_source=rss_feed", time: "2026-05-18T21:46:26Z" },
       { title: "How China is becoming the gravitational centre of global diplomacy", source: "South China Morning Post", url: "https://www.scmp.com/opinion/china-opinion/article/3353855/how-china-becoming-gravitational-centre-global-diplomacy?utm_source=rss_feed", time: "2026-05-18T21:30:05Z" },
       { title: "Trump’s China trip highlights bipartisan shift in Washington’s approach to Beijing", source: "South China Morning Post", url: "https://www.scmp.com/news/us/politics/article/3354019/trumps-china-trip-highlights-bipartisan-shift-washingtons-approach-beijing?utm_source=rss_feed", time: "2026-05-18T18:07:43Z" },
       { title: "Unbeatable China? Beijing a global focal point as Russia pins hopes on Putin-Xi summit", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3353996/unbeatable-china-beijing-global-focal-point-russia-pins-hopes-putin-xi-summit?utm_source=rss_feed", time: "2026-05-18T15:00:06Z" },
+      { title: "Guangxi’s Pinglu Canal to boost growing trade between South-east Asia and China", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/guangxis-pinglu-canal-to-boost-growing-trade-between-south-east-asia-and-china", time: "2026-05-18T14:00:00Z" },
       { title: "A trade boost and a new relationship status: U.S. touts modest China deals after summit’s good vibes", source: "NBC News", url: "https://www.nbcnews.com/world/asia/trump-xi-summit-china-agrees-boost-trade-us-beef-poultry-rcna345634", time: "2026-05-18T13:37:23Z" },
       { title: "Trump’s Taiwan independence comments: a blow to William Lai and ruling DPP?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/politics/article/3354002/does-trumps-not-looking-independence-remark-hurt-taiwans-ruling-party?utm_source=rss_feed", time: "2026-05-18T13:00:05Z" },
       { title: "Trump’s Taiwan Gambit is Already a Gift to China", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/world/asia/trumps-taiwan-china-weapons.html", time: "2026-05-18T12:11:49Z" },
@@ -1149,8 +1151,6 @@ const locations = [
       { title: "The big questions hanging over the Trump-Xi meeting in China", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/12/the-big-questions-hanging-over-the-trump-xi-meeting-in-china", time: "2026-05-11T23:05:07Z" },
       { title: "Tom Llamas in China ahead of Trump’s historic trip", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/tom-llamas-in-china-ahead-of-trump-s-historic-trip-263130693511", time: "2026-05-11T23:02:18Z" },
       { title: "US trial hears witness claims of harassment over Chinese ‘secret police station’", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3353201/us-trial-hears-witness-claims-harassment-over-chinese-secret-police-station?utm_source=rss_feed", time: "2026-05-11T23:00:37Z" },
-      { title: "Iran war quagmire threatens to leave Trump with little from China trip besides ballroom envy", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-china-trip-iran-analysis-b2974555.html", time: "2026-05-11T21:52:57Z" },
-      { title: "Trump heads to China with Musk, Cook and top CEOs for Xi talks", source: "South China Morning Post", url: "https://www.scmp.com/news/china/article/3353199/trump-heads-china-musk-cook-and-top-ceos-xi-talks?utm_source=rss_feed", time: "2026-05-11T21:49:13Z" },
     ]
   },
   {
@@ -1159,8 +1159,11 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Iranian transactions flow through Tron, BNB Chain amid Trump-family crypto ventures", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/article-896607", time: "2026-05-18T22:41:58Z" },
+      { title: "Iran commander warns US against ‘strategic mistake’ amid tensions", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-commander-warns-us-against-strategic-mistake-amid-tensions", time: "2026-05-18T22:25:18Z" },
       { title: "Trump claims Gulf leaders requested he hold off on striking Iran, originally 'planned' for Tuesday", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-896614", time: "2026-05-18T22:20:03Z" },
+      { title: "Indian firm to pay $275m to settle US Iran sanctions probe", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/indian-firm-pay-275m-settle-us-iran-sanctions-probe", time: "2026-05-18T21:38:51Z" },
       { title: "Analyst says Trump giving false impression of control in Iran talks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/analyst-says-trump-giving-false-impression-control-iran-talks", time: "2026-05-18T21:24:26Z" },
+      { title: "Trump pauses possible Iran strike after Gulf intervention", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/trump-pauses-possible-iran-strike-after-gulf-intervention?traffic_source=rss", time: "2026-05-18T21:11:48Z" },
       { title: "Trump Says He Authorized New Strikes on Iran, but Has Decided to Hold Off", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/us/politics/trump-iran-strikes.html", time: "2026-05-18T21:00:48Z" },
       { title: "US senator blames Trump’s Iran war for surge in fuel prices", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-senator-blames-trumps-iran-war-surge-fuel-prices", time: "2026-05-18T20:53:06Z" },
       { title: "US: At least one dead in attack at San Diego mosque", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/dead-attack-mosque-san-diego-mosque", time: "2026-05-18T20:48:45Z" },
@@ -1611,6 +1614,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Protest in Greece after Israeli forces storm Gaza aid flotilla", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/protest-in-greece-after-israeli-forces-storm-gaza-aid-flotilla?traffic_source=rss", time: "2026-05-18T21:13:24Z" },
       { title: "U.S. authorities arrest man over 2024 alleged assault of Jewish man in Los Angeles", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-18/ty-article/.premium/u-s-feds-arrest-man-over-2024-alleged-assault-of-jewish-man-in-los-angeles/0000019e-3c13-d394-addf-ff3b46810000", time: "2026-05-18T20:41:26Z" },
       { title: "Nearly 80% of Gazans open to emigrating from Strip, COGAT survey finds - exclusive", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-896602", time: "2026-05-18T20:28:52Z" },
       { title: "Hamas said to appoint Mohammed Odeh to replace group’s slain leader in Gaza", source: "Times of Israel", url: "https://www.timesofisrael.com/hamas-said-to-appoint-mohammed-odeh-to-replace-groups-slain-leader-in-gaza/", time: "2026-05-18T20:20:29Z" },
@@ -1950,7 +1954,6 @@ const locations = [
       { title: "Knesset advances controversial West Bank antiquity bill in first reading", source: "Times of Israel", url: "https://www.timesofisrael.com/knesset-advances-controversial-west-bank-antiquity-bill-in-first-reading/", time: "2026-05-11T22:59:53Z" },
       { title: "Knesset passes law establishing military tribunal to try October 7 perpetrators", source: "Times of Israel", url: "https://www.timesofisrael.com/knesset-passes-law-establishing-military-tribunal-to-try-october-7-perpetrators/", time: "2026-05-11T22:34:48Z" },
       { title: "EU puts sanctions on Israeli settlers after Hungary drops Orban’s veto", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/11/eu-israel-settler-sanctions/", time: "2026-05-11T22:31:29Z" },
-      { title: "Israel's real police commander lives in the West Bank settlement of Kiryat Arba", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-05-12/ty-article-opinion/israels-real-police-commander-lives-in-the-west-bank-settlement-of-kiryat-arba/0000019e-1849-d907-ad9e-1effe7060000", time: "2026-05-11T21:40:49Z" },
     ]
   },
   {
@@ -1958,6 +1961,8 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Vance says ‘stealing’ $1B from treasury is theft – on the same day Trump pledged to give $1.7B taxpayer cash to his allies", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vance-stealing-billions-trump-fund-b2978971.html", time: "2026-05-18T21:32:22Z" },
+      { title: "Vance says ‘stealing’ $1B from treasury is theft – on the same day Trump pledged to give $1.7B taxpayer cash to his allies", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vance-stealing-billions-trump-fund-b2978971.html", time: "2026-05-18T21:32:22Z" },
       { title: "Pete Hegseth gives Trump impersonation to bash Biden-era military policy and rally for MAGA candidate in Kentucky", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-kentucky-gallrein-thomas-massie-b2978943.html", time: "2026-05-18T20:30:01Z" },
       { title: "Pete Hegseth gives Trump impersonation to bash Biden-era military policy and rally for MAGA candidate in Kentucky", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-kentucky-gallrein-thomas-massie-b2978943.html", time: "2026-05-18T20:30:01Z" },
       { title: "Massie race breaks spending record as pro-Israel groups target Trump critic", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/18/massie-race-breaks-spending-record-as-pro-israel-groups-target-trump-critic?traffic_source=rss", time: "2026-05-18T20:28:01Z" },
@@ -2159,7 +2164,6 @@ const locations = [
       { title: "U.S. Coast Guard now has boat of husband of woman who disappeared in Bahamas", source: "NBC News", url: "https://www.nbcnews.com/news/us-news/us-coast-guard-now-boat-husband-woman-went-missing-bahamas-rcna344651", time: "2026-05-12T01:06:37Z" },
       { title: "ICE hands members of Congress new memo blocking detention center visits — while they’re trying to get in", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/ice-memo-congress-otay-mesa-detention-center-b2974611.html", time: "2026-05-12T00:53:37Z" },
       { title: "US sub that can launch nuclear missiles announces location in rare reveal as Iran war drags on", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/ohio-class-submarine-nuclear-missiles-spain-b2974593.html", time: "2026-05-11T22:53:57Z" },
-      { title: "Hegseth’s latest attack on Kelly underlines alarm over US weapons stockpiles", source: "The Hill", url: "https://thehill.com/policy/defense/5873093-kelly-hegseth-feud-weapons-stockpiles-iran/", time: "2026-05-11T21:36:05Z" },
     ]
   },
   {
@@ -2167,6 +2171,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Iran shrugs as Trump continuously flip-flops between threats and extending peace talk deadlines", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-war-taco-peace-talks-b2978939.html", time: "2026-05-18T21:40:59Z" },
+      { title: "Iran announces new body to manage Strait of Hormuz as peace talks stall", source: "France 24", url: "https://www.france24.com/en/middle-east/20260518-iran-announces-new-body-to-manage-strait-of-hormuz-as-peace-talks-stall", time: "2026-05-18T21:37:33Z" },
       { title: "Trump says he holding off on Iran strikes planned for Tuesday at Gulf leaders' request", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-18/ty-article/iranian-official-u-s-shows-flexibility-on-irans-nuclear-program-in-talks/0000019e-3c2c-d5a4-afde-7ebfeae80000", time: "2026-05-18T18:40:22Z" },
       { title: "Iran officially announces new body to manage Strait of Hormuz", source: "France 24", url: "https://www.france24.com/en/iran-officially-announces-new-body-to-manage-strait-of-hormuz", time: "2026-05-18T18:21:51Z" },
       { title: "US issues 30-day sanction waiver for Russian oil", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-issues-30-day-sanction-waiver-russian-oil", time: "2026-05-18T18:02:17Z" },
@@ -2348,7 +2354,6 @@ const locations = [
       { title: "US to release 53 million barrels from strategic oil reserve", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-release-53-million-barrels-strategic-oil-reserve", time: "2026-05-12T01:23:04Z" },
       { title: "Iran rejects US-backed UN resolution on Strait of Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-rejects-us-backed-un-resolution-strait-hormuz", time: "2026-05-12T00:17:59Z" },
       { title: "UAE secretly joined Israeli-US strikes on Iran: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/uae-secretly-joined-israeli-us-strikes-iran-report", time: "2026-05-11T22:37:42Z" },
-      { title: "Ceasefire on 'life support', Trump says, as he rejects 'stupid' Iranian peace offer", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/ceasefire-life-support-trump-says-he-rejects-stupid-iranian-peace-offer", time: "2026-05-11T21:58:06Z" },
     ]
   },
   {
@@ -2690,6 +2695,7 @@ const locations = [
     category: "political",
     articles: [
       { title: "U.S. prosecutors drop fraud charges against billionaire Indian businessman Gautam Adani", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-prosecutors-drop-fraud-charges-against-billionaire-indian-businessman-gautam-adani", time: "2026-05-18T21:12:16Z" },
+      { title: "Indian court declares another historical mosque a temple", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/indian-court-declares-another-historical-mosque-a-temple?traffic_source=rss", time: "2026-05-18T21:05:08Z" },
       { title: "US drops fraud charges after billionaire Adani pledges $10bn investment", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/18/us-drops-fraud-charges-after-billionaire-adani-pledges-10bn-investment?traffic_source=rss", time: "2026-05-18T21:02:25Z" },
       { title: "Collaboration with India will help counter ‘future pandemics’, says African Union as Ebola outbreak spreads", source: "The Hindu", url: "https://www.thehindu.com/news/national/collaboration-with-india-will-help-counter-future-pandemics-says-african-union-as-ebola-outbreak-spreads/article70995243.ece", time: "2026-05-18T20:42:05Z" },
       { title: "Address ‘ground level challenges’, ease regulatory frameworks: Norwegian businesses tell Modi", source: "The Hindu", url: "https://www.thehindu.com/news/national/address-ground-level-challenges-ease-regulatory-frameworks-norwegian-businesses-tell-modi/article70995506.ece", time: "2026-05-18T20:35:46Z" },
@@ -2819,7 +2825,6 @@ const locations = [
       { title: "Adaptive deterrence urged to counter India’s hostile posture", source: "Dawn", url: "https://www.dawn.com/news/1999502/adaptive-deterrence-urged-to-counter-indias-hostile-posture", time: "2026-05-12T02:40:07Z" },
       { title: "A changed world", source: "Dawn", url: "https://www.dawn.com/news/1999602/a-changed-world", time: "2026-05-12T02:35:48Z" },
       { title: "When dismounting the tiger", source: "Dawn", url: "https://www.dawn.com/news/1999601/when-dismounting-the-tiger", time: "2026-05-12T01:55:47Z" },
-      { title: "Less gold, less travel: Modi urges austerity as oil prices surge, economy under pressure", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/less-gold-less-travel-modi-urges-austerity-as-oil-prices-surge-economy-under-pressure", time: "2026-05-11T22:00:00Z" },
     ]
   },
   {
@@ -3336,6 +3341,8 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Spanish king to attend the Spain-Uruguay World Cup match in Guadalajara", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/spanish-king-accepts-invitation-spain-uruguay-world-cup-match/", time: "2026-05-18T21:53:41Z" },
+      { title: "10 killed in armed attack on Puebla-area ranch", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/10-killed-puebla-ranch/", time: "2026-05-18T21:50:38Z" },
       { title: "Mexico’s CNTE teachers’ union threatens national strike ahead of the World Cup", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/teachers-union-national-strike-world-cup/", time: "2026-05-18T20:40:23Z" },
       { title: "2 former Sinaloa officials in US custody following drug trafficking indictment", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/former-sinaloa-officials-us-custody/", time: "2026-05-18T20:00:52Z" },
       { title: "MND Local Puerto Vallarta: Sample the city’s best restaurants and get a taste of history at events in May", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/celebrate-puerto-vallarta-events-may-2026/", time: "2026-05-18T19:34:09Z" },
@@ -3433,8 +3440,6 @@ const locations = [
       { title: "Education Ministry backtracks, maintains July 15 as official end to Mexico’s school year", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/education-ministry-mexico-school-year/", time: "2026-05-12T00:14:41Z" },
       { title: "An archaeological zone near Mexico City has been virtually gutted by looters. Who’s to blame?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/chalco-archaeological-zone-near-mexico-city-gutted-by-looters/", time: "2026-05-11T23:33:13Z" },
       { title: "The binational singing contest México canta returns for a second edition", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/mexico-canta-returns-second-edition/", time: "2026-05-11T22:57:50Z" },
-      { title: "Mexico named as target in alleged US-backed plot to undermine some Latin American governments", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/mexico-target-alleged-us-backed-plot-left-leaning-latin-american-governments/", time: "2026-05-11T22:14:44Z" },
-      { title: "Tech exports boom as Mexico cements top spot in US trade", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/tech-export-boom-mexico-us-market-share/", time: "2026-05-11T22:05:51Z" },
     ]
   },
   {
@@ -3805,6 +3810,8 @@ const locations = [
     lat: 23.1136, lng: -82.3666,
     category: "political",
     articles: [
+      { title: "Is the US trying to force regime change in Cuba?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/is-the-us-trying-to-force-regime-change-in-cuba?traffic_source=rss", time: "2026-05-18T21:57:08Z" },
+      { title: "Cuba warns of 'bloodbath' if US attacks; Washington adds sanctions", source: "France 24", url: "https://www.france24.com/en/cuba-warns-of-bloodbath-if-us-attacks-washington-adds-sanctions", time: "2026-05-18T21:55:08Z" },
       { title: "Will Cuba be forced to accept the US president’s demands?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/inside-story/2026/5/18/will-cuba-be-forced-to-accept-the-us-presidents-demands?traffic_source=rss", time: "2026-05-18T21:02:22Z" },
       { title: "Cuba says it has ‘legitimate’ right to defend itself amid US threats", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/18/cuba-says-it-has-legitimate-right-to-defend-itself-amid-us-threats?traffic_source=rss", time: "2026-05-18T18:59:43Z" },
       { title: "Cuba instead? Trump ups pressure on Havana as Iran campaign stalls", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-debate/20260518-cuba-instead-trump-ups-pressure-on-havana-as-iran-campaign-stalls", time: "2026-05-18T18:13:39Z" },
@@ -3889,6 +3896,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Javier Bardem blasts Trump, Netanyahu, Putin at Cannes over ‘f–ing male toxic behavior’", source: "The Hill", url: "https://thehill.com/blogs/in-the-know/5883806-javier-bardem-blasts-toxic-masculinity/", time: "2026-05-18T21:06:19Z" },
       { title: "Trump administration extends Russian oil sanctions waiver for ‘most vulnerable nations’", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5883879-trump-extends-russian-oil-waiver/", time: "2026-05-18T20:51:28Z" },
       { title: "Meath couple face application for costs of demolition of illegally built home", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/courts/2026/05/18/meath-couple-face-application-for-costs-of-demolition-of-illegally-built-home/", time: "2026-05-18T18:57:05Z" },
       { title: "Germany unveils €10 billion defence plan to counter Russian threat", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/germany-defence-russia-boris-pistorius-b2978841.html", time: "2026-05-18T15:51:18Z" },
@@ -3972,6 +3980,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Javier Bardem blasts Trump, Netanyahu, Putin at Cannes over ‘f–ing male toxic behavior’", source: "The Hill", url: "https://thehill.com/blogs/in-the-know/5883806-javier-bardem-blasts-toxic-masculinity/", time: "2026-05-18T21:06:19Z" },
       { title: "G7 Finance Ministers Look to Contain Iran Economic Fallout", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/business/g7-finance-ministers-meeting-iran-war-oil.html", time: "2026-05-18T18:15:04Z" },
       { title: "French Minister visits Algeria amid diplomatic thaw", source: "France 24", url: "https://www.france24.com/en/french-minister-visits-algeria-amid-diplomatic-thaw", time: "2026-05-18T14:47:31Z" },
       { title: "Louvre Announces Architects for Expansion That Will Include New Mona Lisa Space", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/arts/louvre-expansion-architect.html", time: "2026-05-18T10:34:23Z" },
@@ -4167,6 +4176,60 @@ const locations = [
     ]
   },
   {
+    name: "Rome", country: "Italy",
+    lat: 41.9028, lng: 12.4964,
+    category: "political",
+    articles: [
+      { title: "Bodies of missing Italian divers found in Maldives", source: "BBC News", url: "https://www.bbc.com/news/articles/c332mngz25vo?at_medium=RSS&at_campaign=rss", time: "2026-05-18T16:51:09Z" },
+      { title: "Kevin Warsh's bond market bind", source: "Axios", url: "https://www.axios.com/2026/05/18/warsh-bond-market-energy-ai", time: "2026-05-18T15:58:04Z" },
+      { title: "Experts locate bodies of four missing Italian divers inside Maldives cave", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/18/maldives-cave-italian-divers-bodies", time: "2026-05-18T13:54:49Z" },
+      { title: "Bodies of Four Italian Divers Found in Maldives Cave", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/world/asia/maldives-divers-accident-bodies-found.html", time: "2026-05-18T13:19:05Z" },
+      { title: "Bodies of four missing divers located in the Maldives", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0518/1573946-italian-divers/", time: "2026-05-18T12:37:42Z" },
+      { title: "Europe should pick negotiator for possible Russian talks, says Zelenskyy – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/18/europe-eu-ukraine-russia-greenland-bulgaria-germany-latest-news-updates", time: "2026-05-18T10:54:05Z" },
+      { title: "Spain’s conservatives forced to rely on far-right Vox party after losing majority in Andalucía", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/18/spain-conservative-peoples-party-far-right-vox-andalucia-election", time: "2026-05-18T08:48:20Z" },
+      { title: "Itay's Meloni heads to Modena after car-ramming attack", source: "Sky News", url: "https://news.sky.com/story/meloni-cancels-meetings-to-visit-modena-after-car-ramming-attack-13545099", time: "2026-05-17T14:15:00Z" },
+      { title: "Finnish divers arrive in Maldives - as search for bodies of four Italians continues", source: "Sky News", url: "https://news.sky.com/story/finnish-divers-arrive-in-maldives-as-search-for-bodies-of-four-italians-continues-13545041", time: "2026-05-17T13:04:00Z" },
+      { title: "Eight injured after driver ploughs into pedestrians in Italian city of Modena", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italy-modena-crash-stabbing-b2978087.html", time: "2026-05-17T07:57:07Z" },
+      { title: "From Italy, a disco anthem about the joys of marriage.", source: "New York Times", url: "https://www.nytimes.com/live/2026/05/16/arts/eurovision-2026-final-winner/italy-eurovision-sal-da-vinci-per-sempre-si", time: "2026-05-16T20:59:45Z" },
+      { title: "Car Plows Into Pedestrians in Northern Italian Town, Injuring at Least 8", source: "New York Times", url: "https://www.nytimes.com/2026/05/16/world/europe/car-crash-modena-italy.html", time: "2026-05-16T19:01:27Z" },
+      { title: "Vehicle rams into pedestrians in Italy, injuring at least 8 people", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/vehicle-rams-into-pedestrians-in-italy-injuring-at-least-8-people", time: "2026-05-16T18:57:14Z" },
+      { title: "Eight injured after car ploughs into pedestrians in Italy", source: "Sky News", url: "https://news.sky.com/story/eight-injured-after-car-ploughs-into-pedestrians-in-italy-13544902", time: "2026-05-16T18:42:00Z" },
+      { title: "Man drives car into pedestrians in Italy, injuring eight", source: "BBC News", url: "https://www.bbc.com/news/articles/cyv28pd4n22o?at_medium=RSS&at_campaign=rss", time: "2026-05-16T18:21:52Z" },
+      { title: "Man with knife plows car into pedestrians in Italian city injuring at least 8 people", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/modena-italy-car-knife-attack-pedestrians-latest-b2977972.html", time: "2026-05-16T17:59:19Z" },
+      { title: "Seven people injured after man drives car into pedestrians in northern Italy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/people-injured-car-crowd-modena-northern-italy", time: "2026-05-16T17:10:25Z" },
+      { title: "Maldives rescue diver dies searching for missing Italians in underwater cave", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-maldives-rescue-diver-dies-searching-for-bodies-of-four-italians-in/", time: "2026-05-16T15:05:31Z" },
+      { title: "Rescue diver dies during search for bodies of Italians who drowned in Maldives caves", source: "BBC News", url: "https://www.bbc.com/news/articles/c1w2gv1gdnjo?at_medium=RSS&at_campaign=rss", time: "2026-05-16T15:01:40Z" },
+      { title: "Maldives rescue diver dies in search for missing Italians", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0516/1573697-maldives/", time: "2026-05-16T13:55:52Z" },
+      { title: "Peacock ‘invasion’ of Italian seaside town ruffles feathers", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/peacock-italy-punta-marina-tensions", time: "2026-05-16T12:00:08Z" },
+      { title: "Divers in Maldives resume search for Italian scuba divers who drowned in cave", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/maldives-scuba-divers-italy-drowned-cave", time: "2026-05-16T11:45:36Z" },
+      { title: "Andalucíans to vote in election seen as gauge of Spain’s wider political change", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/andalucia-regional-election-spain-politics-moreno-montero-sanchez", time: "2026-05-16T11:01:07Z" },
+      { title: "With Italian planes and Canadian VR, this elite flight school trains pilots in the art of combat", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-with-italian-planes-and-canadian-vr-this-flight-school-brings/", time: "2026-05-16T11:00:00Z" },
+      { title: "How Jerome Powell navigated pandemic, inflation and Trump", source: "Axios", url: "https://www.axios.com/2026/05/15/powell-fed-trump-inflation", time: "2026-05-15T16:05:15Z" },
+      { title: "In Italy, Princess Catherine Puts Her Wardrobe to Work", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/style/princess-catherine-italy-fashion.html", time: "2026-05-15T13:45:16Z" },
+      { title: "Five Italians die in Maldives cave diving tragedy", source: "Euronews", url: "http://www.euronews.com/2026/05/15/five-italians-die-in-maldives-cave-diving-tragedy", time: "2026-05-15T13:31:59Z" },
+      { title: "Jerome Powell ends term as Federal Reserve chief clouded by Trump tumult", source: "The Hill", url: "https://thehill.com/homenews/administration/5879153-powell-warsh-fed-transition/", time: "2026-05-15T10:00:00Z" },
+      { title: "Maldives rescuers search for drowned Italian divers", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0515/1573506-maldives/", time: "2026-05-15T09:58:29Z" },
+      { title: "Five Italians die while exploring underwater caves in the Maldives", source: "Sky News", url: "https://news.sky.com/story/five-italians-die-while-exploring-underwater-caves-in-the-maldives-13544212", time: "2026-05-15T06:03:00Z" },
+      { title: "Rescue diver dies in Maldives while searching for bodies of Italians who had been exploring underwater caves", source: "Sky News", url: "https://news.sky.com/story/search-for-maldives-diving-victims-including-mother-and-daugher-resumes-after-first-body-recovered-from-underwater-cave-13544212", time: "2026-05-15T06:03:00Z" },
+      { title: "Maldives suspends search for bodies of Italian divers", source: "Sky News", url: "https://news.sky.com/story/maldives-suspends-search-for-bodies-of-italian-divers-who-had-been-exploring-underwater-caves-13544212", time: "2026-05-15T06:03:00Z" },
+      { title: "Five Italians die during cave dive in Maldives", source: "BBC News", url: "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss", time: "2026-05-14T20:48:26Z" },
+      { title: "Fatherland review – Sandra Hüller brings a bayonet of intelligence to Paweł Pawlikowski’s taut return", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/14/fatherland-review-sandra-huller-thomas-mann-pawel-pawlikowski-cannes-film-festivali", time: "2026-05-14T17:22:13Z" },
+      { title: "Pope Leo condemns use of AI warfare and the 'spiral of annihilation' it brings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-condemns-use-of-ai-warfare-and-the-spiral-of-annihilation-it-brings", time: "2026-05-14T14:07:58Z" },
+      { title: "Pope Leo sets Catholics on collision course with AI", source: "Axios", url: "https://www.axios.com/2026/05/14/pope-leo-xiv-ai-first-encyclical", time: "2026-05-14T09:30:06Z" },
+      { title: "Kevin Warsh confirmed as Federal Reserve chair", source: "The Hill", url: "https://thehill.com/homenews/senate/5876684-kevin-warsh-confirmed-federal-reserve/", time: "2026-05-13T19:02:30Z" },
+      { title: "Kevin Warsh confirmed to lead Federal Reserve", source: "Axios", url: "https://www.axios.com/2026/05/13/warsh-fed-senate-trump", time: "2026-05-13T18:56:05Z" },
+      { title: "Trump Fed chair nominee Kevin Warsh is confirmed by Senate as Jerome Powell vows to stay on board", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-fed-chair-kevin-warsh-powell-senate-confirmed-b2974626.html", time: "2026-05-13T18:48:46Z" },
+      { title: "Tests in Italy, Spain come back negative as countries work to prevent hantavirus spread", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-hantavirus-outbreak-cruise-ship-3/", time: "2026-05-13T14:06:18Z" },
+      { title: "SOCAR acquisition of Italy’s Italiana Petroli finalised after EU clearance", source: "Euronews", url: "http://www.euronews.com/2026/05/12/socar-acquisition-of-italys-italiana-petroli-finalised-after-eu-clearance", time: "2026-05-12T18:11:46Z" },
+      { title: "Italian court recognises three parents for one child in landmark ruling", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italy-three-parents-same-sex-partnerships-surrogacy-b2975216.html", time: "2026-05-12T17:04:41Z" },
+      { title: "PCOS, most common cause of infertility, being renamed PMOS to improve diagnosis and care", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-pcos-polycystic-ovary-syndrome-renamed-pmos/", time: "2026-05-12T16:09:03Z" },
+      { title: "Peacocks take over northern Italian beach town", source: "Euronews", url: "http://www.euronews.com/video/2026/05/12/peacocks-take-over-northern-italian-beach-town", time: "2026-05-12T15:47:02Z" },
+      { title: "California consumers accuse popular Italian food brand of tomato fraud", source: "LA Times", url: "https://www.latimes.com/business/story/2026-05-12/california-consumers-accuse-popular-italian-food-brand-of-tomato-fraud", time: "2026-05-12T10:00:00Z" },
+      { title: "Senate advances Warsh, Trump’s pick to chair Federal Reserve", source: "The Hill", url: "https://thehill.com/homenews/senate/5873160-warsh-federal-reserve/", time: "2026-05-12T00:10:39Z" },
+      { title: "Man quarantined with hantavirus symptoms in Italy", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0512/1572886-hantavirus-ship/", time: "2026-05-12T00:03:22Z" },
+    ]
+  },
+  {
     name: "Tokyo", country: "Japan",
     lat: 35.6762, lng: 139.6503,
     category: "diplomacy",
@@ -4217,59 +4280,6 @@ const locations = [
       { title: "Japan’s iconic Calbee potato chips will soon move to black-and-white packaging. Here’s why", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japans-iconic-calbee-potato-chips-will-soon-move-to-black-and-white-packaging-heres-why", time: "2026-05-12T06:31:00Z" },
       { title: "Iran war oil shortage forces Japan snack giant to use black-and-white packaging", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/12/calbee-japan-snack-giant-black-white-packaging-iran-war-oil-ink-shortage", time: "2026-05-12T05:56:03Z" },
       { title: "Japan bear sightings double in year to March", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-bear-sightings-double-in-year-to-march", time: "2026-05-12T02:59:00Z" },
-    ]
-  },
-  {
-    name: "Rome", country: "Italy",
-    lat: 41.9028, lng: 12.4964,
-    category: "political",
-    articles: [
-      { title: "Kevin Warsh's bond market bind", source: "Axios", url: "https://www.axios.com/2026/05/18/warsh-bond-market-energy-ai", time: "2026-05-18T15:58:04Z" },
-      { title: "Experts locate bodies of four missing Italian divers inside Maldives cave", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/18/maldives-cave-italian-divers-bodies", time: "2026-05-18T13:54:49Z" },
-      { title: "Bodies of Four Italian Divers Found in Maldives Cave", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/world/asia/maldives-divers-accident-bodies-found.html", time: "2026-05-18T13:19:05Z" },
-      { title: "Bodies of four missing divers located in the Maldives", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0518/1573946-italian-divers/", time: "2026-05-18T12:37:42Z" },
-      { title: "Europe should pick negotiator for possible Russian talks, says Zelenskyy – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/18/europe-eu-ukraine-russia-greenland-bulgaria-germany-latest-news-updates", time: "2026-05-18T10:54:05Z" },
-      { title: "Spain’s conservatives forced to rely on far-right Vox party after losing majority in Andalucía", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/18/spain-conservative-peoples-party-far-right-vox-andalucia-election", time: "2026-05-18T08:48:20Z" },
-      { title: "Itay's Meloni heads to Modena after car-ramming attack", source: "Sky News", url: "https://news.sky.com/story/meloni-cancels-meetings-to-visit-modena-after-car-ramming-attack-13545099", time: "2026-05-17T14:15:00Z" },
-      { title: "Finnish divers arrive in Maldives - as search for bodies of four Italians continues", source: "Sky News", url: "https://news.sky.com/story/finnish-divers-arrive-in-maldives-as-search-for-bodies-of-four-italians-continues-13545041", time: "2026-05-17T13:04:00Z" },
-      { title: "Eight injured after driver ploughs into pedestrians in Italian city of Modena", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italy-modena-crash-stabbing-b2978087.html", time: "2026-05-17T07:57:07Z" },
-      { title: "From Italy, a disco anthem about the joys of marriage.", source: "New York Times", url: "https://www.nytimes.com/live/2026/05/16/arts/eurovision-2026-final-winner/italy-eurovision-sal-da-vinci-per-sempre-si", time: "2026-05-16T20:59:45Z" },
-      { title: "Car Plows Into Pedestrians in Northern Italian Town, Injuring at Least 8", source: "New York Times", url: "https://www.nytimes.com/2026/05/16/world/europe/car-crash-modena-italy.html", time: "2026-05-16T19:01:27Z" },
-      { title: "Vehicle rams into pedestrians in Italy, injuring at least 8 people", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/vehicle-rams-into-pedestrians-in-italy-injuring-at-least-8-people", time: "2026-05-16T18:57:14Z" },
-      { title: "Eight injured after car ploughs into pedestrians in Italy", source: "Sky News", url: "https://news.sky.com/story/eight-injured-after-car-ploughs-into-pedestrians-in-italy-13544902", time: "2026-05-16T18:42:00Z" },
-      { title: "Man drives car into pedestrians in Italy, injuring eight", source: "BBC News", url: "https://www.bbc.com/news/articles/cyv28pd4n22o?at_medium=RSS&at_campaign=rss", time: "2026-05-16T18:21:52Z" },
-      { title: "Man with knife plows car into pedestrians in Italian city injuring at least 8 people", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/modena-italy-car-knife-attack-pedestrians-latest-b2977972.html", time: "2026-05-16T17:59:19Z" },
-      { title: "Seven people injured after man drives car into pedestrians in northern Italy", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/people-injured-car-crowd-modena-northern-italy", time: "2026-05-16T17:10:25Z" },
-      { title: "Maldives rescue diver dies searching for missing Italians in underwater cave", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-maldives-rescue-diver-dies-searching-for-bodies-of-four-italians-in/", time: "2026-05-16T15:05:31Z" },
-      { title: "Rescue diver dies during search for bodies of Italians who drowned in Maldives caves", source: "BBC News", url: "https://www.bbc.com/news/articles/c1w2gv1gdnjo?at_medium=RSS&at_campaign=rss", time: "2026-05-16T15:01:40Z" },
-      { title: "Maldives rescue diver dies in search for missing Italians", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0516/1573697-maldives/", time: "2026-05-16T13:55:52Z" },
-      { title: "Peacock ‘invasion’ of Italian seaside town ruffles feathers", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/peacock-italy-punta-marina-tensions", time: "2026-05-16T12:00:08Z" },
-      { title: "Divers in Maldives resume search for Italian scuba divers who drowned in cave", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/maldives-scuba-divers-italy-drowned-cave", time: "2026-05-16T11:45:36Z" },
-      { title: "Andalucíans to vote in election seen as gauge of Spain’s wider political change", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/16/andalucia-regional-election-spain-politics-moreno-montero-sanchez", time: "2026-05-16T11:01:07Z" },
-      { title: "With Italian planes and Canadian VR, this elite flight school trains pilots in the art of combat", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-with-italian-planes-and-canadian-vr-this-flight-school-brings/", time: "2026-05-16T11:00:00Z" },
-      { title: "How Jerome Powell navigated pandemic, inflation and Trump", source: "Axios", url: "https://www.axios.com/2026/05/15/powell-fed-trump-inflation", time: "2026-05-15T16:05:15Z" },
-      { title: "In Italy, Princess Catherine Puts Her Wardrobe to Work", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/style/princess-catherine-italy-fashion.html", time: "2026-05-15T13:45:16Z" },
-      { title: "Five Italians die in Maldives cave diving tragedy", source: "Euronews", url: "http://www.euronews.com/2026/05/15/five-italians-die-in-maldives-cave-diving-tragedy", time: "2026-05-15T13:31:59Z" },
-      { title: "Jerome Powell ends term as Federal Reserve chief clouded by Trump tumult", source: "The Hill", url: "https://thehill.com/homenews/administration/5879153-powell-warsh-fed-transition/", time: "2026-05-15T10:00:00Z" },
-      { title: "Maldives rescuers search for drowned Italian divers", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0515/1573506-maldives/", time: "2026-05-15T09:58:29Z" },
-      { title: "Five Italians die while exploring underwater caves in the Maldives", source: "Sky News", url: "https://news.sky.com/story/five-italians-die-while-exploring-underwater-caves-in-the-maldives-13544212", time: "2026-05-15T06:03:00Z" },
-      { title: "Rescue diver dies in Maldives while searching for bodies of Italians who had been exploring underwater caves", source: "Sky News", url: "https://news.sky.com/story/search-for-maldives-diving-victims-including-mother-and-daugher-resumes-after-first-body-recovered-from-underwater-cave-13544212", time: "2026-05-15T06:03:00Z" },
-      { title: "Maldives suspends search for bodies of Italian divers", source: "Sky News", url: "https://news.sky.com/story/maldives-suspends-search-for-bodies-of-italian-divers-who-had-been-exploring-underwater-caves-13544212", time: "2026-05-15T06:03:00Z" },
-      { title: "Five Italians die during cave dive in Maldives", source: "BBC News", url: "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss", time: "2026-05-14T20:48:26Z" },
-      { title: "Fatherland review – Sandra Hüller brings a bayonet of intelligence to Paweł Pawlikowski’s taut return", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/14/fatherland-review-sandra-huller-thomas-mann-pawel-pawlikowski-cannes-film-festivali", time: "2026-05-14T17:22:13Z" },
-      { title: "Pope Leo condemns use of AI warfare and the 'spiral of annihilation' it brings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/pope-leo-condemns-use-of-ai-warfare-and-the-spiral-of-annihilation-it-brings", time: "2026-05-14T14:07:58Z" },
-      { title: "Pope Leo sets Catholics on collision course with AI", source: "Axios", url: "https://www.axios.com/2026/05/14/pope-leo-xiv-ai-first-encyclical", time: "2026-05-14T09:30:06Z" },
-      { title: "Kevin Warsh confirmed as Federal Reserve chair", source: "The Hill", url: "https://thehill.com/homenews/senate/5876684-kevin-warsh-confirmed-federal-reserve/", time: "2026-05-13T19:02:30Z" },
-      { title: "Kevin Warsh confirmed to lead Federal Reserve", source: "Axios", url: "https://www.axios.com/2026/05/13/warsh-fed-senate-trump", time: "2026-05-13T18:56:05Z" },
-      { title: "Trump Fed chair nominee Kevin Warsh is confirmed by Senate as Jerome Powell vows to stay on board", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-fed-chair-kevin-warsh-powell-senate-confirmed-b2974626.html", time: "2026-05-13T18:48:46Z" },
-      { title: "Tests in Italy, Spain come back negative as countries work to prevent hantavirus spread", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-hantavirus-outbreak-cruise-ship-3/", time: "2026-05-13T14:06:18Z" },
-      { title: "SOCAR acquisition of Italy’s Italiana Petroli finalised after EU clearance", source: "Euronews", url: "http://www.euronews.com/2026/05/12/socar-acquisition-of-italys-italiana-petroli-finalised-after-eu-clearance", time: "2026-05-12T18:11:46Z" },
-      { title: "Italian court recognises three parents for one child in landmark ruling", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italy-three-parents-same-sex-partnerships-surrogacy-b2975216.html", time: "2026-05-12T17:04:41Z" },
-      { title: "PCOS, most common cause of infertility, being renamed PMOS to improve diagnosis and care", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-pcos-polycystic-ovary-syndrome-renamed-pmos/", time: "2026-05-12T16:09:03Z" },
-      { title: "Peacocks take over northern Italian beach town", source: "Euronews", url: "http://www.euronews.com/video/2026/05/12/peacocks-take-over-northern-italian-beach-town", time: "2026-05-12T15:47:02Z" },
-      { title: "California consumers accuse popular Italian food brand of tomato fraud", source: "LA Times", url: "https://www.latimes.com/business/story/2026-05-12/california-consumers-accuse-popular-italian-food-brand-of-tomato-fraud", time: "2026-05-12T10:00:00Z" },
-      { title: "Senate advances Warsh, Trump’s pick to chair Federal Reserve", source: "The Hill", url: "https://thehill.com/homenews/senate/5873160-warsh-federal-reserve/", time: "2026-05-12T00:10:39Z" },
-      { title: "Man quarantined with hantavirus symptoms in Italy", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0512/1572886-hantavirus-ship/", time: "2026-05-12T00:03:22Z" },
     ]
   },
   {
@@ -4733,7 +4743,6 @@ const locations = [
       { title: "Indonesia on alert for hantavirus amid European cruise outbreak", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-on-alert-for-hantavirus-amid-european-cruise-outbreak", time: "2026-05-12T03:32:00Z" },
       { title: "Vitamins over vaccines: misinformation entrenched amid Indonesia measles surge", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vitamins-over-vaccines-misinformation-entrenched-amid-indonesia-measles-surge", time: "2026-05-12T03:25:00Z" },
       { title: "Nationwide screenings uncover early signs of hypertension in children in Indonesia", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/nationwide-screenings-uncover-early-signs-of-hypertension-in-children-in-indonesia", time: "2026-05-12T02:40:00Z" },
-      { title: "I led hikers up an Indonesian volcano - and then it erupted", source: "BBC News", url: "https://www.bbc.com/news/articles/cz623qjqjd6o?at_medium=RSS&at_campaign=rss", time: "2026-05-11T22:10:48Z" },
     ]
   },
   {
@@ -4763,6 +4772,35 @@ const locations = [
       { title: "Irishman in late 30s dies in Ibiza after fall from cliff", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/12/irishman-in-late-30s-dies-in-ibiza-after-fall-from-cliff/", time: "2026-05-12T13:42:02Z" },
       { title: "WHO head warns countries to prepare for more hantavirus cases", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/12/who-head-warns-countries-prepare-more-hantavirus-cases", time: "2026-05-12T10:56:05Z" },
       { title: "Three-day ceasefire ends with fresh wave of Russian attacks on Ukraine – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/12/europe-defence-ukraine-russia-hungary-latest-news-updates", time: "2026-05-12T08:54:38Z" },
+    ]
+  },
+  {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "Venezuelan protesters clash with police at rally for political prisoners", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/18/venezuelan-protesters-clash-with-police-at-rally-for-political-prisoners?traffic_source=rss", time: "2026-05-18T21:17:48Z" },
+      { title: "Maduro ally is charged in Venezuela bribery case after deportation to US", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/saab-nicolas-maduro-venezuela-miami-joe-biden-b2979025.html", time: "2026-05-18T20:37:42Z" },
+      { title: "ICE officer charged in nonfatal Minneapolis shooting during Operation Metro Surge", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5883550-ice-officer-arrest-warrant-venezuelan/", time: "2026-05-18T18:59:48Z" },
+      { title: "Minnesota county charges an ICE officer in a nonfatal shooting during Trump's immigration crackdown", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/donald-trump-minnesota-minneapolis-venezuelan-immigration-and-customs-enforcement-b2978950.html", time: "2026-05-18T18:14:11Z" },
+      { title: "Venezuela deports Maduro ally to U.S. for criminal proceedings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/venezuela-deports-maduro-ally-to-u-s-for-criminal-proceedings", time: "2026-05-17T14:00:10Z" },
+      { title: "Scoop: Trump advisers fear China may target Taiwan in next 5 years", source: "Axios", url: "https://www.axios.com/2026/05/17/trump-xi-summit-china-taiwan-invasion", time: "2026-05-17T11:00:06Z" },
+      { title: "‘Feels like an illusion’: how Trump seizing Maduro has changed little in Venezuela", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/may/17/feels-like-an-illusion-how-trump-seizing-maduro-has-changed-little-in-venezuela", time: "2026-05-17T05:00:29Z" },
+      { title: "Venezuela Extradites Billionaire Tycoon Alex Saab to U.S.", source: "New York Times", url: "https://www.nytimes.com/2026/05/16/world/americas/venezuela-extradites-tycoon-alex-saab.html", time: "2026-05-17T01:26:02Z" },
+      { title: "Venezuela says it deported a close ally of Maduro to face judicial proceedings in US", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/nicolas-maduro-venezuela-joe-biden-saab-miami-b2978042.html", time: "2026-05-16T23:15:30Z" },
+      { title: "Venezuela says it deported close ally of Maduro to face judicial proceedings in US", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuela-deported-close-ally-maduro-face-judicial-proceedings-133039643", time: "2026-05-16T22:54:10Z" },
+      { title: "USS Gerald R. Ford returns home after long mission supporting Iran war and Maduro capture", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/nation/uss-gerald-r-ford-returns-home-after-long-mission-supporting-iran-war-and-maduro-capture", time: "2026-05-16T17:01:29Z" },
+      { title: "With Possible Raúl Castro Indictment, U.S. Eyes Venezuela Playbook", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/us/politics/trump-cuba-pressue-castro.html", time: "2026-05-15T20:53:10Z" },
+      { title: "Threatened indictment of Raúl Castro ratchets up US pressure on Cuba", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/15/raul-castro-indictment-cuba-trump", time: "2026-05-15T17:31:49Z" },
+      { title: "Guyana presses Venezuela on border gunfire as they vie over an energy-rich region", source: "ABC News", url: "https://abcnews.com/International/wireStory/guyana-presses-venezuela-border-gunfire-vie-energy-rich-132977300", time: "2026-05-15T12:04:02Z" },
+      { title: "Rubio grilled on traveling to China in Nike tracksuit after Maduro comparisons", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-tracksuit-maduro-china-b2976957.html", time: "2026-05-14T22:20:26Z" },
+      { title: "Fetterman: Democratic base becoming ‘increasingly anti-American’", source: "The Hill", url: "https://thehill.com/homenews/senate/5879003-fetterman-democrats-anti-american/", time: "2026-05-14T22:07:14Z" },
+      { title: "Trump's talk of 51st US state met with near-silence in Venezuela", source: "ABC News", url: "https://abcnews.com/International/wireStory/trumps-talk-51st-us-state-met-silence-venezuela-132950950", time: "2026-05-14T11:54:43Z" },
+      { title: "Rubio’s Air Force One tracksuit sparks deposed Venezuelan leader Maduro comparisons", source: "The Independent", url: "https://www.independent.co.uk/tv/news/marco-rubio-maduro-nike-tracksuit-video-b2976354.html", time: "2026-05-14T08:19:37Z" },
+      { title: "Students in Caracas to demand release of political prisoners", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/14/aje-onl-nf_clip-students-in-caracas-political-prisoners-130526?traffic_source=rss", time: "2026-05-14T03:41:23Z" },
+      { title: "Rubio cosplays as deposed Venezuelan leader Maduro in Air Force One picture", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-nicolas-maduro-air-force-one-b2975711.html", time: "2026-05-13T12:52:45Z" },
+      { title: "Venezuela's acting president defends country's territory and rejects Trump's 51st state remarks", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-acting-president-defends-countrys-territory-rejects-trumps-132857230", time: "2026-05-12T06:32:48Z" },
+      { title: "Venezuela’s acting president pushes back on Trump’s 51st state remarks", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/venezuela-51st-state-trump-delcy-rodriguez-b2974642.html", time: "2026-05-11T23:19:47Z" },
     ]
   },
   {
@@ -4819,34 +4857,6 @@ const locations = [
       { title: "Drones now key to fighting malaria as the climate crisis fuels ‘catastrophic’ rise in cases", source: "The Independent", url: "https://www.independent.co.uk/climate-change/malaria-climate-crisis-africa-floods-tanzania-b2972378.html", time: "2026-05-12T11:36:51Z" },
       { title: "A super El Niño wiped out millions of people in 1877. Are we better prepared now?", source: "Washington Post", url: "https://www.washingtonpost.com/weather/2026/05/12/super-el-nino-1877-population-impacts/", time: "2026-05-12T09:00:39Z" },
       { title: "Trump weighs military action against Iran with ceasefire 'on life support'", source: "Axios", url: "https://www.axios.com/2026/05/11/trump-iran-ceasefile-military-action", time: "2026-05-12T01:33:50Z" },
-    ]
-  },
-  {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "Maduro ally is charged in Venezuela bribery case after deportation to US", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/saab-nicolas-maduro-venezuela-miami-joe-biden-b2979025.html", time: "2026-05-18T20:37:42Z" },
-      { title: "ICE officer charged in nonfatal Minneapolis shooting during Operation Metro Surge", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5883550-ice-officer-arrest-warrant-venezuelan/", time: "2026-05-18T18:59:48Z" },
-      { title: "Minnesota county charges an ICE officer in a nonfatal shooting during Trump's immigration crackdown", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/donald-trump-minnesota-minneapolis-venezuelan-immigration-and-customs-enforcement-b2978950.html", time: "2026-05-18T18:14:11Z" },
-      { title: "Venezuela deports Maduro ally to U.S. for criminal proceedings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/venezuela-deports-maduro-ally-to-u-s-for-criminal-proceedings", time: "2026-05-17T14:00:10Z" },
-      { title: "Scoop: Trump advisers fear China may target Taiwan in next 5 years", source: "Axios", url: "https://www.axios.com/2026/05/17/trump-xi-summit-china-taiwan-invasion", time: "2026-05-17T11:00:06Z" },
-      { title: "‘Feels like an illusion’: how Trump seizing Maduro has changed little in Venezuela", source: "The Guardian", url: "https://www.theguardian.com/world/ng-interactive/2026/may/17/feels-like-an-illusion-how-trump-seizing-maduro-has-changed-little-in-venezuela", time: "2026-05-17T05:00:29Z" },
-      { title: "Venezuela Extradites Billionaire Tycoon Alex Saab to U.S.", source: "New York Times", url: "https://www.nytimes.com/2026/05/16/world/americas/venezuela-extradites-tycoon-alex-saab.html", time: "2026-05-17T01:26:02Z" },
-      { title: "Venezuela says it deported a close ally of Maduro to face judicial proceedings in US", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/nicolas-maduro-venezuela-joe-biden-saab-miami-b2978042.html", time: "2026-05-16T23:15:30Z" },
-      { title: "Venezuela says it deported close ally of Maduro to face judicial proceedings in US", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuela-deported-close-ally-maduro-face-judicial-proceedings-133039643", time: "2026-05-16T22:54:10Z" },
-      { title: "USS Gerald R. Ford returns home after long mission supporting Iran war and Maduro capture", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/nation/uss-gerald-r-ford-returns-home-after-long-mission-supporting-iran-war-and-maduro-capture", time: "2026-05-16T17:01:29Z" },
-      { title: "With Possible Raúl Castro Indictment, U.S. Eyes Venezuela Playbook", source: "New York Times", url: "https://www.nytimes.com/2026/05/15/us/politics/trump-cuba-pressue-castro.html", time: "2026-05-15T20:53:10Z" },
-      { title: "Threatened indictment of Raúl Castro ratchets up US pressure on Cuba", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/15/raul-castro-indictment-cuba-trump", time: "2026-05-15T17:31:49Z" },
-      { title: "Guyana presses Venezuela on border gunfire as they vie over an energy-rich region", source: "ABC News", url: "https://abcnews.com/International/wireStory/guyana-presses-venezuela-border-gunfire-vie-energy-rich-132977300", time: "2026-05-15T12:04:02Z" },
-      { title: "Rubio grilled on traveling to China in Nike tracksuit after Maduro comparisons", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-tracksuit-maduro-china-b2976957.html", time: "2026-05-14T22:20:26Z" },
-      { title: "Fetterman: Democratic base becoming ‘increasingly anti-American’", source: "The Hill", url: "https://thehill.com/homenews/senate/5879003-fetterman-democrats-anti-american/", time: "2026-05-14T22:07:14Z" },
-      { title: "Trump's talk of 51st US state met with near-silence in Venezuela", source: "ABC News", url: "https://abcnews.com/International/wireStory/trumps-talk-51st-us-state-met-silence-venezuela-132950950", time: "2026-05-14T11:54:43Z" },
-      { title: "Rubio’s Air Force One tracksuit sparks deposed Venezuelan leader Maduro comparisons", source: "The Independent", url: "https://www.independent.co.uk/tv/news/marco-rubio-maduro-nike-tracksuit-video-b2976354.html", time: "2026-05-14T08:19:37Z" },
-      { title: "Students in Caracas to demand release of political prisoners", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/14/aje-onl-nf_clip-students-in-caracas-political-prisoners-130526?traffic_source=rss", time: "2026-05-14T03:41:23Z" },
-      { title: "Rubio cosplays as deposed Venezuelan leader Maduro in Air Force One picture", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-nicolas-maduro-air-force-one-b2975711.html", time: "2026-05-13T12:52:45Z" },
-      { title: "Venezuela's acting president defends country's territory and rejects Trump's 51st state remarks", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-acting-president-defends-countrys-territory-rejects-trumps-132857230", time: "2026-05-12T06:32:48Z" },
-      { title: "Venezuela’s acting president pushes back on Trump’s 51st state remarks", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/venezuela-51st-state-trump-delcy-rodriguez-b2974642.html", time: "2026-05-11T23:19:47Z" },
     ]
   },
   {
@@ -5362,22 +5372,6 @@ const locations = [
     ]
   },
   {
-    name: "Pretoria", country: "South Africa",
-    lat: -25.7479, lng: 28.2293,
-    category: "political",
-    articles: [
-      { title: "South Africa: President Ramaphosa Dismisses Social Development Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605150038.html", time: "2026-05-15T05:32:07Z" },
-      { title: "South Africa: Ramaphosa Fires Disgraced Social Development Minister Sisisi Tolashe", source: "AllAfrica", url: "https://allafrica.com/stories/202605140464.html", time: "2026-05-14T14:15:46Z" },
-      { title: "South Africa: President Ramaphosa Appoints Judges", source: "AllAfrica", url: "https://allafrica.com/stories/202605140365.html", time: "2026-05-14T12:07:14Z" },
-      { title: "South Africa: Can South Africa's President Ramaphosa Avoid Impeachment?", source: "AllAfrica", url: "https://allafrica.com/stories/202605140072.html", time: "2026-05-14T06:42:29Z" },
-      { title: "Could South Africa’s Ramaphosa be impeached over ‘cash-in-sofa’ scandal?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/13/could-south-africas-ramaphosa-be-impeached-over-cash-in-sofa-scandal?traffic_source=rss", time: "2026-05-13T13:12:36Z" },
-      { title: "Ghana to evacuate 300 from South Africa over anti-immigrant protests", source: "BBC News", url: "https://www.bbc.com/news/articles/cedpv17gqqzo?at_medium=RSS&at_campaign=rss", time: "2026-05-13T08:24:28Z" },
-      { title: "South Africa: South Africa's Ramaphosa Says He Won't Resign Over Farmgate Scandal", source: "AllAfrica", url: "https://allafrica.com/stories/202605120391.html", time: "2026-05-12T11:39:01Z" },
-      { title: "South Africa: I Remain Here - I Will Not Resign - President Ramaphosa", source: "AllAfrica", url: "https://allafrica.com/stories/202605120072.html", time: "2026-05-12T05:43:39Z" },
-      { title: "South African president says he will not step down after impeachment call", source: "BBC News", url: "https://www.bbc.com/news/articles/c9369q3g7w7o?at_medium=RSS&at_campaign=rss", time: "2026-05-11T21:44:20Z" },
-    ]
-  },
-  {
     name: "Riga", country: "Latvia",
     lat: 56.9496, lng: 24.1052,
     category: "conflict",
@@ -5442,6 +5436,36 @@ const locations = [
     ]
   },
   {
+    name: "Pretoria", country: "South Africa",
+    lat: -25.7479, lng: 28.2293,
+    category: "political",
+    articles: [
+      { title: "South Africa: President Ramaphosa Dismisses Social Development Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605150038.html", time: "2026-05-15T05:32:07Z" },
+      { title: "South Africa: Ramaphosa Fires Disgraced Social Development Minister Sisisi Tolashe", source: "AllAfrica", url: "https://allafrica.com/stories/202605140464.html", time: "2026-05-14T14:15:46Z" },
+      { title: "South Africa: President Ramaphosa Appoints Judges", source: "AllAfrica", url: "https://allafrica.com/stories/202605140365.html", time: "2026-05-14T12:07:14Z" },
+      { title: "South Africa: Can South Africa's President Ramaphosa Avoid Impeachment?", source: "AllAfrica", url: "https://allafrica.com/stories/202605140072.html", time: "2026-05-14T06:42:29Z" },
+      { title: "Could South Africa’s Ramaphosa be impeached over ‘cash-in-sofa’ scandal?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/13/could-south-africas-ramaphosa-be-impeached-over-cash-in-sofa-scandal?traffic_source=rss", time: "2026-05-13T13:12:36Z" },
+      { title: "Ghana to evacuate 300 from South Africa over anti-immigrant protests", source: "BBC News", url: "https://www.bbc.com/news/articles/cedpv17gqqzo?at_medium=RSS&at_campaign=rss", time: "2026-05-13T08:24:28Z" },
+      { title: "South Africa: South Africa's Ramaphosa Says He Won't Resign Over Farmgate Scandal", source: "AllAfrica", url: "https://allafrica.com/stories/202605120391.html", time: "2026-05-12T11:39:01Z" },
+      { title: "South Africa: I Remain Here - I Will Not Resign - President Ramaphosa", source: "AllAfrica", url: "https://allafrica.com/stories/202605120072.html", time: "2026-05-12T05:43:39Z" },
+    ]
+  },
+  {
+    name: "La Paz", country: "Bolivia",
+    lat: -16.4897, lng: -68.1193,
+    category: "political",
+    articles: [
+      { title: "Clashes as Morales-allied protesters march on Bolivian capital", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/18/clashes-as-morales-allied-protesters-march-on-bolivian-capital?traffic_source=rss", time: "2026-05-18T21:16:22Z" },
+      { title: "Bolivian police clash with protesters blocking roads into La Paz", source: "France 24", url: "https://www.france24.com/en/bolivian-police-clash-with-protesters-blocking-roads-into-la-paz", time: "2026-05-17T16:28:39Z" },
+      { title: "Bolivia launches early-morning crackdown on roadblocks outside La Paz", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/16/bolivia-launches-early-morning-crackdown-on-roadblocks-outside-la-paz?traffic_source=rss", time: "2026-05-16T23:24:54Z" },
+      { title: "Bolivian army attempts to clear roads after 11 days of protests", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/16/bolivian-army-attempts-to-clear-roads-after-11-days-of-protests?traffic_source=rss", time: "2026-05-16T20:44:15Z" },
+      { title: "Explosions heard as mining groups stage antigovernment protest in Bolivia", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/14/explosions-heard-as-mining-groups-stage-anti-government-protest-in-bolivia?traffic_source=rss", time: "2026-05-14T23:28:00Z" },
+      { title: "Clashes erupt in Bolivia as miners set off dynamite and police fire tear gas", source: "ABC News", url: "https://abcnews.com/International/wireStory/clashes-erupt-bolivia-miners-set-off-dynamite-police-132979678", time: "2026-05-14T22:58:35Z" },
+      { title: "Bolivia issues warrant for Evo Morales’s arrest after court no-show", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/12/bolivia-issues-warrant-for-evo-moraless-arrest-after-court-no-show?traffic_source=rss", time: "2026-05-12T03:16:28Z" },
+      { title: "Roads blocked in Bolivia as protesters demand president’s resignation", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/12/aje-onl-nf_clip_bolivia-protesters-demand-president-resign-110526?traffic_source=rss", time: "2026-05-12T01:36:55Z" },
+    ]
+  },
+  {
     name: "Singapore", country: "Singapore",
     lat: 1.3521, lng: 103.8198,
     category: "economic",
@@ -5495,20 +5519,6 @@ const locations = [
       { title: "The Bahamas goes to polls in three-way battle with immigration a key issue", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/12/bahamas-goes-to-polls-caribbean-election-battle", time: "2026-05-12T09:00:43Z" },
       { title: "New gang violence in Haiti displaces hundreds of people", source: "ABC News", url: "https://abcnews.com/International/wireStory/new-gang-violence-haiti-displaces-hundreds-people-132857266", time: "2026-05-12T06:32:42Z" },
       { title: "Hundreds more displaced as gang violence escalates in Haiti’s capital", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/12/hundreds-more-displaced-as-gang-violence-escalates-in-haitis-capital?traffic_source=rss", time: "2026-05-12T04:16:50Z" },
-    ]
-  },
-  {
-    name: "La Paz", country: "Bolivia",
-    lat: -16.4897, lng: -68.1193,
-    category: "political",
-    articles: [
-      { title: "Bolivian police clash with protesters blocking roads into La Paz", source: "France 24", url: "https://www.france24.com/en/bolivian-police-clash-with-protesters-blocking-roads-into-la-paz", time: "2026-05-17T16:28:39Z" },
-      { title: "Bolivia launches early-morning crackdown on roadblocks outside La Paz", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/5/16/bolivia-launches-early-morning-crackdown-on-roadblocks-outside-la-paz?traffic_source=rss", time: "2026-05-16T23:24:54Z" },
-      { title: "Bolivian army attempts to clear roads after 11 days of protests", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/16/bolivian-army-attempts-to-clear-roads-after-11-days-of-protests?traffic_source=rss", time: "2026-05-16T20:44:15Z" },
-      { title: "Explosions heard as mining groups stage antigovernment protest in Bolivia", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/14/explosions-heard-as-mining-groups-stage-anti-government-protest-in-bolivia?traffic_source=rss", time: "2026-05-14T23:28:00Z" },
-      { title: "Clashes erupt in Bolivia as miners set off dynamite and police fire tear gas", source: "ABC News", url: "https://abcnews.com/International/wireStory/clashes-erupt-bolivia-miners-set-off-dynamite-police-132979678", time: "2026-05-14T22:58:35Z" },
-      { title: "Bolivia issues warrant for Evo Morales’s arrest after court no-show", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/12/bolivia-issues-warrant-for-evo-moraless-arrest-after-court-no-show?traffic_source=rss", time: "2026-05-12T03:16:28Z" },
-      { title: "Roads blocked in Bolivia as protesters demand president’s resignation", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/12/aje-onl-nf_clip_bolivia-protesters-demand-president-resign-110526?traffic_source=rss", time: "2026-05-12T01:36:55Z" },
     ]
   },
   {
