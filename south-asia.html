@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:29 UTC, 25 May 2026</span></div>
+    <div class="subtitle">South Asia news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:19 UTC, 25 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">25 May 2026</div>
@@ -116,6 +116,9 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "political",
     articles: [
+      { title: "Pakistan train bombing kills more than 30 people, official says", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-train-bombing-kills-more-than-30-people-official-says/article71021242.ece", time: "2026-05-25T13:00:07Z" },
+      { title: "Pakistan train bombing kills more than 30 people, officials say", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/pakistan-train-bombing-kills-more-than-30-people-official-says", time: "2026-05-25T12:24:10Z" },
+      { title: "China’s Xi praises ‘unbreakable’ Pakistan ties as Sharif visits Beijing", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/25/chinas-xi-praises-unbreakable-pakistan-ties-as-sharif-visits-beijing?traffic_source=rss", time: "2026-05-25T11:23:26Z" },
       { title: "China's Xi hails 'unbreakable' ties, praises Pakistan's role in Iran peace efforts as he meets PM Shehbaz", source: "Dawn", url: "https://www.dawn.com/news/2002979/chinas-xi-hails-unbreakable-ties-praises-pakistans-role-in-iran-peace-efforts-as-he-meets-pm-shehbaz", time: "2026-05-25T11:16:47Z" },
       { title: "Xi hails 'unbreakable' Pakistan ties, praises Iran peace efforts", source: "Straits Times", url: "https://www.straitstimes.com/asia/xi-hails-unbreakable-pakistan-ties-praises-iran-peace-efforts", time: "2026-05-25T11:09:11Z" },
       { title: "PSX opens shortened trading week on bullish note; KSE-100 gains 4,000 points during intraday trade", source: "Dawn", url: "https://www.dawn.com/news/2002961/psx-opens-shortened-trading-week-on-bullish-note-kse-100-gains-4000-points-during-intraday-trade", time: "2026-05-25T10:38:28Z" },
@@ -143,6 +146,7 @@ const locations = [
       { title: "Train bombing in Pakistan: At least 24 killed, several in critical condition", source: "France 24", url: "https://www.france24.com/en/train-bombing-in-pakistan-at-least-24-killed-several-in-critical-condition", time: "2026-05-24T10:34:26Z" },
       { title: "Dozens killed in blast targeting train in south-west Pakistan: Official", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/dozens-killed-in-blast-targeting-train-in-south-west-pakistan-official", time: "2026-05-24T07:05:00Z" },
       { title: "Dozens injured in Pakistan bombing near railway track as train passes", source: "Sky News", url: "https://news.sky.com/story/pakistan-dozens-injured-in-bombing-near-railway-track-as-train-passes-officials-say-13547487", time: "2026-05-24T06:59:00Z" },
+      { title: "More than 30 people die after suicide bomber in Pakistan targets train carrying military personnel", source: "Sky News", url: "https://news.sky.com/story/pakistan-more-than-30-people-killed-after-suicide-bomber-targets-train-carrying-military-personnel-13547487", time: "2026-05-24T06:59:00Z" },
       { title: "'Positive stride' taking place towards peace deal between Iran and the U.S., says Iran's envoy to Pakistan", source: "The Hindu", url: "https://www.thehindu.com/news/international/positive-stride-taking-place-towards-peace-deal-between-iran-and-the-us-says-irans-envoy-to-pakistan/article71016972.ece", time: "2026-05-24T06:40:24Z" },
       { title: "More facts surface ahead of high profile One Constitution project case hearing", source: "Dawn", url: "https://www.dawn.com/news/2002704/more-facts-surface-ahead-of-high-profile-one-constitution-project-case-hearing", time: "2026-05-24T06:18:45Z" },
       { title: "‘Want equal respect’: Pakistan’s females galloping to glory in tent pegging", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/24/want-equal-respect-pakistan-females-galloping-to-glory-in-tent-pegging?traffic_source=rss", time: "2026-05-24T06:05:18Z" },
@@ -290,12 +294,6 @@ const locations = [
       { title: "Mushfiqur ton leaves Pakistan needing record run chase to beat Bangladesh", source: "Dawn", url: "https://www.dawn.com/news/2001279/mushfiqur-ton-leaves-pakistan-needing-record-run-chase-to-beat-bangladesh", time: "2026-05-18T14:17:47Z" },
       { title: "PSX plunges by nearly 3,800 points as investors remain cautious amid geopolitical tensions", source: "Dawn", url: "https://www.dawn.com/news/2001140/psx-plunges-by-nearly-3800-points-as-investors-remain-cautious-amid-geopolitical-tensions", time: "2026-05-18T14:13:12Z" },
       { title: "Gunmen in Pakistan kill police officers guarding polio workers", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/gunmen-in-pakistan-kill-police-officers-guarding-polio-workers", time: "2026-05-18T13:50:00Z" },
-      { title: "IHC seeks CDA response on appeals of One Constitution Avenue apartment sub-lessees", source: "Dawn", url: "https://www.dawn.com/news/2001263/ihc-seeks-cda-response-on-appeals-of-one-constitution-avenue-apartment-sub-lessees", time: "2026-05-18T13:18:35Z" },
-      { title: "Pakistan deploys jet squadron, thousands of troops to Saudi Arabia amid escalating Iran war tensions", source: "The Hindu", url: "https://www.thehindu.com/news/international/pakistan-deploys-jet-squadron-thousands-of-troops-to-saudi-arabia-amid-escalating-iran-war-tensions/article70993775.ece", time: "2026-05-18T13:04:25Z" },
-      { title: "Revised Iranian proposal to end war shared with U.S., Pakistani source says", source: "The Hindu", url: "https://www.thehindu.com/news/international/revised-iranian-proposal-to-end-war-shared-with-us-pakistani-source-says/article70993778.ece", time: "2026-05-18T12:48:37Z" },
-      { title: "Iran sends response to US proposal to end war via mediator Pakistan", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/18/iran-sends-response-to-us-proposal-to-end-war-via-mediator-pakistan-2?traffic_source=rss", time: "2026-05-18T12:44:20Z" },
-      { title: "Accused in teenage TikTok star Sana Yousaf’s murder retracts confession, alleges false implication", source: "Dawn", url: "https://www.dawn.com/news/2001269/accused-in-teenage-tiktok-star-sana-yousafs-murder-retracts-confession-alleges-false-implication", time: "2026-05-18T12:32:12Z" },
-      { title: "Counsel for Imran, Bushra challenges IHC order setting deadline for arguments in £190m case", source: "Dawn", url: "https://www.dawn.com/news/2001255/counsel-for-imran-bushra-challenges-ihc-order-setting-deadline-for-arguments-in-ps190m-case", time: "2026-05-18T11:48:30Z" },
     ]
   },
   {
@@ -303,6 +301,9 @@ const locations = [
     lat: 28.6139, lng: 77.209,
     category: "political",
     articles: [
+      { title: "Could Brazilian oil emerge as one of the big winners of the Iran war?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/25/could-brazilian-oil-emerge-as-one-of-the-big-winners-of-the-iran-war?traffic_source=rss", time: "2026-05-25T13:00:15Z" },
+      { title: "Founder of viral Indian Gen Z account alleges crackdown, threats", source: "Dawn", url: "https://www.dawn.com/news/2003023/founder-of-viral-indian-gen-z-account-alleges-crackdown-threats", time: "2026-05-25T11:45:57Z" },
+      { title: "Cattle market empties as fear grips Eid preparations in India’s West Bengal", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/25/cattle-market-empties-as-fear-grips-eid-preparations-in-indias-west-bengal?traffic_source=rss", time: "2026-05-25T11:23:26Z" },
       { title: "India orders migrant detention centres in West Bengal, sparking arbitrary explusion fears", source: "Dawn", url: "https://www.dawn.com/news/2002999/india-orders-migrant-detention-centres-in-west-bengal-sparking-arbitrary-explusion-fears", time: "2026-05-25T08:19:48Z" },
       { title: "Did Marco Rubio call Donald Trump ‘stupid’? Racism question overshadows top US diplomat’s India visit", source: "The Independent", url: "https://www.independent.co.uk/asia/india/rubio-india-visit-trump-hellhole-racism-b2982999.html", time: "2026-05-25T08:04:10Z" },
       { title: "5,000 years of Pakistan?", source: "Dawn", url: "https://www.dawn.com/news/2002911/5000-years-of-pakistan", time: "2026-05-25T03:35:48Z" },
@@ -439,6 +440,7 @@ const locations = [
     lat: 24.8607, lng: 67.0011,
     category: "security",
     articles: [
+      { title: "THE ECONOMICS OF PAKISTAN’S EIDUL AZHA", source: "Dawn", url: "https://www.dawn.com/news/2002557/the-economics-of-pakistans-eidul-azha", time: "2026-05-25T11:48:34Z" },
       { title: "Behold, the Qabza Mafia of Karachi skies", source: "Dawn", url: "https://www.dawn.com/news/2003019/behold-the-qabza-mafia-of-karachi-skies", time: "2026-05-25T11:10:33Z" },
       { title: "Pakistan importing cotton from US, Brazil even before local ginning season", source: "Dawn", url: "https://www.dawn.com/news/2002839/pakistan-importing-cotton-from-us-brazil-even-before-local-ginning-season", time: "2026-05-25T03:51:42Z" },
       { title: "Murad asks contractors to increase manpower for ‘timely completion’ of Karachi's Red Line project", source: "Dawn", url: "https://www.dawn.com/news/2002849/murad-asks-contractors-to-increase-manpower-for-timely-completion-of-karachis-red-line-project", time: "2026-05-25T03:28:06Z" },
@@ -464,8 +466,6 @@ const locations = [
       { title: "Driver of vehicle involved in fatal hit-and-run on Karachi’s Sea View road remains at large", source: "Dawn", url: "https://www.dawn.com/news/2001565/driver-of-vehicle-involved-in-fatal-hit-and-run-on-karachis-sea-view-road-remains-at-large", time: "2026-05-19T18:19:01Z" },
       { title: "Sindh IG vows transparency in cases against Anmol alias Pinky stretching across 'multiple domains'", source: "Dawn", url: "https://www.dawn.com/news/2001505/sindh-ig-vows-transparency-in-cases-against-anmol-alias-pinky-stretching-across-multiple-domains", time: "2026-05-19T10:23:06Z" },
       { title: "Fazl urges President Zardari to ‘protect’ 18th Amendment", source: "Dawn", url: "https://www.dawn.com/news/2001391/fazl-urges-president-zardari-to-protect-18th-amendment", time: "2026-05-19T02:29:26Z" },
-      { title: "Anmol alias Pinky alleges pressure to ‘take names’ as court extends physical remand in murder case", source: "Dawn", url: "https://www.dawn.com/news/2001249/anmol-alias-pinky-alleges-pressure-to-take-names-as-court-extends-physical-remand-in-murder-case", time: "2026-05-18T13:18:44Z" },
-      { title: "Pakistan hands US revised Iranian proposal for ending war", source: "Straits Times", url: "https://www.straitstimes.com/asia/pakistan-hands-us-revised-iranian-proposal-for-ending-war", time: "2026-05-18T12:03:32Z" },
     ]
   },
   {
@@ -493,7 +493,6 @@ const locations = [
       { title: "Externally-sponsored terrorism, propaganda cannot derail Pakistan’s progress: CDF Munir", source: "Dawn", url: "https://www.dawn.com/news/2001476/externally-sponsored-terrorism-propaganda-cannot-derail-pakistans-progress-cdf-munir", time: "2026-05-19T07:13:35Z" },
       { title: "PM Shehbaz arrives in Quetta on day-long visit", source: "Dawn", url: "https://www.dawn.com/news/2001477/pm-shehbaz-arrives-in-quetta-on-day-long-visit", time: "2026-05-19T07:00:49Z" },
       { title: "Teachers protest abduction of Gwadar University VC, others", source: "Dawn", url: "https://www.dawn.com/news/2001410/teachers-protest-abduction-of-gwadar-university-vc-others", time: "2026-05-19T04:01:05Z" },
-      { title: "Two policemen deployed with polio teams martyred in KP's Bajaur", source: "Dawn", url: "https://www.dawn.com/news/2001234/two-policemen-deployed-with-polio-teams-martyred-in-kps-bajaur", time: "2026-05-18T12:02:57Z" },
     ]
   },
   {
@@ -584,24 +583,6 @@ const locations = [
     ]
   },
   {
-    name: "Male", country: "Maldives",
-    lat: 4.1755, lng: 73.5093,
-    category: "climate",
-    articles: [
-      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
-      { title: "Remains of four Italian divers killed in Maldives cave dive repatriated", source: "The Hindu", url: "https://www.thehindu.com/news/international/remains-of-italian-divers-killed-in-maldives-cave-dive-repatriated/article71014187.ece", time: "2026-05-23T11:56:53Z" },
-      { title: "First pictures of Maldives deep-sea cave where Italian divers died", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pictures-maldives-cave-italian-divers-died-b2982193.html", time: "2026-05-22T20:15:38Z" },
-      { title: "Experts detail new theory behind mystery deaths of Italian scuba divers in Maldives", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/rescue-divers-maldives-italians-killed-scuba-accident-b2981157.html", time: "2026-05-21T16:33:24Z" },
-      { title: "Finnish divers recover remaining 2 bodies of Italians from underwater cave in Maldives", source: "The Hindu", url: "https://www.thehindu.com/news/international/finnish-divers-recover-remaining-2-bodies-of-italians-from-underwater-cave-in-maldives/article71001726.ece", time: "2026-05-20T11:24:50Z" },
-      { title: "Last two bodies of Italian divers killed in scuba diving accident recovered, Maldives says", source: "Straits Times", url: "https://www.straitstimes.com/asia/last-two-bodies-of-italian-divers-killed-in-scuba-diving-accident-recovered-maldives-says", time: "2026-05-20T07:59:10Z" },
-      { title: "Bodies of last two Italian divers recovered in Maldives", source: "Straits Times", url: "https://www.straitstimes.com/asia/bodies-of-last-two-italian-divers-recovered-in-maldives", time: "2026-05-20T07:49:00Z" },
-      { title: "Bodies of Italian divers recovered from cave in Maldives", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/20/bodies-of-italian-divers-recovered-from-cave-in-maldives?traffic_source=rss", time: "2026-05-20T02:50:04Z" },
-      { title: "Bodies of divers who died exploring Maldives cave recovered", source: "Sky News", url: "https://news.sky.com/story/bodies-of-divers-who-died-exploring-maldives-cave-recovered-13545842", time: "2026-05-19T10:36:00Z" },
-      { title: "Bodies of two Italians killed in scuba diving accident recovered, says Maldives government", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/bodies-of-two-italians-killed-in-scuba-diving-accident-recovered-maldives-government-says", time: "2026-05-19T09:43:50Z" },
-      { title: "Bodies of Four Italian Divers Found in Maldives Cave", source: "New York Times", url: "https://www.nytimes.com/2026/05/18/world/asia/maldives-divers-accident-bodies-found.html", time: "2026-05-18T13:19:05Z" },
-    ]
-  },
-  {
     name: "Kathmandu", country: "Nepal",
     lat: 27.7172, lng: 85.324,
     category: "political",
@@ -617,6 +598,23 @@ const locations = [
       { title: "Record 274 climbers scale Mount Everest in a single day from Nepali side", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/record-274-climbers-scale-mount-everest-in-a-single-day-from-nepali-side", time: "2026-05-21T08:00:00Z" },
       { title: "‘Cockroach Janta Party’: Top Indian judge’s comment sparks satire, protest", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/20/cockroach-janata-party-top-indian-judges-comment-sparks-satire-protest?traffic_source=rss", time: "2026-05-20T06:09:59Z" },
       { title: "Teens are drinking less than their parents’ generation – but it may not be a good thing", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/teens-drinking-less-pandemic-social-media-b2978679.html", time: "2026-05-18T15:30:47Z" },
+    ]
+  },
+  {
+    name: "Male", country: "Maldives",
+    lat: 4.1755, lng: 73.5093,
+    category: "climate",
+    articles: [
+      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
+      { title: "Remains of four Italian divers killed in Maldives cave dive repatriated", source: "The Hindu", url: "https://www.thehindu.com/news/international/remains-of-italian-divers-killed-in-maldives-cave-dive-repatriated/article71014187.ece", time: "2026-05-23T11:56:53Z" },
+      { title: "First pictures of Maldives deep-sea cave where Italian divers died", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pictures-maldives-cave-italian-divers-died-b2982193.html", time: "2026-05-22T20:15:38Z" },
+      { title: "Experts detail new theory behind mystery deaths of Italian scuba divers in Maldives", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/rescue-divers-maldives-italians-killed-scuba-accident-b2981157.html", time: "2026-05-21T16:33:24Z" },
+      { title: "Finnish divers recover remaining 2 bodies of Italians from underwater cave in Maldives", source: "The Hindu", url: "https://www.thehindu.com/news/international/finnish-divers-recover-remaining-2-bodies-of-italians-from-underwater-cave-in-maldives/article71001726.ece", time: "2026-05-20T11:24:50Z" },
+      { title: "Last two bodies of Italian divers killed in scuba diving accident recovered, Maldives says", source: "Straits Times", url: "https://www.straitstimes.com/asia/last-two-bodies-of-italian-divers-killed-in-scuba-diving-accident-recovered-maldives-says", time: "2026-05-20T07:59:10Z" },
+      { title: "Bodies of last two Italian divers recovered in Maldives", source: "Straits Times", url: "https://www.straitstimes.com/asia/bodies-of-last-two-italian-divers-recovered-in-maldives", time: "2026-05-20T07:49:00Z" },
+      { title: "Bodies of Italian divers recovered from cave in Maldives", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/20/bodies-of-italian-divers-recovered-from-cave-in-maldives?traffic_source=rss", time: "2026-05-20T02:50:04Z" },
+      { title: "Bodies of divers who died exploring Maldives cave recovered", source: "Sky News", url: "https://news.sky.com/story/bodies-of-divers-who-died-exploring-maldives-cave-recovered-13545842", time: "2026-05-19T10:36:00Z" },
+      { title: "Bodies of two Italians killed in scuba diving accident recovered, says Maldives government", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/bodies-of-two-italians-killed-in-scuba-diving-accident-recovered-maldives-government-says", time: "2026-05-19T09:43:50Z" },
     ]
   },
   {
@@ -649,6 +647,18 @@ const locations = [
     ]
   },
   {
+    name: "Peshawar", country: "Pakistan",
+    lat: 34.0151, lng: 71.5249,
+    category: "security",
+    articles: [
+      { title: "Prince Aga Khan assures KP CM Sohail Afridi of investment in the province", source: "Dawn", url: "https://www.dawn.com/news/2003033/prince-aga-khan-assures-kp-cm-sohail-afridi-of-investment-in-the-province", time: "2026-05-25T13:16:50Z" },
+      { title: "At least 16 killed, 7 injured as passenger coach collides with parked bus on Swat Motorway", source: "Dawn", url: "https://www.dawn.com/news/2003010/at-least-16-killed-7-injured-as-passenger-coach-collides-with-parked-bus-on-swat-motorway", time: "2026-05-25T09:28:32Z" },
+      { title: "Sindh govt now declares 3-day Eidul Azha holiday, announces WFH on May 29", source: "Dawn", url: "https://www.dawn.com/news/2002761/sindh-govt-now-declares-3-day-eidul-azha-holiday-announces-wfh-on-may-29", time: "2026-05-24T11:17:38Z" },
+      { title: "PMD warns of glacial floods in northern regions", source: "Dawn", url: "https://www.dawn.com/news/2001664/pmd-warns-of-glacial-floods-in-northern-regions", time: "2026-05-20T03:06:16Z" },
+      { title: "KP governor says PM has formed committee to address CNG crisis in province", source: "Dawn", url: "https://www.dawn.com/news/2001491/kp-governor-says-pm-has-formed-committee-to-address-cng-crisis-in-province", time: "2026-05-19T10:12:51Z" },
+    ]
+  },
+  {
     name: "Persian Gulf", country: "International",
     lat: 26.0, lng: 52.0,
     category: "economic",
@@ -657,18 +667,6 @@ const locations = [
       { title: "Hormuz closure piles misery on stranded sailors", source: "Dawn", url: "https://www.dawn.com/news/2002422/hormuz-closure-piles-misery-on-stranded-sailors", time: "2026-05-23T03:07:15Z" },
       { title: "As a Weakened Putin Follows Trump to Beijing, Iran War Offers an Opening", source: "New York Times", url: "https://www.nytimes.com/2026/05/19/world/europe/putin-china-state-visit.html", time: "2026-05-19T15:09:05Z" },
       { title: "Iran submits new proposal, says U.S. open to sanctions relief", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-submits-new-proposal-says-us-open-to-sanctions-relief/article70995124.ece", time: "2026-05-18T16:14:41Z" },
-      { title: "Iran officially announces new body to manage Strait of Hormuz: top security council", source: "Dawn", url: "https://www.dawn.com/news/2001272/iran-officially-announces-new-body-to-manage-strait-of-hormuz-top-security-council", time: "2026-05-18T12:35:42Z" },
-    ]
-  },
-  {
-    name: "Peshawar", country: "Pakistan",
-    lat: 34.0151, lng: 71.5249,
-    category: "security",
-    articles: [
-      { title: "At least 16 killed, 7 injured as passenger coach collides with parked bus on Swat Motorway", source: "Dawn", url: "https://www.dawn.com/news/2003010/at-least-16-killed-7-injured-as-passenger-coach-collides-with-parked-bus-on-swat-motorway", time: "2026-05-25T09:28:32Z" },
-      { title: "Sindh govt now declares 3-day Eidul Azha holiday, announces WFH on May 29", source: "Dawn", url: "https://www.dawn.com/news/2002761/sindh-govt-now-declares-3-day-eidul-azha-holiday-announces-wfh-on-may-29", time: "2026-05-24T11:17:38Z" },
-      { title: "PMD warns of glacial floods in northern regions", source: "Dawn", url: "https://www.dawn.com/news/2001664/pmd-warns-of-glacial-floods-in-northern-regions", time: "2026-05-20T03:06:16Z" },
-      { title: "KP governor says PM has formed committee to address CNG crisis in province", source: "Dawn", url: "https://www.dawn.com/news/2001491/kp-governor-says-pm-has-formed-committee-to-address-cng-crisis-in-province", time: "2026-05-19T10:12:51Z" },
     ]
   },
   {
@@ -697,8 +695,8 @@ const locations = [
     lat: 32.3, lng: 69.85,
     category: "security",
     articles: [
+      { title: "Militants blow up govt school, basic health unit in KP's Tank", source: "Dawn", url: "https://www.dawn.com/news/2003026/militants-blow-up-govt-school-basic-health-unit-in-kps-tank", time: "2026-05-25T12:22:16Z" },
       { title: "Security forces kill 11 terrorists in KP's North Waziristan: ISPR", source: "Dawn", url: "https://www.dawn.com/news/2002766/security-forces-kill-11-terrorists-in-kps-north-waziristan-ispr", time: "2026-05-24T11:54:08Z" },
-      { title: "IED blast kills three, including tribal chief, in northwest Pakistan", source: "The Hindu", url: "https://www.thehindu.com/news/international/ied-blast-kills-three-including-tribal-chief-in-northwestpakistan/article70993409.ece", time: "2026-05-18T11:54:44Z" },
     ]
   },
   {
