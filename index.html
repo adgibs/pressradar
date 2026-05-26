@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:08 UTC, 26 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:12 UTC, 26 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">26 May 2026</div>
@@ -116,12 +116,20 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Iran's regime continues irregular death sentencing as it hunts for 'Israeli collaborators'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897370", time: "2026-05-26T18:02:21Z" },
       { title: "Islamic regime sentences Iranian to prison for handing out candy after Khamenei's assassination", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-897358", time: "2026-05-26T16:35:26Z" },
+      { title: "US strikes Iran as Trump faces backlash over ‘disastrous’ peace deal plan - The Latest", source: "The Guardian", url: "https://www.theguardian.com/news/video/2026/may/26/us-strikes-iran-as-trump-faces-backlash-over-disastrous-peace-deal-plan-the-latest", time: "2026-05-26T16:11:54Z" },
+      { title: "Critical vulnerabilities left government systems, sensitive data, open to cyberattacks during war", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897341", time: "2026-05-26T16:02:16Z" },
+      { title: "Iran looking to 'buy time to rebuild its military' amid talks to end war", source: "France 24", url: "https://www.france24.com/en/iran-looking-to-buy-time-to-rebuild-its-military-amid-talks-to-end-war", time: "2026-05-26T15:29:52Z" },
+      { title: "'How to shoot down an F-18': Videos show Iran militia members training to use anti-aircraft missiles", source: "France 24", url: "https://www.france24.com/en/middle-east/20260526-iran-manpads-basij-training-us-israeli-aircraft", time: "2026-05-26T15:22:33Z" },
+      { title: "Iran partially restores internet after 88-day blackout", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-partially-restores-internet-after-88-day-blackout", time: "2026-05-26T15:17:54Z" },
+      { title: "Tehran labels US attacks ‘gross violation’, says it is prepared to respond", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/26/tehran-labels-us-attacks-gross-violation-says-it-is-prepared-to-respond?traffic_source=rss", time: "2026-05-26T15:13:18Z" },
       { title: "Iran Begins Lifting Monthslong Internet Blackout, Officials Say", source: "New York Times", url: "https://www.nytimes.com/2026/05/26/world/middleeast/iran-internet-blackout-lifting.html", time: "2026-05-26T14:44:56Z" },
       { title: "Iran’s president praises military after US strikes", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/26/irans-president-praises-military-after-us-strikes?traffic_source=rss", time: "2026-05-26T14:38:16Z" },
       { title: "Internet starts coming back in Iran after months-long blackout", source: "BBC News", url: "https://www.bbc.com/news/articles/c1w22y1n74do?at_medium=RSS&at_campaign=rss", time: "2026-05-26T14:11:21Z" },
       { title: "Iran judiciary suspends presidential body after it ordered internet access restored", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-judiciary-suspends-presidential-body-after-it-ordered-internet-access-restored/", time: "2026-05-26T13:31:55Z" },
       { title: "US anxious to come to deal with Iran asTehran seeks release of frozen assets", source: "France 24", url: "https://www.france24.com/en/us-anxious-to-come-to-deal-with-iran-astehran-seeks-release-of-frozen-assets", time: "2026-05-26T12:59:19Z" },
+      { title: "African nations seek security ties with Turkey through ‘Somalia model’", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/african-nations-seek-security-ties-turkey-through-somalia-model", time: "2026-05-26T12:54:43Z" },
       { title: "End to Iran’s 88-day internet blackout stalled by legal challenge", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/iran-internet-blackout", time: "2026-05-26T12:54:05Z" },
       { title: "Did Israel win the Iran war? The Jerusalem Dispatch hosts aren't so sure", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-897335", time: "2026-05-26T12:53:43Z" },
       { title: "U.S. says it launched 'self-defense strikes' in Iran amid peace talks", source: "CBS News", url: "https://www.cbsnews.com/video/us-says-it-launched-self-defense-strikes-in-iran-amid-peace-talks/", time: "2026-05-26T12:51:08Z" },
@@ -145,16 +153,19 @@ const locations = [
       { title: "Iran moves World Cup training base from US to Mexico amid security concerns", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897295", time: "2026-05-26T05:01:57Z" },
       { title: "US strikes southern Iran in ‘self defence’ targeting Iranian mine boats", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/26/aje-onl-nf_reported-us-strikes-southern-iran-in-self-defence-250526?traffic_source=rss", time: "2026-05-26T04:27:20Z" },
       { title: "US strikes Iran missile sites and mine laying vessels as Trump’s promised peace deal remains elusive", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/us-strikes-iran-missile-sites-vessels-trump-peace-deal-elusive", time: "2026-05-26T03:28:18Z" },
+      { title: "Gulf states know they can't rely on Trump's America and may be forced into alliances with Iran", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/2026-05-26/ty-article/.premium/gulf-states-cant-rely-on-trumps-u-s-and-may-be-forced-into-alliance-with-iran/0000019e-623a-d121-a5df-7fbf477c0002", time: "2026-05-26T03:11:22Z" },
       { title: "Iran says it will not yield to US pressure in talks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-it-will-not-yield-us-pressure-talks", time: "2026-05-26T02:49:25Z" },
       { title: "Qatar rejects claims Iran was offered payment for deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-rejects-claims-iran-was-offered-payment-deal", time: "2026-05-26T02:40:43Z" },
       { title: "US strikes Iranian boats, missile launch sites in 'self defense', says CENTCOM - Fox News", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897292", time: "2026-05-26T02:30:02Z" },
       { title: "Report: Shin Bet chief recently met PA’s exiled former Gaza security chief Dahlan in UAE", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-26-2026/", time: "2026-05-26T02:19:11Z" },
+      { title: "Iran partially lifts wartime internet blackout, data shows", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-26/ty-article-live/u-s-conducts-self-defense-strikes-against-iranian-boats-missile-launch-sites/0000019e-6204-d121-a5df-7fad89640000", time: "2026-05-26T02:09:27Z" },
       { title: "Middle East live: US will no longer have safe haven in region, warns Iran's Khamenei after strikes", source: "France 24", url: "https://www.france24.com/en/middle-east/20260526-middle-east-live-us-carries-out-self-defense-strikes-on-iran", time: "2026-05-26T01:48:33Z" },
       { title: "U.S. renews strikes on Iran, citing threats posed to American troops", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/26/us-renews-strikes-iran-citing-threats-posed-american-troops/", time: "2026-05-26T01:23:09Z" },
       { title: "U.S. Carries Out ‘Self-Defense Strikes’ in Southern Iran", source: "New York Times", url: "https://www.nytimes.com/2026/05/25/world/middleeast/us-iran-strikes.html", time: "2026-05-26T01:21:11Z" },
       { title: "US military launches strikes on southern Iran amid talks in Qatar", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/26/us-military-launches-strikes-on-southern-iran-amid-talks-in-qatar?traffic_source=rss", time: "2026-05-26T00:57:07Z" },
       { title: "Iran calls for accountability over deadly February strike on sports hall", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-calls-accountability-over-deadly-february-strike-sports-hall", time: "2026-05-26T00:49:46Z" },
       { title: "US military says it has launched new strikes on southern Iran", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgzzn4y1n8o?at_medium=RSS&at_campaign=rss", time: "2026-05-26T00:33:53Z" },
+      { title: "President Sheinbaum allows Iran team to stay in Mexico during World Cup after US refusal", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/mexico-fifa-iran-team", time: "2026-05-26T00:02:46Z" },
       { title: "Israel escalates strikes in Lebanon as Netanyahu vows to ‘crush’ Hezbollah", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/israel-escalates-strikes-in-lebanon-as-netanyahu-vows-to-crush-hezbollah", time: "2026-05-26T00:01:52Z" },
       { title: "Iran war live: US strikes Iran’s south, Tehran officials in Qatar for talks", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/5/26/iran-war-live-israel-pounds-lebanon-iranian-officials-in-qatar-for-talks?traffic_source=rss", time: "2026-05-26T00:00:00Z" },
       { title: "Iran accuses U.S. of violating ceasefire and threatens retaliation after new strikes", source: "NBC News", url: "https://www.nbcnews.com/world/iran/us-military-says-conducted-self-defense-strikes-targets-iran-rcna346839", time: "2026-05-25T23:37:13Z" },
@@ -605,17 +616,6 @@ const locations = [
       { title: "Trump was 'an hour away' from a decision on Iran before being called to wait", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-896722", time: "2026-05-19T17:57:27Z" },
       { title: "Iran has mapped out US flight patterns for air defence: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/iran-has-mapped-out-us-flight-patterns-their-air-defence-report", time: "2026-05-19T17:49:12Z" },
       { title: "How the Iranian regime ensures civilians bear the burden of its war against the US, Israel", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-896719", time: "2026-05-19T17:37:22Z" },
-      { title: "Trump says Iran wants deal with U.S., but threatens 'another big hit'", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-19/ty-article/trump-says-iran-wants-deal-with-u-s-but-threatens-another-big-hit/0000019e-40c8-d0ff-afbe-42c859170000", time: "2026-05-19T17:12:17Z" },
-      { title: "US lawmakers press Centcom chief over Iran war civilian deaths", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-lawmakers-press-centcom-chief-over-iran-war-civilian-deaths", time: "2026-05-19T17:05:46Z" },
-      { title: "Trump says Xi assured him China would not send weapons to Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/trump-says-xi-assured-him-china-would-not-send-weapons-to-iran?traffic_source=rss", time: "2026-05-19T16:53:42Z" },
-      { title: "UK pushes ‘bold new approach’ to aid as Cooper warns of global food crisis over Iran war", source: "The Independent", url: "https://www.independent.co.uk/news/uk/politics/iran-war-uk-food-crisis-aid-b2979660.html", time: "2026-05-19T16:52:29Z" },
-      { title: "Iranian family detained for relative's key role in 1979 US Embassy hostage crisis seeks release", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/department-of-homeland-security-los-angeles-state-department-marco-rubio-tehran-b2979724.html", time: "2026-05-19T16:33:30Z" },
-      { title: "Iran stages mass weddings for couples pledging to sacrifices lives in war with US, Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-stages-mass-weddings-for-couples-pledging-to-sacrifices-lives-in-war-with-us-israel/", time: "2026-05-19T16:31:20Z" },
-      { title: "Inflation Fears Cloud G7 Economic Agenda as Iran War Persists", source: "New York Times", url: "https://www.nytimes.com/2026/05/19/business/inflation-g7-economic-agenda-iran-war.html", time: "2026-05-19T16:29:09Z" },
-      { title: "Trump says US could strike Iran again within days without deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-us-could-strike-iran-again-within-days-without-deal", time: "2026-05-19T16:03:39Z" },
-      { title: "Qatar says US-Iran negotiations need ‘more time’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/19/qatar-says-us-iran-negotiations-need-more?traffic_source=rss", time: "2026-05-19T15:41:00Z" },
-      { title: "Trump says US was close to launching new strike on Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-us-was-close-launching-new-strike-iran", time: "2026-05-19T15:21:16Z" },
-      { title: "San Diego mosque shooting: Social media decries 'dehumanising' coverage and anti-Muslim rhetoric", source: "Middle East Eye", url: "https://www.middleeasteye.net/trending/social-media-reacts-san-diego-mosque-shooting-decries-anti-muslim-rhetoric", time: "2026-05-19T15:17:24Z" },
     ]
   },
   {
@@ -623,15 +623,24 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Even with Gulf on edge, negotiations stalling, experts say peace with Israel 'possible' - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897355", time: "2026-05-26T17:47:04Z" },
       { title: "The IDF has begun ground ops. beyond Yellow Line in Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897362", time: "2026-05-26T17:08:34Z" },
+      { title: "Trump undergoes yearly physical amid concerns over age, health and stamina", source: "Times of Israel", url: "https://www.timesofisrael.com/trump-undergoes-yearly-physical-amid-concerns-over-age-health-and-stamina/", time: "2026-05-26T16:38:41Z" },
       { title: "Hezbollah FPV drones utilized night vision for strikes on IDF soldiers, new footage shows - report", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-897334", time: "2026-05-26T15:38:37Z" },
+      { title: "Israel issues fresh evacuation orders in south Lebanon despite ceasefire", source: "France 24", url: "https://www.france24.com/en/video/20260526-israel-issues-fresh-evacuation-orders-in-south-lebanon-despite-ceasefire", time: "2026-05-26T15:30:30Z" },
+      { title: "Netanyahu's Mossad chief pick cleared by state panel despite chair's objection", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-26/ty-article/.premium/netanyahus-mossad-chief-pick-cleared-by-state-panel-despite-chairs-objection/0000019e-6401-dab6-a39f-7dc3fb850000", time: "2026-05-26T15:27:43Z" },
       { title: "IDF chief officially dismisses former IDF top lawyer Yifat Tomer-Yerushalmi", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897350", time: "2026-05-26T15:18:34Z" },
+      { title: "Israel is no longer ‘shooting and crying’", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/5/26/israel-is-no-longer-shooting-and-crying?traffic_source=rss", time: "2026-05-26T15:10:04Z" },
+      { title: "Ex-Likud minister Gilad Erdan says he is considering establishing right-wing party", source: "Times of Israel", url: "https://www.timesofisrael.com/ex-likud-minister-gilad-erdan-says-he-is-considering-establishing-right-wing-party/", time: "2026-05-26T15:08:43Z" },
+      { title: "In a world first, Israeli scientists find ‘memory’ B cells can target ovarian tumors", source: "Times of Israel", url: "https://www.timesofisrael.com/in-a-world-first-israeli-scientists-find-memory-b-cells-can-target-ovarian-tumors/", time: "2026-05-26T15:02:33Z" },
       { title: "Some Canadian Jews say ride-sharing apps are no longer safe. Enter Jewride", source: "Haaretz", url: "https://www.haaretz.com/jewish/2026-05-26/ty-article-magazine/.premium/some-canadian-jews-say-ride-sharing-apps-are-no-longer-safe-enter-jewride/0000019e-456d-dc0d-a99e-cdedc8810000", time: "2026-05-26T14:57:03Z" },
       { title: "Ex-UN ambassador Erdan says he's working to establish new right-wing party, sees himself as PM", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897347", time: "2026-05-26T14:49:43Z" },
       { title: "IDF chief formally dismisses ex-military advocate general over Sde Teiman scandal", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-chief-formally-dismisses-ex-military-advocate-general-over-sde-teiman-scandal/", time: "2026-05-26T14:44:07Z" },
       { title: "LSE Student Union closes disciplinary proceedings against Israel Soc. over pro-IDF merchandise", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897346", time: "2026-05-26T14:35:34Z" },
       { title: "Who is Rebeca Grynspan, the Jewish Costa Rican running to head the UN?", source: "Times of Israel", url: "https://www.timesofisrael.com/who-is-rebeca-grynspan-the-jewish-costa-rican-running-to-head-the-un/", time: "2026-05-26T14:33:54Z" },
+      { title: "Israel reportedly begins ground operation in Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-reportedly-begins-ground-operation-lebanon", time: "2026-05-26T14:06:18Z" },
       { title: "NYC exhibit ‘Jews are Magic’ traces Jewish occultism from palm readers to psychics", source: "Times of Israel", url: "https://www.timesofisrael.com/nyc-exhibit-jews-are-magic-traces-jewish-occultism-from-palm-readers-to-psychics/", time: "2026-05-26T13:59:57Z" },
+      { title: "How AIPAC and pro-Israel megadonors turned a midterm race into the most expensive primary in U.S. history", source: "Haaretz", url: "https://www.haaretz.com/israel-news/podcasts/2026-05-26/ty-article-podcast/how-aipac-made-a-midterm-race-the-most-expensive-primary-in-u-s-history/0000019e-63b1-d446-a7fe-6bbf277a0000", time: "2026-05-26T13:22:58Z" },
       { title: "Senior committee re-approves Gofman’s appointment as next Mossad chief", source: "Times of Israel", url: "https://www.timesofisrael.com/senior-committee-re-approves-gofmans-appointment-as-next-mossad-chief/", time: "2026-05-26T13:15:46Z" },
       { title: "Hanged effigies of Trump, Netanyahu paraded through Montreal by anti-Israel groups", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-897337", time: "2026-05-26T13:08:25Z" },
       { title: "Israel's Arab public will not forgive its parties if ego battles derail a joint list", source: "Haaretz", url: "https://www.haaretz.com/israel-news/elections/2026-05-26/ty-article/.premium/israeli-arabs-will-not-forgive-their-parties-if-ego-battles-derail-a-joint-list/0000019e-60d2-db75-a5be-61fa69c00000", time: "2026-05-26T12:59:38Z" },
@@ -640,13 +649,19 @@ const locations = [
       { title: "Netanyahu chief of staff to be indicted for obstruction of justice, pending hearing", source: "Times of Israel", url: "https://www.timesofisrael.com/netanyahu-chief-of-staff-to-be-indicted-for-obstruction-of-justice-pending-hearing/", time: "2026-05-26T12:37:31Z" },
       { title: "Father of released hostage Eitan Mor joins Smotrich's Religious Zionist Party", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897332", time: "2026-05-26T12:37:09Z" },
       { title: "Protect your property in Israel - Sponsored Content", source: "Times of Israel", url: "https://toi.li/VXDb3X", time: "2026-05-26T12:32:33Z" },
+      { title: "Former ICC prosecutor says Mossad chief pressured her to stop investigating Israel war crimes", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/former-icc-prosecutor-says-mossad-chief-pressured-her-over-israel-war-crimes-probe", time: "2026-05-26T12:28:54Z" },
+      { title: "Israel unleashes wave of strikes in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-unleashes-wave-strikes-southern-lebanon", time: "2026-05-26T12:17:55Z" },
       { title: "Anti-Israel protesters hang effigies of Netanyahu, Ben Gvir, Trump at Montreal rally", source: "Times of Israel", url: "https://www.timesofisrael.com/anti-israel-protesters-hang-effigies-of-netanyahu-ben-gvir-trump-at-montreal-rally/", time: "2026-05-26T12:06:54Z" },
       { title: "Trump's Iran deal: Netanyahu's 2018 dream is the world's 2026 nightmare", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-26/ty-article-magazine/.premium/trumps-iran-deal-netanyahus-2018-dream-is-the-worlds-2026-nightmare/0000019e-635d-d38b-a3df-7bdd153e0000", time: "2026-05-26T12:02:53Z" },
+      { title: "Trump links Iran negotiations to expansion of Abraham Accords", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260526-trump-links-iran-negotiations-to-expansion-of-abraham-accords/", time: "2026-05-26T11:57:52Z" },
       { title: "Autistic 14-year-old accused by Israel of security crimes describes six weeks of abuse in detention", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/palestinians/2026-05-26/ty-article-magazine/.premium/autistic-teen-accused-by-israel-of-security-crimes-describes-abuse-in-detention/0000019e-63a6-d0c7-a5de-63ae1f830000", time: "2026-05-26T11:45:17Z" },
       { title: "Israeli attacks on eastern Lebanon village kill at least 11 people", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/26/israeli-attacks-on-eastern-lebanon-village-kill-at-least-12-people?traffic_source=rss", time: "2026-05-26T11:35:05Z" },
       { title: "Daily Briefing May 26: Trump sidelines Netanyahu as Israel eyes Iran", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-may-26-trump-sidelines-netanyahu-as-israel-eyes-iran/", time: "2026-05-26T11:31:23Z" },
+      { title: "Netanyahu confidant Tzachi Braverman set to be charged in Bibileaks investigation affair", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-05-26/ty-article/.premium/netanyahu-confidant-set-to-be-charged-in-bibileaks-investigation-affair/0000019e-6371-d446-a7fe-6b7f40050000", time: "2026-05-26T10:57:33Z" },
+      { title: "Portraits of Israel's surveillance state: Turning moments of arrest into art", source: "Haaretz", url: "https://www.haaretz.com/life/2026-05-26/ty-article-magazine/.highlight/portraits-of-a-surveillance-state-turning-moments-of-arrests-by-israel-into-art/0000019e-5f6d-d6cc-a79e-dffdff700000", time: "2026-05-26T10:49:43Z" },
       { title: "Zvika Mor, father of former hostage Eitan Mor, joins Smotrich’s Religious Zionism", source: "Times of Israel", url: "https://www.timesofisrael.com/zvika-mor-father-of-former-hostage-eitan-mor-to-join-smotrichs-religious-zionism/", time: "2026-05-26T10:40:59Z" },
       { title: "Israel’s labour force transformed since October 7", source: "Al Jazeera", url: "https://www.aljazeera.com/video/money-works/2026/5/26/israels-labour-force-transformed-since-october-7?traffic_source=rss", time: "2026-05-26T10:34:56Z" },
+      { title: "Israeli startups mobilize against explosive drones at Tel Aviv hackathon", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-26/ty-article/.premium/israeli-startups-mobilize-against-explosive-drones-at-tel-aviv-hackathon/0000019e-6356-ddac-afbf-ff5eb0110000", time: "2026-05-26T10:23:16Z" },
       { title: "Israel strikes Lebanese village and calls up more troops in the region", source: "France 24", url: "https://www.france24.com/en/israel-strikes-lebanese-village-and-calls-up-more-troops-in-the-region", time: "2026-05-26T10:02:13Z" },
       { title: "Deadly Hezbollah drones could reach Jerusalem, Tel Aviv if gov't doesn't act, Liberman warns", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897309", time: "2026-05-26T09:43:59Z" },
       { title: "Netanyahu threatens to expand offensive in Lebanon as Washington signals support", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260526-netanyahu-threatens-to-expand-offensive-in-lebanon-as-washington-signals-support/", time: "2026-05-26T08:37:33Z" },
@@ -1108,21 +1123,6 @@ const locations = [
       { title: "Big data AI startup will open Tel Aviv engineering hub to tap into local tech talent", source: "Times of Israel", url: "https://www.timesofisrael.com/big-data-ai-startup-will-open-tel-aviv-engineering-hub-to-tap-into-local-tech-talent/", time: "2026-05-19T17:41:29Z" },
       { title: "Jewish groups denounce fatal shooting at San Diego mosque, call for security funding", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-19/ty-article/jewish-groups-denounce-fatal-shooting-at-u-s-mosque-call-for-security-funding/0000019e-40df-d394-addf-fbff5bd10000", time: "2026-05-19T17:31:21Z" },
       { title: "They were children during the Nakba. This is what they remember 78 years later", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-19/ty-article-magazine/.premium/they-were-children-during-the-nakba-this-is-what-they-remember-78-years-later/0000019e-20b2-d14f-abfe-23b6ae5e0000", time: "2026-05-19T17:30:29Z" },
-      { title: "IDF data shows sharp rise in sexual assault reports from soldiers since October 7", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-19/ty-article/.premium/idf-data-shows-sharp-rise-in-sexual-assault-cases-in-army-since-october-7/0000019e-3fb4-dce7-abff-7fb54f440000", time: "2026-05-19T16:53:05Z" },
-      { title: "In 65% of JWed’s 4,100+ marriages, Jewish women made the first move - Sponsored Content", source: "Times of Israel", url: "https://toi.li/abXccN", time: "2026-05-19T16:48:13Z" },
-      { title: "Israel Air Force introduces all-women Arad special commando unit", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-896703", time: "2026-05-19T16:44:39Z" },
-      { title: "From battlefield to backyard: Inside Israel's Cando drone revolution", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-896662", time: "2026-05-19T16:38:33Z" },
-      { title: "Hezbollah drone wounds two in Israel as IDF strikes leave five dead in Lebanon", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-19/ty-article/.premium/hezbollah-drone-wounds-two-in-israel-as-idf-strikes-leave-five-dead-in-lebanon/0000019e-407d-db68-a1de-ef7d7d2c0000", time: "2026-05-19T16:37:40Z" },
-      { title: "Liberman says his goal for the upcoming election is to become prime minister", source: "Times of Israel", url: "https://www.timesofisrael.com/liberman-says-his-goal-for-the-upcoming-election-is-to-become-prime-minister/", time: "2026-05-19T16:31:14Z" },
-      { title: "At least 22 killed in Israeli attacks on Lebanon in 24 hours: Ministry", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/at-least-22-killed-in-israeli-attacks-on-lebanon-in-24-hours-ministry?traffic_source=rss", time: "2026-05-19T16:29:05Z" },
-      { title: "British Airways delays Middle East flights until August", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/british-airways-delays-middle-east-flights-until-august", time: "2026-05-19T16:22:10Z" },
-      { title: "Israel Bonds unveils new stamp marking 75 Years of Investment in Israel - Sponsored Content", source: "Times of Israel", url: "https://www.timesofisrael.com/spotlight/israel-bonds-unveils-new-stamp-marking-75-years-of-investment-in-israel/", time: "2026-05-19T16:16:02Z" },
-      { title: "Pro-Israel groups pour record sums into bid to defeat GOP rebel Thomas Massie in Kentucky primary", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-19/ty-article/.premium/the-most-consequential-republican-primary-for-israel-is-happening-in-kentucky/0000019e-4056-d394-addf-fb7e8fdc0000", time: "2026-05-19T15:57:11Z" },
-      { title: "Unite the Kingdom: Hateful theatre of niqab ‘unveiling’ feeds far-right fantasies", source: "Middle East Eye", url: "https://www.middleeasteye.net/opinion/unite-kingdom-hateful-far-right-fantasy-unveiling-niqab", time: "2026-05-19T15:55:47Z" },
-      { title: "Israel orders evacuations in 12 towns in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-orders-evacuations-12-towns-south-lebanon", time: "2026-05-19T15:40:17Z" },
-      { title: "Firebrand Likud MK indicted for disclosing Shin Bet agent’s identity", source: "Times of Israel", url: "https://www.timesofisrael.com/firebrand-likud-mk-charged-with-disclosing-shin-bet-agents-identity/", time: "2026-05-19T15:22:06Z" },
-      { title: "New ‘PTSD-friendly’ scheme aims to adapt Israel’s public spaces", source: "Times of Israel", url: "https://www.timesofisrael.com/new-ptsd-friendly-scheme-aims-to-adapt-israels-public-spaces/", time: "2026-05-19T15:12:23Z" },
-      { title: "Police investigating deadly San Diego mosque shooting as hate crime", source: "Times of Israel", url: "https://www.timesofisrael.com/police-investigating-deadly-san-diego-mosque-shooting-as-hate-crime/", time: "2026-05-19T15:12:20Z" },
     ]
   },
   {
@@ -1130,6 +1130,10 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Is Harry Styles's new concert tour indirectly fundraising for Hamas-linked charities?", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897360", time: "2026-05-26T19:11:10Z" },
+      { title: "Hamas ramping up 'psychological warfare' on Gazans, Khan Yunis militia leader tells 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897363", time: "2026-05-26T17:11:12Z" },
+      { title: "Israel seizes control of historic Nabi Samuel mosque from Islamic waqf", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/israel-seizes-control-historic-nabi-samuel-mosque-islamic-waqf", time: "2026-05-26T16:46:22Z" },
+      { title: "Israeli army chief discharges ex-top prosecutor amid leak investigation", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-26/ty-article/.premium/israeli-army-chief-discharges-ex-top-prosecutor-amid-leak-investigation/0000019e-6444-dd0e-a9df-e6764e4b0000", time: "2026-05-26T15:07:35Z" },
       { title: "Israel continues attacks, illegal settlement activity despite ceasefire: Turkish president", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260526-israel-continues-attacks-illegal-settlement-activity-despite-ceasefire-turkish-president/", time: "2026-05-26T14:55:33Z" },
       { title: "Twitch to politics: Hasan Piker on Gaza and the US right-wing", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-take-2/2026/5/26/aje-onl-tt_rr_usa_piker_av_v1-250526?traffic_source=rss", time: "2026-05-26T14:36:01Z" },
       { title: "Gaza border kibbutzim mark first Shavuot without hostages", source: "Times of Israel", url: "https://www.timesofisrael.com/gaza-border-kibbutzim-mark-first-shavuot-without-hostages/", time: "2026-05-26T14:21:11Z" },
@@ -1466,10 +1470,6 @@ const locations = [
       { title: "US imposes sanctions on Gaza flotilla organisers amid Israeli crackdown", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/us-imposes-sanctions-on-gaza-flotilla-organisers-amid-israeli-crackdown?traffic_source=rss", time: "2026-05-19T17:36:16Z" },
       { title: "Israel’s far-right Finance Minister Smotrich says ICC seeking his arrest", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/19/israels-far-right-finance-minister-smotrich-says-icc-seeking-his-arrest?traffic_source=rss", time: "2026-05-19T17:35:16Z" },
       { title: "US sanctions activists aboard Gaza-bound aid flotilla", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-sanctions-activists-aboard-gaza-bound-aid-flotilla", time: "2026-05-19T17:26:11Z" },
-      { title: "Why is Israel so scared of small civilian sailboats bound for Gaza?", source: "Haaretz", url: "https://www.haaretz.com/israel-news/haaretz-today/2026-05-19/ty-article/.highlight/why-is-israel-so-scared-of-small-civilian-sailboats-bound-for-gaza/0000019e-4137-d637-a99f-67bf95ff0000", time: "2026-05-19T17:11:11Z" },
-      { title: "Trump's Gaza board reports funding 'gap', urges quicker disbursement", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-896710", time: "2026-05-19T16:48:42Z" },
-      { title: "Israeli army records sharp rise in sexual assault complaints in 2025: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-israeli-army-records-sharp-rise-in-sexual-assault-complaints-in-2025-report/", time: "2026-05-19T16:11:28Z" },
-      { title: "Israeli finance minister says ICC arrest warrant issued for him", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-israeli-finance-minister-says-icc-arrest-warrant-issued-for-him/", time: "2026-05-19T15:40:05Z" },
     ]
   },
   {
@@ -1477,6 +1477,10 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Inside the perfect storm: Windward on the hidden war reshaping the oceans", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-897365", time: "2026-05-26T17:23:37Z" },
+      { title: "Iran remains in peace talks despite first US strikes since ceasefire", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/iran-peace-deal-talks-us-bombing-ceasefire-strait-hormuz", time: "2026-05-26T17:06:34Z" },
+      { title: "Iranian fishermen struggle to survive amid Hormuz blockade", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/26/iranian-fishermen-struggle-to-survive-amid-hormuz-blockade?traffic_source=rss", time: "2026-05-26T16:13:58Z" },
+      { title: "Iran warns of stronger retaliation if US and Israel resume attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-warns-stronger-retaliation-if-us-and-israel-resume-attacks", time: "2026-05-26T15:39:57Z" },
       { title: "The 75-year-old military deadlock which Trump must learn from in his war with Iran", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-mines-us-trump-strait-of-hormuz-korean-war-b2974969.html", time: "2026-05-26T14:08:21Z" },
       { title: "Manufacturing a substitute enemy: When Iran replaces Palestine in Arab media", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260526-manufacturing-a-substitute-enemy-when-iran-replaces-palestine-in-arab-media/", time: "2026-05-26T13:36:53Z" },
       { title: "Oil prices surge to $100 a barrel as US-Iran peace hopes fade amid military strikes", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/us-strikes-iran-oil-prices-b2983586.html", time: "2026-05-26T11:01:47Z" },
@@ -1484,6 +1488,7 @@ const locations = [
       { title: "US military sais it carried 'self-defense' strikes in first since ceasefire", source: "France 24", url: "https://www.france24.com/en/us-military-sais-it-carried-self-defense-strikes-in-first-since-ceasefire", time: "2026-05-26T09:35:59Z" },
       { title: "What are the minelaying boats targeted in Trump’s new strikes on Iran?", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-mine-boats-strait-of-hormuz-how-they-work-b2983443.html", time: "2026-05-26T09:09:13Z" },
       { title: "Rubio says Strait of Hormuz will open ‘one way or the other’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/26/rubio-says-strait-of-hormuz-will-open-one-way-or-the-other?traffic_source=rss", time: "2026-05-26T07:39:14Z" },
+      { title: "Report: U.S. restarts escorting ships crossing Strait of Hormuz", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-26/ty-article/rubio-says-hormuz-strait-will-open-one-way-or-another-after-u-s-strikes-iran/0000019e-62b3-da86-af9f-f2f7faf60000", time: "2026-05-26T06:38:03Z" },
       { title: "Iran war day 88: US attacks near Strait of Hormuz; talks under way in Qatar", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/26/iran-war-day-88-us-attacks-near-strait-of-hormuz-talks-under-way-in-qatar?traffic_source=rss", time: "2026-05-26T06:16:34Z" },
       { title: "Gold falls as Iran tensions fuel inflation concerns", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/gold-falls-iran-tensions-fuel-inflation-concerns", time: "2026-05-26T05:07:11Z" },
       { title: "Iran-US war latest: US launches new strikes targeting Iranian naval base in Strait of Hormuz", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strikes-strait-hormuz-oil-b2983349.html", time: "2026-05-26T04:57:06Z" },
@@ -1679,7 +1684,6 @@ const locations = [
       { title: "EU pledges support for farmers hit by fertiliser price surge", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/eu-pledges-support-farmers-hit-fertiliser-price-surge", time: "2026-05-19T18:29:06Z" },
       { title: "Qatar backs US-Iran talks, calls for reopening of Hormuz Strait", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-qatar-backs-us-iran-talks-calls-for-reopening-of-hormuz-strait/", time: "2026-05-19T18:27:32Z" },
       { title: "US says 88 commercial vessels redirected from transiting Strait of Hormuz", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-us-says-88-commercial-vessels-redirected-from-transiting-strait-of-hormuz/", time: "2026-05-19T17:40:36Z" },
-      { title: "Iranian army warns of opening ‘new fronts’ if attacked again", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-iranian-army-warns-of-opening-new-fronts-if-attacked-again/", time: "2026-05-19T15:44:39Z" },
     ]
   },
   {
@@ -1688,6 +1692,7 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "US plans to cut strategic bombers, warships available to NATO in a crisis, Spiegel reports", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897364", time: "2026-05-26T17:31:22Z" },
+      { title: "Coalition races ahead with laws targeting media, in defiance of legal objections", source: "Times of Israel", url: "https://www.timesofisrael.com/coalition-races-ahead-with-laws-targeting-media-in-defiance-of-legal-objections/", time: "2026-05-26T15:38:31Z" },
       { title: "Federal court blocks Republican-favored Alabama plan for new congressional districts", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/alabama-congressional-redistricting-house-blocked-b2983763.html", time: "2026-05-26T14:39:43Z" },
       { title: "Iran says U.S. violating ceasefire as Trump seeks 'good deal or no deal'", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-us-strikes-peace-talks-ceasefire/", time: "2026-05-26T13:04:07Z" },
       { title: "Can the US and India repair ties over trade and China?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/counting-the-cost/2026/5/26/can-the-us-and-india-repair-ties-over-trade-and-china?traffic_source=rss", time: "2026-05-26T11:23:17Z" },
@@ -1825,7 +1830,6 @@ const locations = [
       { title: "JD Vance just tried to reassure America. He made everything so much worse", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jd-vance-iran-cuba-economy-b2979766.html", time: "2026-05-19T19:05:57Z" },
       { title: "Rubio to attend Nato meeting amid concerns over US troop plans in Europe", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rubio-attend-nato-meeting-amid-concerns-over-us-troop-plans-europe", time: "2026-05-19T18:47:25Z" },
       { title: "Appeals court judges appear to be divided over Pentagon's legal dispute with AI company Anthropic", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/pentagon-pete-hegseth-anthropic-henderson-donald-trump-b2979787.html", time: "2026-05-19T17:55:16Z" },
-      { title: "Trump called a sudden, urgent press conference. What followed was a fever dream", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/trump-ballroom-press-conference-iran-cuba-b2979696.html", time: "2026-05-19T17:00:04Z" },
     ]
   },
   {
@@ -1833,6 +1837,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "Use of force by guards in trial of pro-Palestine activists in Germany under scrutiny", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/force-pro-palestine-activists-germany-trial-scrutiny", time: "2026-05-26T16:31:26Z" },
       { title: "Sheikh Ekrima Sabri warns of escalating threats to Al-Aqsa Mosque", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260526-sheikh-ekrima-sabri-warns-of-escalating-threats-to-al-aqsa-mosque/", time: "2026-05-26T13:19:48Z" },
       { title: "High Court gives parties 24 hours to respond after c'tee again clears Gofman for Mossad chief", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897338", time: "2026-05-26T13:17:17Z" },
       { title: "Ethiopian Jewish activist calls for unity in Israel", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/article-897333", time: "2026-05-26T12:34:24Z" },
@@ -1853,6 +1858,7 @@ const locations = [
       { title: "Saudi Arabia deletes joint statement condemning Somaliland embassy opening in Jerusalem", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260525-saudi-arabia-deletes-joint-statement-condemning-somaliland-embassy-opening-in-jerusalem/", time: "2026-05-25T11:26:12Z" },
       { title: "High Court to hear petition over recognition of soldiers who committed suicide after war service", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897204", time: "2026-05-25T10:30:26Z" },
       { title: "Why ICC going after Smotrich is a bigger deal than going after Netanyahu - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897197", time: "2026-05-25T09:29:21Z" },
+      { title: "Shaping the future of AI at Hebrew University of Jerusalem", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897155", time: "2026-05-25T09:25:04Z" },
       { title: "Anti-draft ultra-Orthodox protesters vandalize police cars in Jerusalem after draft dodger arrested", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897193", time: "2026-05-25T09:19:39Z" },
       { title: "Liberman: Any Iran deal ‘catastrophe,’ Netanyahu turning Israel into ‘banana republic’", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897179", time: "2026-05-24T21:24:01Z" },
       { title: "New US-Iran deal 'bad deal,' fails to address missiles, terror proxies, Israeli sources tell 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-897174", time: "2026-05-24T20:35:34Z" },
@@ -1904,8 +1910,6 @@ const locations = [
       { title: "Somaliland to open embassy in Jerusalem, Israel in Hargeisa: Envoy", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/somaliland-israel-announce-mutual-embassies-in-jerusalem-and-hargeisa?traffic_source=rss", time: "2026-05-19T17:56:11Z" },
       { title: "Mossad appointment controversy: Court orders advisory c'tee reconvene, missed critical information", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-896721", time: "2026-05-19T17:50:02Z" },
       { title: "Somaliland’s first-ever embassy anywhere will open in Jerusalem, envoy says", source: "Times of Israel", url: "https://www.timesofisrael.com/somalilands-first-ever-embassy-anywhere-will-open-in-jerusalem-envoy-says/", time: "2026-05-19T17:41:48Z" },
-      { title: "Public complaints in Israel soar as state failures compound", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-896704", time: "2026-05-19T16:00:33Z" },
-      { title: "A-G files indictment against MK Gotliv over alleged disclosure of Shin Bet employee’s identity", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-896701", time: "2026-05-19T15:50:31Z" },
     ]
   },
   {
@@ -1913,6 +1917,8 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "strikes",
     articles: [
+      { title: "Hezbollah says it attacked Israeli positions near Litani River", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-says-it-attacked-israeli-positions-near-litani-river", time: "2026-05-26T16:41:42Z" },
+      { title: "Israel Expands Lebanon ground offensive beyond self-declared buffer zone", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-26/ty-article/.premium/israel-expands-lebanon-ground-offensive-beyond-self-declared-buffer-zone/0000019e-64b5-da7d-a1bf-fcb5d8970000", time: "2026-05-26T15:48:32Z" },
       { title: "Israel Steps Up Strikes in Lebanon as U.S. Pushes for Iran Peace Deal", source: "New York Times", url: "https://www.nytimes.com/2026/05/26/world/middleeast/israel-strikes-escalation-lebanon.html", time: "2026-05-26T14:35:37Z" },
       { title: "Hezbollah launches largest drone attack ever against Israel in northern Israel", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897342", time: "2026-05-26T13:54:47Z" },
       { title: "Prospects fade for imminent end to Iran war as attacks restart", source: "NPR", url: "https://www.npr.org/2026/05/26/nx-s1-5834840/iran-lebanon-updates", time: "2026-05-26T13:32:50Z" },
@@ -1987,6 +1993,7 @@ const locations = [
     lat: 33.2705, lng: 35.1968,
     category: "strikes",
     articles: [
+      { title: "Israeli strikes hit Lebanon’s Bekaa", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-hit-lebanons-bekaa", time: "2026-05-26T17:09:07Z" },
       { title: "Civil defense and rescue centre in Lebanon struck by Israel, killing two", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/civil-defense-and-rescue-centre-lebanon-struck-israel-killing-two", time: "2026-05-26T11:14:04Z" },
       { title: "Israeli army calls up reservists to expand operation in Lebanon: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-calls-reservists-expand-operation-lebanon-report", time: "2026-05-26T09:02:55Z" },
       { title: "Israeli strike hits Kafr Sir as fighting escalates in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-hits-kafr-sir-fighting-escalates-south-lebanon", time: "2026-05-26T05:41:10Z" },
@@ -2017,7 +2024,6 @@ const locations = [
       { title: "Death toll rises to 10 after Israeli strike on south Lebanon town", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/death-toll-rises-10-after-israeli-strike-south-lebanon-town", time: "2026-05-19T22:25:01Z" },
       { title: "Israel targets farmers with phosphorus shells in southern Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-israel-targets-farmers-with-phosphorus-shells-in-southern-lebanon/", time: "2026-05-19T18:58:16Z" },
       { title: "Four bodies recovered after Israeli strike in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/four-bodies-recovered-after-israeli-strike-southern-lebanon", time: "2026-05-19T18:10:30Z" },
-      { title: "Canada faces pressure over killing of citizen in Israeli strike on Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/canada-faces-pressure-over-killing-citizen-israeli-strike-lebanon", time: "2026-05-19T16:43:30Z" },
     ]
   },
   {
@@ -2049,8 +2055,6 @@ const locations = [
       { title: "Nato jets scrambled after drone flies near Lithuanian capital as residents told to ‘immediately take shelter’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/lithuania-drone-air-alert-belarus-nato-jets-b2980122.html", time: "2026-05-20T08:18:58Z" },
       { title: "US plans to shrink forces available to NATO during crises, sources say", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-896767", time: "2026-05-20T05:04:07Z" },
       { title: "Bipartisan U.S. senators unveil sweeping antisemitism security bill", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-19/ty-article/.premium/bipartisan-senators-unveil-sweeping-antisemitism-security-bill/0000019e-41ca-dab3-adfe-d9fe87940000", time: "2026-05-19T20:55:38Z" },
-      { title: "Trump endorses scandal-ridden Ken Paxton in dagger to Cornyn’s Texas reelection bid over longstanding grudge", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/ken-paxton-trump-senate-cornyn-b2979746.html", time: "2026-05-19T16:58:56Z" },
-      { title: "NATO's top officer doesn't expect more American drawdowns beyond the 5,000 troops Trump announced", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/donald-trump-europe-nato-brussels-germany-b2979738.html", time: "2026-05-19T16:45:32Z" },
     ]
   },
   {
@@ -2078,8 +2082,6 @@ const locations = [
       { title: "Woman dies after falling into manhole", source: "Sky News", url: "https://news.sky.com/story/woman-dies-after-falling-into-new-york-manhole-13546151", time: "2026-05-20T08:31:00Z" },
       { title: "Judge orders mental health evaluation for woman accused of attempting to murder Rihanna", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/rihanna-shooting-ivanna-lisette-ortiz-court-b2980026.html", time: "2026-05-20T05:50:57Z" },
       { title: "Woman dies after stepping out of car into uncovered manhole in New York City", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/woman-manhole-nyc-death-donike-gocaj-b2980019.html", time: "2026-05-20T05:21:29Z" },
-      { title: "Woman dies after falling into open manhole in Manhattan", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/manhole-cartier-manhattan-new-york-b2979647.html", time: "2026-05-19T16:13:00Z" },
-      { title: "Hero Amazon driver saved woman who was being attacked by husband with a hammer inside their home: cops", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/amazon-driver-home-attack-minnesota-b2979631.html", time: "2026-05-19T15:16:17Z" },
     ]
   },
   {
@@ -2104,32 +2106,6 @@ const locations = [
       { title: "Are India and Pakistan quietly preparing to restart dialogue?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/23/are-india-and-pakistan-quietly-preparing-to-restart-dialogue?traffic_source=rss", time: "2026-05-23T04:11:31Z" },
       { title: "‘Iron brothers’: How China and Pakistan built an unlikely 75-year bond", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/5/21/iron-brothers-how-china-and-pakistan-built-an-unlikely-75-year-bond?traffic_source=rss", time: "2026-05-21T09:26:36Z" },
       { title: "Bangladesh beat Pakistan by 78 runs to clinch historic Test series win", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/20/bangladesh-beat-pakistan-by-78-runs-to-clinch-historic-test-series-win?traffic_source=rss", time: "2026-05-20T06:33:12Z" },
-      { title: "Pakistan sentences man to death for killing TikTok star Sana Yousaf", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/death-sentence-handed-to-man-for-killing-tiktok-star-sana-yousaf?traffic_source=rss", time: "2026-05-19T15:43:28Z" },
-      { title: "Pakistani drug queen probed over elite links in Karachi cocaine network", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-896702", time: "2026-05-19T15:36:29Z" },
-    ]
-  },
-  {
-    name: "Damascus", country: "Syria",
-    lat: 33.5138, lng: 36.2765,
-    category: "evacuation",
-    articles: [
-      { title: "Australia prepares for arrival of 19 women and children linked to Isis", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/australia-islamic-state-roj-camp-syria-return-b2983376.html", time: "2026-05-26T05:15:37Z" },
-      { title: "How Uyghurs from China helped Syrian rebels overthrow Bashar al-Assad", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5553312/how-uyghurs-from-china-helped-syrian-rebels-overthrow-bashar-al-assad", time: "2026-05-25T20:23:22Z" },
-      { title: "Syria holds legislative elections in former Kurdish-controlled areas", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/25/syria-holds-legislative-elections-in-former-kurdish-controlled-areas?traffic_source=rss", time: "2026-05-25T01:29:00Z" },
-      { title: "Syria holds legislative elections in Kurdish-majority northeast", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/syria-holds-legislative-elections-in-kurdish-majority-northeast", time: "2026-05-24T21:36:14Z" },
-      { title: "Last of Australian ISIS linked families leave Syrian camps", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/isis-threat/article-897147", time: "2026-05-24T16:36:42Z" },
-      { title: "Syria cannot heal without a rebuilt health system", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/5/24/syria-cannot-heal-without-a-rebuilt-health?traffic_source=rss", time: "2026-05-24T13:53:31Z" },
-      { title: "Syria pushes to gain closer ties with Western powers as it reaches meetings with G7, NATO, and WHO", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897052", time: "2026-05-23T17:21:56Z" },
-      { title: "Turkish and Syrian officials detain 10 individuals with alleged ISIL ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/23/turkish-and-syrian-officials-detain-10-individuals-with-alleged-isil-ties?traffic_source=rss", time: "2026-05-23T13:55:24Z" },
-      { title: "Pro-Palestinian activist Mahmoud Khalil to appeal to U.S. Supreme Court to avoid re-arrest", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-23/ty-article/mahmoud-khalil-to-appeal-to-u-s-supreme-court-to-avoid-re-arrest/0000019e-5134-d637-a99f-77bed4590000", time: "2026-05-23T03:14:48Z" },
-      { title: "Over 18,000 firms registered in Damascus, 1.5M refugees returned since sanctions lifted: US Embassy", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260522-over-18000-firms-registered-in-damascus-1-5m-refugees-returned-since-sanctions-lifted-us-embassy/", time: "2026-05-22T15:31:40Z" },
-      { title: "Druze leader Hikmat al-Hijri reiterates calls for Syrian division and thanks Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260522-druze-leader-hikmat-al-hijri-reiterates-calls-for-syrian-division-and-thanks-israel/", time: "2026-05-22T09:13:49Z" },
-      { title: "Australian women linked to ISIS leave Syrian camp - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/islamic-terrorism/article-897004", time: "2026-05-22T05:41:12Z" },
-      { title: "ISIS escalates rhetoric, seeks ‘new phase of fighting’ in Syria - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/isis-threat/article-896952", time: "2026-05-21T11:53:04Z" },
-      { title: "Syria’s Kurds confront defeat after decades of resistance - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896698", time: "2026-05-20T18:00:00Z" },
-      { title: "Syrian soldier killed, others injured in car bombing in Damascus", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-syrian-soldier-killed-others-injured-in-car-bombing-in-damascus/", time: "2026-05-19T17:28:11Z" },
-      { title: "WATCH: Car bomb explodes near Defense Ministry building in Damascus", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-896707", time: "2026-05-19T16:29:07Z" },
-      { title: "At least one killed, 21 wounded in car bomb explosion in Syria’s Damascus", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/19/at-least-one-killed-21-wounded-in-car-bomb-explosion-in-syrias-damascus?traffic_source=rss", time: "2026-05-19T15:36:47Z" },
     ]
   },
   {
@@ -2153,7 +2129,28 @@ const locations = [
       { title: "Ronaldo scores twice to seal Saudi Pro League at last with Al-Nassr", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/21/ronaldo-scores-twice-to-seal-saudi-pro-league-at-last-with-al-nassr?traffic_source=rss", time: "2026-05-21T21:02:16Z" },
       { title: "The Gulf Cooperation Council is shooting itself in the foot", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-the-gulf-cooperation-council-is-shooting-itself-in-the-foot/", time: "2026-05-20T12:05:33Z" },
       { title: "US-Saudi civil nuclear pact nears signing without toughest safeguards urged by Democrats", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-896780", time: "2026-05-20T07:43:58Z" },
-      { title: "Iraq condemns drone attacks on Saudi Arabia amid US pressure on Iranian-backed militias", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-896706", time: "2026-05-19T16:26:32Z" },
+    ]
+  },
+  {
+    name: "Damascus", country: "Syria",
+    lat: 33.5138, lng: 36.2765,
+    category: "evacuation",
+    articles: [
+      { title: "Australia prepares for arrival of 19 women and children linked to Isis", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/australia-islamic-state-roj-camp-syria-return-b2983376.html", time: "2026-05-26T05:15:37Z" },
+      { title: "How Uyghurs from China helped Syrian rebels overthrow Bashar al-Assad", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5553312/how-uyghurs-from-china-helped-syrian-rebels-overthrow-bashar-al-assad", time: "2026-05-25T20:23:22Z" },
+      { title: "Syria holds legislative elections in former Kurdish-controlled areas", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/25/syria-holds-legislative-elections-in-former-kurdish-controlled-areas?traffic_source=rss", time: "2026-05-25T01:29:00Z" },
+      { title: "Syria holds legislative elections in Kurdish-majority northeast", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/syria-holds-legislative-elections-in-kurdish-majority-northeast", time: "2026-05-24T21:36:14Z" },
+      { title: "Last of Australian ISIS linked families leave Syrian camps", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/isis-threat/article-897147", time: "2026-05-24T16:36:42Z" },
+      { title: "Syria cannot heal without a rebuilt health system", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/5/24/syria-cannot-heal-without-a-rebuilt-health?traffic_source=rss", time: "2026-05-24T13:53:31Z" },
+      { title: "Syria pushes to gain closer ties with Western powers as it reaches meetings with G7, NATO, and WHO", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897052", time: "2026-05-23T17:21:56Z" },
+      { title: "Turkish and Syrian officials detain 10 individuals with alleged ISIL ties", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/23/turkish-and-syrian-officials-detain-10-individuals-with-alleged-isil-ties?traffic_source=rss", time: "2026-05-23T13:55:24Z" },
+      { title: "Pro-Palestinian activist Mahmoud Khalil to appeal to U.S. Supreme Court to avoid re-arrest", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-23/ty-article/mahmoud-khalil-to-appeal-to-u-s-supreme-court-to-avoid-re-arrest/0000019e-5134-d637-a99f-77bed4590000", time: "2026-05-23T03:14:48Z" },
+      { title: "Over 18,000 firms registered in Damascus, 1.5M refugees returned since sanctions lifted: US Embassy", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260522-over-18000-firms-registered-in-damascus-1-5m-refugees-returned-since-sanctions-lifted-us-embassy/", time: "2026-05-22T15:31:40Z" },
+      { title: "Druze leader Hikmat al-Hijri reiterates calls for Syrian division and thanks Israel", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260522-druze-leader-hikmat-al-hijri-reiterates-calls-for-syrian-division-and-thanks-israel/", time: "2026-05-22T09:13:49Z" },
+      { title: "Australian women linked to ISIS leave Syrian camp - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/islamic-terrorism/article-897004", time: "2026-05-22T05:41:12Z" },
+      { title: "ISIS escalates rhetoric, seeks ‘new phase of fighting’ in Syria - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/isis-threat/article-896952", time: "2026-05-21T11:53:04Z" },
+      { title: "Syria’s Kurds confront defeat after decades of resistance - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896698", time: "2026-05-20T18:00:00Z" },
+      { title: "Syrian soldier killed, others injured in car bombing in Damascus", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-syrian-soldier-killed-others-injured-in-car-bombing-in-damascus/", time: "2026-05-19T17:28:11Z" },
     ]
   },
   {
@@ -2161,6 +2158,7 @@ const locations = [
     lat: 34.0, lng: 33.0,
     category: "strikes",
     articles: [
+      { title: "Halal food at the wedding? Hard-right Restore leader's son marries daughter of Libyan academic", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/halal-food-wedding-hard-right-restore-leaders-son-marries-daughter-libyan-academic", time: "2026-05-26T16:02:17Z" },
       { title: "Has the Flotilla finally exposed the West’s moral double standard?", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260523-has-the-flotilla-finally-exposed-the-wests-moral-double-standard/", time: "2026-05-23T12:15:21Z" },
       { title: "AOHR UK to EU and UK Gov’t: Hold  Israel accountable for its maritime piracy", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260523-aohr-uk-to-eu-and-uk-govt-hold-israel-accountable-for-its-maritime-piracy/", time: "2026-05-23T11:42:55Z" },
       { title: "Morocco launches mass deportations to block Europe migration route", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/morocco-launches-mass-deportations-block-europe-migration-route", time: "2026-05-22T09:15:56Z" },
@@ -2172,7 +2170,6 @@ const locations = [
       { title: "Indonesia must respond more forcefully to Israel’s detention of its journalists at sea", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-indonesia-must-respond-more-forcefully-to-israels-detention-of-its-journalists-at-sea/", time: "2026-05-20T09:48:26Z" },
       { title: "US imposes sanctions on aid flotilla activists, some based in Europe", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-us-imposes-sanctions-on-aid-flotilla-activists-some-based-in-europe/", time: "2026-05-20T09:13:31Z" },
       { title: "UN expert alarms over reports of Israeli fire on Gaza flotilla", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/un-expert-alarms-over-reports-israeli-fire-gaza-flotilla", time: "2026-05-20T02:58:51Z" },
-      { title: "Global Sumud Flotilla says Israeli army vessels attacking Gaza aid fleet 2nd time", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260519-global-sumud-flotilla-says-israeli-army-vessels-attacking-gaza-aid-fleet-2nd-time/", time: "2026-05-19T16:22:18Z" },
     ]
   },
   {
@@ -2236,6 +2233,20 @@ const locations = [
     ]
   },
   {
+    name: "Dubai", country: "UAE",
+    lat: 25.2048, lng: 55.2708,
+    category: "strikes",
+    articles: [
+      { title: "Rights group accuses UAE of being transit point for mercenaries on way to Sudan", source: "BBC News", url: "https://www.bbc.com/news/articles/c1422nrgm1jo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T14:37:24Z" },
+      { title: "Atrocities in Sudan backed by Colombian mercenaries trained at UAE bases, says report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/atrocities-sudan-backed-colombian-mercenaries-trained-uae-bases-report", time: "2026-05-26T14:23:05Z" },
+      { title: "Turkey liquidates nearly all US Treasuries as Iran war bites economy: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/turkey-liquidates-nearly-all-us-treasuries-iran-war-bites-economy-report", time: "2026-05-21T19:11:09Z" },
+      { title: "India’s Gulf Gamble in a Fragmenting Middle East", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-indias-gulf-gamble-in-a-fragmenting-middle-east/", time: "2026-05-20T14:43:39Z" },
+      { title: "UAE says drone that hit near its nuclear plant was launched from Iraq", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-896759", time: "2026-05-20T02:16:16Z" },
+      { title: "Situation of 'grave concern', IAEA chief says on strike near UAE nuclear plant", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iaea-chief-warns-risks-after-strike-near-uae-nuclear-plant", time: "2026-05-20T00:05:46Z" },
+      { title: "IAEA chief to brief UN Security Council on UAE nuclear plant attack", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iaea-chief-brief-un-security-council-uae-nuclear-plant-attack", time: "2026-05-19T17:48:19Z" },
+    ]
+  },
+  {
     name: "Cairo", country: "Egypt",
     lat: 30.0444, lng: 31.2357,
     category: "evacuation",
@@ -2246,19 +2257,6 @@ const locations = [
       { title: "Eagles of the Republic review – seductive thriller of corruption and compromise in post-Mubarak Egypt", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/21/eagles-of-the-republic-review-tarik-saleh", time: "2026-05-21T10:00:08Z" },
       { title: "Mohamed Salah to captain Egypt as squad announced for FIFA World Cup 2026", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/21/mohamed-salah-to-captain-egypt-as-squad-announced-for-fifa-world-cup-2026?traffic_source=rss", time: "2026-05-21T08:33:51Z" },
       { title: "Over 30 mummified cats, ancient Egyptian tombs, coffins discovered at Luxor necropolis site", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-896697", time: "2026-05-19T21:29:49Z" },
-    ]
-  },
-  {
-    name: "Dubai", country: "UAE",
-    lat: 25.2048, lng: 55.2708,
-    category: "strikes",
-    articles: [
-      { title: "Atrocities in Sudan backed by Colombian mercenaries trained at UAE bases, says report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/atrocities-sudan-backed-colombian-mercenaries-trained-uae-bases-report", time: "2026-05-26T14:23:05Z" },
-      { title: "Turkey liquidates nearly all US Treasuries as Iran war bites economy: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/turkey-liquidates-nearly-all-us-treasuries-iran-war-bites-economy-report", time: "2026-05-21T19:11:09Z" },
-      { title: "India’s Gulf Gamble in a Fragmenting Middle East", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-indias-gulf-gamble-in-a-fragmenting-middle-east/", time: "2026-05-20T14:43:39Z" },
-      { title: "UAE says drone that hit near its nuclear plant was launched from Iraq", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-896759", time: "2026-05-20T02:16:16Z" },
-      { title: "Situation of 'grave concern', IAEA chief says on strike near UAE nuclear plant", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iaea-chief-warns-risks-after-strike-near-uae-nuclear-plant", time: "2026-05-20T00:05:46Z" },
-      { title: "IAEA chief to brief UN Security Council on UAE nuclear plant attack", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iaea-chief-brief-un-security-council-uae-nuclear-plant-attack", time: "2026-05-19T17:48:19Z" },
     ]
   },
   {
@@ -2298,6 +2296,18 @@ const locations = [
     ]
   },
   {
+    name: "Beqaa Valley", country: "Lebanon",
+    lat: 33.85, lng: 35.9,
+    category: "strikes",
+    articles: [
+      { title: "Israeli strikes hit multiple towns across southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-hit-multiple-towns-across-southern-lebanon", time: "2026-05-26T16:02:39Z" },
+      { title: "Israel targets ambulance team, attacks area near Lebanon's largest dam", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-targets-ambulance-team-attack-area-near-lebanons-largest-dam", time: "2026-05-26T13:46:26Z" },
+      { title: "Israeli strike hits Kafr Sir as fighting escalates in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-hits-kafr-sir-fighting-escalates-south-lebanon", time: "2026-05-26T05:41:10Z" },
+      { title: "IDF says it attacked Hezbollah sites, as at least 5 reported killed in south Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-says-it-attacked-hezbollah-sites-as-at-least-5-reported-killed-in-south-lebanon/", time: "2026-05-23T12:44:53Z" },
+      { title: "Hezbollah fires drones at north; IDF hits underground weapons factory in Lebanon’s Beqaa", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-23-2026/", time: "2026-05-23T01:25:00Z" },
+    ]
+  },
+  {
     name: "Erbil", country: "Iraq",
     lat: 36.1901, lng: 44.0091,
     category: "strikes",
@@ -2328,17 +2338,6 @@ const locations = [
       { title: "Israel pounds Gaza, Lebanon in daily breaches of ceasefires", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260523-israel-pounds-gaza-lebanon-in-daily-breaches-of-ceasefires/", time: "2026-05-23T09:25:02Z" },
       { title: "Israeli curbs causing ‘alarming’ drop in Gaza aid deliveries, official warns", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/israeli-curbs-gaza-leading-alarming-decline-aid-entry-official-warns", time: "2026-05-20T12:08:47Z" },
       { title: "Hamas rejects Peace Council report on Gaza ceasefire implementation", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260520-hamas-rejects-peace-council-report-on-gaza-ceasefire-implementation/", time: "2026-05-20T07:30:03Z" },
-    ]
-  },
-  {
-    name: "Beqaa Valley", country: "Lebanon",
-    lat: 33.85, lng: 35.9,
-    category: "strikes",
-    articles: [
-      { title: "Israel targets ambulance team, attacks area near Lebanon's largest dam", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-targets-ambulance-team-attack-area-near-lebanons-largest-dam", time: "2026-05-26T13:46:26Z" },
-      { title: "Israeli strike hits Kafr Sir as fighting escalates in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-hits-kafr-sir-fighting-escalates-south-lebanon", time: "2026-05-26T05:41:10Z" },
-      { title: "IDF says it attacked Hezbollah sites, as at least 5 reported killed in south Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-says-it-attacked-hezbollah-sites-as-at-least-5-reported-killed-in-south-lebanon/", time: "2026-05-23T12:44:53Z" },
-      { title: "Hezbollah fires drones at north; IDF hits underground weapons factory in Lebanon’s Beqaa", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-23-2026/", time: "2026-05-23T01:25:00Z" },
     ]
   },
   {
@@ -2379,6 +2378,15 @@ const locations = [
     ]
   },
   {
+    name: "Tripoli", country: "Lebanon",
+    lat: 34.4367, lng: 35.8497,
+    category: "humanitarian",
+    articles: [
+      { title: "Haftar's forces arrest Gaza aid convoy in Libya", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/haftars-forces-arrest-gaza-aid-convoy-libya", time: "2026-05-26T15:10:51Z" },
+      { title: "Egypt, Algeria, Tunisia call for presidential, parliamentary elections in Libya", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260521-egypt-algeria-tunisia-call-for-presidential-parliamentary-elections-in-libya/", time: "2026-05-21T17:08:33Z" },
+    ]
+  },
+  {
     name: "Bab el-Mandeb", country: "Yemen",
     lat: 12.5833, lng: 43.3333,
     category: "energy",
@@ -2408,14 +2416,6 @@ const locations = [
     category: "energy",
     articles: [
       { title: "Israel needs a Suez alternative, the Ben-Gurion Canal offers one - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896624", time: "2026-05-20T16:00:00Z" },
-    ]
-  },
-  {
-    name: "Tripoli", country: "Lebanon",
-    lat: 34.4367, lng: 35.8497,
-    category: "humanitarian",
-    articles: [
-      { title: "Egypt, Algeria, Tunisia call for presidential, parliamentary elections in Libya", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260521-egypt-algeria-tunisia-call-for-presidential-parliamentary-elections-in-libya/", time: "2026-05-21T17:08:33Z" },
     ]
   },
   {
