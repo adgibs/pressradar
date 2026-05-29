@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:18 UTC, 29 May 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:00 UTC, 29 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">29 May 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "Mike Johnson faces brutal June as deadlines come due", source: "Axios", url: "https://www.axios.com/2026/05/29/mike-johnson-house-republicans", time: "2026-05-29T18:22:00Z" },
       { title: "With a stalemate in Ukraine and discontent at home, Putin seems ready to escalate his war", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/with-a-stalemate-in-ukraine-and-discontent-at-home-putin-seems-ready-to-escalate-his-war", time: "2026-05-29T17:14:15Z" },
       { title: "Putin adviser warns EU after drone hits Romania: ‘The peaceful sleep is over’", source: "The Hill", url: "https://thehill.com/policy/international/5901241-dmitry-medvedev-eu-russia-drone-attack/", time: "2026-05-29T15:58:45Z" },
       { title: "After Orban’s Defeat, Hungary Is Poised to Get Billions From E.U.", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/europe/eu-hungary-funds.html", time: "2026-05-29T15:45:46Z" },
@@ -129,6 +130,7 @@ const locations = [
       { title: "After a brutal winter, Ukraine’s drones are breaking Russian defenses", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/05/29/after-brutal-winter-ukraines-drones-are-breaking-russian-defenses/", time: "2026-05-29T09:00:00Z" },
       { title: "Ukraine secures deal for 20 new fighter jets partly built in UK", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-gripen-fighter-jets-uk-sweden-b2985756.html", time: "2026-05-29T08:07:51Z" },
       { title: "European Commission has no plans for sanctions on Limerick’s Aughinish Alumina plant", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/29/european-commission-has-no-plans-for-sanctions-on-limericks-aughinish-alumina-plant/", time: "2026-05-29T08:02:36Z" },
+      { title: "EU sanctions on Russian-owned Aughinish Alumina would be ‘self-defeating, says Taoiseach", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/29/eu-sanctions-on-russian-owned-aughinish-alumina-would-be-self-defeating-says-taoiseach/", time: "2026-05-29T08:02:36Z" },
       { title: "DR Congo steps up Ebola response as cases rise and EU aid arrives", source: "Euronews", url: "http://www.euronews.com/video/2026/05/29/dr-congo-steps-up-ebola-response-as-cases-rise-and-eu-aid-arrives", time: "2026-05-29T07:54:08Z" },
       { title: "Live: EU's Kallas says Russia cannot be allowed to breach bloc's airspace after drone hit Romania", source: "France 24", url: "https://www.france24.com/en/europe/20260529-live-nato-condemns-russia-s-recklessness-after-drone-hit-apartment-building-in-romania", time: "2026-05-29T05:42:42Z" },
       { title: "Becerra leads governor's race, with Hilton and Steyer in tight contest for second spot, poll finds", source: "LA Times", url: "https://www.latimes.com/california/story/2026-05-28/becerra-leads-governors-race-hilton-steyer-in-tight-contest-for-second-spot", time: "2026-05-29T04:19:57Z" },
@@ -316,7 +318,6 @@ const locations = [
       { title: "Shooting Stars at the amfAR Cannes Gala", source: "New York Times", url: "https://www.nytimes.com/2026/05/23/movies/amfar-cannes-gala-photographs.html", time: "2026-05-23T09:02:14Z" },
       { title: "French stars are rightly worried by billionaire Vincent Bolloré. Here’s how to rein him in", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/may/23/french-stars-are-rightly-worried-by-billionaire-vincent-bollore-heres-how-to-rein-him-in", time: "2026-05-23T04:00:18Z" },
       { title: "Race for French presidency sees ex-PM Philippe as early favourite to beat populists", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g0410gnv5o?at_medium=RSS&at_campaign=rss", time: "2026-05-22T23:07:55Z" },
-      { title: "The Birthday Party review – grimly compulsive unhappy occasion in deepest France", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/22/the-birthday-party-review-grimly-compulsive-unhappy-occasion-in-deepest-france", time: "2026-05-22T18:34:06Z" },
     ]
   },
   {
@@ -448,36 +449,6 @@ const locations = [
       { title: "Newly-qualified doctors could have college fees paid in bid to stem numbers moving abroad", source: "Irish Times", url: "https://www.irishtimes.com/ireland/education/2026/05/23/graduate-medical-student-fees-could-be-cut-in-return-for-hse-commitment-period/", time: "2026-05-23T05:00:01Z" },
       { title: "Irish aid flotilla detainees due to fly home on Saturday as Israel denies claims of sexual assaults", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/22/irish-aid-flotilla-detainees-due-to-fly-home-on-saturday-after-being-deported-to-turkey/", time: "2026-05-22T20:26:34Z" },
       { title: "This is Also a Love Story by Sally Hayden details ‘extraordinary people’ in ‘unthinkable situations’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/22/book-on-love-in-times-of-crisis-details-extraordinary-people-in-unthinkable-situations/", time: "2026-05-22T19:45:11Z" },
-      { title: "Ireland’s population grew by 1.6% last year, EU figures show", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/22/irelands-population-grew-by-16-last-year-eu-figures-show/", time: "2026-05-22T17:35:50Z" },
-    ]
-  },
-  {
-    name: "Rome", country: "Italy",
-    lat: 41.9028, lng: 12.4964,
-    category: "political",
-    articles: [
-      { title: "Canadian man admits sending ‘suicide packets’ to hundreds of people around world", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/29/canada-kenneth-law-suicide-packets-hundreds-of-people-around-world", time: "2026-05-29T16:46:42Z" },
-      { title: "Italy restores lucky testicles on bull mosaic worn down by tourists", source: "BBC News", url: "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss", time: "2026-05-29T02:01:44Z" },
-      { title: "Italian Police Uncover Dead Mob Boss’s $230 Million Business Empire", source: "New York Times", url: "https://www.nytimes.com/2026/05/28/world/europe/messina-denaro-mafia-assets.html", time: "2026-05-29T00:23:56Z" },
-      { title: "Italy on red alert as France, Portugal beat May record", source: "RTE News", url: "https://www.rte.ie/news/europe/2026/0528/1575774-europe-hot-weather/", time: "2026-05-28T17:12:04Z" },
-      { title: "Italy busts money-laundering ring tied to mafia boss", source: "RTE News", url: "https://www.rte.ie/news/europe/2026/0528/1575750-italy-mafia-raids/", time: "2026-05-28T15:22:52Z" },
-      { title: "Villas, cars and cash: Italy seizes dead Mafia mobster's millions", source: "BBC News", url: "https://www.bbc.com/news/articles/ceqpd4gqgveo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T14:47:05Z" },
-      { title: "Jewish LGBT+ group banned from Rome Pride parade over stance on war in Gaza", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/rome-pride-jewish-ban-israel-b2985224.html", time: "2026-05-28T12:44:34Z" },
-      { title: "Italian police seize £173m worth of gold and luxury villas tied to Sicilian Mafia boss", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italian-police-sicilian-mafia-matteo-messina-denaro-b2985215.html", time: "2026-05-28T12:39:08Z" },
-      { title: "Why is Ferrari facing such a backlash to its first electric car?", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/27/why-ferrari-backlash-electric-car-luce", time: "2026-05-27T17:16:30Z" },
-      { title: "Hotels can refuse tourists tap water, Italy's top court rules", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g4yd8q0j7o?at_medium=RSS&at_campaign=rss", time: "2026-05-27T02:52:49Z" },
-      { title: "Italy’s top court rules against tourist refused tap water in Dolomites hotel", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/italy-court-tourist-tap-water-dolomites-hotel", time: "2026-05-26T15:36:25Z" },
-      { title: "Ferrari presents Luce, its first-ever electric car, in a tough market", source: "France 24", url: "https://www.france24.com/en/ferrari-presents-luce-its-first-ever-electric-car-in-a-tough-market", time: "2026-05-26T14:23:09Z" },
-      { title: "Pope Leo’s first encyclical tackles artificial intelligence", source: "France 24", url: "https://www.france24.com/en/pope-leo-s-first-encyclical-tackles-artificial-intelligence", time: "2026-05-25T14:54:46Z" },
-      { title: "Rare Rubens notebook sheet goes on display in artist’s home city of Antwerp", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/rare-rubens-notebook-sheet-goes-on-display-in-artists-home-city-of-antwerp", time: "2026-05-25T10:00:24Z" },
-      { title: "Inside the Shelbourne Hotel: If this hotel is a barometer, the Irish economy ‘is good’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/25/shelbourne-hotel-gm-i-dont-think-ai-is-going-to-impact-the-chef-too-much/", time: "2026-05-25T04:55:00Z" },
-      { title: "For Carlo Petrini, the Point of ‘Slow Food’ Wasn’t the Food. It Was Us.", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/dining/carlo-petrini-slow-food.html", time: "2026-05-24T17:52:58Z" },
-      { title: "Tour groups, temporary routes and toilets: the reshaping of Rome – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/24/rome-reshaping-reorganisation-photo-essay", time: "2026-05-24T06:00:48Z" },
-      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
-      { title: "Pope meets families who lost children to toxic waste in Italy’s ‘Land of Fires’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/23/pope-families-children-toxic-waste-italy-land-of-fires-cancer-naples", time: "2026-05-23T10:11:13Z" },
-      { title: "Pope Leo blasts ‘dizzying profits’ behind Italy’s toxic waste pollution and health crisis", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pope-leo-italy-waste-pollution-b2982419.html", time: "2026-05-23T09:48:12Z" },
-      { title: "First pictures of Maldives deep-sea cave where Italian divers died", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pictures-maldives-cave-italian-divers-died-b2982193.html", time: "2026-05-22T20:15:38Z" },
-      { title: "Tulsi Gabbard resigns as director of national intelligence", source: "Axios", url: "https://www.axios.com/2026/05/22/tulsi-gabbard-removed-trump-administration", time: "2026-05-22T18:12:57Z" },
     ]
   },
   {
@@ -510,10 +481,39 @@ const locations = [
     ]
   },
   {
+    name: "Rome", country: "Italy",
+    lat: 41.9028, lng: 12.4964,
+    category: "political",
+    articles: [
+      { title: "Canadian man admits sending ‘suicide packets’ to hundreds of people around world", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/29/canada-kenneth-law-suicide-packets-hundreds-of-people-around-world", time: "2026-05-29T16:46:42Z" },
+      { title: "Italy restores lucky testicles on bull mosaic worn down by tourists", source: "BBC News", url: "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss", time: "2026-05-29T02:01:44Z" },
+      { title: "Italian Police Uncover Dead Mob Boss’s $230 Million Business Empire", source: "New York Times", url: "https://www.nytimes.com/2026/05/28/world/europe/messina-denaro-mafia-assets.html", time: "2026-05-29T00:23:56Z" },
+      { title: "Italy on red alert as France, Portugal beat May record", source: "RTE News", url: "https://www.rte.ie/news/europe/2026/0528/1575774-europe-hot-weather/", time: "2026-05-28T17:12:04Z" },
+      { title: "Italy busts money-laundering ring tied to mafia boss", source: "RTE News", url: "https://www.rte.ie/news/europe/2026/0528/1575750-italy-mafia-raids/", time: "2026-05-28T15:22:52Z" },
+      { title: "Villas, cars and cash: Italy seizes dead Mafia mobster's millions", source: "BBC News", url: "https://www.bbc.com/news/articles/ceqpd4gqgveo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T14:47:05Z" },
+      { title: "Jewish LGBT+ group banned from Rome Pride parade over stance on war in Gaza", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/rome-pride-jewish-ban-israel-b2985224.html", time: "2026-05-28T12:44:34Z" },
+      { title: "Italian police seize £173m worth of gold and luxury villas tied to Sicilian Mafia boss", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/italian-police-sicilian-mafia-matteo-messina-denaro-b2985215.html", time: "2026-05-28T12:39:08Z" },
+      { title: "Why is Ferrari facing such a backlash to its first electric car?", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/27/why-ferrari-backlash-electric-car-luce", time: "2026-05-27T17:16:30Z" },
+      { title: "Hotels can refuse tourists tap water, Italy's top court rules", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g4yd8q0j7o?at_medium=RSS&at_campaign=rss", time: "2026-05-27T02:52:49Z" },
+      { title: "Italy’s top court rules against tourist refused tap water in Dolomites hotel", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/italy-court-tourist-tap-water-dolomites-hotel", time: "2026-05-26T15:36:25Z" },
+      { title: "Ferrari presents Luce, its first-ever electric car, in a tough market", source: "France 24", url: "https://www.france24.com/en/ferrari-presents-luce-its-first-ever-electric-car-in-a-tough-market", time: "2026-05-26T14:23:09Z" },
+      { title: "Pope Leo’s first encyclical tackles artificial intelligence", source: "France 24", url: "https://www.france24.com/en/pope-leo-s-first-encyclical-tackles-artificial-intelligence", time: "2026-05-25T14:54:46Z" },
+      { title: "Rare Rubens notebook sheet goes on display in artist’s home city of Antwerp", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/rare-rubens-notebook-sheet-goes-on-display-in-artists-home-city-of-antwerp", time: "2026-05-25T10:00:24Z" },
+      { title: "Inside the Shelbourne Hotel: If this hotel is a barometer, the Irish economy ‘is good’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/25/shelbourne-hotel-gm-i-dont-think-ai-is-going-to-impact-the-chef-too-much/", time: "2026-05-25T04:55:00Z" },
+      { title: "For Carlo Petrini, the Point of ‘Slow Food’ Wasn’t the Food. It Was Us.", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/dining/carlo-petrini-slow-food.html", time: "2026-05-24T17:52:58Z" },
+      { title: "Tour groups, temporary routes and toilets: the reshaping of Rome – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/24/rome-reshaping-reorganisation-photo-essay", time: "2026-05-24T06:00:48Z" },
+      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
+      { title: "Pope meets families who lost children to toxic waste in Italy’s ‘Land of Fires’", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/23/pope-families-children-toxic-waste-italy-land-of-fires-cancer-naples", time: "2026-05-23T10:11:13Z" },
+      { title: "Pope Leo blasts ‘dizzying profits’ behind Italy’s toxic waste pollution and health crisis", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pope-leo-italy-waste-pollution-b2982419.html", time: "2026-05-23T09:48:12Z" },
+      { title: "First pictures of Maldives deep-sea cave where Italian divers died", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pictures-maldives-cave-italian-divers-died-b2982193.html", time: "2026-05-22T20:15:38Z" },
+    ]
+  },
+  {
     name: "Bucharest", country: "Romania",
     lat: 44.4268, lng: 26.1025,
     category: "security",
     articles: [
+      { title: "'We need Operation Eastern Sentry': NATO's eastern flank 'facing Russian threat every week'", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260529-we-need-operation-eastern-sentry-nato-s-eastern-flank-facing-russian-threat-every-week", time: "2026-05-29T18:40:43Z" },
       { title: "Could Nato be dragged into Russia-Ukraine war? – The Latest", source: "The Guardian", url: "https://www.theguardian.com/news/video/2026/may/29/could-nato-be-dragged-into-russia-ukraine-war-the-latest", time: "2026-05-29T16:59:37Z" },
       { title: "Putin pushes Nato to the brink with drone attack in Romania", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/russia-romania-drone-attack-nato-putin-b2985892.html", time: "2026-05-29T16:45:31Z" },
       { title: "Russian drone targeting Ukraine crashes into Romanian apartment building", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-drone-targeting-ukraine-crashes-into-romanian-apartment-building", time: "2026-05-29T13:23:43Z" },
