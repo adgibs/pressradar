@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:31 UTC, 30 May 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:35 UTC, 30 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">30 May 2026</div>
@@ -147,7 +147,9 @@ const locations = [
       { title: "Muslim activist to lead first-ever Muslim delegation in NYC Israel Parade despite threats", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897798", time: "2026-05-30T20:14:56Z" },
       { title: "Israel's government is too big, too costly, and holding back the Start-Up Nation - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897595", time: "2026-05-30T20:01:12Z" },
       { title: "WATCH: People run for shelter as Hezbollah rocket barrage hits water near Nahariya beach", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897797", time: "2026-05-30T19:30:34Z" },
+      { title: "Anti-government protests held across Israel, about 1,000 rally in Tel Aviv", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-30/ty-article/.premium/anti-government-protests-held-across-israel-about-1-000-rally-in-tel-aviv/0000019e-7a17-d23b-a9de-fa7f645c0000", time: "2026-05-30T19:04:53Z" },
       { title: "Government designates eight new forests as natural reserves along northern border", source: "Jerusalem Post", url: "https://www.jpost.com/environment-and-climate-change/article-897795", time: "2026-05-30T18:53:59Z" },
+      { title: "‘A jungle’: Reservists speak of permissive open-fire rules along Gaza’s Yellow Line", source: "Times of Israel", url: "https://www.timesofisrael.com/a-jungle-reservists-speak-of-permissive-open-fire-rules-along-gazas-yellow-line/", time: "2026-05-30T18:49:54Z" },
       { title: "Head of Anne Frank Educational Center questions Yad Vashem's Germany expansion, drawing backlash", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897794", time: "2026-05-30T18:04:56Z" },
       { title: "The battle for the truth: Israeli public diplomacy is at a critical test - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897428", time: "2026-05-30T17:53:25Z" },
       { title: "TAU enrolls approx. 100 injured IDF veterans under new framework without psychometric exam", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897793", time: "2026-05-30T17:07:52Z" },
@@ -176,10 +178,12 @@ const locations = [
       { title: "IDF strikes in Lebanon kill 16, wound 34 in past 24 hours, Lebanese Health Ministry says", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article-live/iranian-report-american-zionist-drone-shot-down-near-irans-qeshm-island/0000019e-76fd-dc9e-adfe-feffff140000", time: "2026-05-30T03:48:24Z" },
       { title: "Jewish group files cease and desist order against Park Slope Food Coop for its Israel boycott", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-30/ty-article/jewish-group-files-stop-order-over-brooklyn-food-co-op-israel-boycott/0000019e-7680-d84e-a3be-f7b9048e0000", time: "2026-05-30T01:55:06Z" },
       { title: "Israel police issue over 4,000 tickets in crackdown on dangerous, distracted driving", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897770", time: "2026-05-30T00:45:08Z" },
+      { title: "WhatsApp messages undermine alibi of Netanyahu's pick for Mossad chief", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article/.premium/whatsapp-messages-undermine-alibi-of-netanyahus-pick-for-mossad-chief/0000019e-72af-dcbe-afbe-f3bf6ab10000", time: "2026-05-29T23:53:34Z" },
       { title: "What to watch in Israel this week: ‘Etty’ disappoints, ‘Euphoria’ stars move on", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-897693", time: "2026-05-29T23:46:55Z" },
       { title: "'Unique weapons, electronic warfare': Katz presents winners of Israel's 2026 Security Award", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897768", time: "2026-05-29T21:28:40Z" },
       { title: "Irish fans disrupt national soccer team’s game to protest planned matches against Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/irish-fans-disrupt-national-soccer-teams-game-to-protest-planned-matches-against-israel/", time: "2026-05-29T21:19:57Z" },
       { title: "Israel making 'every possible mistake' in Lebanon, Tel Aviv University vice-rector says", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897767", time: "2026-05-29T20:54:30Z" },
+      { title: "Zionism's opponents favor an egalitarian state, not Israel's hate, exclusion and violence", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-29/ty-article-opinion/.premium/zionisms-opponents-favor-an-egalitarian-state-not-hate-exclusion-and-violence/0000019e-73d8-dc57-a7be-fff9ff690000", time: "2026-05-29T20:06:22Z" },
       { title: "The US-Israel alliance reached a military peak, but its political future is under threat - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-897441", time: "2026-05-29T20:05:13Z" },
       { title: "Netanyahu says Israeli forces have crossed Lebanon’s Litani River", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/netanyahu-says-israeli-forces-have-crossed-lebanons-litani-river?traffic_source=rss", time: "2026-05-29T19:48:05Z" },
       { title: "U.N. Adds Israeli and Russian Forces to Sexual Violence List", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/middleeast/israel-russia-un-sexual-violence.html", time: "2026-05-29T19:46:27Z" },
@@ -640,10 +644,6 @@ const locations = [
       { title: "Liberman slams emerging Iran deal, accuses Netanyahu of failing to win war ‘on any front’", source: "Times of Israel", url: "https://www.timesofisrael.com/liberman-slams-emerging-iran-deal-accuses-netanyahu-of-failing-to-win-war-on-any-front/", time: "2026-05-23T20:02:07Z" },
       { title: "Couple found shot dead in car near central Israel, murder-suicide suspicion grows", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897056", time: "2026-05-23T20:00:26Z" },
       { title: "Soldier killed in northern Israel by Hezbollah drone from Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/soldier-killed-in-northern-israel-by-hezbollah-drone-from-lebanon/", time: "2026-05-23T19:42:55Z" },
-      { title: "Nefesh B’Nefesh to receive award at JPost NY Conference", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-897055", time: "2026-05-23T19:26:54Z" },
-      { title: "Anti-government protests held across Israel; 2,000 rally nationwide", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-23/ty-article/.premium/anti-government-protests-held-across-israel-2-000-rally-nationwide/0000019e-561d-d48d-a5be-fedf68c50000", time: "2026-05-23T19:13:13Z" },
-      { title: "France Bans Israeli Minister Over Treatment of Detained Flotilla Activists", source: "New York Times", url: "https://www.nytimes.com/2026/05/23/world/middleeast/ben-gvir-travel-ban-france.html", time: "2026-05-23T18:54:49Z" },
-      { title: "Israeli military says soldier killed near Lebanon border", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-military-says-soldier-killed-near-lebanon-border", time: "2026-05-23T18:35:12Z" },
     ]
   },
   {
@@ -652,6 +652,7 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "US weighing accelerated troop drawdown in Europe - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897800", time: "2026-05-30T20:56:33Z" },
+      { title: "U.S. says it stopped a merchant ship trying to breach blockade and reach Iran", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-says-it-stopped-a-merchant-ship-trying-to-breach-blockade-and-reach-iran", time: "2026-05-30T18:34:02Z" },
       { title: "US says it disabled vessel attempting to reach Iranian port", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-it-disabled-vessel-attempting-reach-iranian-port", time: "2026-05-30T18:19:02Z" },
       { title: "Israeli-US war on Iran costs American consumers nearly $60bn", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-israeli-war-iran-costs-american-consumers-nearly-60bn", time: "2026-05-30T17:15:04Z" },
       { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
@@ -1127,10 +1128,6 @@ const locations = [
       { title: "US, Iran signal deal could be near as Trump says he’s ’50/50′ on agreement or strikes", source: "Times of Israel", url: "https://www.timesofisrael.com/us-iran-signal-deal-could-be-near-as-trump-says-hes-50-50-on-agreement-or-strikes/", time: "2026-05-23T20:46:48Z" },
       { title: "Israel believes Iran is misleading U.S., nuclear agreement unlikely, sources say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-23/ty-article/.premium/israel-believes-iran-is-misleading-u-s-nuclear-agreement-unlikely-sources-say/0000019e-5634-d637-a99f-76be9ae70000", time: "2026-05-23T20:03:52Z" },
       { title: "Iran ambassador hopes ‘positive stride taking shape’ in Iran-US deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-ambassador-hopes-positive-stride-taking-shape-iran-us-deal", time: "2026-05-23T19:56:09Z" },
-      { title: "Araghchi, Trump hold calls with regional leaders", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/araghchi-trump-hold-calls-regional-leaders", time: "2026-05-23T19:28:54Z" },
-      { title: "'Significant movement here in Washington': US and Iran report progress towards deal on ending war", source: "France 24", url: "https://www.france24.com/en/significant-movement-here-in-washington-us-and-iran-report-progress-towards-deal-on-ending-war", time: "2026-05-23T19:27:43Z" },
-      { title: "Iran move World Cup base from US to Mexico with FIFA approval", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/23/iran-move-world-cup-base-from-us-to-mexico-with-fifa-approval?traffic_source=rss", time: "2026-05-23T19:18:02Z" },
-      { title: "Pakistan army chief visits Tehran to push for end to US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/pakistan-army-chief-visits-tehran-to-push-for-end-to-us-israeli-war-on-iran-2?traffic_source=rss", time: "2026-05-23T18:37:37Z" },
     ]
   },
   {
@@ -1138,6 +1135,10 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Second youth charged for shooting at Toronto area synagogues", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-897802", time: "2026-05-30T21:49:21Z" },
+      { title: "Israel's solution to the Gaza problem is well underway", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-30/ty-article/.premium/israels-solution-to-the-gaza-problem-is-well-underway/0000019e-79d5-d12e-afdf-ffff5b890000", time: "2026-05-30T19:12:54Z" },
+      { title: "Israel says it will sever all ties to UN's Guterres after inclusion in sexual violence report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-says-it-will-sever-all-ties-uns-guterres-after-inclusion-sexual", time: "2026-05-30T19:03:36Z" },
+      { title: "‘It was a jungle’: Israeli troops describe confusion near Gaza after ceasefire", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/israel-ceasefire-gaza-yellow-line-b2986524.html", time: "2026-05-30T18:49:07Z" },
       { title: "Palestinian doctor killed, three people injured in Israeli attack on Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/palestinian-doctor-killed-three-people-injured-in-israeli-attack-on-gaza?traffic_source=rss", time: "2026-05-30T17:04:03Z" },
       { title: "Community security: Nir Oz volunteers train to defend Israel's frontlines after Oct. 7", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897455", time: "2026-05-30T17:02:53Z" },
       { title: "Hamas warns of ‘dangerous escalation’ after PM orders army to seize more Gaza land", source: "Times of Israel", url: "https://www.timesofisrael.com/hamas-warns-of-dangerous-escalation-after-pm-orders-army-to-seize-more-gaza-land/", time: "2026-05-30T14:30:58Z" },
@@ -1385,7 +1386,6 @@ const locations = [
       { title: "Spanish police beat and detain Gaza flotilla activists amid clashes at airport", source: "Times of Israel", url: "https://www.timesofisrael.com/spanish-police-beat-and-detain-gaza-flotilla-activists-amid-clashes-at-airport/", time: "2026-05-23T21:09:17Z" },
       { title: "Amnesty condemns Basque police 'excessive use of force' towards Gaza flotilla activists", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/amnesty-condemns-basque-police-excessive-use-force-towards-gaza-flotilla", time: "2026-05-23T20:38:22Z" },
       { title: "Spanish police filmed beating Gaza flotilla activists as Israel jabs back at Madrid", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897058", time: "2026-05-23T20:37:17Z" },
-      { title: "Police beat and detain Gaza flotilla activists at airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/police-beat-and-detain-gaza-flotilla-activists-at-airport?traffic_source=rss", time: "2026-05-23T18:30:42Z" },
     ]
   },
   {
@@ -1393,6 +1393,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Qatar says temporary charges ‘negotiable’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/qatar-says-temporary-charges-negotiable?traffic_source=rss", time: "2026-05-30T18:42:26Z" },
       { title: "Pentagon chief says talks with Iran 'productive,' threatens renewed strikes", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-30/ty-article/.premium/pentagon-chief-says-talks-with-iran-productive-threatens-renewed-strikes/0000019e-7959-d618-a9be-7dffeec50000", time: "2026-05-30T17:18:27Z" },
       { title: "UAE joined US-Israeli war against Iran from the outset: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-joined-us-israeli-war-against-iran-outset-report", time: "2026-05-30T16:25:40Z" },
       { title: "Iran’s parliament set to vote on Hormuz Strait management bill", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-irans-parliament-set-to-vote-on-hormuz-strait-management-bill/", time: "2026-05-30T16:02:23Z" },
@@ -2025,7 +2026,6 @@ const locations = [
       { title: "Ukraine-Russia war latest: Zelensky says Putin planning strike with high-speed Oreshnik missile", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-nuclear-weapon-b2981625.html", time: "2026-05-23T21:24:37Z" },
       { title: "Hegseth rants about ‘woke military’ and ‘political correctness’ during fiery West Point graduation speech", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-west-point-graduation-speech-b2982557.html", time: "2026-05-23T19:46:51Z" },
       { title: "Hegseth rants about ‘woke military’ and ‘political correctness’ during fiery West Point graduation speech", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-west-point-graduation-speech-b2982557.html", time: "2026-05-23T19:46:51Z" },
-      { title: "Gunmen open fire in 2 separate attacks in Honduras, killing at least 25", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/gunmen-open-fire-in-2-separate-attacks-in-honduras-killing-at-least-25", time: "2026-05-23T18:54:30Z" },
     ]
   },
   {
@@ -2326,7 +2326,6 @@ const locations = [
       { title: "PM Shehbaz congratulates Trump on 'extraordinary efforts to pursue peace' after phone call with multiple country leaders", source: "Dawn", url: "https://www.dawn.com/news/2002720/pm-shehbaz-congratulates-trump-on-extraordinary-efforts-to-pursue-peace-after-phone-call-with-multiple-country-leaders", time: "2026-05-24T03:03:29Z" },
       { title: "SC upholds consecutive life terms in multiple murder cases", source: "Dawn", url: "https://www.dawn.com/news/2002649/sc-upholds-consecutive-life-terms-in-multiple-murder-cases", time: "2026-05-24T02:53:00Z" },
       { title: "Iran-Israel war LIVE: Pakistan hopes to host new round of Iran-U.S. talks 'very soon'", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-israel-us-war-live-updates-24-may-2026-trump-peace-deal-pakistan/article71016796.ece", time: "2026-05-24T02:11:00Z" },
-      { title: "Pakistan army chief visits Tehran to push for end to US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/pakistan-army-chief-visits-tehran-to-push-for-end-to-us-israeli-war-on-iran-2?traffic_source=rss", time: "2026-05-23T18:37:37Z" },
     ]
   },
   {
@@ -2564,6 +2563,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Mexico’s week in review: Mexico heads into the World Cup with homicides down by half", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/week-in-review-may-25-homicides-world-cup/", time: "2026-05-30T19:03:51Z" },
       { title: "MND Tutor | Huelga", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-intelligence/mnd-tutor-huelga/", time: "2026-05-30T14:27:12Z" },
       { title: "Productivity brings prosperity: Is Mexico really failing at both? A perspective from our CEO", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/productivity-prosperity-mexico-ceo-perspective/", time: "2026-05-30T13:00:33Z" },
       { title: "Everything you need to know if you’re heading to the World Cup in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/the-complete-world-cup-fan-guide-for-mexico/", time: "2026-05-30T11:23:55Z" },
@@ -2665,7 +2665,6 @@ const locations = [
       { title: "Iran moving World Cup training base from U.S. to Mexico", source: "CBS News", url: "https://www.cbsnews.com/news/iran-moving-world-cup-training-base-from-us-to-mexico/", time: "2026-05-24T03:40:12Z" },
       { title: "Iran's soccer federation says its World Cup base camp has been moved to Mexico from the United States", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/irans-soccer-federation-says-its-world-cup-base-camp-has-been-moved-to-mexico-from-the-united-states", time: "2026-05-23T22:47:41Z" },
       { title: "Iran moves camp from Arizona to Mexico, clearing path to play in World Cup", source: "LA Times", url: "https://www.latimes.com/sports/soccer/story/2026-05-23/iran-moves-world-cup-camp-u-s-to-mexico-clearing-path-to-play", time: "2026-05-23T22:46:07Z" },
-      { title: "Iran move World Cup base from US to Mexico with FIFA approval", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/23/iran-move-world-cup-base-from-us-to-mexico-with-fifa-approval?traffic_source=rss", time: "2026-05-23T19:18:02Z" },
     ]
   },
   {
@@ -2774,6 +2773,7 @@ const locations = [
     lat: 55.7558, lng: 37.6173,
     category: "conflict",
     articles: [
+      { title: "Putin's quest to avoid the grim reaper: what’s behind the 26 dollar longevity programme?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260530-putin-s-quest-to-avoid-the-grim-reaper-what-s-behind-the-26-dollar-longevity-programme", time: "2026-05-30T19:28:46Z" },
       { title: "Tearful Oliynykova demands Shnaider face sanctions for ‘supporting war’", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/may/30/tearful-oliynykova-demands-shnaider-face-sanctions-for-supporting-war", time: "2026-05-30T15:53:42Z" },
       { title: "Scoop: First Windows PCs powered by Nvidia chips to debut next week", source: "Axios", url: "https://www.axios.com/2026/05/30/nvidia-microsoft-pcs-ai-surface-dell", time: "2026-05-30T12:00:07Z" },
       { title: "Ukraine hits oil tanker and depot in southern Russia", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0530/1576029-ukraine-russia-conflict/", time: "2026-05-30T10:19:23Z" },
@@ -2958,6 +2958,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "conflict",
     articles: [
+      { title: "Netanyahu's actions eroding bipartisan US support for Israel, J Street policy chief tells 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897700", time: "2026-05-30T21:56:49Z" },
       { title: "Start-Up Ethiopia: Addis Ababa takes a page from Israel's innovation playbook", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/all-news/article-897697", time: "2026-05-30T15:59:23Z" },
       { title: "AI tools can help reduce anxiety and depression symptoms, Israeli study finds", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/mind-and-spirit/article-897659", time: "2026-05-30T07:41:50Z" },
       { title: "Mutra becomes first kosher restaurant to earn Michelin star", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897772", time: "2026-05-30T02:22:53Z" },
@@ -3037,7 +3038,6 @@ const locations = [
       { title: "18 countries condemn Somaliland move to open ‘embassy’ in occupied Jerusalem", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260524-18-countries-condemn-somaliland-move-to-open-embassy-in-occupied-jerusalem/", time: "2026-05-24T14:46:39Z" },
       { title: "Jerusalem Day’s violence should not erase the memory of a divided city - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896833", time: "2026-05-23T21:42:15Z" },
       { title: "Spanish police filmed beating Gaza flotilla activists as Jerusalem jabs back at Madrid", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897058", time: "2026-05-23T20:37:17Z" },
-      { title: "Israel and the Middle East are one election away from peace - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896836", time: "2026-05-23T18:57:19Z" },
     ]
   },
   {
@@ -3288,6 +3288,82 @@ const locations = [
     ]
   },
   {
+    name: "Paris", country: "France",
+    lat: 48.8566, lng: 2.3522,
+    category: "political",
+    articles: [
+      { title: "Putin's quest to avoid the grim reaper: what’s behind the 26 dollar longevity programme?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260530-putin-s-quest-to-avoid-the-grim-reaper-what-s-behind-the-26-dollar-longevity-programme", time: "2026-05-30T19:28:46Z" },
+      { title: "MSF says Ebola spreading at 'unprecedented rate'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0530/1576058-who-ebola-congo/", time: "2026-05-30T17:02:21Z" },
+      { title: "Champions League final LIVE! Follow the on-pitch action with Sky Sports as Arsenal face PSG", source: "Sky News", url: "https://news.sky.com/story/champions-league-final-live-follow-the-on-pitch-action-with-sky-sports-as-arsenal-face-psg-13549320", time: "2026-05-30T14:39:00Z" },
+      { title: "Romania says Russian drone targeting Ukraine crashes in apartment, killing two", source: "France 24", url: "https://www.france24.com/en/romania-says-russian-drone-targeting-ukraine-crashes-in-apartment-killing-two", time: "2026-05-30T10:20:34Z" },
+      { title: "The World Capital of French Fries Has a Problem: Too Many Potatoes", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/europe/europe-belgium-potato-surplus.html", time: "2026-05-30T09:00:14Z" },
+      { title: "The clearest sign Father Time is closing in on Djokovic?", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/clypv6819xyo?at_medium=RSS&at_campaign=rss", time: "2026-05-29T23:13:11Z" },
+      { title: "Claude Bessy, Who Ruled Paris Opera Ballet School, Dies at 93", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/arts/dance/claude-bessy-dead.html", time: "2026-05-29T20:54:49Z" },
+      { title: "Djokovic knocked out of French Open by Brazilian teenager", source: "Sky News", url: "https://news.sky.com/story/djokovic-knocked-out-of-french-open-by-brazilian-teenager-13549175", time: "2026-05-29T19:59:00Z" },
+      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/may/29/the-week-around-the-world-in-20-pictures", time: "2026-05-29T19:31:36Z" },
+      { title: "Romania hit by drone strike: Foreign Minister speaks to FRANCE 24", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260529-romania-hit-by-drone-strike-foreign-minister-speaks-to-france-24", time: "2026-05-29T19:27:39Z" },
+      { title: "The Eiffel Tower has been growing taller this week. Here’s why", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/eiffel-tower-height-summer-paris-b2986150.html", time: "2026-05-29T16:45:43Z" },
+      { title: "Europe's population reckoning: How can the EU avoid falling off a demographic cliff?", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260529-europe-s-population-reckoning-how-can-the-eu-avoid-falling-off-a-demographic-cliff", time: "2026-05-29T13:27:26Z" },
+      { title: "Former RT France chief Xenia Fedorova fuels concerns over pro-Kremlin influence in French media", source: "France 24", url: "https://www.france24.com/en/europe/20260529-former-rt-france-chief-xenia-fedorova-fuels-concerns-over-pro-kremlin-influence-in-french-media", time: "2026-05-29T10:18:55Z" },
+      { title: "A.I. Doesn’t Have to Mean Layoffs", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html", time: "2026-05-29T09:11:19Z" },
+      { title: "Inside the Democratic resistance on AI", source: "Axios", url: "https://www.axios.com/2026/05/29/inside-democratic-resistance-ai", time: "2026-05-29T09:05:04Z" },
+      { title: "France’s Far Right Has 2 Leaders. They Don’t Always Have One Voice.", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/europe/france-presidential-election-le-pen-bardella.html", time: "2026-05-29T09:01:55Z" },
+      { title: "‘It’s become something of a craze’: influencers spread news of healthy French cheese", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/29/influencers-spread-news-healthy-french-cheese-cancoillotte", time: "2026-05-29T08:35:21Z" },
+      { title: "France to investigate treatment of nationals on Gaza flotilla after reports of abuse", source: "France 24", url: "https://www.france24.com/en/europe/20260529-france-to-investigate-treatment-of-nationals-on-gaza-flotilla-after-reports-of-abuse", time: "2026-05-29T08:27:08Z" },
+      { title: "Portugal breaks hottest May day record as Europe swelters in heatwave", source: "BBC News", url: "https://www.bbc.com/news/articles/c3v2yv5207xo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T23:36:01Z" },
+      { title: "French parliament votes to repeal slavery-era Black Code", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/french-parliament-votes-to-repeal-slavery-era-black-code", time: "2026-05-28T17:36:25Z" },
+      { title: "It’s not DOGE, it’s COGE: Mamdani introduces  commission to make NYC more effective", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5899633-nyc-mayor-launches-efficiency-commission/", time: "2026-05-28T17:08:37Z" },
+      { title: "Naomi Osaka has fun with fashion at the French Open. She'll have to win again to keep playing dress-up", source: "LA Times", url: "https://www.latimes.com/sports/story/2026-05-28/naomi-osakas-french-open-fashion-statements-depend-on-wins-to-matter", time: "2026-05-28T16:35:05Z" },
+      { title: "'Unwell' Sinner slumps to shock defeat in French Open second round", source: "Sky News", url: "https://news.sky.com/story/unwell-jannik-sinner-suffers-shock-defeat-to-juan-manuel-cerundolo-in-french-open-second-round-13548784", time: "2026-05-28T15:07:00Z" },
+      { title: "France votes to end slavery-era law which classed people as property", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/france-votes-code-noir-slavery-law-colonialism", time: "2026-05-28T14:38:30Z" },
+      { title: "Hampered Sinner out in second round in seismic shock", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/c3d2yg8342xo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T14:33:47Z" },
+      { title: "Feeding the future of France: Rollout of €1 meals an attempt to help struggling students", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/feeding-the-future-of-france-rollout-of-1-meals-an-attempt-to-help-struggling-students", time: "2026-05-28T11:00:20Z" },
+      { title: "Exclusive: Trump's accelerating squeeze on Cuba", source: "Axios", url: "https://www.axios.com/2026/05/28/trump-cuba-squeeze-regime-change", time: "2026-05-28T09:20:05Z" },
+      { title: "France heat triggers illegal swimming in central Paris", source: "Euronews", url: "http://www.euronews.com/video/2026/05/28/france-heat-triggers-illegal-swimming-in-central-paris", time: "2026-05-28T07:57:51Z" },
+      { title: "Economic self-interest to drive France’s foreign aid, minister says", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/france-eu-uk-aid-cuts-trump-b2984540.html", time: "2026-05-28T07:50:09Z" },
+      { title: "Legal bid to block UK-backed French migrant detention centre", source: "BBC News", url: "https://www.bbc.com/news/articles/cdxpdqvdyz7o?at_medium=RSS&at_campaign=rss", time: "2026-05-28T06:10:33Z" },
+      { title: "Norway becomes ninth country to come under French nuclear umbrella", source: "France 24", url: "https://www.france24.com/en/europe/20260527-norway-becomes-ninth-country-to-come-under-french-nuclear-umbrella", time: "2026-05-27T20:12:09Z" },
+      { title: "Extreme heat in Europe ‘a brutal reminder’ of climate crisis, UN chief says", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/27/extreme-heat-in-europe-a-brutal-reminder-of-climate-crisis-un-chief-says", time: "2026-05-27T14:50:32Z" },
+      { title: "Thirty-five people want to be the next president of France. What could possibly go wrong?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/27/thirty-five-people-want-to-be-the-next-president-of-france-what-could-possibly-go-wrong", time: "2026-05-27T14:30:21Z" },
+      { title: "Paxton-backed French ousts incumbent in Texas Railroad Commission GOP runoff", source: "The Hill", url: "https://thehill.com/homenews/5896011-french-gop-texas-railroad-commission-runoff/", time: "2026-05-27T04:27:47Z" },
+      { title: "Temperatures soar across Europe as 'heat dome' drives May records", source: "France 24", url: "https://www.france24.com/en/europe/20260527-temperatures-soar-across-europe-as-heat-dome-drives-may-records-heatwave-france-uk-italy-spain", time: "2026-05-27T00:30:14Z" },
+      { title: "Efficient Sinner underlines status as favourite", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/ceqpp35xvr1o?at_medium=RSS&at_campaign=rss", time: "2026-05-26T21:32:45Z" },
+      { title: "Osaka sparkles in golden French Open outfit", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/cr7ppkp598zo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T18:15:04Z" },
+      { title: "Why the French Open is named after Roland Garros, who didn't play tennis", source: "NPR", url: "https://www.npr.org/2026/05/26/nx-s1-5834922/roland-garros-french-open-namesake", time: "2026-05-26T18:08:00Z" },
+      { title: "Paris School Worker Tried for Child Abuse in Widespread Assault Inquiry", source: "New York Times", url: "https://www.nytimes.com/2026/05/26/world/europe/child-abuse-trial-school-paris.html", time: "2026-05-26T16:16:08Z" },
+      { title: "'Heat dome': Heatwave conditions hit France and parts of Europe", source: "France 24", url: "https://www.france24.com/en/video/20260526-heat-dome-heatwave-conditions-hit-france-and-parts-of-europe", time: "2026-05-26T15:34:44Z" },
+      { title: "Family keeps fighting MLB team after losing out on $13,000 raffle prize that they had to claim within 6 outs", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mlb-raffle-lawsuit-milwaukee-brewers-b2983748.html", time: "2026-05-26T14:25:38Z" },
+      { title: "Kyiv braces for renewed attack, European allies condemn Moscow's call to abandon embassies", source: "France 24", url: "https://www.france24.com/en/kyiv-braces-for-renewed-attack-european-allies-condemn-moscow-s-call-to-abandon-embassies", time: "2026-05-26T13:44:14Z" },
+      { title: "Europe swelters under unusually early heatwave", source: "France 24", url: "https://www.france24.com/en/europe-swelters-under-unusually-early-heatwave", time: "2026-05-26T13:38:01Z" },
+      { title: "Four dead after train and school bus collide in Belgium", source: "France 24", url: "https://www.france24.com/en/four-dead-after-train-and-school-bus-collide-in-belgium", time: "2026-05-26T13:06:34Z" },
+      { title: "Pope Leo takes aim at AI in encyclical", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260526-pope-leo-takes-aim-at-ai-in-encyclical", time: "2026-05-26T12:42:51Z" },
+      { title: "Four people killed in Belgium in train and school bus collision", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/investigation-belgium-train-school-bus-collision-buggenhout-flanders", time: "2026-05-26T12:39:21Z" },
+      { title: "Seven dead in France after extreme heatwave sweeps across Europe", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/europe-heatwave-france-spain-uk-germany-b2983521.html", time: "2026-05-26T11:52:52Z" },
+      { title: "Early heat wave in Europe shatters records, prompts health risk warnings", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-europe-heat-wave-shatters-records/", time: "2026-05-26T11:49:27Z" },
+      { title: "Austrian paraglider unscathed after terrifying mid-air collision with plane", source: "France 24", url: "https://www.france24.com/en/tv-shows/press-review/20260526-austrian-paraglider-unscathed-after-terrifying-mid-air-collision-with-plane", time: "2026-05-26T10:52:46Z" },
+      { title: "What is a heat dome, causing excessively high temperatures in western Europe?", source: "France 24", url: "https://www.france24.com/en/what-is-a-heat-dome-causing-excessively-high-temperatures-in-western-europe", time: "2026-05-26T10:05:40Z" },
+      { title: "Behind the Curtain: Trump's irreversible choices", source: "Axios", url: "https://www.axios.com/2026/05/26/trump-choices-consequences-second-term", time: "2026-05-26T09:50:34Z" },
+      { title: "Record May heat puts France’s climate preparations to the test as heat dome swelters Europe", source: "Euronews", url: "http://www.euronews.com/2026/05/26/record-may-heat-puts-frances-climate-preparation-to-the-test-as-heat-dome-swelters-europe", time: "2026-05-26T09:40:54Z" },
+      { title: "Seven deaths in France linked to record-high temperatures", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/deaths-france-linked-record-high-temperatures", time: "2026-05-26T09:19:33Z" },
+      { title: "Seven die in heatwave-related incidents in France – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/26/europe-ukraine-russia-lithuania-eu-heatwave-hungary-magyar-france-latest-news-updates", time: "2026-05-26T08:36:28Z" },
+      { title: "Gisèle Pelicot 'deeply shocked' by decision not to jail boys in rape case", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2117685lwo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T07:18:46Z" },
+      { title: "'Heat dome' over Europe scorches UK, France and Spain", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0526/1575263-weather-europe/", time: "2026-05-26T07:12:33Z" },
+      { title: "Western Europe swelters as late May heat dome shatters records", source: "Euronews", url: "http://www.euronews.com/video/2026/05/26/western-europe-swelters-as-late-may-heat-dome-shatters-records", time: "2026-05-26T06:35:41Z" },
+      { title: "Ukraine war briefing: Russia pressures US to clear way for attacks on Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/ukraine-war-briefing-russia-pressures-us-embassy-evacuate-attacks-kyiv", time: "2026-05-26T00:53:29Z" },
+      { title: "Wave of child abuse cases shakes schools in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/c8e8gx2d7j4o?at_medium=RSS&at_campaign=rss", time: "2026-05-25T23:01:57Z" },
+      { title: "Ruud overcomes heat struggles to progress in Paris", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/cvgzz8xlj9do?at_medium=RSS&at_campaign=rss", time: "2026-05-25T22:10:16Z" },
+      { title: "Parts of Europe swelter in record May heat as deaths at amateur sports events spur warnings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/parts-of-europe-swelter-in-record-may-heat-as-deaths-at-amateur-sports-events-spur-warnings", time: "2026-05-25T17:31:28Z" },
+      { title: "Heat wave at French Open impacts the clay courts and has fans begging for water", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/heat-wave-at-french-open-impacts-the-clay-courts-and-has-fans-begging-for-water", time: "2026-05-25T17:20:47Z" },
+      { title: "Parts of Europe swelter in record May heat as deaths at amateur sports events spur warnings", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/united-kingdom-paris-europe-france-le-parisien-b2983198.html", time: "2026-05-25T15:47:25Z" },
+      { title: "Weather tracker: flash floods in New York and a heat dome in Europe", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/25/weather-tracker-flash-floods-new-york-heat-dome-europe", time: "2026-05-25T08:08:23Z" },
+      { title: "‘A bridge, not an obstacle’: is Armenia a new crossroads between east and west?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/armenia-election-crossroads-between-east-west", time: "2026-05-25T07:40:46Z" },
+      { title: "‘Massive’ child abuse scandal in France as school staff investigated for violence and sexual assault", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/massive-child-abuse-scandal-in-france-as-school-staff-investigated-for-violence-and-sexual-assault", time: "2026-05-25T05:00:18Z" },
+      { title: "Ukraine war briefing: Putin accused of ‘reckless nuclear brinkmanship’ in Oreshnik missile strike on Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/ukraine-war-news-putin-accused-reckless-nuclear-brinkmanship-oreshnik-missile-strike-kyiv", time: "2026-05-25T01:06:42Z" },
+      { title: "'We don't know what the death toll among military personnel is': Kyiv reels from Russian strikes", source: "France 24", url: "https://www.france24.com/en/we-don-t-know-what-the-death-toll-among-military-personnel-is-kyiv-reels-from-russian-strikes", time: "2026-05-24T20:07:09Z" },
+      { title: "War in Ukraine: Russia launches massive missile strike on Kyiv", source: "France 24", url: "https://www.france24.com/en/war-in-ukraine-russia-launches-massive-strike-on-kyiv", time: "2026-05-24T11:29:44Z" },
+    ]
+  },
+  {
     name: "Sahel Region", country: "West Africa",
     lat: 15.0, lng: 0.0,
     category: "conflict",
@@ -3360,81 +3436,6 @@ const locations = [
       { title: "With Ebola, we need to learn from past failures | Letters", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/24/with-ebola-we-need-to-learn-from-past-failures", time: "2026-05-24T15:38:06Z" },
       { title: "Senegal's president sacks PM: Senegalese Parliament dissolved", source: "France 24", url: "https://www.france24.com/en/senegal-s-president-sacks-pm-senegalese-parliament-dissolved", time: "2026-05-24T09:47:33Z" },
       { title: "Venezuelan opposition leader Machado says she will run again for presidency and return from exile by late 2026", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/venezuelan-opposition-leader-machado-says-she-will-run-again-for-presidency-and-return-from-exile-by-late-2026", time: "2026-05-23T22:54:58Z" },
-    ]
-  },
-  {
-    name: "Paris", country: "France",
-    lat: 48.8566, lng: 2.3522,
-    category: "political",
-    articles: [
-      { title: "MSF says Ebola spreading at 'unprecedented rate'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0530/1576058-who-ebola-congo/", time: "2026-05-30T17:02:21Z" },
-      { title: "Champions League final LIVE! Follow the on-pitch action with Sky Sports as Arsenal face PSG", source: "Sky News", url: "https://news.sky.com/story/champions-league-final-live-follow-the-on-pitch-action-with-sky-sports-as-arsenal-face-psg-13549320", time: "2026-05-30T14:39:00Z" },
-      { title: "Romania says Russian drone targeting Ukraine crashes in apartment, killing two", source: "France 24", url: "https://www.france24.com/en/romania-says-russian-drone-targeting-ukraine-crashes-in-apartment-killing-two", time: "2026-05-30T10:20:34Z" },
-      { title: "The World Capital of French Fries Has a Problem: Too Many Potatoes", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/europe/europe-belgium-potato-surplus.html", time: "2026-05-30T09:00:14Z" },
-      { title: "The clearest sign Father Time is closing in on Djokovic?", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/clypv6819xyo?at_medium=RSS&at_campaign=rss", time: "2026-05-29T23:13:11Z" },
-      { title: "Claude Bessy, Who Ruled Paris Opera Ballet School, Dies at 93", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/arts/dance/claude-bessy-dead.html", time: "2026-05-29T20:54:49Z" },
-      { title: "Djokovic knocked out of French Open by Brazilian teenager", source: "Sky News", url: "https://news.sky.com/story/djokovic-knocked-out-of-french-open-by-brazilian-teenager-13549175", time: "2026-05-29T19:59:00Z" },
-      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/may/29/the-week-around-the-world-in-20-pictures", time: "2026-05-29T19:31:36Z" },
-      { title: "Romania hit by drone strike: Foreign Minister speaks to FRANCE 24", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260529-romania-hit-by-drone-strike-foreign-minister-speaks-to-france-24", time: "2026-05-29T19:27:39Z" },
-      { title: "The Eiffel Tower has been growing taller this week. Here’s why", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/eiffel-tower-height-summer-paris-b2986150.html", time: "2026-05-29T16:45:43Z" },
-      { title: "Europe's population reckoning: How can the EU avoid falling off a demographic cliff?", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260529-europe-s-population-reckoning-how-can-the-eu-avoid-falling-off-a-demographic-cliff", time: "2026-05-29T13:27:26Z" },
-      { title: "Former RT France chief Xenia Fedorova fuels concerns over pro-Kremlin influence in French media", source: "France 24", url: "https://www.france24.com/en/europe/20260529-former-rt-france-chief-xenia-fedorova-fuels-concerns-over-pro-kremlin-influence-in-french-media", time: "2026-05-29T10:18:55Z" },
-      { title: "A.I. Doesn’t Have to Mean Layoffs", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html", time: "2026-05-29T09:11:19Z" },
-      { title: "Inside the Democratic resistance on AI", source: "Axios", url: "https://www.axios.com/2026/05/29/inside-democratic-resistance-ai", time: "2026-05-29T09:05:04Z" },
-      { title: "France’s Far Right Has 2 Leaders. They Don’t Always Have One Voice.", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/europe/france-presidential-election-le-pen-bardella.html", time: "2026-05-29T09:01:55Z" },
-      { title: "‘It’s become something of a craze’: influencers spread news of healthy French cheese", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/29/influencers-spread-news-healthy-french-cheese-cancoillotte", time: "2026-05-29T08:35:21Z" },
-      { title: "France to investigate treatment of nationals on Gaza flotilla after reports of abuse", source: "France 24", url: "https://www.france24.com/en/europe/20260529-france-to-investigate-treatment-of-nationals-on-gaza-flotilla-after-reports-of-abuse", time: "2026-05-29T08:27:08Z" },
-      { title: "Portugal breaks hottest May day record as Europe swelters in heatwave", source: "BBC News", url: "https://www.bbc.com/news/articles/c3v2yv5207xo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T23:36:01Z" },
-      { title: "French parliament votes to repeal slavery-era Black Code", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/french-parliament-votes-to-repeal-slavery-era-black-code", time: "2026-05-28T17:36:25Z" },
-      { title: "It’s not DOGE, it’s COGE: Mamdani introduces  commission to make NYC more effective", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5899633-nyc-mayor-launches-efficiency-commission/", time: "2026-05-28T17:08:37Z" },
-      { title: "Naomi Osaka has fun with fashion at the French Open. She'll have to win again to keep playing dress-up", source: "LA Times", url: "https://www.latimes.com/sports/story/2026-05-28/naomi-osakas-french-open-fashion-statements-depend-on-wins-to-matter", time: "2026-05-28T16:35:05Z" },
-      { title: "'Unwell' Sinner slumps to shock defeat in French Open second round", source: "Sky News", url: "https://news.sky.com/story/unwell-jannik-sinner-suffers-shock-defeat-to-juan-manuel-cerundolo-in-french-open-second-round-13548784", time: "2026-05-28T15:07:00Z" },
-      { title: "France votes to end slavery-era law which classed people as property", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/france-votes-code-noir-slavery-law-colonialism", time: "2026-05-28T14:38:30Z" },
-      { title: "Hampered Sinner out in second round in seismic shock", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/c3d2yg8342xo?at_medium=RSS&at_campaign=rss", time: "2026-05-28T14:33:47Z" },
-      { title: "Feeding the future of France: Rollout of €1 meals an attempt to help struggling students", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/feeding-the-future-of-france-rollout-of-1-meals-an-attempt-to-help-struggling-students", time: "2026-05-28T11:00:20Z" },
-      { title: "Exclusive: Trump's accelerating squeeze on Cuba", source: "Axios", url: "https://www.axios.com/2026/05/28/trump-cuba-squeeze-regime-change", time: "2026-05-28T09:20:05Z" },
-      { title: "France heat triggers illegal swimming in central Paris", source: "Euronews", url: "http://www.euronews.com/video/2026/05/28/france-heat-triggers-illegal-swimming-in-central-paris", time: "2026-05-28T07:57:51Z" },
-      { title: "Economic self-interest to drive France’s foreign aid, minister says", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/france-eu-uk-aid-cuts-trump-b2984540.html", time: "2026-05-28T07:50:09Z" },
-      { title: "Legal bid to block UK-backed French migrant detention centre", source: "BBC News", url: "https://www.bbc.com/news/articles/cdxpdqvdyz7o?at_medium=RSS&at_campaign=rss", time: "2026-05-28T06:10:33Z" },
-      { title: "Norway becomes ninth country to come under French nuclear umbrella", source: "France 24", url: "https://www.france24.com/en/europe/20260527-norway-becomes-ninth-country-to-come-under-french-nuclear-umbrella", time: "2026-05-27T20:12:09Z" },
-      { title: "Extreme heat in Europe ‘a brutal reminder’ of climate crisis, UN chief says", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/27/extreme-heat-in-europe-a-brutal-reminder-of-climate-crisis-un-chief-says", time: "2026-05-27T14:50:32Z" },
-      { title: "Thirty-five people want to be the next president of France. What could possibly go wrong?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/27/thirty-five-people-want-to-be-the-next-president-of-france-what-could-possibly-go-wrong", time: "2026-05-27T14:30:21Z" },
-      { title: "Paxton-backed French ousts incumbent in Texas Railroad Commission GOP runoff", source: "The Hill", url: "https://thehill.com/homenews/5896011-french-gop-texas-railroad-commission-runoff/", time: "2026-05-27T04:27:47Z" },
-      { title: "Temperatures soar across Europe as 'heat dome' drives May records", source: "France 24", url: "https://www.france24.com/en/europe/20260527-temperatures-soar-across-europe-as-heat-dome-drives-may-records-heatwave-france-uk-italy-spain", time: "2026-05-27T00:30:14Z" },
-      { title: "Efficient Sinner underlines status as favourite", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/ceqpp35xvr1o?at_medium=RSS&at_campaign=rss", time: "2026-05-26T21:32:45Z" },
-      { title: "Osaka sparkles in golden French Open outfit", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/cr7ppkp598zo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T18:15:04Z" },
-      { title: "Why the French Open is named after Roland Garros, who didn't play tennis", source: "NPR", url: "https://www.npr.org/2026/05/26/nx-s1-5834922/roland-garros-french-open-namesake", time: "2026-05-26T18:08:00Z" },
-      { title: "Paris School Worker Tried for Child Abuse in Widespread Assault Inquiry", source: "New York Times", url: "https://www.nytimes.com/2026/05/26/world/europe/child-abuse-trial-school-paris.html", time: "2026-05-26T16:16:08Z" },
-      { title: "'Heat dome': Heatwave conditions hit France and parts of Europe", source: "France 24", url: "https://www.france24.com/en/video/20260526-heat-dome-heatwave-conditions-hit-france-and-parts-of-europe", time: "2026-05-26T15:34:44Z" },
-      { title: "Family keeps fighting MLB team after losing out on $13,000 raffle prize that they had to claim within 6 outs", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mlb-raffle-lawsuit-milwaukee-brewers-b2983748.html", time: "2026-05-26T14:25:38Z" },
-      { title: "Kyiv braces for renewed attack, European allies condemn Moscow's call to abandon embassies", source: "France 24", url: "https://www.france24.com/en/kyiv-braces-for-renewed-attack-european-allies-condemn-moscow-s-call-to-abandon-embassies", time: "2026-05-26T13:44:14Z" },
-      { title: "Europe swelters under unusually early heatwave", source: "France 24", url: "https://www.france24.com/en/europe-swelters-under-unusually-early-heatwave", time: "2026-05-26T13:38:01Z" },
-      { title: "Four dead after train and school bus collide in Belgium", source: "France 24", url: "https://www.france24.com/en/four-dead-after-train-and-school-bus-collide-in-belgium", time: "2026-05-26T13:06:34Z" },
-      { title: "Pope Leo takes aim at AI in encyclical", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260526-pope-leo-takes-aim-at-ai-in-encyclical", time: "2026-05-26T12:42:51Z" },
-      { title: "Four people killed in Belgium in train and school bus collision", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/investigation-belgium-train-school-bus-collision-buggenhout-flanders", time: "2026-05-26T12:39:21Z" },
-      { title: "Seven dead in France after extreme heatwave sweeps across Europe", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/europe-heatwave-france-spain-uk-germany-b2983521.html", time: "2026-05-26T11:52:52Z" },
-      { title: "Early heat wave in Europe shatters records, prompts health risk warnings", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-europe-heat-wave-shatters-records/", time: "2026-05-26T11:49:27Z" },
-      { title: "Austrian paraglider unscathed after terrifying mid-air collision with plane", source: "France 24", url: "https://www.france24.com/en/tv-shows/press-review/20260526-austrian-paraglider-unscathed-after-terrifying-mid-air-collision-with-plane", time: "2026-05-26T10:52:46Z" },
-      { title: "What is a heat dome, causing excessively high temperatures in western Europe?", source: "France 24", url: "https://www.france24.com/en/what-is-a-heat-dome-causing-excessively-high-temperatures-in-western-europe", time: "2026-05-26T10:05:40Z" },
-      { title: "Behind the Curtain: Trump's irreversible choices", source: "Axios", url: "https://www.axios.com/2026/05/26/trump-choices-consequences-second-term", time: "2026-05-26T09:50:34Z" },
-      { title: "Record May heat puts France’s climate preparations to the test as heat dome swelters Europe", source: "Euronews", url: "http://www.euronews.com/2026/05/26/record-may-heat-puts-frances-climate-preparation-to-the-test-as-heat-dome-swelters-europe", time: "2026-05-26T09:40:54Z" },
-      { title: "Seven deaths in France linked to record-high temperatures", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/deaths-france-linked-record-high-temperatures", time: "2026-05-26T09:19:33Z" },
-      { title: "Seven die in heatwave-related incidents in France – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/26/europe-ukraine-russia-lithuania-eu-heatwave-hungary-magyar-france-latest-news-updates", time: "2026-05-26T08:36:28Z" },
-      { title: "Gisèle Pelicot 'deeply shocked' by decision not to jail boys in rape case", source: "BBC News", url: "https://www.bbc.com/news/articles/cx2117685lwo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T07:18:46Z" },
-      { title: "'Heat dome' over Europe scorches UK, France and Spain", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0526/1575263-weather-europe/", time: "2026-05-26T07:12:33Z" },
-      { title: "Western Europe swelters as late May heat dome shatters records", source: "Euronews", url: "http://www.euronews.com/video/2026/05/26/western-europe-swelters-as-late-may-heat-dome-shatters-records", time: "2026-05-26T06:35:41Z" },
-      { title: "Ukraine war briefing: Russia pressures US to clear way for attacks on Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/ukraine-war-briefing-russia-pressures-us-embassy-evacuate-attacks-kyiv", time: "2026-05-26T00:53:29Z" },
-      { title: "Wave of child abuse cases shakes schools in Paris", source: "BBC News", url: "https://www.bbc.com/news/articles/c8e8gx2d7j4o?at_medium=RSS&at_campaign=rss", time: "2026-05-25T23:01:57Z" },
-      { title: "Ruud overcomes heat struggles to progress in Paris", source: "BBC News", url: "https://www.bbc.com/sport/tennis/articles/cvgzz8xlj9do?at_medium=RSS&at_campaign=rss", time: "2026-05-25T22:10:16Z" },
-      { title: "Parts of Europe swelter in record May heat as deaths at amateur sports events spur warnings", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/parts-of-europe-swelter-in-record-may-heat-as-deaths-at-amateur-sports-events-spur-warnings", time: "2026-05-25T17:31:28Z" },
-      { title: "Heat wave at French Open impacts the clay courts and has fans begging for water", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/heat-wave-at-french-open-impacts-the-clay-courts-and-has-fans-begging-for-water", time: "2026-05-25T17:20:47Z" },
-      { title: "Parts of Europe swelter in record May heat as deaths at amateur sports events spur warnings", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/united-kingdom-paris-europe-france-le-parisien-b2983198.html", time: "2026-05-25T15:47:25Z" },
-      { title: "Weather tracker: flash floods in New York and a heat dome in Europe", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/25/weather-tracker-flash-floods-new-york-heat-dome-europe", time: "2026-05-25T08:08:23Z" },
-      { title: "‘A bridge, not an obstacle’: is Armenia a new crossroads between east and west?", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/armenia-election-crossroads-between-east-west", time: "2026-05-25T07:40:46Z" },
-      { title: "‘Massive’ child abuse scandal in France as school staff investigated for violence and sexual assault", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/massive-child-abuse-scandal-in-france-as-school-staff-investigated-for-violence-and-sexual-assault", time: "2026-05-25T05:00:18Z" },
-      { title: "Ukraine war briefing: Putin accused of ‘reckless nuclear brinkmanship’ in Oreshnik missile strike on Kyiv", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/ukraine-war-news-putin-accused-reckless-nuclear-brinkmanship-oreshnik-missile-strike-kyiv", time: "2026-05-25T01:06:42Z" },
-      { title: "'We don't know what the death toll among military personnel is': Kyiv reels from Russian strikes", source: "France 24", url: "https://www.france24.com/en/we-don-t-know-what-the-death-toll-among-military-personnel-is-kyiv-reels-from-russian-strikes", time: "2026-05-24T20:07:09Z" },
-      { title: "War in Ukraine: Russia launches massive missile strike on Kyiv", source: "France 24", url: "https://www.france24.com/en/war-in-ukraine-russia-launches-massive-strike-on-kyiv", time: "2026-05-24T11:29:44Z" },
     ]
   },
   {
@@ -3871,8 +3872,6 @@ const locations = [
       { title: "Messi suffers injury scare before World Cup", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cx211e5890lo?at_medium=RSS&at_campaign=rss", time: "2026-05-25T06:52:07Z" },
       { title: "Belgrano beats River to secure greatest achievement in club history", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/sports/football/belgrano-beats-river-to-secure-greatest-achievement-in-club-history", time: "2026-05-24T21:13:04Z" },
       { title: "Colombia elections: a continuation of Petro’s model or a sharp turn to the right?", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/world/colombia-elections-a-continuation-of-petros-model-or-a-sharp-turn-to-the-right", time: "2026-05-24T13:27:27Z" },
-      { title: "A gentrifier’s confession from bustling La Paternal", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/a-gentrifiers-confession-from-bustling-la-paternal", time: "2026-05-23T19:12:07Z" },
-      { title: "Global market volatility threatens one of Milei’s key goals", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/economics/global-market-volatility-threatens-one-of-mileis-key-goals", time: "2026-05-23T19:09:51Z" },
     ]
   },
   {
@@ -4036,7 +4035,6 @@ const locations = [
       { title: "PM Shehbaz showcases agri, IT, SEZs, mines and minerals as key areas for Pak-China cooperation", source: "Dawn", url: "https://www.dawn.com/news/2002753/pm-shehbaz-showcases-agri-it-sezs-mines-and-minerals-as-key-areas-for-pak-china-cooperation", time: "2026-05-24T10:56:14Z" },
       { title: "Karachi Museum of History to be built by the seaside", source: "Dawn", url: "https://www.dawn.com/news/2002626/karachi-museum-of-history-to-be-built-by-the-seaside", time: "2026-05-24T05:11:19Z" },
       { title: "Cooling appliances’ demand surges ahead of Eidul Azha", source: "Dawn", url: "https://www.dawn.com/news/2002664/cooling-appliances-demand-surges-ahead-of-eidul-azha", time: "2026-05-24T04:36:25Z" },
-      { title: "‘Clever and street-smart’: Police say Anmol did not employ anyone permanently", source: "Dawn", url: "https://www.dawn.com/news/2002572/clever-and-street-smart-police-say-anmol-did-not-employ-anyone-permanently", time: "2026-05-23T19:19:28Z" },
     ]
   },
   {
@@ -4273,6 +4271,7 @@ const locations = [
     lat: 41.9028, lng: 12.4964,
     category: "political",
     articles: [
+      { title: "Kanye West concert in Italy cancelled over ‘public order and safety issues’", source: "The Guardian", url: "https://www.theguardian.com/music/2026/may/30/kanye-west-concert-italy-cancelled-public-order-and-safety-issues", time: "2026-05-30T19:01:16Z" },
       { title: "Kanye West banned from performing in Italian city", source: "Sky News", url: "https://news.sky.com/story/kanye-west-banned-from-performing-in-italian-city-13549308", time: "2026-05-30T15:19:00Z" },
       { title: "Ye and Travis Scott Concerts Canceled in Italy Over Security Fears", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/europe/ye-travis-scott-italy-concerts.html", time: "2026-05-30T12:24:35Z" },
       { title: "Classrooms lean into analog learning in the AI era", source: "Axios", url: "https://www.axios.com/2026/05/30/no-screen-school-technology-parents-ai", time: "2026-05-30T11:10:05Z" },
@@ -4294,7 +4293,6 @@ const locations = [
       { title: "Inside the Shelbourne Hotel: If this hotel is a barometer, the Irish economy ‘is good’", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/05/25/shelbourne-hotel-gm-i-dont-think-ai-is-going-to-impact-the-chef-too-much/", time: "2026-05-25T04:55:00Z" },
       { title: "For Carlo Petrini, the Point of ‘Slow Food’ Wasn’t the Food. It Was Us.", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/dining/carlo-petrini-slow-food.html", time: "2026-05-24T17:52:58Z" },
       { title: "Tour groups, temporary routes and toilets: the reshaping of Rome – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/24/rome-reshaping-reorganisation-photo-essay", time: "2026-05-24T06:00:48Z" },
-      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
     ]
   },
   {
@@ -4331,6 +4329,7 @@ const locations = [
     lat: 4.711, lng: -74.0721,
     category: "conflict",
     articles: [
+      { title: "Colombia accuses Ecuador of interfering in its general election", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/colombia-accuses-ecuador-of-interfering-in-its-general-election", time: "2026-05-30T19:08:03Z" },
       { title: "‘Opposite visions’: What to know about Colombia’s presidential election", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/opposite-visions-what-to-know-about-colombias-presidential-election?traffic_source=rss", time: "2026-05-30T16:21:52Z" },
       { title: "Colombia accuses Ecuador of 'deliberate interference' in general elections", source: "ABC News", url: "https://abcnews.com/International/wireStory/colombia-accuses-ecuador-deliberate-interference-general-elections-133451428", time: "2026-05-30T16:19:09Z" },
       { title: "Colombians, weary of violence, prepare to vote in polarizing election", source: "CBS News", url: "https://www.cbsnews.com/news/colombia-presidential-election-ivan-cepeda-abelardo-de-la-espriella-paloma-valencia/", time: "2026-05-30T15:49:33Z" },
@@ -4712,6 +4711,27 @@ const locations = [
     ]
   },
   {
+    name: "Hanoi", country: "Vietnam",
+    lat: 21.0285, lng: 105.8542,
+    category: "diplomacy",
+    articles: [
+      { title: "Dang Van Phuoc Dies at 90; Intrepid Photojournalist in Vietnam War", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/business/media/dang-van-phuoc-dead.html", time: "2026-05-30T19:16:53Z" },
+      { title: "India says signed BrahMos missile deal with Vietnam", source: "Straits Times", url: "https://www.straitstimes.com/asia/india-says-signed-brahmos-missile-deal-with-vietnam", time: "2026-05-30T12:54:55Z" },
+      { title: "Vietnam to release nearly 10,000 prisoners", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-to-release-nearly-10000-prisoners", time: "2026-05-30T10:45:00Z" },
+      { title: "Asia defense summit opens with China and doubts about U.S. priorities topping concerns", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/asia-defense-summit-opens-with-china-and-doubts-about-u-s-priorities-topping-concerns", time: "2026-05-30T00:11:46Z" },
+      { title: "Vietnam encourages Gulf energy investment", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3263025/vietnam-encourages-gulf-energy-investment", time: "2026-05-29T22:03:00Z" },
+      { title: "Vietnam moves its dead to make way for Trump golf course, report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vietnam-cemetery-trump-golf-course-b2986089.html", time: "2026-05-29T17:19:13Z" },
+      { title: "In an unstable world of crises, solutions must come from Asia-Pacific: Vietnam President To Lam", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-president-to-lam-in-an-unstable-world-of-crises-solutions-must-come-from-asia-pacific", time: "2026-05-29T16:30:00Z" },
+      { title: "Vietnam’s Leader Warns Asia About the Risks of Superpower Conflict", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/asia/vietnam-to-lam-shangri-la-dialogue.html", time: "2026-05-29T16:20:35Z" },
+      { title: "Vietnam authorities charge driver in Ha Giang Loop crash that killed British teen", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-authorities-charge-driver-in-ha-giang-loop-crash-that-killed-british-teen", time: "2026-05-28T12:15:00Z" },
+      { title: "Heatwave strain on Vietnam power grid could get worse, industry ministry says", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/heatwave-strain-on-vietnam-power-grid-could-get-worse-industry-ministry-says", time: "2026-05-27T08:45:00Z" },
+      { title: "‘Business as usual’: Fakes, piracy thrive in Vietnam as US tariff deadline nears", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/business-as-usual-fakes-piracy-thrive-in-vietnam-as-us-tariff-deadline-nears", time: "2026-05-27T06:26:00Z" },
+      { title: "Two arrested in Vietnam over shooting of Australians", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/two-arrested-in-vietnam-over-shooting-of-australians", time: "2026-05-26T10:49:00Z" },
+      { title: "Vietnamese police bust laughing gas trafficking ring with $1 million in turnover", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnamese-police-bust-laughing-gas-trafficking-ring-with-1-million-in-turnover", time: "2026-05-24T09:56:00Z" },
+      { title: "Lightning advance: Swathes of Hanoi demolished for development", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/lightning-advance-swathes-of-hanoi-demolished-for-development", time: "2026-05-24T03:15:00Z" },
+    ]
+  },
+  {
     name: "Dakar", country: "Senegal",
     lat: 14.7167, lng: -17.4677,
     category: "political",
@@ -4750,26 +4770,6 @@ const locations = [
       { title: "Israel kills five Palestinian in central Gaza", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-five-palestinian-central-gaza", time: "2026-05-26T09:18:32Z" },
       { title: "Father mourns daughter killed in Israeli strike on Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/25/father-mourns-daughter-killed-in-israeli-strike-on-gaza?traffic_source=rss", time: "2026-05-25T19:12:58Z" },
       { title: "New German list of symbols conflates anti-genocide advocacy with antisemitism", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/capitalism-and-east-coast-germanys-new-list-antisemitic-codes", time: "2026-05-25T09:04:26Z" },
-    ]
-  },
-  {
-    name: "Hanoi", country: "Vietnam",
-    lat: 21.0285, lng: 105.8542,
-    category: "diplomacy",
-    articles: [
-      { title: "India says signed BrahMos missile deal with Vietnam", source: "Straits Times", url: "https://www.straitstimes.com/asia/india-says-signed-brahmos-missile-deal-with-vietnam", time: "2026-05-30T12:54:55Z" },
-      { title: "Vietnam to release nearly 10,000 prisoners", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-to-release-nearly-10000-prisoners", time: "2026-05-30T10:45:00Z" },
-      { title: "Asia defense summit opens with China and doubts about U.S. priorities topping concerns", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/asia-defense-summit-opens-with-china-and-doubts-about-u-s-priorities-topping-concerns", time: "2026-05-30T00:11:46Z" },
-      { title: "Vietnam encourages Gulf energy investment", source: "Bangkok Post", url: "https://www.bangkokpost.com/business/general/3263025/vietnam-encourages-gulf-energy-investment", time: "2026-05-29T22:03:00Z" },
-      { title: "Vietnam moves its dead to make way for Trump golf course, report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/vietnam-cemetery-trump-golf-course-b2986089.html", time: "2026-05-29T17:19:13Z" },
-      { title: "In an unstable world of crises, solutions must come from Asia-Pacific: Vietnam President To Lam", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-president-to-lam-in-an-unstable-world-of-crises-solutions-must-come-from-asia-pacific", time: "2026-05-29T16:30:00Z" },
-      { title: "Vietnam’s Leader Warns Asia About the Risks of Superpower Conflict", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/asia/vietnam-to-lam-shangri-la-dialogue.html", time: "2026-05-29T16:20:35Z" },
-      { title: "Vietnam authorities charge driver in Ha Giang Loop crash that killed British teen", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnam-authorities-charge-driver-in-ha-giang-loop-crash-that-killed-british-teen", time: "2026-05-28T12:15:00Z" },
-      { title: "Heatwave strain on Vietnam power grid could get worse, industry ministry says", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/heatwave-strain-on-vietnam-power-grid-could-get-worse-industry-ministry-says", time: "2026-05-27T08:45:00Z" },
-      { title: "‘Business as usual’: Fakes, piracy thrive in Vietnam as US tariff deadline nears", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/business-as-usual-fakes-piracy-thrive-in-vietnam-as-us-tariff-deadline-nears", time: "2026-05-27T06:26:00Z" },
-      { title: "Two arrested in Vietnam over shooting of Australians", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/two-arrested-in-vietnam-over-shooting-of-australians", time: "2026-05-26T10:49:00Z" },
-      { title: "Vietnamese police bust laughing gas trafficking ring with $1 million in turnover", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/vietnamese-police-bust-laughing-gas-trafficking-ring-with-1-million-in-turnover", time: "2026-05-24T09:56:00Z" },
-      { title: "Lightning advance: Swathes of Hanoi demolished for development", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/lightning-advance-swathes-of-hanoi-demolished-for-development", time: "2026-05-24T03:15:00Z" },
     ]
   },
   {
@@ -4939,6 +4939,24 @@ const locations = [
     ]
   },
   {
+    name: "Lahore", country: "Pakistan",
+    lat: 31.5204, lng: 74.3587,
+    category: "political",
+    articles: [
+      { title: "Pakistan outspins Australia in milestone ODI as Minhas makes history", source: "Dawn", url: "https://www.dawn.com/news/2003971/pakistan-outspins-australia-in-milestone-odi-as-minhas-makes-history", time: "2026-05-30T18:39:28Z" },
+      { title: "More women involved in drug trafficking than men in Faisalabad", source: "Dawn", url: "https://www.dawn.com/news/2003768/more-women-involved-in-drug-trafficking-than-men-in-faisalabad", time: "2026-05-30T03:52:22Z" },
+      { title: "Drying ponds force Cholistanis to opt for ‘seasonal migration’", source: "Dawn", url: "https://www.dawn.com/news/2003331/drying-ponds-force-cholistanis-to-opt-for-seasonal-migration", time: "2026-05-29T03:58:39Z" },
+      { title: "NCCIA Punjab arrests 11 for 'anti-state propaganda' and 'inciting unrest' online", source: "Dawn", url: "https://www.dawn.com/news/2003578/nccia-punjab-arrests-11-for-anti-state-propaganda-and-inciting-unrest-online", time: "2026-05-28T15:55:08Z" },
+      { title: "CM Maryam underwent 'major surgery' at Lahore hospital: Punjab minister", source: "Dawn", url: "https://www.dawn.com/news/2003538/cm-maryam-underwent-major-surgery-at-lahore-hospital-punjab-minister", time: "2026-05-28T08:28:39Z" },
+      { title: "At least one killed, 11 injured as earthquake damages houses in Punjab’s Jhelum district", source: "Dawn", url: "https://www.dawn.com/news/2003299/at-least-one-killed-11-injured-as-earthquake-damages-houses-in-punjabs-jhelum-district", time: "2026-05-26T17:10:06Z" },
+      { title: "Punjab govt defers roads renaming plan ‘to avert backlash’", source: "Dawn", url: "https://www.dawn.com/news/2003180/punjab-govt-defers-roads-renaming-plan-to-avert-backlash", time: "2026-05-26T03:34:55Z" },
+      { title: "LHC rules FIA cannot stop travel on vague suspicions", source: "Dawn", url: "https://www.dawn.com/news/2003124/lhc-rules-fia-cannot-stop-travel-on-vague-suspicions", time: "2026-05-26T02:38:50Z" },
+      { title: "KSE-100 rallies 3,800 points ahead of Eid break", source: "Dawn", url: "https://www.dawn.com/news/2002961/kse-100-rallies-3800-points-ahead-of-eid-break", time: "2026-05-26T02:13:03Z" },
+      { title: "Starmer urged to intervene in ‘rigged’ Indian prosecution of British human rights activist", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/starmer-urged-to-intervene-in-rigged-indian-prosecution-of-british-human-rights-activist", time: "2026-05-25T19:53:44Z" },
+      { title: "Situationer: Wheat policy failures deepen market crisis", source: "Dawn", url: "https://www.dawn.com/news/2002665/situationer-wheat-policy-failures-deepen-market-crisis", time: "2026-05-24T04:44:38Z" },
+    ]
+  },
+  {
     name: "La Paz", country: "Bolivia",
     lat: -16.4897, lng: -68.1193,
     category: "political",
@@ -4971,23 +4989,6 @@ const locations = [
       { title: "Israel deepens Lebanon ground offensive as Netanyahu vows escalation", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-26/ty-article/israel-expands-lebanon-ground-offensive-beyond-self-declared-buffer-zone/0000019e-64b5-da7d-a1bf-fcb5d8970000", time: "2026-05-26T15:48:32Z" },
       { title: "Israel targets ambulance team, attacks area near Lebanon's largest dam", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-targets-ambulance-team-attack-area-near-lebanons-largest-dam", time: "2026-05-26T13:46:26Z" },
       { title: "Israeli strike hits Kafr Sir as fighting escalates in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-hits-kafr-sir-fighting-escalates-south-lebanon", time: "2026-05-26T05:41:10Z" },
-    ]
-  },
-  {
-    name: "Lahore", country: "Pakistan",
-    lat: 31.5204, lng: 74.3587,
-    category: "political",
-    articles: [
-      { title: "More women involved in drug trafficking than men in Faisalabad", source: "Dawn", url: "https://www.dawn.com/news/2003768/more-women-involved-in-drug-trafficking-than-men-in-faisalabad", time: "2026-05-30T03:52:22Z" },
-      { title: "Drying ponds force Cholistanis to opt for ‘seasonal migration’", source: "Dawn", url: "https://www.dawn.com/news/2003331/drying-ponds-force-cholistanis-to-opt-for-seasonal-migration", time: "2026-05-29T03:58:39Z" },
-      { title: "NCCIA Punjab arrests 11 for 'anti-state propaganda' and 'inciting unrest' online", source: "Dawn", url: "https://www.dawn.com/news/2003578/nccia-punjab-arrests-11-for-anti-state-propaganda-and-inciting-unrest-online", time: "2026-05-28T15:55:08Z" },
-      { title: "CM Maryam underwent 'major surgery' at Lahore hospital: Punjab minister", source: "Dawn", url: "https://www.dawn.com/news/2003538/cm-maryam-underwent-major-surgery-at-lahore-hospital-punjab-minister", time: "2026-05-28T08:28:39Z" },
-      { title: "At least one killed, 11 injured as earthquake damages houses in Punjab’s Jhelum district", source: "Dawn", url: "https://www.dawn.com/news/2003299/at-least-one-killed-11-injured-as-earthquake-damages-houses-in-punjabs-jhelum-district", time: "2026-05-26T17:10:06Z" },
-      { title: "Punjab govt defers roads renaming plan ‘to avert backlash’", source: "Dawn", url: "https://www.dawn.com/news/2003180/punjab-govt-defers-roads-renaming-plan-to-avert-backlash", time: "2026-05-26T03:34:55Z" },
-      { title: "LHC rules FIA cannot stop travel on vague suspicions", source: "Dawn", url: "https://www.dawn.com/news/2003124/lhc-rules-fia-cannot-stop-travel-on-vague-suspicions", time: "2026-05-26T02:38:50Z" },
-      { title: "KSE-100 rallies 3,800 points ahead of Eid break", source: "Dawn", url: "https://www.dawn.com/news/2002961/kse-100-rallies-3800-points-ahead-of-eid-break", time: "2026-05-26T02:13:03Z" },
-      { title: "Starmer urged to intervene in ‘rigged’ Indian prosecution of British human rights activist", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/starmer-urged-to-intervene-in-rigged-indian-prosecution-of-british-human-rights-activist", time: "2026-05-25T19:53:44Z" },
-      { title: "Situationer: Wheat policy failures deepen market crisis", source: "Dawn", url: "https://www.dawn.com/news/2002665/situationer-wheat-policy-failures-deepen-market-crisis", time: "2026-05-24T04:44:38Z" },
     ]
   },
   {
@@ -5494,16 +5495,6 @@ const locations = [
     ]
   },
   {
-    name: "Belgrade", country: "Serbia",
-    lat: 44.7866, lng: 20.4489,
-    category: "political",
-    articles: [
-      { title: "Violent clashes break out after mass protest in Belgrade", source: "Euronews", url: "http://www.euronews.com/video/2026/05/25/violent-clashes-break-out-after-mass-protest-in-belgrade", time: "2026-05-25T13:24:58Z" },
-      { title: "Protesters clash with police after an anti-government rally in Serbia's capital", source: "France 24", url: "https://www.france24.com/en/protesters-clash-with-police-after-an-anti-government-rally-in-serbia-s-capital", time: "2026-05-24T10:08:48Z" },
-      { title: "Riot police clash with protesters in Serbia after anti-government rally", source: "Sky News", url: "https://news.sky.com/story/serbian-riot-police-clash-with-protesters-in-belgrade-after-anti-government-rally-13547397", time: "2026-05-23T19:19:00Z" },
-    ]
-  },
-  {
     name: "Oslo", country: "Norway",
     lat: 59.9139, lng: 10.7522,
     category: "economic",
@@ -5750,6 +5741,15 @@ const locations = [
     articles: [
       { title: "Benin: Benin Teaching How It Should Be Done Without Coups!", source: "AllAfrica", url: "https://allafrica.com/stories/202605300005.html", time: "2026-05-30T11:27:44Z" },
       { title: "Benin: Wadagni Wastes No Time Forming New Benin Government After Landslide Win", source: "AllAfrica", url: "https://allafrica.com/stories/202605250238.html", time: "2026-05-25T10:29:05Z" },
+    ]
+  },
+  {
+    name: "Belgrade", country: "Serbia",
+    lat: 44.7866, lng: 20.4489,
+    category: "political",
+    articles: [
+      { title: "Violent clashes break out after mass protest in Belgrade", source: "Euronews", url: "http://www.euronews.com/video/2026/05/25/violent-clashes-break-out-after-mass-protest-in-belgrade", time: "2026-05-25T13:24:58Z" },
+      { title: "Protesters clash with police after an anti-government rally in Serbia's capital", source: "France 24", url: "https://www.france24.com/en/protesters-clash-with-police-after-an-anti-government-rally-in-serbia-s-capital", time: "2026-05-24T10:08:48Z" },
     ]
   },
   {
@@ -6035,14 +6035,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Messi’s GOAT statue in India to be removed over safety concerns", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/27/messis-goat-statue-in-india-to-be-removed-over-safety-concerns?traffic_source=rss", time: "2026-05-27T11:18:41Z" },
-    ]
-  },
-  {
-    name: "Male", country: "Maldives",
-    lat: 4.1755, lng: 73.5093,
-    category: "health",
-    articles: [
-      { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
     ]
   },
   {

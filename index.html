@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:29 UTC, 30 May 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">19:34 UTC, 30 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">30 May 2026</div>
@@ -119,7 +119,9 @@ const locations = [
       { title: "Muslim activist to lead first-ever Muslim delegation in NYC Israel Parade despite threats", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897798", time: "2026-05-30T20:14:56Z" },
       { title: "Israel's government is too big, too costly, and holding back the Start-Up Nation - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897595", time: "2026-05-30T20:01:12Z" },
       { title: "WATCH: People run for shelter as Hezbollah rocket barrage hits water near Nahariya beach", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897797", time: "2026-05-30T19:30:34Z" },
+      { title: "Anti-government protests held across Israel, about 1,000 rally in Tel Aviv", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-30/ty-article/.premium/anti-government-protests-held-across-israel-about-1-000-rally-in-tel-aviv/0000019e-7a17-d23b-a9de-fa7f645c0000", time: "2026-05-30T19:04:53Z" },
       { title: "Government designates eight new forests as natural reserves along northern border", source: "Jerusalem Post", url: "https://www.jpost.com/environment-and-climate-change/article-897795", time: "2026-05-30T18:53:59Z" },
+      { title: "‘A jungle’: Reservists speak of permissive open-fire rules along Gaza’s Yellow Line", source: "Times of Israel", url: "https://www.timesofisrael.com/a-jungle-reservists-speak-of-permissive-open-fire-rules-along-gazas-yellow-line/", time: "2026-05-30T18:49:54Z" },
       { title: "Head of Anne Frank Educational Center questions Yad Vashem's Germany expansion, drawing backlash", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897794", time: "2026-05-30T18:04:56Z" },
       { title: "The battle for the truth: Israeli public diplomacy is at a critical test - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897428", time: "2026-05-30T17:53:25Z" },
       { title: "TAU enrolls approx. 100 injured IDF veterans under new framework without psychometric exam", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897793", time: "2026-05-30T17:07:52Z" },
@@ -148,10 +150,12 @@ const locations = [
       { title: "IDF strikes in Lebanon kill 16, wound 34 in past 24 hours, Lebanese Health Ministry says", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article-live/iranian-report-american-zionist-drone-shot-down-near-irans-qeshm-island/0000019e-76fd-dc9e-adfe-feffff140000", time: "2026-05-30T03:48:24Z" },
       { title: "Jewish group files cease and desist order against Park Slope Food Coop for its Israel boycott", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-30/ty-article/jewish-group-files-stop-order-over-brooklyn-food-co-op-israel-boycott/0000019e-7680-d84e-a3be-f7b9048e0000", time: "2026-05-30T01:55:06Z" },
       { title: "Israel police issue over 4,000 tickets in crackdown on dangerous, distracted driving", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897770", time: "2026-05-30T00:45:08Z" },
+      { title: "WhatsApp messages undermine alibi of Netanyahu's pick for Mossad chief", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article/.premium/whatsapp-messages-undermine-alibi-of-netanyahus-pick-for-mossad-chief/0000019e-72af-dcbe-afbe-f3bf6ab10000", time: "2026-05-29T23:53:34Z" },
       { title: "What to watch in Israel this week: ‘Etty’ disappoints, ‘Euphoria’ stars move on", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-897693", time: "2026-05-29T23:46:55Z" },
       { title: "'Unique weapons, electronic warfare': Katz presents winners of Israel's 2026 Security Award", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897768", time: "2026-05-29T21:28:40Z" },
       { title: "Irish fans disrupt national soccer team’s game to protest planned matches against Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/irish-fans-disrupt-national-soccer-teams-game-to-protest-planned-matches-against-israel/", time: "2026-05-29T21:19:57Z" },
       { title: "Israel making 'every possible mistake' in Lebanon, Tel Aviv University vice-rector says", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897767", time: "2026-05-29T20:54:30Z" },
+      { title: "Zionism's opponents favor an egalitarian state, not Israel's hate, exclusion and violence", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-29/ty-article-opinion/.premium/zionisms-opponents-favor-an-egalitarian-state-not-hate-exclusion-and-violence/0000019e-73d8-dc57-a7be-fff9ff690000", time: "2026-05-29T20:06:22Z" },
       { title: "The US-Israel alliance reached a military peak, but its political future is under threat - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-897441", time: "2026-05-29T20:05:13Z" },
       { title: "Netanyahu says Israeli forces have crossed Lebanon’s Litani River", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/netanyahu-says-israeli-forces-have-crossed-lebanons-litani-river?traffic_source=rss", time: "2026-05-29T19:48:05Z" },
       { title: "U.N. Adds Israeli and Russian Forces to Sexual Violence List", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/middleeast/israel-russia-un-sexual-violence.html", time: "2026-05-29T19:46:27Z" },
@@ -612,10 +616,6 @@ const locations = [
       { title: "Liberman slams emerging Iran deal, accuses Netanyahu of failing to win war ‘on any front’", source: "Times of Israel", url: "https://www.timesofisrael.com/liberman-slams-emerging-iran-deal-accuses-netanyahu-of-failing-to-win-war-on-any-front/", time: "2026-05-23T20:02:07Z" },
       { title: "Couple found shot dead in car near central Israel, murder-suicide suspicion grows", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897056", time: "2026-05-23T20:00:26Z" },
       { title: "Soldier killed in northern Israel by Hezbollah drone from Lebanon", source: "Times of Israel", url: "https://www.timesofisrael.com/soldier-killed-in-northern-israel-by-hezbollah-drone-from-lebanon/", time: "2026-05-23T19:42:55Z" },
-      { title: "Nefesh B’Nefesh to receive award at JPost NY Conference", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-897055", time: "2026-05-23T19:26:54Z" },
-      { title: "Anti-government protests held across Israel; 2,000 rally nationwide", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-23/ty-article/.premium/anti-government-protests-held-across-israel-2-000-rally-nationwide/0000019e-561d-d48d-a5be-fedf68c50000", time: "2026-05-23T19:13:13Z" },
-      { title: "France Bans Israeli Minister Over Treatment of Detained Flotilla Activists", source: "New York Times", url: "https://www.nytimes.com/2026/05/23/world/middleeast/ben-gvir-travel-ban-france.html", time: "2026-05-23T18:54:49Z" },
-      { title: "Israeli military says soldier killed near Lebanon border", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-military-says-soldier-killed-near-lebanon-border", time: "2026-05-23T18:35:12Z" },
     ]
   },
   {
@@ -624,6 +624,7 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "US weighing accelerated troop drawdown in Europe - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897800", time: "2026-05-30T20:56:33Z" },
+      { title: "U.S. says it stopped a merchant ship trying to breach blockade and reach Iran", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/u-s-says-it-stopped-a-merchant-ship-trying-to-breach-blockade-and-reach-iran", time: "2026-05-30T18:34:02Z" },
       { title: "US says it disabled vessel attempting to reach Iranian port", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-it-disabled-vessel-attempting-reach-iranian-port", time: "2026-05-30T18:19:02Z" },
       { title: "Israeli-US war on Iran costs American consumers nearly $60bn", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-israeli-war-iran-costs-american-consumers-nearly-60bn", time: "2026-05-30T17:15:04Z" },
       { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
@@ -1099,10 +1100,6 @@ const locations = [
       { title: "US, Iran signal deal could be near as Trump says he’s ’50/50′ on agreement or strikes", source: "Times of Israel", url: "https://www.timesofisrael.com/us-iran-signal-deal-could-be-near-as-trump-says-hes-50-50-on-agreement-or-strikes/", time: "2026-05-23T20:46:48Z" },
       { title: "Israel believes Iran is misleading U.S., nuclear agreement unlikely, sources say", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-23/ty-article/.premium/israel-believes-iran-is-misleading-u-s-nuclear-agreement-unlikely-sources-say/0000019e-5634-d637-a99f-76be9ae70000", time: "2026-05-23T20:03:52Z" },
       { title: "Iran ambassador hopes ‘positive stride taking shape’ in Iran-US deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-ambassador-hopes-positive-stride-taking-shape-iran-us-deal", time: "2026-05-23T19:56:09Z" },
-      { title: "Araghchi, Trump hold calls with regional leaders", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/araghchi-trump-hold-calls-regional-leaders", time: "2026-05-23T19:28:54Z" },
-      { title: "'Significant movement here in Washington': US and Iran report progress towards deal on ending war", source: "France 24", url: "https://www.france24.com/en/significant-movement-here-in-washington-us-and-iran-report-progress-towards-deal-on-ending-war", time: "2026-05-23T19:27:43Z" },
-      { title: "Iran move World Cup base from US to Mexico with FIFA approval", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/23/iran-move-world-cup-base-from-us-to-mexico-with-fifa-approval?traffic_source=rss", time: "2026-05-23T19:18:02Z" },
-      { title: "Pakistan army chief visits Tehran to push for end to US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/pakistan-army-chief-visits-tehran-to-push-for-end-to-us-israeli-war-on-iran-2?traffic_source=rss", time: "2026-05-23T18:37:37Z" },
     ]
   },
   {
@@ -1110,6 +1107,10 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Second youth charged for shooting at Toronto area synagogues", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-897802", time: "2026-05-30T21:49:21Z" },
+      { title: "Israel's solution to the Gaza problem is well underway", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-30/ty-article/.premium/israels-solution-to-the-gaza-problem-is-well-underway/0000019e-79d5-d12e-afdf-ffff5b890000", time: "2026-05-30T19:12:54Z" },
+      { title: "Israel says it will sever all ties to UN's Guterres after inclusion in sexual violence report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-says-it-will-sever-all-ties-uns-guterres-after-inclusion-sexual", time: "2026-05-30T19:03:36Z" },
+      { title: "‘It was a jungle’: Israeli troops describe confusion near Gaza after ceasefire", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/israel-ceasefire-gaza-yellow-line-b2986524.html", time: "2026-05-30T18:49:07Z" },
       { title: "Palestinian doctor killed, three people injured in Israeli attack on Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/palestinian-doctor-killed-three-people-injured-in-israeli-attack-on-gaza?traffic_source=rss", time: "2026-05-30T17:04:03Z" },
       { title: "Community security: Nir Oz volunteers train to defend Israel's frontlines after Oct. 7", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897455", time: "2026-05-30T17:02:53Z" },
       { title: "Hamas warns of ‘dangerous escalation’ after PM orders army to seize more Gaza land", source: "Times of Israel", url: "https://www.timesofisrael.com/hamas-warns-of-dangerous-escalation-after-pm-orders-army-to-seize-more-gaza-land/", time: "2026-05-30T14:30:58Z" },
@@ -1357,7 +1358,6 @@ const locations = [
       { title: "Spanish police beat and detain Gaza flotilla activists amid clashes at airport", source: "Times of Israel", url: "https://www.timesofisrael.com/spanish-police-beat-and-detain-gaza-flotilla-activists-amid-clashes-at-airport/", time: "2026-05-23T21:09:17Z" },
       { title: "Amnesty condemns Basque police 'excessive use of force' towards Gaza flotilla activists", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/amnesty-condemns-basque-police-excessive-use-force-towards-gaza-flotilla", time: "2026-05-23T20:38:22Z" },
       { title: "Spanish police filmed beating Gaza flotilla activists as Israel jabs back at Madrid", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897058", time: "2026-05-23T20:37:17Z" },
-      { title: "Police beat and detain Gaza flotilla activists at airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/police-beat-and-detain-gaza-flotilla-activists-at-airport?traffic_source=rss", time: "2026-05-23T18:30:42Z" },
     ]
   },
   {
@@ -1365,6 +1365,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Qatar says temporary charges ‘negotiable’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/qatar-says-temporary-charges-negotiable?traffic_source=rss", time: "2026-05-30T18:42:26Z" },
       { title: "Pentagon chief says talks with Iran 'productive,' threatens renewed strikes", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-30/ty-article/.premium/pentagon-chief-says-talks-with-iran-productive-threatens-renewed-strikes/0000019e-7959-d618-a9be-7dffeec50000", time: "2026-05-30T17:18:27Z" },
       { title: "UAE joined US-Israeli war against Iran from the outset: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-joined-us-israeli-war-against-iran-outset-report", time: "2026-05-30T16:25:40Z" },
       { title: "Iran’s parliament set to vote on Hormuz Strait management bill", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-irans-parliament-set-to-vote-on-hormuz-strait-management-bill/", time: "2026-05-30T16:02:23Z" },
@@ -1848,6 +1849,7 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "Netanyahu's actions eroding bipartisan US support for Israel, J Street policy chief tells 'Post'", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897700", time: "2026-05-30T21:56:49Z" },
       { title: "Start-Up Ethiopia: Addis Ababa takes a page from Israel's innovation playbook", source: "Jerusalem Post", url: "https://www.jpost.com/business-and-innovation/all-news/article-897697", time: "2026-05-30T15:59:23Z" },
       { title: "AI tools can help reduce anxiety and depression symptoms, Israeli study finds", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/mind-and-spirit/article-897659", time: "2026-05-30T07:41:50Z" },
       { title: "Mutra becomes first kosher restaurant to earn Michelin star", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897772", time: "2026-05-30T02:22:53Z" },
@@ -1927,7 +1929,6 @@ const locations = [
       { title: "18 countries condemn Somaliland move to open ‘embassy’ in occupied Jerusalem", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260524-18-countries-condemn-somaliland-move-to-open-embassy-in-occupied-jerusalem/", time: "2026-05-24T14:46:39Z" },
       { title: "Jerusalem Day’s violence should not erase the memory of a divided city - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896833", time: "2026-05-23T21:42:15Z" },
       { title: "Spanish police filmed beating Gaza flotilla activists as Jerusalem jabs back at Madrid", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897058", time: "2026-05-23T20:37:17Z" },
-      { title: "Israel and the Middle East are one election away from peace - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896836", time: "2026-05-23T18:57:19Z" },
     ]
   },
   {
