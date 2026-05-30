@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:29 UTC, 30 May 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">18:31 UTC, 30 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">30 May 2026</div>
@@ -144,6 +144,8 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "Muslim activist to lead first-ever Muslim delegation in NYC Israel Parade despite threats", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897798", time: "2026-05-30T20:14:56Z" },
+      { title: "Israel's government is too big, too costly, and holding back the Start-Up Nation - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897595", time: "2026-05-30T20:01:12Z" },
       { title: "WATCH: People run for shelter as Hezbollah rocket barrage hits water near Nahariya beach", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897797", time: "2026-05-30T19:30:34Z" },
       { title: "Government designates eight new forests as natural reserves along northern border", source: "Jerusalem Post", url: "https://www.jpost.com/environment-and-climate-change/article-897795", time: "2026-05-30T18:53:59Z" },
       { title: "Head of Anne Frank Educational Center questions Yad Vashem's Germany expansion, drawing backlash", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897794", time: "2026-05-30T18:04:56Z" },
@@ -167,9 +169,12 @@ const locations = [
       { title: "'Too many people are calling it a win': Three ordinary Israelis who campaigned for the hostages' return reflect on Trump and grief", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-30/ty-article-magazine/.premium/3-israelis-who-campaigned-for-the-hostages-return-reflect-on-trump-and-grief/0000019e-4531-d394-addf-ff3bf0410000", time: "2026-05-30T06:44:29Z" },
       { title: "Ben Gvir drew fire from fellow right-wingers for his flotilla video. Was that the point?", source: "Times of Israel", url: "https://www.timesofisrael.com/ben-gvir-drew-fire-from-fellow-right-wingers-for-his-flotilla-video-was-that-the-point/", time: "2026-05-30T06:38:41Z" },
       { title: "Hezbollah rocket falls in northern Israeli city after several overnight barrages", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article/.premium/hezbollah-rocket-falls-in-northern-israeli-city-after-several-overnight-barrages/0000019e-775a-dd51-affe-ff5a96340000", time: "2026-05-30T06:25:40Z" },
+      { title: "'The education system is what makes Israeli soldiers willing to sacrifice their lives'", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-30/ty-article-magazine/.highlight/school-is-what-makes-israeli-soldiers-willing-to-sacrifice-their-lives/0000019e-64a5-de53-afff-6db731020000", time: "2026-05-30T06:22:17Z" },
       { title: "With Australia awash in antisemitism, a Jewish cleaner scrubs off Melbourne’s swastikas for free", source: "Times of Israel", url: "https://www.timesofisrael.com/with-australia-awash-in-antisemitism-a-jewish-cleaner-scrubs-off-melbournes-swastikas-for-free/", time: "2026-05-30T04:55:00Z" },
       { title: "NJ-12 candidate Adam Hamawy decries antisemitism amid scrutiny of his Israel views", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-897776", time: "2026-05-30T04:47:20Z" },
       { title: "Frustration in Lebanon as Israel expands invasion", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/aje-onl-nf_frustration-in-lebanon-as-israel-expands-invasion-300526?traffic_source=rss", time: "2026-05-30T04:36:17Z" },
+      { title: "IDF strikes in Lebanon kill 16, wound 34 in past 24 hours, Lebanese Health Ministry says", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article-live/iranian-report-american-zionist-drone-shot-down-near-irans-qeshm-island/0000019e-76fd-dc9e-adfe-feffff140000", time: "2026-05-30T03:48:24Z" },
+      { title: "Jewish group files cease and desist order against Park Slope Food Coop for its Israel boycott", source: "Haaretz", url: "https://www.haaretz.com/us-news/2026-05-30/ty-article/jewish-group-files-stop-order-over-brooklyn-food-co-op-israel-boycott/0000019e-7680-d84e-a3be-f7b9048e0000", time: "2026-05-30T01:55:06Z" },
       { title: "Israel police issue over 4,000 tickets in crackdown on dangerous, distracted driving", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-897770", time: "2026-05-30T00:45:08Z" },
       { title: "What to watch in Israel this week: ‘Etty’ disappoints, ‘Euphoria’ stars move on", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/culture/article-897693", time: "2026-05-29T23:46:55Z" },
       { title: "'Unique weapons, electronic warfare': Katz presents winners of Israel's 2026 Security Award", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897768", time: "2026-05-29T21:28:40Z" },
@@ -639,11 +644,6 @@ const locations = [
       { title: "Anti-government protests held across Israel; 2,000 rally nationwide", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-05-23/ty-article/.premium/anti-government-protests-held-across-israel-2-000-rally-nationwide/0000019e-561d-d48d-a5be-fedf68c50000", time: "2026-05-23T19:13:13Z" },
       { title: "France Bans Israeli Minister Over Treatment of Detained Flotilla Activists", source: "New York Times", url: "https://www.nytimes.com/2026/05/23/world/middleeast/ben-gvir-travel-ban-france.html", time: "2026-05-23T18:54:49Z" },
       { title: "Israeli military says soldier killed near Lebanon border", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-military-says-soldier-killed-near-lebanon-border", time: "2026-05-23T18:35:12Z" },
-      { title: "IDF soldier killed by explosive drone in northern Israel, two wounded", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-23/ty-article/.premium/idf-soldier-killed-by-explosive-drone-in-northern-israel-two-wounded/0000019e-55fa-d394-addf-fffa5b150000", time: "2026-05-23T18:29:20Z" },
-      { title: "Israel targets Lebanese rescue team recovering casualties from attack", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-targets-lebanese-rescue-team-recovering-casualties-attack", time: "2026-05-23T18:19:53Z" },
-      { title: "Gabrielle Soffer: Using her English for the good of others in Israel", source: "Jerusalem Post", url: "https://www.jpost.com/aliyah/article-896790", time: "2026-05-23T18:10:22Z" },
-      { title: "If Israel wants mass aliyah, it must end its bureaucratic gatekeeping - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-896978", time: "2026-05-23T18:06:11Z" },
-      { title: "‘Are you a baby killer?’: Israeli couple harassed by employee at California hotel", source: "Times of Israel", url: "https://www.timesofisrael.com/are-you-a-baby-killer-israeli-couple-harassed-by-employee-at-california-hotel/", time: "2026-05-23T17:48:57Z" },
     ]
   },
   {
@@ -651,6 +651,8 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "US weighing accelerated troop drawdown in Europe - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897800", time: "2026-05-30T20:56:33Z" },
+      { title: "US says it disabled vessel attempting to reach Iranian port", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-it-disabled-vessel-attempting-reach-iranian-port", time: "2026-05-30T18:19:02Z" },
       { title: "Israeli-US war on Iran costs American consumers nearly $60bn", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-israeli-war-iran-costs-american-consumers-nearly-60bn", time: "2026-05-30T17:15:04Z" },
       { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
       { title: "Chinese military technology allowed Iran to shoot down US fighter jet during war - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-897792", time: "2026-05-30T16:55:26Z" },
@@ -1129,13 +1131,6 @@ const locations = [
       { title: "'Significant movement here in Washington': US and Iran report progress towards deal on ending war", source: "France 24", url: "https://www.france24.com/en/significant-movement-here-in-washington-us-and-iran-report-progress-towards-deal-on-ending-war", time: "2026-05-23T19:27:43Z" },
       { title: "Iran move World Cup base from US to Mexico with FIFA approval", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/23/iran-move-world-cup-base-from-us-to-mexico-with-fifa-approval?traffic_source=rss", time: "2026-05-23T19:18:02Z" },
       { title: "Pakistan army chief visits Tehran to push for end to US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/pakistan-army-chief-visits-tehran-to-push-for-end-to-us-israeli-war-on-iran-2?traffic_source=rss", time: "2026-05-23T18:37:37Z" },
-      { title: "Pakistan official says Iran war interim deal is in final phase", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pakistan-official-says-iran-war-interim-deal-final-phase", time: "2026-05-23T18:29:34Z" },
-      { title: "Iran and U.S. close to understanding aimed at ending war, officials say", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/iran-and-u-s-close-to-understanding-aimed-at-ending-war-officials-say", time: "2026-05-23T18:14:04Z" },
-      { title: "‘United States of the Middle East?’: Trump posts US flag covering Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/23/united-states-of-the-middle-east-trump-posts-us-flag-covering-iran?traffic_source=rss", time: "2026-05-23T17:56:27Z" },
-      { title: "U.S. and Iran officials signal progress in negotiations amid fragile ceasefire", source: "NBC News", url: "https://www.nbcnews.com/politics/politics-news/us-iran-officials-signal-progress-negotiations-fragile-ceasefire-war-rcna346636", time: "2026-05-23T17:52:53Z" },
-      { title: "What will Trump do next with Iran?", source: "NPR", url: "https://www.npr.org/2026/05/23/nx-s1-5832542/trump-iran-decision", time: "2026-05-23T17:49:28Z" },
-      { title: "Agreement being “fine-tuned” to end US-Iran war, says Pakistani official", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/agreement-being-fine-tuned-end-us-iran-war-says-pakistani-official", time: "2026-05-23T17:37:50Z" },
-      { title: "Trump says U.S., Iran 'getting a lot closer' to finalizing agreement", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-23/ty-article/trump-says-u-s-iran-getting-a-lot-closer-to-finalizing-agreement/0000019e-55a2-d394-addf-ffbabc7d0000", time: "2026-05-23T17:37:37Z" },
     ]
   },
   {
@@ -1391,8 +1386,6 @@ const locations = [
       { title: "Amnesty condemns Basque police 'excessive use of force' towards Gaza flotilla activists", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/amnesty-condemns-basque-police-excessive-use-force-towards-gaza-flotilla", time: "2026-05-23T20:38:22Z" },
       { title: "Spanish police filmed beating Gaza flotilla activists as Israel jabs back at Madrid", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897058", time: "2026-05-23T20:37:17Z" },
       { title: "Police beat and detain Gaza flotilla activists at airport", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/police-beat-and-detain-gaza-flotilla-activists-at-airport?traffic_source=rss", time: "2026-05-23T18:30:42Z" },
-      { title: "Who is Don Jr’s fiancée Bettina Anderson? The Palm Beach socialite set to marry President Trump’s son", source: "The Independent", url: "https://www.independent.co.uk/life-style/bettina-anderson-donald-trump-jr-fiancee-b2982560.html", time: "2026-05-23T17:57:04Z" },
-      { title: "Flotilla activists arriving in Spain violently beaten by airport police", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/flotilla-activists-arriving-spain-violently-beaten-airport-police", time: "2026-05-23T17:29:02Z" },
     ]
   },
   {
@@ -1644,8 +1637,6 @@ const locations = [
       { title: "Trump says peace deal with Iran largely reached with strait of Hormuz to open", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/23/trump-ceasefire-iran-strait-of-hormuz", time: "2026-05-23T20:59:37Z" },
       { title: "Trump: Iran deal ‘largely negotiated’, Hormuz to reopen", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-iran-deal-largely-negotiated-hormuz-reopen", time: "2026-05-23T20:51:31Z" },
       { title: "Iran, Pakistan send revised peace proposal to US, sources tell Reuters", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iran-pakistan-send-revised-peace-proposal-us-sources-tell-reuters", time: "2026-05-23T19:37:12Z" },
-      { title: "Trump says deal with Iran, including opening Strait of Hormuz, is 'largely negotiated'", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/trump-says-deal-with-iran-including-opening-strait-of-hormuz-is-largely-negotiated", time: "2026-05-23T18:14:04Z" },
-      { title: "US, Iran close to agreeing on 60-day extension of ceasefire, gradual reopening of Hormuz - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-897053", time: "2026-05-23T17:51:22Z" },
     ]
   },
   {
@@ -1855,6 +1846,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "conflict",
     articles: [
+      { title: "Hegseth walks tightrope on China, urging Asian allies to share burden against threats", source: "The Hill", url: "https://thehill.com/policy/defense/5902518-trump-hegseth-china-policy/", time: "2026-05-30T17:21:01Z" },
       { title: "Hegseth says Iran blockade ‘very much still in place’ as Trump mulls deal", source: "The Hill", url: "https://thehill.com/policy/international/5902453-pete-hegseth-iran-war-naval-blockade-strait-of-hormuz/", time: "2026-05-30T15:39:40Z" },
       { title: "Rome metro station boasts new way to see the past", source: "CBS News", url: "https://www.cbsnews.com/video/rome-metro-station-boasts-new-way-to-see-the-past/", time: "2026-05-30T15:30:50Z" },
       { title: "US says 'more than capable' of resuming war, as peace deal remains elusive", source: "France 24", url: "https://www.france24.com/en/us-says-more-than-capable-of-resuming-war-as-peace-deal-remains-elusive", time: "2026-05-30T14:25:22Z" },
@@ -2207,6 +2199,7 @@ const locations = [
     lat: 33.6844, lng: 73.0479,
     category: "humanitarian",
     articles: [
+      { title: "EU's top diplomat Kallas to visit Islamabad on June 1 for strategic dialogue", source: "Dawn", url: "https://www.dawn.com/news/2003965/eus-top-diplomat-kallas-to-visit-islamabad-on-june-1-for-strategic-dialogue", time: "2026-05-30T18:28:13Z" },
       { title: "8 militants killed on second day of security operation in KP's Darra Adamkhel: security sources", source: "Dawn", url: "https://www.dawn.com/news/2003955/8-militants-killed-on-second-day-of-security-operation-in-kps-darra-adamkhel-security-sources", time: "2026-05-30T16:32:55Z" },
       { title: "Truck carrying Afghan returnees from Pakistan flips on highway, killing 18", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/truck-carrying-afghan-returnees-from-pakistan-flips-on-highway-killing-18?traffic_source=rss", time: "2026-05-30T14:11:35Z" },
       { title: "Truck carrying Afghan returnees from Pakistan flips on highway, killing 18", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/truck-carrying-afghan-returnees-from-pakistan-flips-on-highway-killing-18?traffic_source=rss", time: "2026-05-30T14:11:35Z" },
@@ -2334,7 +2327,6 @@ const locations = [
       { title: "SC upholds consecutive life terms in multiple murder cases", source: "Dawn", url: "https://www.dawn.com/news/2002649/sc-upholds-consecutive-life-terms-in-multiple-murder-cases", time: "2026-05-24T02:53:00Z" },
       { title: "Iran-Israel war LIVE: Pakistan hopes to host new round of Iran-U.S. talks 'very soon'", source: "The Hindu", url: "https://www.thehindu.com/news/international/iran-israel-us-war-live-updates-24-may-2026-trump-peace-deal-pakistan/article71016796.ece", time: "2026-05-24T02:11:00Z" },
       { title: "Pakistan army chief visits Tehran to push for end to US-Israeli war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/23/pakistan-army-chief-visits-tehran-to-push-for-end-to-us-israeli-war-on-iran-2?traffic_source=rss", time: "2026-05-23T18:37:37Z" },
-      { title: "Iran and U.S. close to understanding aimed at ending war, officials say", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/iran-and-u-s-close-to-understanding-aimed-at-ending-war-officials-say", time: "2026-05-23T18:14:04Z" },
     ]
   },
   {
@@ -2681,6 +2673,9 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Are Iranian-backed militias in Iraq really ready to hand over weapons? - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897799", time: "2026-05-30T20:47:51Z" },
+      { title: "'No plea helps': Northern Israelis despair after another day of incessant Hezbollah fire", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article-magazine/.premium/northern-israelis-voice-despair-after-another-day-of-incessant-hezbollah-fire/0000019e-79ed-d997-a19e-fded03100000", time: "2026-05-30T17:55:11Z" },
+      { title: "Lebanon prime minister condemns Israeli ‘scorched-earth policy’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-prime-minister-condemns-israeli-scorched-earth-policy", time: "2026-05-30T17:39:55Z" },
       { title: "Israeli officials voice frustration as Hezbollah attacks intensify", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-officials-voice-frustration-hezbollah-attacks-intensify", time: "2026-05-30T16:58:48Z" },
       { title: "Missile hits Kiryat Shmona during early-morning Hezbollah barrage, local leaders demand answers", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897788", time: "2026-05-30T15:58:32Z" },
       { title: "Kataeb Hezbollah vows to keep arms, as Iraq faces US pressure", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kataeb-hezbollah-vows-keep-arms-iraq-faces-us-pressure", time: "2026-05-30T15:06:21Z" },
@@ -3136,6 +3131,7 @@ const locations = [
     category: "diplomacy",
     articles: [
       { title: "Rescuers safely free four men trapped in Laos cave", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/05/31/2003858296", time: "2026-05-31T00:00:00Z" },
+      { title: "Four men rescued from flooded Laos cave as search continues for 2 others", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/four-men-rescued-from-flooded-laos-cave-as-search-continues-for-2-others", time: "2026-05-30T17:55:44Z" },
       { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
       { title: "Rescuers free four more men from flooded Laos cave, two still missing", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rescuers-free-four-more-men-from-flooded-laos-cave-two-still-missing?traffic_source=rss", time: "2026-05-30T14:53:35Z" },
       { title: "4 more Laos miners freed from cave after being trapped for 10 days, rescuers say", source: "CBS News", url: "https://www.cbsnews.com/video/4-more-laos-miners-freed-from-cave-after-being-trapped-for-10-days/", time: "2026-05-30T13:11:00Z" },
@@ -3577,7 +3573,6 @@ const locations = [
       { title: "UK Institute Is Hunting for Dangers Lurking in AI", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/technology/uk-ai-safety-institute.html", time: "2026-05-24T09:01:42Z" },
       { title: "As Rents Soar, Londoners Turn to Vacant Pubs, Offices and Police Stations", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/world/europe/london-guardianships-rent-cost-of-living.html", time: "2026-05-24T09:00:16Z" },
       { title: "Death of British national confirmed in Ukraine", source: "Sky News", url: "https://news.sky.com/story/death-of-british-national-confirmed-in-ukraine-13547417", time: "2026-05-23T20:31:00Z" },
-      { title: "AI, Palantir & the pushback: The London mayor vs the Met Police", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260523-ai-palantir-the-pushback-sadiq-khan-s-much-discussed-decision-over-met-police-contract", time: "2026-05-23T18:25:18Z" },
     ]
   },
   {
@@ -3927,7 +3922,6 @@ const locations = [
       { title: "Israeli raids kill couple in south Lebanon, strikes hit multiple towns", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-raids-kill-couple-south-lebanon-strikes-hit-multiple-towns", time: "2026-05-25T20:10:02Z" },
       { title: "IDF strikes city of Tyre in southern Lebanon, following surge in Hezbollah drone attacks", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897274", time: "2026-05-25T19:28:41Z" },
       { title: "Israeli strikes kill 14, wound several in southern Lebanon in latest ceasefire violation", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260524-israeli-strikes-kill-14-wound-several-in-southern-lebanon-in-latest-ceasefire-violation/", time: "2026-05-24T17:02:17Z" },
-      { title: "Drones strike north Israel as Lebanon says 12 killed by IDF strikes in 24 hours", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-23/ty-article/.premium/drones-strike-north-israel-as-lebanon-says-12-killed-by-idf-strikes-in-24-hours/0000019e-55a2-d6c6-a5df-7df6c7410000", time: "2026-05-23T18:04:06Z" },
     ]
   },
   {
@@ -4149,7 +4143,6 @@ const locations = [
       { title: "Turkey riot police use tear gas to take opposition party HQ in Ankara", source: "France 24", url: "https://www.france24.com/en/turkey-riot-police-use-tear-gas-to-take-opposition-party-hq-in-ankara", time: "2026-05-24T14:37:33Z" },
       { title: "Turkish police storm main opposition headquarters with tear gas", source: "Euronews", url: "http://www.euronews.com/2026/05/24/turkish-police-storm-main-opposition-headquarters-with-tear-gas", time: "2026-05-24T13:56:54Z" },
       { title: "Exclusive: What's inside the Iran deal Trump is close to signing", source: "Axios", url: "https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear", time: "2026-05-24T03:19:37Z" },
-      { title: "U.S., Iran close to a deal to end war, official says", source: "Axios", url: "https://www.axios.com/2026/05/23/us-iran-trump-deal-war", time: "2026-05-23T18:23:59Z" },
     ]
   },
   {
@@ -4276,36 +4269,6 @@ const locations = [
     ]
   },
   {
-    name: "Caracas", country: "Venezuela",
-    lat: 10.4806, lng: -66.9036,
-    category: "political",
-    articles: [
-      { title: "Guyanese soldier wounded in border gunfight with armed men in Venezuela", source: "ABC News", url: "https://abcnews.com/International/wireStory/guyanese-soldier-wounded-border-gunfight-armed-men-venezuela-133449349", time: "2026-05-30T14:52:53Z" },
-      { title: "ICE agent arrested over shooting of Venezuelan man in US immigration raid", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/ice-agent-arrested-over-shooting-of-venezuelan-man-in-us-immigration-raid?traffic_source=rss", time: "2026-05-29T22:52:50Z" },
-      { title: "ICE officer wanted for shooting a man during the Minneapolis crackdown is arrested in Texas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/minneapolis-donald-trump-minnesota-department-of-homeland-security-venezuelan-b2986172.html", time: "2026-05-29T16:55:19Z" },
-      { title: "Cuba's humanitarian crisis worsens as U.S. talks stall", source: "Axios", url: "https://www.axios.com/2026/05/28/cubas-fuel-shortage-humanitarian-crisis", time: "2026-05-28T16:01:59Z" },
-      { title: "The US keeps finding ways to justify state violence against Cuba | Daniel Mendiola", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/may/28/cuba-castro-indictment-latin-america-violence", time: "2026-05-28T10:00:18Z" },
-      { title: "Exclusive: Trump's accelerating squeeze on Cuba", source: "Axios", url: "https://www.axios.com/2026/05/28/trump-cuba-squeeze-regime-change", time: "2026-05-28T09:20:05Z" },
-      { title: "Trump administration orders prosecutors to pull back on probes against Venezuela leader", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-venezuela-delcy-rodriguez-investigation-dea-b2984856.html", time: "2026-05-28T02:09:18Z" },
-      { title: "Trump administration tells prosecutors to drop criminal investigations into Venezuelan leader Rodríguez, sources say", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-trump-criminal-investigation-venezuela-president-delcy-rodriguez/", time: "2026-05-28T01:02:10Z" },
-      { title: "French banker Pigasse emerges as key figure in Venezuela debt overhaul", source: "France 24", url: "https://www.france24.com/en/americas/20260527-french-banker-pigasse-emerges-as-key-figure-in-venezuela-debt-overhaul", time: "2026-05-27T22:25:54Z" },
-      { title: "Inside Venezuela’s economic crisis after Maduro’s capture", source: "NBC News", url: "https://www.nbcnews.com/video/inside-venezuela-s-economic-crisis-after-maduro-s-capture-264038469918", time: "2026-05-27T20:31:39Z" },
-      { title: "Two Venezuelan boys in a forest full of vultures: Silvana Trevale’s best photograph", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/27/venezuelan-boys-vultures-silvana-trevales-best-photograph", time: "2026-05-27T13:55:17Z" },
-      { title: "Scoop: Rubio aide promoted to top White House national security post", source: "Axios", url: "https://www.axios.com/2026/05/26/mike-needham-rubio-deputy-national-security-advisor", time: "2026-05-26T09:31:04Z" },
-      { title: "Clashes as Venezuelan prisoners protest over alleged mistreatment", source: "BBC News", url: "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss", time: "2026-05-25T11:13:45Z" },
-      { title: "Venezuela's government faces calls for elections after failed release of prisoners", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5831506/venezuelas-government-faces-calls-for-elections-after-failed-release-of-prisoners", time: "2026-05-25T08:40:29Z" },
-      { title: "Venezuela prisoner releases fall short, fueling doubts over reform", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5831506/venezuelas-government-prisoners-us", time: "2026-05-25T08:40:29Z" },
-      { title: "Venezuela inmates occupy prison roof and set fire to mattresses to protest alleged abuses", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/venezuela-inmates-occupy-prison-roof-protest-alleged-abuses", time: "2026-05-25T06:20:46Z" },
-      { title: "Venezuelan prisoners stage rooftop protest over alleged abuse and shootings", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/25/aje-onl-nf_venezuelan-prisoners-stage-protest-250526?traffic_source=rss", time: "2026-05-25T05:10:44Z" },
-      { title: "María Corina Machado vows another run for Venezuelan presidency and eyes return from exile", source: "NBC News", url: "https://www.nbcnews.com/world/venezuela/venezuelas-machado-vows-another-run-presidency-eyes-return-exile-end-2-rcna346703", time: "2026-05-24T17:00:00Z" },
-      { title: "US-Cuba: Despite Trump's pressure, Cuba may not turn out like Venezuela", source: "France 24", url: "https://www.france24.com/en/us-cuba-despite-trump-s-pressure-cuba-may-not-turn-out-like-venezuela", time: "2026-05-24T09:45:14Z" },
-      { title: "Venezuela's Machado vows another run for presidency, eyes return from exile", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-machado-vows-run-presidency-eyes-return-exile-133258234", time: "2026-05-24T01:38:40Z" },
-      { title: "Venezuelan opposition leader Machado says she will run again for presidency and return from exile by late 2026", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/venezuelan-opposition-leader-machado-says-she-will-run-again-for-presidency-and-return-from-exile-by-late-2026", time: "2026-05-23T22:54:58Z" },
-      { title: "Marines conduct rapid response exercise at U.S. Embassy in Venezuela's capital", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/marines-conduct-rapid-response-exercise-at-u-s-embassy-in-venezuelas-capital", time: "2026-05-23T21:26:39Z" },
-      { title: "US conducts ‘rapid response’ military drill at embassy in Venezuela’s capital", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/us-military-drill-venezuela-caracas-embassy-maduro-b2982549.html", time: "2026-05-23T18:00:45Z" },
-    ]
-  },
-  {
     name: "Rome", country: "Italy",
     lat: 41.9028, lng: 12.4964,
     category: "political",
@@ -4332,6 +4295,35 @@ const locations = [
       { title: "For Carlo Petrini, the Point of ‘Slow Food’ Wasn’t the Food. It Was Us.", source: "New York Times", url: "https://www.nytimes.com/2026/05/24/dining/carlo-petrini-slow-food.html", time: "2026-05-24T17:52:58Z" },
       { title: "Tour groups, temporary routes and toilets: the reshaping of Rome – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/24/rome-reshaping-reorganisation-photo-essay", time: "2026-05-24T06:00:48Z" },
       { title: "Bodies of four divers killed in Maldives cave accident are returned to Italy", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/maldives-divers-diving-accident-bodies-repatriated-b2982571.html", time: "2026-05-23T18:59:34Z" },
+    ]
+  },
+  {
+    name: "Caracas", country: "Venezuela",
+    lat: 10.4806, lng: -66.9036,
+    category: "political",
+    articles: [
+      { title: "Guyanese soldier wounded in border gunfight with armed men in Venezuela", source: "ABC News", url: "https://abcnews.com/International/wireStory/guyanese-soldier-wounded-border-gunfight-armed-men-venezuela-133449349", time: "2026-05-30T14:52:53Z" },
+      { title: "ICE agent arrested over shooting of Venezuelan man in US immigration raid", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/ice-agent-arrested-over-shooting-of-venezuelan-man-in-us-immigration-raid?traffic_source=rss", time: "2026-05-29T22:52:50Z" },
+      { title: "ICE officer wanted for shooting a man during the Minneapolis crackdown is arrested in Texas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/minneapolis-donald-trump-minnesota-department-of-homeland-security-venezuelan-b2986172.html", time: "2026-05-29T16:55:19Z" },
+      { title: "Cuba's humanitarian crisis worsens as U.S. talks stall", source: "Axios", url: "https://www.axios.com/2026/05/28/cubas-fuel-shortage-humanitarian-crisis", time: "2026-05-28T16:01:59Z" },
+      { title: "The US keeps finding ways to justify state violence against Cuba | Daniel Mendiola", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/may/28/cuba-castro-indictment-latin-america-violence", time: "2026-05-28T10:00:18Z" },
+      { title: "Exclusive: Trump's accelerating squeeze on Cuba", source: "Axios", url: "https://www.axios.com/2026/05/28/trump-cuba-squeeze-regime-change", time: "2026-05-28T09:20:05Z" },
+      { title: "Trump administration orders prosecutors to pull back on probes against Venezuela leader", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-venezuela-delcy-rodriguez-investigation-dea-b2984856.html", time: "2026-05-28T02:09:18Z" },
+      { title: "Trump administration tells prosecutors to drop criminal investigations into Venezuelan leader Rodríguez, sources say", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-trump-criminal-investigation-venezuela-president-delcy-rodriguez/", time: "2026-05-28T01:02:10Z" },
+      { title: "French banker Pigasse emerges as key figure in Venezuela debt overhaul", source: "France 24", url: "https://www.france24.com/en/americas/20260527-french-banker-pigasse-emerges-as-key-figure-in-venezuela-debt-overhaul", time: "2026-05-27T22:25:54Z" },
+      { title: "Inside Venezuela’s economic crisis after Maduro’s capture", source: "NBC News", url: "https://www.nbcnews.com/video/inside-venezuela-s-economic-crisis-after-maduro-s-capture-264038469918", time: "2026-05-27T20:31:39Z" },
+      { title: "Two Venezuelan boys in a forest full of vultures: Silvana Trevale’s best photograph", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/may/27/venezuelan-boys-vultures-silvana-trevales-best-photograph", time: "2026-05-27T13:55:17Z" },
+      { title: "Scoop: Rubio aide promoted to top White House national security post", source: "Axios", url: "https://www.axios.com/2026/05/26/mike-needham-rubio-deputy-national-security-advisor", time: "2026-05-26T09:31:04Z" },
+      { title: "Clashes as Venezuelan prisoners protest over alleged mistreatment", source: "BBC News", url: "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss", time: "2026-05-25T11:13:45Z" },
+      { title: "Venezuela's government faces calls for elections after failed release of prisoners", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5831506/venezuelas-government-faces-calls-for-elections-after-failed-release-of-prisoners", time: "2026-05-25T08:40:29Z" },
+      { title: "Venezuela prisoner releases fall short, fueling doubts over reform", source: "NPR", url: "https://www.npr.org/2026/05/25/nx-s1-5831506/venezuelas-government-prisoners-us", time: "2026-05-25T08:40:29Z" },
+      { title: "Venezuela inmates occupy prison roof and set fire to mattresses to protest alleged abuses", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/venezuela-inmates-occupy-prison-roof-protest-alleged-abuses", time: "2026-05-25T06:20:46Z" },
+      { title: "Venezuelan prisoners stage rooftop protest over alleged abuse and shootings", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/25/aje-onl-nf_venezuelan-prisoners-stage-protest-250526?traffic_source=rss", time: "2026-05-25T05:10:44Z" },
+      { title: "María Corina Machado vows another run for Venezuelan presidency and eyes return from exile", source: "NBC News", url: "https://www.nbcnews.com/world/venezuela/venezuelas-machado-vows-another-run-presidency-eyes-return-exile-end-2-rcna346703", time: "2026-05-24T17:00:00Z" },
+      { title: "US-Cuba: Despite Trump's pressure, Cuba may not turn out like Venezuela", source: "France 24", url: "https://www.france24.com/en/us-cuba-despite-trump-s-pressure-cuba-may-not-turn-out-like-venezuela", time: "2026-05-24T09:45:14Z" },
+      { title: "Venezuela's Machado vows another run for presidency, eyes return from exile", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-machado-vows-run-presidency-eyes-return-exile-133258234", time: "2026-05-24T01:38:40Z" },
+      { title: "Venezuelan opposition leader Machado says she will run again for presidency and return from exile by late 2026", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/venezuelan-opposition-leader-machado-says-she-will-run-again-for-presidency-and-return-from-exile-by-late-2026", time: "2026-05-23T22:54:58Z" },
+      { title: "Marines conduct rapid response exercise at U.S. Embassy in Venezuela's capital", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/marines-conduct-rapid-response-exercise-at-u-s-embassy-in-venezuelas-capital", time: "2026-05-23T21:26:39Z" },
     ]
   },
   {
@@ -4629,6 +4621,29 @@ const locations = [
     ]
   },
   {
+    name: "Berlin", country: "Germany",
+    lat: 52.52, lng: 13.405,
+    category: "economic",
+    articles: [
+      { title: "‘Timmy’ the humpback whale hauled ashore on Danish island", source: "Euronews", url: "http://www.euronews.com/video/2026/05/30/timmy-the-humpback-whale-hauled-ashore-on-danish-island", time: "2026-05-30T18:10:40Z" },
+      { title: "Autopsy planned for dead humpback whale brought ashore in Denmark", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/autopsy-planned-for-dead-humpback-whale-brought-ashore-in-denmark", time: "2026-05-30T17:11:46Z" },
+      { title: "Carcass of Timmy the humpback whale brought to shore in Denmark", source: "NPR", url: "https://www.npr.org/2026/05/30/nx-s1-5839921/timmy-humpback-whale-autopsy", time: "2026-05-30T12:16:28Z" },
+      { title: "Look at how Germany defeated the Red Army Faction. The lessons about how to fight terrorism are all there | Jason Burke", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/may/30/germany-defeat-red-army-faction-lessons-fight-terrorism", time: "2026-05-30T11:00:17Z" },
+      { title: "Lithuania, Once Occupied by Germany, Is Glad German Troops Are Back", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/europe/germany-lithuania-military-deployment.html", time: "2026-05-30T04:01:07Z" },
+      { title: "Merz ousting dismissed as 'speculation' by German govt", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0529/1575960-germany-politics/", time: "2026-05-29T16:38:01Z" },
+      { title: "EU to discuss potential restrictions on Chinese imports amid fears of overreliance", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/eu-discuss-restrictions-chinese-imports-fears-overreliance", time: "2026-05-28T16:29:59Z" },
+      { title: "Nato to significantly bolster eastern flank against Russia after Putin’s threats", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/nato-german-dutch-eastern-flank-russia-b2985268.html", time: "2026-05-28T13:39:14Z" },
+      { title: "‘We’re waiting for the plan to find us’: Mouse on Mars on working with Lee ‘Scratch’ Perry and 30 years of oblique adventures in sound", source: "The Guardian", url: "https://www.theguardian.com/music/2026/may/28/mouse-on-mars", time: "2026-05-28T04:00:53Z" },
+      { title: "American doctor battling Ebola is weak but stable, officials say", source: "The Hill", url: "https://thehill.com/policy/healthcare/5897641-american-doctor-battling-ebola-is-weak-but-stable-officials-say/", time: "2026-05-27T18:24:09Z" },
+      { title: "After Decades on the Run, a Leftist Militant Is Sentenced in Germany", source: "New York Times", url: "https://www.nytimes.com/2026/05/27/world/europe/daniela-klette-jailed-red-army-faction.html", time: "2026-05-27T16:45:44Z" },
+      { title: "Accused German RAF militant sentenced to 13 years", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0527/1575559-german-ex-raf-militant-sentenced/", time: "2026-05-27T16:27:52Z" },
+      { title: "Germany's most-wanted woman, 67, jailed after decades on run", source: "Sky News", url: "https://news.sky.com/story/former-baader-meinhof-gang-member-daniela-klette-67-jailed-for-armed-robberies-after-decades-on-the-run-13548489", time: "2026-05-27T15:14:00Z" },
+      { title: "Germany’s most wanted woman jailed after three decades evading police", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/27/daniela-klette-red-army-faction-jailed-armed-robberies-on-the-run", time: "2026-05-27T12:28:56Z" },
+      { title: "Former member of German militant group jailed for armed robberies after decades on the run", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21dr3lekpo?at_medium=RSS&at_campaign=rss", time: "2026-05-27T10:27:59Z" },
+      { title: "Lidl overtakes Morrisons to become fifth largest supermarket in UK", source: "The Guardian", url: "https://www.theguardian.com/business/2026/may/27/lidl-overtakes-morrisons-to-become-fifth-largest-supermarket-in-uk", time: "2026-05-27T08:51:47Z" },
+    ]
+  },
+  {
     name: "Dhaka", country: "Bangladesh",
     lat: 23.8103, lng: 90.4125,
     category: "health",
@@ -4715,29 +4730,6 @@ const locations = [
       { title: "Senegal/Morocco: Senegal Football Fans Return Home After Royal Pardon for Cup of Nations Chaos", source: "AllAfrica", url: "https://allafrica.com/stories/202605240027.html", time: "2026-05-24T13:53:09Z" },
       { title: "Africa: Senegal's Young Revolutionaries Now Face the Old African Curse", source: "AllAfrica", url: "https://allafrica.com/stories/202605240023.html", time: "2026-05-24T10:43:10Z" },
       { title: "Senegal football fans return home after royal pardon in Morocco", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/24/senegal-football-fans-return-home-after-royal-pardon-in-morocco?traffic_source=rss", time: "2026-05-24T10:13:31Z" },
-      { title: "Morocco king pardons jailed Senegal football fans for humanitarian reasons", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/23/morocco-king-pardons-jailed-senegal-football-fans-for-humanitarian-reasons?traffic_source=rss", time: "2026-05-23T17:53:57Z" },
-    ]
-  },
-  {
-    name: "Berlin", country: "Germany",
-    lat: 52.52, lng: 13.405,
-    category: "economic",
-    articles: [
-      { title: "Autopsy planned for dead humpback whale brought ashore in Denmark", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/autopsy-planned-for-dead-humpback-whale-brought-ashore-in-denmark", time: "2026-05-30T17:11:46Z" },
-      { title: "Carcass of Timmy the humpback whale brought to shore in Denmark", source: "NPR", url: "https://www.npr.org/2026/05/30/nx-s1-5839921/timmy-humpback-whale-autopsy", time: "2026-05-30T12:16:28Z" },
-      { title: "Look at how Germany defeated the Red Army Faction. The lessons about how to fight terrorism are all there | Jason Burke", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/may/30/germany-defeat-red-army-faction-lessons-fight-terrorism", time: "2026-05-30T11:00:17Z" },
-      { title: "Lithuania, Once Occupied by Germany, Is Glad German Troops Are Back", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/europe/germany-lithuania-military-deployment.html", time: "2026-05-30T04:01:07Z" },
-      { title: "Merz ousting dismissed as 'speculation' by German govt", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0529/1575960-germany-politics/", time: "2026-05-29T16:38:01Z" },
-      { title: "EU to discuss potential restrictions on Chinese imports amid fears of overreliance", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/eu-discuss-restrictions-chinese-imports-fears-overreliance", time: "2026-05-28T16:29:59Z" },
-      { title: "Nato to significantly bolster eastern flank against Russia after Putin’s threats", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/nato-german-dutch-eastern-flank-russia-b2985268.html", time: "2026-05-28T13:39:14Z" },
-      { title: "‘We’re waiting for the plan to find us’: Mouse on Mars on working with Lee ‘Scratch’ Perry and 30 years of oblique adventures in sound", source: "The Guardian", url: "https://www.theguardian.com/music/2026/may/28/mouse-on-mars", time: "2026-05-28T04:00:53Z" },
-      { title: "American doctor battling Ebola is weak but stable, officials say", source: "The Hill", url: "https://thehill.com/policy/healthcare/5897641-american-doctor-battling-ebola-is-weak-but-stable-officials-say/", time: "2026-05-27T18:24:09Z" },
-      { title: "After Decades on the Run, a Leftist Militant Is Sentenced in Germany", source: "New York Times", url: "https://www.nytimes.com/2026/05/27/world/europe/daniela-klette-jailed-red-army-faction.html", time: "2026-05-27T16:45:44Z" },
-      { title: "Accused German RAF militant sentenced to 13 years", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0527/1575559-german-ex-raf-militant-sentenced/", time: "2026-05-27T16:27:52Z" },
-      { title: "Germany's most-wanted woman, 67, jailed after decades on run", source: "Sky News", url: "https://news.sky.com/story/former-baader-meinhof-gang-member-daniela-klette-67-jailed-for-armed-robberies-after-decades-on-the-run-13548489", time: "2026-05-27T15:14:00Z" },
-      { title: "Germany’s most wanted woman jailed after three decades evading police", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/27/daniela-klette-red-army-faction-jailed-armed-robberies-on-the-run", time: "2026-05-27T12:28:56Z" },
-      { title: "Former member of German militant group jailed for armed robberies after decades on the run", source: "BBC News", url: "https://www.bbc.com/news/articles/cx21dr3lekpo?at_medium=RSS&at_campaign=rss", time: "2026-05-27T10:27:59Z" },
-      { title: "Lidl overtakes Morrisons to become fifth largest supermarket in UK", source: "The Guardian", url: "https://www.theguardian.com/business/2026/may/27/lidl-overtakes-morrisons-to-become-fifth-largest-supermarket-in-uk", time: "2026-05-27T08:51:47Z" },
     ]
   },
   {
@@ -5267,6 +5259,18 @@ const locations = [
     ]
   },
   {
+    name: "Kabul", country: "Afghanistan",
+    lat: 34.5553, lng: 69.2075,
+    category: "humanitarian",
+    articles: [
+      { title: "22 killed as truck carrying refugees overturns in Afghanistan", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/22-killed-as-truck-carrying-refugees-overturns-in-afghanistan?traffic_source=rss", time: "2026-05-30T18:06:29Z" },
+      { title: "Truck carrying returning refugees crashes in eastern Afghanistan, killing 22", source: "The Hindu", url: "https://www.thehindu.com/news/international/several-killed-as-truck-carrying-returning-refugees-crashes-in-eastern-afghanistan/article71040795.ece", time: "2026-05-30T10:32:56Z" },
+      { title: "Three Islamic republics", source: "Dawn", url: "https://www.dawn.com/news/2003864/three-islamic-republics", time: "2026-05-30T03:11:37Z" },
+      { title: "Russia has signed a military pact with the Taliban. Could its fighters start turning up in Ukraine?", source: "The Independent", url: "https://www.independent.co.uk/asia/south-asia/russia-taliban-military-agreement-afghanistan-ukraine-b2985166.html", time: "2026-05-28T12:13:33Z" },
+      { title: "Punjab Home Department lists organisations barred from collecting animal hides on Eidul Azha", source: "Dawn", url: "https://www.dawn.com/news/2003310/punjab-home-department-lists-organisations-barred-from-collecting-animal-hides-on-eidul-azha", time: "2026-05-26T19:01:44Z" },
+    ]
+  },
+  {
     name: "Eastern Mediterranean", country: "International",
     lat: 34.0, lng: 33.0,
     category: "conflict",
@@ -5319,17 +5323,6 @@ const locations = [
       { title: "Hakimi leads nine returning Morocco players from Qatar 2022 at World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/27/hakimi-leads-nine-returning-morocco-players-from-qatar-2022-at-world-cup?traffic_source=rss", time: "2026-05-27T09:53:10Z" },
       { title: "PSG's Hakimi in Morocco squad despite injury", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c5yrr1k6nxyo?at_medium=RSS&at_campaign=rss", time: "2026-05-26T20:29:16Z" },
       { title: "Morocco wants tourists to visit Western Sahara. Some say it's tightening its control", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgldqk4w95o?at_medium=RSS&at_campaign=rss", time: "2026-05-24T23:13:50Z" },
-    ]
-  },
-  {
-    name: "Juba", country: "South Sudan",
-    lat: 4.8594, lng: 31.5713,
-    category: "conflict",
-    articles: [
-      { title: "South Africa: Ebola - the Diocese of Tombura-Yambio Raises Surveillance and Emergency Preparedness", source: "AllAfrica", url: "https://allafrica.com/stories/202605270519.html", time: "2026-05-27T15:16:28Z" },
-      { title: "Canada imposes tough Ebola restrictions for travelers from impacted countries", source: "The Independent", url: "https://www.independent.co.uk/news/health/canada-congo-sudan-ebola-restrictions-b2984140.html", time: "2026-05-27T06:56:26Z" },
-      { title: "Voices: I’ve seen what aid can do. The world is making a grave mistake with cuts – and children are paying the price", source: "The Independent", url: "https://www.independent.co.uk/voices/tom-hiddleston-us-uk-aid-cuts-soccer-aid-b2983591.html", time: "2026-05-26T12:14:02Z" },
-      { title: "US temporarily bans green-card holders from entering country from African nations", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/may/23/us-green-card-holders-ebola-africa", time: "2026-05-23T17:56:10Z" },
     ]
   },
   {
@@ -5396,17 +5389,6 @@ const locations = [
       { title: "Raid on Indian opposition leader triggers violence in Kerala", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/27/raid-on-indian-opposition-leader-triggers-violence-in-kerala?traffic_source=rss", time: "2026-05-27T20:00:54Z" },
       { title: "Watch: ED raids on Pinarayi: Why the Left alleges a Congress-BJP nexus | Above the Fold | 27.05.2026", source: "The Hindu", url: "https://www.thehindu.com/news/international/watch-ed-raids-on-pinarayi-why-the-left-alleges-a-congress-bjp-nexus-above-the-fold-27052026/article71030062.ece", time: "2026-05-27T16:09:58Z" },
       { title: "Kuwait fire: Death toll of Keralites climbs to 24", source: "The Hindu", url: "https://www.thehindu.com/news/national/kerala/kuwait-fire-death-toll-of-keralites-climbs-to-19/article68284121.ece", time: "2026-05-26T09:32:07Z" },
-    ]
-  },
-  {
-    name: "Kabul", country: "Afghanistan",
-    lat: 34.5553, lng: 69.2075,
-    category: "humanitarian",
-    articles: [
-      { title: "Truck carrying returning refugees crashes in eastern Afghanistan, killing 22", source: "The Hindu", url: "https://www.thehindu.com/news/international/several-killed-as-truck-carrying-returning-refugees-crashes-in-eastern-afghanistan/article71040795.ece", time: "2026-05-30T10:32:56Z" },
-      { title: "Three Islamic republics", source: "Dawn", url: "https://www.dawn.com/news/2003864/three-islamic-republics", time: "2026-05-30T03:11:37Z" },
-      { title: "Russia has signed a military pact with the Taliban. Could its fighters start turning up in Ukraine?", source: "The Independent", url: "https://www.independent.co.uk/asia/south-asia/russia-taliban-military-agreement-afghanistan-ukraine-b2985166.html", time: "2026-05-28T12:13:33Z" },
-      { title: "Punjab Home Department lists organisations barred from collecting animal hides on Eidul Azha", source: "Dawn", url: "https://www.dawn.com/news/2003310/punjab-home-department-lists-organisations-barred-from-collecting-animal-hides-on-eidul-azha", time: "2026-05-26T19:01:44Z" },
     ]
   },
   {
@@ -5489,6 +5471,16 @@ const locations = [
       { title: "Chinese dissident says he was berated by ‘pro-regime’ interpreter for UK police", source: "The Guardian", url: "https://www.theguardian.com/uk-news/2026/may/30/chinese-dissident-says-he-was-berated-by-pro-regime-interpreter-for-uk-police", time: "2026-05-30T09:00:16Z" },
       { title: "Flooding kills at least nine in China’s Chongqing, state media says", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/flooding-kills-at-least-nine-in-chinas-chongqing-state-media-says", time: "2026-05-25T10:03:55Z" },
       { title: "3 dead and 17 missing after flooding in China’s Chongqing", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/three-dead-and-17-missing-after-flooding-in-chinas-chongqing", time: "2026-05-24T08:18:34Z" },
+    ]
+  },
+  {
+    name: "Juba", country: "South Sudan",
+    lat: 4.8594, lng: 31.5713,
+    category: "conflict",
+    articles: [
+      { title: "South Africa: Ebola - the Diocese of Tombura-Yambio Raises Surveillance and Emergency Preparedness", source: "AllAfrica", url: "https://allafrica.com/stories/202605270519.html", time: "2026-05-27T15:16:28Z" },
+      { title: "Canada imposes tough Ebola restrictions for travelers from impacted countries", source: "The Independent", url: "https://www.independent.co.uk/news/health/canada-congo-sudan-ebola-restrictions-b2984140.html", time: "2026-05-27T06:56:26Z" },
+      { title: "Voices: I’ve seen what aid can do. The world is making a grave mistake with cuts – and children are paying the price", source: "The Independent", url: "https://www.independent.co.uk/voices/tom-hiddleston-us-uk-aid-cuts-soccer-aid-b2983591.html", time: "2026-05-26T12:14:02Z" },
     ]
   },
   {
