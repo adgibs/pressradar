@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:27 UTC, 31 May 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:27 UTC, 31 May 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">31 May 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Dems' civil war over party chair hangs over 2028 plans", source: "Axios", url: "https://www.axios.com/2026/05/31/democrats-fight-dnc-2028", time: "2026-05-31T21:45:05Z" },
       { title: "South Africa’s World Cup 2026 departure delayed over Mexican visa debacle", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/31/south-africas-world-cup-2026-departure-delayed-over-mexican-visa-debacle?traffic_source=rss", time: "2026-05-31T12:32:13Z" },
       { title: "Going to the World Cup in Monterrey? Here’s where to eat and drink", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/lifestyle/food/going-to-the-world-cup-in-monterrey-heres-where-to-eat-and-drink/", time: "2026-05-31T08:05:49Z" },
       { title: "El Jalapeño: Mexico City schools move to slash in-class phone use to just 95% of the school day", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-mexico-city-schools-move-to-slash-in-class-phone-use-to-just-95-of-the-school-day/", time: "2026-05-31T06:59:30Z" },
@@ -263,7 +264,6 @@ const locations = [
       { title: "Behind the Curtain: Trump's irreversible choices", source: "Axios", url: "https://www.axios.com/2026/05/26/trump-choices-consequences-second-term", time: "2026-05-26T09:50:34Z" },
       { title: "Newsom lambasts Hegseth for sharing video of Army Blackhawk helicopters flying with Indy 500", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/newsom-hegseth-indy-500-blackhawk-helicopter-b2983336.html", time: "2026-05-26T02:56:31Z" },
       { title: "Trump boasts about Iran war success and stays on script during Arlington cemetery Memorial Day event", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-memorial-day-arlington-iran-b2983246.html", time: "2026-05-25T18:50:07Z" },
-      { title: "Republican lawmaker says Hegseth ‘makes Kristi Noem seem like a 5-star recruit’ in blistering takedown", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/thom-tillis-slams-hegseth-kristi-noem-b2982881.html", time: "2026-05-24T21:37:18Z" },
     ]
   },
   {
@@ -355,7 +355,6 @@ const locations = [
       { title: "Could Brazilian oil emerge as one of the big winners of the Iran war?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/25/could-brazilian-oil-emerge-as-one-of-the-big-winners-of-the-iran-war?traffic_source=rss", time: "2026-05-25T13:00:15Z" },
       { title: "Husband convicted of hiring hitman to kill NYC art dealer in Brazil", source: "CBS News", url: "https://www.cbsnews.com/news/estranged-husband-convicted-hiring-hitman-kill-nyc-art-dealer-brazil/", time: "2026-05-25T10:26:42Z" },
       { title: "World Surf League halted after unknown sea creature attacks photographer in New Zealand", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/world-surf-league-photgrapher-bitten-sea-lion-shark-b2982960.html", time: "2026-05-25T05:59:56Z" },
-      { title: "WHO chief says hantavirus ‘situation is stable for now’", source: "The Hill", url: "https://thehill.com/policy/healthcare/5893589-who-hantavirus-update-stable/", time: "2026-05-24T22:17:34Z" },
     ]
   },
   {
@@ -459,7 +458,6 @@ const locations = [
       { title: "Cubans deported to Mexico vulnerable to violence: Human Rights Watch", source: "The Hill", url: "https://thehill.com/homenews/administration/5897561-trump-administration-deports-cubans/", time: "2026-05-27T17:12:40Z" },
       { title: "Cuba is trapped between US pressure and Chinese apathy", source: "The Hill", url: "https://thehill.com/opinion/international/5895361-trump-cuba-regime-change/", time: "2026-05-27T12:30:00Z" },
       { title: "Ticket to regime change in Cuba: End the embargo", source: "The Hill", url: "https://thehill.com/opinion/international/5894224-trump-cuba-regime-change/", time: "2026-05-26T15:30:00Z" },
-      { title: "Cuba thanks China for rice shipment amid worsening humanitarian conditions", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/24/cuba-thanks-china-for-rice-shipment-amid-worsening-humanitarian-conditions?traffic_source=rss", time: "2026-05-24T21:53:15Z" },
     ]
   },
   {
@@ -531,14 +529,15 @@ const locations = [
     ]
   },
   {
-    name: "Quito", country: "Ecuador",
-    lat: -0.1807, lng: -78.4678,
-    category: "security",
+    name: "Managua", country: "Nicaragua",
+    lat: 12.115, lng: -86.2362,
+    category: "political",
     articles: [
-      { title: "The secret ingredient tying your candy, makeup and medicines to Sudan's war", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-05-31/secret-ingredient-tying-your-candy-makeup-medicines-to-sudans-war", time: "2026-05-31T10:00:00Z" },
-      { title: "Sixth-grade student dies after rafting accident during school field trip: ‘There are no words’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/sag-harbor-student-dies-rafting-field-trip-poconos-b2986211.html", time: "2026-05-29T19:16:38Z" },
-      { title: "Ecuadorian survivors of suspected drone strike seek answers and restitution", source: "NPR", url: "https://www.npr.org/2026/05/26/nx-s1-5828756/ecuadorian-survivors-of-suspected-drone-strike-seek-answers-and-restitution", time: "2026-05-26T08:48:19Z" },
-      { title: "Ecuador’s Noboa pledges to extradite criminals in State of the Union speech", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/24/ecuadors-noboa-pledges-to-extradite-criminals-in-state-of-the-union-speech?traffic_source=rss", time: "2026-05-24T22:04:28Z" },
+      { title: "Nicaraguan indigenous leader dies after three years in prison", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgzyyrzj1jo?at_medium=RSS&at_campaign=rss", time: "2026-05-31T21:52:38Z" },
+      { title: "Nicaragua confirms death in custody of Indigenous leader Brooklyn Rivera", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/31/nicaragua-confirms-death-in-custody-of-indigenous-leader-brooklyn-rivera?traffic_source=rss", time: "2026-05-31T21:38:15Z" },
+      { title: "Indigenous leader Brooklyn Rivera dies in Nicaragua after nearly 3 years of detention", source: "NBC News", url: "https://www.nbcnews.com/world/south-america/indigenous-leader-brooklyn-rivera-dies-nicaragua-rcna347780", time: "2026-05-31T21:26:42Z" },
+      { title: "Indigenous leader Brooklyn Rivera dies in Nicaragua after nearly 3 years of detention", source: "ABC News", url: "https://abcnews.com/International/wireStory/indigenous-leader-brooklyn-rivera-dies-nicaragua-after-3-133469625", time: "2026-05-31T19:35:01Z" },
+      { title: "Indigenous rights leader Brooklyn Rivera dies after nearly 3 years detained in Nicaragua", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/indigenous-rights-leader-brooklyn-rivera-dies-after-nearly-3-years-detained-in-nicaragua", time: "2026-05-31T19:34:37Z" },
     ]
   },
   {
@@ -550,6 +549,16 @@ const locations = [
       { title: "Guatemala's president denies report of US deal on anti-drug trafficking strikes", source: "ABC News", url: "https://abcnews.com/International/wireStory/guatemalas-president-denies-report-us-deal-anti-drug-133398752", time: "2026-05-29T06:35:45Z" },
       { title: "Guatemala denies agreeing to US strikes against drug traffickers", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/guatemala-denies-agreeing-to-us-strikes-against-drug-traffickers?traffic_source=rss", time: "2026-05-28T21:42:39Z" },
       { title: "Guatemala Agrees to Joint Strikes With U.S. Against Drug Gangs", source: "New York Times", url: "https://www.nytimes.com/2026/05/28/world/americas/guatemala-us-joint-strikes.html", time: "2026-05-28T09:04:34Z" },
+    ]
+  },
+  {
+    name: "Quito", country: "Ecuador",
+    lat: -0.1807, lng: -78.4678,
+    category: "security",
+    articles: [
+      { title: "The secret ingredient tying your candy, makeup and medicines to Sudan's war", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-05-31/secret-ingredient-tying-your-candy-makeup-medicines-to-sudans-war", time: "2026-05-31T10:00:00Z" },
+      { title: "Sixth-grade student dies after rafting accident during school field trip: ‘There are no words’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/sag-harbor-student-dies-rafting-field-trip-poconos-b2986211.html", time: "2026-05-29T19:16:38Z" },
+      { title: "Ecuadorian survivors of suspected drone strike seek answers and restitution", source: "NPR", url: "https://www.npr.org/2026/05/26/nx-s1-5828756/ecuadorian-survivors-of-suspected-drone-strike-seek-answers-and-restitution", time: "2026-05-26T08:48:19Z" },
     ]
   },
   {
@@ -569,15 +578,6 @@ const locations = [
     articles: [
       { title: "Suspects wanted by FBI for robbing athletes' homes arrested in Chile", source: "CBS News", url: "https://www.cbsnews.com/news/suspects-wanted-fbi-robbing-pro-athletes-homes-arrested-chile/", time: "2026-05-25T11:20:36Z" },
       { title: "Cubans Cook With Charcoal and Wood Fires to Survive During Energy Crisis", source: "New York Times", url: "https://www.nytimes.com/2026/05/25/world/americas/cuba-blackouts-fire-energy-oil.html", time: "2026-05-25T09:03:47Z" },
-    ]
-  },
-  {
-    name: "Managua", country: "Nicaragua",
-    lat: 12.115, lng: -86.2362,
-    category: "political",
-    articles: [
-      { title: "Indigenous leader Brooklyn Rivera dies in Nicaragua after nearly 3 years of detention", source: "ABC News", url: "https://abcnews.com/International/wireStory/indigenous-leader-brooklyn-rivera-dies-nicaragua-after-3-133469625", time: "2026-05-31T19:35:01Z" },
-      { title: "Indigenous rights leader Brooklyn Rivera dies after nearly 3 years detained in Nicaragua", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/indigenous-rights-leader-brooklyn-rivera-dies-after-nearly-3-years-detained-in-nicaragua", time: "2026-05-31T19:34:37Z" },
     ]
   },
   {
