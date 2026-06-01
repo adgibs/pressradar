@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:31 UTC, 1 Jun 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:07 UTC, 1 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">1 June 2026</div>
@@ -236,6 +236,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "From Crusaders to Hezbollah: the bloody history of Lebanon's Beaufort castle", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-06-01/from-crusaders-to-hezbollah-bloody-history-of-lebanons-beaufort-castle", time: "2026-06-01T20:49:22Z" },
       { title: "French navy, with backing from UK, seizes sanctioned Russian tanker", source: "The Hill", url: "https://thehill.com/policy/international/5903698-macron-france-russia-ukraine-iran/", time: "2026-06-01T14:21:37Z" },
       { title: "French navy boards Russia-linked oil tanker in Atlantic – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/jun/01/french-navy-boards-russia-linked-oil-tanker-in-atlantic-video", time: "2026-06-01T12:57:53Z" },
       { title: "French Navy boards Russia-linked tanker in Atlantic Ocean", source: "Euronews", url: "http://www.euronews.com/2026/06/01/french-navy-boards-russia-linked-tanker-in-atlantic-ocean", time: "2026-06-01T12:14:16Z" },
@@ -393,7 +394,6 @@ const locations = [
       { title: "Leonora in the Morning Light review – pioneering British artist who fled convention for the surrealists", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/26/leonora-in-the-morning-light-review-olivia-vinall", time: "2026-05-26T10:00:48Z" },
       { title: "The bond market is telling us the free lunch is over", source: "Axios", url: "https://www.axios.com/2026/05/26/inflation-debt-oil-bonds", time: "2026-05-26T09:10:04Z" },
       { title: "At Chelsea Flower Show, a Gnome Controversy and Some ‘Good British Madness’", source: "New York Times", url: "https://www.nytimes.com/2026/05/26/world/europe/chelsea-flower-show-gnomes-uk.html", time: "2026-05-26T09:03:39Z" },
-      { title: "Record May highs sweep across France as extreme heat hits western Europe", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/25/france-highest-ever-may-temperatures-spain-heatwave", time: "2026-05-25T22:06:09Z" },
     ]
   },
   {
@@ -694,6 +694,17 @@ const locations = [
     ]
   },
   {
+    name: "Copenhagen", country: "Denmark",
+    lat: 55.6761, lng: 12.5683,
+    category: "political",
+    articles: [
+      { title: "Denmark’s Mette Frederiksen agrees centre-left coalition after months of uncertainty", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/01/denmarks-mette-frederiksen-agrees-centre-left-coalition-after-months-of-uncertainty", time: "2026-06-01T20:47:28Z" },
+      { title: "Timmy the whale’s carcass dragged onto Danish beach after weeks languishing in shallow waters", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/timmy-whale-carcass-body-autopsy-b2986964.html", time: "2026-06-01T08:04:37Z" },
+      { title: "Dead whale towed ashore in Denmark ahead of autopsy", source: "BBC News", url: "https://www.bbc.com/news/articles/cpwpl9vn0yqo?at_medium=RSS&at_campaign=rss", time: "2026-05-31T19:05:42Z" },
+      { title: "No Place for Football review – battling ice and snow to play the beautiful game in Greenland", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/26/no-place-for-football-review-greenland", time: "2026-05-26T12:00:51Z" },
+    ]
+  },
+  {
     name: "Prague", country: "Czech Republic",
     lat: 50.0755, lng: 14.4378,
     category: "political",
@@ -701,16 +712,6 @@ const locations = [
       { title: "Russian drone strike ‘most serious security incident’ in Romania since start of Ukraine war – Europe live", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/may/29/romania-ukraine-russia-galati-drone-strike-europe-live-breaking-news", time: "2026-05-29T08:52:05Z" },
       { title: "‘Saaz is our gold’: the Czech scientists breeding hops that can survive a hotter Europe", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/28/saaz-is-our-gold-the-czech-scientists-breeding-hops-that-can-survive-a-hotter-europe", time: "2026-05-28T12:00:20Z" },
       { title: "Czech police release Russian bishop after ‘white powder’ found in his car", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/26/czech-police-release-russian-bishop-after-white-powder-found-in-his-car", time: "2026-05-26T14:58:27Z" },
-    ]
-  },
-  {
-    name: "Copenhagen", country: "Denmark",
-    lat: 55.6761, lng: 12.5683,
-    category: "political",
-    articles: [
-      { title: "Timmy the whale’s carcass dragged onto Danish beach after weeks languishing in shallow waters", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/timmy-whale-carcass-body-autopsy-b2986964.html", time: "2026-06-01T08:04:37Z" },
-      { title: "Dead whale towed ashore in Denmark ahead of autopsy", source: "BBC News", url: "https://www.bbc.com/news/articles/cpwpl9vn0yqo?at_medium=RSS&at_campaign=rss", time: "2026-05-31T19:05:42Z" },
-      { title: "No Place for Football review – battling ice and snow to play the beautiful game in Greenland", source: "The Guardian", url: "https://www.theguardian.com/film/2026/may/26/no-place-for-football-review-greenland", time: "2026-05-26T12:00:51Z" },
     ]
   },
   {
