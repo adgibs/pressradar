@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:11 UTC, 3 Jun 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">22:47 UTC, 3 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">3 June 2026</div>
@@ -116,6 +116,12 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "'Dad, the IDF hates secular Jews'", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-06-04/ty-article-opinion/.premium/dad-the-idf-hates-secular-jews/0000019e-8e85-d4dc-abbf-fe95133e0000", time: "2026-06-03T22:06:26Z" },
+      { title: "‘A pogrom’: Haredi rioters smash windows, damage home of deputy Supreme Court chief", source: "Times of Israel", url: "https://www.timesofisrael.com/a-pogrom-haredi-rioters-smash-windows-damage-home-of-deputy-supreme-court-chief/", time: "2026-06-03T22:04:15Z" },
+      { title: "U.S. Air Force refueling jets cause congestion and delays for Israeli travelers", source: "Haaretz", url: "https://www.haaretz.com/israel-news/travel/2026-06-04/ty-article/.premium/u-s-air-force-refueling-jets-cause-congestion-and-delays-for-israeli-travelers/0000019e-8e6b-d03c-af9e-ff7f86120000", time: "2026-06-03T21:48:02Z" },
+      { title: "Watchdog or lapdog? In Netanyahu's Israel, personal loyalty tops professionalism", source: "Haaretz", url: "https://www.haaretz.com/opinion/editorial/2026-06-04/ty-article-opinion/watchdog-or-lapdog-in-netanyahus-israel-personal-loyalty-tops-professionalism/0000019e-8e85-d0a9-a7df-bf9f02db0000", time: "2026-06-03T21:44:34Z" },
+      { title: "In Israel's army, murdering a child is fine, but having an affair is reason to be fired", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-06-04/ty-article-opinion/.premium/in-israels-army-murdering-a-child-is-fine-but-an-affair-is-reason-to-be-fired/0000019e-8e84-d0a9-a7df-bf9ecb430000", time: "2026-06-03T21:32:02Z" },
+      { title: "'We're done apologizing': Inside the Israeli far right's big weekend out in New York", source: "Haaretz", url: "https://www.haaretz.com/jewish/2026-06-04/ty-article-magazine/.premium/were-done-apologizing-inside-the-israeli-far-rights-big-weekend-out-in-nyc/0000019e-8ef2-da37-a19f-cefad3e60000", time: "2026-06-03T21:18:47Z" },
       { title: "Netanyahu slams violent ultra-Orthodox riot at Supreme Court Justice Sohlberg’s home", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898303", time: "2026-06-03T21:16:25Z" },
       { title: "How Israel, America's enemies weaponize the NYT's prestige to target Western values - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898292", time: "2026-06-03T20:39:06Z" },
       { title: "'No Jews in our hotel': Israeli family denied access to Bavarian hotel", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-898295", time: "2026-06-03T20:37:28Z" },
@@ -130,6 +136,7 @@ const locations = [
       { title: "German hotel apologizes after 'no Jews allowed' reply to Israeli booking", source: "Haaretz", url: "https://www.haaretz.com/jewish/2026-06-03/ty-article/.premium/german-hotel-apologizes-after-no-jews-allowed-reply-to-israeli-booking/0000019e-8d0f-da37-a19f-cf8f69f90000", time: "2026-06-03T18:51:49Z" },
       { title: "Trump confirms calling Netanyahu 'crazy,' says they still get along", source: "NPR", url: "https://www.npr.org/2026/06/03/g-s1-125631/trump-confirms-calling-netanyahu-crazy-says-they-still-get-along", time: "2026-06-03T18:39:55Z" },
       { title: "US, Israel will 'fully return' to military action if needed, Netanyahu tells CNBC", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/benjamin-netanyahu/article-898273", time: "2026-06-03T18:38:09Z" },
+      { title: "'We managed to confuse them': BDS can't decide what to do about this Israeli band", source: "Haaretz", url: "https://www.haaretz.com/life/2026-06-03/ty-article-magazine/.premium/we-confuse-them-bds-cant-decide-what-to-do-about-this-israeli-band/0000019e-836e-d132-af9f-ffeff1240000", time: "2026-06-03T18:33:11Z" },
       { title: "28 years after her son fell serving in Lebanon, activist mother slams IDF’s return", source: "Times of Israel", url: "https://www.timesofisrael.com/28-years-after-her-son-fell-serving-in-lebanon-activist-mother-slams-idfs-return/", time: "2026-06-03T18:14:37Z" },
       { title: "Netanyahu forces through election of his lawyer as state comptroller amid tainted vote", source: "Times of Israel", url: "https://www.timesofisrael.com/netanyahu-forces-through-election-of-his-lawyer-as-state-comptroller-amid-tainted-vote/", time: "2026-06-03T18:06:32Z" },
       { title: "Two parades, one people - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898078", time: "2026-06-03T18:00:00Z" },
@@ -609,13 +616,6 @@ const locations = [
       { title: "Middle East war live: Netanyahu orders Israeli troops to occupy 70 percent of Gaza Strip", source: "France 24", url: "https://www.france24.com/en/middle-east/20260528-middle-east-war-live-us-carries-out-strikes-in-iran-targeting-military-site", time: "2026-05-28T01:12:49Z" },
       { title: "For 2nd time in days, settler filmed striking dog during raid of Palestinian village", source: "Times of Israel", url: "https://www.timesofisrael.com/for-2nd-time-in-days-settler-filmed-striking-dog-during-raid-of-palestinian-village/", time: "2026-05-28T00:28:59Z" },
       { title: "US returns Palestinian rights expert Francesca Albanese to sanctions list", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/us-returns-palestinian-rights-expert-francesca-albanese-to-sanctions-list?traffic_source=rss", time: "2026-05-28T00:03:18Z" },
-      { title: "Israel is caught in a trap of its own making: Another unnecessary forever war", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-28/ty-article-opinion/.premium/israel-is-caught-in-a-trap-of-its-own-making-another-unnecessary-forever-war/0000019e-6aa5-d1b9-a9bf-faade2bc0000", time: "2026-05-27T22:37:43Z" },
-      { title: "IDF kills two 'central Hamas terrorists' in Gaza Strip", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-897565", time: "2026-05-27T22:29:47Z" },
-      { title: "More jail time for worshippers than rapists: Israeli MKs mull an evil and absurd bill", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-28/ty-article-opinion/.premium/more-jail-time-for-worshippers-than-rapists-israel-mulls-an-evil-absurd-bill/0000019e-6aa6-d3a6-addf-efe661f50000", time: "2026-05-27T22:27:53Z" },
-      { title: "The silent spokesperson: Why the IDF is hiding from the reality of ongoing conflicts", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-28/ty-article-opinion/.premium/silent-spokesperson-why-the-idf-is-hiding-from-the-reality-of-ongoing-conflicts/0000019e-6aa7-d3a6-addf-efe7a5fe0000", time: "2026-05-27T22:16:11Z" },
-      { title: "Jewish New York deserves a parade as diverse as its communities - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897564", time: "2026-05-27T22:11:04Z" },
-      { title: "Tens of thousands expected at NYC’s annual Israel parade; Mamdani to boycott it", source: "Times of Israel", url: "https://www.timesofisrael.com/tens-of-thousands-expected-at-nycs-annual-israel-parade-mamdani-to-boycott-it/", time: "2026-05-27T21:57:38Z" },
-      { title: "In apartheid Israel, not all holidays are created equal", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-05-28/ty-article-opinion/.premium/in-apartheid-israel-not-all-holidays-are-created-equal/0000019e-6ab1-d1b9-a9bf-fabdc7350000", time: "2026-05-27T21:38:12Z" },
     ]
   },
   {
@@ -623,7 +623,17 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "US House backs resolution curbing Trump Iran war powers", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-898322", time: "2026-06-04T00:34:52Z" },
+      { title: "US-Iran negotiations 'going well,' could reach deal by weekend, Trump claims", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898319", time: "2026-06-03T23:51:02Z" },
+      { title: "Middle East crisis live: US House rebukes Trump over Iran war; Tehran claims it struck American military ship in Gulf of Oman", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/jun/03/us-israel-iran-war-lebanon-trump-khamenei-netanyahu-hormuz-latest-news-updates", time: "2026-06-03T22:44:56Z" },
+      { title: "Stop Calling It a Ceasefire", source: "The Intercept", url: "https://theintercept.com/2026/06/03/ceasefire-iran-war-trump/", time: "2026-06-03T22:34:03Z" },
+      { title: "Trump reiterates demand for Iran’s enriched uranium", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-reiterates-demand-irans-enriched-uranium", time: "2026-06-03T22:28:48Z" },
+      { title: "House Republicans join Democrats in rebuke to Trump’s Iran war powers", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-congress-iran-war-powers-act-b2989124.html", time: "2026-06-03T22:14:19Z" },
       { title: "Iran claims failed US missile struck Kuwait airport after saying Gulf bore 'clear responsibility'", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898313", time: "2026-06-03T22:05:22Z" },
+      { title: "Human bones found in Kfar Aza; family hopes they belong to son murdered on Oct. 7", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-june-4-2026/", time: "2026-06-03T22:04:24Z" },
+      { title: "House votes to rebuke Trump over war with Iran", source: "NBC News", url: "https://www.nbcnews.com/politics/congress/house-votes-rebuke-trump-war-iran-rcna348281", time: "2026-06-03T21:17:46Z" },
+      { title: "Kuwait labels Iran attack ‘heinous aggression’", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/3/kuwait-labels-iran-attack-heinous?traffic_source=rss", time: "2026-06-03T21:16:41Z" },
+      { title: "Iran says it hit US naval vessel, resumes talks with Washington", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/iran-says-hit-us-naval-vessel-as-it-resumes-talks-washington", time: "2026-06-03T21:14:26Z" },
       { title: "Bahrain arrests 15 people accused of links to IRGC", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/bahrain-arrests-15-people-accused-links-irgc", time: "2026-06-03T21:09:15Z" },
       { title: "Iranian foreign minister says contact with US not cut off", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-foreign-minister-says-contact-us-not-cut", time: "2026-06-03T20:48:06Z" },
       { title: "Trump describes Iran ceasefire as ‘shooting in a moderate manner’ in bizarre press conference", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-ceasefire-press-conference-b2989118.html", time: "2026-06-03T20:47:04Z" },
@@ -1041,8 +1051,6 @@ const locations = [
       { title: "U.S. military carries out limited attacks in southern Iran, U.S. official says", source: "NBC News", url: "https://www.nbcnews.com/world/iran/us-military-carries-limited-attacks-southern-iran-us-official-says-rcna347254", time: "2026-05-28T00:19:58Z" },
       { title: "Iran war live: Israel orders mass forced displacement for all south Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/5/28/iran-war-live-israel-orders-mass-forced-displacement-for-all-south-lebanon?traffic_source=rss", time: "2026-05-28T00:00:00Z" },
       { title: "Trump's optimism on an Iran peace deal seems to waver", source: "CBS News", url: "https://www.cbsnews.com/video/trumps-optimism-iran-peace-deal-seems-waver/", time: "2026-05-27T23:32:06Z" },
-      { title: "Trump visited soldiers at Walter Reed — but not the 14 injured in the Iran war", source: "CBS News", url: "https://www.cbsnews.com/news/trump-visited-soldiers-walter-reed-not-14-injured-in-iran-war/", time: "2026-05-27T22:00:04Z" },
-      { title: "Major crimes detective questioned on suspicion of contact with Iranian agent", source: "Times of Israel", url: "https://www.timesofisrael.com/major-crimes-detective-questioned-on-suspicion-of-contact-with-iranian-agent/", time: "2026-05-27T21:53:58Z" },
     ]
   },
   {
@@ -1050,7 +1058,9 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Who is Adam Hamawy? Doctor who served in Gaza is on the path to US Congress", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/3/who-is-adam-hamawy-doctor-who-served-in-gaza-is-on-the-path-to-us-congress?traffic_source=rss", time: "2026-06-03T21:56:47Z" },
       { title: "Human bones discovered in Kibbutz Kfar Aza neighborhood devastated in October 7 massacre", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898309", time: "2026-06-03T21:41:45Z" },
+      { title: "Ultra-Orthodox protesters storm home of Israeli Supreme Court judge over IDF draft arrests", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-06-04/ty-article/.premium/haredi-protesters-storm-home-of-senior-israeli-judge-over-idf-draft-arrests/0000019e-8f20-db6c-adff-bffe2bff0000", time: "2026-06-03T21:05:07Z" },
       { title: "UK gov't removes Israel from 'no travel list' for first time since June 2025 Iran war", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-898300", time: "2026-06-03T21:00:19Z" },
       { title: "High Court annuls government ban on Red Cross visits for Palestinian security prisoners", source: "Times of Israel", url: "https://www.timesofisrael.com/high-court-annuls-government-ban-on-red-cross-visits-for-palestinian-security-prisoners/", time: "2026-06-03T20:33:09Z" },
       { title: "Israel must let Red Cross visit Palestinian security prisoners, High Court rules", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-crime/2026-06-03/ty-article/.premium/israel-must-let-red-cross-visit-palestinian-security-prisoners-high-court-rules/0000019e-8ea4-da37-a19f-ceaedeb20000", time: "2026-06-03T20:25:35Z" },
@@ -1277,7 +1287,6 @@ const locations = [
       { title: "Attorney general to indict senior Netanyahu aide Jonathan Urich over Bild leak affair", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-28-2026/", time: "2026-05-28T01:00:31Z" },
       { title: "Hamas confirms that Israeli strikes killed its new military leader in Gaza City", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/hamas-confirms-that-israeli-strikes-killed-its-new-military-leader-in-gaza-city", time: "2026-05-28T00:06:19Z" },
       { title: "News Wrap: 11 presumed dead after Washington paper mill tank implosion", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/news-wrap-11-presumed-dead-after-washington-paper-mill-tank-implosion", time: "2026-05-27T22:50:26Z" },
-      { title: "Death toll rises after Israeli strike on Gaza City home", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/death-toll-rises-after-israeli-strike-gaza-city-home", time: "2026-05-27T22:17:07Z" },
     ]
   },
   {
@@ -1285,6 +1294,8 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Trump says Strait of Hormuz will reopen once deal is signed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-strait-hormuz-will-reopen-once-deal-signed", time: "2026-06-03T21:55:37Z" },
+      { title: "WATCH: Johnson says Trump wants U.S. allies to help reopen Strait of Hormuz", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/politics/watch-johnson-says-trump-wants-u-s-allies-to-help-reopen-strait-of-hormuz", time: "2026-06-03T21:33:31Z" },
       { title: "US House speaker says Trump focused on reopening Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-house-speaker-says-trump-focused-reopening-hormuz", time: "2026-06-03T18:33:13Z" },
       { title: "Netanyahu acknowledges 'tactical disagreements' with Trump, doesn't deny 'fucking crazy' remark", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-03/ty-article/.premium/netanyahu-says-tactical-differences-with-trump-after-fucking-crazy-remark/0000019e-8dfe-da37-a19f-cffe4c6c0000", time: "2026-06-03T18:04:14Z" },
       { title: "Rubio says Iran’s military capabilities have been reduced but threat remains", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rubio-says-irans-military-capabilities-have-been-reduced-threat-remains", time: "2026-06-03T17:05:51Z" },
@@ -1457,8 +1468,6 @@ const locations = [
       { title: "Iran war live: US strikes Iranian site as tensions rise in Strait of Hormuz", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/5/28/iran-war-live-israel-orders-mass-forced-displacement-for-all-south-lebanon?traffic_source=rss", time: "2026-05-28T00:00:00Z" },
       { title: "Trump says he will not ease sanctions on Iran as part of a deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-he-will-not-ease-sanctions-iran-part-deal", time: "2026-05-27T23:52:16Z" },
       { title: "US carries out new hits on Iranian military sites: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-carries-out-new-hits-iran-against-military-sites-report", time: "2026-05-27T23:41:47Z" },
-      { title: "Trump Threatens Oman Over the Strait, Then Says, ‘They’ll Be Fine.’", source: "New York Times", url: "https://www.nytimes.com/2026/05/27/world/middleeast/trump-oman-strait-hormuz.html", time: "2026-05-27T22:10:23Z" },
-      { title: "Markets rally amid hopes of US-Iran deal", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/27/markets-rally-amid-hopes-of-us-iran-deal?traffic_source=rss", time: "2026-05-27T21:14:12Z" },
     ]
   },
   {
@@ -1482,6 +1491,7 @@ const locations = [
       { title: "Hezbollah video shows attack on Israeli troops at Lebanon’s Beaufort Castle", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/3/hezbollah-video-shows-attack-on-israeli-troops-at-lebanons-beaufort-castle?traffic_source=rss", time: "2026-06-03T09:22:45Z" },
       { title: "Fawaz Gerges: ‘This is a war on the Lebanese people’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/fawaz-gerges-war-lebanese-people", time: "2026-06-03T04:34:32Z" },
       { title: "Hezbollah says it carried out 13 attacks on Israeli forces in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-says-it-carried-out-13-attacks-israeli-forces-south-lebanon", time: "2026-06-03T02:55:14Z" },
+      { title: "Middle East war live: Hezbollah launches cross-border attack as Israeli strikes kill nine in Lebanon", source: "France 24", url: "https://www.france24.com/en/middle-east/20260603-middle-east-war-live-us-military-says-it-intercepted-iranian-missile-and-drone-attacks", time: "2026-06-03T00:16:27Z" },
       { title: "Ex-Supreme Court justice, PM’s lawyer on ballot as Knesset votes for next state comptroller", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-june-03-2026/", time: "2026-06-03T00:07:27Z" },
       { title: "Israel-Lebanon talks resume, Hezbollah keeps fighting in violation of agreement with Trump - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-898158", time: "2026-06-02T22:39:22Z" },
       { title: "There are supposed to be ceasefires across the Middle East. The fighting is worsening", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/there-are-supposed-to-be-ceasefires-across-the-middle-east-the-fighting-is-worsening", time: "2026-06-02T21:07:11Z" },
@@ -1594,6 +1604,8 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "strikes",
     articles: [
+      { title: "House votes to rein in Trump on Iran as war loses GOP support", source: "CBS News", url: "https://www.cbsnews.com/news/house-iran-war-powers-4th-vote-trump/", time: "2026-06-03T22:36:18Z" },
+      { title: "Rubio claims Trump never sleeps - then is shown a clip of the president with his eyes closed", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-trump-sleep-testimony-video-b2989093.html", time: "2026-06-03T22:09:19Z" },
       { title: "Does Israel have nukes? ‘Most of the world assesses they do,’ says Rubio", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/3/does-israel-have-nukes-most-of-world-assesses-they-do-says-rubio?traffic_source=rss", time: "2026-06-03T20:38:25Z" },
       { title: "WATCH: Rubio questioned on Mideast talks, Trump resting in meetings, Greenland control", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/politics/watch-rubio-questioned-on-mideast-talks-trump-resting-in-meetings-greenland-control", time: "2026-06-03T19:54:55Z" },
       { title: "Rubio says US remains committed to Nato but wants major changes", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/rubio-says-us-remains-committed-nato-wants-major-changes", time: "2026-06-03T19:50:15Z" },
@@ -1799,7 +1811,6 @@ const locations = [
       { title: "Israel needs to end double standards against IDF troops who commit suicide - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897542", time: "2026-05-28T05:59:21Z" },
       { title: "Report: UN adds Israel to blacklist for committing sexual violence in conflict zones", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/report-un-adds-israel-blacklist-committing-sexual-violence-conflict", time: "2026-05-28T05:46:48Z" },
       { title: "US says it carried out strikes against Iran military sites for second time this week", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-may-28-2026/", time: "2026-05-28T01:00:31Z" },
-      { title: "Knesset dissolution first reading vote set for Monday, election date yet to be determined", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-897558", time: "2026-05-27T21:36:45Z" },
     ]
   },
   {
@@ -2117,6 +2128,7 @@ const locations = [
     lat: 34.0, lng: 33.0,
     category: "strikes",
     articles: [
+      { title: "Italian activists from Gaza humanitarian aid flotilla say Israel tortured them", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260603-italian-activists-from-gaza-humanitarian-aid-flotilla-say-israel-tortured-them/", time: "2026-06-03T21:12:03Z" },
       { title: "Italian activists escalate Mediterranean port protests over Gaza genocide", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/italy-activists-escalate-port-protests-over-gaza-genocide-and-military-supply-chains-through", time: "2026-06-02T14:47:34Z" },
       { title: "On the Greek island of Rhodes, I skipped the beach to visit a Pasha's library", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/greek-island-rhodes-i-skipped-beach-visit-pashas-library", time: "2026-05-30T09:39:39Z" },
       { title: "Suspensions, arrests, dissolutions: Tunisia intensifies its crackdown on NGOs", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/suspensions-arrests-dissolutions-tunisia-intensifies-crackdown-ngos", time: "2026-05-29T10:05:19Z" },
