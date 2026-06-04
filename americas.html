@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:09 UTC, 4 Jun 2026</span></div>
+    <div class="subtitle">Americas news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">17:11 UTC, 4 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">4 June 2026</div>
@@ -116,10 +116,12 @@ const locations = [
     lat: 19.4326, lng: -99.1332,
     category: "political",
     articles: [
+      { title: "Dirk Kempthorne was a paragon of cross-border leadership in difficult times", source: "The Hill", url: "https://thehill.com/opinion/international/5908445-kempthorne-us-mexico-cooperation/", time: "2026-06-04T16:00:00Z" },
       { title: "Host cities put best-known dishes in spotlight for World Cup", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/video-host-cities-put-best-known-dishes-in-spotlight-for-world-cup/", time: "2026-06-04T14:52:08Z" },
       { title: "Strike on alleged drug boat kills 2 in eastern Pacific", source: "The Hill", url: "https://thehill.com/policy/defense/5909598-pentagon-drug-boat-strike-pacific-2-killed/", time: "2026-06-04T14:28:51Z" },
       { title: "'Deplorable issues' cloud 2026 FIFA World Cup, deemed 'one of the least anticipated of this era'", source: "France 24", url: "https://www.france24.com/en/video/20260604-deplorable-issues-cloud-2026-fifa-world-cup-deemed-one-of-the-least-anticipated-of-this-era-1", time: "2026-06-04T12:51:36Z" },
       { title: "New World screwworm confirmed in Texas, stoking fresh cattle fears", source: "Axios", url: "https://www.axios.com/2026/06/04/new-world-screwworm-texas-cattle", time: "2026-06-04T12:02:37Z" },
+      { title: "Uneasy neighbours: Can three World Cup hosts put differences aside for a month?", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgz2081y8ko?at_medium=RSS&at_campaign=rss", time: "2026-06-04T08:46:23Z" },
       { title: "Nightmare parasite that eats living flesh detected in Texas after disappearing for decades", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/new-world-screwworm-texas-parasite-brooke-rollins-b2989328.html", time: "2026-06-04T07:36:57Z" },
       { title: "Former Mexico president says Trump isn’t the man he used to be", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/andres-manuel-lopez-obrador-donald-trump-b2989310.html", time: "2026-06-04T07:04:54Z" },
       { title: "Robodogs and helicopters: One Mexican city's approach to World Cup security", source: "BBC News", url: "https://www.bbc.com/news/videos/c4g4n4nzl2yo?at_medium=RSS&at_campaign=rss", time: "2026-06-04T05:42:34Z" },
@@ -156,6 +158,7 @@ const locations = [
       { title: "Playa del Carmen waives fees for same-sex weddings and gender identity documents during Pride Month", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/playa-del-carmen-weddings-pride-month/", time: "2026-06-02T22:21:34Z" },
       { title: "South Africa team arrives in Mexico after visa delays; Televisa journalists who spent months in custody due home Wednesday", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/south-africa-team-arrives-mexico-visa/", time: "2026-06-02T22:12:04Z" },
       { title: "Teachers’ union defaces World Cup statues, installs sit-in within blocks of Zócalo", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/teachers-union-world-cup-statues-sit-in/", time: "2026-06-02T21:34:57Z" },
+      { title: "Video shows elaborate drug-smuggling tunnel between US and Mexico", source: "BBC News", url: "https://www.bbc.com/news/videos/cyv2dy3e32eo?at_medium=RSS&at_campaign=rss", time: "2026-06-02T21:23:11Z" },
       { title: "Canada pushes for renewal of free trade agreement with US and Mexico", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/canada-us-mexico-free-trade-agreement-uscma-b2988347.html", time: "2026-06-02T21:20:25Z" },
       { title: "Missing worker at high-security lab in New Mexico found dead in remote forest", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-06-02/missing-worker-at-high-security-lab-in-n-m-found-dead-in-remote-forest", time: "2026-06-02T21:04:53Z" },
       { title: "Live results: New Mexico Senate primaries", source: "The Hill", url: "https://thehill.com/homenews/campaign/5897893-live-results-new-mexico-senate-primaries/", time: "2026-06-02T21:00:00Z" },
@@ -233,9 +236,6 @@ const locations = [
       { title: "Mexico in Numbers: Where did over $60 billion in remittances go in 2025?", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/news/mexico-in-numbers-2025-remittances-states/", time: "2026-05-28T19:04:54Z" },
       { title: "Sheinbaum sees risk of foreign interference in Mexican elections: Thursday’s mañanera recapped", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/politics/sheinbaum-foreign-interference-in-mexican-elections-may-28-mananera/", time: "2026-05-28T18:45:18Z" },
       { title: "US, Mexico, Canada rolling out Ebola-related travel measures ahead of World Cup", source: "The Hill", url: "https://thehill.com/policy/healthcare/5899761-us-mexico-canada-travel-measures-ebola-outbreak-world-cup-2026/", time: "2026-05-28T18:07:04Z" },
-      { title: "Canada, U.S., Mexico announce Ebola-related travel measures ahead of World Cup", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/article-canada-world-cup-ebola-travel-measures/", time: "2026-05-28T16:30:27Z" },
-      { title: "US, Mexico, Canada announce Ebola-related travel measures for World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/28/us-mexico-canada-announce-ebola-related-travel-measures-for-world-cup?traffic_source=rss", time: "2026-05-28T15:52:01Z" },
-      { title: "Trump review that could shutter Mexican consulates stokes worries", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/mexican-donald-trump-claudia-sheinbaum-mexico-los-angeles-b2985381.html", time: "2026-05-28T15:28:51Z" },
     ]
   },
   {
@@ -298,7 +298,6 @@ const locations = [
       { title: "Colombia’s first left-wing gov’t has reduced poverty, but has pile of debt", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/5/28/colombias-first-left-wing-govt-has-reduced-poverty-but-has-pile-of-debt?traffic_source=rss", time: "2026-05-28T21:56:47Z" },
       { title: "Clashes between armed groups in Colombia kill at least 52 guerrillas on eve of election", source: "France 24", url: "https://www.france24.com/en/americas/20260528-clashes-between-armed-groups-in-colombia-kill-at-least-52-guerrillas-on-eve-of-election", time: "2026-05-28T20:18:57Z" },
       { title: "Clashes between armed groups in Colombia kill at least 52", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/clashes-between-armed-groups-in-colombia-kill-at-least-52", time: "2026-05-28T19:51:56Z" },
-      { title: "Totó la Momposina, Colombian Folk Music Star, Dies at 85", source: "New York Times", url: "https://www.nytimes.com/2026/05/28/arts/music/toto-la-momposina-dead.html", time: "2026-05-28T17:05:35Z" },
     ]
   },
   {
@@ -352,7 +351,6 @@ const locations = [
       { title: "Guatemala requests US military cooperation in operations against drug trafficking", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/guatemala-us-military-drug-trafficking", time: "2026-05-28T20:35:10Z" },
       { title: "Netanyahu tells Israeli military to expand Gaza control to 70%", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-netanyahu-israel-military-gaza-control/", time: "2026-05-28T18:19:33Z" },
       { title: "Hegseth names investor who made anti-Islam remarks about Mamdani to Pentagon tech board", source: "The Hill", url: "https://thehill.com/policy/defense/5897757-pentagon-stib-shaun-maguire-appointment/", time: "2026-05-28T17:13:28Z" },
-      { title: "Experts warn about reach of this destructive invasive species threatening the West Coast", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/golden-mussels-invasion-warning-b2985259.html", time: "2026-05-28T16:14:39Z" },
     ]
   },
   {
@@ -360,6 +358,8 @@ const locations = [
     lat: -34.6037, lng: -58.3816,
     category: "economic",
     articles: [
+      { title: "Outrage in Argentina after two teen girls murdered as femicide crisis endures", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/04/argentina-teen-girls-murdered-femicide-crisis", time: "2026-06-04T16:55:33Z" },
+      { title: "Buenos Aires Herald nominated at the Martín Fierro News Website Awards", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/society/buenos-aires-herald-nominated-at-the-martin-fierro-news-website-awards", time: "2026-06-04T15:46:00Z" },
       { title: "Milei defends withdrawal of judicial nominee amid controversy", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/politics/milei-defends-withdrawal-of-judicial-nominee-amid-controversy", time: "2026-06-04T14:24:12Z" },
       { title: "Messi and ‘Dibu’ Martínez return to training as World Cup countdown begins", source: "Buenos Aires Herald", url: "https://buenosairesherald.com/sports/football/argentina/messi-and-dibu-martinez-return-to-training-as-world-cup-countdown-begins", time: "2026-06-04T14:03:47Z" },
       { title: "Murder of teenage girl sparks protests across Argentina – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/jun/04/argentina-protests-murder-of-teenage-girl-femicide-video", time: "2026-06-04T12:31:23Z" },
@@ -440,7 +440,6 @@ const locations = [
       { title: "US to designate two Brazilian gangs as ‘terrorist’ organisations", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/us-to-designate-two-brazilian-gangs-as-terrorist-organisations?traffic_source=rss", time: "2026-05-29T00:12:42Z" },
       { title: "Brazil's 2 biggest drug gangs labeled as foreign terrorist organizations", source: "ABC News", url: "https://abcnews.com/International/wireStory/us-state-department-labels-brazils-2-biggest-drug-133401860", time: "2026-05-28T22:25:20Z" },
       { title: "Brazil prosecutors target gangs with mega-operation against fraud and money laundering", source: "ABC News", url: "https://abcnews.com/International/wireStory/brazil-prosecutors-target-gangs-mega-operation-fraud-money-133399157", time: "2026-05-28T20:38:23Z" },
-      { title: "Neymar set to miss Brazil World Cup opener due to calf injury", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/5/28/neymar-out-of-brazil-world-cup-opener-due-to-calf-injury?traffic_source=rss", time: "2026-05-28T15:34:00Z" },
     ]
   },
   {
@@ -451,6 +450,7 @@ const locations = [
       { title: "Five Eyes alliance warns that China is targeting personnel via fake job ads", source: "ABC News", url: "https://abcnews.com/International/wireStory/eyes-alliance-warns-china-targeting-personnel-fake-job-133579207", time: "2026-06-04T11:30:50Z" },
       { title: "Trump allies renew Greenland, Canada takeover talk", source: "Axios", url: "https://www.axios.com/2026/06/03/trump-rubio-greenland-canada-takeover-talk", time: "2026-06-03T18:09:13Z" },
       { title: "Canada’s redistricting model could solve the US gerrymandering death spiral", source: "The Hill", url: "https://thehill.com/opinion/campaign/5906418-gerrymandering-canada-usa-comparison/", time: "2026-06-03T15:00:00Z" },
+      { title: "Canada formally requests 16-year renewal of North American free trade pact", source: "BBC News", url: "https://www.bbc.com/news/articles/cn9prr3w9nlo?at_medium=RSS&at_campaign=rss", time: "2026-06-03T01:40:44Z" },
       { title: "US ambassador to Canada shares Trump ‘51st State’ post", source: "The Hill", url: "https://thehill.com/policy/international/5906117-trump-hoekstra-canada-51st-state/", time: "2026-06-02T18:16:50Z" },
       { title: "Cricket Canada suspended over allegations of gang-linked corruption", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/02/cricket-canada-suspension", time: "2026-06-02T18:10:07Z" },
       { title: "Trump Again Refers to Canada as the ’51st State’ Hours Before Trade Talks", source: "New York Times", url: "https://www.nytimes.com/2026/06/02/world/canada/trump-canada-us-trade-usmca.html", time: "2026-06-02T17:29:15Z" },
@@ -529,6 +529,7 @@ const locations = [
     category: "political",
     articles: [
       { title: "Who is the Indian guru Venezuelan acting President Delcy Rodriguez follows?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/4/who-is-the-indian-guru-venezuelan-acting-president-delcy-rodriguez-follows?traffic_source=rss", time: "2026-06-04T11:04:16Z" },
+      { title: "Delcy Rodríguez visits India: Will oil talks lead to an energy deal?", source: "BBC News", url: "https://www.bbc.com/news/articles/czx29k97kzlo?at_medium=RSS&at_campaign=rss", time: "2026-06-04T05:28:25Z" },
       { title: "Trump broadens U.S. military footprint", source: "Axios", url: "https://www.axios.com/2026/06/04/us-military-action-trump-countries-targeted", time: "2026-06-04T01:59:25Z" },
       { title: "Trump loyalist Pulte gets oversight of vast U.S. intel", source: "Axios", url: "https://www.axios.com/2026/06/02/trump-us-intelligence-chief-bill-pulte-dni-data-access", time: "2026-06-02T20:29:09Z" },
       { title: "Venezuela’s ruling party unity cracks as Delcy Rodríguez shifts Chávez-era policies", source: "ABC News", url: "https://abcnews.com/International/wireStory/venezuelas-ruling-party-unity-cracks-delcy-rodrguez-shifts-133476692", time: "2026-06-01T09:06:28Z" },
@@ -538,7 +539,6 @@ const locations = [
       { title: "Guyanese soldier wounded in border gunfight with armed men in Venezuela", source: "ABC News", url: "https://abcnews.com/International/wireStory/guyanese-soldier-wounded-border-gunfight-armed-men-venezuela-133449349", time: "2026-05-30T14:52:53Z" },
       { title: "ICE agent arrested over shooting of Venezuelan man in US immigration raid", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/ice-agent-arrested-over-shooting-of-venezuelan-man-in-us-immigration-raid?traffic_source=rss", time: "2026-05-29T22:52:50Z" },
       { title: "ICE officer wanted for shooting a man during the Minneapolis crackdown is arrested in Texas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/minneapolis-donald-trump-minnesota-department-of-homeland-security-venezuelan-b2986172.html", time: "2026-05-29T16:55:19Z" },
-      { title: "Cuba's humanitarian crisis worsens as U.S. talks stall", source: "Axios", url: "https://www.axios.com/2026/05/28/cubas-fuel-shortage-humanitarian-crisis", time: "2026-05-28T16:01:59Z" },
     ]
   },
   {
@@ -557,6 +557,18 @@ const locations = [
     ]
   },
   {
+    name: "Kingston", country: "Jamaica",
+    lat: 18.0179, lng: -76.8099,
+    category: "political",
+    articles: [
+      { title: "Jamaican police officer charged with murder after woman shot during protest", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/04/jamaica-police-officer-charged-murder-woman-protest", time: "2026-06-04T16:38:28Z" },
+      { title: "Jamaica policeman charged with murder in killing of woman that sparked protests", source: "ABC News", url: "https://abcnews.com/International/wireStory/jamaica-policeman-charged-murder-killing-woman-sparked-protests-133586783", time: "2026-06-04T14:48:18Z" },
+      { title: "Policeman charged with murder of woman in Jamaica that sparked island protests", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jamaica-police-murder-protests-buju-granville-b2989759.html", time: "2026-06-04T14:32:55Z" },
+      { title: "Caribbean hot sauce producers warn of shortages and higher prices", source: "BBC News", url: "https://www.bbc.com/news/articles/cq8p1jy3vxlo?at_medium=RSS&at_campaign=rss", time: "2026-05-31T23:19:32Z" },
+      { title: "Bound by blood: new film highlights Jamaica’s outlawed obeah belief system", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/30/stew-pews-film-obeah-jamaica-magic-tradition", time: "2026-05-30T11:00:18Z" },
+    ]
+  },
+  {
     name: "Quito", country: "Ecuador",
     lat: -0.1807, lng: -78.4678,
     category: "security",
@@ -565,17 +577,6 @@ const locations = [
       { title: "Google wants to release up to 32 million ‘good’ mosquitoes in California and Florida", source: "The Hill", url: "https://thehill.com/policy/technology/5903579-google-mosquito-debugging-program/", time: "2026-06-01T12:11:32Z" },
       { title: "The secret ingredient tying your candy, makeup and medicines to Sudan's war", source: "LA Times", url: "https://www.latimes.com/world-nation/story/2026-05-31/secret-ingredient-tying-your-candy-makeup-medicines-to-sudans-war", time: "2026-05-31T10:00:00Z" },
       { title: "Sixth-grade student dies after rafting accident during school field trip: ‘There are no words’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/sag-harbor-student-dies-rafting-field-trip-poconos-b2986211.html", time: "2026-05-29T19:16:38Z" },
-    ]
-  },
-  {
-    name: "Kingston", country: "Jamaica",
-    lat: 18.0179, lng: -76.8099,
-    category: "political",
-    articles: [
-      { title: "Jamaica policeman charged with murder in killing of woman that sparked protests", source: "ABC News", url: "https://abcnews.com/International/wireStory/jamaica-policeman-charged-murder-killing-woman-sparked-protests-133586783", time: "2026-06-04T14:48:18Z" },
-      { title: "Policeman charged with murder of woman in Jamaica that sparked island protests", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jamaica-police-murder-protests-buju-granville-b2989759.html", time: "2026-06-04T14:32:55Z" },
-      { title: "Caribbean hot sauce producers warn of shortages and higher prices", source: "BBC News", url: "https://www.bbc.com/news/articles/cq8p1jy3vxlo?at_medium=RSS&at_campaign=rss", time: "2026-05-31T23:19:32Z" },
-      { title: "Bound by blood: new film highlights Jamaica’s outlawed obeah belief system", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/30/stew-pews-film-obeah-jamaica-magic-tradition", time: "2026-05-30T11:00:18Z" },
     ]
   },
   {
