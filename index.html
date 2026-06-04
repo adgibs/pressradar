@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:16 UTC, 4 Jun 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:08 UTC, 4 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">4 June 2026</div>
@@ -116,6 +116,10 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Military 'shoulder to shoulder' with northern leaders, IDF chief Zamir says at joint assessment", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898406", time: "2026-06-04T16:15:04Z" },
+      { title: "'I just want to apologize': UFC champion claims he was uninvited from White House UFC event", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-898405", time: "2026-06-04T15:58:33Z" },
+      { title: "In antisemitism crackdown, UK will bar NHS workers from wearing political badges", source: "Times of Israel", url: "https://www.timesofisrael.com/in-antisemitism-crackdown-uk-will-bar-nhs-workers-from-wearing-political-badges/", time: "2026-06-04T13:36:40Z" },
+      { title: "Want to help give Israeli children of reservists a chance to be kids this summer? - Sponsored Content", source: "Times of Israel", url: "https://toi.li/DJ6c2c", time: "2026-06-04T13:29:10Z" },
       { title: "Israel and Lebanon reach agreement, but ceasefire stalls", source: "NPR", url: "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire", time: "2026-06-04T13:00:18Z" },
       { title: "Rise in the East - Sponsored Content", source: "Times of Israel", url: "https://www.timesofisrael.com/spotlight/rise-in-the-east/", time: "2026-06-04T12:39:02Z" },
       { title: "Hezbollah drone struck IDF Northern Commander Rafi Milo's car in recent Lebanon visit", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898372", time: "2026-06-04T12:17:32Z" },
@@ -130,8 +134,10 @@ const locations = [
       { title: "Car bombing in broad daylight: Woman killed in suspected assassination on Ayalon Highway", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898355", time: "2026-06-04T09:59:28Z" },
       { title: "Woman killed in car explosion on Ayalon Highway near Tel Aviv; terrorism not suspected", source: "Times of Israel", url: "https://www.timesofisrael.com/woman-killed-in-car-explosion-on-ayalon-highway-near-tel-aviv-terrorism-not-suspected/", time: "2026-06-04T09:48:51Z" },
       { title: "Did Germany lose its UNSC seat because of support for Israel?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/4/did-germany-lose-its-unsc-seat-because-of-support-for-israel?traffic_source=rss", time: "2026-06-04T09:47:00Z" },
+      { title: "Trump says US will not return to war against Iran unless American troops are killed - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898347", time: "2026-06-04T08:55:38Z" },
       { title: "4 more charged in drive-by gel blaster gun shootings targeting Toronto Jews", source: "Times of Israel", url: "https://www.timesofisrael.com/4-more-charged-in-drive-by-gel-blaster-gun-shootings-targeting-toronto-jews/", time: "2026-06-04T08:41:56Z" },
       { title: "UK government pans protesters for ‘hijacking’ controversial death of stabbed student", source: "Times of Israel", url: "https://www.timesofisrael.com/uk-government-pans-protesters-for-hijacking-controversial-death-of-stabbed-student/", time: "2026-06-04T08:38:44Z" },
+      { title: "Thirty interceptions a minute: An Israeli startup's drone solution", source: "Jerusalem Post", url: "https://www.jpost.com/defense-and-tech/article-898341", time: "2026-06-04T08:34:26Z" },
       { title: "Sara Netanyahu took part in interview of military secretary candidate — reports", source: "Times of Israel", url: "https://www.timesofisrael.com/sara-netanyahu-took-part-in-interview-of-military-secretary-candidate-reports/", time: "2026-06-04T08:19:00Z" },
       { title: "Number of Nazi victims’ descendants given German citizenship jumped 61% in 2025", source: "Times of Israel", url: "https://www.timesofisrael.com/number-of-nazi-victims-descendants-given-german-citizenship-jumped-61-in-2025/", time: "2026-06-04T07:01:15Z" },
       { title: "Dutch court rejects appeal by Jewish group, rules Kanye West allowed to perform", source: "Times of Israel", url: "https://www.timesofisrael.com/dutch-court-rejects-appeal-by-jewish-group-rules-kanye-west-allowed-to-perform/", time: "2026-06-04T06:04:24Z" },
@@ -610,12 +616,6 @@ const locations = [
       { title: "Orthodox Jewish women in Israel may now take a rabbinic exam, like men", source: "NPR", url: "https://www.npr.org/2026/05/28/g-s1-124466/israel-orthodox-jewish-women-exam-religion", time: "2026-05-28T16:16:56Z" },
       { title: "Israeli court extends arrest of father suspected killing 9-year-old daughter in Arab-Israeli town", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-crime/2026-05-28/ty-article/.premium/israel-extends-arrest-of-father-who-allegedly-fatally-shot-9-year-old-daughter/0000019e-6ea8-d578-a3bf-febf7cf80002", time: "2026-05-28T15:54:35Z" },
       { title: "British Museum postpones lecture on Ancient Israel, citing security concerns amid feared protests,", source: "Times of Israel", url: "https://www.timesofisrael.com/british-museum-postpones-lecture-on-ancient-israel-citing-security-concerns-amid-feared-protests/", time: "2026-05-28T15:46:15Z" },
-      { title: "Israel breaks all contact with UN secretary general", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-breaks-all-contact-un-secretary-general", time: "2026-05-28T14:14:38Z" },
-      { title: "One killed in IDF airstrike in Beirut, reports say; 14 killed across Lebanon", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-05-28/ty-article/.premium/one-killed-in-idf-airstrike-in-beirut-reports-say-14-killed-across-lebanon/0000019e-6e5d-df34-a39e-7e7fbe5f0000", time: "2026-05-28T13:51:39Z" },
-      { title: "Three wounded by Swiss train station stabber allegedly yelling ‘Allahu akbar’", source: "Times of Israel", url: "https://www.timesofisrael.com/three-wounded-by-swiss-train-station-stabber-allegedly-yelling-allahu-akbar/", time: "2026-05-28T13:48:48Z" },
-      { title: "Senior Netanyahu aide Urich to be charged with security offenses over Bild leak", source: "Times of Israel", url: "https://www.timesofisrael.com/senior-netanyahu-aide-urich-to-be-charged-with-security-offenses-over-bild-leak/", time: "2026-05-28T13:48:41Z" },
-      { title: "IDF strikes Beirut for first time in 3 weeks, as offensive in Lebanon intensifies", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-strikes-beirut-for-first-time-in-3-weeks-as-offensive-in-lebanon-intensifies/", time: "2026-05-28T13:43:23Z" },
-      { title: "Israeli army orders evacuation of six more southern Lebanon towns", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-orders-evacuation-6-more-southern-lebanon-towns", time: "2026-05-28T13:24:31Z" },
     ]
   },
   {
@@ -623,7 +623,14 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Iran’s Quds Force chief Qaani demands Israel withdraw from Lebanon amid US-brokered deal", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898407", time: "2026-06-04T15:46:59Z" },
+      { title: "New video shows Iranian drone hitting airport in Kuwait", source: "CBS News", url: "https://www.cbsnews.com/video/new-video-shows-iranian-drone-hitting-airport-in-kuwait/", time: "2026-06-04T14:26:50Z" },
+      { title: "Iran footballers describe how war with US-Israel affects their World Cup", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/4/iran-footballers-describe-how-war-with-us-israel-affects-their-world-cup?traffic_source=rss", time: "2026-06-04T14:13:24Z" },
+      { title: "Oil execs warn Trump that Iran war will cause gas prices to spike within weeks due to dwindling supplies: report", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/oil-gas-prices-iran-war-trump-b2989615.html", time: "2026-06-04T14:07:18Z" },
+      { title: "Iran’s players open up on how war with US has affected World Cup preparations: ‘Our duty is to fight for our people’", source: "The Independent", url: "https://www.independent.co.uk/sport/football/world-cup/iran-war-us-world-cup-2026-ezatolahi-b2989708.html", time: "2026-06-04T13:57:35Z" },
       { title: "Lebanon burns foreign reserves to hold pound steady in face of devastating war losses - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898378", time: "2026-06-04T13:45:01Z" },
+      { title: "Iranian-French cartoonist and filmmaker Marjane Satrapi dies at 56", source: "Times of Israel", url: "https://www.timesofisrael.com/iranian-french-cartoonist-and-filmmaker-marjane-satrapi-dies-at-56/", time: "2026-06-04T13:36:29Z" },
+      { title: "Oscar-nominated Persepolis author Marjane Satrapi dies aged 56", source: "BBC News", url: "https://www.bbc.com/news/articles/c4g0nnj51jyo?at_medium=RSS&at_campaign=rss", time: "2026-06-04T13:29:05Z" },
       { title: "Marjane Satrapi, the Author of ‘Persepolis,’ Dies at 56", source: "New York Times", url: "https://www.nytimes.com/2026/06/04/world/middleeast/marjane-satrapi-dead.html", time: "2026-06-04T12:51:06Z" },
       { title: "Trump condemns 'unpatriotic' US House vote to end war on Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-condemns-unpatriotic-us-house-vote-end-war-iran", time: "2026-06-04T12:20:37Z" },
       { title: "Iranian-French creator of 'Persepolis,' Marjane Satrapi, has 'died of sadness' at 56", source: "Haaretz", url: "https://www.haaretz.com/life/2026-06-04/ty-article/.premium/creator-of-persepolis-marjane-satrapi-has-died-of-sadness-at-56/0000019e-9278-db6c-adff-bafebdc30000", time: "2026-06-04T12:07:24Z" },
@@ -1057,11 +1064,6 @@ const locations = [
       { title: "IRGC says Hamas commanders were part of 'the Islamic Resistance of Palestine'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-says-killings-hamas-commanders-resistance-palestine", time: "2026-05-28T16:47:54Z" },
       { title: "US senator says Trump’s Oman remarks show Iran war ‘off the rails’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-senator-says-trumps-oman-remarks-show-iran-war-rails", time: "2026-05-28T15:24:34Z" },
       { title: "U.S. military accuses Iran of ceasefire violation after Kuwait comes under missile attack", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/us-military-accuses-iran-of-ceasefire-violation-after-kuwait-comes-under-missile-attack", time: "2026-05-28T15:18:45Z" },
-      { title: "China's amb to 'Post': Beijing pushes Iran from 'extremist path' after Trump-Xi summit - interview", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897653", time: "2026-05-28T14:46:12Z" },
-      { title: "Housing snapshot May 2026: Despite Iran war, home prices rise 0.3% in February-March", source: "Times of Israel", url: "https://www.timesofisrael.com/housing-snapshot-may-2026-despite-iran-war-home-prices-rise-0-3-in-february-march/", time: "2026-05-28T13:53:12Z" },
-      { title: "'Premature and disconnected': Gulf states see Trump Abraham Accords demand as empty bargaining chip", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897640", time: "2026-05-28T13:47:33Z" },
-      { title: "Iran says it attacked U.S. base following renewed American strikes", source: "CBS News", url: "https://www.cbsnews.com/video/iran-says-it-attacked-us-base-following-renewed-american-strikes/", time: "2026-05-28T13:36:11Z" },
-      { title: "IRGC threatens ‘firm response’ if US attacks continue", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-threatens-firm-response-if-us-attacks-continue", time: "2026-05-28T13:29:56Z" },
     ]
   },
   {
@@ -1069,6 +1071,11 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Islamic Jihad accuses Israel of continued violations of Gaza ceasefire", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260604-islamic-jihad-accuses-israel-of-continued-violations-of-gaza-ceasefire/", time: "2026-06-04T15:02:05Z" },
+      { title: "'Acts of revenge': Israel arrests Palestinian women footballers and students", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/acts-revenge-israel-arrests-palestinian-women-footballers-and-students", time: "2026-06-04T14:58:25Z" },
+      { title: "Polanski and Corbyn join calls for Britons who served in Israeli army to be tracked", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/polanski-and-corbyn-join-calls-britons-who-served-israeli-army-be", time: "2026-06-04T14:22:34Z" },
+      { title: "Gaza: Palestinians bid farewell to nine killed in dawn airstrike", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260604-gaza-palestinians-bid-farewell-to-nine-killed-in-dawn-airstrike/", time: "2026-06-04T14:01:46Z" },
+      { title: "Knesset passes law granting tax benefits to dozens of West Bank settlements", source: "Times of Israel", url: "https://www.timesofisrael.com/knesset-passes-law-granting-tax-benefits-to-dozens-of-west-bank-settlements/", time: "2026-06-04T13:36:49Z" },
       { title: "Gaza after Hamas: Why the region needs a new civil vision - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898222", time: "2026-06-04T13:06:12Z" },
       { title: "Supreme Court rules Israel’s ban on Red Cross visits to detainees unlawful", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-898373", time: "2026-06-04T12:44:55Z" },
       { title: "Israel’s Smotrich announces plan for 2,162 homes in occupied West Bank", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/4/israels-smotrich-announces-plan-for-2162-homes-in-occupied-west-bank?traffic_source=rss", time: "2026-06-04T12:06:17Z" },
@@ -1285,10 +1292,6 @@ const locations = [
       { title: "13 signs that Israel missed: How disaster unfolded the night before October 7", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-28/ty-article-magazine/.highlight/13-signs-that-israel-missed-how-disaster-unfolded-the-night-before-october-7/0000019e-67fc-dab6-a39f-7ffea3310000", time: "2026-05-28T15:41:41Z" },
       { title: "Arsenal fired me on Christmas Eve for opposing Israel. This is why I'm suing | Mark Bonnick", source: "Middle East Eye", url: "https://www.middleeasteye.net/video/arsenal-fired-me-christmas-eve-opposing-israel-why-im-suing-mark-bonnick", time: "2026-05-28T15:38:16Z" },
       { title: "Crackdown on culture: Israel censoring Palestinian voices", source: "France 24", url: "https://www.france24.com/en/tv-shows/middle-east-matters/20260528-crackdown-on-culture-israel-censoring-palestinian-voices", time: "2026-05-28T15:34:59Z" },
-      { title: "Coast Guard plans new search for Michigan woman who went missing in the Bahamas", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/lynette-hooker-bahamas-coast-guard-search-b2985199.html", time: "2026-05-28T14:55:31Z" },
-      { title: "EU sanctions 'extremist' Israeli settlers", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/eu-sanctions-israeli-settlers", time: "2026-05-28T14:50:10Z" },
-      { title: "Netanyahu orders military to take control of '70 percent' of Gaza", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-orders-military-take-control-70-percent-gaza", time: "2026-05-28T14:43:16Z" },
-      { title: "New evidence contradicts Brian Hooker's account of night his wife disappeared", source: "CBS News", url: "https://www.cbsnews.com/video/new-evidence-contradicts-brian-hookers-account-night-wife-disappeared/", time: "2026-05-28T14:01:38Z" },
     ]
   },
   {
@@ -1296,6 +1299,9 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "We cannot miss this opportunity to open Hormuz permanently - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898240", time: "2026-06-04T15:00:00Z" },
+      { title: "Lebanon’s rulers have surrendered the country to Israel - this is no ceasefire", source: "Middle East Eye", url: "https://www.middleeasteye.net/opinion/lebanon-rulers-surrendered-country-israel-this-is-no-ceasefire", time: "2026-06-04T14:05:08Z" },
+      { title: "Iran’s Revolutionary Guard says opponents must adapt to ‘new rules’ in Strait of Hormuz", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260604-irans-revolutionary-guard-says-opponents-must-adapt-to-new-rules-in-strait-of-hormuz/", time: "2026-06-04T13:48:29Z" },
       { title: "Iranian press review: Iran’s inaction over Israel’s war in Lebanon questioned by critics", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/iranian-press-review-critics-question-irans-inaction-over-israels-war-lebanon", time: "2026-06-04T12:41:02Z" },
       { title: "Oman resists US pressure to break ties with Iran over strait of Hormuz", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/04/oman-resists-us-pressure-to-break-ties-with-iran-over-strait-of-hormuz", time: "2026-06-04T04:00:24Z" },
       { title: "Trump says Strait of Hormuz will reopen once deal is signed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-strait-hormuz-will-reopen-once-deal-signed", time: "2026-06-03T21:55:37Z" },
@@ -1447,8 +1453,6 @@ const locations = [
       { title: "Oil prices rebound as markets watch war on Iran", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/oil-prices-rebound-markets-watch-war-iran", time: "2026-05-28T16:05:44Z" },
       { title: "Trump circulates draft Iran peace deal to Israel and allies", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/trump-circulates-draft-iran-peace-deal-israeli-and-allies", time: "2026-05-28T15:45:42Z" },
       { title: "Report: U.S. and Iran agree on truce deal pending Trump's approval, sources say", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-05-28/ty-article/.premium/report-u-s-and-iran-agree-on-truce-deal-pending-trumps-approval-sources-say/0000019e-6f0e-df34-a39e-7f2e1ac20000", time: "2026-05-28T15:12:56Z" },
-      { title: "US threatens to ‘aggressively’ target Oman if it facilitates tolls for Hormuz", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-threatens-aggressively-target-oman-if-it-facilities-tolls-hormuz", time: "2026-05-28T14:58:10Z" },
-      { title: "US attacks Bandar Abbas again: Why is the port so important for Iran?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/us-attacks-bandar-abbas-again-why-is-the-port-so-important-for-iran?traffic_source=rss", time: "2026-05-28T14:45:42Z" },
     ]
   },
   {
@@ -1457,6 +1461,11 @@ const locations = [
     category: "strikes",
     articles: [
       { title: "Hezbollah chief Qassem: Northern Israel at risk while Lebanon faces bombings", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898404", time: "2026-06-04T15:28:46Z" },
+      { title: "Lebanon’s latest truce: What is different from the April agreement?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/4/lebanons-latest-truce-what-is-different-from-the-april-agreement?traffic_source=rss", time: "2026-06-04T14:58:15Z" },
+      { title: "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon", source: "BBC News", url: "https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss", time: "2026-06-04T14:54:22Z" },
+      { title: "Hezbollah rejects Lebanon cease-fire as Israeli forces prepare for 'next stage'", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/lebanonnews/2026-06-04/ty-article/.premium/hezbollah-rejects-lebanon-cease-fire-as-israeli-forces-prepare-for-next-stage/0000019e-92c0-db6c-adff-bafe1ae70000", time: "2026-06-04T14:18:24Z" },
+      { title: "Lebanese PM says army to start deploying in 'pilot zones' in south", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/lebanese-pm-says-army-start-deploying-pilot-zones-south", time: "2026-06-04T14:18:13Z" },
+      { title: "Hezbollah chief demands 'comprehensive' ceasefire and Israeli withdrawal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-chief-demands-comprehensive-ceasefire-and-israeli-withdrawal", time: "2026-06-04T13:20:51Z" },
       { title: "Iran says 'no tangible progress' in talks; Hezbollah rejects Israel-Lebanon truce", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-us-war-talks-no-progress-israel-lebanon-hezbollah/", time: "2026-06-04T13:10:42Z" },
       { title: "Hezbollah chief says northern Israel not safe as long as Lebanese villages are bombed", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-chief-says-northern-israel-not-safe-long-lebanese-villages-are", time: "2026-06-04T12:34:58Z" },
       { title: "Daily Briefing June 4 – Haredi-wrought ‘Kristallnacht’ smashes red lines at justice’s home", source: "Times of Israel", url: "https://www.timesofisrael.com/daily-briefing-june-4-haredi-wrought-kristallnacht-smashes-red-lines-at-justices-home/", time: "2026-06-04T12:08:04Z" },
@@ -1596,8 +1605,6 @@ const locations = [
       { title: "Israel Strikes Beirut, Expanding Offensive in Lebanon", source: "New York Times", url: "https://www.nytimes.com/2026/05/28/world/middleeast/israel-strikes-beirut-lebanon.html", time: "2026-05-28T17:15:14Z" },
       { title: "Smoke rises over Beirut after Israeli strike", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/28/smoke-rises-over-beirut-after-israeli-strike?traffic_source=rss", time: "2026-05-28T16:42:41Z" },
       { title: "Australian woman charged over travel to Syria to join Islamic State", source: "NPR", url: "https://www.npr.org/2026/05/28/g-s1-124669/australian-woman-charged-over-travel-to-syria-to-join-islamic-state", time: "2026-05-28T16:33:04Z" },
-      { title: "The ceasefire framework is exposing Lebanon’s institutional collapse", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260528-the-ceasefire-framework-is-exposing-lebanons-institutional-collapse/", time: "2026-05-28T14:08:48Z" },
-      { title: "Targeted killings haven’t improved Israel’s strategic regional position — experts", source: "Times of Israel", url: "https://www.timesofisrael.com/targeted-killings-havent-improved-israels-strategic-regional-position-experts/", time: "2026-05-28T13:41:55Z" },
     ]
   },
   {
@@ -1711,8 +1718,6 @@ const locations = [
       { title: "Key inflation gauge worsens as Americans' income and spending power erodes", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/economy/key-inflation-gauge-worsens-as-americans-income-and-spending-power-erodes", time: "2026-05-28T16:56:19Z" },
       { title: "Pakistan foreign minister to meet Rubio in Washington", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pakistan-foreign-minister-meet-rubio-washington", time: "2026-05-28T16:26:41Z" },
       { title: "Vance and Rubio are neck-and-neck for Republican nomination in 2028 new poll shows", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/marco-rubio-jd-vance-2028-run-b2985288.html", time: "2026-05-28T15:40:02Z" },
-      { title: "Donald Trump shares draft Iran peace agreement with Israel and other allies", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/28/donald-trump-shares-draft-iran-peace-agreement-with-israel-and-other-allies", time: "2026-05-28T14:31:33Z" },
-      { title: "WATCH LIVE: Vance delivers U.S. Air Force Academy commencement address", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/politics/watch-live-vance-delivers-u-s-air-force-academy-commencement-address", time: "2026-05-28T13:28:25Z" },
     ]
   },
   {
@@ -1810,7 +1815,55 @@ const locations = [
       { title: "FM Sa’ar Heads to Fiji as Israel Prepares Suva Embassy Opening", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897708", time: "2026-05-29T00:09:35Z" },
       { title: "Jerusalem real estate event headed by Moshe Lion set to be protested against in Manhattan", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/antisemitism/article-897692", time: "2026-05-28T20:58:13Z" },
       { title: "Italy is fuming after Ben Gvir’s flotilla stunt. Is Israel losing a top European ally?", source: "Times of Israel", url: "https://www.timesofisrael.com/italy-is-fuming-after-ben-gvirs-flotilla-stunt-is-israel-losing-a-top-european-ally/", time: "2026-05-28T15:45:35Z" },
-      { title: "The EU’s fragmented focus rewards colonial violence", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260528-the-eus-fragmented-focus-rewards-colonial-violence/", time: "2026-05-28T13:39:14Z" },
+    ]
+  },
+  {
+    name: "Muscat", country: "Oman",
+    lat: 23.588, lng: 58.3829,
+    category: "evacuation",
+    articles: [
+      { title: "FBI manhunt for woman accused of faking terminal brain cancer to scam family and friends out of thousands", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/vanessa-orourke-brain-cancer-fbi-most-wanted-b2989648.html", time: "2026-06-04T14:37:24Z" },
+      { title: "Policeman charged with murder of woman in Jamaica that sparked island protests", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/jamaica-police-murder-protests-buju-granville-b2989759.html", time: "2026-06-04T14:32:55Z" },
+      { title: "Ex-Trump spokeswoman leads chorus of critics blasting president for ‘misogynistic’ attack on CNN’s Kaitlan Collins", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-kaitlan-collins-comments-reaction-b2989614.html", time: "2026-06-04T13:31:08Z" },
+      { title: "Grief fills courtroom as serial killer suspect is arraigned in fifth woman’s death", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/jesse-calhoun-serial-killer-portland-victims-b2989334.html", time: "2026-06-04T07:48:40Z" },
+      { title: "Louisiana church sparks backlash by soliciting prayers for pastor convicted of sexual assault - but nothing for his victims", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/louisiana-church-anthony-odiong-sexual-assault-b2989074.html", time: "2026-06-03T20:50:24Z" },
+      { title: "Woman hits slot machine jackpot at casino. Only problem, she was banned for life", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/woman-jackpot-casino-banned-life-pennsylvania-b2988339.html", time: "2026-06-02T22:04:45Z" },
+      { title: "European Union strikes migration deal for more deportations and detention centers abroad", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/european-union-strikes-migration-deal-for-more-deportations-and-detention-centers-abroad", time: "2026-06-02T17:41:44Z" },
+      { title: "Intisar Shanib becomes first woman to head football club in Libya", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/2/intisar-shanib-first-woman-to-become-president-of-libyan-sports-club?traffic_source=rss", time: "2026-06-02T16:26:45Z" },
+      { title: "North Carolina cop fired after being caught on camera repeatedly punching woman in the head during arrest", source: "The Independent", url: "https://www.independent.co.uk/tv/news/north-carolina-shelby-police-officer-assault-video-b2988028.html", time: "2026-06-02T15:41:34Z" },
+      { title: "Pope names Mexican-American as first woman to lead Vatican department", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pope-leo-vatican-maria-montserrat-alvarado-b2987961.html", time: "2026-06-02T13:01:49Z" },
+      { title: "Archaeologists digging beneath Notre Dame uncover 2,000 years of history", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/notre-dame-cathedral-dig-archelogist-b2987919.html", time: "2026-06-02T12:02:19Z" },
+      { title: "Ancient coin, mysterious markings found under Notre Dame cathedral", source: "CBS News", url: "https://www.cbsnews.com/news/notre-dame-cathedral-dig-of-the-century-treasures-found/", time: "2026-06-02T10:45:58Z" },
+      { title: "Woman assaulted by Dutch police at asylum centre speaks to Al Jazeera", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/2/woman-assaulted-by-dutch-police-at-asylum-centre-speaks-to-al-jazeera?traffic_source=rss", time: "2026-06-02T03:07:55Z" },
+      { title: "6/1: CBS Evening News", source: "CBS News", url: "https://www.cbsnews.com/video/060126-cbs-evening-news/", time: "2026-06-01T22:30:00Z" },
+      { title: "Woman killed in ‘random’ stabbing on MARTA train in Atlanta", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/marta-stabbing-margaret-swan-john-elijah-matthews-atlanta-b2987567.html", time: "2026-06-01T20:58:34Z" },
+      { title: "‘Aggressive’ wild turkeys attack woman, 83, and dog in separate incidents sparking police warnings", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/wild-turkeys-alameda-police-warning-b2987358.html", time: "2026-06-01T17:53:22Z" },
+      { title: "British woman falls to death while hiking in Pyrenees mountains", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pyrenees-mountains-death-british-woman-b2987388.html", time: "2026-06-01T16:26:11Z" },
+      { title: "Human remains found by hiker in New Mexico is woman who went missing nearly a year ago", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/missing-woman-hiker-new-mexico-body-melissa-casias-b2987185.html", time: "2026-06-01T12:28:19Z" },
+      { title: "Taiwan opposition leader aims to meet Trump on US trip, discuss avoiding conflict with China", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897967", time: "2026-06-01T11:25:55Z" },
+      { title: "The art of the unpaid denarius: Tax evasion in ancient Rome", source: "Haaretz", url: "https://www.haaretz.com/archaeology/2026-05-31/ty-article-magazine/the-art-of-the-unpaid-denarius-tax-evasion-in-ancient-rome/0000019e-7df2-d4d4-a59e-7df39c7c0000", time: "2026-05-31T15:47:28Z" },
+      { title: "Ukraine-Russia war latest: Romanian investigation shows Moscow was behind drone strike after Putin’s denial", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-05-31T15:19:37Z" },
+      { title: "Putin says drone that crashed in Romania likely Ukrainian", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/putin-says-drone-that-crashed-in-romania-likely-ukrainian?traffic_source=rss", time: "2026-05-30T20:23:33Z" },
+      { title: "Ukraine-Russia war latest: Zelensky fears ‘massive’ new attack while Putin reacts to Romania drone strike", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-romania-drone-attack-b2986368.html", time: "2026-05-30T07:48:14Z" },
+      { title: "Rare, intact ancient Roman burial unearthed during excavations in eastern Croatia - report", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-897717", time: "2026-05-29T19:01:10Z" },
+      { title: "Romania to expel Russian consul after residential drone strike", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/romania-to-expel-russian-consul-after-residential-drone-strike?traffic_source=rss", time: "2026-05-29T18:18:03Z" },
+      { title: "The UN has to start taking more risks, secretary general candidate says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/un-secretary-general-guterres-grynspan-b2986075.html", time: "2026-05-29T16:53:53Z" },
+      { title: "Putin pushes Nato to the brink with drone attack in Romania", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/russia-romania-drone-attack-nato-putin-b2985892.html", time: "2026-05-29T16:45:31Z" },
+      { title: "79-year-old woman accused of killing stepfather 50 years ago and living in his home ever since", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/pima-county-arizona-cold-case-arrest-b2986031.html", time: "2026-05-29T15:12:17Z" },
+      { title: "Nato vows to defend ‘every inch’ of territory after Russian drone hits Romania", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/nato-vows-defend-every-inch-territory-after-russian-drone-hits-romania", time: "2026-05-29T14:07:10Z" },
+      { title: "France summons Russian ambassador over drone crash in Romania", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/france-summons-russian-ambassador-over-drone-crash-romania", time: "2026-05-29T13:39:35Z" },
+      { title: "Russian drone targeting Ukraine crashes into Romanian apartment building", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-drone-targeting-ukraine-crashes-into-romanian-apartment-building", time: "2026-05-29T13:23:43Z" },
+      { title: "Russian drone launched against Ukraine crashes in Romania, injuring 2", source: "NPR", url: "https://www.npr.org/2026/05/29/g-s1-124773/russian-drone-romania", time: "2026-05-29T10:32:10Z" },
+      { title: "NATO condemns Russia after drone crashes into Romanian residential building", source: "Jerusalem Post", url: "https://www.jpost.com/international/internationalrussia-ukraine-war/article-897732", time: "2026-05-29T08:32:13Z" },
+      { title: "Drone hits Romania apartment block during Russian attack on neighboring Ukraine", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russian-drone-hits-romania-apartment-block-nato-ukraine-rcna347495", time: "2026-05-29T07:53:44Z" },
+      { title: "NATO states slam Russia after drone crashes in Romania", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/nato-states-slam-russia-after-drone-crashes-in-romania?traffic_source=rss", time: "2026-05-29T07:50:50Z" },
+      { title: "Drone strikes apartment building in NATO member Romania as Russia attacks neighboring Ukraine", source: "Fox News", url: "https://www.foxnews.com/world/drone-strikes-apartment-building-nato-member-romania-russia-attacks-neighboring-ukraine", time: "2026-05-29T07:15:00Z" },
+      { title: "Australian mother jailed for poisoning relatives with toxic mushrooms to appeal conviction", source: "Sky News", url: "https://news.sky.com/story/australian-mother-jailed-for-poisoning-relatives-with-death-cap-mushrooms-to-appeal-conviction-13548954", time: "2026-05-29T06:30:00Z" },
+      { title: "Ukraine-Russia war latest: Russian drone strikes apartment building in Nato member Romania", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-drone-attack-romania-nato-news-b2985662.html", time: "2026-05-29T04:33:22Z" },
+      { title: "Russian drone strikes Romanian apartment building, Romania says", source: "CBS News", url: "https://www.cbsnews.com/news/russian-drone-strikes-romanian-apartment-building/", time: "2026-05-29T03:11:52Z" },
+      { title: "Charges dropped against woman with no right hand who went viral after being pulled over", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/woman-one-hand-phone-pulled-over-viral-video-b2985303.html", time: "2026-05-28T15:49:21Z" },
+      { title: "US Treasury threatens Oman with sanctions over Hormuz Strait", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/us-treasury-threatens-oman-with-sanctions-over-hormuz-strait?traffic_source=rss", time: "2026-05-28T15:44:47Z" },
+      { title: "Andrew Tate faces escalated charges in Romania for ‘instigating hatred against women’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/andrew-tate-investigation-romania-hate-speech-women-b2985384.html", time: "2026-05-28T15:44:29Z" },
     ]
   },
   {
@@ -1818,6 +1871,7 @@ const locations = [
     lat: 33.2705, lng: 35.1968,
     category: "strikes",
     articles: [
+      { title: "Iranian press review: Iran’s inaction over Israel’s war in Lebanon questioned by critics", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-press-review-irans-inaction-over-israels-war-lebanon-questioned", time: "2026-06-04T14:40:26Z" },
       { title: "Israeli strikes near Tyre hospital put youngest patient at risk", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/3/israeli-strikes-near-tyre-hospital-put-youngest-patient-at-risk?traffic_source=rss", time: "2026-06-03T19:37:54Z" },
       { title: "Israeli strikes hit several towns in southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-hit-several-towns-southern-lebanon", time: "2026-06-03T16:44:41Z" },
       { title: "Three Lebanese hospitals hit by Israeli forces in under a week", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/03/lebanese-hospitals-hit-by-israeli-forces", time: "2026-06-03T16:01:24Z" },
@@ -1861,52 +1915,6 @@ const locations = [
     ]
   },
   {
-    name: "Muscat", country: "Oman",
-    lat: 23.588, lng: 58.3829,
-    category: "evacuation",
-    articles: [
-      { title: "Grief fills courtroom as serial killer suspect is arraigned in fifth woman’s death", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/jesse-calhoun-serial-killer-portland-victims-b2989334.html", time: "2026-06-04T07:48:40Z" },
-      { title: "Louisiana church sparks backlash by soliciting prayers for pastor convicted of sexual assault - but nothing for his victims", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/louisiana-church-anthony-odiong-sexual-assault-b2989074.html", time: "2026-06-03T20:50:24Z" },
-      { title: "Woman hits slot machine jackpot at casino. Only problem, she was banned for life", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/woman-jackpot-casino-banned-life-pennsylvania-b2988339.html", time: "2026-06-02T22:04:45Z" },
-      { title: "European Union strikes migration deal for more deportations and detention centers abroad", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/european-union-strikes-migration-deal-for-more-deportations-and-detention-centers-abroad", time: "2026-06-02T17:41:44Z" },
-      { title: "Intisar Shanib becomes first woman to head football club in Libya", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/2/intisar-shanib-first-woman-to-become-president-of-libyan-sports-club?traffic_source=rss", time: "2026-06-02T16:26:45Z" },
-      { title: "North Carolina cop fired after being caught on camera repeatedly punching woman in the head during arrest", source: "The Independent", url: "https://www.independent.co.uk/tv/news/north-carolina-shelby-police-officer-assault-video-b2988028.html", time: "2026-06-02T15:41:34Z" },
-      { title: "Pope names Mexican-American as first woman to lead Vatican department", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pope-leo-vatican-maria-montserrat-alvarado-b2987961.html", time: "2026-06-02T13:01:49Z" },
-      { title: "Archaeologists digging beneath Notre Dame uncover 2,000 years of history", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/notre-dame-cathedral-dig-archelogist-b2987919.html", time: "2026-06-02T12:02:19Z" },
-      { title: "Ancient coin, mysterious markings found under Notre Dame cathedral", source: "CBS News", url: "https://www.cbsnews.com/news/notre-dame-cathedral-dig-of-the-century-treasures-found/", time: "2026-06-02T10:45:58Z" },
-      { title: "Woman assaulted by Dutch police at asylum centre speaks to Al Jazeera", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/2/woman-assaulted-by-dutch-police-at-asylum-centre-speaks-to-al-jazeera?traffic_source=rss", time: "2026-06-02T03:07:55Z" },
-      { title: "6/1: CBS Evening News", source: "CBS News", url: "https://www.cbsnews.com/video/060126-cbs-evening-news/", time: "2026-06-01T22:30:00Z" },
-      { title: "Woman killed in ‘random’ stabbing on MARTA train in Atlanta", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/marta-stabbing-margaret-swan-john-elijah-matthews-atlanta-b2987567.html", time: "2026-06-01T20:58:34Z" },
-      { title: "‘Aggressive’ wild turkeys attack woman, 83, and dog in separate incidents sparking police warnings", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/wild-turkeys-alameda-police-warning-b2987358.html", time: "2026-06-01T17:53:22Z" },
-      { title: "British woman falls to death while hiking in Pyrenees mountains", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/pyrenees-mountains-death-british-woman-b2987388.html", time: "2026-06-01T16:26:11Z" },
-      { title: "Human remains found by hiker in New Mexico is woman who went missing nearly a year ago", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/missing-woman-hiker-new-mexico-body-melissa-casias-b2987185.html", time: "2026-06-01T12:28:19Z" },
-      { title: "Taiwan opposition leader aims to meet Trump on US trip, discuss avoiding conflict with China", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897967", time: "2026-06-01T11:25:55Z" },
-      { title: "The art of the unpaid denarius: Tax evasion in ancient Rome", source: "Haaretz", url: "https://www.haaretz.com/archaeology/2026-05-31/ty-article-magazine/the-art-of-the-unpaid-denarius-tax-evasion-in-ancient-rome/0000019e-7df2-d4d4-a59e-7df39c7c0000", time: "2026-05-31T15:47:28Z" },
-      { title: "Ukraine-Russia war latest: Romanian investigation shows Moscow was behind drone strike after Putin’s denial", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-05-31T15:19:37Z" },
-      { title: "Putin says drone that crashed in Romania likely Ukrainian", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/putin-says-drone-that-crashed-in-romania-likely-ukrainian?traffic_source=rss", time: "2026-05-30T20:23:33Z" },
-      { title: "Ukraine-Russia war latest: Zelensky fears ‘massive’ new attack while Putin reacts to Romania drone strike", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-romania-drone-attack-b2986368.html", time: "2026-05-30T07:48:14Z" },
-      { title: "Rare, intact ancient Roman burial unearthed during excavations in eastern Croatia - report", source: "Jerusalem Post", url: "https://www.jpost.com/archaeology/article-897717", time: "2026-05-29T19:01:10Z" },
-      { title: "Romania to expel Russian consul after residential drone strike", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/romania-to-expel-russian-consul-after-residential-drone-strike?traffic_source=rss", time: "2026-05-29T18:18:03Z" },
-      { title: "The UN has to start taking more risks, secretary general candidate says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/un-secretary-general-guterres-grynspan-b2986075.html", time: "2026-05-29T16:53:53Z" },
-      { title: "Putin pushes Nato to the brink with drone attack in Romania", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/russia-romania-drone-attack-nato-putin-b2985892.html", time: "2026-05-29T16:45:31Z" },
-      { title: "79-year-old woman accused of killing stepfather 50 years ago and living in his home ever since", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/pima-county-arizona-cold-case-arrest-b2986031.html", time: "2026-05-29T15:12:17Z" },
-      { title: "Nato vows to defend ‘every inch’ of territory after Russian drone hits Romania", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/nato-vows-defend-every-inch-territory-after-russian-drone-hits-romania", time: "2026-05-29T14:07:10Z" },
-      { title: "France summons Russian ambassador over drone crash in Romania", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/france-summons-russian-ambassador-over-drone-crash-romania", time: "2026-05-29T13:39:35Z" },
-      { title: "Russian drone targeting Ukraine crashes into Romanian apartment building", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/russian-drone-targeting-ukraine-crashes-into-romanian-apartment-building", time: "2026-05-29T13:23:43Z" },
-      { title: "Russian drone launched against Ukraine crashes in Romania, injuring 2", source: "NPR", url: "https://www.npr.org/2026/05/29/g-s1-124773/russian-drone-romania", time: "2026-05-29T10:32:10Z" },
-      { title: "NATO condemns Russia after drone crashes into Romanian residential building", source: "Jerusalem Post", url: "https://www.jpost.com/international/internationalrussia-ukraine-war/article-897732", time: "2026-05-29T08:32:13Z" },
-      { title: "Drone hits Romania apartment block during Russian attack on neighboring Ukraine", source: "NBC News", url: "https://www.nbcnews.com/world/ukraine/russian-drone-hits-romania-apartment-block-nato-ukraine-rcna347495", time: "2026-05-29T07:53:44Z" },
-      { title: "NATO states slam Russia after drone crashes in Romania", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/nato-states-slam-russia-after-drone-crashes-in-romania?traffic_source=rss", time: "2026-05-29T07:50:50Z" },
-      { title: "Drone strikes apartment building in NATO member Romania as Russia attacks neighboring Ukraine", source: "Fox News", url: "https://www.foxnews.com/world/drone-strikes-apartment-building-nato-member-romania-russia-attacks-neighboring-ukraine", time: "2026-05-29T07:15:00Z" },
-      { title: "Australian mother jailed for poisoning relatives with toxic mushrooms to appeal conviction", source: "Sky News", url: "https://news.sky.com/story/australian-mother-jailed-for-poisoning-relatives-with-death-cap-mushrooms-to-appeal-conviction-13548954", time: "2026-05-29T06:30:00Z" },
-      { title: "Ukraine-Russia war latest: Russian drone strikes apartment building in Nato member Romania", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-drone-attack-romania-nato-news-b2985662.html", time: "2026-05-29T04:33:22Z" },
-      { title: "Russian drone strikes Romanian apartment building, Romania says", source: "CBS News", url: "https://www.cbsnews.com/news/russian-drone-strikes-romanian-apartment-building/", time: "2026-05-29T03:11:52Z" },
-      { title: "Charges dropped against woman with no right hand who went viral after being pulled over", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/woman-one-hand-phone-pulled-over-viral-video-b2985303.html", time: "2026-05-28T15:49:21Z" },
-      { title: "US Treasury threatens Oman with sanctions over Hormuz Strait", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/us-treasury-threatens-oman-with-sanctions-over-hormuz-strait?traffic_source=rss", time: "2026-05-28T15:44:47Z" },
-      { title: "Andrew Tate faces escalated charges in Romania for ‘instigating hatred against women’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/andrew-tate-investigation-romania-hate-speech-women-b2985384.html", time: "2026-05-28T15:44:29Z" },
-    ]
-  },
-  {
     name: "Brussels", country: "Belgium",
     lat: 50.8503, lng: 4.3517,
     category: "strikes",
@@ -1930,7 +1938,6 @@ const locations = [
       { title: "Philippine court orders senator's arrest for largescale corruption; he surrenders and posts bail", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/senate-manila-netherlands-rodrigo-duterte-house-of-representatives-b2985885.html", time: "2026-05-29T10:43:37Z" },
       { title: "Kristi Noem’s replacement at DHS is still using controversial jet that helped end her tenure and is ‘barely in the building,’ report says", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/markwayne-mullin-jet-dhs-kristi-noem-b2985374.html", time: "2026-05-28T18:14:47Z" },
       { title: "Russia says sending more US forces to Poland could lead to 'qualitative escalation'", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-897666", time: "2026-05-28T16:43:27Z" },
-      { title: "Nato to significantly bolster eastern flank against Russia after Putin’s threats", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/nato-german-dutch-eastern-flank-russia-b2985268.html", time: "2026-05-28T13:39:14Z" },
     ]
   },
   {
@@ -2038,7 +2045,6 @@ const locations = [
       { title: "Explosion reported on cargo vessel in Gulf", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/explosion-reported-cargo-vessel-gulf", time: "2026-06-01T15:12:55Z" },
       { title: "Trump consolidates Middle East policy by appointing Special Envoy Tom Barrack to Iraq and Syria", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-897991", time: "2026-06-01T14:43:29Z" },
       { title: "After years-long drought where Syria, Iraq were running out of water, dams are now full - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897864", time: "2026-05-31T13:34:37Z" },
-      { title: "Poisonous invasion: What is the ‘devil’s trumpet’ harming crops in Iraq?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/poisonous-invasion-what-is-the-devils-trumpet-harming-crops-in-iraq?traffic_source=rss", time: "2026-05-28T14:53:59Z" },
     ]
   },
   {
@@ -2135,16 +2141,6 @@ const locations = [
     ]
   },
   {
-    name: "Bandar Abbas", country: "Iran",
-    lat: 27.1865, lng: 56.2808,
-    category: "strikes",
-    articles: [
-      { title: "US, Iran trade blame over fire exchanges", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260528-us-iran-trade-blame-over-fire-exchanges", time: "2026-05-28T18:04:04Z" },
-      { title: "White House says Iran and US agreed to 60-day ceasefire extension, awaiting Trump's approval", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/white-house-confirms-draft-iran-agreement-still-unsigned", time: "2026-05-28T17:56:55Z" },
-      { title: "Iran’s Islamic Revolutionary Guard Corps says it targeted US airbase in Kuwait", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260528-irans-islamic-revolutionary-guard-corps-says-it-targeted-us-airbase-in-kuwait/", time: "2026-05-28T14:38:14Z" },
-    ]
-  },
-  {
     name: "Sidon", country: "Lebanon",
     lat: 33.5633, lng: 35.3697,
     category: "strikes",
@@ -2165,13 +2161,41 @@ const locations = [
     ]
   },
   {
+    name: "Aden", country: "Yemen",
+    lat: 12.7855, lng: 45.0187,
+    category: "strikes",
+    articles: [
+      { title: "Turkish, Sudanese ministers discuss labour and social security cooperation", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260604-turkish-sudanese-ministers-discuss-labour-and-social-security-cooperation/", time: "2026-06-04T13:41:10Z" },
+      { title: "US says it fired on, disabled ship violating Iran port blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-it-fired-disabled-ship-violating-iran-port-blockade", time: "2026-06-02T21:27:42Z" },
+      { title: "Which football rule changes will be implemented during the World Cup?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/1/which-football-rule-changes-will-be-implemented-during-the-world-cup?traffic_source=rss", time: "2026-06-01T09:08:20Z" },
+    ]
+  },
+  {
+    name: "Ramallah", country: "Palestine",
+    lat: 31.9038, lng: 35.2034,
+    category: "humanitarian",
+    articles: [
+      { title: "Ending the Gaza war requires Palestinian elections and a regional security framework - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898008", time: "2026-06-04T13:05:00Z" },
+      { title: "Israeli settlers torch Palestinian homes in village near Ramallah", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/2/israeli-settlers-torch-palestinian-homes-in-village-near-ramallah?traffic_source=rss", time: "2026-06-02T19:01:59Z" },
+      { title: "Tomorrow Will Be a Palestinian Day review – work that finds a way out of Gaza’s ruins", source: "The Guardian", url: "https://www.theguardian.com/stage/2026/jun/02/tomorrow-will-be-a-palestinian-day-review-london-theatre503", time: "2026-06-02T12:43:54Z" },
+    ]
+  },
+  {
+    name: "Bandar Abbas", country: "Iran",
+    lat: 27.1865, lng: 56.2808,
+    category: "strikes",
+    articles: [
+      { title: "US, Iran trade blame over fire exchanges", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260528-us-iran-trade-blame-over-fire-exchanges", time: "2026-05-28T18:04:04Z" },
+      { title: "White House says Iran and US agreed to 60-day ceasefire extension, awaiting Trump's approval", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/white-house-confirms-draft-iran-agreement-still-unsigned", time: "2026-05-28T17:56:55Z" },
+    ]
+  },
+  {
     name: "Sanaa", country: "Yemen",
     lat: 15.3694, lng: 44.191,
     category: "strikes",
     articles: [
       { title: "US reaffirms Somali sovereignty in blow to Somaliland and Israel", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/us-reaffirms-somali-sovereignty-blow-somaliland-and-israel", time: "2026-06-02T16:18:40Z" },
       { title: "Will Israel stand alone for Somaliland? - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-897506", time: "2026-05-30T15:59:32Z" },
-      { title: "Yemen’s former leader Abd-Rabbu Mansour Hadi dies in exile at 80", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/28/abedrabbo-mansour-hadi-yemens-former-leader-passes-away-in-exile-at-80?traffic_source=rss", time: "2026-05-28T15:02:55Z" },
     ]
   },
   {
@@ -2181,16 +2205,6 @@ const locations = [
     articles: [
       { title: "US ‘disables’ ship allegedly bound for Iranian port", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/3/us-disables-ship-allegedly-bound-for-iranian-port?traffic_source=rss", time: "2026-06-03T08:56:28Z" },
       { title: "US strikes empty oil tanker attempting to break blockade on Iranian ports", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898165", time: "2026-06-03T00:14:39Z" },
-      { title: "US continues ‘Economic Fury campaign’ against Iran airlines, says Bessent", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-continues-economic-fury-campaign-against-iran-airlines-says-bessent", time: "2026-05-28T13:17:35Z" },
-    ]
-  },
-  {
-    name: "Aden", country: "Yemen",
-    lat: 12.7855, lng: 45.0187,
-    category: "strikes",
-    articles: [
-      { title: "US says it fired on, disabled ship violating Iran port blockade", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-it-fired-disabled-ship-violating-iran-port-blockade", time: "2026-06-02T21:27:42Z" },
-      { title: "Which football rule changes will be implemented during the World Cup?", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/1/which-football-rule-changes-will-be-implemented-during-the-world-cup?traffic_source=rss", time: "2026-06-01T09:08:20Z" },
     ]
   },
   {
@@ -2239,15 +2253,6 @@ const locations = [
     ]
   },
   {
-    name: "Ramallah", country: "Palestine",
-    lat: 31.9038, lng: 35.2034,
-    category: "humanitarian",
-    articles: [
-      { title: "Israeli settlers torch Palestinian homes in village near Ramallah", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/2/israeli-settlers-torch-palestinian-homes-in-village-near-ramallah?traffic_source=rss", time: "2026-06-02T19:01:59Z" },
-      { title: "Tomorrow Will Be a Palestinian Day review – work that finds a way out of Gaza’s ruins", source: "The Guardian", url: "https://www.theguardian.com/stage/2026/jun/02/tomorrow-will-be-a-palestinian-day-review-london-theatre503", time: "2026-06-02T12:43:54Z" },
-    ]
-  },
-  {
     name: "Kuwait City", country: "Kuwait",
     lat: 29.3759, lng: 47.9774,
     category: "strikes",
@@ -2262,14 +2267,6 @@ const locations = [
     category: "humanitarian",
     articles: [
       { title: "Settlers attack Palestinians, vandalize property near Nablus; 7 reported injured", source: "Times of Israel", url: "https://www.timesofisrael.com/settlers-attack-palestinians-vandalize-property-near-nablus-7-reported-injured/", time: "2026-05-30T14:11:30Z" },
-    ]
-  },
-  {
-    name: "Basra", country: "Iraq",
-    lat: 30.5085, lng: 47.7804,
-    category: "energy",
-    articles: [
-      { title: "Iraq at a crossroads over militias, as senior commander is killed in car bombing - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-897639", time: "2026-05-28T13:23:19Z" },
     ]
   },
   {
