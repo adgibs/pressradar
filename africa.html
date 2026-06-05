@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">13:12 UTC, 5 Jun 2026</span></div>
+    <div class="subtitle">Africa news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">15:08 UTC, 5 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">5 June 2026</div>
@@ -204,15 +204,64 @@ const locations = [
       { title: "Kenya Arrests 8 Students After Fire at School Dorm Kills 16", source: "New York Times", url: "https://www.nytimes.com/2026/05/29/world/africa/kenya-school-fire-arrests-students.html", time: "2026-05-29T17:39:57Z" },
       { title: "Eight students arrested in deadly Kenyan school dorm fire", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/eight-students-arrested-in-deadly-kenyan-school-dorm-fire?traffic_source=rss", time: "2026-05-29T17:34:18Z" },
       { title: "Eight students arrested after fire at girls school killed 16 children in Kenya", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/kenya-girls-school-fire-students-arrested-b2986129.html", time: "2026-05-29T16:20:46Z" },
-      { title: "Kenya: Harambee Stars Friendlies Against Kyrgyzstan and Pakistan Cancelled", source: "AllAfrica", url: "https://allafrica.com/stories/202605290539.html", time: "2026-05-29T14:50:35Z" },
-      { title: "Kenya: EACC Arrests Kitutu Central Dcio, Corporal Over Over Alleged Sh 40,000 Bribe", source: "AllAfrica", url: "https://allafrica.com/stories/202605290538.html", time: "2026-05-29T14:50:08Z" },
-      { title: "East Africa: East African Police Swat Training Concludes in Bugesera", source: "AllAfrica", url: "https://allafrica.com/stories/202605290537.html", time: "2026-05-29T14:49:23Z" },
-      { title: "Eight girls arrested on suspicion of arson after Kenya school fire", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/eight-girls-arrested-on-suspicion-of-arson-after-kenya-school-fire?traffic_source=rss", time: "2026-05-29T14:40:54Z" },
-      { title: "Kenya: EACC Arrests Kenya Power Staff Over Ksh30,000 Bribe", source: "AllAfrica", url: "https://allafrica.com/stories/202605290530.html", time: "2026-05-29T14:35:43Z" },
-      { title: "Kenya: Unlucky Shujaa Fall to Aussies At Third Leg of World Championships Series", source: "AllAfrica", url: "https://allafrica.com/stories/202605290526.html", time: "2026-05-29T14:34:19Z" },
-      { title: "Kenya: U.S. Embassy Targets University Students With Innovation,Skills Drive", source: "AllAfrica", url: "https://allafrica.com/stories/202605290525.html", time: "2026-05-29T14:33:36Z" },
-      { title: "Kenya: Fake Standard Newspaper Front Page Falsely Claims Gachagua Withdrew Support for Emurua Dikirr Candidate", source: "AllAfrica", url: "https://allafrica.com/stories/202605290512.html", time: "2026-05-29T13:38:46Z" },
-      { title: "Kenya: Disregard Fake Graphic Falsely Quoting Kenyan Politician Aisha Jumwa Saying She Has Dropped Governorship Bid", source: "AllAfrica", url: "https://allafrica.com/stories/202605290511.html", time: "2026-05-29T13:38:24Z" },
+    ]
+  },
+  {
+    name: "Kinshasa", country: "DR Congo",
+    lat: -4.4419, lng: 15.2663,
+    category: "conflict",
+    articles: [
+      { title: "Fall in official Ebola numbers appears to be good news but it's not that simple", source: "BBC News", url: "https://www.bbc.com/news/articles/c0q2q4y09elo?at_medium=RSS&at_campaign=rss", time: "2026-06-05T14:22:52Z" },
+      { title: "Singer Fally Ipupa's pride at being given major DR Congo honour", source: "BBC News", url: "https://www.bbc.com/news/articles/clypyd6gj72o?at_medium=RSS&at_campaign=rss", time: "2026-06-05T13:53:32Z" },
+      { title: "How Gold Is Driving the Spread of Ebola", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/africa/congo-ebola-gold-mine.html", time: "2026-06-05T09:04:25Z" },
+      { title: "Congo-Kinshasa: Three New Ebola Vaccines Are Being Developed. an Infectious Disease Expert Explains", source: "AllAfrica", url: "https://allafrica.com/stories/202606050008.html", time: "2026-06-05T04:09:25Z" },
+      { title: "Congo-Kinshasa: Two Scientists On Their Race to Make a New Ebola Vaccine", source: "AllAfrica", url: "https://allafrica.com/stories/202606050004.html", time: "2026-06-05T04:09:22Z" },
+      { title: "Trump Administration Tries to Shift Blame for Ebola Response", source: "The Intercept", url: "https://theintercept.com/2026/06/04/trump-ebola-outbreak-congo/", time: "2026-06-04T21:27:13Z" },
+      { title: "Mistrust Spreads With the Ebola Virus in Congo", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010942478/ebola-congo-mistrust-grief.html", time: "2026-06-04T17:11:56Z" },
+      { title: "Priest’s Ebola Death Stirs Fear an Doubt in Congolese Town", source: "New York Times", url: "https://www.nytimes.com/2026/06/04/world/africa/ebola-congo-funeral-photo.html", time: "2026-06-04T09:03:46Z" },
+      { title: "The race to combat Ebola: what vaccines and treatments are being developed and how long will it take?", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/the-race-to-combat-ebola-what-vaccines-and-treatments-are-being-developed-and-how-long-will-it-take", time: "2026-06-04T08:00:29Z" },
+      { title: "Rebel attacks in eastern DRC kill 30 people and hamper Ebola response", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/allied-democratic-forces-adf-rebel-attacks-massacre-eastern-drc-ebola-response", time: "2026-06-04T04:00:25Z" },
+      { title: "Congo-Kinshasa: 'We Are Catching Up' - WHO Chief On DR Congo's Ebola Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202606040012.html", time: "2026-06-04T03:36:36Z" },
+      { title: "Health workers struggle to contain Ebola outbreak", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/health-workers-struggle-to-contain-ebola-outbreak", time: "2026-06-03T22:25:31Z" },
+      { title: "'We're still behind' in Congo's Ebola outbreak even as testing improves, WHO chief says", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/were-still-behind-in-congos-ebola-outbreak-even-as-testing-improves-who-chief-says", time: "2026-06-03T21:23:39Z" },
+      { title: "Kinshasa shuts down in protest against plan to reform constitution", source: "France 24", url: "https://www.france24.com/en/kinshasa-shuts-down-in-protest-against-plan-to-reform-constitution", time: "2026-06-03T20:24:49Z" },
+      { title: "DRC Ebola outbreak could have begun as early as January, WHO chief says", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/drc-ebola-outbreak-could-have-begun-as-early-as-january-who-chief-says", time: "2026-06-03T17:29:55Z" },
+      { title: "The Ebola outbreak the world isn’t paying attention to", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-take-2/2026/6/3/aje-onl-tt_glb_ebola26_video-030626?traffic_source=rss", time: "2026-06-03T15:57:28Z" },
+      { title: "DRC suggests behind-closed-doors World Cup warm-up to offset Ebola threat", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/3/dr-congo-to-offset-ebola-threat-with-behind-closed-doors-world-cup-warm-up?traffic_source=rss", time: "2026-06-03T13:22:26Z" },
+      { title: "Spain bans DR Congo World Cup warm-up due to Ebola fears", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/2/spain-bans-dr-congo-world-cup-warm-up-due-to-ebola-fears?traffic_source=rss", time: "2026-06-02T19:34:10Z" },
+      { title: "Mayor cancels DR Congo friendly over Ebola concern", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cm2pd28jnyxo?at_medium=RSS&at_campaign=rss", time: "2026-06-02T19:28:55Z" },
+      { title: "Only the Right Tests Can Stop This Ebola Outbreak. Congo Has Hardly Any.", source: "New York Times", url: "https://www.nytimes.com/2026/06/02/health/ebola-tests-congo.html", time: "2026-06-02T14:55:58Z" },
+      { title: "Ebola crisis shows that aid cuts have been ‘counterproductive,’ UK development minister admits", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/ebola-outbreak-uk-aid-uganda-virus-b2987899.html", time: "2026-06-02T14:31:07Z" },
+      { title: "Battling a Deadly Ebola Outbreak in Eastern Congo", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010936755/ebola-virus-outbreak-congo-treatment.html", time: "2026-06-02T12:59:54Z" },
+      { title: "Congo-Kinshasa: Coming Weeks Critical for Ebola Response in DR Congo - MSF", source: "AllAfrica", url: "https://allafrica.com/stories/202606020164.html", time: "2026-06-02T08:48:44Z" },
+      { title: "Congo-Kinshasa: DR Congo Ebola Outbreak - Nurses Discharged After Full Recovery", source: "AllAfrica", url: "https://allafrica.com/stories/202606020001.html", time: "2026-06-02T03:52:44Z" },
+      { title: "How health workers in DR Congo are treating Ebola and staying safe", source: "BBC News", url: "https://www.bbc.com/news/articles/cgepl7ler5eo?at_medium=RSS&at_campaign=rss", time: "2026-06-01T23:20:13Z" },
+      { title: "Ebola cases in Congo near 300 as more joyful stories from recovered medical workers emerge", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/ebola-cases-in-congo-near-300-as-more-joyful-stories-from-recovered-medical-workers-emerge", time: "2026-06-01T20:13:13Z" },
+      { title: "Confirmed Ebola cases in Congo reach 282 as survivors describe their recoveries", source: "NPR", url: "https://www.npr.org/2026/06/01/g-s1-125143/ebola-updates", time: "2026-06-01T10:52:34Z" },
+      { title: "Congo-Kinshasa: FDLR's 'General' Mutayomba Wounded in Battle, Evacuated to Kinshasa", source: "AllAfrica", url: "https://allafrica.com/stories/202606010241.html", time: "2026-06-01T09:58:10Z" },
+      { title: "Five patients recover from Ebola in DR Congo and leave hospital", source: "BBC News", url: "https://www.bbc.com/news/articles/cz928xq588no?at_medium=RSS&at_campaign=rss", time: "2026-06-01T09:56:24Z" },
+      { title: "Congo-Kinshasa: Four Health Workers Recover from Ebola in the Democratic Republic of the Congo", source: "AllAfrica", url: "https://allafrica.com/stories/202606010184.html", time: "2026-06-01T09:24:50Z" },
+      { title: "How aid cuts are hampering the frontline response to the Ebola crisis", source: "NPR", url: "https://www.npr.org/2026/05/31/nx-s1-5839197/ebola-crisis-outbreak-misinformation-democratic-republic-congo-uganda", time: "2026-05-31T21:11:19Z" },
+      { title: "Brazil monitors two patients for possible Ebola infection", source: "BBC News", url: "https://www.bbc.com/news/articles/cy72z48zd7po?at_medium=RSS&at_campaign=rss", time: "2026-05-31T19:07:47Z" },
+      { title: "WHO chief reports 5 Ebola recoveries as new treatment center opens in Congo", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/who-chief-reports-5-ebola-recoveries-as-new-treatment-center-opens-in-congo", time: "2026-05-31T17:08:23Z" },
+      { title: "WHO calls for community cooperation to contain Ebola outbreak in DRC", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/who-calls-for-community-cooperation-to-contain-drc-ebola-outbreak", time: "2026-05-31T15:49:47Z" },
+      { title: "Death of Congolese man renews scrutiny of race relations in Ireland", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/yves-sakila-death-congolese-man-ireland-race-relations", time: "2026-05-31T13:59:34Z" },
+      { title: "Dublin protesters demand justice over death of Congolese man", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/dublin-protesters-demand-justice-over-death-of-congolese-man?traffic_source=rss", time: "2026-05-31T11:36:55Z" },
+      { title: "WHO chief heads to Ebola epicentre - as Brazil investigates suspected case", source: "Sky News", url: "https://news.sky.com/story/who-chief-heads-to-ebola-epicentre-as-brazil-investigates-suspected-case-13549431", time: "2026-05-31T01:16:00Z" },
+      { title: "Ebola spread in DR Congo 'deeply alarming', MSF warns", source: "BBC News", url: "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss", time: "2026-05-30T21:10:06Z" },
+      { title: "Women bear the brunt of DRC’s Ebola outbreak", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/women-bear-the-brunt-of-drcs-ebola-outbreak?traffic_source=rss", time: "2026-05-30T20:30:12Z" },
+      { title: "WHO chief visits eastern DR Congo amid Ebola outbreak", source: "France 24", url: "https://www.france24.com/en/africa/20260530-who-chief-visits-eastern-dr-congo-amid-ebola-outbreak", time: "2026-05-30T16:57:06Z" },
+      { title: "Confirmed Ebola cases nearly double in days as WHO chief visits DR Congo", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/confirmed-ebola-cases-nearly-double-in-days-as-who-chief-visits-dr-congo?traffic_source=rss", time: "2026-05-30T16:44:46Z" },
+      { title: "WHO chief visits Congo Ebola epicenter as cases outpace response", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/who-chief-visits-congo-ebola-epicenter-as-cases-outpace-response", time: "2026-05-30T16:04:28Z" },
+      { title: "Returning home to invest: Some entrepreneurs see opportunities in DRC despite instability", source: "France 24", url: "https://www.france24.com/en/returning-home-to-invest-some-entrepreneurs-see-opportunities-in-drc-despite-instability", time: "2026-05-30T15:26:51Z" },
+      { title: "Uganda: What's Wrong With How U.S. and Uganda Plan to Stop Ebola Spreading", source: "AllAfrica", url: "https://allafrica.com/stories/202605300010.html", time: "2026-05-30T13:48:35Z" },
+      { title: "Congo-Brazzaville: Moody's Raises Congo Republic Outlook On Debt Refinancing", source: "AllAfrica", url: "https://allafrica.com/stories/202605300008.html", time: "2026-05-30T13:43:10Z" },
+      { title: "Africa: Ebola Response Update - May 29, 2026 from the U.S. State Department", source: "AllAfrica", url: "https://allafrica.com/stories/202605300007.html", time: "2026-05-30T13:38:54Z" },
+      { title: "WHO chief visits Bunia, epicentre of the Ebola outbreak", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/who-chief-visits-bunia-epicentre-of-the-ebola-outbreak?traffic_source=rss", time: "2026-05-30T12:53:35Z" },
+      { title: "WHO chief visits Ebola epicentre in DR Congo, as death toll rises", source: "France 24", url: "https://www.france24.com/en/who-chief-visits-ebola-epicentre-in-dr-congo-as-death-toll-rises", time: "2026-05-30T12:34:39Z" },
+      { title: "DR Congo sees first recovery from Ebola as disease scourges the country", source: "France 24", url: "https://www.france24.com/en/dr-congo-sees-first-recovery-from-ebola-as-disease-scourges-the-country", time: "2026-05-30T10:15:03Z" },
+      { title: "Ebola treatment centre rebuilt after being torched by protesters in DRC", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/ebola-treatment-centre-rebuilt-after-being-torched-by-protesters-in-drc?traffic_source=rss", time: "2026-05-29T21:52:24Z" },
+      { title: "WHO chief lands in Kinshasa", source: "France 24", url: "https://www.france24.com/en/who-chief-lands-in-kinshasa", time: "2026-05-29T20:59:34Z" },
     ]
   },
   {
@@ -269,10 +318,6 @@ const locations = [
       { title: "Nigerian retired general abducted with his wife in the north-west", source: "BBC News", url: "https://www.bbc.com/news/articles/cz02zgkgn08o?at_medium=RSS&at_campaign=rss", time: "2026-05-31T12:11:32Z" },
       { title: "How Nigeria’s ‘algorithmic apothecary’ fuels a surge in risky herbal cures", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/31/how-nigerias-algorithmic-apothecary-fuels-a-surge-in-risky-herbal-cures?traffic_source=rss", time: "2026-05-31T05:23:00Z" },
       { title: "Bound by blood: new film highlights Jamaica’s outlawed obeah belief system", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/30/stew-pews-film-obeah-jamaica-magic-tradition", time: "2026-05-30T11:00:18Z" },
-      { title: "Abula - Nigeria's indigenous game with lofty ambitions", source: "BBC News", url: "https://www.bbc.com/sport/articles/clyq3plyp4lo?at_medium=RSS&at_campaign=rss", time: "2026-05-29T15:03:16Z" },
-      { title: "Nigeria: Tinubu Has Scored 70 Percent in Security - Defence Minister", source: "AllAfrica", url: "https://allafrica.com/stories/202605290544.html", time: "2026-05-29T14:53:03Z" },
-      { title: "Nigeria: Oyo Abduction - 'I'm the Only One She Has', Woman Demands Ward's Rescue", source: "AllAfrica", url: "https://allafrica.com/stories/202605290543.html", time: "2026-05-29T14:52:41Z" },
-      { title: "Nigeria: Nsib Probes Bonny Anchorage Vessel Collision", source: "AllAfrica", url: "https://allafrica.com/stories/202605290542.html", time: "2026-05-29T14:52:04Z" },
     ]
   },
   {
@@ -280,6 +325,7 @@ const locations = [
     lat: -26.2041, lng: 28.0473,
     category: "economic",
     articles: [
+      { title: "South Africa rolls out game-changing HIV shot amid funding shortfalls", source: "NPR", url: "https://www.npr.org/2026/06/05/nx-s1-5846846/south-africa-hiv-lenacapavir-aid", time: "2026-06-05T14:53:26Z" },
       { title: "South Africa: The Cop Who Ran Organised Crime Has Been Fired for Running With Criminals", source: "AllAfrica", url: "https://allafrica.com/stories/202606050152.html", time: "2026-06-05T08:59:22Z" },
       { title: "South Africa: How to Use the Anti-HIV Jab  and Where To Find It", source: "AllAfrica", url: "https://allafrica.com/stories/202606050134.html", time: "2026-06-05T08:20:53Z" },
       { title: "South Africa: Young People Don't Vote - - We Asked What Would Get Them to the Polls", source: "AllAfrica", url: "https://allafrica.com/stories/202606050102.html", time: "2026-06-05T07:39:11Z" },
@@ -326,69 +372,6 @@ const locations = [
       { title: "South Africa made to look like fools after World Cup visa issues, says minister", source: "BBC News", url: "https://www.bbc.com/news/articles/c86dxvql3qno?at_medium=RSS&at_campaign=rss", time: "2026-05-31T10:34:47Z" },
       { title: "Violence against foreign-owned shops in South Africa", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/violence-against-foreign-owned-shops-in-south-africa?traffic_source=rss", time: "2026-05-30T13:10:11Z" },
       { title: "'Gifts' from a lover and 'botched' cocaine raids: Police inquiry grips South Africa", source: "BBC News", url: "https://www.bbc.com/news/articles/ce9p5e1jg72o?at_medium=RSS&at_campaign=rss", time: "2026-05-30T02:56:40Z" },
-      { title: "Africa: Activists Gather At TotalEnergies Offices to 'Kick Polluters Out of Africa'", source: "AllAfrica", url: "https://allafrica.com/stories/202605290541.html", time: "2026-05-29T14:51:35Z" },
-      { title: "South Africa: Prasa Rail Theft Trial Bogged Down in Argument Over Virtual Testimony", source: "AllAfrica", url: "https://allafrica.com/stories/202605290540.html", time: "2026-05-29T14:51:11Z" },
-      { title: "South Africa: Media Statement - Committee On Social Services Dissatisfied With Free State Department of Health Progress Report", source: "AllAfrica", url: "https://allafrica.com/stories/202605290529.html", time: "2026-05-29T14:35:20Z" },
-      { title: "South Africa: Army Denies Plan to Set Soldiers Against Marchers On June 30", source: "AllAfrica", url: "https://allafrica.com/stories/202605290508.html", time: "2026-05-29T13:36:53Z" },
-      { title: "South Africa: NPA Backslides On 'Political Interference' in TRC Cases, Mbeki Fights Summons", source: "AllAfrica", url: "https://allafrica.com/stories/202605290507.html", time: "2026-05-29T13:34:35Z" },
-    ]
-  },
-  {
-    name: "Kinshasa", country: "DR Congo",
-    lat: -4.4419, lng: 15.2663,
-    category: "conflict",
-    articles: [
-      { title: "How Gold Is Driving the Spread of Ebola", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/africa/congo-ebola-gold-mine.html", time: "2026-06-05T09:04:25Z" },
-      { title: "Congo-Kinshasa: Three New Ebola Vaccines Are Being Developed. an Infectious Disease Expert Explains", source: "AllAfrica", url: "https://allafrica.com/stories/202606050008.html", time: "2026-06-05T04:09:25Z" },
-      { title: "Congo-Kinshasa: Two Scientists On Their Race to Make a New Ebola Vaccine", source: "AllAfrica", url: "https://allafrica.com/stories/202606050004.html", time: "2026-06-05T04:09:22Z" },
-      { title: "Trump Administration Tries to Shift Blame for Ebola Response", source: "The Intercept", url: "https://theintercept.com/2026/06/04/trump-ebola-outbreak-congo/", time: "2026-06-04T21:27:13Z" },
-      { title: "Mistrust Spreads With the Ebola Virus in Congo", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010942478/ebola-congo-mistrust-grief.html", time: "2026-06-04T17:11:56Z" },
-      { title: "Priest’s Ebola Death Stirs Fear an Doubt in Congolese Town", source: "New York Times", url: "https://www.nytimes.com/2026/06/04/world/africa/ebola-congo-funeral-photo.html", time: "2026-06-04T09:03:46Z" },
-      { title: "The race to combat Ebola: what vaccines and treatments are being developed and how long will it take?", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/the-race-to-combat-ebola-what-vaccines-and-treatments-are-being-developed-and-how-long-will-it-take", time: "2026-06-04T08:00:29Z" },
-      { title: "Rebel attacks in eastern DRC kill 30 people and hamper Ebola response", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/allied-democratic-forces-adf-rebel-attacks-massacre-eastern-drc-ebola-response", time: "2026-06-04T04:00:25Z" },
-      { title: "Congo-Kinshasa: 'We Are Catching Up' - WHO Chief On DR Congo's Ebola Fight", source: "AllAfrica", url: "https://allafrica.com/stories/202606040012.html", time: "2026-06-04T03:36:36Z" },
-      { title: "Health workers struggle to contain Ebola outbreak", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/health-workers-struggle-to-contain-ebola-outbreak", time: "2026-06-03T22:25:31Z" },
-      { title: "'We're still behind' in Congo's Ebola outbreak even as testing improves, WHO chief says", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/were-still-behind-in-congos-ebola-outbreak-even-as-testing-improves-who-chief-says", time: "2026-06-03T21:23:39Z" },
-      { title: "Kinshasa shuts down in protest against plan to reform constitution", source: "France 24", url: "https://www.france24.com/en/kinshasa-shuts-down-in-protest-against-plan-to-reform-constitution", time: "2026-06-03T20:24:49Z" },
-      { title: "DRC Ebola outbreak could have begun as early as January, WHO chief says", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/drc-ebola-outbreak-could-have-begun-as-early-as-january-who-chief-says", time: "2026-06-03T17:29:55Z" },
-      { title: "The Ebola outbreak the world isn’t paying attention to", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-take-2/2026/6/3/aje-onl-tt_glb_ebola26_video-030626?traffic_source=rss", time: "2026-06-03T15:57:28Z" },
-      { title: "DRC suggests behind-closed-doors World Cup warm-up to offset Ebola threat", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/3/dr-congo-to-offset-ebola-threat-with-behind-closed-doors-world-cup-warm-up?traffic_source=rss", time: "2026-06-03T13:22:26Z" },
-      { title: "Spain bans DR Congo World Cup warm-up due to Ebola fears", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/2/spain-bans-dr-congo-world-cup-warm-up-due-to-ebola-fears?traffic_source=rss", time: "2026-06-02T19:34:10Z" },
-      { title: "Mayor cancels DR Congo friendly over Ebola concern", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cm2pd28jnyxo?at_medium=RSS&at_campaign=rss", time: "2026-06-02T19:28:55Z" },
-      { title: "Only the Right Tests Can Stop This Ebola Outbreak. Congo Has Hardly Any.", source: "New York Times", url: "https://www.nytimes.com/2026/06/02/health/ebola-tests-congo.html", time: "2026-06-02T14:55:58Z" },
-      { title: "Ebola crisis shows that aid cuts have been ‘counterproductive,’ UK development minister admits", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/ebola-outbreak-uk-aid-uganda-virus-b2987899.html", time: "2026-06-02T14:31:07Z" },
-      { title: "Battling a Deadly Ebola Outbreak in Eastern Congo", source: "New York Times", url: "https://www.nytimes.com/video/world/africa/100000010936755/ebola-virus-outbreak-congo-treatment.html", time: "2026-06-02T12:59:54Z" },
-      { title: "Congo-Kinshasa: Coming Weeks Critical for Ebola Response in DR Congo - MSF", source: "AllAfrica", url: "https://allafrica.com/stories/202606020164.html", time: "2026-06-02T08:48:44Z" },
-      { title: "Congo-Kinshasa: DR Congo Ebola Outbreak - Nurses Discharged After Full Recovery", source: "AllAfrica", url: "https://allafrica.com/stories/202606020001.html", time: "2026-06-02T03:52:44Z" },
-      { title: "How health workers in DR Congo are treating Ebola and staying safe", source: "BBC News", url: "https://www.bbc.com/news/articles/cgepl7ler5eo?at_medium=RSS&at_campaign=rss", time: "2026-06-01T23:20:13Z" },
-      { title: "Ebola cases in Congo near 300 as more joyful stories from recovered medical workers emerge", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/ebola-cases-in-congo-near-300-as-more-joyful-stories-from-recovered-medical-workers-emerge", time: "2026-06-01T20:13:13Z" },
-      { title: "Confirmed Ebola cases in Congo reach 282 as survivors describe their recoveries", source: "NPR", url: "https://www.npr.org/2026/06/01/g-s1-125143/ebola-updates", time: "2026-06-01T10:52:34Z" },
-      { title: "Congo-Kinshasa: FDLR's 'General' Mutayomba Wounded in Battle, Evacuated to Kinshasa", source: "AllAfrica", url: "https://allafrica.com/stories/202606010241.html", time: "2026-06-01T09:58:10Z" },
-      { title: "Five patients recover from Ebola in DR Congo and leave hospital", source: "BBC News", url: "https://www.bbc.com/news/articles/cz928xq588no?at_medium=RSS&at_campaign=rss", time: "2026-06-01T09:56:24Z" },
-      { title: "Congo-Kinshasa: Four Health Workers Recover from Ebola in the Democratic Republic of the Congo", source: "AllAfrica", url: "https://allafrica.com/stories/202606010184.html", time: "2026-06-01T09:24:50Z" },
-      { title: "How aid cuts are hampering the frontline response to the Ebola crisis", source: "NPR", url: "https://www.npr.org/2026/05/31/nx-s1-5839197/ebola-crisis-outbreak-misinformation-democratic-republic-congo-uganda", time: "2026-05-31T21:11:19Z" },
-      { title: "Brazil monitors two patients for possible Ebola infection", source: "BBC News", url: "https://www.bbc.com/news/articles/cy72z48zd7po?at_medium=RSS&at_campaign=rss", time: "2026-05-31T19:07:47Z" },
-      { title: "WHO chief reports 5 Ebola recoveries as new treatment center opens in Congo", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/who-chief-reports-5-ebola-recoveries-as-new-treatment-center-opens-in-congo", time: "2026-05-31T17:08:23Z" },
-      { title: "WHO calls for community cooperation to contain Ebola outbreak in DRC", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/who-calls-for-community-cooperation-to-contain-drc-ebola-outbreak", time: "2026-05-31T15:49:47Z" },
-      { title: "Death of Congolese man renews scrutiny of race relations in Ireland", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/yves-sakila-death-congolese-man-ireland-race-relations", time: "2026-05-31T13:59:34Z" },
-      { title: "Dublin protesters demand justice over death of Congolese man", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/dublin-protesters-demand-justice-over-death-of-congolese-man?traffic_source=rss", time: "2026-05-31T11:36:55Z" },
-      { title: "WHO chief heads to Ebola epicentre - as Brazil investigates suspected case", source: "Sky News", url: "https://news.sky.com/story/who-chief-heads-to-ebola-epicentre-as-brazil-investigates-suspected-case-13549431", time: "2026-05-31T01:16:00Z" },
-      { title: "Ebola spread in DR Congo 'deeply alarming', MSF warns", source: "BBC News", url: "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss", time: "2026-05-30T21:10:06Z" },
-      { title: "Women bear the brunt of DRC’s Ebola outbreak", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/women-bear-the-brunt-of-drcs-ebola-outbreak?traffic_source=rss", time: "2026-05-30T20:30:12Z" },
-      { title: "WHO chief visits eastern DR Congo amid Ebola outbreak", source: "France 24", url: "https://www.france24.com/en/africa/20260530-who-chief-visits-eastern-dr-congo-amid-ebola-outbreak", time: "2026-05-30T16:57:06Z" },
-      { title: "Confirmed Ebola cases nearly double in days as WHO chief visits DR Congo", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/confirmed-ebola-cases-nearly-double-in-days-as-who-chief-visits-dr-congo?traffic_source=rss", time: "2026-05-30T16:44:46Z" },
-      { title: "WHO chief visits Congo Ebola epicenter as cases outpace response", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/who-chief-visits-congo-ebola-epicenter-as-cases-outpace-response", time: "2026-05-30T16:04:28Z" },
-      { title: "Returning home to invest: Some entrepreneurs see opportunities in DRC despite instability", source: "France 24", url: "https://www.france24.com/en/returning-home-to-invest-some-entrepreneurs-see-opportunities-in-drc-despite-instability", time: "2026-05-30T15:26:51Z" },
-      { title: "Uganda: What's Wrong With How U.S. and Uganda Plan to Stop Ebola Spreading", source: "AllAfrica", url: "https://allafrica.com/stories/202605300010.html", time: "2026-05-30T13:48:35Z" },
-      { title: "Congo-Brazzaville: Moody's Raises Congo Republic Outlook On Debt Refinancing", source: "AllAfrica", url: "https://allafrica.com/stories/202605300008.html", time: "2026-05-30T13:43:10Z" },
-      { title: "Africa: Ebola Response Update - May 29, 2026 from the U.S. State Department", source: "AllAfrica", url: "https://allafrica.com/stories/202605300007.html", time: "2026-05-30T13:38:54Z" },
-      { title: "WHO chief visits Bunia, epicentre of the Ebola outbreak", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/who-chief-visits-bunia-epicentre-of-the-ebola-outbreak?traffic_source=rss", time: "2026-05-30T12:53:35Z" },
-      { title: "WHO chief visits Ebola epicentre in DR Congo, as death toll rises", source: "France 24", url: "https://www.france24.com/en/who-chief-visits-ebola-epicentre-in-dr-congo-as-death-toll-rises", time: "2026-05-30T12:34:39Z" },
-      { title: "DR Congo sees first recovery from Ebola as disease scourges the country", source: "France 24", url: "https://www.france24.com/en/dr-congo-sees-first-recovery-from-ebola-as-disease-scourges-the-country", time: "2026-05-30T10:15:03Z" },
-      { title: "Ebola treatment centre rebuilt after being torched by protesters in DRC", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/29/ebola-treatment-centre-rebuilt-after-being-torched-by-protesters-in-drc?traffic_source=rss", time: "2026-05-29T21:52:24Z" },
-      { title: "WHO chief lands in Kinshasa", source: "France 24", url: "https://www.france24.com/en/who-chief-lands-in-kinshasa", time: "2026-05-29T20:59:34Z" },
-      { title: "Urgent aid rushed to Congo amid Ebola outbreak as health workers battle community distrust", source: "The Independent", url: "https://www.independent.co.uk/news/health/ebola-congo-world-health-organization-medical-aid-b2986021.html", time: "2026-05-29T14:08:10Z" },
-      { title: "Ebola outbreak 'can be stopped,' WHO chief says as he arrives in Congo", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/health/ebola-outbreak-can-be-stopped-who-chief-says-as-he-arrives-in-congo", time: "2026-05-29T13:44:58Z" },
     ]
   },
   {
@@ -481,29 +464,6 @@ const locations = [
       { title: "Zimbabwe: No Zanu-PF MP to Oppose Constitution Amendment Bill - Ziyambi", source: "AllAfrica", url: "https://allafrica.com/stories/202606020258.html", time: "2026-06-02T10:21:12Z" },
       { title: "Zimbabwe: Late Former VP Mphoko Son Claims Top Lawyer Welshman Ncube Duped Him Over U.S.$1 Million in Choppies Share Deal, Police 'Reluctant' to Act", source: "AllAfrica", url: "https://allafrica.com/stories/202606010085.html", time: "2026-06-01T06:19:49Z" },
       { title: "Zimbabwe: One of Harare's Busiest Roundabouts Closed Indefinitely for Interchange Construction", source: "AllAfrica", url: "https://allafrica.com/stories/202606010018.html", time: "2026-06-01T03:04:51Z" },
-      { title: "Zimbabwe: Proteas Women Are Heading to Zimbabwe for the First Time in History", source: "AllAfrica", url: "https://allafrica.com/stories/202605290509.html", time: "2026-05-29T13:37:14Z" },
-    ]
-  },
-  {
-    name: "Kigali", country: "Rwanda",
-    lat: -1.9403, lng: 29.8739,
-    category: "political",
-    articles: [
-      { title: "Rwanda: Two More Journalists Arrested in Rwanda", source: "AllAfrica", url: "https://allafrica.com/stories/202606050235.html", time: "2026-06-05T10:10:59Z" },
-      { title: "Rwanda: From Fistula to Recovery - One Woman's Journey After a C-Section", source: "AllAfrica", url: "https://allafrica.com/stories/202606050054.html", time: "2026-06-05T05:14:58Z" },
-      { title: "Rwanda: RDB Closes Four Hotels Over Standards Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202606040504.html", time: "2026-06-04T14:17:33Z" },
-      { title: "Rwanda: France and Rwanda Unite to Honour Genocide Victims With Paris Monument", source: "AllAfrica", url: "https://allafrica.com/stories/202606040009.html", time: "2026-06-04T03:36:35Z" },
-      { title: "Rwanda: Rwanda, France 'Writing a New Chapter', Says Kagame", source: "AllAfrica", url: "https://allafrica.com/stories/202606030608.html", time: "2026-06-03T15:07:33Z" },
-      { title: "France's recognition of Its role in the 1994 Rwanda Genocide marks a historic turning point", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260603-france-s-recognition-of-its-role-in-the-1994-rwanda-genocide-marks-a-historic-turning-point", time: "2026-06-03T08:44:06Z" },
-      { title: "Rwanda: All You Need to Know About Genocide Memorial Unveiled in France", source: "AllAfrica", url: "https://allafrica.com/stories/202606030065.html", time: "2026-06-03T06:24:44Z" },
-      { title: "‘Milestone’: Macron opens Paris monument honouring Rwanda genocide victims", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/2/milestone-macron-opens-paris-monument-honouring-rwanda-genocide-victims?traffic_source=rss", time: "2026-06-02T20:18:22Z" },
-      { title: "1994 Tutsi Genocide: 'French government has never fully come to terms with its involvement'", source: "France 24", url: "https://www.france24.com/en/1994-tutsi-genocide-french-government-has-never-fully-come-to-terms-with-its-involvement", time: "2026-06-02T17:21:46Z" },
-      { title: "International court rejects Rwanda’s claim over UK migration deal", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/1/international-court-rejects-rwandas-claim-over-uk-migration-deal?traffic_source=rss", time: "2026-06-01T16:54:36Z" },
-      { title: "UK wins court case over collapsed Rwanda asylum deal", source: "BBC News", url: "https://www.bbc.com/news/articles/cy526klrk20o?at_medium=RSS&at_campaign=rss", time: "2026-06-01T10:00:33Z" },
-      { title: "Rwanda-Russia nuclear deal underscores Africa’s shifting power balance", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rwanda-russia-nuclear-deal-underscores-africas-shifting-power-balance?traffic_source=rss", time: "2026-05-30T06:29:07Z" },
-      { title: "Rwanda: Dubai-Based Visiontechplg Enters Rwanda to Advance Digital Services, Cybersecurity", source: "AllAfrica", url: "https://allafrica.com/stories/202605290536.html", time: "2026-05-29T14:38:30Z" },
-      { title: "Rwanda: World Connect Rwanda Showcases Power of Community-Led Development With 12 Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202605290535.html", time: "2026-05-29T14:38:12Z" },
-      { title: "Rwanda: AfDB Bets On Agriculture to Absorb Africa's 11m Annual Job Seekers", source: "AllAfrica", url: "https://allafrica.com/stories/202605290533.html", time: "2026-05-29T14:37:41Z" },
     ]
   },
   {
@@ -524,27 +484,6 @@ const locations = [
       { title: "South Africa: President Ramaphosa Receives Second Madlanga Commission Interim Report", source: "AllAfrica", url: "https://allafrica.com/stories/202606010071.html", time: "2026-06-01T03:27:30Z" },
       { title: "South Africa: Will Ramaphosa's Reforms Outlast Him? It Depends On the Future Prosperity of the Nation.", source: "AllAfrica", url: "https://allafrica.com/stories/202606010038.html", time: "2026-06-01T03:11:28Z" },
       { title: "Bulls overpower Munster to reach URC semi-finals", source: "BBC News", url: "https://www.bbc.com/sport/rugby-union/articles/c8r86le41v0o?at_medium=RSS&at_campaign=rss", time: "2026-05-30T13:49:28Z" },
-      { title: "Africa: African Champions Parade TotalEnergies CAF Champions League Trophy to Thousands of Fans in Pretoria", source: "AllAfrica", url: "https://allafrica.com/stories/202605290513.html", time: "2026-05-29T13:39:41Z" },
-    ]
-  },
-  {
-    name: "Kampala", country: "Uganda",
-    lat: 0.3476, lng: 32.5825,
-    category: "political",
-    articles: [
-      { title: "Uganda: Museveni Predicts Uganda's Economy Will Hit $80 Billion Next Year", source: "AllAfrica", url: "https://allafrica.com/stories/202606050032.html", time: "2026-06-05T04:18:42Z" },
-      { title: "Uganda: Over 500 Villages At Risk As Landslide Cracks Widen in Namisindwa District", source: "AllAfrica", url: "https://allafrica.com/stories/202606050020.html", time: "2026-06-05T04:18:35Z" },
-      { title: "Uganda: Ebola Rumours Keeping Some Learners Out of School, Government Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202606030060.html", time: "2026-06-03T06:20:54Z" },
-      { title: "Africa: Ebola's Long Shadow Over the World Cup", source: "AllAfrica", url: "https://allafrica.com/stories/202606020301.html", time: "2026-06-02T10:53:08Z" },
-      { title: "Uganda: Ministerial Nominees Face Parliament's Appointments Committee", source: "AllAfrica", url: "https://allafrica.com/stories/202606020230.html", time: "2026-06-02T10:03:45Z" },
-      { title: "Africa: 20 African Cities Selected as Full U.S. Visa Processing Hubs", source: "AllAfrica", url: "https://allafrica.com/stories/202606020140.html", time: "2026-06-02T08:22:56Z" },
-      { title: "Uganda: AfDB Pledges to Fund SGR, Allocates Initials Shs2.4 Trillion", source: "AllAfrica", url: "https://allafrica.com/stories/202606010172.html", time: "2026-06-01T09:11:43Z" },
-      { title: "Uganda: Bishop Katumba Condemns MPs' Alleged Reliance On Witchcraft, Urges Integrity in Leadership", source: "AllAfrica", url: "https://allafrica.com/stories/202606010111.html", time: "2026-06-01T07:17:18Z" },
-      { title: "Uganda: Kasese Enforces Rainwater Harvesting to Curb Storm Water Runoff", source: "AllAfrica", url: "https://allafrica.com/stories/202606010080.html", time: "2026-06-01T05:41:23Z" },
-      { title: "Uganda: Magnitude 4.5 Earthquake Shakes Uganda", source: "AllAfrica", url: "https://allafrica.com/stories/202606010057.html", time: "2026-06-01T03:20:46Z" },
-      { title: "Uganda: Gulu - Northern Uganda's Next Real Estate Investment Frontier", source: "AllAfrica", url: "https://allafrica.com/stories/202605290545.html", time: "2026-05-29T14:53:26Z" },
-      { title: "Uganda: How Afcon Will Impact Uganda's Tourism", source: "AllAfrica", url: "https://allafrica.com/stories/202605290528.html", time: "2026-05-29T14:35:01Z" },
-      { title: "Uganda: New and Old Ministers Outline Priorities, Thank President Museveni", source: "AllAfrica", url: "https://allafrica.com/stories/202605290527.html", time: "2026-05-29T14:34:40Z" },
     ]
   },
   {
@@ -568,6 +507,42 @@ const locations = [
     ]
   },
   {
+    name: "Kigali", country: "Rwanda",
+    lat: -1.9403, lng: 29.8739,
+    category: "political",
+    articles: [
+      { title: "Rwanda: Two More Journalists Arrested in Rwanda", source: "AllAfrica", url: "https://allafrica.com/stories/202606050235.html", time: "2026-06-05T10:10:59Z" },
+      { title: "Rwanda: From Fistula to Recovery - One Woman's Journey After a C-Section", source: "AllAfrica", url: "https://allafrica.com/stories/202606050054.html", time: "2026-06-05T05:14:58Z" },
+      { title: "Rwanda: RDB Closes Four Hotels Over Standards Concerns", source: "AllAfrica", url: "https://allafrica.com/stories/202606040504.html", time: "2026-06-04T14:17:33Z" },
+      { title: "Rwanda: France and Rwanda Unite to Honour Genocide Victims With Paris Monument", source: "AllAfrica", url: "https://allafrica.com/stories/202606040009.html", time: "2026-06-04T03:36:35Z" },
+      { title: "Rwanda: Rwanda, France 'Writing a New Chapter', Says Kagame", source: "AllAfrica", url: "https://allafrica.com/stories/202606030608.html", time: "2026-06-03T15:07:33Z" },
+      { title: "France's recognition of Its role in the 1994 Rwanda Genocide marks a historic turning point", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260603-france-s-recognition-of-its-role-in-the-1994-rwanda-genocide-marks-a-historic-turning-point", time: "2026-06-03T08:44:06Z" },
+      { title: "Rwanda: All You Need to Know About Genocide Memorial Unveiled in France", source: "AllAfrica", url: "https://allafrica.com/stories/202606030065.html", time: "2026-06-03T06:24:44Z" },
+      { title: "‘Milestone’: Macron opens Paris monument honouring Rwanda genocide victims", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/2/milestone-macron-opens-paris-monument-honouring-rwanda-genocide-victims?traffic_source=rss", time: "2026-06-02T20:18:22Z" },
+      { title: "1994 Tutsi Genocide: 'French government has never fully come to terms with its involvement'", source: "France 24", url: "https://www.france24.com/en/1994-tutsi-genocide-french-government-has-never-fully-come-to-terms-with-its-involvement", time: "2026-06-02T17:21:46Z" },
+      { title: "International court rejects Rwanda’s claim over UK migration deal", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/1/international-court-rejects-rwandas-claim-over-uk-migration-deal?traffic_source=rss", time: "2026-06-01T16:54:36Z" },
+      { title: "UK wins court case over collapsed Rwanda asylum deal", source: "BBC News", url: "https://www.bbc.com/news/articles/cy526klrk20o?at_medium=RSS&at_campaign=rss", time: "2026-06-01T10:00:33Z" },
+      { title: "Rwanda-Russia nuclear deal underscores Africa’s shifting power balance", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rwanda-russia-nuclear-deal-underscores-africas-shifting-power-balance?traffic_source=rss", time: "2026-05-30T06:29:07Z" },
+    ]
+  },
+  {
+    name: "Kampala", country: "Uganda",
+    lat: 0.3476, lng: 32.5825,
+    category: "political",
+    articles: [
+      { title: "Uganda: Museveni Predicts Uganda's Economy Will Hit $80 Billion Next Year", source: "AllAfrica", url: "https://allafrica.com/stories/202606050032.html", time: "2026-06-05T04:18:42Z" },
+      { title: "Uganda: Over 500 Villages At Risk As Landslide Cracks Widen in Namisindwa District", source: "AllAfrica", url: "https://allafrica.com/stories/202606050020.html", time: "2026-06-05T04:18:35Z" },
+      { title: "Uganda: Ebola Rumours Keeping Some Learners Out of School, Government Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202606030060.html", time: "2026-06-03T06:20:54Z" },
+      { title: "Africa: Ebola's Long Shadow Over the World Cup", source: "AllAfrica", url: "https://allafrica.com/stories/202606020301.html", time: "2026-06-02T10:53:08Z" },
+      { title: "Uganda: Ministerial Nominees Face Parliament's Appointments Committee", source: "AllAfrica", url: "https://allafrica.com/stories/202606020230.html", time: "2026-06-02T10:03:45Z" },
+      { title: "Africa: 20 African Cities Selected as Full U.S. Visa Processing Hubs", source: "AllAfrica", url: "https://allafrica.com/stories/202606020140.html", time: "2026-06-02T08:22:56Z" },
+      { title: "Uganda: AfDB Pledges to Fund SGR, Allocates Initials Shs2.4 Trillion", source: "AllAfrica", url: "https://allafrica.com/stories/202606010172.html", time: "2026-06-01T09:11:43Z" },
+      { title: "Uganda: Bishop Katumba Condemns MPs' Alleged Reliance On Witchcraft, Urges Integrity in Leadership", source: "AllAfrica", url: "https://allafrica.com/stories/202606010111.html", time: "2026-06-01T07:17:18Z" },
+      { title: "Uganda: Kasese Enforces Rainwater Harvesting to Curb Storm Water Runoff", source: "AllAfrica", url: "https://allafrica.com/stories/202606010080.html", time: "2026-06-01T05:41:23Z" },
+      { title: "Uganda: Magnitude 4.5 Earthquake Shakes Uganda", source: "AllAfrica", url: "https://allafrica.com/stories/202606010057.html", time: "2026-06-01T03:20:46Z" },
+    ]
+  },
+  {
     name: "Dar es Salaam", country: "Tanzania",
     lat: -6.7924, lng: 39.2083,
     category: "economic",
@@ -579,7 +554,6 @@ const locations = [
       { title: "Tanzania: Zanzibar Nears Full Immunisation Coverage", source: "AllAfrica", url: "https://allafrica.com/stories/202606010030.html", time: "2026-06-01T03:10:03Z" },
       { title: "Tanzania: Experts Push Ncd Prevention As Health Costs Rise", source: "AllAfrica", url: "https://allafrica.com/stories/202606010025.html", time: "2026-06-01T03:08:57Z" },
       { title: "Tanzania: Government Eyes Tougher Shisha Control", source: "AllAfrica", url: "https://allafrica.com/stories/202606010024.html", time: "2026-06-01T03:08:56Z" },
-      { title: "Tanzania: No, Image Does Not Show University of Dar es Salaam Degree Certificate Used to Wrap Snacks", source: "AllAfrica", url: "https://allafrica.com/stories/202605290510.html", time: "2026-05-29T13:38:07Z" },
     ]
   },
   {
@@ -634,18 +608,6 @@ const locations = [
     ]
   },
   {
-    name: "Khartoum", country: "Sudan",
-    lat: 15.5007, lng: 32.5599,
-    category: "conflict",
-    articles: [
-      { title: "Sudan: Finance Minister Signs $51 Million AfDB-Unicef Agreement to Restructure Stalled Water Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202606050009.html", time: "2026-06-05T04:12:35Z" },
-      { title: "The making of Sudan’s RSF", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/4/rise-of-the-devils-of-horseback-the-making-of-sudans-rsf?traffic_source=rss", time: "2026-06-04T15:51:18Z" },
-      { title: "Sudan: Sudan Gov Reports 58 Dead in RSF Attack On North Kordofan Villages", source: "AllAfrica", url: "https://allafrica.com/stories/202606020012.html", time: "2026-06-02T03:55:18Z" },
-      { title: "‘Spoiled insulin’: Sudan war disrupts drug supplies, fuelling smuggling", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/1/spoiled-insulin-sudan-war-disrupts-drug-supplies-fuelling-smuggling?traffic_source=rss", time: "2026-06-01T13:27:32Z" },
-      { title: "Sudan medical group says RSF-affiliated fighters kill 27 civilians", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/29/sudan-medical-group-says-rsf-affiliated-fighters-kill-27-civilians?traffic_source=rss", time: "2026-05-29T14:01:59Z" },
-    ]
-  },
-  {
     name: "Lilongwe", country: "Malawi",
     lat: -13.9626, lng: 33.7741,
     category: "economic",
@@ -667,6 +629,17 @@ const locations = [
       { title: "How the world failed Ryan and Yaman", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/6/1/how-the-world-failed-ryan-and-yaman?traffic_source=rss", time: "2026-06-01T12:58:03Z" },
       { title: "Mali: Outspoken Critic of Mali's Junta Still Missing a Month On", source: "AllAfrica", url: "https://allafrica.com/stories/202606010083.html", time: "2026-06-01T06:10:14Z" },
       { title: "Teenage competitor accused of stabbing horses at Las Vegas barrel racing event, police say", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/teenager-las-vegas-horses-stabbing-b2986834.html", time: "2026-05-31T21:58:33Z" },
+    ]
+  },
+  {
+    name: "Khartoum", country: "Sudan",
+    lat: 15.5007, lng: 32.5599,
+    category: "conflict",
+    articles: [
+      { title: "Sudan: Finance Minister Signs $51 Million AfDB-Unicef Agreement to Restructure Stalled Water Projects", source: "AllAfrica", url: "https://allafrica.com/stories/202606050009.html", time: "2026-06-05T04:12:35Z" },
+      { title: "The making of Sudan’s RSF", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/4/rise-of-the-devils-of-horseback-the-making-of-sudans-rsf?traffic_source=rss", time: "2026-06-04T15:51:18Z" },
+      { title: "Sudan: Sudan Gov Reports 58 Dead in RSF Attack On North Kordofan Villages", source: "AllAfrica", url: "https://allafrica.com/stories/202606020012.html", time: "2026-06-02T03:55:18Z" },
+      { title: "‘Spoiled insulin’: Sudan war disrupts drug supplies, fuelling smuggling", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/1/spoiled-insulin-sudan-war-disrupts-drug-supplies-fuelling-smuggling?traffic_source=rss", time: "2026-06-01T13:27:32Z" },
     ]
   },
   {
@@ -753,16 +726,6 @@ const locations = [
     ]
   },
   {
-    name: "Luanda", country: "Angola",
-    lat: -8.839, lng: 13.2894,
-    category: "economic",
-    articles: [
-      { title: "Africa: Dozens of New Species Found in One of Africa's Last Biodiversity Blank Spots", source: "AllAfrica", url: "https://allafrica.com/stories/202606050111.html", time: "2026-06-05T07:41:17Z" },
-      { title: "Angola: Angola Wants Partnership With Chinese Institute to Train Marine Technicians", source: "AllAfrica", url: "https://allafrica.com/stories/202605290522.html", time: "2026-05-29T14:32:32Z" },
-      { title: "Angola: Epal Plans to Double Water Supply in Luanda With New Projects By 2027", source: "AllAfrica", url: "https://allafrica.com/stories/202605290521.html", time: "2026-05-29T14:32:09Z" },
-    ]
-  },
-  {
     name: "Freetown", country: "Sierra Leone",
     lat: 8.4657, lng: -13.2317,
     category: "political",
@@ -787,6 +750,14 @@ const locations = [
     articles: [
       { title: "‘Family values’ African charter condemned by rights groups as regressive and dangerous", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/05/ghana-african-charter-family-values-gender-women-sex-lgbtq-reproductive-rights", time: "2026-06-05T08:00:29Z" },
       { title: "Mozambique: Opposition Leader Ven&#xe2;ncio Mondlane Carries the Cross of Mozambique's Democracy", source: "AllAfrica", url: "https://allafrica.com/stories/202606030158.html", time: "2026-06-03T09:02:10Z" },
+    ]
+  },
+  {
+    name: "Luanda", country: "Angola",
+    lat: -8.839, lng: 13.2894,
+    category: "economic",
+    articles: [
+      { title: "Africa: Dozens of New Species Found in One of Africa's Last Biodiversity Blank Spots", source: "AllAfrica", url: "https://allafrica.com/stories/202606050111.html", time: "2026-06-05T07:41:17Z" },
     ]
   },
   {
