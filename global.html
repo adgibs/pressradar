@@ -15,7 +15,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:49 UTC, 6 Jun 2026</span></div>
+    <div class="subtitle">Global news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">10:44 UTC, 6 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">6 June 2026</div>
@@ -144,7 +144,10 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "conflict",
     articles: [
+      { title: "IDF southern Lebanon strike may have hit Lebanese Army personnel, military investigating", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898520", time: "2026-06-06T12:58:22Z" },
+      { title: "Pentagon raised threat assessment of Israeli spying on US to ‘critical’ level — report", source: "Times of Israel", url: "https://www.timesofisrael.com/pentagon-raised-threat-assessment-of-israeli-spying-on-us-to-critical-level-report/", time: "2026-06-06T10:21:03Z" },
       { title: "Six Day War: When Israel moved from survival to revival - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898212", time: "2026-06-06T09:52:47Z" },
+      { title: "‘Badge of honour’: Israeli settlers shrug off global condemnation", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/6/badge-of-honour-israeli-settlers-shrug-off-global-condemnation?traffic_source=rss", time: "2026-06-06T09:18:39Z" },
       { title: "Israeli soccer superstar Daniel Peretz signs permanent four-year deal with Southampton", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/sports/article-898510", time: "2026-06-06T09:02:53Z" },
       { title: "What Visual Evidence Tells Us About Israel’s Use of White Phosphorus in Lebanon", source: "New York Times", url: "https://www.nytimes.com/2026/06/06/world/middleeast/white-phosphorous-israel-lebanon.html", time: "2026-06-06T09:00:06Z" },
       { title: "Oral inflammation may impair female fertility, new Israeli research shows", source: "Jerusalem Post", url: "https://www.jpost.com/science/article-898402", time: "2026-06-06T07:51:35Z" },
@@ -158,6 +161,7 @@ const locations = [
       { title: "Israeli soldier shoots Palestinian baby dead near Hebron", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/6/aje-onl-nf_idf-kills-palestinian-baby-in-occupied-west-bank-060626?traffic_source=rss", time: "2026-06-06T04:58:38Z" },
       { title: "House overwhelmingly rejects Democrat lead resolution to remove US troops from Lebanon", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898512", time: "2026-06-06T03:57:58Z" },
       { title: "Canadian Jews divided by PM Carney’s new council tasked with addressing antisemitism", source: "Times of Israel", url: "https://www.timesofisrael.com/canadian-jews-divided-by-pm-carneys-new-council-tasked-with-addressing-antisemitism/", time: "2026-06-06T03:42:14Z" },
+      { title: "Forget Bibi and October 7: This year's election should be about the Haredim", source: "Haaretz", url: "https://www.haaretz.com/israel-news/2026-06-06/ty-article/.premium/forget-bibi-and-october-7-this-years-election-should-be-about-the-haredim/0000019e-9309-da37-a19f-d78b4be30000", time: "2026-06-06T03:10:50Z" },
       { title: "Suspect arrested for arson at Montreal synagogue, the latest antisemitic attack in Canada", source: "Times of Israel", url: "https://www.timesofisrael.com/suspect-arrested-for-arson-at-montreal-synagogue-the-latest-antisemitic-attack-in-canada/", time: "2026-06-06T02:34:19Z" },
       { title: "What New York's Israel Day Parade says about the future of American Jewry - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898380", time: "2026-06-06T00:17:35Z" },
       { title: "Is the historic alliance between American Jewry and Israel in crisis? - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898174", time: "2026-06-05T23:56:01Z" },
@@ -640,10 +644,6 @@ const locations = [
       { title: "Amb. Huckabee honored at Yeshiva University, delivers commencement speech to grads", source: "Jerusalem Post", url: "https://www.jpost.com/diaspora/article-897785", time: "2026-05-30T13:12:08Z" },
       { title: "Milu-EM to the rescue: Volunteer network aides Israel's overburdened emergency rooms", source: "Jerusalem Post", url: "https://www.jpost.com/health-and-wellness/article-897449", time: "2026-05-30T12:49:52Z" },
       { title: "Israel launches more than 10 strikes across southern Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/israel-launches-more-than-10-strikes-across-southern-lebanon?traffic_source=rss", time: "2026-05-30T10:57:48Z" },
-      { title: "French-Jewish intellectual Edgar Morin, ‘grandfather’ of France,’ dies at 104", source: "Times of Israel", url: "https://www.timesofisrael.com/french-jewish-intellectual-edgar-morin-grandfather-of-france-dies-at-104/", time: "2026-05-30T10:32:21Z" },
-      { title: "Israeli troops push deeper into Lebanon, crossing the Litani river, as talks expected", source: "France 24", url: "https://www.france24.com/en/israeli-troops-push-deeper-into-lebanon-crossing-the-litani-river-as-talks-expected", time: "2026-05-30T10:14:12Z" },
-      { title: "At reopened Nahal Oz pub, Israeli musician closes circle begun after October 7", source: "Times of Israel", url: "https://www.timesofisrael.com/at-reopened-nahal-oz-pub-israeli-musician-closes-circle-begun-after-october-7/", time: "2026-05-30T10:06:28Z" },
-      { title: "Italy bans Kanye West concert after concern from Jewish community", source: "Times of Israel", url: "https://www.timesofisrael.com/italy-bans-kanye-west-concert-after-concern-from-jewish-community/", time: "2026-05-30T09:57:55Z" },
     ]
   },
   {
@@ -651,6 +651,8 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "conflict",
     articles: [
+      { title: "Kuwait and Bahrain targeted by Iran after exchange of fire with US", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/us-says-iran-radar-sites-struck-and-drones-intercepted-in-latest-threat-to-fragile-ceasefire", time: "2026-06-06T10:35:38Z" },
+      { title: "Iran-US war latest: Trump says he is ‘moving fast’ on Iran as he claims military is ‘destroyed’", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strikes-drones-israel-kuwait-b2990907.html", time: "2026-06-06T10:27:20Z" },
       { title: "Coming together again: What D-day teaches about Israel, Iran, and unity - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898290", time: "2026-06-06T09:53:18Z" },
       { title: "Iran's World Cup squad granted US visas but some staff blocked", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/irans-world-cup-squad-granted-us-visas-some-staff-blocked", time: "2026-06-06T09:46:41Z" },
       { title: "US, Iran trade fire in Gulf as Trump team consults experts for nuclear talks", source: "Times of Israel", url: "https://www.timesofisrael.com/us-iran-trade-fire-in-gulf-as-trump-team-consults-experts-for-nuclear-talks/", time: "2026-06-06T09:29:28Z" },
@@ -661,6 +663,7 @@ const locations = [
       { title: "US intercepts Iranian attacks as Israel continues to bomb Lebanon", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/6/us-intercepts-iranian-attacks-as-israel-continues-to-bomb-lebanon?traffic_source=rss", time: "2026-06-06T07:51:28Z" },
       { title: "US says Iranian radar sites hit in Goruk and Qeshm Island", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/6/us-says-iranian-radar-sites-hit-in-goruk-and-qeshm-island?traffic_source=rss", time: "2026-06-06T07:03:14Z" },
       { title: "Two convicted over London stabbing of Iranian dissident journalist", source: "Times of Israel", url: "https://www.timesofisrael.com/two-convicted-over-london-stabbing-of-iranian-dissident-journalist/", time: "2026-06-06T06:29:11Z" },
+      { title: "US and Iran exchange strikes in Gulf in latest test of ceasefire", source: "BBC News", url: "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss", time: "2026-06-06T06:16:28Z" },
       { title: "Iranian media says US denied visas to members of World Cup delegation", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-says-us-denied-visas-members-world-cup-delegation", time: "2026-06-06T06:13:03Z" },
       { title: "US intercepts Iranian ballistic missiles, drones launched towards Kuwait, Bahrain", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-898513", time: "2026-06-06T05:51:01Z" },
       { title: "Araghchi rejects claim that Iran is using Lebanon as leverage", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/araghchi-rejects-claim-iran-using-lebanon-leverage", time: "2026-06-06T05:04:53Z" },
@@ -1093,8 +1096,6 @@ const locations = [
       { title: "Middle East on Edge as Trump Mulls Decision About Iran Deal", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/middleeast/trump-deal-middle-east-iran.html", time: "2026-05-30T12:28:56Z" },
       { title: "Iran official says Trump is stalling talks with ‘excessive demands’", source: "NBC News", url: "https://www.nbcnews.com/world/iran/wait-iran-deal-continues-trump-final-determination-rcna347659", time: "2026-05-30T11:22:08Z" },
       { title: "Trump ‘will only make a deal that is good for America’ with Iran: White House", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-trump-will-only-make-a-deal-that-is-good-for-america-with-iran-white-house/", time: "2026-05-30T10:55:57Z" },
-      { title: "Iran’s internet blackout still a reality for 60 per cent of population", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-internet-blackout-google-telegram-vpn-b2985201.html", time: "2026-05-30T10:08:04Z" },
-      { title: "Looming Iran peace deal shows how Trump’s maximalist goals have shrunk", source: "The Guardian", url: "https://www.theguardian.com/us-news/2026/may/30/iran-trump-peace-deal-analysis", time: "2026-05-30T10:00:16Z" },
     ]
   },
   {
@@ -1102,6 +1103,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Israel faces growing pressure over alleged abuse of Gaza flotilla members", source: "NBC News", url: "https://www.nbcnews.com/world/israel/israel-faces-growing-pressure-alleged-abuse-gaza-flotilla-members-rcna347816", time: "2026-06-06T10:14:59Z" },
       { title: "Thousands gather in Italy to commemorate Palestinian children killed in Gaza", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-thousands-gather-in-italy-to-commemorate-palestinian-children-killed-in-gaza/", time: "2026-06-06T08:39:55Z" },
       { title: "Palestinian infant killed, parents wounded in Israeli fire in occupied West Bank", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-palestinian-infant-killed-parents-wounded-in-israeli-fire-in-occupied-west-bank/", time: "2026-06-06T08:28:26Z" },
       { title: "Israeli forces kill Palestinian baby boy during shooting in the occupied West Bank, health officials say", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/west-bank-sam-fahd-abu-haikal-b2990934.html", time: "2026-06-06T08:17:46Z" },
@@ -1111,6 +1113,7 @@ const locations = [
       { title: "Amnesty chief calls for release of Gaza hospital director Abu Safia", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/amnesty-chief-calls-release-gaza-hospital-director-abu-safia", time: "2026-06-06T05:49:06Z" },
       { title: "Palestinian baby killed by Israeli gunfire in West Bank, says health ministry", source: "Sky News", url: "https://news.sky.com/story/palestinian-health-ministry-says-baby-killed-and-parents-wounded-by-israeli-gunfire-in-west-bank-13551309", time: "2026-06-06T05:35:00Z" },
       { title: "US lawmakers urge Rubio to act against West Bank settlement expansion", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-lawmakers-urge-rubio-act-against-west-bank-settlement-expansion", time: "2026-06-06T04:02:05Z" },
+      { title: "Nine wounded in settler attack in West Bank's Hawara, Palestinians report", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-06/ty-article-live/iran-says-it-struck-u-s-bases-in-middle-east-in-response-to-u-s-strikes/0000019e-9a9f-d59e-a79f-fabf5b540000", time: "2026-06-06T02:05:10Z" },
       { title: "Slovenian president raises Palestinian flag after PM removes it", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/slovenian-president-raises-palestinian-flag-after-pm-removes-it", time: "2026-06-06T01:52:25Z" },
       { title: "Ireland bars entry of Smotrich and Ben-Gvir into the country", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-06/ty-article/ireland-bars-entry-of-smotrich-and-ben-gvir-into-the-country/0000019e-9a74-d7a4-a9bf-fefc6ead0000", time: "2026-06-06T01:34:58Z" },
       { title: "Gaza fishermen stay afloat with dinghies made from doorframes", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/6/gaza-fishermen-stay-afloat-with-dinghies-made-from-doorframes?traffic_source=rss", time: "2026-06-06T01:13:29Z" },
@@ -1330,7 +1333,6 @@ const locations = [
       { title: "Egypt warns Israel that dangerous Gaza escalations threaten ceasefire", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/egypt-warns-israel-that-dangerous-gaza-escalations-threaten-ceasefire?traffic_source=rss", time: "2026-05-30T12:04:35Z" },
       { title: "Israeli occupiers attack Palestinian homes, lands across occupied West Bank", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-israeli-occupiers-attack-palestinian-homes-lands-across-occupied-west-bank/", time: "2026-05-30T11:55:47Z" },
       { title: "Israeli strikes kill one and wound others in Deir al-Balah in Gaza", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-kill-one-and-wound-others-deir-al-balah-gaza", time: "2026-05-30T11:05:22Z" },
-      { title: "Israeli Soldiers say Gaza killings continued despite cease-fire", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-05-30/ty-article/.premium/israeli-soldiers-say-gaza-killings-continued-despite-cease-fire/0000019e-7800-dd89-a59f-f92aa3340000", time: "2026-05-30T10:34:23Z" },
     ]
   },
   {
@@ -1338,6 +1340,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "conflict",
     articles: [
+      { title: "Israeli strike kills two Lebanese officers and one soldier", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-kills-two-lebanese-officers-and-one-soldier", time: "2026-06-06T10:29:19Z" },
       { title: "Several soldiers killed in Israeli strike on Lebanon", source: "France 24", url: "https://www.france24.com/en/several-soldiers-killed-in-israeli-strike-on-lebanon", time: "2026-06-06T08:50:40Z" },
       { title: "Hezbollah says it carried out 32 attacks on Israeli forces in south Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-says-it-carried-out-32-attacks-israeli-forces-south-lebanon", time: "2026-06-06T00:17:01Z" },
       { title: "Iran fires missiles at Kuwait and Bahrain after US military hits Iranian radar sites", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-june-06-2026/", time: "2026-06-06T00:13:55Z" },
@@ -1493,9 +1496,6 @@ const locations = [
       { title: "Israeli officials voice frustration as Hezbollah attacks intensify", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-officials-voice-frustration-hezbollah-attacks-intensify", time: "2026-05-30T16:58:48Z" },
       { title: "Missile hits Kiryat Shmona during early-morning Hezbollah barrage, local leaders demand answers", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-897788", time: "2026-05-30T15:58:32Z" },
       { title: "Kataeb Hezbollah vows to keep arms, as Iraq faces US pressure", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kataeb-hezbollah-vows-keep-arms-iraq-faces-us-pressure", time: "2026-05-30T15:06:21Z" },
-      { title: "Hezbollah says it hit 6 Israeli tanks amid drone, missile attacks in southern Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-hezbollah-says-it-hit-6-israeli-tanks-amid-drone-missile-attacks-in-southern-lebanon/", time: "2026-05-30T10:31:20Z" },
-      { title: "Israel rejects Lebanese demand to withdraw from southern Lebanon: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-israel-rejects-lebanese-demand-to-withdraw-from-southern-lebanon-report/", time: "2026-05-30T10:22:17Z" },
-      { title: "Damage seen in northern Israel after Hezbollah launches rocket barrages", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/damage-seen-in-northern-israel-after-hezbollah-launches-rocket-barrages?traffic_source=rss", time: "2026-05-30T10:13:16Z" },
     ]
   },
   {
@@ -1659,7 +1659,6 @@ const locations = [
       { title: "Hegseth urges Asian leaders to boost military spending against China", source: "NPR", url: "https://www.npr.org/2026/05/30/nx-s1-5837615/hegseth-shangri-la-security-summit", time: "2026-05-30T11:42:06Z" },
       { title: "What Hegseth’s comments at Shangri-La Dialogue say about US foreign policy", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/what-hegseths-comments-at-shangri-la-dialogue-say-about-us-foreign-policy?traffic_source=rss", time: "2026-05-30T11:07:52Z" },
       { title: "What Hegseth’s comments at Shangri-La Dialogue say about US foreign policy", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/what-hegseths-comments-at-shangri-la-dialogue-say-about-us-foreign-policy?traffic_source=rss", time: "2026-05-30T11:07:52Z" },
-      { title: "Rubio says Trump envoy Barrack to step down from Syria post", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rubio-says-trump-envoy-barrack-to-step-down-from-syria-post?traffic_source=rss", time: "2026-05-30T10:34:54Z" },
     ]
   },
   {
@@ -1667,6 +1666,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "conflict",
     articles: [
+      { title: "Tensions grow between Trump and Senate GOP: Five takeaways", source: "The Hill", url: "https://thehill.com/homenews/senate/5912799-trump-gop-tensions-rising/", time: "2026-06-06T10:00:00Z" },
       { title: "Summit a big moment for Montenegro's EU ambitions", source: "RTE News", url: "https://www.rte.ie/news/analysis-and-comment/2026/0606/1577034-montenegro-eu-western-balkans-summit/", time: "2026-06-06T06:00:01Z" },
       { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
       { title: "Texas senator drops push to name highway after Trump after president backed his primary foe", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/texas-senator-trump-highway-name-change-b2990834.html", time: "2026-06-05T21:56:47Z" },
@@ -1819,8 +1819,6 @@ const locations = [
       { title: "How Ukraine turned the tide against Russia", source: "The Hill", url: "https://thehill.com/policy/international/5901178-ukraine-gains-momentum-russia/", time: "2026-05-30T16:00:00Z" },
       { title: "Hegseth disputes claim Iran war delayed Taiwan arms sale", source: "The Hill", url: "https://thehill.com/policy/defense/5902335-pete-hegseth-trump-administration-taiwan-arms-sale-iran-war/", time: "2026-05-30T12:45:46Z" },
       { title: "European Union unlocks 16.4 billion euros in funds for Hungary at Magyar's Brussels visit", source: "France 24", url: "https://www.france24.com/en/european-union-unlocks-16-4-billion-euros-in-funds-for-hungary-at-magyar-s-brussels-visit", time: "2026-05-30T10:49:01Z" },
-      { title: "Ukraine-Russia war latest: Russian oil depot and tanker struck by drones in ‘massive attack’ by Kyiv", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-romania-drone-attack-b2986368.html", time: "2026-05-30T10:41:22Z" },
-      { title: "Romania says Russian drone targeting Ukraine crashes in apartment, killing two", source: "France 24", url: "https://www.france24.com/en/romania-says-russian-drone-targeting-ukraine-crashes-in-apartment-killing-two", time: "2026-05-30T10:20:34Z" },
     ]
   },
   {
@@ -1828,6 +1826,7 @@ const locations = [
     lat: 39.9042, lng: 116.4074,
     category: "conflict",
     articles: [
+      { title: "Snakes alive! Warmer weather brings flurry of sightings in Chinese capital", source: "South China Morning Post", url: "https://www.scmp.com/news/people-culture/trending-china/article/3356111/snakes-alive-warmer-weather-brings-flurry-sightings-chinese-capital?utm_source=rss_feed", time: "2026-06-06T10:00:12Z" },
       { title: "As Ebola Spreads in East Africa, Will China Step Up?", source: "New York Times", url: "https://www.nytimes.com/2026/06/06/world/asia/as-ebola-spreads-in-east-africa-will-china-step-up.html", time: "2026-06-06T09:01:43Z" },
       { title: "China bans 11 online activities under tighter rules to curb rumours, cyberbullies", source: "South China Morning Post", url: "https://www.scmp.com/news/china/politics/article/3356065/china-bans-11-online-activities-under-tighter-rules-curb-rumours-cyberbullies?utm_source=rss_feed", time: "2026-06-06T04:00:06Z" },
       { title: "US approves $1.94 billion sale of maritime helicopters to New Zealand", source: "Straits Times", url: "https://www.straitstimes.com/asia/australianz/us-approves-1-5-billion-sale-of-maritime-helicopters-to-new-zealand", time: "2026-06-06T02:16:32Z" },
@@ -1980,7 +1979,6 @@ const locations = [
       { title: "New Aukus drone subs to protect critical undersea cables as Marles warns: ‘seabed is a battlefield’", source: "The Guardian", url: "https://www.theguardian.com/australia-news/2026/may/31/richard-marles-defence-summit-singapore-china-transparency-pete-hegseth", time: "2026-05-30T22:10:04Z" },
       { title: "What China hears in Hegseth’s Shangri-La speech is America softening its tone in their rivalry", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/what-china-hears-in-hegseths-shangri-la-speech-is-a-softening-of-tone-towards-the-us-regional-rival", time: "2026-05-30T16:30:00Z" },
       { title: "US agency goes back to the future to take on China’s Belt and Road Initiative", source: "South China Morning Post", url: "https://www.scmp.com/news/china/diplomacy/article/3352868/us-agency-goes-back-future-take-chinas-belt-and-road-initiative?utm_source=rss_feed", time: "2026-05-30T12:00:06Z" },
-      { title: "Chinese archaeologist who discovered 5,000-year-old city pleads guilty to corruption", source: "South China Morning Post", url: "https://www.scmp.com/news/china/science/article/3355242/chinese-archaeologist-who-discovered-5000-year-old-city-pleads-guilty-corruption?utm_source=rss_feed", time: "2026-05-30T10:00:06Z" },
     ]
   },
   {
@@ -1988,6 +1986,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "economic",
     articles: [
+      { title: "Russian executive says US using Strait of Hormuz to 'reshape' energy markets", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/russian-ceo-says-us-using-strait-hormuz-reshape-energy-markets", time: "2026-06-06T10:16:17Z" },
       { title: "Iran strikes US bases in Kuwait, Bahrain after drone attacks on Iranian territory: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-iran-strikes-us-bases-in-kuwait-bahrain-after-drone-attacks-on-iranian-territory-report/", time: "2026-06-06T09:32:51Z" },
       { title: "Aviation industry looks skywards as leaders fly in for Rio summit", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/06/aviation-industry-looks-skywards-as-leaders-fly-in-for-rio-summit", time: "2026-06-06T09:00:05Z" },
       { title: "Morning update", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/morning-update-553", time: "2026-06-06T07:00:30Z" },
@@ -2114,7 +2113,6 @@ const locations = [
       { title: "US blockade of Strait of Hormuz remains in place, says Pentagon chief", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-us-blockade-of-strait-of-hormuz-remains-in-place-says-pentagon-chief/", time: "2026-05-30T15:43:37Z" },
       { title: "Wait for Iran deal continues after Trump says he’ll make ‘final determination’", source: "NBC News", url: "https://www.nbcnews.com/world/iran/wait-iran-deal-continues-trump-final-determination-rcna347659", time: "2026-05-30T11:22:08Z" },
       { title: "US Navy warns mariners to avoid Strait of Hormuz due to mine threat", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260530-us-navy-warns-mariners-to-avoid-strait-of-hormuz-due-to-mine-threat/", time: "2026-05-30T11:02:56Z" },
-      { title: "Iran-US war latest: Tehran says Trump ‘betraying diplomacy’ with Hormuz blockade and excessive peace demands", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-deal-ceasefire-strait-of-hormuz-b2986344.html", time: "2026-05-30T09:57:40Z" },
     ]
   },
   {
@@ -2243,9 +2241,6 @@ const locations = [
       { title: "MND Tutor | Huelga", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-intelligence/mnd-tutor-huelga/", time: "2026-05-30T14:27:12Z" },
       { title: "Productivity brings prosperity: Is Mexico really failing at both? A perspective from our CEO", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/business/productivity-prosperity-mexico-ceo-perspective/", time: "2026-05-30T13:00:33Z" },
       { title: "Everything you need to know if you’re heading to the World Cup in Mexico", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/sports/the-complete-world-cup-fan-guide-for-mexico/", time: "2026-05-30T11:23:55Z" },
-      { title: "Desire and disability: Netflix México’s ‘Santita’ challenges everything we knew about taboos", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/culture/desire-and-disability-netflix-mexicos-santita-challenges-everything-we-knew-about-taboos/", time: "2026-05-30T10:31:59Z" },
-      { title: "From our archive: How many stars would you give that baño? A rating guide for Mexican bathrooms", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mexico-living/from-our-archive-how-many-stars-would-you-give-that-bano-a-rating-guide-for-mexican-bathrooms/", time: "2026-05-30T10:28:09Z" },
-      { title: "The MND News Quiz of the Week: May 30th", source: "Mexico News Daily", url: "https://mexiconewsdaily.com/mnd-intelligence/the-mnd-news-quiz-of-the-week-may-30th/", time: "2026-05-30T10:14:57Z" },
     ]
   },
   {
@@ -2371,7 +2366,6 @@ const locations = [
       { title: "Putin's quest to avoid the grim reaper: what’s behind the 26 dollar longevity programme?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260530-putin-s-quest-to-avoid-the-grim-reaper-what-s-behind-the-26-dollar-longevity-programme", time: "2026-05-30T19:28:46Z" },
       { title: "Tearful Oliynykova demands Shnaider face sanctions for ‘supporting war’", source: "The Guardian", url: "https://www.theguardian.com/sport/2026/may/30/tearful-oliynykova-demands-shnaider-face-sanctions-for-supporting-war", time: "2026-05-30T15:53:42Z" },
       { title: "Scoop: First Windows PCs powered by Nvidia chips to debut next week", source: "Axios", url: "https://www.axios.com/2026/05/30/nvidia-microsoft-pcs-ai-surface-dell", time: "2026-05-30T12:00:07Z" },
-      { title: "Ukraine hits oil tanker and depot in southern Russia", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0530/1576029-ukraine-russia-conflict/", time: "2026-05-30T10:19:23Z" },
     ]
   },
   {
@@ -2485,6 +2479,7 @@ const locations = [
     lat: 28.6139, lng: 77.209,
     category: "political",
     articles: [
+      { title: "Sanctions threat to India would ‘boomerang’ under PM Modi's leadership: Putin", source: "The Hindu", url: "https://www.thehindu.com/news/international/sanctions-threat-to-india-would-boomerang-under-pm-modis-leadership-putin/article71069320.ece", time: "2026-06-06T10:04:11Z" },
       { title: "In pictures: 'Cockroaches' descend on New Delhi as party of social media fame stages protest", source: "Dawn", url: "https://www.dawn.com/news/2005645/in-pictures-cockroaches-descend-on-new-delhi-as-party-of-social-media-fame-stages-protest", time: "2026-06-06T09:31:08Z" },
       { title: "Supporters of the Cockroach People’s Party hold protest in New Delhi", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/6/supporters-of-the-cockroach-peoples-party-hold-protest-in-new-delhi?traffic_source=rss", time: "2026-06-06T09:13:55Z" },
       { title: "Supporters of India's Gen Z 'cockroach' party stage first protest in New Delhi", source: "France 24", url: "https://www.france24.com/en/asia-pacific/20260606-supporters-of-india-gen-z-cockroach-party-stage-first-protest-new-delhi", time: "2026-06-06T08:57:16Z" },
@@ -3034,7 +3029,6 @@ const locations = [
       { title: "Putin's quest to avoid the grim reaper: what’s behind the 26 dollar longevity programme?", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260530-putin-s-quest-to-avoid-the-grim-reaper-what-s-behind-the-26-dollar-longevity-programme", time: "2026-05-30T19:28:46Z" },
       { title: "MSF says Ebola spreading at 'unprecedented rate'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0530/1576058-who-ebola-congo/", time: "2026-05-30T17:02:21Z" },
       { title: "Champions League final LIVE! Follow the on-pitch action with Sky Sports as Arsenal face PSG", source: "Sky News", url: "https://news.sky.com/story/champions-league-final-live-follow-the-on-pitch-action-with-sky-sports-as-arsenal-face-psg-13549320", time: "2026-05-30T14:39:00Z" },
-      { title: "Romania says Russian drone targeting Ukraine crashes in apartment, killing two", source: "France 24", url: "https://www.france24.com/en/romania-says-russian-drone-targeting-ukraine-crashes-in-apartment-killing-two", time: "2026-05-30T10:20:34Z" },
     ]
   },
   {
@@ -3384,6 +3378,7 @@ const locations = [
     lat: -4.4419, lng: 15.2663,
     category: "conflict",
     articles: [
+      { title: "Ebola border shutdown leaves goods rotting between Uganda and DRC", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/6/ebola-border-shutdown-leaves-goods-rotting-between-uganda-and-drc?traffic_source=rss", time: "2026-06-06T10:07:29Z" },
       { title: "Uganda closes Congo border over Ebola outbreak fears", source: "The Independent", url: "https://www.independent.co.uk/news/world/africa/uganda-ebola-congo-world-health-organization-b2990950.html", time: "2026-06-06T09:35:08Z" },
       { title: "What is Ebola and why is stopping the latest outbreak so difficult?", source: "BBC News", url: "https://www.bbc.com/news/articles/cz72p75zg4qo?at_medium=RSS&at_campaign=rss", time: "2026-06-05T15:14:22Z" },
       { title: "WHO, Africa CDC unveil $518m Ebola plan as Uganda death toll rises", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/5/who-africa-cdc-unveil-518m-ebola-plan-as-uganda-death-toll-rises?traffic_source=rss", time: "2026-06-05T14:52:36Z" },
@@ -3435,7 +3430,6 @@ const locations = [
       { title: "Africa: Ebola Response Update - May 29, 2026 from the U.S. State Department", source: "AllAfrica", url: "https://allafrica.com/stories/202605300007.html", time: "2026-05-30T13:38:54Z" },
       { title: "WHO chief visits Bunia, epicentre of the Ebola outbreak", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/who-chief-visits-bunia-epicentre-of-the-ebola-outbreak?traffic_source=rss", time: "2026-05-30T12:53:35Z" },
       { title: "WHO chief visits Ebola epicentre in DR Congo, as death toll rises", source: "France 24", url: "https://www.france24.com/en/who-chief-visits-ebola-epicentre-in-dr-congo-as-death-toll-rises", time: "2026-05-30T12:34:39Z" },
-      { title: "DR Congo sees first recovery from Ebola as disease scourges the country", source: "France 24", url: "https://www.france24.com/en/dr-congo-sees-first-recovery-from-ebola-as-disease-scourges-the-country", time: "2026-05-30T10:15:03Z" },
     ]
   },
   {
@@ -3494,7 +3488,6 @@ const locations = [
       { title: "Colombians, weary of violence, prepare to vote in polarizing election", source: "CBS News", url: "https://www.cbsnews.com/news/colombia-presidential-election-ivan-cepeda-abelardo-de-la-espriella-paloma-valencia/", time: "2026-05-30T15:49:33Z" },
       { title: "Spain is legalizing half a million immigrants, a very different policy from the U.S.", source: "NBC News", url: "https://www.nbcnews.com/world/spain/spain-legalizing-half-million-immigrants-unlike-united-states-rcna347405", time: "2026-05-30T11:30:00Z" },
       { title: "How to to end edemic violence in Colombia? Presidential elections to take place on Sunday", source: "France 24", url: "https://www.france24.com/en/how-to-to-end-edemic-violence-in-colombia-presidential-elections-to-take-place-on-sunday", time: "2026-05-30T10:57:04Z" },
-      { title: "Colombia's untapped wonder: The Mavecure Mountains", source: "NPR", url: "https://www.npr.org/2026/05/30/nx-s1-5787938/colombias-untapped-wonder-the-mavecure-mountains", time: "2026-05-30T10:00:00Z" },
     ]
   },
   {
@@ -3504,6 +3497,7 @@ const locations = [
     articles: [
       { title: "South Africa: Cabinet Outlines Action On Drugs, Ebola Preparedness", source: "AllAfrica", url: "https://allafrica.com/stories/202606050542.html", time: "2026-06-05T16:15:52Z" },
       { title: "South Africa rolls out game-changing HIV shot amid funding shortfalls", source: "NPR", url: "https://www.npr.org/2026/06/05/nx-s1-5846846/south-africa-hiv-lenacapavir-aid", time: "2026-06-05T14:53:26Z" },
+      { title: "South Africa: Cabinet Approves Plan to Drive Job Creation", source: "AllAfrica", url: "https://allafrica.com/stories/202606050432.html", time: "2026-06-05T12:12:11Z" },
       { title: "South Africa: The Cop Who Ran Organised Crime Has Been Fired for Running With Criminals", source: "AllAfrica", url: "https://allafrica.com/stories/202606050152.html", time: "2026-06-05T08:59:22Z" },
       { title: "South Africa: How to Use the Anti-HIV Jab  and Where To Find It", source: "AllAfrica", url: "https://allafrica.com/stories/202606050134.html", time: "2026-06-05T08:20:53Z" },
       { title: "South Africa: Young People Don't Vote - - We Asked What Would Get Them to the Polls", source: "AllAfrica", url: "https://allafrica.com/stories/202606050102.html", time: "2026-06-05T07:39:11Z" },
@@ -3735,46 +3729,6 @@ const locations = [
     ]
   },
   {
-    name: "Vientiane", country: "Laos",
-    lat: 17.9757, lng: 102.6331,
-    category: "diplomacy",
-    articles: [
-      { title: "Search ends for last two men lost in Laos cave", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3266853/search-ends-for-last-two-men-lost-in-laos-cave", time: "2026-06-06T08:59:00Z" },
-      { title: "Rescuers halt search for two last men lost in Laos cave", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/rescuers-halt-search-for-two-last-men-lost-in-laos-cave", time: "2026-06-06T08:05:00Z" },
-      { title: "‘Raw beef with spicy dip’: Laos cave survivor on the dream that kept him going underground", source: "NBC News", url: "https://www.nbcnews.com/video/laos-cave-survivor-talks-about-ordeal-underground-joy-of-rescue-264526405677", time: "2026-06-04T19:07:32Z" },
-      { title: "Laos cave survivor recounts days trapped in dark, flooded cave", source: "NBC News", url: "https://www.nbcnews.com/world/asia/laos-cave-survivor-gold-miners-trapped-cave-cramped-flooded-rcna348421", time: "2026-06-04T13:00:00Z" },
-      { title: "2 miners still missing in Laos cave, rescued 5 doing well", source: "CBS News", url: "https://www.cbsnews.com/video/2-miners-still-missing-in-laos-cave-rescued-5-doing-well/", time: "2026-06-01T23:58:19Z" },
-      { title: "Race against time to find and rescue two men in Laos Cave", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/race-against-time-to-find-and-rescue-two-men-in-laos-cave-264316485825", time: "2026-06-01T23:12:42Z" },
-      { title: "Rescuers seek alternative route to search for remaining 2 people stranded in a flooded Laos cave", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/rescuers-seek-alternative-route-to-search-for-remaining-2-people-stranded-in-a-flooded-laos-cave", time: "2026-06-01T16:54:23Z" },
-      { title: "Giant Stone Urns Hint at the Death Rites of a Lost People in Laos", source: "New York Times", url: "https://www.nytimes.com/2026/06/01/science/death-jars-internment-laos.html", time: "2026-06-01T15:49:40Z" },
-      { title: "Laos cave rescuer describes moment trapped miners were freed", source: "CBS News", url: "https://www.cbsnews.com/video/laos-cave-rescuer-describes-moment-trapped-miners-were-freed/", time: "2026-06-01T13:24:30Z" },
-      { title: "Rescuers race to save last two men trapped in Laos cave", source: "NBC News", url: "https://www.nbcnews.com/world/asia/laos-cave-rescuers-race-last-two-men-trapped-rcna347821", time: "2026-06-01T12:11:05Z" },
-      { title: "Diver details 'heartwarming' moments after miners emerged from Laos cave", source: "CBS News", url: "https://www.cbsnews.com/news/laos-cave-rescue-mikko-paasi/", time: "2026-05-31T19:05:19Z" },
-      { title: "Laos cave survivors help with plan to find last two missing men", source: "BBC News", url: "https://www.bbc.com/news/articles/c8094jdpzv3o?at_medium=RSS&at_campaign=rss", time: "2026-05-31T15:52:42Z" },
-      { title: "Rescuers race to save two people still trapped in cave in Laos", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/31/rescuers-race-to-save-two-people-still-trapped-in-cave-in-laos?traffic_source=rss", time: "2026-05-31T15:21:50Z" },
-      { title: "Rescuers pull four villagers trapped in a flooded cave during ten days", source: "France 24", url: "https://www.france24.com/en/rescuers-pull-four-villagers-trapped-in-a-flooded-cave-during-ten-days", time: "2026-05-31T11:56:49Z" },
-      { title: "Survivors advise rescuers in search for last two stuck in Laos cave", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/survivors-advise-rescuers-in-search-for-last-two-stuck-in-laos-cave", time: "2026-05-31T09:40:00Z" },
-      { title: "Cave rescue mission becomes more dangerous", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/cave-rescue-mission-becomes-more-dangerous-20260531-p602hr.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-31T08:26:50Z" },
-      { title: "Rain threatens to delay search for two people missing in flooded cave in Laos", source: "Sky News", url: "https://news.sky.com/story/rain-threatens-to-delay-search-for-two-people-missing-in-flooded-cave-in-laos-13549449", time: "2026-05-31T07:00:00Z" },
-      { title: "Laos cave rescue joy gives way to hunt for two missing villagers", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/asia/laos-cave-rescue-joy-gives-way-to-hunt-for-two-missing-villagers-20260531-p602fw.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-31T06:37:49Z" },
-      { title: "Emotional scenes as more survivors pulled from flooded Laos cave", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/aje-onl-nf_more-survivors-pulled-from-flooded-laos-cave-300526?traffic_source=rss", time: "2026-05-31T02:22:29Z" },
-      { title: "Rescuers safely free four men trapped in Laos cave", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/05/31/2003858296", time: "2026-05-31T00:00:00Z" },
-      { title: "4 more men find way through Laos cave to freedom", source: "CBS News", url: "https://www.cbsnews.com/video/4-more-men-resurface-laos-cave-freedom/", time: "2026-05-30T23:03:00Z" },
-      { title: "5/30: CBS Weekend News", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-weekend-news/", time: "2026-05-30T22:30:00Z" },
-      { title: "Villagers saved from Laos cave", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/villagers-saved-from-laos-cave-20260531-p602cg.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-30T21:39:29Z" },
-      { title: "Four men rescued from flooded Laos cave as search continues for 2 others", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/four-men-rescued-from-flooded-laos-cave-as-search-continues-for-2-others", time: "2026-05-30T17:55:44Z" },
-      { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
-      { title: "Rescuers free four more men from flooded Laos cave, two still missing", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rescuers-free-four-more-men-from-flooded-laos-cave-two-still-missing?traffic_source=rss", time: "2026-05-30T14:53:35Z" },
-      { title: "4 more Laos miners freed from cave after being trapped for 10 days, rescuers say", source: "CBS News", url: "https://www.cbsnews.com/video/4-more-laos-miners-freed-from-cave-after-being-trapped-for-10-days/", time: "2026-05-30T13:11:00Z" },
-      { title: "Five Miners Are Rescued After Week Trapped in Flooded Laos Cave", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/asia/laos-cave-rescue-four.html", time: "2026-05-30T11:56:37Z" },
-      { title: "Four more men freed from flooded Laos cave in hazardous rescue mission", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/30/four-more-men-freed-from-flooded-laos-cave-in-hazardous-rescue-mission", time: "2026-05-30T10:46:52Z" },
-      { title: "Moment rescuers pull out second Laos cave survivor – video", source: "The Guardian", url: "https://www.theguardian.com/world/video/2026/may/30/moment-rescuers-pull-out-second-laos-cave-survivor-video", time: "2026-05-30T10:29:27Z" },
-      { title: "Four more Laos gold miners rescued from flooded cave", source: "CBS News", url: "https://www.cbsnews.com/news/laos-gold-miners-cave-rescue-trapped/", time: "2026-05-30T10:19:27Z" },
-      { title: "Trapped in a cave for a week: Rescuers in Laos evacuate first of five villagers", source: "France 24", url: "https://www.france24.com/en/trapped-in-a-cave-for-a-week-rescuers-in-laos-evacuate-first-of-five-villagers", time: "2026-05-30T10:16:29Z" },
-      { title: "Four more men freed from flooded Laos cave after 10 days", source: "BBC News", url: "https://www.bbc.com/news/articles/cn4pn4ex0ymo?at_medium=RSS&at_campaign=rss", time: "2026-05-30T09:50:56Z" },
-    ]
-  },
-  {
     name: "Jakarta", country: "Indonesia",
     lat: -6.2088, lng: 106.8456,
     category: "economic",
@@ -3851,6 +3805,42 @@ const locations = [
       { title: "Ethiopia’s election: Parties, coalitions and candidates explained", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/31/ethiopias-election-parties-coalitions-and-candidates-explained?traffic_source=rss", time: "2026-05-31T16:40:22Z" },
       { title: "Ethiopia heads to the polls: Elections under the shadow of war and dissent", source: "France 24", url: "https://www.france24.com/en/ethiopia-heads-to-the-polls-elections-under-the-shadow-of-war-and-dissent", time: "2026-05-31T14:04:39Z" },
       { title: "Ethiopia is heading to the polls, but not everyone can vote", source: "BBC News", url: "https://www.bbc.com/news/articles/cn0pngz2rego?at_medium=RSS&at_campaign=rss", time: "2026-05-31T00:53:58Z" },
+    ]
+  },
+  {
+    name: "Vientiane", country: "Laos",
+    lat: 17.9757, lng: 102.6331,
+    category: "diplomacy",
+    articles: [
+      { title: "Search ends for last two men lost in Laos cave", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/general/3266853/search-ends-for-last-two-men-lost-in-laos-cave", time: "2026-06-06T08:59:00Z" },
+      { title: "Rescuers halt search for two last men lost in Laos cave", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/rescuers-halt-search-for-two-last-men-lost-in-laos-cave", time: "2026-06-06T08:05:00Z" },
+      { title: "‘Raw beef with spicy dip’: Laos cave survivor on the dream that kept him going underground", source: "NBC News", url: "https://www.nbcnews.com/video/laos-cave-survivor-talks-about-ordeal-underground-joy-of-rescue-264526405677", time: "2026-06-04T19:07:32Z" },
+      { title: "Laos cave survivor recounts days trapped in dark, flooded cave", source: "NBC News", url: "https://www.nbcnews.com/world/asia/laos-cave-survivor-gold-miners-trapped-cave-cramped-flooded-rcna348421", time: "2026-06-04T13:00:00Z" },
+      { title: "2 miners still missing in Laos cave, rescued 5 doing well", source: "CBS News", url: "https://www.cbsnews.com/video/2-miners-still-missing-in-laos-cave-rescued-5-doing-well/", time: "2026-06-01T23:58:19Z" },
+      { title: "Race against time to find and rescue two men in Laos Cave", source: "NBC News", url: "https://www.nbcnews.com/nightly-news/video/race-against-time-to-find-and-rescue-two-men-in-laos-cave-264316485825", time: "2026-06-01T23:12:42Z" },
+      { title: "Rescuers seek alternative route to search for remaining 2 people stranded in a flooded Laos cave", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/rescuers-seek-alternative-route-to-search-for-remaining-2-people-stranded-in-a-flooded-laos-cave", time: "2026-06-01T16:54:23Z" },
+      { title: "Giant Stone Urns Hint at the Death Rites of a Lost People in Laos", source: "New York Times", url: "https://www.nytimes.com/2026/06/01/science/death-jars-internment-laos.html", time: "2026-06-01T15:49:40Z" },
+      { title: "Laos cave rescuer describes moment trapped miners were freed", source: "CBS News", url: "https://www.cbsnews.com/video/laos-cave-rescuer-describes-moment-trapped-miners-were-freed/", time: "2026-06-01T13:24:30Z" },
+      { title: "Rescuers race to save last two men trapped in Laos cave", source: "NBC News", url: "https://www.nbcnews.com/world/asia/laos-cave-rescuers-race-last-two-men-trapped-rcna347821", time: "2026-06-01T12:11:05Z" },
+      { title: "Diver details 'heartwarming' moments after miners emerged from Laos cave", source: "CBS News", url: "https://www.cbsnews.com/news/laos-cave-rescue-mikko-paasi/", time: "2026-05-31T19:05:19Z" },
+      { title: "Laos cave survivors help with plan to find last two missing men", source: "BBC News", url: "https://www.bbc.com/news/articles/c8094jdpzv3o?at_medium=RSS&at_campaign=rss", time: "2026-05-31T15:52:42Z" },
+      { title: "Rescuers race to save two people still trapped in cave in Laos", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/31/rescuers-race-to-save-two-people-still-trapped-in-cave-in-laos?traffic_source=rss", time: "2026-05-31T15:21:50Z" },
+      { title: "Rescuers pull four villagers trapped in a flooded cave during ten days", source: "France 24", url: "https://www.france24.com/en/rescuers-pull-four-villagers-trapped-in-a-flooded-cave-during-ten-days", time: "2026-05-31T11:56:49Z" },
+      { title: "Survivors advise rescuers in search for last two stuck in Laos cave", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/survivors-advise-rescuers-in-search-for-last-two-stuck-in-laos-cave", time: "2026-05-31T09:40:00Z" },
+      { title: "Cave rescue mission becomes more dangerous", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/cave-rescue-mission-becomes-more-dangerous-20260531-p602hr.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-31T08:26:50Z" },
+      { title: "Rain threatens to delay search for two people missing in flooded cave in Laos", source: "Sky News", url: "https://news.sky.com/story/rain-threatens-to-delay-search-for-two-people-missing-in-flooded-cave-in-laos-13549449", time: "2026-05-31T07:00:00Z" },
+      { title: "Laos cave rescue joy gives way to hunt for two missing villagers", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/asia/laos-cave-rescue-joy-gives-way-to-hunt-for-two-missing-villagers-20260531-p602fw.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-31T06:37:49Z" },
+      { title: "Emotional scenes as more survivors pulled from flooded Laos cave", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/aje-onl-nf_more-survivors-pulled-from-flooded-laos-cave-300526?traffic_source=rss", time: "2026-05-31T02:22:29Z" },
+      { title: "Rescuers safely free four men trapped in Laos cave", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/05/31/2003858296", time: "2026-05-31T00:00:00Z" },
+      { title: "4 more men find way through Laos cave to freedom", source: "CBS News", url: "https://www.cbsnews.com/video/4-more-men-resurface-laos-cave-freedom/", time: "2026-05-30T23:03:00Z" },
+      { title: "5/30: CBS Weekend News", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-weekend-news/", time: "2026-05-30T22:30:00Z" },
+      { title: "Villagers saved from Laos cave", source: "Sydney Morning Herald", url: "https://www.smh.com.au/world/villagers-saved-from-laos-cave-20260531-p602cg.html?ref=rss&utm_medium=rss&utm_source=rss_world", time: "2026-05-30T21:39:29Z" },
+      { title: "Four men rescued from flooded Laos cave as search continues for 2 others", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/four-men-rescued-from-flooded-laos-cave-as-search-continues-for-2-others", time: "2026-05-30T17:55:44Z" },
+      { title: "5/30: Saturday Morning", source: "CBS News", url: "https://www.cbsnews.com/video/053026-cbs-saturday-morning/", time: "2026-05-30T17:00:00Z" },
+      { title: "Rescuers free four more men from flooded Laos cave, two still missing", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/rescuers-free-four-more-men-from-flooded-laos-cave-two-still-missing?traffic_source=rss", time: "2026-05-30T14:53:35Z" },
+      { title: "4 more Laos miners freed from cave after being trapped for 10 days, rescuers say", source: "CBS News", url: "https://www.cbsnews.com/video/4-more-laos-miners-freed-from-cave-after-being-trapped-for-10-days/", time: "2026-05-30T13:11:00Z" },
+      { title: "Five Miners Are Rescued After Week Trapped in Flooded Laos Cave", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/asia/laos-cave-rescue-four.html", time: "2026-05-30T11:56:37Z" },
+      { title: "Four more men freed from flooded Laos cave in hazardous rescue mission", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/30/four-more-men-freed-from-flooded-laos-cave-in-hazardous-rescue-mission", time: "2026-05-30T10:46:52Z" },
     ]
   },
   {
@@ -3955,7 +3945,6 @@ const locations = [
       { title: "Mayor Wahab says construction work near Karachi's Hill Park halted; MQM-P demands probe into 'NOC'", source: "Dawn", url: "https://www.dawn.com/news/2004139/mayor-wahab-says-construction-work-near-karachis-hill-park-halted-mqm-p-demands-probe-into-noc", time: "2026-05-31T11:28:17Z" },
       { title: "Karachi water crisis deepens as power outage hits Dhabeji Pumping Station", source: "Dawn", url: "https://www.dawn.com/news/2003996/karachi-water-crisis-deepens-as-power-outage-hits-dhabeji-pumping-station", time: "2026-05-31T04:33:05Z" },
       { title: "Surgical strike", source: "Dawn", url: "https://www.dawn.com/news/2004072/surgical-strike", time: "2026-05-31T04:11:16Z" },
-      { title: "Suspected robber dies by suicide to avoid arrest in Karachi: police", source: "Dawn", url: "https://www.dawn.com/news/2003916/suspected-robber-dies-by-suicide-to-avoid-arrest-in-karachi-police", time: "2026-05-30T10:25:10Z" },
     ]
   },
   {
@@ -3986,7 +3975,6 @@ const locations = [
       { title: "North Korea slams US remarks comparing South to ‘dagger’", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/north-korea-slams-us-remarks-comparing-south-to-dagger", time: "2026-06-03T03:30:00Z" },
       { title: "South Korea and Japan eye military logistics pact. Should China be wary?", source: "South China Morning Post", url: "https://www.scmp.com/news/china/military/article/3355726/south-korea-and-japan-eye-military-logistics-pact-should-china-be-wary?utm_source=rss_feed", time: "2026-06-02T12:00:11Z" },
       { title: "North Korean POWs: Political pawns in Russia’s war on Ukraine?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/101-east/2026/5/30/north-korean-pows-political-pawns-in-russias-war-on-ukraine?traffic_source=rss", time: "2026-05-30T11:30:00Z" },
-      { title: "Japan PM vows ‘breakthrough’ with N. Korea in abduction issue", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/japan-pm-vows-breakthrough-with-n-korea-in-abduction-issue", time: "2026-05-30T10:30:00Z" },
     ]
   },
   {
@@ -4233,6 +4221,30 @@ const locations = [
     ]
   },
   {
+    name: "Madrid", country: "Spain",
+    lat: 40.4168, lng: -3.7038,
+    category: "political",
+    articles: [
+      { title: "Pope Leo visits Spain with focus on immigration", source: "France 24", url: "https://www.france24.com/en/pope-leo-visits-spain-with-focus-on-immigration", time: "2026-06-06T10:26:16Z" },
+      { title: "Peru is set to elect its 10th president in a decade", source: "NPR", url: "https://www.npr.org/2026/06/06/nx-s1-5847845/peru-election", time: "2026-06-06T10:00:00Z" },
+      { title: "Pope says Church sexual abuse 'still an open wound'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0606/1577066-pope-spain/", time: "2026-06-06T09:11:29Z" },
+      { title: "Pope Leo, After Taking on Trump and A.I., Prepares for New Duels in Spain", source: "New York Times", url: "https://www.nytimes.com/2026/06/06/world/europe/leo-spain-visit.html", time: "2026-06-06T09:01:57Z" },
+      { title: "Pope Leo visits a polarized Spain where conservatives are turning on the church", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/06/06/pope-leo-visits-spain-conservative-catholics-say-church-is-too-liberal/", time: "2026-06-06T08:35:57Z" },
+      { title: "Pope visits Spain to highlight migration amid political tensions", source: "France 24", url: "https://www.france24.com/en/europe/20260606-pope-visits-spain-with-focus-on-migrants-amid-political-tensions", time: "2026-06-06T02:37:14Z" },
+      { title: "Divine intervention: why Pope Leo visit could be a godsend for Pedro Sánchez", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/05/divine-intervention-pope-leo-spain-tour-pedro-sanchez-boost", time: "2026-06-05T04:00:27Z" },
+      { title: "Spanish town faces ‘65ft flames’ during massive wildfire in holiday hotspot", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/spain-wildfire-murcia-holiday-b2989361.html", time: "2026-06-04T12:08:29Z" },
+      { title: "Man City consider legal action after Haaland claim", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c3r2g5zgl0vo?at_medium=RSS&at_campaign=rss", time: "2026-06-04T08:27:35Z" },
+      { title: "Iran World Cup squad to head for Mexico via Spain", source: "Euronews", url: "http://www.euronews.com/2026/06/02/iran-world-cup-squad-to-head-for-mexico-via-spain", time: "2026-06-02T20:17:33Z" },
+      { title: "Mayor cancels DR Congo friendly over Ebola concern", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cm2pd28jnyxo?at_medium=RSS&at_campaign=rss", time: "2026-06-02T19:28:55Z" },
+      { title: "‘They take you out of life, out of time’: a journey into Spain’s astonishing cave paintings", source: "The Guardian", url: "https://www.theguardian.com/science/2026/jun/02/journey-into-spain-palaeolithic-cave-paintings-altamira", time: "2026-06-02T04:00:38Z" },
+      { title: "Flight returns to Newark over apparent passenger joke", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5903714-flight-returns-newark-bluetooth/", time: "2026-06-01T13:46:00Z" },
+      { title: "Typhoon Jangmi threatens Japan as Europe swelters", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/jun/01/typhoon-jangmi-japan-europe-temperatures-australia", time: "2026-06-01T07:17:53Z" },
+      { title: "Family’s 90-year search for answers after father vanished in Francoist uprising – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/jun/01/spain-family-answers-search-franco-uprising-disappeared-photo-essay", time: "2026-06-01T06:00:10Z" },
+      { title: "United Airlines flight to Spain diverted back Newark over Bluetooth device name", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/united-airlines-flight-spain-newark-bluetooth-b2986833.html", time: "2026-05-31T21:52:14Z" },
+      { title: "‘This is a tragedy’: swimming snakes open new front in battle with Balearic lizards", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/31/swimming-horseshoe-whip-snake-threat-ibiza-wall-lizard", time: "2026-05-31T10:26:46Z" },
+    ]
+  },
+  {
     name: "Kathmandu", country: "Nepal",
     lat: 27.7172, lng: 85.324,
     category: "political",
@@ -4322,25 +4334,25 @@ const locations = [
     ]
   },
   {
-    name: "Madrid", country: "Spain",
-    lat: 40.4168, lng: -3.7038,
-    category: "political",
+    name: "Lima", country: "Peru",
+    lat: -12.0464, lng: -77.0428,
+    category: "economic",
     articles: [
-      { title: "Pope says Church sexual abuse 'still an open wound'", source: "RTE News", url: "https://www.rte.ie/news/world/2026/0606/1577066-pope-spain/", time: "2026-06-06T09:11:29Z" },
-      { title: "Pope Leo, After Taking on Trump and A.I., Prepares for New Duels in Spain", source: "New York Times", url: "https://www.nytimes.com/2026/06/06/world/europe/leo-spain-visit.html", time: "2026-06-06T09:01:57Z" },
-      { title: "Pope Leo visits a polarized Spain where conservatives are turning on the church", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/06/06/pope-leo-visits-spain-conservative-catholics-say-church-is-too-liberal/", time: "2026-06-06T08:35:57Z" },
-      { title: "Pope visits Spain to highlight migration amid political tensions", source: "France 24", url: "https://www.france24.com/en/europe/20260606-pope-visits-spain-with-focus-on-migrants-amid-political-tensions", time: "2026-06-06T02:37:14Z" },
-      { title: "Divine intervention: why Pope Leo visit could be a godsend for Pedro Sánchez", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/05/divine-intervention-pope-leo-spain-tour-pedro-sanchez-boost", time: "2026-06-05T04:00:27Z" },
-      { title: "Spanish town faces ‘65ft flames’ during massive wildfire in holiday hotspot", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/spain-wildfire-murcia-holiday-b2989361.html", time: "2026-06-04T12:08:29Z" },
-      { title: "Man City consider legal action after Haaland claim", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/c3r2g5zgl0vo?at_medium=RSS&at_campaign=rss", time: "2026-06-04T08:27:35Z" },
-      { title: "Iran World Cup squad to head for Mexico via Spain", source: "Euronews", url: "http://www.euronews.com/2026/06/02/iran-world-cup-squad-to-head-for-mexico-via-spain", time: "2026-06-02T20:17:33Z" },
-      { title: "Mayor cancels DR Congo friendly over Ebola concern", source: "BBC News", url: "https://www.bbc.com/sport/football/articles/cm2pd28jnyxo?at_medium=RSS&at_campaign=rss", time: "2026-06-02T19:28:55Z" },
-      { title: "‘They take you out of life, out of time’: a journey into Spain’s astonishing cave paintings", source: "The Guardian", url: "https://www.theguardian.com/science/2026/jun/02/journey-into-spain-palaeolithic-cave-paintings-altamira", time: "2026-06-02T04:00:38Z" },
-      { title: "Flight returns to Newark over apparent passenger joke", source: "The Hill", url: "https://thehill.com/homenews/state-watch/5903714-flight-returns-newark-bluetooth/", time: "2026-06-01T13:46:00Z" },
-      { title: "Typhoon Jangmi threatens Japan as Europe swelters", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/jun/01/typhoon-jangmi-japan-europe-temperatures-australia", time: "2026-06-01T07:17:53Z" },
-      { title: "Family’s 90-year search for answers after father vanished in Francoist uprising – photo essay", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/2026/jun/01/spain-family-answers-search-franco-uprising-disappeared-photo-essay", time: "2026-06-01T06:00:10Z" },
-      { title: "United Airlines flight to Spain diverted back Newark over Bluetooth device name", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/united-airlines-flight-spain-newark-bluetooth-b2986833.html", time: "2026-05-31T21:52:14Z" },
-      { title: "‘This is a tragedy’: swimming snakes open new front in battle with Balearic lizards", source: "The Guardian", url: "https://www.theguardian.com/environment/2026/may/31/swimming-horseshoe-whip-snake-threat-ibiza-wall-lizard", time: "2026-05-31T10:26:46Z" },
+      { title: "Peru is set to elect its 10th president in a decade", source: "NPR", url: "https://www.npr.org/2026/06/06/nx-s1-5847845/peru-election", time: "2026-06-06T10:00:00Z" },
+      { title: "Fujimori vs Sanchez: What to know about Peru’s presidential run-off election", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/5/fujimori-vs-sanchez-what-to-know-about-perus-presidential-run-off-election?traffic_source=rss", time: "2026-06-05T13:25:24Z" },
+      { title: "Visa problems shut poorest countries out of crucial UN climate talks in Bonn", source: "The Independent", url: "https://www.independent.co.uk/climate-change/un-climate-crisis-talks-bonn-yemen-b2990324.html", time: "2026-06-05T12:52:47Z" },
+      { title: "EU invests in ocean monitoring as US cuts funding", source: "ABC News", url: "https://abcnews.com/International/wireStory/eu-invests-ocean-monitoring-us-cuts-funding-133596637", time: "2026-06-04T19:22:31Z" },
+      { title: "‘Good lord, what a smell’: can Brazil’s biggest city save a vital source of water from sewage, bacteria and organised crime?", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/drought-water-sao-paulo-billings-reservoir-sewage-bodies-and-bacteria", time: "2026-06-04T13:15:06Z" },
+      { title: "Good riddance to the SEC’s climate disclosure requirement", source: "The Hill", url: "https://thehill.com/opinion/finance/5906388-climate-crisis-narrative-political-headwinds/", time: "2026-06-04T11:30:00Z" },
+      { title: "Peru election could add to string of right-wing victories in Latin America", source: "NPR", url: "https://www.npr.org/2026/06/04/nx-s1-5844281/peru-election-could-add-to-string-of-right-wing-victories-in-latin-america", time: "2026-06-04T08:38:24Z" },
+      { title: "Women behind the lens: ‘Once naked, they formed a circle. The kicking and screaming occurred naturally’", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/women-behind-the-lens-peru-ana-elisa-sotelo", time: "2026-06-03T06:00:44Z" },
+      { title: "Seven states sue Trump administration over offshore wind project deal", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/offshore-wind-project-lawsuit-trump-b2988273.html", time: "2026-06-02T19:08:59Z" },
+      { title: "Appeals court tosses kids’ challenge to Trump energy orders", source: "The Hill", url: "https://thehill.com/regulation/court-battles/5906104-appeals-court-ruling-young-americans-trump-energy-executive-orders/", time: "2026-06-02T18:22:18Z" },
+      { title: "Judge halts Trump effort to target Colorado climate lab", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5905703-colorado-climate-lab-ncar/", time: "2026-06-02T16:06:20Z" },
+      { title: "‘Climate hushing’ is what’s keeping the Democrats from winning", source: "The Hill", url: "https://thehill.com/opinion/energy-environment/5899341-clean-energy-transformation-economy/", time: "2026-05-31T15:00:00Z" },
+      { title: "AI is turning energy into the hottest business in America", source: "Axios", url: "https://www.axios.com/2026/05/31/ai-energy-business-companies-storage-supplies", time: "2026-05-31T11:30:08Z" },
+      { title: "'Fujimori never again!' Protesters fill streets of Lima ahead of Peru presidential elections", source: "France 24", url: "https://www.france24.com/en/fujimori-never-again-protesters-fill-streets-of-lima-ahead-of-peru-presidential-elections", time: "2026-05-31T11:30:02Z" },
+      { title: "Thousands in Peru protest Fujimori presidential run", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/aje-onl-nf_clip-thousands-in-peru-protest-fujimori-run-300526?traffic_source=rss", time: "2026-05-31T03:58:50Z" },
     ]
   },
   {
@@ -4425,27 +4437,6 @@ const locations = [
       { title: "Blast in Myanmar village reportedly kills 55 and injures dozens more", source: "Straits Times", url: "https://www.straitstimes.com/asia/blast-in-myanmar-village-reportedly-kills-55-and-injures-dozens-more", time: "2026-05-31T17:40:03Z" },
       { title: "Blast in rebel-held Myanmar kills dozens: Rescuers", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/blast-in-rebel-held-myanmar-kills-dozens-rescuers", time: "2026-05-31T16:22:55Z" },
       { title: "Myanmar building blast kills more than 45 people; at least 70 others injured", source: "The Hindu", url: "https://www.thehindu.com/news/international/myanmar-building-blast-explosives-mining-death-toll/article71045202.ece", time: "2026-05-31T15:19:48Z" },
-    ]
-  },
-  {
-    name: "Lima", country: "Peru",
-    lat: -12.0464, lng: -77.0428,
-    category: "economic",
-    articles: [
-      { title: "Fujimori vs Sanchez: What to know about Peru’s presidential run-off election", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/5/fujimori-vs-sanchez-what-to-know-about-perus-presidential-run-off-election?traffic_source=rss", time: "2026-06-05T13:25:24Z" },
-      { title: "Visa problems shut poorest countries out of crucial UN climate talks in Bonn", source: "The Independent", url: "https://www.independent.co.uk/climate-change/un-climate-crisis-talks-bonn-yemen-b2990324.html", time: "2026-06-05T12:52:47Z" },
-      { title: "EU invests in ocean monitoring as US cuts funding", source: "ABC News", url: "https://abcnews.com/International/wireStory/eu-invests-ocean-monitoring-us-cuts-funding-133596637", time: "2026-06-04T19:22:31Z" },
-      { title: "‘Good lord, what a smell’: can Brazil’s biggest city save a vital source of water from sewage, bacteria and organised crime?", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/04/drought-water-sao-paulo-billings-reservoir-sewage-bodies-and-bacteria", time: "2026-06-04T13:15:06Z" },
-      { title: "Good riddance to the SEC’s climate disclosure requirement", source: "The Hill", url: "https://thehill.com/opinion/finance/5906388-climate-crisis-narrative-political-headwinds/", time: "2026-06-04T11:30:00Z" },
-      { title: "Peru election could add to string of right-wing victories in Latin America", source: "NPR", url: "https://www.npr.org/2026/06/04/nx-s1-5844281/peru-election-could-add-to-string-of-right-wing-victories-in-latin-america", time: "2026-06-04T08:38:24Z" },
-      { title: "Women behind the lens: ‘Once naked, they formed a circle. The kicking and screaming occurred naturally’", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/women-behind-the-lens-peru-ana-elisa-sotelo", time: "2026-06-03T06:00:44Z" },
-      { title: "Seven states sue Trump administration over offshore wind project deal", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/offshore-wind-project-lawsuit-trump-b2988273.html", time: "2026-06-02T19:08:59Z" },
-      { title: "Appeals court tosses kids’ challenge to Trump energy orders", source: "The Hill", url: "https://thehill.com/regulation/court-battles/5906104-appeals-court-ruling-young-americans-trump-energy-executive-orders/", time: "2026-06-02T18:22:18Z" },
-      { title: "Judge halts Trump effort to target Colorado climate lab", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5905703-colorado-climate-lab-ncar/", time: "2026-06-02T16:06:20Z" },
-      { title: "‘Climate hushing’ is what’s keeping the Democrats from winning", source: "The Hill", url: "https://thehill.com/opinion/energy-environment/5899341-clean-energy-transformation-economy/", time: "2026-05-31T15:00:00Z" },
-      { title: "AI is turning energy into the hottest business in America", source: "Axios", url: "https://www.axios.com/2026/05/31/ai-energy-business-companies-storage-supplies", time: "2026-05-31T11:30:08Z" },
-      { title: "'Fujimori never again!' Protesters fill streets of Lima ahead of Peru presidential elections", source: "France 24", url: "https://www.france24.com/en/fujimori-never-again-protesters-fill-streets-of-lima-ahead-of-peru-presidential-elections", time: "2026-05-31T11:30:02Z" },
-      { title: "Thousands in Peru protest Fujimori presidential run", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/31/aje-onl-nf_clip-thousands-in-peru-protest-fujimori-run-300526?traffic_source=rss", time: "2026-05-31T03:58:50Z" },
     ]
   },
   {
@@ -4584,24 +4575,6 @@ const locations = [
     ]
   },
   {
-    name: "Singapore", country: "Singapore",
-    lat: 1.3521, lng: 103.8198,
-    category: "economic",
-    articles: [
-      { title: "Thaksin tax case tests coalition unity", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3266799/thaksin-tax-case-tests-coalition-unity", time: "2026-06-06T03:30:00Z" },
-      { title: "Does Pete Hegseth’s volte-face on China reflect an America in decline?", source: "South China Morning Post", url: "https://www.scmp.com/opinion/world-opinion/article/3355862/does-pete-hegseths-volte-face-china-reflect-america-decline?utm_source=rss_feed", time: "2026-06-06T01:30:05Z" },
-      { title: "Indonesia vessels headed towards Singapore with smuggled rare earth metals intercepted", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-vessels-headed-towards-singapore-with-smuggled-rare-earth-metals-intercepted", time: "2026-06-03T06:18:00Z" },
-      { title: "Singaporeans in Japan advised to monitor local conditions closely as Typhoon Jangmi passes through", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/singaporeans-in-japan-advised-to-monitor-local-conditions-closely-as-typhoon-jangmi-passes-through", time: "2026-06-03T00:44:00Z" },
-      { title: "Hegseth tones down China rhetoric on return to Asia", source: "South China Morning Post", url: "https://www.scmp.com/plus/news/china/military/article/3355553/hegseth-tones-down-china-rhetoric-return-asia?utm_source=rss_feed", time: "2026-06-01T09:00:11Z" },
-      { title: "Singaporean motorcyclist dies after being hit by a lorry along Malaysia’s North-South Expressway", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/singaporean-motorcyclist-dies-after-being-hit-by-a-lorry-along-malaysias-north-south-expressway", time: "2026-06-01T08:15:00Z" },
-      { title: "Singaporean hiker fractures arm while descending Malaysia’s Gunung Datuk", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/singaporean-hiker-fractures-arm-while-descending-malaysias-gunung-datuk", time: "2026-05-31T07:50:00Z" },
-      { title: "Thai Lion Air cutting flights on 15 routes, including Phuket-Singapore, as jet fuel costs surge", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-lion-air-cutting-flights-on-15-routes-including-phuket-singapore-as-jet-fuel-costs-surge", time: "2026-05-31T07:38:00Z" },
-      { title: "Tiger’s Nest Monastery: What to know about this iconic Buddhist landmark in Bhutan", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/tigers-nest-monastery-what-to-know-about-this-iconic-buddhist-landmark-in-bhutan", time: "2026-05-31T03:15:00Z" },
-      { title: "What Hegseth’s comments at Shangri-La Dialogue say about US foreign policy", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/what-hegseths-comments-at-shangri-la-dialogue-say-about-us-foreign-policy?traffic_source=rss", time: "2026-05-30T11:07:52Z" },
-      { title: "Hegseth’s Message to Asian Partners: Do More to Get More", source: "New York Times", url: "https://www.nytimes.com/2026/05/30/world/asia/hegseth-asia-security-shangri-la.html", time: "2026-05-30T10:19:36Z" },
-    ]
-  },
-  {
     name: "Kuala Lumpur", country: "Malaysia",
     lat: 3.139, lng: 101.6869,
     category: "economic",
@@ -4671,6 +4644,23 @@ const locations = [
       { title: "Misreading Baloch youth", source: "Dawn", url: "https://www.dawn.com/news/2004075/misreading-baloch-youth", time: "2026-05-31T04:02:44Z" },
       { title: "The heat ahead", source: "Dawn", url: "https://www.dawn.com/news/2004071/the-heat-ahead", time: "2026-05-31T03:50:27Z" },
       { title: "Footprints: Space for art", source: "Dawn", url: "https://www.dawn.com/news/2004057/footprints-space-for-art", time: "2026-05-31T02:08:44Z" },
+    ]
+  },
+  {
+    name: "Singapore", country: "Singapore",
+    lat: 1.3521, lng: 103.8198,
+    category: "economic",
+    articles: [
+      { title: "Thaksin tax case tests coalition unity", source: "Bangkok Post", url: "https://www.bangkokpost.com/thailand/politics/3266799/thaksin-tax-case-tests-coalition-unity", time: "2026-06-06T03:30:00Z" },
+      { title: "Does Pete Hegseth’s volte-face on China reflect an America in decline?", source: "South China Morning Post", url: "https://www.scmp.com/opinion/world-opinion/article/3355862/does-pete-hegseths-volte-face-china-reflect-america-decline?utm_source=rss_feed", time: "2026-06-06T01:30:05Z" },
+      { title: "Indonesia vessels headed towards Singapore with smuggled rare earth metals intercepted", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/indonesia-vessels-headed-towards-singapore-with-smuggled-rare-earth-metals-intercepted", time: "2026-06-03T06:18:00Z" },
+      { title: "Singaporeans in Japan advised to monitor local conditions closely as Typhoon Jangmi passes through", source: "Straits Times", url: "https://www.straitstimes.com/asia/east-asia/singaporeans-in-japan-advised-to-monitor-local-conditions-closely-as-typhoon-jangmi-passes-through", time: "2026-06-03T00:44:00Z" },
+      { title: "Hegseth tones down China rhetoric on return to Asia", source: "South China Morning Post", url: "https://www.scmp.com/plus/news/china/military/article/3355553/hegseth-tones-down-china-rhetoric-return-asia?utm_source=rss_feed", time: "2026-06-01T09:00:11Z" },
+      { title: "Singaporean motorcyclist dies after being hit by a lorry along Malaysia’s North-South Expressway", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/singaporean-motorcyclist-dies-after-being-hit-by-a-lorry-along-malaysias-north-south-expressway", time: "2026-06-01T08:15:00Z" },
+      { title: "Singaporean hiker fractures arm while descending Malaysia’s Gunung Datuk", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/singaporean-hiker-fractures-arm-while-descending-malaysias-gunung-datuk", time: "2026-05-31T07:50:00Z" },
+      { title: "Thai Lion Air cutting flights on 15 routes, including Phuket-Singapore, as jet fuel costs surge", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/thai-lion-air-cutting-flights-on-15-routes-including-phuket-singapore-as-jet-fuel-costs-surge", time: "2026-05-31T07:38:00Z" },
+      { title: "Tiger’s Nest Monastery: What to know about this iconic Buddhist landmark in Bhutan", source: "Straits Times", url: "https://www.straitstimes.com/asia/south-asia/tigers-nest-monastery-what-to-know-about-this-iconic-buddhist-landmark-in-bhutan", time: "2026-05-31T03:15:00Z" },
+      { title: "What Hegseth’s comments at Shangri-La Dialogue say about US foreign policy", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/5/30/what-hegseths-comments-at-shangri-la-dialogue-say-about-us-foreign-policy?traffic_source=rss", time: "2026-05-30T11:07:52Z" },
     ]
   },
   {
@@ -4810,20 +4800,6 @@ const locations = [
     ]
   },
   {
-    name: "Zaporizhzhia", country: "Ukraine",
-    lat: 47.8388, lng: 35.1396,
-    category: "humanitarian",
-    articles: [
-      { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
-      { title: "IAEA brokers Ukraine ceasefire to allow nuclear plant repairs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/5/iaea-brokers-ukraine-ceasefire-to-allow-nuclear-plant-repairs?traffic_source=rss", time: "2026-06-05T11:01:37Z" },
-      { title: "Drone attack on UAE's Barakah more dangerous than Zaporizhzhia, IAEA chief tells Euronews", source: "Euronews", url: "http://www.euronews.com/2026/06/03/drone-attack-on-uaes-barakah-more-dangerous-than-zaporizhzhia-iaea-chief-tells-euronews", time: "2026-06-03T11:19:52Z" },
-      { title: "Ukraine hits Russian energy targets, denies striking Zaporizhzhia nuclear plant", source: "France 24", url: "https://www.france24.com/en/europe/20260531-ukraine-hits-russian-energy-targets-denies-striking-zaporizhzhia-nuclear-plant", time: "2026-05-31T15:46:59Z" },
-      { title: "Ukraine-Russia war latest: Kyiv denies attacking Zaporizhzhia nuclear plant with drone", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-05-31T06:52:43Z" },
-      { title: "Ukraine war briefing: Kyiv denies its drone ‘deliberately’ hit Zaporizhzhia nuclear plant", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/ukraine-war-briefing-kyiv-denies-its-drone-deliberately-hit-zaporizhzhia-nuclear-plant", time: "2026-05-31T00:38:04Z" },
-      { title: "Russia says Ukrainian drone struck Zaporizhzhia plant", source: "RTE News", url: "https://www.rte.ie/news/ukraine/2026/0530/1576029-ukraine-russia-conflict/", time: "2026-05-30T10:19:23Z" },
-    ]
-  },
-  {
     name: "Black Sea", country: "International",
     lat: 43.0, lng: 35.0,
     category: "conflict",
@@ -4877,6 +4853,19 @@ const locations = [
       { title: "Party Like a Swede! A Guide to Celebrating Midsummer.", source: "New York Times", url: "https://www.nytimes.com/2026/06/02/travel/sweden-midsummer-celebrations.html", time: "2026-06-02T09:00:38Z" },
       { title: "Weapons are one thing, but if war breaks out, Europe’s best resource is its people | Elisabeth Braw", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/jun/02/weapons-europe-war-people-scandinavia-baltic-citizens-non-combatants", time: "2026-06-02T04:00:37Z" },
       { title: "‘Nothing is too much for a child’: the Norwegian books for kids tackling taboo topics from IVF to incest", source: "The Guardian", url: "https://www.theguardian.com/books/2026/jun/01/how-norway-is-tackling-taboo-topics-in-childrens-literature", time: "2026-06-01T04:00:07Z" },
+    ]
+  },
+  {
+    name: "Zaporizhzhia", country: "Ukraine",
+    lat: 47.8388, lng: 35.1396,
+    category: "humanitarian",
+    articles: [
+      { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
+      { title: "IAEA brokers Ukraine ceasefire to allow nuclear plant repairs", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/5/iaea-brokers-ukraine-ceasefire-to-allow-nuclear-plant-repairs?traffic_source=rss", time: "2026-06-05T11:01:37Z" },
+      { title: "Drone attack on UAE's Barakah more dangerous than Zaporizhzhia, IAEA chief tells Euronews", source: "Euronews", url: "http://www.euronews.com/2026/06/03/drone-attack-on-uaes-barakah-more-dangerous-than-zaporizhzhia-iaea-chief-tells-euronews", time: "2026-06-03T11:19:52Z" },
+      { title: "Ukraine hits Russian energy targets, denies striking Zaporizhzhia nuclear plant", source: "France 24", url: "https://www.france24.com/en/europe/20260531-ukraine-hits-russian-energy-targets-denies-striking-zaporizhzhia-nuclear-plant", time: "2026-05-31T15:46:59Z" },
+      { title: "Ukraine-Russia war latest: Kyiv denies attacking Zaporizhzhia nuclear plant with drone", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-05-31T06:52:43Z" },
+      { title: "Ukraine war briefing: Kyiv denies its drone ‘deliberately’ hit Zaporizhzhia nuclear plant", source: "The Guardian", url: "https://www.theguardian.com/world/2026/may/31/ukraine-war-briefing-kyiv-denies-its-drone-deliberately-hit-zaporizhzhia-nuclear-plant", time: "2026-05-31T00:38:04Z" },
     ]
   },
   {
@@ -4945,16 +4934,16 @@ const locations = [
     ]
   },
   {
-    name: "Kabul", country: "Afghanistan",
-    lat: 34.5553, lng: 69.2075,
-    category: "humanitarian",
+    name: "Oslo", country: "Norway",
+    lat: 59.9139, lng: 10.7522,
+    category: "economic",
     articles: [
-      { title: "From poplars to pistachios, Afghans rediscover the value of trees", source: "Dawn", url: "https://www.dawn.com/news/2005114/from-poplars-to-pistachios-afghans-rediscover-the-value-of-trees", time: "2026-06-04T07:05:56Z" },
-      { title: "A bird has better protection than an Afghan woman. Welcoming the Taliban to Europe is a slap in the face | Fawzia Koofi", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/afghan-woman-legal-protection-laws-eu-taliban-europe", time: "2026-06-03T07:00:45Z" },
-      { title: "Afghan women’s football team rises again after escaping the Taliban and years in exile", source: "The Hindu", url: "https://www.thehindu.com/sport/football/afghan-womens-football-team-rises-again-after-escaping-the-taliban-and-years-in-exile/article71055572.ece", time: "2026-06-03T06:34:29Z" },
-      { title: "Is the Taliban-Russia MoU good for Afghanistan?", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/6/2/is-the-taliban-russia-mou-good-for-afghanistan?traffic_source=rss", time: "2026-06-02T14:57:47Z" },
-      { title: "22 killed as truck carrying refugees overturns in Afghanistan", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/22-killed-as-truck-carrying-refugees-overturns-in-afghanistan?traffic_source=rss", time: "2026-05-30T18:06:29Z" },
-      { title: "Truck carrying returning refugees crashes in eastern Afghanistan, killing 22", source: "The Hindu", url: "https://www.thehindu.com/news/international/several-killed-as-truck-carrying-returning-refugees-crashes-in-eastern-afghanistan/article71040795.ece", time: "2026-05-30T10:32:56Z" },
+      { title: "Technical issue detected on one of UK's biggest warships", source: "Sky News", url: "https://news.sky.com/story/technical-issue-detected-on-one-of-uks-biggest-warships-13551329", time: "2026-06-06T07:45:00Z" },
+      { title: "Norway's crown princess on lung transplant waiting list, palace says", source: "BBC News", url: "https://www.bbc.com/news/articles/c9wewqxpq2eo?at_medium=RSS&at_campaign=rss", time: "2026-06-05T17:11:01Z" },
+      { title: "Crown Princess Mette-Marit of Norway Is Placed on Lung Transplant List", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/europe/norway-princess-lung-transplant.html", time: "2026-06-05T16:00:48Z" },
+      { title: "Norway’s Crown Princess Mette-Marit awaits lung transplant after further health deterioration", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/norway-mette-marit-lung-transplant-b2990296.html", time: "2026-06-05T09:00:54Z" },
+      { title: "Norwegian princess leaves Australia to support seriously ill mother", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/norway-princess-ingrid-alexandra-mette-marit-australia-b2989465.html", time: "2026-06-04T10:19:37Z" },
+      { title: "Court orders man, 63, to stay away from future queen, 22, studying in Australia", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/norway-princess-ingrid-alexander-david-james-cook-b2988873.html", time: "2026-06-03T14:42:19Z" },
     ]
   },
   {
@@ -4994,6 +4983,18 @@ const locations = [
     ]
   },
   {
+    name: "Kuwait City", country: "Kuwait",
+    lat: 29.3759, lng: 47.9774,
+    category: "conflict",
+    articles: [
+      { title: "US State Department approves possible sale of counter-drone platforms to Kuwait", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-us-state-department-approves-possible-sale-of-counter-drone-platforms-to-kuwait/", time: "2026-06-06T10:36:41Z" },
+      { title: "US approves potential $1.98bn counter-drone sale to Kuwait", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-approves-potential-198bn-counter-drone-sale-kuwait", time: "2026-06-06T00:26:24Z" },
+      { title: "Kuwait releases videos showing the moment a drone struck its airport.", source: "New York Times", url: "https://www.nytimes.com/live/2026/06/04/world/iran-war-trump-israel-lebanon/kuwait-releases-videos-showing-the-moment-a-drone-struck-its-airport", time: "2026-06-04T19:56:36Z" },
+      { title: "Kuwait releases footage of drone strike on airport", source: "France 24", url: "https://www.france24.com/en/video/20260604-kuwait-releases-footage-of-drone-strike-on-airport", time: "2026-06-04T10:16:18Z" },
+      { title: "Kuwait says air defences repelling hostile missile and drone attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kuwait-says-air-defences-repelling-hostile-missile-and-drone-attacks", time: "2026-06-02T22:21:13Z" },
+    ]
+  },
+  {
     name: "Lilongwe", country: "Malawi",
     lat: -13.9626, lng: 33.7741,
     category: "economic",
@@ -5030,18 +5031,6 @@ const locations = [
     ]
   },
   {
-    name: "Oslo", country: "Norway",
-    lat: 59.9139, lng: 10.7522,
-    category: "economic",
-    articles: [
-      { title: "Norway's crown princess on lung transplant waiting list, palace says", source: "BBC News", url: "https://www.bbc.com/news/articles/c9wewqxpq2eo?at_medium=RSS&at_campaign=rss", time: "2026-06-05T17:11:01Z" },
-      { title: "Crown Princess Mette-Marit of Norway Is Placed on Lung Transplant List", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/europe/norway-princess-lung-transplant.html", time: "2026-06-05T16:00:48Z" },
-      { title: "Norway’s Crown Princess Mette-Marit awaits lung transplant after further health deterioration", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/norway-mette-marit-lung-transplant-b2990296.html", time: "2026-06-05T09:00:54Z" },
-      { title: "Norwegian princess leaves Australia to support seriously ill mother", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/norway-princess-ingrid-alexandra-mette-marit-australia-b2989465.html", time: "2026-06-04T10:19:37Z" },
-      { title: "Court orders man, 63, to stay away from future queen, 22, studying in Australia", source: "The Independent", url: "https://www.independent.co.uk/news/world/australasia/norway-princess-ingrid-alexander-david-james-cook-b2988873.html", time: "2026-06-03T14:42:19Z" },
-    ]
-  },
-  {
     name: "The Hague", country: "Netherlands",
     lat: 52.0705, lng: 4.3007,
     category: "political",
@@ -5051,6 +5040,18 @@ const locations = [
       { title: "Judge blocks Jewish group's attempt to stop Kanye West gigs", source: "Sky News", url: "https://news.sky.com/story/judge-blocks-jewish-groups-attempt-to-stop-kanye-west-gigs-13550611", time: "2026-06-04T02:14:00Z" },
       { title: "Unusual Greenpeace Lawsuit May Proceed, Dutch Court Says", source: "New York Times", url: "https://www.nytimes.com/2026/06/03/climate/greenpeace-energy-transfer-slapp-lawsuit-dakota-access-pipeline.html", time: "2026-06-03T18:41:08Z" },
       { title: "Trump official misses out on top UN position after admin fails to pay off $328 million debt", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/sheng-li-trump-ilo-un-debt-b2987271.html", time: "2026-06-01T13:50:38Z" },
+    ]
+  },
+  {
+    name: "Kabul", country: "Afghanistan",
+    lat: 34.5553, lng: 69.2075,
+    category: "humanitarian",
+    articles: [
+      { title: "From poplars to pistachios, Afghans rediscover the value of trees", source: "Dawn", url: "https://www.dawn.com/news/2005114/from-poplars-to-pistachios-afghans-rediscover-the-value-of-trees", time: "2026-06-04T07:05:56Z" },
+      { title: "A bird has better protection than an Afghan woman. Welcoming the Taliban to Europe is a slap in the face | Fawzia Koofi", source: "The Guardian", url: "https://www.theguardian.com/global-development/2026/jun/03/afghan-woman-legal-protection-laws-eu-taliban-europe", time: "2026-06-03T07:00:45Z" },
+      { title: "Afghan women’s football team rises again after escaping the Taliban and years in exile", source: "The Hindu", url: "https://www.thehindu.com/sport/football/afghan-womens-football-team-rises-again-after-escaping-the-taliban-and-years-in-exile/article71055572.ece", time: "2026-06-03T06:34:29Z" },
+      { title: "Is the Taliban-Russia MoU good for Afghanistan?", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/6/2/is-the-taliban-russia-mou-good-for-afghanistan?traffic_source=rss", time: "2026-06-02T14:57:47Z" },
+      { title: "22 killed as truck carrying refugees overturns in Afghanistan", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/5/30/22-killed-as-truck-carrying-refugees-overturns-in-afghanistan?traffic_source=rss", time: "2026-05-30T18:06:29Z" },
     ]
   },
   {
@@ -5111,17 +5112,6 @@ const locations = [
     ]
   },
   {
-    name: "Kuwait City", country: "Kuwait",
-    lat: 29.3759, lng: 47.9774,
-    category: "conflict",
-    articles: [
-      { title: "US approves potential $1.98bn counter-drone sale to Kuwait", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/us-approves-potential-198bn-counter-drone-sale-kuwait", time: "2026-06-06T00:26:24Z" },
-      { title: "Kuwait releases videos showing the moment a drone struck its airport.", source: "New York Times", url: "https://www.nytimes.com/live/2026/06/04/world/iran-war-trump-israel-lebanon/kuwait-releases-videos-showing-the-moment-a-drone-struck-its-airport", time: "2026-06-04T19:56:36Z" },
-      { title: "Kuwait releases footage of drone strike on airport", source: "France 24", url: "https://www.france24.com/en/video/20260604-kuwait-releases-footage-of-drone-strike-on-airport", time: "2026-06-04T10:16:18Z" },
-      { title: "Kuwait says air defences repelling hostile missile and drone attacks", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kuwait-says-air-defences-repelling-hostile-missile-and-drone-attacks", time: "2026-06-02T22:21:13Z" },
-    ]
-  },
-  {
     name: "Indian Ocean", country: "International",
     lat: 0.0, lng: 65.0,
     category: "conflict",
@@ -5130,17 +5120,6 @@ const locations = [
       { title: "US forces board sanctioned tanker in Indian Ocean, Pentagon says", source: "Straits Times", url: "https://www.straitstimes.com/asia/us-forces-board-sanctioned-tanker-in-indian-ocean-pentagon-says", time: "2026-06-05T12:16:36Z" },
       { title: "The terrifying day the U.S.-Iran war reached a sleepy Sri Lankan town", source: "NPR", url: "https://www.npr.org/2026/05/31/nx-s1-5820634/the-terrifying-day-the-u-s-iran-war-reached-a-sleepy-sri-lankan-town", time: "2026-05-31T21:11:15Z" },
       { title: "The terrifying day the U.S.-Iran war reached a sleepy Sri Lankan town", source: "NPR", url: "https://www.npr.org/2026/05/31/nx-s1-5820634/the-terrifying-day-the-u-s-iran-war-reached-a-sleepy-sri-lankan-town", time: "2026-05-31T21:11:15Z" },
-    ]
-  },
-  {
-    name: "Minsk", country: "Belarus",
-    lat: 53.9045, lng: 27.5615,
-    category: "diplomacy",
-    articles: [
-      { title: "Ukraine-Russia war latest: Belarus leader issues ominous threat to Zelensky over ‘one major target’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-b2986909.html", time: "2026-06-01T07:28:03Z" },
-      { title: "Ukraine-Russia war latest: Belarus leader issues ominous threat to Zelensky over ‘one major target’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-06-01T05:28:43Z" },
-      { title: "Concerns mount that Belarus could be a launchpad for a new Russian offensive in Ukraine", source: "ABC News", url: "https://abcnews.com/International/wireStory/concerns-mount-belarus-launchpad-new-russian-offensive-ukraine-133460131", time: "2026-05-31T04:14:13Z" },
-      { title: "Trump defrosts relations with Europe’s last dictator Alexander Lukashenko", source: "NBC News", url: "https://www.nbcnews.com/world/europe/trump-defrosts-relations-europes-last-dictator-alexander-lukashenko-rcna347500", time: "2026-05-30T09:57:54Z" },
     ]
   },
   {
@@ -5185,6 +5164,17 @@ const locations = [
       { title: "Guinea Bissau: Why Do Male Chimpanzees Throw Rocks At the Same Trees for More Than a Decade? We Travelled to Remote Guinea-Bissau to Find Out", source: "AllAfrica", url: "https://allafrica.com/stories/202606030011.html", time: "2026-06-03T04:28:26Z" },
       { title: "Guinea: Guineans Denounce an 'Electoral Farce' After Low Turnout in Legislative Polls", source: "AllAfrica", url: "https://allafrica.com/stories/202606020007.html", time: "2026-06-02T03:55:14Z" },
       { title: "‘Before, the land sustained us’: Who benefits from Guinea’s bauxite wealth?", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/6/1/before-the-land-sustained-us-who-benefits-from-guineas-bauxite-wealth?traffic_source=rss", time: "2026-06-01T01:08:05Z" },
+    ]
+  },
+  {
+    name: "Lagos", country: "Nigeria",
+    lat: 6.5244, lng: 3.3792,
+    category: "economic",
+    articles: [
+      { title: "Nigeria: Illegal Dismissal - Court to Hear Soldier's Suit Against Army June 24", source: "AllAfrica", url: "https://allafrica.com/stories/202606050429.html", time: "2026-06-05T12:11:56Z" },
+      { title: "Nigeria: Police Dismiss 'Bandit Invasion' Rumours in Lagos", source: "AllAfrica", url: "https://allafrica.com/stories/202606020066.html", time: "2026-06-02T04:21:41Z" },
+      { title: "Nigeria: Fresh Ebola Threat - Lagos Tightens Mmia Surveillance to Block Imported Cases", source: "AllAfrica", url: "https://allafrica.com/stories/202606010253.html", time: "2026-06-01T10:01:43Z" },
+      { title: "Nigeria: Nigeria's Housing Shortage May Hit 28 Million, Expert Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202606010128.html", time: "2026-06-01T07:41:55Z" },
     ]
   },
   {
@@ -5293,6 +5283,16 @@ const locations = [
     ]
   },
   {
+    name: "Minsk", country: "Belarus",
+    lat: 53.9045, lng: 27.5615,
+    category: "diplomacy",
+    articles: [
+      { title: "Ukraine-Russia war latest: Belarus leader issues ominous threat to Zelensky over ‘one major target’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-b2986909.html", time: "2026-06-01T07:28:03Z" },
+      { title: "Ukraine-Russia war latest: Belarus leader issues ominous threat to Zelensky over ‘one major target’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-nuclear-plant-drones-losses-b2986639.html", time: "2026-06-01T05:28:43Z" },
+      { title: "Concerns mount that Belarus could be a launchpad for a new Russian offensive in Ukraine", source: "ABC News", url: "https://abcnews.com/International/wireStory/concerns-mount-belarus-launchpad-new-russian-offensive-ukraine-133460131", time: "2026-05-31T04:14:13Z" },
+    ]
+  },
+  {
     name: "Crimea", country: "Ukraine",
     lat: 44.9521, lng: 34.1024,
     category: "conflict",
@@ -5340,16 +5340,6 @@ const locations = [
       { title: "‘Instagrammer’ prince of Brunei named in Cabinet", source: "Taipei Times", url: "https://www.taipeitimes.com/News/world/archives/2026/06/06/2003858638", time: "2026-06-06T00:00:00Z" },
       { title: "Brunei's sultan announces cabinet shake-up, appoints sons as ministers", source: "Straits Times", url: "https://www.straitstimes.com/asia/bruneis-sultan-announces-cabinet-shake-up-appoints-sons-as-ministers", time: "2026-06-04T10:56:04Z" },
       { title: "Brunei’s sultan announces cabinet shake-up, appoints sons as ministers", source: "Straits Times", url: "https://www.straitstimes.com/asia/se-asia/bruneis-sultan-announces-cabinet-shake-up-appoints-sons-as-ministers", time: "2026-06-04T10:56:04Z" },
-    ]
-  },
-  {
-    name: "Lagos", country: "Nigeria",
-    lat: 6.5244, lng: 3.3792,
-    category: "economic",
-    articles: [
-      { title: "Nigeria: Police Dismiss 'Bandit Invasion' Rumours in Lagos", source: "AllAfrica", url: "https://allafrica.com/stories/202606020066.html", time: "2026-06-02T04:21:41Z" },
-      { title: "Nigeria: Fresh Ebola Threat - Lagos Tightens Mmia Surveillance to Block Imported Cases", source: "AllAfrica", url: "https://allafrica.com/stories/202606010253.html", time: "2026-06-01T10:01:43Z" },
-      { title: "Nigeria: Nigeria's Housing Shortage May Hit 28 Million, Expert Warns", source: "AllAfrica", url: "https://allafrica.com/stories/202606010128.html", time: "2026-06-01T07:41:55Z" },
     ]
   },
   {
@@ -5671,6 +5661,15 @@ const locations = [
     ]
   },
   {
+    name: "Toronto", country: "Canada",
+    lat: 43.6532, lng: -79.3832,
+    category: "economic",
+    articles: [
+      { title: "The World Cup Comes to Canada. But Does Anyone Care?", source: "New York Times", url: "https://www.nytimes.com/2026/06/06/world/canada/world-cup-canada-toronto-vancouver.html", time: "2026-06-06T10:00:02Z" },
+      { title: "Where Is Toronto’s Best Party? Try the Basement.", source: "New York Times", url: "https://www.nytimes.com/2026/05/31/world/canada/toronto-basement-jams-caribbean-diaspora.html", time: "2026-05-31T07:00:12Z" },
+    ]
+  },
+  {
     name: "Nablus", country: "Palestine",
     lat: 32.2211, lng: 35.2544,
     category: "humanitarian",
@@ -5740,14 +5739,6 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Russia Launches Deadly Strikes on Ukraine", source: "New York Times", url: "https://www.nytimes.com/2026/06/02/world/europe/ukraine-war-russia-kyiv-attack.html", time: "2026-06-02T07:35:45Z" },
-    ]
-  },
-  {
-    name: "Rostov-on-Don", country: "Russia",
-    lat: 47.2357, lng: 39.7015,
-    category: "conflict",
-    articles: [
-      { title: "Ukraine-Russia war latest: Russian oil depot and tanker struck by drones in ‘massive attack’ by Kyiv", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-romania-drone-attack-b2986368.html", time: "2026-05-30T10:41:22Z" },
     ]
   },
   {
@@ -5916,22 +5907,6 @@ const locations = [
     category: "economic",
     articles: [
       { title: "Teenage sensation Vaibhav Sooryavanshi called up to India's T20I squad, Shreyas Iyer named captain", source: "Dawn", url: "https://www.dawn.com/news/2005640/teenage-sensation-vaibhav-sooryavanshi-called-up-to-indias-t20i-squad-shreyas-iyer-named-captain", time: "2026-06-06T08:58:00Z" },
-    ]
-  },
-  {
-    name: "Calgary", country: "Canada",
-    lat: 51.0447, lng: -114.0719,
-    category: "economic",
-    articles: [
-      { title: "U.S. church leader Doug Wilson declares strong support for Alberta independence movement", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-us-canada-doug-wilson-alberta-separatism-pastor-nationalism-christian/", time: "2026-05-30T10:00:00Z" },
-    ]
-  },
-  {
-    name: "Toronto", country: "Canada",
-    lat: 43.6532, lng: -79.3832,
-    category: "economic",
-    articles: [
-      { title: "Where Is Toronto’s Best Party? Try the Basement.", source: "New York Times", url: "https://www.nytimes.com/2026/05/31/world/canada/toronto-basement-jams-caribbean-diaspora.html", time: "2026-05-31T07:00:12Z" },
     ]
   },
   {
