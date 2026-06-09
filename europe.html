@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">20:47 UTC, 9 Jun 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">21:39 UTC, 9 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">9 June 2026</div>
@@ -116,6 +116,7 @@ const locations = [
     lat: 50.8503, lng: 4.3517,
     category: "political",
     articles: [
+      { title: "Live results: Mainers choose Mills’s successor in gubernatorial primary elections", source: "The Hill", url: "https://thehill.com/homenews/campaign/5909408-live-results-maine-gubernatorial-primary/", time: "2026-06-09T21:00:00Z" },
       { title: "Collins, McConnell: ‘Safe to conclude’ third reconciliation bill not happening", source: "The Hill", url: "https://thehill.com/homenews/senate/5916477-third-reconciliation-bill-collins-mcconnell-defense-funding/", time: "2026-06-09T17:06:28Z" },
       { title: "EU plans to ban Russian soldiers from bloc in fresh sanctions on Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/09/eu-ban-russian-soldiers-fresh-sanctions-moscow", time: "2026-06-09T15:12:38Z" },
       { title: "White House negotiating federal preemption of state AI laws in exchange for Hill priorities", source: "The Hill", url: "https://thehill.com/policy/technology/5916062-artificial-intelligence-federal-preemption-negotiations/", time: "2026-06-09T14:00:49Z" },
@@ -208,12 +209,6 @@ const locations = [
       { title: "Live updates: California, Iowa head to primary polls; Blanche confirms White House won’t resurrect anti-weaponization fund", source: "The Hill", url: "https://thehill.com/homenews/administration/5904025-live-updates-trump-iran-iowa-california-primary/", time: "2026-06-03T00:34:37Z" },
       { title: "As Russia pounds Ukrainian cities, Kyiv tries to turn the tide with battlefront innovation", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/as-russia-pounds-ukrainian-cities-kyiv-tries-to-turn-the-tide-with-battlefront-innovation", time: "2026-06-02T22:40:59Z" },
       { title: "Zelensky says Russia is training abducted Ukrainian children to fight for Moscow", source: "The Hill", url: "https://thehill.com/policy/international/5906667-zelesnky-russia-abduct-children/", time: "2026-06-02T21:57:44Z" },
-      { title: "Massive Russian attack on Kyiv and other Ukrainian cities kills 22 people, officials say, as Moscow escalates fighting", source: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/massive-russian-attack-on-kyiv-and-other-ukrainian-cities-kills-22-people-officials-say-as-moscow-escalates-fighting", time: "2026-06-02T21:24:32Z" },
-      { title: "Democratic senators push for AI guardrails on military in NDAA", source: "The Hill", url: "https://thehill.com/policy/defense/5906615-ai-military-guardrails-senate/", time: "2026-06-02T21:19:43Z" },
-      { title: "Live results: Iowa Senate primaries", source: "The Hill", url: "https://thehill.com/homenews/campaign/5897873-live-results-iowa-senate-primaries/", time: "2026-06-02T21:00:00Z" },
-      { title: "Live results: Iowa gubernatorial primary elections", source: "The Hill", url: "https://thehill.com/homenews/campaign/5897870-live-results-iowa-gubernatorial-primary-elections/", time: "2026-06-02T21:00:00Z" },
-      { title: "Live results: Montana Senate primaries", source: "The Hill", url: "https://thehill.com/homenews/campaign/5897882-live-results-montana-senate-primaries/", time: "2026-06-02T21:00:00Z" },
-      { title: "Live results: California gubernatorial primary", source: "The Hill", url: "https://thehill.com/homenews/campaign/5897864-live-results-california-gubernatorial-primary/", time: "2026-06-02T21:00:00Z" },
     ]
   },
   {
@@ -221,6 +216,7 @@ const locations = [
     lat: 51.5074, lng: -0.1278,
     category: "political",
     articles: [
+      { title: "White House says UK should not ban social media for kids under 16", source: "The Hill", url: "https://thehill.com/policy/international/5917083-trump-admin-urges-uk-no-social-media-ban/", time: "2026-06-09T21:02:24Z" },
       { title: "D4RLYL, a Robot Magician, Is Denied Membership in The Magic Circle", source: "New York Times", url: "https://www.nytimes.com/2026/06/09/world/europe/robot-david-penn-magic-circle.html", time: "2026-06-09T18:07:08Z" },
       { title: "Zelenskyy: Putin is ‘playing games’ with Trump – podcast", source: "The Guardian", url: "https://www.theguardian.com/world/audio/2026/jun/09/zelenskyy-putin-is-playing-games-with-trump-podcast", time: "2026-06-09T15:50:38Z" },
       { title: "Hundreds of migrants heading for UK ‘kidnapped, tortured and threatened with organ removal’", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/migrants-libya-kidney-removal-bbc-investigation-b2992344.html", time: "2026-06-09T14:50:26Z" },
@@ -382,7 +378,6 @@ const locations = [
       { title: "NATO chief on unannounced visit to Kyiv after deadly Russian attacks", source: "France 24", url: "https://www.france24.com/en/nato-chief-on-unannounced-visit-to-kyiv-after-deadly-russian-attacks", time: "2026-06-03T09:37:40Z" },
       { title: "French artist JR's giant 'cave' installation in Paris appears damaged", source: "Euronews", url: "http://www.euronews.com/video/2026/06/03/french-artist-jrs-giant-cave-installation-in-paris-appears-damaged", time: "2026-06-03T06:18:27Z" },
       { title: "Ukraine war briefing: ‘Your country is killing other people’ – tennis star blasts Russian rivals", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/03/ukraine-war-briefing-tennis-star-marta-kostyuk-russian-rivals", time: "2026-06-03T00:29:37Z" },
-      { title: "Russia 'trying to prevent Armenia's diversification of connectivity', expert says", source: "France 24", url: "https://www.france24.com/en/tv-shows/a-propos/20260602-russia-trying-to-prevent-armenia-s-diversification-of-connectivity-expert-says", time: "2026-06-02T21:27:04Z" },
     ]
   },
   {
