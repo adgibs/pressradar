@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:48 UTC, 12 Jun 2026</span></div>
+    <div class="subtitle">Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:34 UTC, 12 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">12 June 2026</div>
@@ -112,6 +112,95 @@ const catLabels = { political: "Politics / governance", economic: "Economic / tr
 // Location data (injected by fetch_news.py)
 const locations = [
   {
+    name: "Brussels", country: "Belgium",
+    lat: 50.8503, lng: 4.3517,
+    category: "political",
+    articles: [
+      { title: "Russian drone barrage hits Kyiv and Mykolaiv as Ukraine reports major fires", source: "Euronews", url: "http://www.euronews.com/video/2026/06/12/russian-drone-barrage-hits-kyiv-and-mykolaiv-as-ukraine-reports-major-fires", time: "2026-06-12T09:31:51Z" },
+      { title: "GOP senator says Trump will face ‘the most miserable two years of his life’ after midterms", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/john-cornyn-trump-midterms-republican-texas-b2994514.html", time: "2026-06-12T08:41:07Z" },
+      { title: "Fuel shortages hit Russian-occupied Crimea as Kyiv steps up drone attacks", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/fuel-shortages-crimea-russia-ukraine-drone-attacks-b2994500.html", time: "2026-06-12T08:34:46Z" },
+      { title: "Belgium: Jordan Bardella strengthens ties with Vlaams Belang in Brussels visit", source: "Euronews", url: "http://www.euronews.com/video/2026/06/12/belgium-jordan-bardella-strengthens-ties-with-vlaams-belang-in-brussels-visit", time: "2026-06-12T08:15:58Z" },
+      { title: "What's in the landmark EU migration reform hardening border protections?", source: "France 24", url: "https://www.france24.com/en/europe/20260612-eu-adopts-major-landmark-asylum-reform-hardening-border-procedures", time: "2026-06-12T06:01:12Z" },
+      { title: "New asylum contract for minors agreed as EU migration rules come into effect", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/12/new-asylum-contract-for-minors-agreed-as-eu-migration-rules-come-into-effect/", time: "2026-06-12T05:00:01Z" },
+      { title: "Ukraine-Russia war latest: Kyiv claims devastating strike on Crimea bridge destroyed 50 military vehicles", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-crimea-bridge-news-b2994432.html", time: "2026-06-12T04:30:36Z" },
+      { title: "U.S. Plan Is Said to Pull a Third of Fighter Jets It Provides NATO for Europe", source: "New York Times", url: "https://www.nytimes.com/2026/06/12/world/europe/us-nato-cuts-drawdown-jets.html", time: "2026-06-12T04:01:04Z" },
+      { title: "Republicans add measure to strip forest protections to wildfire bill, endangering Dem support", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5920524-wildfires-national-forests-roadless/", time: "2026-06-11T19:00:35Z" },
+      { title: "Republicans ask FEC to probe Sullivan challenger with same name in Alaska", source: "The Hill", url: "https://thehill.com/homenews/campaign/5920506-senate-gop-alaska-probe/", time: "2026-06-11T18:58:26Z" },
+      { title: "GOP senator’s diving catch in baseball game makes ESPN’s top plays", source: "The Hill", url: "https://thehill.com/policy/sports-gaming/5919976-espn-sportscenter-congressional-baseball-game/", time: "2026-06-11T15:13:17Z" },
+      { title: "EU must learn to ‘fight back’ against ‘Maga ideologists’, commissioner tells Oireachtas group", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/11/eu-must-learn-to-fight-back-against-maga-ideologists-commissioner-tells-oireachtas-group/", time: "2026-06-11T14:44:13Z" },
+      { title: "Russia calls Canada ‘warmonger’ for signing drone production deal with Ukraine", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/article-russia-calls-canada-warmonger-for-ukraine-drones/", time: "2026-06-11T10:55:26Z" },
+      { title: "Senate GOP support erodes for Trump’s Iran war stance", source: "The Hill", url: "https://thehill.com/homenews/senate/5919116-senate-gop-iran-conflict/", time: "2026-06-11T10:00:00Z" },
+      { title: "Government funding hits a wall as senators point finger at other party", source: "The Hill", url: "https://thehill.com/homenews/senate/5919073-senate-funding-appropriations-defense-domestic/", time: "2026-06-11T10:00:00Z" },
+      { title: "Minnesota lawmaker shooting suspect to plead guilty after death penalty is dropped", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/vance-boelter-trial-minnesota-democrats-shooting-b2993817.html", time: "2026-06-11T09:06:12Z" },
+      { title: "Ukraine beefs up defences in Chornobyl exclusion zone, near border with Belarus", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-ukraine-chornobyl-belarus-border-russia-war/", time: "2026-06-11T08:30:00Z" },
+      { title: "The EU is inviting the Taliban to Brussels. Europe’s credibility lies in tatters", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/jun/11/the-eu-is-inviting-the-taliban-to-brussels-europes-credibility-lies-in-tatters", time: "2026-06-11T04:00:05Z" },
+      { title: "Ukraine war briefing: Flamingo missiles hit more far-flung Russian targets", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/11/ukraine-war-briefing-flamingo-missiles-hit-more-far-flung-russian-targets", time: "2026-06-11T01:11:52Z" },
+      { title: "Feds won't seek death penalty in plea deal with man accused of killing top Minnesota Democrat", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/minneapolis-minnesota-mark-b2993613.html", time: "2026-06-10T22:06:03Z" },
+      { title: "Four senior senators express alarm, push for ‘hard’ Social Security votes", source: "The Hill", url: "https://thehill.com/homenews/senate/5918842-bipartisan-senators-social-security/", time: "2026-06-10T20:00:55Z" },
+      { title: "Anti-immigration march to Dáil attempts to rally support against EU migration pact", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/06/10/anti-immigration-march-to-dail-attempts-to-rally-support-against-eu-migration-pact/", time: "2026-06-10T19:17:51Z" },
+      { title: "Mace ‘headed back to private sector’ after congressional term ends", source: "The Hill", url: "https://thehill.com/homenews/house/5918560-mace-gubernatorial-primary-defeat/", time: "2026-06-10T17:55:28Z" },
+      { title: "‘Amaterasu’ performance marks 160 years of Belgium-Japan relations in Brussels", source: "Euronews", url: "http://www.euronews.com/video/2026/06/10/amaterasu-performance-marks-160-years-of-belgium-japan-relations-in-brussels", time: "2026-06-10T17:39:02Z" },
+      { title: "Trump says voter fraud claims forced California to ‘approve’ Hilton", source: "The Hill", url: "https://thehill.com/homenews/administration/5918302-trump-hilton-california-governor-voter-fraud/", time: "2026-06-10T16:22:56Z" },
+      { title: "Senate Democrats question national park entry fees used for Trump ‘vanity projects’", source: "The Hill", url: "https://thehill.com/homenews/senate/5918063-senate-democrats-adam-schiff-donald-trump-national-park-service-fees-dc-projects/", time: "2026-06-10T15:23:11Z" },
+      { title: "Letter from Kyiv: The messed-up day-to-day of living under Putin’s cruel air war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/10/years-on-i-still-marvel-at-the-resilience-of-day-to-day-life-under-putins-cruel-air-war", time: "2026-06-10T14:46:09Z" },
+      { title: "Trump congratulates Graham on win, calls for focus on passing Save America Act", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917984-trump-congratulates-graham-on-win-calls-for-focus-on-passing-save-america-act/", time: "2026-06-10T13:25:33Z" },
+      { title: "Why Tom Steyer's $216-million gubernatorial bid failed", source: "LA Times", url: "https://www.latimes.com/california/story/2026-06-10/why-tom-steyers-216-million-gubernatorial-bid-failed", time: "2026-06-10T10:00:00Z" },
+      { title: "460 European figures call on EU to be tougher on Israel", source: "RTE News", url: "https://www.rte.ie/news/2026/0610/1577658-eu-editorial-israel/", time: "2026-06-10T05:01:37Z" },
+      { title: "Mace endorses Wilson after losing South Carolina gubernatorial bid", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917678-mace-endorses-wilson-after-losing-south-carolina-gubernatorial-bid/", time: "2026-06-10T04:19:34Z" },
+      { title: "Platner's big night: 5 takeaways from Tuesday's primaries", source: "Axios", url: "https://www.axios.com/2026/06/10/graham-platner-maine-5-takeaways", time: "2026-06-10T04:07:11Z" },
+      { title: "Tears and catharsis as Kyiv premieres opera about Ukrainian children abducted by Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/10/mothers-of-kherson-opera-kyiv-premiere-russian-abductions-children-ukraine", time: "2026-06-10T04:00:10Z" },
+      { title: "Steyer endorses Becerra after losing California gubernatorial primary", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917526-steyer-endorses-becerra-california/", time: "2026-06-10T02:11:56Z" },
+      { title: "Graham Platner wins Democrats' nomination in key Maine Senate race", source: "Axios", url: "https://www.axios.com/2026/06/10/democrats-graham-platner-maine-senate-primary", time: "2026-06-10T01:33:21Z" },
+      { title: "Live results: Mainers choose Mills’s successor in gubernatorial primary elections", source: "The Hill", url: "https://thehill.com/homenews/campaign/5909408-live-results-maine-gubernatorial-primary/", time: "2026-06-09T21:00:00Z" },
+      { title: "Collins, McConnell: ‘Safe to conclude’ third reconciliation bill not happening", source: "The Hill", url: "https://thehill.com/homenews/senate/5916477-third-reconciliation-bill-collins-mcconnell-defense-funding/", time: "2026-06-09T17:06:28Z" },
+      { title: "EU plans to ban Russian soldiers from bloc in fresh sanctions on Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/09/eu-ban-russian-soldiers-fresh-sanctions-moscow", time: "2026-06-09T15:12:38Z" },
+      { title: "White House negotiating federal preemption of state AI laws in exchange for Hill priorities", source: "The Hill", url: "https://thehill.com/policy/technology/5916062-artificial-intelligence-federal-preemption-negotiations/", time: "2026-06-09T14:00:49Z" },
+      { title: "Why Zelensky asked Russian oligarch Abramovich to test Putin’s appetite for talks", source: "France 24", url: "https://www.france24.com/en/europe/20260609-why-zelensky-asked-russian-oligarch-roman-abramovich-to-test-putin-appetite-for-talks", time: "2026-06-09T12:33:02Z" },
+      { title: "EU set to discuss deportation of Afghan refugees with Taliban", source: "France 24", url: "https://www.france24.com/en/eu-set-to-discuss-deportation-of-afghan-refugees-with-taliban", time: "2026-06-09T10:45:25Z" },
+      { title: "Alaska Senate candidate under investigation over alleged voter confusion scheme", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/alaska-senate-dan-sullivan-nancy-dahlstrom-voter-deception-b2992323.html", time: "2026-06-09T10:02:48Z" },
+      { title: "South Carolina GOP gubernatorial primary tests Trump’s influence: 5 races to watch Tuesday", source: "The Hill", url: "https://thehill.com/homenews/campaign/5915038-south-carolina-maine-primary-elections/", time: "2026-06-09T10:00:00Z" },
+      { title: "Scoop: White House pre-blames Europe for any World Cup Ebola", source: "Axios", url: "https://www.axios.com/2026/06/09/white-house-world-cup-ebola-europe", time: "2026-06-09T09:10:05Z" },
+      { title: "Belgium: Thousands protest alleged police violence in Brussels", source: "Euronews", url: "http://www.euronews.com/video/2026/06/09/belgium-thousands-protest-alleged-police-violence-in-brussels", time: "2026-06-09T08:11:52Z" },
+      { title: "EU quota system ‘could kill Ukrainian steel industry’, boss says", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/09/eu-quota-ukrainian-steel-industry-metinvest", time: "2026-06-09T06:00:47Z" },
+      { title: "EU to adopt 21st sanctions package against Russia", source: "RTE News", url: "https://www.rte.ie/news/2026/0609/1577463-aughinish-alumina/", time: "2026-06-09T05:30:39Z" },
+      { title: "Need to get 'facts straight' around Aughinish - Kallas", source: "RTE News", url: "https://www.rte.ie/news/2026/0609/1577463-kallas-dublin-aughinish/", time: "2026-06-09T05:30:39Z" },
+      { title: "Ukraine-Russia war latest: Kyiv ‘recaptures area two times size of Birmingham’ as Zelensky calls Trump envoys", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-kharkiv-map-b2992143.html", time: "2026-06-09T05:13:33Z" },
+      { title: "Ukraine war briefing: Russia’s Peskov admits ‘certain problems’ with fuel supplies after energy sites targeted", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/09/ukraine-war-briefing-russias-peskov-admits-certain-problems-with-fuel-supplies-after-energy-sites-targeted", time: "2026-06-09T01:02:25Z" },
+      { title: "Russia's fuel crisis intensifies as Ukraine steps up strikes on occupied territories", source: "BBC News", url: "https://www.bbc.com/news/articles/cn75l36vdd8o?at_medium=RSS&at_campaign=rss", time: "2026-06-08T23:23:15Z" },
+      { title: "Scoop: White House, Hill relaunch effort to block state AI laws", source: "Axios", url: "https://www.axios.com/2026/06/08/white-house-hill-relaunch-effort-block-state-ai-laws", time: "2026-06-08T22:26:06Z" },
+      { title: "Platner says he won’t be an ‘a–hole’ like Fetterman in Senate", source: "The Hill", url: "https://thehill.com/homenews/campaign/5915534-maine-senate-race-platner-fetterman/", time: "2026-06-08T22:24:45Z" },
+      { title: "EU Taliban invite 'the wrong signal to anyone that is using power as a means of suppression'", source: "France 24", url: "https://www.france24.com/en/eu-taliban-invite-the-wrong-signal-to-anyone-that-is-using-power-as-a-means-of-suppression", time: "2026-06-08T21:31:34Z" },
+      { title: "Thune urges passage of FISA extension before deadline amidst Pulte uproar", source: "The Hill", url: "https://thehill.com/homenews/senate/5915347-thune-pulte-fisa-reforms/", time: "2026-06-08T20:37:03Z" },
+      { title: "Trump has exacted revenge on so many GOP senators that he should lose the Iran war powers vote. Here’s why he won’t", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-war-powers-act-republicans-b2991852.html", time: "2026-06-08T19:24:48Z" },
+      { title: "Russian interference in Armenia: A nation tested by disinformation", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-observers/20260608-russian-interference-armenia-nation-tested-disinformation", time: "2026-06-08T18:13:22Z" },
+      { title: "Hawley blasts 4 Republicans who voted to reject adding voter ID bill to reconciliation package", source: "The Hill", url: "https://thehill.com/homenews/senate/5914534-save-america-act-fails-senate-vote/", time: "2026-06-08T12:12:29Z" },
+      { title: "'Democratic backsliding': Armenia's 'extreme polarisation, hate speech, stigmatization' mar election", source: "France 24", url: "https://www.france24.com/en/democratic-backsliding-armenia-s-extreme-polarisation-hate-speech-stigmatization-mar-election", time: "2026-06-08T12:10:36Z" },
+      { title: "EU announces €5 million boost to Ebola response in DRC", source: "Euronews", url: "http://www.euronews.com/2026/06/08/eu-announces-5-million-boost-to-ebola-response-in-drc", time: "2026-06-08T10:18:43Z" },
+      { title: "Divisions mount between GOP lawmakers, Trump, raising tensions", source: "The Hill", url: "https://thehill.com/homenews/administration/5912713-trump-republican-party-tension/", time: "2026-06-08T10:00:00Z" },
+      { title: "Bob Packwood, Oregon senator forced to resign due to sex scandal, dies at 93", source: "The Hill", url: "https://thehill.com/homenews/senate/5914207-former-senator-bob-packwood-dies/", time: "2026-06-08T01:20:31Z" },
+      { title: "Maine Dems plot response if Nebraska GOP tweaks Electoral College votes", source: "Axios", url: "https://www.axios.com/2026/06/07/maine-democrats-nebraska-electoral-college", time: "2026-06-07T21:30:06Z" },
+      { title: "Former Republican Senator who resigned after sexual harassment scandal dies at 93", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/bob-packwood-dead-oregon-republican-b2991427.html", time: "2026-06-07T20:51:35Z" },
+      { title: "Trump cuts off interview with Welker: ‘I’ve had enough’", source: "The Hill", url: "https://thehill.com/homenews/administration/5913804-trump-walks-out-welker-interview/", time: "2026-06-07T16:38:54Z" },
+      { title: "‘It’s time to move forward’: Armenians vote in election closely watched by Russia and EU", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/armenia-vote-election-closely-watched-russia-eu", time: "2026-06-07T09:56:04Z" },
+      { title: "Ministers to ‘study closely’ Dáil motions on controversial football matches against Israel", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/07/ministers-to-study-closely-dail-motions-on-controversial-football-matches-against-israel/", time: "2026-06-07T08:34:00Z" },
+      { title: "Car industry pressing EU for further delay to Brexit EV tariffs", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/07/eu-uk-car-industry-lobbying-second-brexit-ev-tariff-delay", time: "2026-06-07T06:00:25Z" },
+      { title: "Armenia polls open in test of prime minister's pivot away from Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260607-armenia-polls-open-in-test-of-prime-minister-s-pivot-away-from-russia", time: "2026-06-07T05:21:40Z" },
+      { title: "Armenia goes to polls in pivotal vote to decide South Caucasus future", source: "Euronews", url: "http://www.euronews.com/2026/06/07/armenia-goes-to-polls-in-pivotal-vote-to-decide-south-caucasus-future", time: "2026-06-07T04:00:53Z" },
+      { title: "Ukraine-Russia war latest: Kyiv launches huge drone strike on St Petersburg in attack Kremlin brands ‘unprecedented’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-ceasefire-proposal-b2990910.html", time: "2026-06-06T14:16:52Z" },
+      { title: "Tensions grow between Trump and Senate GOP: Five takeaways", source: "The Hill", url: "https://thehill.com/homenews/senate/5912799-trump-gop-tensions-rising/", time: "2026-06-06T10:00:00Z" },
+      { title: "Ukraine launches 'large-scale' drone strike on St Petersburg", source: "Sky News", url: "https://news.sky.com/story/ukraine-launches-large-scale-drone-strike-on-st-petersburg-13551344", time: "2026-06-06T09:09:00Z" },
+      { title: "Summit a big moment for Montenegro's EU ambitions", source: "RTE News", url: "https://www.rte.ie/news/analysis-and-comment/2026/0606/1577034-montenegro-eu-western-balkans-summit/", time: "2026-06-06T06:00:01Z" },
+      { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
+      { title: "Texas senator drops push to name highway after Trump after president backed his primary foe", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/texas-senator-trump-highway-name-change-b2990834.html", time: "2026-06-05T21:56:47Z" },
+      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/jun/05/the-week-around-the-world-in-20-pictures", time: "2026-06-05T18:49:03Z" },
+      { title: "EU must prove it is capable and willing to take in new members, leaders say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/05/eu-new-members-bloc-leaders-summit-enlargement", time: "2026-06-05T15:00:21Z" },
+      { title: "More than a quarter of UK musicians lost all EU work since 2021, report finds", source: "The Guardian", url: "https://www.theguardian.com/music/2026/jun/05/quarter-of-uk-musicians-have-lost-all-eu-work-since-2021-report-finds", time: "2026-06-05T13:52:33Z" },
+      { title: "Six Republicans vote no on FISA extension", source: "The Hill", url: "https://thehill.com/homenews/senate/5911508-six-republicans-vote-no-on-fisa-extension/", time: "2026-06-05T12:08:36Z" },
+      { title: "Negotiations on air passenger rights hit turbulence: EU Parliament takes on airlines", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260605-negotiations-on-air-passenger-rights-hit-turbulence-eu-parliament-takes-on-airlines", time: "2026-06-05T11:55:35Z" },
+      { title: "Senate advances ICE funding through Trump's second term", source: "Axios", url: "https://www.axios.com/2026/06/05/senate-ice-border-patrol-funding-vote", time: "2026-06-05T10:19:19Z" },
+    ]
+  },
+  {
     name: "London", country: "United Kingdom",
     lat: 51.5074, lng: -0.1278,
     category: "political",
@@ -198,92 +287,6 @@ const locations = [
     ]
   },
   {
-    name: "Brussels", country: "Belgium",
-    lat: 50.8503, lng: 4.3517,
-    category: "political",
-    articles: [
-      { title: "What's in the landmark EU migration reform hardening border protections?", source: "France 24", url: "https://www.france24.com/en/europe/20260612-eu-adopts-major-landmark-asylum-reform-hardening-border-procedures", time: "2026-06-12T06:01:12Z" },
-      { title: "New asylum contract for minors agreed as EU migration rules come into effect", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/12/new-asylum-contract-for-minors-agreed-as-eu-migration-rules-come-into-effect/", time: "2026-06-12T05:00:01Z" },
-      { title: "Ukraine-Russia war latest: Kyiv claims devastating strike on Crimea bridge destroyed 50 military vehicles", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-crimea-bridge-news-b2994432.html", time: "2026-06-12T04:30:36Z" },
-      { title: "U.S. Plan Is Said to Pull a Third of Fighter Jets It Provides NATO for Europe", source: "New York Times", url: "https://www.nytimes.com/2026/06/12/world/europe/us-nato-cuts-drawdown-jets.html", time: "2026-06-12T04:01:04Z" },
-      { title: "Republicans add measure to strip forest protections to wildfire bill, endangering Dem support", source: "The Hill", url: "https://thehill.com/policy/energy-environment/5920524-wildfires-national-forests-roadless/", time: "2026-06-11T19:00:35Z" },
-      { title: "Republicans ask FEC to probe Sullivan challenger with same name in Alaska", source: "The Hill", url: "https://thehill.com/homenews/campaign/5920506-senate-gop-alaska-probe/", time: "2026-06-11T18:58:26Z" },
-      { title: "GOP senator’s diving catch in baseball game makes ESPN’s top plays", source: "The Hill", url: "https://thehill.com/policy/sports-gaming/5919976-espn-sportscenter-congressional-baseball-game/", time: "2026-06-11T15:13:17Z" },
-      { title: "EU must learn to ‘fight back’ against ‘Maga ideologists’, commissioner tells Oireachtas group", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/11/eu-must-learn-to-fight-back-against-maga-ideologists-commissioner-tells-oireachtas-group/", time: "2026-06-11T14:44:13Z" },
-      { title: "Russia calls Canada ‘warmonger’ for signing drone production deal with Ukraine", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/article-russia-calls-canada-warmonger-for-ukraine-drones/", time: "2026-06-11T10:55:26Z" },
-      { title: "Senate GOP support erodes for Trump’s Iran war stance", source: "The Hill", url: "https://thehill.com/homenews/senate/5919116-senate-gop-iran-conflict/", time: "2026-06-11T10:00:00Z" },
-      { title: "Government funding hits a wall as senators point finger at other party", source: "The Hill", url: "https://thehill.com/homenews/senate/5919073-senate-funding-appropriations-defense-domestic/", time: "2026-06-11T10:00:00Z" },
-      { title: "Minnesota lawmaker shooting suspect to plead guilty after death penalty is dropped", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/crime/vance-boelter-trial-minnesota-democrats-shooting-b2993817.html", time: "2026-06-11T09:06:12Z" },
-      { title: "Ukraine beefs up defences in Chornobyl exclusion zone, near border with Belarus", source: "Globe and Mail", url: "https://www.theglobeandmail.com/world/article-ukraine-chornobyl-belarus-border-russia-war/", time: "2026-06-11T08:30:00Z" },
-      { title: "The EU is inviting the Taliban to Brussels. Europe’s credibility lies in tatters", source: "The Guardian", url: "https://www.theguardian.com/commentisfree/2026/jun/11/the-eu-is-inviting-the-taliban-to-brussels-europes-credibility-lies-in-tatters", time: "2026-06-11T04:00:05Z" },
-      { title: "Ukraine war briefing: Flamingo missiles hit more far-flung Russian targets", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/11/ukraine-war-briefing-flamingo-missiles-hit-more-far-flung-russian-targets", time: "2026-06-11T01:11:52Z" },
-      { title: "Feds won't seek death penalty in plea deal with man accused of killing top Minnesota Democrat", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/minneapolis-minnesota-mark-b2993613.html", time: "2026-06-10T22:06:03Z" },
-      { title: "Four senior senators express alarm, push for ‘hard’ Social Security votes", source: "The Hill", url: "https://thehill.com/homenews/senate/5918842-bipartisan-senators-social-security/", time: "2026-06-10T20:00:55Z" },
-      { title: "Anti-immigration march to Dáil attempts to rally support against EU migration pact", source: "Irish Times", url: "https://www.irishtimes.com/ireland/dublin/2026/06/10/anti-immigration-march-to-dail-attempts-to-rally-support-against-eu-migration-pact/", time: "2026-06-10T19:17:51Z" },
-      { title: "Mace ‘headed back to private sector’ after congressional term ends", source: "The Hill", url: "https://thehill.com/homenews/house/5918560-mace-gubernatorial-primary-defeat/", time: "2026-06-10T17:55:28Z" },
-      { title: "‘Amaterasu’ performance marks 160 years of Belgium-Japan relations in Brussels", source: "Euronews", url: "http://www.euronews.com/video/2026/06/10/amaterasu-performance-marks-160-years-of-belgium-japan-relations-in-brussels", time: "2026-06-10T17:39:02Z" },
-      { title: "Trump says voter fraud claims forced California to ‘approve’ Hilton", source: "The Hill", url: "https://thehill.com/homenews/administration/5918302-trump-hilton-california-governor-voter-fraud/", time: "2026-06-10T16:22:56Z" },
-      { title: "Senate Democrats question national park entry fees used for Trump ‘vanity projects’", source: "The Hill", url: "https://thehill.com/homenews/senate/5918063-senate-democrats-adam-schiff-donald-trump-national-park-service-fees-dc-projects/", time: "2026-06-10T15:23:11Z" },
-      { title: "Letter from Kyiv: The messed-up day-to-day of living under Putin’s cruel air war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/10/years-on-i-still-marvel-at-the-resilience-of-day-to-day-life-under-putins-cruel-air-war", time: "2026-06-10T14:46:09Z" },
-      { title: "Trump congratulates Graham on win, calls for focus on passing Save America Act", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917984-trump-congratulates-graham-on-win-calls-for-focus-on-passing-save-america-act/", time: "2026-06-10T13:25:33Z" },
-      { title: "Why Tom Steyer's $216-million gubernatorial bid failed", source: "LA Times", url: "https://www.latimes.com/california/story/2026-06-10/why-tom-steyers-216-million-gubernatorial-bid-failed", time: "2026-06-10T10:00:00Z" },
-      { title: "460 European figures call on EU to be tougher on Israel", source: "RTE News", url: "https://www.rte.ie/news/2026/0610/1577658-eu-editorial-israel/", time: "2026-06-10T05:01:37Z" },
-      { title: "Mace endorses Wilson after losing South Carolina gubernatorial bid", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917678-mace-endorses-wilson-after-losing-south-carolina-gubernatorial-bid/", time: "2026-06-10T04:19:34Z" },
-      { title: "Platner's big night: 5 takeaways from Tuesday's primaries", source: "Axios", url: "https://www.axios.com/2026/06/10/graham-platner-maine-5-takeaways", time: "2026-06-10T04:07:11Z" },
-      { title: "Tears and catharsis as Kyiv premieres opera about Ukrainian children abducted by Russia", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/10/mothers-of-kherson-opera-kyiv-premiere-russian-abductions-children-ukraine", time: "2026-06-10T04:00:10Z" },
-      { title: "Steyer endorses Becerra after losing California gubernatorial primary", source: "The Hill", url: "https://thehill.com/homenews/campaign/5917526-steyer-endorses-becerra-california/", time: "2026-06-10T02:11:56Z" },
-      { title: "Graham Platner wins Democrats' nomination in key Maine Senate race", source: "Axios", url: "https://www.axios.com/2026/06/10/democrats-graham-platner-maine-senate-primary", time: "2026-06-10T01:33:21Z" },
-      { title: "Live results: Mainers choose Mills’s successor in gubernatorial primary elections", source: "The Hill", url: "https://thehill.com/homenews/campaign/5909408-live-results-maine-gubernatorial-primary/", time: "2026-06-09T21:00:00Z" },
-      { title: "Collins, McConnell: ‘Safe to conclude’ third reconciliation bill not happening", source: "The Hill", url: "https://thehill.com/homenews/senate/5916477-third-reconciliation-bill-collins-mcconnell-defense-funding/", time: "2026-06-09T17:06:28Z" },
-      { title: "EU plans to ban Russian soldiers from bloc in fresh sanctions on Moscow", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/09/eu-ban-russian-soldiers-fresh-sanctions-moscow", time: "2026-06-09T15:12:38Z" },
-      { title: "White House negotiating federal preemption of state AI laws in exchange for Hill priorities", source: "The Hill", url: "https://thehill.com/policy/technology/5916062-artificial-intelligence-federal-preemption-negotiations/", time: "2026-06-09T14:00:49Z" },
-      { title: "Why Zelensky asked Russian oligarch Abramovich to test Putin’s appetite for talks", source: "France 24", url: "https://www.france24.com/en/europe/20260609-why-zelensky-asked-russian-oligarch-roman-abramovich-to-test-putin-appetite-for-talks", time: "2026-06-09T12:33:02Z" },
-      { title: "EU set to discuss deportation of Afghan refugees with Taliban", source: "France 24", url: "https://www.france24.com/en/eu-set-to-discuss-deportation-of-afghan-refugees-with-taliban", time: "2026-06-09T10:45:25Z" },
-      { title: "Alaska Senate candidate under investigation over alleged voter confusion scheme", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/alaska-senate-dan-sullivan-nancy-dahlstrom-voter-deception-b2992323.html", time: "2026-06-09T10:02:48Z" },
-      { title: "South Carolina GOP gubernatorial primary tests Trump’s influence: 5 races to watch Tuesday", source: "The Hill", url: "https://thehill.com/homenews/campaign/5915038-south-carolina-maine-primary-elections/", time: "2026-06-09T10:00:00Z" },
-      { title: "Scoop: White House pre-blames Europe for any World Cup Ebola", source: "Axios", url: "https://www.axios.com/2026/06/09/white-house-world-cup-ebola-europe", time: "2026-06-09T09:10:05Z" },
-      { title: "Belgium: Thousands protest alleged police violence in Brussels", source: "Euronews", url: "http://www.euronews.com/video/2026/06/09/belgium-thousands-protest-alleged-police-violence-in-brussels", time: "2026-06-09T08:11:52Z" },
-      { title: "EU quota system ‘could kill Ukrainian steel industry’, boss says", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/09/eu-quota-ukrainian-steel-industry-metinvest", time: "2026-06-09T06:00:47Z" },
-      { title: "EU to adopt 21st sanctions package against Russia", source: "RTE News", url: "https://www.rte.ie/news/2026/0609/1577463-aughinish-alumina/", time: "2026-06-09T05:30:39Z" },
-      { title: "Need to get 'facts straight' around Aughinish - Kallas", source: "RTE News", url: "https://www.rte.ie/news/2026/0609/1577463-kallas-dublin-aughinish/", time: "2026-06-09T05:30:39Z" },
-      { title: "Ukraine-Russia war latest: Kyiv ‘recaptures area two times size of Birmingham’ as Zelensky calls Trump envoys", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-kharkiv-map-b2992143.html", time: "2026-06-09T05:13:33Z" },
-      { title: "Ukraine war briefing: Russia’s Peskov admits ‘certain problems’ with fuel supplies after energy sites targeted", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/09/ukraine-war-briefing-russias-peskov-admits-certain-problems-with-fuel-supplies-after-energy-sites-targeted", time: "2026-06-09T01:02:25Z" },
-      { title: "Russia's fuel crisis intensifies as Ukraine steps up strikes on occupied territories", source: "BBC News", url: "https://www.bbc.com/news/articles/cn75l36vdd8o?at_medium=RSS&at_campaign=rss", time: "2026-06-08T23:23:15Z" },
-      { title: "Scoop: White House, Hill relaunch effort to block state AI laws", source: "Axios", url: "https://www.axios.com/2026/06/08/white-house-hill-relaunch-effort-block-state-ai-laws", time: "2026-06-08T22:26:06Z" },
-      { title: "Platner says he won’t be an ‘a–hole’ like Fetterman in Senate", source: "The Hill", url: "https://thehill.com/homenews/campaign/5915534-maine-senate-race-platner-fetterman/", time: "2026-06-08T22:24:45Z" },
-      { title: "EU Taliban invite 'the wrong signal to anyone that is using power as a means of suppression'", source: "France 24", url: "https://www.france24.com/en/eu-taliban-invite-the-wrong-signal-to-anyone-that-is-using-power-as-a-means-of-suppression", time: "2026-06-08T21:31:34Z" },
-      { title: "Thune urges passage of FISA extension before deadline amidst Pulte uproar", source: "The Hill", url: "https://thehill.com/homenews/senate/5915347-thune-pulte-fisa-reforms/", time: "2026-06-08T20:37:03Z" },
-      { title: "Trump has exacted revenge on so many GOP senators that he should lose the Iran war powers vote. Here’s why he won’t", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/trump-iran-war-powers-act-republicans-b2991852.html", time: "2026-06-08T19:24:48Z" },
-      { title: "Russian interference in Armenia: A nation tested by disinformation", source: "France 24", url: "https://www.france24.com/en/tv-shows/the-observers/20260608-russian-interference-armenia-nation-tested-disinformation", time: "2026-06-08T18:13:22Z" },
-      { title: "Hawley blasts 4 Republicans who voted to reject adding voter ID bill to reconciliation package", source: "The Hill", url: "https://thehill.com/homenews/senate/5914534-save-america-act-fails-senate-vote/", time: "2026-06-08T12:12:29Z" },
-      { title: "'Democratic backsliding': Armenia's 'extreme polarisation, hate speech, stigmatization' mar election", source: "France 24", url: "https://www.france24.com/en/democratic-backsliding-armenia-s-extreme-polarisation-hate-speech-stigmatization-mar-election", time: "2026-06-08T12:10:36Z" },
-      { title: "EU announces €5 million boost to Ebola response in DRC", source: "Euronews", url: "http://www.euronews.com/2026/06/08/eu-announces-5-million-boost-to-ebola-response-in-drc", time: "2026-06-08T10:18:43Z" },
-      { title: "Divisions mount between GOP lawmakers, Trump, raising tensions", source: "The Hill", url: "https://thehill.com/homenews/administration/5912713-trump-republican-party-tension/", time: "2026-06-08T10:00:00Z" },
-      { title: "Bob Packwood, Oregon senator forced to resign due to sex scandal, dies at 93", source: "The Hill", url: "https://thehill.com/homenews/senate/5914207-former-senator-bob-packwood-dies/", time: "2026-06-08T01:20:31Z" },
-      { title: "Maine Dems plot response if Nebraska GOP tweaks Electoral College votes", source: "Axios", url: "https://www.axios.com/2026/06/07/maine-democrats-nebraska-electoral-college", time: "2026-06-07T21:30:06Z" },
-      { title: "Former Republican Senator who resigned after sexual harassment scandal dies at 93", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/bob-packwood-dead-oregon-republican-b2991427.html", time: "2026-06-07T20:51:35Z" },
-      { title: "Trump cuts off interview with Welker: ‘I’ve had enough’", source: "The Hill", url: "https://thehill.com/homenews/administration/5913804-trump-walks-out-welker-interview/", time: "2026-06-07T16:38:54Z" },
-      { title: "‘It’s time to move forward’: Armenians vote in election closely watched by Russia and EU", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/armenia-vote-election-closely-watched-russia-eu", time: "2026-06-07T09:56:04Z" },
-      { title: "Ministers to ‘study closely’ Dáil motions on controversial football matches against Israel", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/07/ministers-to-study-closely-dail-motions-on-controversial-football-matches-against-israel/", time: "2026-06-07T08:34:00Z" },
-      { title: "Car industry pressing EU for further delay to Brexit EV tariffs", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/07/eu-uk-car-industry-lobbying-second-brexit-ev-tariff-delay", time: "2026-06-07T06:00:25Z" },
-      { title: "Armenia polls open in test of prime minister's pivot away from Russia", source: "France 24", url: "https://www.france24.com/en/europe/20260607-armenia-polls-open-in-test-of-prime-minister-s-pivot-away-from-russia", time: "2026-06-07T05:21:40Z" },
-      { title: "Armenia goes to polls in pivotal vote to decide South Caucasus future", source: "Euronews", url: "http://www.euronews.com/2026/06/07/armenia-goes-to-polls-in-pivotal-vote-to-decide-south-caucasus-future", time: "2026-06-07T04:00:53Z" },
-      { title: "Ukraine-Russia war latest: Kyiv launches huge drone strike on St Petersburg in attack Kremlin brands ‘unprecedented’", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-ceasefire-proposal-b2990910.html", time: "2026-06-06T14:16:52Z" },
-      { title: "Tensions grow between Trump and Senate GOP: Five takeaways", source: "The Hill", url: "https://thehill.com/homenews/senate/5912799-trump-gop-tensions-rising/", time: "2026-06-06T10:00:00Z" },
-      { title: "Ukraine launches 'large-scale' drone strike on St Petersburg", source: "Sky News", url: "https://news.sky.com/story/ukraine-launches-large-scale-drone-strike-on-st-petersburg-13551344", time: "2026-06-06T09:09:00Z" },
-      { title: "Summit a big moment for Montenegro's EU ambitions", source: "RTE News", url: "https://www.rte.ie/news/analysis-and-comment/2026/0606/1577034-montenegro-eu-western-balkans-summit/", time: "2026-06-06T06:00:01Z" },
-      { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
-      { title: "Texas senator drops push to name highway after Trump after president backed his primary foe", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/texas-senator-trump-highway-name-change-b2990834.html", time: "2026-06-05T21:56:47Z" },
-      { title: "The week around the world in 20 pictures", source: "The Guardian", url: "https://www.theguardian.com/artanddesign/gallery/2026/jun/05/the-week-around-the-world-in-20-pictures", time: "2026-06-05T18:49:03Z" },
-      { title: "EU must prove it is capable and willing to take in new members, leaders say", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/05/eu-new-members-bloc-leaders-summit-enlargement", time: "2026-06-05T15:00:21Z" },
-      { title: "More than a quarter of UK musicians lost all EU work since 2021, report finds", source: "The Guardian", url: "https://www.theguardian.com/music/2026/jun/05/quarter-of-uk-musicians-have-lost-all-eu-work-since-2021-report-finds", time: "2026-06-05T13:52:33Z" },
-      { title: "Six Republicans vote no on FISA extension", source: "The Hill", url: "https://thehill.com/homenews/senate/5911508-six-republicans-vote-no-on-fisa-extension/", time: "2026-06-05T12:08:36Z" },
-      { title: "Negotiations on air passenger rights hit turbulence: EU Parliament takes on airlines", source: "France 24", url: "https://www.france24.com/en/tv-shows/talking-europe/20260605-negotiations-on-air-passenger-rights-hit-turbulence-eu-parliament-takes-on-airlines", time: "2026-06-05T11:55:35Z" },
-      { title: "Senate advances ICE funding through Trump's second term", source: "Axios", url: "https://www.axios.com/2026/06/05/senate-ice-border-patrol-funding-vote", time: "2026-06-05T10:19:19Z" },
-      { title: "Six GOP senators vote to block Trump from reviving anti-weaponization fund", source: "The Hill", url: "https://thehill.com/homenews/senate/5911405-cassidy-amendment-anti-weaponization-fund/", time: "2026-06-05T08:16:55Z" },
-    ]
-  },
-  {
     name: "Dublin", country: "Ireland",
     lat: 53.3498, lng: -6.2603,
     category: "economic",
@@ -359,7 +362,6 @@ const locations = [
       { title: "Third arrest made in investigation of killing of Quayyum Balogun", source: "Irish Times", url: "https://www.irishtimes.com/crime-law/2026/06/05/third-arrest-made-in-investigation-of-killing-of-quayyum-balogun/", time: "2026-06-05T18:38:10Z" },
       { title: "Two Israeli ministers banned from travelling to Ireland", source: "RTE News", url: "https://www.rte.ie/news/politics/2026/0605/1576948-israel-travel-ban/", time: "2026-06-05T11:41:57Z" },
       { title: "Ireland’s oldest person, Eileen Hynes, dies aged 109", source: "Irish Times", url: "https://www.irishtimes.com/ireland/2026/06/05/irelands-oldest-person-eileen-hynes-dies-aged-109/", time: "2026-06-05T11:29:28Z" },
-      { title: "Meet the official quietly leading Trump's science and tech push", source: "Axios", url: "https://www.axios.com/2026/06/05/official-trump-science-tech-dario-gil", time: "2026-06-05T09:15:06Z" },
     ]
   },
   {
@@ -367,6 +369,7 @@ const locations = [
     lat: 48.8566, lng: 2.3522,
     category: "political",
     articles: [
+      { title: "Carney in France to meet with Macron ahead of G7 summit", source: "Globe and Mail", url: "https://www.theglobeandmail.com/canada/article-carney-in-france-meeting-macron-g7-summit/", time: "2026-06-12T09:19:34Z" },
       { title: "‘Operation Pushkin’: Paris Trial Puts Spotlight on Rare-Book Heists", source: "New York Times", url: "https://www.nytimes.com/2026/06/12/world/europe/russian-book-theft-trial-paris.html", time: "2026-06-12T04:01:06Z" },
       { title: "Amazon touts water savings amid data center pushback", source: "Axios", url: "https://www.axios.com/2026/06/11/amazon-water-savings-data-center", time: "2026-06-11T13:00:06Z" },
       { title: "Vendee Globe winner Dalin dies aged 42", source: "BBC News", url: "https://www.bbc.com/sport/sailing/articles/cr5j64pn3jyo?at_medium=RSS&at_campaign=rss", time: "2026-06-11T12:16:46Z" },
@@ -581,12 +584,12 @@ const locations = [
     lat: 59.9139, lng: 10.7522,
     category: "economic",
     articles: [
+      { title: "A Globe-Spanning Collection of Children’s Art May Lose Its Home", source: "New York Times", url: "https://www.nytimes.com/2026/06/12/world/europe/oslo-childrens-art-museum-norway.html", time: "2026-06-12T09:00:19Z" },
       { title: "'I'm no cold-blooded professional hitman', says Norwegian teen accused of UK assassination plot", source: "Sky News", url: "https://news.sky.com/story/norwegian-teen-accused-of-uk-assassination-plot-says-im-no-cold-blooded-professional-hitman-13553012", time: "2026-06-11T11:18:00Z" },
       { title: "Norway crown princess's son to stay in custody before rape verdict, says court", source: "BBC News", url: "https://www.bbc.com/news/articles/c621lnee131o?at_medium=RSS&at_campaign=rss", time: "2026-06-10T15:00:45Z" },
       { title: "Technical issue detected on one of UK's biggest warships", source: "Sky News", url: "https://news.sky.com/story/technical-issue-detected-on-one-of-uks-biggest-warships-13551329", time: "2026-06-06T07:45:00Z" },
       { title: "Norway's crown princess on lung transplant waiting list, palace says", source: "BBC News", url: "https://www.bbc.com/news/articles/c9wewqxpq2eo?at_medium=RSS&at_campaign=rss", time: "2026-06-05T17:11:01Z" },
       { title: "Crown Princess Mette-Marit of Norway Is Placed on Lung Transplant List", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/europe/norway-princess-lung-transplant.html", time: "2026-06-05T16:00:48Z" },
-      { title: "Norway’s Crown Princess Mette-Marit awaits lung transplant after further health deterioration", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/norway-mette-marit-lung-transplant-b2990296.html", time: "2026-06-05T09:00:54Z" },
     ]
   },
   {
@@ -599,18 +602,6 @@ const locations = [
       { title: "Netherlands: Marktweg in The Hague becomes iconic orange street for World Cup fever", source: "Euronews", url: "http://www.euronews.com/video/2026/06/10/netheralnds-marktweg-in-the-hague-becomes-iconic-orange-street-for-world-cup-fever", time: "2026-06-10T11:17:01Z" },
       { title: "'No dead ends': What the Dutch can teach us about tackling youth unemployment", source: "BBC News", url: "https://www.bbc.com/news/articles/cnvpn253re4o?at_medium=RSS&at_campaign=rss", time: "2026-06-07T23:03:23Z" },
       { title: "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/hantavirus-origin-cruise-ship-rats-b2990941.html", time: "2026-06-06T08:28:23Z" },
-      { title: "Ye Concerts Have Been Canceled Across Europe. Why Not in the Netherlands?", source: "New York Times", url: "https://www.nytimes.com/2026/06/05/world/europe/ye-tour-netherlands.html", time: "2026-06-05T09:00:43Z" },
-    ]
-  },
-  {
-    name: "Warsaw", country: "Poland",
-    lat: 52.2297, lng: 21.0122,
-    category: "security",
-    articles: [
-      { title: "Poland prepares to stand its ground with massive new civil defence programme", source: "France 24", url: "https://www.france24.com/en/europe/20260611-poland-prepares-stand-ground-against-potential-threats", time: "2026-06-11T08:53:28Z" },
-      { title: "Zelensky under pressure to end row with Poland over WW2 name of army unit", source: "BBC News", url: "https://www.bbc.com/news/articles/c992r4kn5j9o?at_medium=RSS&at_campaign=rss", time: "2026-06-10T09:57:20Z" },
-      { title: "Why Zelensky’s celebration of WWII-era nationalist guerrillas is causing tension with Poland", source: "France 24", url: "https://www.france24.com/en/europe/20260607-why-zelensky-celebration-of-wwii-era-nationalist-guerrillas-is-causing-tension-with-poland", time: "2026-06-07T05:40:47Z" },
-      { title: "China fueling U.S. data center resistance, AI groups claim", source: "Axios", url: "https://www.axios.com/2026/06/05/china-fueling-us-data-center-resistance-ai-groups-claim", time: "2026-06-05T09:25:06Z" },
     ]
   },
   {
@@ -625,6 +616,16 @@ const locations = [
     ]
   },
   {
+    name: "Warsaw", country: "Poland",
+    lat: 52.2297, lng: 21.0122,
+    category: "security",
+    articles: [
+      { title: "Poland prepares to stand its ground with massive new civil defence programme", source: "France 24", url: "https://www.france24.com/en/europe/20260611-poland-prepares-stand-ground-against-potential-threats", time: "2026-06-11T08:53:28Z" },
+      { title: "Zelensky under pressure to end row with Poland over WW2 name of army unit", source: "BBC News", url: "https://www.bbc.com/news/articles/c992r4kn5j9o?at_medium=RSS&at_campaign=rss", time: "2026-06-10T09:57:20Z" },
+      { title: "Why Zelensky’s celebration of WWII-era nationalist guerrillas is causing tension with Poland", source: "France 24", url: "https://www.france24.com/en/europe/20260607-why-zelensky-celebration-of-wwii-era-nationalist-guerrillas-is-causing-tension-with-poland", time: "2026-06-07T05:40:47Z" },
+    ]
+  },
+  {
     name: "Athens", country: "Greece",
     lat: 37.9838, lng: 23.7275,
     category: "social",
@@ -632,7 +633,6 @@ const locations = [
       { title: "NASA’s head defends all-male crew for mission named after a Greek goddess", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/nasa-artemis-iii-crew-all-men-b2994279.html", time: "2026-06-11T19:22:27Z" },
       { title: "NASA head defends all-male crew for Artemis, space program named after Greek goddess", source: "The Hill", url: "https://thehill.com/homenews/administration/5919348-nasa-head-defends-all-male-crew-for-artemis-space-program-named-after-greek-goddess/", time: "2026-06-11T01:33:59Z" },
       { title: "Earthquakes rattle Greek island near Athens ahead of tourism season", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/earthquake-greece-athens-evia-santorini-b2991316.html", time: "2026-06-07T13:27:27Z" },
-      { title: "William Hill owner agrees £243m takeover by Greek casino and lottery firm", source: "The Guardian", url: "https://www.theguardian.com/business/2026/jun/05/william-hill-owner-agrees-evoke-takeover-greek-casino-lottery-firm", time: "2026-06-05T08:39:29Z" },
     ]
   },
   {
@@ -666,21 +666,22 @@ const locations = [
     ]
   },
   {
+    name: "Edinburgh", country: "United Kingdom",
+    lat: 55.9533, lng: -3.1883,
+    category: "political",
+    articles: [
+      { title: "She waited decades for Scotland to make the World Cup. At 93, she'll be cheering in person", source: "NPR", url: "https://www.npr.org/2026/06/12/nx-s1-5842854/scotland-world-cup-tartan-army-fans", time: "2026-06-12T09:02:00Z" },
+      { title: "Air-raid alerts and frontline memoirs: Kyiv hosts literary festival amid war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/kyiv-hosts-literary-festival-amid-ukraine-war-book-arsenal", time: "2026-06-07T09:00:29Z" },
+      { title: "New tartan celebrates Scotland and United States’ ‘enduring connection’ ahead of World Cup", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/world-cup-scotland-tartan-kaci-mcewan-b2991110.html", time: "2026-06-06T23:01:00Z" },
+    ]
+  },
+  {
     name: "Tallinn", country: "Estonia",
     lat: 59.437, lng: 24.7536,
     category: "security",
     articles: [
       { title: "Ukraine-Russia war latest: Moscow issues nuclear weapon threat to Nato over Arctic training exercises", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-kharkiv-map-b2992143.html", time: "2026-06-09T15:51:18Z" },
       { title: "Estonia's former president on lessons learnt in dealing with Putin", source: "France 24", url: "https://www.france24.com/en/tv-shows/spotlight/20260606-estonia-s-former-president-on-lessons-learnt-in-dealing-with-putin", time: "2026-06-06T18:30:46Z" },
-    ]
-  },
-  {
-    name: "Edinburgh", country: "United Kingdom",
-    lat: 55.9533, lng: -3.1883,
-    category: "political",
-    articles: [
-      { title: "Air-raid alerts and frontline memoirs: Kyiv hosts literary festival amid war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/kyiv-hosts-literary-festival-amid-ukraine-war-book-arsenal", time: "2026-06-07T09:00:29Z" },
-      { title: "New tartan celebrates Scotland and United States’ ‘enduring connection’ ahead of World Cup", source: "The Independent", url: "https://www.independent.co.uk/news/uk/home-news/world-cup-scotland-tartan-kaci-mcewan-b2991110.html", time: "2026-06-06T23:01:00Z" },
     ]
   },
   {
@@ -730,6 +731,14 @@ const locations = [
     category: "political",
     articles: [
       { title: "What's in the Iran deal Trump says he's ready to sign", source: "Axios", url: "https://www.axios.com/2026/06/12/iran-deal-mou-strait-open-sanctions-relief", time: "2026-06-12T03:20:20Z" },
+    ]
+  },
+  {
+    name: "Budapest", country: "Hungary",
+    lat: 47.4979, lng: 19.0402,
+    category: "political",
+    articles: [
+      { title: "Seven killed in Hungary collision as truck idles in traffic caused by earlier crash", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/hungary-crash-deaths-gyor-m1-b2994501.html", time: "2026-06-12T07:50:51Z" },
     ]
   },
 ];
