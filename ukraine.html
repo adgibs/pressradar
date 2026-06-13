@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">01:08 UTC, 13 Jun 2026</span></div>
+    <div class="subtitle">Ukraine & Eastern Europe news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">03:15 UTC, 13 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">13 June 2026</div>
@@ -329,6 +329,7 @@ const locations = [
     lat: 38.8719, lng: -77.0563,
     category: "diplomacy",
     articles: [
+      { title: "Scoop: Trump admin blocks foreign access to Anthropic's most powerful AI", source: "Axios", url: "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security", time: "2026-06-13T01:35:52Z" },
       { title: "Pentagon UFO files include video recreations of UFO sightings", source: "The Hill", url: "https://thehill.com/policy/defense/5922030-pentagon-releases-ufo-files/", time: "2026-06-12T17:22:35Z" },
       { title: "Pentagon makes third drop of UFO files including fresh details on unexplained ‘orbs’", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/ufo-files-pentagon-drop-trump-b2994696.html", time: "2026-06-12T12:50:10Z" },
       { title: "Senate GOP balks at Trump demand to boost defense funding in third reconciliation bill", source: "The Hill", url: "https://thehill.com/homenews/senate/5920947-gop-senators-oppose-third-reconciliation/", time: "2026-06-12T10:00:00Z" },
@@ -360,7 +361,6 @@ const locations = [
       { title: "Here is the full list of faiths being unrecognized by the Pentagon", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/hegseth-pentagon-cut-official-religion-list-b2991111.html", time: "2026-06-06T20:23:31Z" },
       { title: "Military women fear career caps as Hegseth blocks Navy promotions without providing reason", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/us-politics/pete-hegseth-women-navy-officers-promotions-b2991091.html", time: "2026-06-06T17:12:51Z" },
       { title: "Hegseth blasts ‘invasion’ of migrants on Europe’s beaches in D-Day speech in France", source: "France 24", url: "https://www.france24.com/en/europe/20260606-hegseth-urges-europe-on-d-day-to-counter-present-day-invasion", time: "2026-06-06T13:53:10Z" },
-      { title: "Pentagon raised threat of Israeli spying on U.S. to highest level, sources say", source: "NBC News", url: "https://www.nbcnews.com/politics/national-security/pentagon-raised-threat-israeli-spying-us-highest-level-sources-say-rcna348565", time: "2026-06-06T02:13:01Z" },
     ]
   },
   {
@@ -383,19 +383,6 @@ const locations = [
     ]
   },
   {
-    name: "Zaporizhzhia", country: "Ukraine",
-    lat: 47.8388, lng: 35.1396,
-    category: "humanitarian",
-    articles: [
-      { title: "Video captures Russian attack in Ukraine’s Zaporizhzhia", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/9/video-captures-russian-attack-in-ukraines-zaporizhzhia?traffic_source=rss", time: "2026-06-09T12:05:19Z" },
-      { title: "Ukraine: Strikes in Zaporizhzhia and Sumy kill three civilians and injure dozens", source: "Euronews", url: "http://www.euronews.com/video/2026/06/09/ukraine-strikes-in-zaporizhzhia-and-sumy-kill-three-civilians-and-injure-dozens", time: "2026-06-09T07:23:14Z" },
-      { title: "CCTV captures moment of deadly strike on Zaporizhzhia, Ukraine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/8/cctv-captures-moment-of-deadly-strike-on-zaporizhzhia-ukraine?traffic_source=rss", time: "2026-06-08T20:14:04Z" },
-      { title: "Ukraine war briefing: Zelenskyy says he met Roman Abramovich in Kyiv in backchannel to Putin", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/08/ukraine-war-briefing-zelenskyy-roman-abramovich-kyiv-meeting-putin-message", time: "2026-06-08T01:00:03Z" },
-      { title: "Ukraine war briefing: Kyiv unleashes hundreds of drones on Russia after Putin rejected Zelenskyy meeting", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/ukraine-war-briefing-kyiv-unleashes-hundreds-of-drones-on-russia-after-putin-rejected-zelenskyy-meeting", time: "2026-06-07T01:11:17Z" },
-      { title: "Ukraine war briefing: Putin says ‘no point’ meeting Zelenskyy, insists Russia will win the war", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/06/ukraine-war-briefing-putin-says-no-point-meeting-zelenskyy-insists-russia-will-win-the-war", time: "2026-06-06T01:33:33Z" },
-    ]
-  },
-  {
     name: "St Petersburg", country: "Russia",
     lat: 59.9343, lng: 30.3351,
     category: "diplomacy",
@@ -406,6 +393,18 @@ const locations = [
       { title: "Scores of Ukrainian drones target St Petersburg in attack Russia calls 'unprecedented'", source: "BBC News", url: "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss", time: "2026-06-06T10:54:06Z" },
       { title: "Ukraine launches 'large-scale' drone strike on St Petersburg", source: "Sky News", url: "https://news.sky.com/story/ukraine-launches-large-scale-drone-strike-on-st-petersburg-13551344", time: "2026-06-06T09:09:00Z" },
       { title: "Ukraine-Russia war latest: Ukrainian drones target St Petersburg after Putin rejects Zelensky’s summit proposal", source: "The Independent", url: "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-ceasefire-proposal-b2990910.html", time: "2026-06-06T08:17:29Z" },
+    ]
+  },
+  {
+    name: "Zaporizhzhia", country: "Ukraine",
+    lat: 47.8388, lng: 35.1396,
+    category: "humanitarian",
+    articles: [
+      { title: "Video captures Russian attack in Ukraine’s Zaporizhzhia", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/9/video-captures-russian-attack-in-ukraines-zaporizhzhia?traffic_source=rss", time: "2026-06-09T12:05:19Z" },
+      { title: "Ukraine: Strikes in Zaporizhzhia and Sumy kill three civilians and injure dozens", source: "Euronews", url: "http://www.euronews.com/video/2026/06/09/ukraine-strikes-in-zaporizhzhia-and-sumy-kill-three-civilians-and-injure-dozens", time: "2026-06-09T07:23:14Z" },
+      { title: "CCTV captures moment of deadly strike on Zaporizhzhia, Ukraine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/8/cctv-captures-moment-of-deadly-strike-on-zaporizhzhia-ukraine?traffic_source=rss", time: "2026-06-08T20:14:04Z" },
+      { title: "Ukraine war briefing: Zelenskyy says he met Roman Abramovich in Kyiv in backchannel to Putin", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/08/ukraine-war-briefing-zelenskyy-roman-abramovich-kyiv-meeting-putin-message", time: "2026-06-08T01:00:03Z" },
+      { title: "Ukraine war briefing: Kyiv unleashes hundreds of drones on Russia after Putin rejected Zelenskyy meeting", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/07/ukraine-war-briefing-kyiv-unleashes-hundreds-of-drones-on-russia-after-putin-rejected-zelenskyy-meeting", time: "2026-06-07T01:11:17Z" },
     ]
   },
   {
@@ -507,6 +506,14 @@ const locations = [
     category: "conflict",
     articles: [
       { title: "Russian drone barrage hits Kyiv and Mykolaiv as Ukraine reports major fires", source: "Euronews", url: "http://www.euronews.com/video/2026/06/12/russian-drone-barrage-hits-kyiv-and-mykolaiv-as-ukraine-reports-major-fires", time: "2026-06-12T09:31:51Z" },
+    ]
+  },
+  {
+    name: "Bryansk", country: "Russia",
+    lat: 53.2521, lng: 34.3717,
+    category: "conflict",
+    articles: [
+      { title: "Ukraine war briefing: Zelenskyy boosts army wages and seeks foreign recruits to counter manpower shortage", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/13/ukraine-war-briefing-zelenskyy-boosts-army-wages-foreign-seeks-foreign-recruits", time: "2026-06-13T01:18:06Z" },
     ]
   },
 ];
