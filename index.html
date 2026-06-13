@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">11:40 UTC, 13 Jun 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">12:45 UTC, 13 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">13 June 2026</div>
@@ -116,6 +116,9 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Pakistan says peace deal ‘closer than ever’, signing expected within 24 hours", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260613-pakistan-says-peace-deal-closer-than-ever-signing-expected-within-24-hours/", time: "2026-06-13T12:15:09Z" },
+      { title: "Trump travels to France for the 52nd G7 Summit", source: "NPR", url: "https://www.npr.org/2026/06/13/nx-s1-5854957/trump-travels-to-france-for-the-52nd-g7-summit", time: "2026-06-13T11:39:31Z" },
+      { title: "Pakistan says US-Iran peace deal likely finalised within 24 hours", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pakistan-says-us-iran-peace-deal-likely-finalised-within-24-hours", time: "2026-06-13T11:27:28Z" },
       { title: "UAE denies reports of it releasing frozen funds to Iran: Report", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/uae-denies-reports-it-releasing-frozen-funds-iran-report", time: "2026-06-13T10:22:56Z" },
       { title: "Israel attacks Lebanon despite being included in potential peace deal", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/13/israel-attacks-lebanon-despite-being-included-in-potential-peace-deal?traffic_source=rss", time: "2026-06-13T10:13:54Z" },
       { title: "Pakistan's Foreign Minister hopes US-Iran truce leads to 'peace and stability'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/pakistans-foreign-minister-hopes-us-iran-truce-leads-peace-and-stability", time: "2026-06-13T10:03:01Z" },
@@ -149,8 +152,10 @@ const locations = [
       { title: "Can Pakistan push the US-Iran deal over the finish line?", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/12/can-pakistan-push-the-us-iran-deal-over-the-finish-line?traffic_source=rss", time: "2026-06-12T19:20:15Z" },
       { title: "How the Gulf will manage collective security after the Iran war ends", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/12/how-the-gulf-will-manage-collective-security-after-the-iran-war-ends?traffic_source=rss", time: "2026-06-12T18:48:41Z" },
       { title: "Life is hell as Iranians dream about 'the day after'", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-06-12/ty-article/.premium/life-is-hell-as-iranians-dream-about-the-day-after/0000019e-bc6c-d738-ab9f-be7f51090000", time: "2026-06-12T18:43:02Z" },
+      { title: "Iran says understandings reached on most issues in talks with US", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260612-iran-says-understandings-reached-on-most-issues-in-talks-with-us/", time: "2026-06-12T18:42:24Z" },
       { title: "US-Iran peace deal remains elusive as Trump and Tehran trade conflicting claims", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/12/us-iran-peace-deal-remains-elusive-as-trump-and-tehran-trade-conflicting-claims", time: "2026-06-12T18:23:58Z" },
       { title: "U.S. military making plans to secure Iran's nuclear materials, sources say", source: "CBS News", url: "https://www.cbsnews.com/news/us-military-secure-iran-nuclear-materials/", time: "2026-06-12T18:18:00Z" },
+      { title: "Trump calls Iranian foreign minister’s post on possible US-Iran deal ‘very positive’: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260612-trump-calls-iranian-foreign-ministers-post-on-possible-us-iran-deal-very-positive-report/", time: "2026-06-12T18:00:40Z" },
       { title: "Iran-linked group claims hack of FBI drones, threatens World Cup", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-linked-group-claims-hack-of-fbi-drones-threatens-world-cup/", time: "2026-06-12T17:52:46Z" },
       { title: "Final text of US-Iran peace deal agreed upon, Pakistani PM announces", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-899226", time: "2026-06-12T17:50:05Z" },
       { title: "Iran: No timeline yet for signing US deal", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/12/iran-no-timeline-yet-for-signing-us-deal?traffic_source=rss", time: "2026-06-12T17:39:03Z" },
@@ -611,11 +616,6 @@ const locations = [
       { title: "Air traffic resumes in Kuwait following brief suspension over Iranian attacks", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-air-traffic-resumes-in-kuwait-following-brief-suspension-over-iranian-attacks/", time: "2026-06-06T13:04:38Z" },
       { title: "Kuwait says it downed seven Iranian missiles, reports no casualties", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kuwait-says-it-downed-7-iranian-missiles-fired-saturday-reports-no", time: "2026-06-06T12:58:02Z" },
       { title: "Pakistan’s interior minister to visit Iran on Saturday amid US-Iran mediation push: Pakistani sources", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-pakistans-interior-minister-to-visit-iran-on-saturday-amid-us-iran-mediation-push-pakistani-sources/", time: "2026-06-06T12:53:52Z" },
-      { title: "Iran slams US ‘discriminatory treatment’ over World Cup visa refusals", source: "Times of Israel", url: "https://www.timesofisrael.com/iran-slams-us-discriminatory-treatment-over-world-cup-visa-refusals/", time: "2026-06-06T12:28:43Z" },
-      { title: "Iran’s top diplomat Araghchi rebukes Lebanese president over remarks on Tehran’s role in Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-irans-top-diplomat-araghchi-rebukes-lebanese-president-over-remarks-on-tehrans-role-in-lebanon/", time: "2026-06-06T12:12:40Z" },
-      { title: "Kuwait condemns Iran's 'brazen assault'", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/kuwait-condemns-irans-brazen-assault", time: "2026-06-06T12:06:21Z" },
-      { title: "Iran 2026 World Cup squad heads to Mexico as US visa dispute erupts", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/6/iran-2026-world-cup-squad-heads-to-mexico-as-us-visa-dispute-erupts?traffic_source=rss", time: "2026-06-06T12:01:32Z" },
-      { title: "Iran says staff blocked from entering US after players given World Cup visas", source: "BBC News", url: "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss", time: "2026-06-06T11:56:25Z" },
     ]
   },
   {
@@ -733,6 +733,7 @@ const locations = [
       { title: "Israel’s Darkest Weapon | Al Jazeera Originals", source: "Al Jazeera", url: "https://www.aljazeera.com/video/2026/6/11/israels-darkest-weapon-al-jazeera-originals?traffic_source=rss", time: "2026-06-11T14:25:08Z" },
       { title: "US Jewish leaders throw support behind bipartisan House antisemitism bill", source: "Times of Israel", url: "https://www.timesofisrael.com/us-jewish-leaders-throw-support-behind-bipartisan-house-antisemitism-bill/", time: "2026-06-11T14:14:26Z" },
       { title: "In the forever war, Israelis find a new luxury: Safe rooms with en suite bathrooms", source: "Haaretz", url: "https://www.haaretz.com/opinion/2026-06-11/ty-article-opinion/.premium/in-the-forever-war-israelis-find-new-luxury-safe-rooms-with-en-suite-bathrooms/0000019e-b272-d0c7-a5fe-b67667330000", time: "2026-06-11T14:11:59Z" },
+      { title: "Eisenkot accuses Netanyahu's party of racism over ad mocking his English", source: "Haaretz", url: "https://www.haaretz.com/israel-news/elections/2026-06-11/ty-article/.premium/eisenkot-says-netanyahu-ad-mocking-his-english-has-racist-overtones/0000019e-b668-d415-a5fe-bffb4e8e0000", time: "2026-06-11T14:05:11Z" },
       { title: "UK, Australia, Canada announce ‘International Peace Fund’ for Israelis and Palestinians", source: "Times of Israel", url: "https://www.timesofisrael.com/uk-australia-canada-announce-international-peace-fund-for-israelis-and-palestinians/", time: "2026-06-11T14:03:35Z" },
       { title: "Petition filed against law that critics say politicizes police investigations agency", source: "Times of Israel", url: "https://www.timesofisrael.com/petition-filed-against-law-critics-say-politicizes-police-investigations-agency/", time: "2026-06-11T13:27:42Z" },
       { title: "Israeli MP Ariel Kellner declares Turkey an ‘enemy state’", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/israeli-mp-ariel-kellner-declares-turkey-enemy-state", time: "2026-06-11T12:50:40Z" },
@@ -1122,7 +1123,6 @@ const locations = [
       { title: "Israeli strikes in Lebanon kills 10 people, including 3 Lebanese army members", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-israeli-strikes-in-lebanon-kills-10-people-including-3-lebanese-army-members/", time: "2026-06-06T13:52:10Z" },
       { title: "Lebanon and Israel’s perpetual war machine", source: "Al Jazeera", url: "https://www.aljazeera.com/video/the-listening-post/2026/6/6/lebanon-and-israels-perpetual-war-machine?traffic_source=rss", time: "2026-06-06T13:31:49Z" },
       { title: "IDF southern Lebanon strike may have hit Lebanese Army personnel, military investigating", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898520", time: "2026-06-06T12:58:22Z" },
-      { title: "The ballots that challenge a core myth of Israeli politics", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-06-06/ty-article-magazine/.premium/the-ballots-that-challenge-a-core-myth-of-israeli-politics/0000019e-9c5e-d7a4-a9bf-fcde4f1f0000", time: "2026-06-06T12:01:20Z" },
     ]
   },
   {
@@ -1130,6 +1130,9 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "UNRWA fires 70 Gaza staffers amid allegations of Hamas ties, says terminations not admission of guilt", source: "Fox News", url: "https://www.foxnews.com/world/unrwa-fires-70-gaza-staffers-amid-allegations-hamas-ties-says-terminations-not-admission-guilt", time: "2026-06-13T12:18:42Z" },
+      { title: "UK rights organisation calls on Business Secretary to cancel Israeli real estate event in London", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260613-uk-rights-organisation-calls-on-business-secretary-to-cancel-israeli-real-estate-event-in-london/", time: "2026-06-13T12:09:55Z" },
+      { title: "Death toll in Gaza nears 73,000", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/death-toll-gaza-nears-73000", time: "2026-06-13T12:04:09Z" },
       { title: "UNRWA fires 70 Gaza staffers amid Israeli accusations agency riddled with Hamas operatives", source: "Times of Israel", url: "https://www.timesofisrael.com/unrwa-fires-70-gaza-staffers-amid-israeli-accusations-agency-riddled-with-hamas-operatives/", time: "2026-06-13T11:28:33Z" },
       { title: "Ben-Gvir raids Hebron neighborhood following Israeli curfew in occupied West Bank", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260613-ben-gvir-raids-hebron-neighborhood-following-israeli-curfew-in-occupied-west-bank/", time: "2026-06-13T09:19:39Z" },
       { title: "Canada announces $100M in new humanitarian aid for Palestinians", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260613-canada-announces-100m-in-new-humanitarian-aid-for-palestinians/", time: "2026-06-13T09:01:35Z" },
@@ -1444,8 +1447,6 @@ const locations = [
       { title: "Israeli strike kills at least six people at wedding in Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/6/israeli-strike-kills-at-least-five-people-at-wedding-in-gaza?traffic_source=rss", time: "2026-06-06T14:38:50Z" },
       { title: "Nine Palestinians reported wounded in settler rampage through Hawara", source: "Times of Israel", url: "https://www.timesofisrael.com/nine-palestinians-reported-wounded-in-settler-rampage-through-hawara/", time: "2026-06-06T13:10:44Z" },
       { title: "On World Environment Day, the Gaza Municipality issues an urgent appeal to save Gaza from its worsening environmental crisis", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260606-on-world-environment-day-the-gaza-municipality-issues-an-urgent-appeal-to-save-gaza-from-its-worsening-environmental-crisis/", time: "2026-06-06T13:07:10Z" },
-      { title: "Groom killed hours before his wedding in Gaza", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/6/groom-killed-hours-before-his-wedding-in-gaza?traffic_source=rss", time: "2026-06-06T12:29:42Z" },
-      { title: "Israeli tanks and drone open fire near Gaza hospital", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-tanks-and-drone-open-fire-near-gaza-hospital", time: "2026-06-06T11:43:47Z" },
     ]
   },
   {
@@ -1453,6 +1454,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "U.S.-Iran peace deal could be finalized within 24 hours, Pakistan says", source: "CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-us-trump-peace-deal-agreement/", time: "2026-06-13T12:19:36Z" },
       { title: "What we know about a possible deal to end the Iran war", source: "The Independent", url: "https://www.independent.co.uk/news/world/americas/strait-of-hormuz-iran-united-states-shehbaz-sharif-tehran-b2995133.html", time: "2026-06-13T11:08:13Z" },
       { title: "U.S.-Iran deal expected to reopen Strait of Hormuz could be signed within days, both sides say", source: "NBC News", url: "https://www.nbcnews.com/world/iran/us-iran-deal-expected-reopen-strait-hormuz-signed-days-both-sides-say-rcna349916", time: "2026-06-13T10:28:17Z" },
       { title: "Morning update", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/morning-update-560", time: "2026-06-13T06:48:46Z" },
@@ -1750,6 +1752,7 @@ const locations = [
     lat: 33.8938, lng: 35.5018,
     category: "strikes",
     articles: [
+      { title: "Israeli army says at least 70 attacks in Lebanon over past day, as death toll reaches 3,711", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-says-least-70-attacks-lebanon-over-past-day-death-toll", time: "2026-06-13T12:35:20Z" },
       { title: "Caught between two homelands, a Lebanese Christian finds his place in Israel", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-899088", time: "2026-06-13T11:50:37Z" },
       { title: "Lebanon faces choice between ‘state monopoly on arms or militia influence’, says president", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260613-lebanon-faces-choice-between-state-monopoly-on-arms-or-militia-influence-says-president/", time: "2026-06-13T10:28:06Z" },
       { title: "Lebanon war victims among 117M people displaced worldwide", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/13/lebanon-war-victims-among-117m-people-displaced-worldwide?traffic_source=rss", time: "2026-06-13T07:56:36Z" },
@@ -1939,6 +1942,7 @@ const locations = [
     lat: 23.588, lng: 58.3829,
     category: "evacuation",
     articles: [
+      { title: "Maritime body says tanker struck off the coast of Oman", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/maritime-body-says-tanker-struck-coast-oman", time: "2026-06-13T11:48:43Z" },
       { title: "Trump administration misses deadline to remove his name from Kennedy Center", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-899249", time: "2026-06-13T10:41:25Z" },
       { title: "Woman airlifted to hospital with serious injuries after shark attack at popular Sydney beach", source: "Fox News", url: "https://www.foxnews.com/world/woman-airlifted-hospital-serious-injuries-shark-attack-popular-sydney-beach", time: "2026-06-13T09:28:51Z" },
       { title: "Woman seriously injured in latest Australia shark attack", source: "Sky News", url: "https://news.sky.com/story/woman-in-sydney-seriously-injured-in-fourth-australia-shark-attack-in-recent-weeks-13553591", time: "2026-06-13T09:11:00Z" },
@@ -2422,6 +2426,16 @@ const locations = [
     ]
   },
   {
+    name: "Mashhad", country: "Iran",
+    lat: 36.2605, lng: 59.6168,
+    category: "strikes",
+    articles: [
+      { title: "Iran announces funeral, burial dates for late Supreme Leader Khamenei", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/13/iran-announces-funeral-burial-dates-for-late-supreme-leader-khamenei?traffic_source=rss", time: "2026-06-13T12:11:25Z" },
+      { title: "Funeral preparations for Iran's former Supreme Leader set for 4 to 9 July", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/funeral-preparations-irans-former-supreme-leader-set-4-9-july", time: "2026-06-13T11:56:50Z" },
+      { title: "Iran's slain supreme leader Ali Khamenei to be buried 9 July", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irans-slain-supreme-leader-ali-khamenei-be-buried-9-july", time: "2026-06-13T11:01:20Z" },
+    ]
+  },
+  {
     name: "Baghdad", country: "Iraq",
     lat: 33.3152, lng: 44.3661,
     category: "strikes",
@@ -2544,14 +2558,6 @@ const locations = [
     category: "humanitarian",
     articles: [
       { title: "Israeli forces seize vehicle near Nablus checkpoint", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-seize-vehicle-near-nablus-checkpoint", time: "2026-06-11T18:12:16Z" },
-    ]
-  },
-  {
-    name: "Mashhad", country: "Iran",
-    lat: 36.2605, lng: 59.6168,
-    category: "strikes",
-    articles: [
-      { title: "Iran's slain supreme leader Ali Khamenei to be buried 9 July", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/irans-slain-supreme-leader-ali-khamenei-be-buried-9-july", time: "2026-06-13T11:01:20Z" },
     ]
   },
 ];
