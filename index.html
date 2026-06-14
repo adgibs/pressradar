@@ -14,7 +14,7 @@
 <div id="header">
   <div>
     <h1>PressRadar<span style="color:#e74c3c">.me</span></h1>
-    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">07:44 UTC, 14 Jun 2026</span></div>
+    <div class="subtitle">Middle East news mapped — <span id="total-count"></span> articles from UK & international press · Updated <span id="last-updated">09:12 UTC, 14 Jun 2026</span></div>
   </div>
   <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
   <div class="date-badge">14 June 2026</div>
@@ -116,7 +116,14 @@ const locations = [
     lat: 35.6892, lng: 51.389,
     category: "strikes",
     articles: [
+      { title: "Iran deal does not solve all Israel's problems, war was never meant to - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-899309", time: "2026-06-14T11:07:31Z" },
+      { title: "Israel's next gov't should be comprised of Zionist parties from across political aisle, Gantz says", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/politics-and-diplomacy/article-899296", time: "2026-06-14T10:41:49Z" },
+      { title: "Qatari negotiators head to Tehran ahead of deal signing between US, Iran - report", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-899301", time: "2026-06-14T10:37:22Z" },
+      { title: "Trump's negotiation strategy of talks, strikes may lead to unfavorable deal for Israel - analysis", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-899298", time: "2026-06-14T10:34:18Z" },
+      { title: "Middle East holds its breath as US, Iran near potential deal signing 'within 24 hours'", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-899283", time: "2026-06-14T08:47:38Z" },
+      { title: "Signing of US-Iran deal not on Trump’s public schedule", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/14/signing-of-us-iran-deal-not-on-trumps-public-schedule?traffic_source=rss", time: "2026-06-14T07:56:10Z" },
       { title: "Iran war day 107: Washington, Tehran close to signing first stage of deal", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/14/iran-war-day-107-washington-tehran-close-to-signing-first-stage-of-deal?traffic_source=rss", time: "2026-06-14T07:24:02Z" },
+      { title: "2026 World Cup: Australia stun Turkiye 2-0 in counterattacking masterclass", source: "Al Jazeera", url: "https://www.aljazeera.com/sports/2026/6/14/2026-world-cup-australia-stun-turkiye-2-0-in-counterattacking-masterclass?traffic_source=rss", time: "2026-06-14T06:40:28Z" },
       { title: "JCPOA 2.0: Trump's deal risks undercutting efforts against the Iranian threat - editorial", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-899266", time: "2026-06-14T05:55:25Z" },
       { title: "Trump says US-Iran deal to be signed on Sunday as Tehran casts doubt on timing", source: "BBC News", url: "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss", time: "2026-06-14T05:41:07Z" },
       { title: "Israeli leader thanks Trump for confronting ‘Iran’s empire of evil’", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-leader-thanks-trump-confronting-irans-empire-evil", time: "2026-06-14T05:28:06Z" },
@@ -125,6 +132,7 @@ const locations = [
       { title: "US accused of war crimes by Iran over alleged targeting of water reservoirs - report", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-899274", time: "2026-06-14T02:43:59Z" },
       { title: "Body found outside Tijuana stadium where Iran team is training for World Cup", source: "CBS News", url: "https://www.cbsnews.com/news/body-outside-tijuana-stadium-iran-team-training-world-cup/", time: "2026-06-14T02:41:59Z" },
       { title: "Between memorandum and U.S. deal, Iran is passing from survival to consolidation", source: "Haaretz", url: "https://www.haaretz.com/middle-east-news/iran/2026-06-14/ty-article/.premium/between-memorandum-and-u-s-deal-iran-is-passing-from-survival-to-consolidation/0000019e-c292-d86d-adde-feffd84f0000", time: "2026-06-14T02:41:14Z" },
+      { title: "Qatari mediators arrive in Tehran, with Iran said to still be undecided on deal with US", source: "Times of Israel", url: "https://www.timesofisrael.com/liveblog-june-14-2026/", time: "2026-06-14T02:26:54Z" },
       { title: "Why is the price of gold trending down?", source: "Al Jazeera", url: "https://www.aljazeera.com/economy/2026/6/14/why-is-the-price-of-gold-trending-down?traffic_source=rss", time: "2026-06-14T00:56:36Z" },
       { title: "Iran war live: Trump says deal to be signed today; Tehran urges caution", source: "Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/6/14/iran-war-live-trump-says-deal-to-be-signed-today-as-tehran-urges-caution?traffic_source=rss", time: "2026-06-14T00:00:00Z" },
       { title: "U.S., Iran say a deal to end the fighting is close", source: "CBS News", url: "https://www.cbsnews.com/video/us-iran-say-deal-end-fighting-close/", time: "2026-06-13T23:05:09Z" },
@@ -608,14 +616,6 @@ const locations = [
       { title: "100 days of the US–Israel war on Iran", source: "Al Jazeera", url: "https://www.aljazeera.com/gallery/2026/6/7/100-days-of-the-us-israel-war-on?traffic_source=rss", time: "2026-06-07T09:34:16Z" },
       { title: "Members of Iranian soccer staff wait to receive US visas ahead of 2026 FIFA World Cup, official say", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-898556", time: "2026-06-07T09:28:15Z" },
       { title: "Iran criticizes US refusal to grant visas for World Cup delegation", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/7/iran-criticizes-us-refusal-to-grant-visas-for-world-cup-delegation?traffic_source=rss", time: "2026-06-07T09:19:58Z" },
-      { title: "Trump Says Iran Has Made a ‘Big’ Nuclear Promise. It Isn’t New.", source: "New York Times", url: "https://www.nytimes.com/2026/06/07/us/politics/trump-iran-nuclear-promise.html", time: "2026-06-07T09:02:06Z" },
-      { title: "US considers using Iranian assets to support reconstruction efforts in Gulf: Report", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-us-considers-using-iranian-assets-to-support-reconstruction-efforts-in-gulf-report/", time: "2026-06-07T08:56:23Z" },
-      { title: "The accomplishments of 100 days of war on Iran are undeniable", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/6/7/the-accomplishments-of-100-days-of-war-on-iran-are-undeniable?traffic_source=rss", time: "2026-06-07T08:55:20Z" },
-      { title: "Iran after 100 days of war: The triumph of survival", source: "Al Jazeera", url: "https://www.aljazeera.com/opinions/2026/6/7/iran-after-100-days-of-war-the-triumph-of-survival?traffic_source=rss", time: "2026-06-07T08:52:20Z" },
-      { title: "Iran says its World Cup squad must enter, leave US soil on match day", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-iran-says-its-world-cup-squad-must-enter-leave-us-soil-on-match-day/", time: "2026-06-07T08:45:42Z" },
-      { title: "Pakistan’s Naqvi visits Iran with ‘special letter’ for supreme leader", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/7/pakistans-naqvi-visits-iran-with-special-letter-for-supreme-leader?traffic_source=rss", time: "2026-06-07T08:45:01Z" },
-      { title: "For Nigeria's Shia, the US-Israeli war on Iran is personal", source: "Middle East Eye", url: "https://www.middleeasteye.net/news/for-nigeria-shia-us-israeli-war-iran-personal", time: "2026-06-07T08:07:45Z" },
-      { title: "Trump faces Republican resistance on Iran war, key issues as midterm elections approach", source: "Jerusalem Post", url: "https://www.jpost.com/american-politics/article-898549", time: "2026-06-07T07:52:09Z" },
     ]
   },
   {
@@ -623,7 +623,10 @@ const locations = [
     lat: 32.0853, lng: 34.7818,
     category: "strikes",
     articles: [
+      { title: "Amid years of war, these Israelis are still pushing for peace", source: "Washington Post", url: "https://www.washingtonpost.com/world/2026/06/14/amid-years-war-these-israelis-are-still-pushing-peace/", time: "2026-06-14T09:00:00Z" },
+      { title: "6 Jewish short films to watch this June on ChaiFlicks - Sponsored Content", source: "Times of Israel", url: "https://toi.li/INPA1z", time: "2026-06-14T08:59:20Z" },
       { title: "Somaliland president to make historic first visit to Israel following country's recognition", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-899279", time: "2026-06-14T08:18:29Z" },
+      { title: "Bennett to ToI: ‘We’re at an existential moment. Another four years with this government, we won’t have a society’", source: "Times of Israel", url: "https://www.timesofisrael.com/bennett-to-toi-were-at-an-existential-moment-another-four-years-with-this-government-we-wont-have-a-society/", time: "2026-06-14T08:04:03Z" },
       { title: "Two drones crash in northern Israel after crossing from Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/two-drones-crash-northern-israel-after-crossing-lebanon", time: "2026-06-14T05:46:47Z" },
       { title: "Somaliland president expected to visit Israel, reports say", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/somaliland-president-expected-visit-israel-reports-say", time: "2026-06-14T02:54:57Z" },
       { title: "Lapid: Emerging Iran deal 'complete failure by Netanyahu'; fails all war objectives", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-14/ty-article-live/palestinian-red-crescent-several-wounded-in-israeli-strike-in-gaza-city/0000019e-c2f0-dd0a-a19f-d3fc9c290000", time: "2026-06-14T02:18:57Z" },
@@ -1120,9 +1123,6 @@ const locations = [
       { title: "Israel is taxing its future to subsidize those who do not serve - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-898000", time: "2026-06-07T09:59:16Z" },
       { title: "Singer Yishai Levi, staple of Mizrahi music genre, dies at 63", source: "Times of Israel", url: "https://www.timesofisrael.com/singer-yishai-levi-staple-of-mizrahi-music-genre-dies-at-63/", time: "2026-06-07T09:51:36Z" },
       { title: "Illegal resident arrested on suspicion of stabbing, robbing man in Tel Aviv apartment", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/crime-in-israel/article-898552", time: "2026-06-07T09:45:50Z" },
-      { title: "One killed, five wounded in terror shooting rampage in central Israel", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-07/ty-article/.premium/one-killed-five-wounded-in-terrorist-attack-in-central-israel-authorities-say/0000019e-a146-d7a4-a9bf-f5ceaf0c0000", time: "2026-06-07T08:56:01Z" },
-      { title: "New Mossad chief fires Netanyahu-tied deputy who promoted Gaza transfer plans", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-07/ty-article/.premium/new-mossad-chief-fires-deputy-tied-to-netanyahu-who-promoted-gaza-transfer-plans/0000019e-a128-d521-abdf-b73855ae0000", time: "2026-06-07T08:24:29Z" },
-      { title: "Lebanon army chief in Pakistan, funeral plans for soldiers killed by Israel", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel?traffic_source=rss", time: "2026-06-07T07:59:02Z" },
     ]
   },
   {
@@ -1130,6 +1130,7 @@ const locations = [
     lat: 31.5017, lng: 34.4668,
     category: "humanitarian",
     articles: [
+      { title: "Protesters in Stockholm rally against Israeli attacks in Palestinian territories, Lebanon", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260614-protesters-in-stockholm-rally-against-israeli-attacks-in-palestinian-territories-lebanon/", time: "2026-06-14T08:09:41Z" },
       { title: "Video: Protesters rally outside Israeli embassy in London over Palestinian prisoners", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/video-protesters-rally-outside-israeli-embassy-london-over-palestinian", time: "2026-06-14T04:31:53Z" },
       { title: "Palestinian Red Crescent: Several wounded in Israeli strike in Gaza City", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-security/2026-06-14/ty-article-live/palestinian-red-crescent-several-wounded-in-israeli-strike-in-gaza-city/0000019e-c2f0-dd0a-a19f-d3fc9c290000", time: "2026-06-14T02:18:57Z" },
       { title: "Watchdog says Israeli firm BlackCore influenced elections across multiple countries", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/watchdog-says-israeli-firm-blackcore-influenced-elections-across", time: "2026-06-14T01:39:11Z" },
@@ -1426,11 +1427,6 @@ const locations = [
       { title: "An Eid celebration on a Gaza rooftop turns into a ‘horror movie’", source: "Al Jazeera", url: "https://www.aljazeera.com/features/2026/6/7/an-eid-celebration-on-a-gaza-rooftop-turns-into-a-horror-movie?traffic_source=rss", time: "2026-06-07T10:17:59Z" },
       { title: "Palestinian teen killed by Israeli naval fire in Gaza", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-palestinian-teen-killed-by-israeli-naval-fire-in-gaza/", time: "2026-06-07T10:08:25Z" },
       { title: "Hamas, Palestinian Islamic Jihad says shooting 'natural consequence' of settler violence", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/hamas-palestinian-islamic-jihad-says-shooting-natural-consequence", time: "2026-06-07T09:54:47Z" },
-      { title: "Gazans resort to makeshift toilets amid sanitation crisis in Strip’s vast tent camps", source: "Times of Israel", url: "https://www.timesofisrael.com/gazans-resort-to-makeshift-toilets-amid-sanitation-crisis-in-strips-vast-tent-camps/", time: "2026-06-07T08:59:10Z" },
-      { title: "Israeli troops kill infant, injure parents in West Bank", source: "France 24", url: "https://www.france24.com/en/israeli-troops-kill-infant-injure-parents-in-west-bank", time: "2026-06-07T08:39:25Z" },
-      { title: "France pushes coordinated sanctions on Israel over West Bank violence", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898550", time: "2026-06-07T08:35:45Z" },
-      { title: "Israel claims killing of Hamas commander in southern Gaza", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-claims-killing-hamas-commander-southern-gaza", time: "2026-06-07T08:34:55Z" },
-      { title: "Palestinian fisherman killed by Israeli fire off central Gaza coast", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/palestinian-fisherman-killed-israeli-fire-central-gaza-coast", time: "2026-06-07T08:18:11Z" },
     ]
   },
   {
@@ -1438,6 +1434,7 @@ const locations = [
     lat: 26.5667, lng: 56.25,
     category: "energy",
     articles: [
+      { title: "Middle East crisis live: Trump says Iran deal will be signed today but sources tell media Tehran ‘not yet’ taken final decision", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/jun/14/iran-us-middle-east-crisis-donald-trump-peace-deal-strait-hormuz-open-pakistan-latest-news-updates", time: "2026-06-14T09:05:14Z" },
       { title: "Morning update", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/morning-update-561", time: "2026-06-14T06:50:53Z" },
       { title: "Key things to know about possible US-Iran peace deal to end Middle East war", source: "The Independent", url: "https://www.independent.co.uk/news/world/middle-east/us-iran-peace-deal-war-strait-of-hormuz-b2995346.html", time: "2026-06-14T05:32:52Z" },
       { title: "Middle East war live: Trump says Iran deal to be signed Sunday", source: "France 24", url: "https://www.france24.com/en/middle-east/20260614-middle-east-war-live-trump-says-iran-deal-to-be-signed-sunday", time: "2026-06-14T05:12:49Z" },
@@ -1610,8 +1607,6 @@ const locations = [
       { title: "OPEC Plus to Boost Oil Production as Ceasefire in Iran Remains Elusive", source: "New York Times", url: "https://www.nytimes.com/2026/06/07/business/opec-oil-production-iran-war.html", time: "2026-06-07T13:12:56Z" },
       { title: "Opec+ set to increase oil output targets again", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opec-set-increase-oil-output-targets-again", time: "2026-06-07T12:32:40Z" },
       { title: "Iran conflict takes heavy toll on global economy, trade in past 100 days", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-iran-conflict-takes-heavy-toll-on-global-economy-trade-in-past-100-days/", time: "2026-06-07T11:59:50Z" },
-      { title: "US military shoots down 2 Iranian drones above Strait of Hormuz", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-us-military-shoots-down-2-iranian-drones-above-strait-of-hormuz/", time: "2026-06-07T08:20:41Z" },
-      { title: "US downs two Iranian attack drones 'threatening int'l maritime traffic' in Strait of Hormuz", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898548", time: "2026-06-07T08:01:09Z" },
     ]
   },
   {
@@ -1819,7 +1814,12 @@ const locations = [
     lat: 31.7683, lng: 35.2137,
     category: "strikes",
     articles: [
+      { title: "US, Iran near potential deal as Middle East waits", source: "Jerusalem Post", url: "https://www.jpost.com/podcast/jpost-headlines/article-899312", time: "2026-06-14T11:16:53Z" },
+      { title: "Netanyahu rejects curbs on Ben-Gvir's authority over police, Al-Aqsa compound", source: "Haaretz", url: "https://www.haaretz.com/israel-news/israel-politics/2026-06-14/ty-article/.premium/netanyahu-rejects-curbs-on-ben-gvirs-authority-over-police-al-aqsa-compound/0000019e-c4e9-dd0a-a19f-d7fd2a9c0000", time: "2026-06-14T08:35:49Z" },
+      { title: "Somaliland president to make historic first visit to Israel following country's recognition", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-899279", time: "2026-06-14T08:18:29Z" },
       { title: "A complete lack of statesmanship: Rabello affair reveals Netanyahu's enduring blind spot - opinion", source: "Jerusalem Post", url: "https://www.jpost.com/opinion/article-899112", time: "2026-06-14T08:18:27Z" },
+      { title: "Eight-day old baby dies shortly after circumcision", source: "Times of Israel", url: "https://www.timesofisrael.com/eight-day-old-baby-dies-shortly-after-circumcision/", time: "2026-06-14T08:13:50Z" },
+      { title: "Growing risk that thousands buried in Gaza’s rubble may never be identified, says Red Cross", source: "The Guardian", url: "https://www.theguardian.com/world/2026/jun/14/growing-risk-thousands-buried-gaza-rubble-never-identified-red-cross", time: "2026-06-14T08:00:37Z" },
       { title: "Netanyahu will not join Trump meeting with Middle East leaders at G7, senior US official says", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-899260", time: "2026-06-13T17:56:41Z" },
       { title: "Israeli forces use tear gas and stun grenades on Palestinians near Bethlehem", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-use-tear-gas-and-stun-grenades-palestenians-near", time: "2026-06-12T23:59:22Z" },
       { title: "The war inside Israel's reserve families: 'To him, defending the border protects our family'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-899166", time: "2026-06-12T19:02:39Z" },
@@ -1961,6 +1961,7 @@ const locations = [
     lat: 33.2705, lng: 35.1968,
     category: "strikes",
     articles: [
+      { title: "Israel launches attacks across southern Lebanon, one killed in Sidon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-launches-attacks-across-southern-lebanon-one-killed-sidon", time: "2026-06-14T08:47:56Z" },
       { title: "Israeli attacks continue in Lebanon despite reports of nearing Iran deal", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-attacks-continue-lebanon-despite-reports-nearing-iran-deal", time: "2026-06-14T01:51:23Z" },
       { title: "One killed in Israeli strike in southern Lebanon, report says", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/one-killed-israeli-strike-southern-lebanon-report-says", time: "2026-06-13T06:18:11Z" },
       { title: "Iranian commander says victory over Israel will soon be evident", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-commander-says-victory-over-israel-will-soon-be-evident", time: "2026-06-13T06:06:42Z" },
@@ -2000,7 +2001,6 @@ const locations = [
       { title: "How Hezbollah rebuilt itself for a war of attrition with Israel", source: "Middle East Eye", url: "https://www.middleeasteye.net/opinion/how-hezbollah-rebuilt-itself-war-attrition-israel", time: "2026-06-08T07:24:54Z" },
       { title: "Middle East crisis live: Israel strikes southern Beirut days after ceasefire agreement with Lebanon", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/jun/07/israel-lebanon-southern-beirut-hezbollah-idf-ceasefire-iran-latest-news-updates", time: "2026-06-07T14:37:47Z" },
       { title: "Israeli army issues expulsion orders for Tyre residents", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-issues-expulsion-orders-tyre-residents", time: "2026-06-07T11:04:46Z" },
-      { title: "Israeli forces continue to pummel southern Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-continue-pound-southern-lebanon", time: "2026-06-07T08:27:56Z" },
     ]
   },
   {
@@ -2079,6 +2079,28 @@ const locations = [
     ]
   },
   {
+    name: "Beirut (Dahiyeh)", country: "Lebanon",
+    lat: 33.8547, lng: 35.5022,
+    category: "strikes",
+    articles: [
+      { title: "IDF strikes southern Lebanon as ministers call to intensify attacks on Dahiyeh, Hezbollah", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-899297", time: "2026-06-14T11:39:55Z" },
+      { title: "Israel’s Smotrich renews threat of attacks on Beirut suburbs", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israels-smotrich-renews-threat-attacks-beirut-suburbs", time: "2026-06-14T01:21:51Z" },
+      { title: "Dahiyeh crowds rally in favour of Iranian support against Israel", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/11/dahiyeh-crowds-rally-in-favour-of-iranian-support-against-israel?traffic_source=rss", time: "2026-06-11T03:49:06Z" },
+      { title: "Opinion: How a regional defence pact could deal the final blow to Israel's violent expansionism", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opinion-how-regional-defence-pact-could-deal-final-blow-israels-violent", time: "2026-06-09T21:49:51Z" },
+      { title: "Israel continues strikes on Beirut suburb", source: "France 24", url: "https://www.france24.com/en/video/20260609-israel-continues-strikes-on-beirut-suburb", time: "2026-06-09T15:03:51Z" },
+      { title: "In Beirut's Hezbollah-controlled suburbs, war with Israel comes at a price for residents", source: "France 24", url: "https://www.france24.com/en/in-beirut-s-hezbollah-controlled-suburbs-war-with-israel-comes-at-a-price-for-residents", time: "2026-06-09T10:22:22Z" },
+      { title: "Defense Minister Katz warns any attack on Israel's North 'will result in an attack on Dahiyeh'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898752", time: "2026-06-08T17:50:33Z" },
+      { title: "Iran's military says attacks on Israel will cease if IDF does not strike southern Lebanon, Dahiyeh", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898726", time: "2026-06-08T14:31:08Z" },
+      { title: "Smotrich reportedly proposes attacking 20-30 buildings in Dahiyeh for every Iranian missile", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898716", time: "2026-06-08T14:28:36Z" },
+      { title: "Israel vows to intensify attacks across Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-vows-intensify-attacks-across-lebanon", time: "2026-06-07T21:12:37Z" },
+      { title: "Iran warns of ‘decisive’ response to Israeli strike on southern Beirut", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-iran-warns-of-decisive-response-to-israeli-strike-on-southern-beirut/", time: "2026-06-07T17:38:56Z" },
+      { title: "WATCH: IDF striking Hezbollah in Beirut's Dahiyeh after terror group ignores ceasefire", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898615", time: "2026-06-07T15:23:29Z" },
+      { title: "Middle East crisis live: Iran threatens ‘painful’ response to Israeli strikes on southern Beirut", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/jun/07/israel-lebanon-southern-beirut-hezbollah-idf-ceasefire-iran-latest-news-updates", time: "2026-06-07T15:14:43Z" },
+      { title: "IDF strikes Beirut’s Dahiyeh after Hezbollah fires rockets at northern Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-strikes-beiruts-dahiyeh-after-hezbollah-fires-rockets-at-northern-israel/", time: "2026-06-07T15:04:31Z" },
+      { title: "Israeli army launches airstrikes on Lebanese capital despite ceasefire", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-israeli-army-launches-airstrikes-on-lebanese-capital-despite-ceasefire/", time: "2026-06-07T14:10:53Z" },
+    ]
+  },
+  {
     name: "Islamabad", country: "Pakistan",
     lat: 33.6844, lng: 73.0479,
     category: "evacuation",
@@ -2097,27 +2119,6 @@ const locations = [
       { title: "Deadly protests in Pakistan-administered Kashmir: What’s going on?", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/9/deadly-protests-in-pakistan-administered-kashmir-whats-going-on?traffic_source=rss", time: "2026-06-09T13:58:09Z" },
       { title: "At least 11 killed in Pakistan-administered Kashmir clashes before rally", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/8/at-least-11-killed-in-pakistan-administered-kashmir-clashes-before-rally?traffic_source=rss", time: "2026-06-08T12:59:46Z" },
       { title: "Americans travel to Pakistan to free Christians trapped in modern-day slavery: 'God's hand was in it'", source: "Fox News", url: "https://www.foxnews.com/world/americans-travel-pakistan-free-christians-trapped-modern-day-slavery-gods-hand", time: "2026-06-07T15:30:39Z" },
-    ]
-  },
-  {
-    name: "Beirut (Dahiyeh)", country: "Lebanon",
-    lat: 33.8547, lng: 35.5022,
-    category: "strikes",
-    articles: [
-      { title: "Israel’s Smotrich renews threat of attacks on Beirut suburbs", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israels-smotrich-renews-threat-attacks-beirut-suburbs", time: "2026-06-14T01:21:51Z" },
-      { title: "Dahiyeh crowds rally in favour of Iranian support against Israel", source: "Al Jazeera", url: "https://www.aljazeera.com/video/newsfeed/2026/6/11/dahiyeh-crowds-rally-in-favour-of-iranian-support-against-israel?traffic_source=rss", time: "2026-06-11T03:49:06Z" },
-      { title: "Opinion: How a regional defence pact could deal the final blow to Israel's violent expansionism", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/opinion-how-regional-defence-pact-could-deal-final-blow-israels-violent", time: "2026-06-09T21:49:51Z" },
-      { title: "Israel continues strikes on Beirut suburb", source: "France 24", url: "https://www.france24.com/en/video/20260609-israel-continues-strikes-on-beirut-suburb", time: "2026-06-09T15:03:51Z" },
-      { title: "In Beirut's Hezbollah-controlled suburbs, war with Israel comes at a price for residents", source: "France 24", url: "https://www.france24.com/en/in-beirut-s-hezbollah-controlled-suburbs-war-with-israel-comes-at-a-price-for-residents", time: "2026-06-09T10:22:22Z" },
-      { title: "Defense Minister Katz warns any attack on Israel's North 'will result in an attack on Dahiyeh'", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/defense-news/article-898752", time: "2026-06-08T17:50:33Z" },
-      { title: "Iran's military says attacks on Israel will cease if IDF does not strike southern Lebanon, Dahiyeh", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/iran-news/article-898726", time: "2026-06-08T14:31:08Z" },
-      { title: "Smotrich reportedly proposes attacking 20-30 buildings in Dahiyeh for every Iranian missile", source: "Jerusalem Post", url: "https://www.jpost.com/israel-news/article-898716", time: "2026-06-08T14:28:36Z" },
-      { title: "Israel vows to intensify attacks across Lebanon", source: "Middle East Eye", url: "https://www.middleeasteye.net/live-blog/live-blog-update/israel-vows-intensify-attacks-across-lebanon", time: "2026-06-07T21:12:37Z" },
-      { title: "Iran warns of ‘decisive’ response to Israeli strike on southern Beirut", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-iran-warns-of-decisive-response-to-israeli-strike-on-southern-beirut/", time: "2026-06-07T17:38:56Z" },
-      { title: "WATCH: IDF striking Hezbollah in Beirut's Dahiyeh after terror group ignores ceasefire", source: "Jerusalem Post", url: "https://www.jpost.com/middle-east/article-898615", time: "2026-06-07T15:23:29Z" },
-      { title: "Middle East crisis live: Iran threatens ‘painful’ response to Israeli strikes on southern Beirut", source: "The Guardian", url: "https://www.theguardian.com/world/live/2026/jun/07/israel-lebanon-southern-beirut-hezbollah-idf-ceasefire-iran-latest-news-updates", time: "2026-06-07T15:14:43Z" },
-      { title: "IDF strikes Beirut’s Dahiyeh after Hezbollah fires rockets at northern Israel", source: "Times of Israel", url: "https://www.timesofisrael.com/idf-strikes-beiruts-dahiyeh-after-hezbollah-fires-rockets-at-northern-israel/", time: "2026-06-07T15:04:31Z" },
-      { title: "Israeli army launches airstrikes on Lebanese capital despite ceasefire", source: "Middle East Monitor", url: "https://www.middleeastmonitor.com/20260607-israeli-army-launches-airstrikes-on-lebanese-capital-despite-ceasefire/", time: "2026-06-07T14:10:53Z" },
     ]
   },
   {
@@ -2309,7 +2310,6 @@ const locations = [
       { title: "UAE to unlock frozen Iranian funds amid US ceasefire push: Sources", source: "Al Jazeera", url: "https://www.aljazeera.com/news/2026/6/12/uae-to-unlock-frozen-iranian-funds-amid-us-ceasefire-push?traffic_source=rss", time: "2026-06-12T20:58:41Z" },
       { title: "Israeli, Palestinian civil society meet in France as two-state solution dims", source: "Jerusalem Post", url: "https://www.jpost.com/international/article-899210", time: "2026-06-12T11:06:26Z" },
       { title: "Emirates unveils incentives to lure back passengers amid Iran war", source: "The Independent", url: "https://www.independent.co.uk/travel/news-and-advice/iran-war-emirates-flights-prices-b2992477.html", time: "2026-06-09T13:15:06Z" },
-      { title: "Dubai luxury hotels court local residents as tourism slumps", source: "France 24", url: "https://www.france24.com/en/dubai-luxury-hotels-court-local-residents-as-tourism-slumps", time: "2026-06-07T08:37:34Z" },
     ]
   },
   {
